@@ -1,6 +1,6 @@
 # models
 
-223 articles.
+229 articles.
 
 - **2026-07-10** — [Evaluating the GPT-5.6 family](<benchmarks/Evaluating the GPT-5.6 family.md>) · `benchmarks` · braintrust
   Evaluates the GPT-5.6 model family and presents a decision map for choosing models based on quality, cost, and task requirements.
@@ -32,6 +32,8 @@
   Covers informal-to-formal math AI and the scaling problems around proof, reasoning, and verification.
 - **2026-06-02** — [The end of fine-tuning: Why evals, context, and traces matter more](<fine-tuning/The end of fine-tuning Why evals, context, and traces matter more.md>) · `fine-tuning` · arize
   Argues that evals, context, and traces can reduce the need for fine-tuning in many production AI workflows.
+- **2026-06-01** — [Why Video Agent models are next — Ethan He, xAI Grok Imagine](<multimodal/Why Video Agent models are next — Ethan He, xAI Grok Imagine.md>) · `multimodal` · latent-space
+  xAI Grok Imagine interview on video-agent models and why video generation and action loops are converging.
 - **2026-05-29** — [How Together AI built a fast speech-to-text stack](<multimodal/How Together AI built a fast speech-to-text stack.md>) · `multimodal` · together
   Engineering writeup on building a fast speech-to-text stack.
 - **2026-05-29** — [Timestep distillation: 2.5x faster FLUX.2 image generation](<multimodal/Timestep distillation 2.5x faster FLUX.2 image generation.md>) · `multimodal` · baseten
@@ -84,6 +86,8 @@
   Frames model training infrastructure as an autoresearch substrate for running iterative experiments and training jobs.
 - **2026-03-31** — [Open-source LLM training is a mess. Here is how it all works.](<fine-tuning/Open-source LLM training is a mess. Here is how it all works.md>) · `fine-tuning` · baseten
   Explains the moving pieces of open-source LLM training, including data, trainers, infrastructure, and evaluation.
+- **2026-03-30** — [Mistral: Voxtral TTS, Forge, Leanstral, & what's next for Mistral 4 — w/ Pavan Kumar Reddy & Guillaume Lample](<multimodal/Mistral Voxtral TTS, Forge, Leanstral, & what's next for Mistral 4 — w Pavan Kumar Reddy & Guillaume Lample.md>) · `multimodal` · latent-space
+  Mistral interview covering Voxtral TTS, Forge, Leanstral, and multimodal model release direction.
 - **2026-03-28** — [The Fine-Tuning Bottleneck Isn't the Algorithm](<fine-tuning/The Fine-Tuning Bottleneck Isn't the Algorithm.md>) · `fine-tuning` · fireworks
   Explains why fine-tuning bottlenecks often come from data, evaluation, orchestration, and serving rather than algorithms alone.
 - **2026-03-23** — [Frontier RL Is Cheaper Than You Think](<fine-tuning/Frontier RL Is Cheaper Than You Think.md>) · `fine-tuning` · fireworks
@@ -200,6 +204,8 @@
   Describes a synthetic-data pipeline that connects task definition, generation, SFT/RFT, evaluation, and cleanup.
 - **2025-05-28** — [Mixture-of-Agents Alignment for post-training](<fine-tuning/Mixture-of-Agents Alignment for post-training.md>) · `fine-tuning` · together
   Explains Mixture-of-Agents Alignment for improving post-training with collective model intelligence.
+- **2025-05-23** — [⚡️Multi-Turn RL for Multi-Hour Agents — with Will Brown, Prime Intellect](<fine-tuning/⚡️Multi-Turn RL for Multi-Hour Agents — with Will Brown, Prime Intellect.md>) · `fine-tuning` · latent-space
+  Prime Intellect interview on multi-turn RL for multi-hour agents and training long-horizon agent behavior.
 - **2025-05-22** — [Why Speech to Text Is the Hidden Engine Behind Contact Center AI Performance](<multimodal/Why Speech to Text Is the Hidden Engine Behind Contact Center AI Performance.md>) · `multimodal` · cresta
   Explains how speech-to-text quality drives downstream AI performance and why it should be treated as a system dependency.
 - **2025-05-16** — [Scalable Chain of Thoughts via Elastic Reasoning](<reasoning/Scalable Chain of Thoughts via Elastic Reasoning.md>) · `reasoning` · arize
@@ -304,6 +310,8 @@
   Advanced benchmark guide comparing leaderboards, arenas, and LLM-as-judge approaches.
 - **2024-07-12** — [Fine-tuning Llama-3 toward GPT-4 performance at lower cost](<fine-tuning/Fine-tuning Llama-3 toward GPT-4 performance at lower cost.md>) · `fine-tuning` · together
   Shows fine-tuning Llama 3 toward GPT-4-like task performance at lower cost.
+- **2024-07-05** — [The 10,000x Yolo Researcher Metagame — with Yi Tay of Reka](<reasoning/The 10,000x Yolo Researcher Metagame — with Yi Tay of Reka.md>) · `reasoning` · latent-space
+  Yi Tay interview on researcher workflows, model training, reasoning, and the metagame of high-velocity AI research.
 - **2024-06-25** — [State of the Art: Training >70B LLMs on 10,000 H100 clusters](<fine-tuning/State of the Art Training 70B LLMs on 10,000 H100 clusters.md>) · `fine-tuning` · latent-space
   State-of-the-art overview of training >70B LLMs on 10,000-H100 clusters.
 - **2024-06-14** — [Comparing few-step image generation models](<benchmarks/Comparing few-step image generation models.md>) · `benchmarks` · baseten
@@ -388,10 +396,14 @@
   Explains large multimodal model architecture and training patterns, modality fusion, data challenges, and product capabilities unlocked by image, text, audio, and video models.
 - **2023-10-06** — [Explaining Grokking Through Circuit Efficiency](<reasoning/Explaining Grokking Through Circuit Efficiency.md>) · `reasoning` · arize
   Paper-reading deep dive on grokking and circuit efficiency as a way to understand model generalization.
+- **2023-09-20** — [Heralds of the AI Content Flippening — with Youssef Rizk of Wondercraft.ai](<multimodal/Heralds of the AI Content Flippening — with Youssef Rizk of Wondercraft.ai.md>) · `multimodal` · latent-space
+  Wondercraft interview on generative audio, AI content workflows, and productizing voice/content generation.
 - **2023-08-30** — [RWKV: Reinventing RNNs for the Transformer Era — with Eugene Cheah of UIlicious](<reasoning/RWKV Reinventing RNNs for the Transformer Era — with Eugene Cheah of UIlicious.md>) · `reasoning` · latent-space
   RWKV interview on reinventing RNNs for the Transformer era and efficient sequence modeling.
 - **2023-08-24** — [Skeleton of Thought: LLMs Can Do Parallel Decoding Paper Reading](<reasoning/Skeleton of Thought LLMs Can Do Parallel Decoding Paper Reading.md>) · `reasoning` · arize
   Summarizes Skeleton of Thought and how parallel decoding can speed structured reasoning.
+- **2023-08-16** — [The Mathematics of Training LLMs — with Quentin Anthony of Eleuther AI](<fine-tuning/The Mathematics of Training LLMs — with Quentin Anthony of Eleuther AI.md>) · `fine-tuning` · latent-space
+  EleutherAI deep dive on the mathematics and systems constraints of training LLMs at scale.
 - **2023-08-16** — [Open challenges in LLM research](<reasoning/Open challenges in LLM research.md>) · `reasoning` · chip-huyen
   Surveys open LLM research problems around hallucination, context length, efficiency, multimodality, agents, evaluation, and post-training behavior that shape engineering constraints.
 - **2023-08-07** — [Extending the Context Window of LLaMA Models Paper Reading](<reasoning/Extending the Context Window of LLaMA Models Paper Reading.md>) · `reasoning` · arize
@@ -523,6 +535,8 @@
   Shows how to validate a frontier model for production using benchmark and workload-specific evaluation signals.
 - **2026-04-24** — [Accelerate RL rollouts by up to 50% with distribution-aware speculative decoding](<../inference/optimization/Accelerate RL rollouts by up to 50% with distribution-aware speculative decoding.md>) · `optimization` · together
   Explains distribution-aware speculative decoding for faster RL rollouts.
+- **2026-04-23** — [AIE Europe Debrief + Agent Labs Thesis: Unsupervised Learning x Latent Space Crossover Special (2026)](<../industry/trends/AIE Europe Debrief + Agent Labs Thesis Unsupervised Learning x Latent Space Crossover Special (2026).md>) · `trends` · latent-space
+  Dense 2026 crossover on AI engineering trends, coding agents, context engineering, RL, memory, and specialized models.
 - **2026-04-21** — [Boosting multimodal inference performance by >10% with a single Python dictionary](<../inference/optimization/Boosting multimodal inference performance by 10% with a single Python dictionary.md>) · `optimization` · modal
   Describes a small configuration change that improves multimodal inference performance, with attention to batching and serving settings.
 - **2026-04-20** — [Building an RL theorem-proving workflow on Modal](<reasoning/Building an RL theorem-proving workflow on Modal.md>) · `reasoning` · modal
@@ -531,6 +545,8 @@
   Shows how to achieve sub-3-millisecond NER inference with optimized serving.
 - **2026-04-02** — [Moonlake: Causal World Models should be Multimodal, Interactive, and Efficient — with Chris Manning and Fan-yun Sun](<multimodal/Moonlake Causal World Models should be Multimodal, Interactive, and Efficient — with Chris Manning and Fan-yun Sun.md>) · `multimodal` · latent-space
   Moonlake interview on causal world models that are multimodal, interactive, and efficient.
+- **2026-03-30** — [Mistral: Voxtral TTS, Forge, Leanstral, & what's next for Mistral 4 — w/ Pavan Kumar Reddy & Guillaume Lample](<multimodal/Mistral Voxtral TTS, Forge, Leanstral, & what's next for Mistral 4 — w Pavan Kumar Reddy & Guillaume Lample.md>) · `multimodal` · latent-space
+  Mistral interview covering Voxtral TTS, Forge, Leanstral, and multimodal model release direction.
 - **2026-03-27** — [I spent 31 hours on the math behind TurboQuant so you don't have to](<../inference/quantization/I spent 31 hours on the math behind TurboQuant so you don't have to.md>) · `quantization` · baseten
   Mathematical deep dive into TurboQuant and its quantization behavior for LLM inference.
 - **2026-03-25** — [How Perplexity Brought Voice Search to Millions Using the Realtime API | OpenAI Developers](<../product-engineering/case-studies/How Perplexity Brought Voice Search to Millions Using the Realtime API OpenAI Developers.md>) · `case-studies` · openai-devs
@@ -657,6 +673,8 @@
   Technical deep dive into Direct Preference Optimization for aligning language models.
 - **2025-04-08** — [DeepCoder: A Fully Open-Source 14B Coder at O3-mini Level](<../agents/tool-use/DeepCoder A Fully Open-Source 14B Coder at O3-mini Level.md>) · `tool-use` · together
   Describes DeepCoder, an open-source coding model trained for O3-mini-level coding performance.
+- **2025-03-29** — [Unsupervised Learning x Latent Space Crossover Special](<../industry/trends/Unsupervised Learning x Latent Space Crossover Special.md>) · `trends` · latent-space
+  Crossover discussion on open models, AI applications, product-market fit, infrastructure, and agent trends.
 - **2025-03-13** — [Understanding Cresta’s Voice Platform - ML Services, Inference Graphs, and Real-Time Intelligence](<../inference/serving/Understanding Cresta’s Voice Platform - ML Services, Inference Graphs, and Real-Time Intelligence.md>) · `serving` · cresta
   Explains ML services, inference graphs, and real-time intelligence components in a production voice platform.
 - **2025-03-13** — [Hugging Face and Langfuse: 5 Ways to use them Together](<../infra-platform/deployment/Hugging Face and Langfuse 5 Ways to use them Together.md>) · `deployment` · langfuse
@@ -729,6 +747,8 @@
   Explains serving many fine-tuned LLM adapters from a single GPU with efficient multiplexing.
 - **2024-07-12** — [Fine-tuning Llama-3 toward GPT-4 performance at lower cost](<fine-tuning/Fine-tuning Llama-3 toward GPT-4 performance at lower cost.md>) · `fine-tuning` · together
   Shows fine-tuning Llama 3 toward GPT-4-like task performance at lower cost.
+- **2024-07-05** — [The 10,000x Yolo Researcher Metagame — with Yi Tay of Reka](<reasoning/The 10,000x Yolo Researcher Metagame — with Yi Tay of Reka.md>) · `reasoning` · latent-space
+  Yi Tay interview on researcher workflows, model training, reasoning, and the metagame of high-velocity AI research.
 - **2024-06-28** — [RAFT: Adapting Language Model to Domain Specific RAG](<../rag-retrieval/pipelines/RAFT Adapting Language Model to Domain Specific RAG.md>) · `pipelines` · arize
   Summarizes RAFT as a method for adapting language models to domain-specific RAG workflows.
 - **2024-06-24** — [Building a personalized code assistant with open-source LLMs using RAG Fine-tuning](<../rag-retrieval/pipelines/Building a personalized code assistant with open-source LLMs using RAG Fine-tuning.md>) · `pipelines` · together

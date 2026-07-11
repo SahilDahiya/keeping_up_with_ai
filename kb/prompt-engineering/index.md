@@ -1,6 +1,6 @@
 # prompt-engineering
 
-29 articles.
+30 articles.
 
 - **2026-07-02** — [Skill engineering and the case against one-shot AI design](<context-engineering/Skill engineering and the case against one-shot AI design.md>) · `context-engineering` · latent-space
   Argues for skill engineering over one-shot design, focusing on reusable instructions and context for AI-assisted creation.
@@ -60,6 +60,8 @@
   Guardrails AI interview on guaranteeing quality and structure in LLM outputs through constraints, validation, and evals.
 - **2022-12-28** — [Reverse Prompt Engineering for Fun and (no) Profit](<techniques/Reverse Prompt Engineering for Fun and (no) Profit.md>) · `techniques` · latent-space
   Explains reverse prompt engineering as a practical technique for understanding and recreating LLM product behavior.
+- **2022-11-25** — [Why "Prompt Engineering" and "Generative AI" are overhyped](<techniques/Why Prompt Engineering and Generative AI are overhyped.md>) · `techniques` · latent-space
+  Early essay on why prompt engineering and generative AI were overhyped, useful as historical context for prompt technique limits.
 
 ## Also relevant (filed elsewhere)
 
@@ -151,3 +153,5 @@
   MosaicML interview on MPT-7B and the beginning of long-context open models.
 - **2023-02-23** — [ChatGPT, GPT4 hype, and Building LLM-native products — with Logan Kilpatrick of OpenAI](<../product-engineering/architecture/ChatGPT, GPT4 hype, and Building LLM-native products — with Logan Kilpatrick of OpenAI.md>) · `architecture` · latent-space
   OpenAI interview on building LLM-native products after ChatGPT and GPT-4, with lessons for applied AI product design.
+- **2022-12-19** — [What Building "Copilot for X" Really Takes](<../product-engineering/architecture/What Building Copilot for X Really Takes.md>) · `architecture` · latent-space
+  Explains what it takes to build a Copilot-for-X product, including UX, context, workflow integration, and reliability.

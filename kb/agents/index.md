@@ -1,6 +1,6 @@
 # agents
 
-219 articles.
+223 articles.
 
 - **2026-07-10** — [OpenWiki Brains: Proactive Memory for AI Agents](<memory-context/OpenWiki Brains Proactive Memory for AI Agents.md>) · `memory-context` · langchain
   Introduces OpenWiki Brains as proactive wiki memory for agents, focused on persistent context and retrieval over project knowledge.
@@ -24,6 +24,8 @@
   Short analysis of newer coding models producing malformed arguments for third-party edit tools, raising the issue that tool schemas and edit mechanisms may need model-specific evaluation and adaptation.
 - **2026-07-03** — [Fable's judgement](<multi-agent/Fable's judgement.md>) · `multi-agent` · simon-willison
   Practical coding-agent pattern for delegating implementation work to cheaper subagents while reserving the main model for judgment, review, synthesis, and model-selection decisions.
+- **2026-07-03** — [Vercel's Andrew Qu on why agents are a new kind of software](<planning/Vercel's Andrew Qu on why agents are a new kind of software.md>) · `planning` · latent-space
+  Vercel interview on agents as a new kind of software and the architecture implications for product teams.
 - **2026-07-02** — [AIEWF Daily Dispatch: Autoresearch and the tension between AI and human agency](<planning/AIEWF Daily Dispatch Autoresearch and the tension between AI and human agency.md>) · `planning` · latent-space
   Conference dispatch on autoresearch and human agency, useful for understanding agent loops and human-in-the-loop boundaries.
 - **2026-07-02** — [From World Cup matchups to research maps: evaluating Parallel's web research agents](<tool-use/From World Cup matchups to research maps evaluating Parallel's web research agents.md>) · `tool-use` · braintrust
@@ -354,6 +356,8 @@
   Compares open-source AI agent frameworks and their architecture tradeoffs around orchestration, tools, memory, extensibility, and production readiness.
 - **2025-03-11** — [⚡️The new OpenAI Agents Platform](<planning/⚡️The new OpenAI Agents Platform.md>) · `planning` · latent-space
   Overview of the OpenAI Agents Platform and its implications for agent-building primitives.
+- **2025-03-10** — [Why MCP Won](<tool-use/Why MCP Won.md>) · `tool-use` · latent-space
+  Explains why MCP became the dominant tool protocol for agents and what builders should learn from its adoption.
 - **2025-02-28** — [Open Operator, Serverless Browsers and the Future of Computer-Using Agents](<computer-use/Open Operator, Serverless Browsers and the Future of Computer-Using Agents.md>) · `computer-use` · latent-space
   Covers serverless browsers and open operator patterns for computer-using agents that need reliable browser execution.
 - **2025-02-26** — [Memory and State in LLM Applications](<memory-context/Memory and State in LLM Applications.md>) · `memory-context` · arize
@@ -380,6 +384,8 @@
   Recaps 2024 agent progress across frameworks, autonomy, tool use, and deployment patterns, with durable lessons for agent engineering.
 - **2024-12-19** — [Building Effective AI Agents](<planning/Building Effective AI Agents.md>) · `planning` · anthropic-engineering
   Anthropic's canonical guide to agent design patterns: when to use workflows (prompt chaining, routing, orchestrator-workers) versus autonomous agents, and why simple composable patterns beat frameworks.
+- **2024-12-13** — [Windsurf: The Enterprise AI IDE - with Varun and Anshul of Codeium AI](<computer-use/Windsurf The Enterprise AI IDE - with Varun and Anshul of Codeium AI.md>) · `computer-use` · latent-space
+  Windsurf interview on enterprise AI IDE design, Codeium evolution, and production developer-agent workflows.
 - **2024-12-10** — [Merge, Ensemble, and Cooperate! A Survey on Collaborative LLM Strategies](<multi-agent/Merge, Ensemble, and Cooperate! A Survey on Collaborative LLM Strategies.md>) · `multi-agent` · arize
   Summarizes collaborative LLM strategies such as merging, ensembling, and cooperation for multi-model or multi-agent systems.
 - **2024-12-04** — [AI Agent Workflows and Architectures Masterclass](<planning/AI Agent Workflows and Architectures Masterclass.md>) · `planning` · arize
@@ -440,6 +446,8 @@
   Emergency pod on ChatGPT plugins as an app-store moment, covering tool ecosystems and agent product surfaces.
 - **2023-03-21** — [Toolformer: Training LLMs To Use Tools](<tool-use/Toolformer Training LLMs To Use Tools.md>) · `tool-use` · arize
   Summarizes Toolformer and how language models can learn to use external tools.
+- **2023-03-02** — [97% Cheaper, Faster, Better, Correct AI — with Varun Mohan of Codeium](<computer-use/97% Cheaper, Faster, Better, Correct AI — with Varun Mohan of Codeium.md>) · `computer-use` · latent-space
+  Codeium interview on building cheaper, faster, more correct AI coding assistants and developer-agent workflows.
 
 ## Also relevant (filed elsewhere)
 
@@ -533,6 +541,8 @@
   Explains how to design efficient verifiers for legal agents so domain-specific correctness can be checked without excessive cost.
 - **2026-06-02** — [Introducing Rubrics: Build Agents that Evaluate and Correct Their Work](<../evals-observability/evaluation/Introducing Rubrics Build Agents that Evaluate and Correct Their Work.md>) · `evaluation` · langchain
   Introduces rubrics for Deep Agents so agents can evaluate and correct their own work against explicit criteria.
+- **2026-06-01** — [Why Video Agent models are next — Ethan He, xAI Grok Imagine](<../models/multimodal/Why Video Agent models are next — Ethan He, xAI Grok Imagine.md>) · `multimodal` · latent-space
+  xAI Grok Imagine interview on video-agent models and why video generation and action loops are converging.
 - **2026-06-01** — [The best eval harness for production AI and agents: A comparison](<../evals-observability/testing/The best eval harness for production AI and agents A comparison.md>) · `testing` · arize
   Compares production AI eval harnesses and highlights the design dimensions that matter for agents and applications.
 - **2026-06-01** — [How Rippling built production AI in 6 months with Deep Agents and LangSmith](<../product-engineering/case-studies/How Rippling built production AI in 6 months with Deep Agents and LangSmith.md>) · `case-studies` · langchain
@@ -615,6 +625,8 @@
   Explores tokenmaxxing as a context-engineering pattern and the tradeoff between more context and better taste.
 - **2026-04-23** — [Beyond models: How context and evals make agents work in production](<../evals-observability/evaluation/Beyond models How context and evals make agents work in production.md>) · `evaluation` · arize
   Explains why production agents depend on context quality and eval loops, not just model choice, and outlines how to evaluate behavior on real workflows.
+- **2026-04-23** — [AIE Europe Debrief + Agent Labs Thesis: Unsupervised Learning x Latent Space Crossover Special (2026)](<../industry/trends/AIE Europe Debrief + Agent Labs Thesis Unsupervised Learning x Latent Space Crossover Special (2026).md>) · `trends` · latent-space
+  Dense 2026 crossover on AI engineering trends, coding agents, context engineering, RL, memory, and specialized models.
 - **2026-04-22** — [How to add an evaluation harness to your Gemini CLI coding agent](<../evals-observability/testing/How to add an evaluation harness to your Gemini CLI coding agent.md>) · `testing` · arize
   Walks through adding an evaluation harness to a Gemini CLI coding agent, including how to measure and compare agent behavior.
 - **2026-04-22** — [Shopify’s AI Phase Transition: 2026 Usage Explosion, Unlimited Opus-4.6 Token Budget, Tangle, Tangent, SimGym — with Mikhail Parakhin, Shopify CTO](<../product-engineering/architecture/Shopify’s AI Phase Transition 2026 Usage Explosion, Unlimited Opus-4.6 Token Budget, Tangle, Tangent, SimGym — with Mikhail Parakhin, Shopify CTO.md>) · `architecture` · latent-space
@@ -801,6 +813,10 @@
   Factory.ai interview on A-SWE droids and multi-agent software engineering workflows.
 - **2025-05-28** — [Mixture-of-Agents Alignment for post-training](<../models/fine-tuning/Mixture-of-Agents Alignment for post-training.md>) · `fine-tuning` · together
   Explains Mixture-of-Agents Alignment for improving post-training with collective model intelligence.
+- **2025-05-24** — [SWE Agents Too Cheap To Meter, The Token Data War, and the rise of Tiny Teams](<../industry/trends/SWE Agents Too Cheap To Meter, The Token Data War, and the rise of Tiny Teams.md>) · `trends` · latent-space
+  Analyzes coding-agent pricing, user data acquisition, LMArena, and the shift from token margins to feedback/data loops.
+- **2025-05-23** — [⚡️Multi-Turn RL for Multi-Hour Agents — with Will Brown, Prime Intellect](<../models/fine-tuning/⚡️Multi-Turn RL for Multi-Hour Agents — with Will Brown, Prime Intellect.md>) · `fine-tuning` · latent-space
+  Prime Intellect interview on multi-turn RL for multi-hour agents and training long-horizon agent behavior.
 - **2025-05-21** — [Building an open-source Browser Agent on Fireworks AI](<computer-use/Building an open-source Browser Agent on Fireworks AI.md>) · `computer-use` · fireworks
   Walkthrough of building an open-source browser agent, including model choice, tool execution, and environment control.
 - **2025-05-19** — [Agentic AI Systems](<planning/Agentic AI Systems.md>) · `planning` · fireworks
@@ -813,6 +829,8 @@
   Guide to building and deploying observable agents with Google Agent Framework and Arize, emphasizing traces for multi-agent and agentic workflows.
 - **2025-04-09** — [Embracing Google's Agent-To-Agent (A2A) Protocol](<multi-agent/Embracing Google's Agent-To-Agent (A2A) Protocol.md>) · `multi-agent` · arize
   Discusses Google's Agent-to-Agent protocol and why interoperability standards matter for multi-agent systems and production agent ecosystems.
+- **2025-03-29** — [Unsupervised Learning x Latent Space Crossover Special](<../industry/trends/Unsupervised Learning x Latent Space Crossover Special.md>) · `trends` · latent-space
+  Crossover discussion on open models, AI applications, product-market fit, infrastructure, and agent trends.
 - **2025-03-19** — [Comparing Open-Source AI Agent Frameworks](<planning/Comparing Open-Source AI Agent Frameworks.md>) · `planning` · langfuse
   Compares open-source AI agent frameworks and their architecture tradeoffs around orchestration, tools, memory, extensibility, and production readiness.
 - **2025-03-18** — [Self-Improving Agents: Automating LLM Performance Optimization using Arize and NVIDIA NeMo](<../evals-observability/monitoring/Self-Improving Agents Automating LLM Performance Optimization using Arize and NVIDIA NeMo.md>) · `monitoring` · arize

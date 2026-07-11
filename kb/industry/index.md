@@ -1,6 +1,6 @@
 # industry
 
-25 articles.
+28 articles.
 
 - **2026-07-03** — [AIEWF Daily Dispatch: The great loops debate and the state of AI engineering](<trends/AIEWF Daily Dispatch The great loops debate and the state of AI engineering.md>) · `trends` · latent-space
   Dispatch on the loops debate and the state of AI engineering, capturing emerging vocabulary for production AI systems.
@@ -18,6 +18,8 @@
   Ensemble AI's team joins Cloudflare's Workers AI to improve inference economics, bringing NdLinear — a drop-in linear-layer replacement operating on multidimensional activations to cut parameters and compute — and NdLinear-LoRA for parameter-efficient fine-tuning, complementing Infire and Unweight.
 - **2026-06-09** — [AI is eating the AI engineering loop](<trends/AI is eating the AI engineering loop.md>) · `trends` · langfuse
   Argues that AI is reshaping the AI engineering loop itself, with agents increasingly participating in prompt, eval, observability, and product iteration workflows.
+- **2026-04-23** — [AIE Europe Debrief + Agent Labs Thesis: Unsupervised Learning x Latent Space Crossover Special (2026)](<trends/AIE Europe Debrief + Agent Labs Thesis Unsupervised Learning x Latent Space Crossover Special (2026).md>) · `trends` · latent-space
+  Dense 2026 crossover on AI engineering trends, coding agents, context engineering, RL, memory, and specialized models.
 - **2026-04-20** — [Building the agentic cloud: everything we launched during Agents Week 2026](<announcements/Building the agentic cloud everything we launched during Agents Week 2026.md>) · `announcements` · cloudflare-ai
   Roundup of every Agents Week 2026 launch for Cloudflare's 'agentic cloud': Artifacts (Git-compatible versioned storage), Sandboxes with Outbound Workers for zero-trust egress, Durable Object Facets, and Workflows rearchitected to 50,000 concurrency for durable background agents.
 - **2026-04-20** — [Code is free, technical debt isn’t: Notes from AI Engineer Europe](<trends/Code is free, technical debt isn’t Notes from AI Engineer Europe.md>) · `trends` · arize
@@ -34,6 +36,10 @@
   Karpathy Software 3.0 discussion on software in the age of AI and what changes for builders.
 - **2025-06-13** — [AI Engineering Goes Mainstream](<trends/AI Engineering Goes Mainstream.md>) · `trends` · latent-space
   Summarizes AI engineering becoming mainstream, with emphasis on agent engineering and applied AI system practices.
+- **2025-05-24** — [SWE Agents Too Cheap To Meter, The Token Data War, and the rise of Tiny Teams](<trends/SWE Agents Too Cheap To Meter, The Token Data War, and the rise of Tiny Teams.md>) · `trends` · latent-space
+  Analyzes coding-agent pricing, user data acquisition, LMArena, and the shift from token margins to feedback/data loops.
+- **2025-03-29** — [Unsupervised Learning x Latent Space Crossover Special](<trends/Unsupervised Learning x Latent Space Crossover Special.md>) · `trends` · latent-space
+  Crossover discussion on open models, AI applications, product-market fit, infrastructure, and agent trends.
 - **2025-01-12** — [[Ride Home] Simon Willison: Things we learned about LLMs in 2024](<trends/[Ride Home] Simon Willison Things we learned about LLMs in 2024.md>) · `trends` · latent-space
   Simon Willison recap of practical LLM lessons from 2024, including tools, agents, model behavior, and developer workflow changes.
 - **2024-10-03** — [Building AGI in Real Time (OpenAI Dev Day 2024)](<trends/Building AGI in Real Time (OpenAI Dev Day 2024).md>) · `trends` · latent-space
@@ -79,6 +85,8 @@
   Explains why agents became a major AI application pattern after ChatGPT and what autonomy changes in product design.
 - **2023-03-15** — [The Multi-modal, Multi-model, Multi-everything Future of AGI](<../models/multimodal/The Multi-modal, Multi-model, Multi-everything Future of AGI.md>) · `multimodal` · latent-space
   Essay on the multimodal, multi-model future of AGI and product implications.
+- **2022-11-25** — [Why "Prompt Engineering" and "Generative AI" are overhyped](<../prompt-engineering/techniques/Why Prompt Engineering and Generative AI are overhyped.md>) · `techniques` · latent-space
+  Early essay on why prompt engineering and generative AI were overhyped, useful as historical context for prompt technique limits.
 - **2022-10-09** — [How Open Source is eating AI](<../models/releases/How Open Source is eating AI.md>) · `releases` · latent-space
   Essay on how open source is eating AI and why open model ecosystems matter for product builders.
 - **2021-10-21** — [Rise of the ML Engineer: Chick-fil-A's Korri Jones](<../product-engineering/case-studies/Rise of the ML Engineer Chick-fil-A's Korri Jones.md>) · `case-studies` · arize

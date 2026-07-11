@@ -1,6 +1,6 @@
 # product-engineering
 
-125 articles.
+126 articles.
 
 - **2026-07-10** — [AI-pilling our company: lessons learned](<case-studies/AI-pilling our company lessons learned.md>) · `case-studies` · sierra
   Internal adoption case study on spreading AI workflows through a company, including practical lessons for using agents and tools in day-to-day work.
@@ -242,6 +242,8 @@
   Practical guide to production LLM applications covering task decomposition, retrieval, prompt construction, evaluation, monitoring, and latency/cost tradeoffs.
 - **2023-02-23** — [ChatGPT, GPT4 hype, and Building LLM-native products — with Logan Kilpatrick of OpenAI](<architecture/ChatGPT, GPT4 hype, and Building LLM-native products — with Logan Kilpatrick of OpenAI.md>) · `architecture` · latent-space
   OpenAI interview on building LLM-native products after ChatGPT and GPT-4, with lessons for applied AI product design.
+- **2022-12-19** — [What Building "Copilot for X" Really Takes](<architecture/What Building Copilot for X Really Takes.md>) · `architecture` · latent-space
+  Explains what it takes to build a Copilot-for-X product, including UX, context, workflow integration, and reliability.
 - **2022-06-22** — [Deploying Models In An Evolving Housing Market](<case-studies/Deploying Models In An Evolving Housing Market.md>) · `case-studies` · arize
   Case discussion on deploying models in a changing housing market and monitoring model behavior under shifting real-world conditions.
 - **2022-01-02** — [Real-time machine learning: challenges and solutions](<architecture/Real-time machine learning challenges and solutions.md>) · `architecture` · chip-huyen
@@ -259,6 +261,8 @@
   Covers a governed Deep Agents code blueprint on NVIDIA NemoClaw for sensitive code workflows, emphasizing controls around agentic coding.
 - **2026-07-05** — [sqlite-utils 4.0rc2, mostly written by Claude Fable (for about $149.25)](<../agents/tool-use/sqlite-utils 4.0rc2, mostly written by Claude Fable (for about $149.25).md>) · `tool-use` · simon-willison
   Case study of using Claude Fable and GPT-5.5 to review and harden a sqlite-utils release, including release-blocking bug discovery, cross-model review, subagent cost accounting, and agent-written release notes.
+- **2026-07-03** — [Vercel's Andrew Qu on why agents are a new kind of software](<../agents/planning/Vercel's Andrew Qu on why agents are a new kind of software.md>) · `planning` · latent-space
+  Vercel interview on agents as a new kind of software and the architecture implications for product teams.
 - **2026-07-02** — [Release: llm-coding-agent 0.1a0](<../agents/tool-use/Release llm-coding-agent 0.1a0.md>) · `tool-use` · simon-willison
   Release and implementation notes for a Claude Code-style coding agent built on Simon Willison's LLM framework, including file-editing, command execution, search, read, and write tools plus approval modes.
 - **2026-07-01** — [How Cursor deploys AI inside the enterprise](<../agents/computer-use/How Cursor deploys AI inside the enterprise.md>) · `computer-use` · latent-space
@@ -391,6 +395,8 @@
   Interview with the creators of Model Context Protocol covering standard tool/context interfaces for agents.
 - **2025-03-28** — [The Agent Network — Dharmesh Shah](<../agents/multi-agent/The Agent Network — Dharmesh Shah.md>) · `multi-agent` · latent-space
   Dharmesh Shah interview on agent networks and how agents can coordinate across company workflows.
+- **2025-03-10** — [Why MCP Won](<../agents/tool-use/Why MCP Won.md>) · `tool-use` · latent-space
+  Explains why MCP became the dominant tool protocol for agents and what builders should learn from its adoption.
 - **2025-03-07** — [Prompt Management from First Principles](<../prompt-engineering/techniques/Prompt Management from First Principles.md>) · `techniques` · arize
   Frames prompt management from first principles, including versioning, ownership, and production workflow concerns.
 - **2025-02-13** — [Bee AI: The Wearable Ambient Agent](<../agents/memory-context/Bee AI The Wearable Ambient Agent.md>) · `memory-context` · latent-space
@@ -403,6 +409,8 @@
   ComfyUI interview on AI engineering for art, node-based workflows, and generative media tooling.
 - **2024-12-19** — [Building Effective AI Agents](<../agents/planning/Building Effective AI Agents.md>) · `planning` · anthropic-engineering
   Anthropic's canonical guide to agent design patterns: when to use workflows (prompt chaining, routing, orchestrator-workers) versus autonomous agents, and why simple composable patterns beat frameworks.
+- **2024-12-13** — [Windsurf: The Enterprise AI IDE - with Varun and Anshul of Codeium AI](<../agents/computer-use/Windsurf The Enterprise AI IDE - with Varun and Anshul of Codeium AI.md>) · `computer-use` · latent-space
+  Windsurf interview on enterprise AI IDE design, Codeium evolution, and production developer-agent workflows.
 - **2024-12-04** — [AI Agent Workflows and Architectures Masterclass](<../agents/planning/AI Agent Workflows and Architectures Masterclass.md>) · `planning` · arize
   Introduces practical agent workflow and architecture patterns, emphasizing simple tool-calling loops and design choices over vague autonomy claims.
 - **2024-12-02** — [Bolt.new, Flow Engineering for Code Agents, and >$8m ARR in 2 months as a Claude Wrapper](<../agents/computer-use/Bolt.new, Flow Engineering for Code Agents, and $8m ARR in 2 months as a Claude Wrapper.md>) · `computer-use` · latent-space
@@ -459,6 +467,8 @@
   Explains large multimodal model architecture and training patterns, modality fusion, data challenges, and product capabilities unlocked by image, text, audio, and video models.
 - **2023-09-29** — [Building the Foundation Model Ops Platform — with Raza Habib of Humanloop](<../evals-observability/evaluation/Building the Foundation Model Ops Platform — with Raza Habib of Humanloop.md>) · `evaluation` · latent-space
   Humanloop interview on foundation-model operations, prompt/eval workflows, and production LLM iteration.
+- **2023-09-20** — [Heralds of the AI Content Flippening — with Youssef Rizk of Wondercraft.ai](<../models/multimodal/Heralds of the AI Content Flippening — with Youssef Rizk of Wondercraft.ai.md>) · `multimodal` · latent-space
+  Wondercraft interview on generative audio, AI content workflows, and productizing voice/content generation.
 - **2023-09-12** — [It's time to build reliable AI](<../evals-observability/evaluation/It's time to build reliable AI.md>) · `evaluation` · braintrust
   Early argument for reliable AI systems built around evals, logging, feedback loops, and engineering practices rather than ad hoc demos.
 - **2023-08-22** — [Cursor.so: The AI-first Code Editor — with Aman Sanger of Anysphere](<../agents/computer-use/Cursor.so The AI-first Code Editor — with Aman Sanger of Anysphere.md>) · `computer-use` · latent-space
@@ -477,6 +487,8 @@
   Roboflow interview on Segment Anything, computer vision productization, annotation workflows, and practical CV deployment problems.
 - **2023-03-24** — [Emergency Pod: ChatGPT's App Store Moment (w/ OpenAI's Logan Kilpatrick, LindyAI's Florent Crivello and Nader Dabit)](<../agents/tool-use/Emergency Pod ChatGPT's App Store Moment (w OpenAI's Logan Kilpatrick, LindyAI's Florent Crivello and Nader Dabit).md>) · `tool-use` · latent-space
   Emergency pod on ChatGPT plugins as an app-store moment, covering tool ecosystems and agent product surfaces.
+- **2023-03-02** — [97% Cheaper, Faster, Better, Correct AI — with Varun Mohan of Codeium](<../agents/computer-use/97% Cheaper, Faster, Better, Correct AI — with Varun Mohan of Codeium.md>) · `computer-use` · latent-space
+  Codeium interview on building cheaper, faster, more correct AI coding assistants and developer-agent workflows.
 - **2023-02-17** — [Technical deep dive: Truss live reload](<../infra-platform/deployment/Technical deep dive Truss live reload.md>) · `deployment` · baseten
   Technical deep dive into Truss live reload and faster model-server development loops.
 - **2023-01-08** — [Self-serve feature platforms: architectures and APIs](<../infra-platform/deployment/Self-serve feature platforms architectures and APIs.md>) · `deployment` · chip-huyen

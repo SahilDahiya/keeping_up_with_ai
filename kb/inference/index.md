@@ -1,6 +1,6 @@
 # inference
 
-116 articles.
+117 articles.
 
 - **2026-07-10** — [Optimizing MiniMax M3 Sparse Attention on NVIDIA Blackwell](<optimization/Optimizing MiniMax M3 Sparse Attention on NVIDIA Blackwell.md>) · `optimization` · fireworks
   Deep dive into sparse-attention kernel optimization for MiniMax M3 on NVIDIA Blackwell hardware.
@@ -194,6 +194,8 @@
   Explains TensorRT optimization for Stable Diffusion XL inference, including latency and throughput gains.
 - **2024-02-20** — [Why GPU utilization matters for model inference](<hardware/Why GPU utilization matters for model inference.md>) · `hardware` · baseten
   Explains why GPU utilization is central to inference cost and performance.
+- **2024-02-08** — [Cloud Intelligence at the speed of 5000 tok/s - with Ce Zhang and Vipul Ved Prakash of Together AI](<serving/Cloud Intelligence at the speed of 5000 toks - with Ce Zhang and Vipul Ved Prakash of Together AI.md>) · `serving` · latent-space
+  Together AI interview on high-throughput cloud inference, serving architecture, and the economics of fast token generation.
 - **2024-02-06** — [Unlocking the full power of NVIDIA H100 GPUs for ML inference with TensorRT](<optimization/Unlocking the full power of NVIDIA H100 GPUs for ML inference with TensorRT.md>) · `optimization` · baseten
   Shows how TensorRT unlocks H100 performance for model inference.
 - **2024-01-31** — [Introduction to quantizing ML models](<quantization/Introduction to quantizing ML models.md>) · `quantization` · baseten
@@ -419,6 +421,8 @@
   Explains BitDelta and how small weight deltas can represent fine-tuned model changes.
 - **2024-02-16** — [Truly Serverless Infra for AI Engineers - with Erik Bernhardsson of Modal](<../infra-platform/deployment/Truly Serverless Infra for AI Engineers - with Erik Bernhardsson of Modal.md>) · `deployment` · latent-space
   Modal interview on serverless infrastructure for AI engineers and deployment ergonomics.
+- **2024-02-08** — [Cloud Intelligence at the speed of 5000 tok/s - with Ce Zhang and Vipul Ved Prakash of Together AI](<serving/Cloud Intelligence at the speed of 5000 toks - with Ce Zhang and Vipul Ved Prakash of Together AI.md>) · `serving` · latent-space
+  Together AI interview on high-throughput cloud inference, serving architecture, and the economics of fast token generation.
 - **2024-02-06** — [Unlocking the full power of NVIDIA H100 GPUs for ML inference with TensorRT](<optimization/Unlocking the full power of NVIDIA H100 GPUs for ML inference with TensorRT.md>) · `optimization` · baseten
   Shows how TensorRT unlocks H100 performance for model inference.
 - **2024-01-16** — [Generation configurations: temperature, top-k, top-p, and test time compute](<../models/reasoning/Generation configurations temperature, top-k, top-p, and test time compute.md>) · `reasoning` · chip-huyen

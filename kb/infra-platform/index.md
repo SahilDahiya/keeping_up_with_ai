@@ -365,6 +365,8 @@
   Compares NVIDIA A10 and A100 GPUs for LLM and Stable Diffusion inference workloads.
 - **2023-09-14** — [Doing it the Hard Way: Making the AI engine and language 🔥 of the future — with Chris Lattner of Modular](<../inference/optimization/Doing it the Hard Way Making the AI engine and language 🔥 of the future — with Chris Lattner of Modular.md>) · `optimization` · latent-space
   Modular interview on building AI engines and languages for high-performance AI systems.
+- **2023-08-16** — [The Mathematics of Training LLMs — with Quentin Anthony of Eleuther AI](<../models/fine-tuning/The Mathematics of Training LLMs — with Quentin Anthony of Eleuther AI.md>) · `fine-tuning` · latent-space
+  EleutherAI deep dive on the mathematics and systems constraints of training LLMs at scale.
 - **2023-06-20** — [Commoditizing the Petaflop — with George Hotz of the tiny corp](<../inference/hardware/Commoditizing the Petaflop — with George Hotz of the tiny corp.md>) · `hardware` · latent-space
   George Hotz interview on commoditizing petaflop-scale compute and what low-cost AI hardware means for builders.
 - **2023-04-27** — [Comparing NVIDIA GPUs for AI: T4 vs A10](<../inference/hardware/Comparing NVIDIA GPUs for AI T4 vs A10.md>) · `hardware` · baseten

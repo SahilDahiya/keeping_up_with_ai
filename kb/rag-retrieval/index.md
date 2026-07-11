@@ -1,6 +1,6 @@
 # rag-retrieval
 
-48 articles.
+49 articles.
 
 - **2026-07-07** — [Faster phrase search with shingled bloom filters in Brainstore](<search/Faster phrase search with shingled bloom filters in Brainstore.md>) · `search` · braintrust
   Explains faster phrase search over Brainstore data using shingled bloom filters, aimed at efficient trace and log search for AI observability.
@@ -18,6 +18,8 @@
   Introduces Sierra search models for improving support-agent resolution rates through better knowledge retrieval and answer grounding.
 - **2026-04-04** — [How Arize Skills Improved RAG Recall from 39% to 75% in 8 Hours](<pipelines/How Arize Skills Improved RAG Recall from 39% to 75% in 8 Hours.md>) · `pipelines` · arize
   Uses an eval-guided RAG improvement loop to show how retrieval recall can be diagnosed and improved quickly.
+- **2026-03-12** — [Retrieval After RAG: Hybrid Search, Agents, and Database Design — Simon Hørup Eskildsen of Turbopuffer](<search/Retrieval After RAG Hybrid Search, Agents, and Database Design — Simon Hørup Eskildsen of Turbopuffer.md>) · `search` · latent-space
+  Turbopuffer interview on retrieval after RAG, hybrid search, vector database design, and agent-oriented data systems.
 - **2026-02-23** — [Mastering Production RAG with Google ADK and Arize AX for Enterprise Knowledge Systems](<pipelines/Mastering Production RAG with Google ADK and Arize AX for Enterprise Knowledge Systems.md>) · `pipelines` · arize
   Explains production RAG architecture with Google ADK and Arize AX, including agentic retrieval and evaluation concerns.
 - **2026-01-01** — [How Dropbox built an evaluation pipeline for AI search](<search/How Dropbox built an evaluation pipeline for AI search.md>) · `search` · braintrust
@@ -121,6 +123,8 @@
   Introduces tau-knowledge for benchmarking agents on realistic knowledge tasks that require grounded retrieval and use of external information.
 - **2026-04-29** — [Using context graphs: build a data moat like Google's using your enterprise data](<../agents/memory-context/Using context graphs build a data moat like Google's using your enterprise data.md>) · `memory-context` · arize
   Explains context graphs as an enterprise memory layer for agents and retrieval-heavy AI systems.
+- **2026-03-12** — [Retrieval After RAG: Hybrid Search, Agents, and Database Design — Simon Hørup Eskildsen of Turbopuffer](<search/Retrieval After RAG Hybrid Search, Agents, and Database Design — Simon Hørup Eskildsen of Turbopuffer.md>) · `search` · latent-space
+  Turbopuffer interview on retrieval after RAG, hybrid search, vector database design, and agent-oriented data systems.
 - **2025-09-12** — [Understanding embeddings and reranking at scale](<search/Understanding embeddings and reranking at scale.md>) · `search` · fireworks
   Explains embeddings, reranking, and retrieval architecture patterns for production RAG systems.
 - **2025-09-09** — [AI that knows your data](<../agents/tool-use/AI that knows your data.md>) · `tool-use` · braintrust

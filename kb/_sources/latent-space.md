@@ -1,6 +1,6 @@
 # latent-space
 
-221 articles.
+238 articles.
 
 - **2026-07-10** — [[AINews] OpenAI launches GPT 5.6 Sol/Terra/Luna, Codex becomes ChatGPT superapp](<../models/releases/[AINews] OpenAI launches GPT 5.6 SolTerraLuna, Codex becomes ChatGPT superapp.md>) · `releases` · latent-space
   Covers GPT-5.6 model releases and Codex becoming a ChatGPT superapp, relevant to coding-agent product direction.
@@ -8,6 +8,8 @@
   Summarizes harness-engineering papers through Lilian Weng’s lens, connecting agent structure with recursive improvement.
 - **2026-07-08** — [Why AI Infrastructure must evolve for Agent Experience — Akshat Bubna, Modal CTO](<../infra-platform/deployment/Why AI Infrastructure must evolve for Agent Experience — Akshat Bubna, Modal CTO.md>) · `deployment` · latent-space
   Modal CTO interview on evolving AI infrastructure for agent experience and execution-heavy workloads.
+- **2026-07-03** — [Vercel's Andrew Qu on why agents are a new kind of software](<../agents/planning/Vercel's Andrew Qu on why agents are a new kind of software.md>) · `planning` · latent-space
+  Vercel interview on agents as a new kind of software and the architecture implications for product teams.
 - **2026-07-03** — [AIEWF Daily Dispatch: The great loops debate and the state of AI engineering](<../industry/trends/AIEWF Daily Dispatch The great loops debate and the state of AI engineering.md>) · `trends` · latent-space
   Dispatch on the loops debate and the state of AI engineering, capturing emerging vocabulary for production AI systems.
 - **2026-07-02** — [AIEWF Daily Dispatch: Autoresearch and the tension between AI and human agency](<../agents/planning/AIEWF Daily Dispatch Autoresearch and the tension between AI and human agency.md>) · `planning` · latent-space
@@ -56,6 +58,8 @@
   Covers informal-to-formal math AI and the scaling problems around proof, reasoning, and verification.
 - **2026-06-02** — [GitHub's plan for Agents — Kyle Daigle, GitHub](<../agents/computer-use/GitHub's plan for Agents — Kyle Daigle, GitHub.md>) · `computer-use` · latent-space
   GitHub interview on its plan for agents, including developer workflows, repositories, and coding-agent integration.
+- **2026-06-01** — [Why Video Agent models are next — Ethan He, xAI Grok Imagine](<../models/multimodal/Why Video Agent models are next — Ethan He, xAI Grok Imagine.md>) · `multimodal` · latent-space
+  xAI Grok Imagine interview on video-agent models and why video generation and action loops are converging.
 - **2026-05-28** — [The Age of Async Agents — Cognition's Walden Yan & OpenInspect's Cole Murray](<../agents/computer-use/The Age of Async Agents — Cognition's Walden Yan & OpenInspect's Cole Murray.md>) · `computer-use` · latent-space
   Covers async agents through Cognition and OpenInspect, focusing on long-running coding-agent work and inspection.
 - **2026-05-23** — [[AINews] All Model Labs are now Agent Labs](<../agents/planning/[AINews] All Model Labs are now Agent Labs.md>) · `planning` · latent-space
@@ -82,6 +86,8 @@
   Covers GPT-5.5 and the OpenAI Codex app direction, relevant to coding-agent product architecture.
 - **2026-04-23** — [[AINews] Tasteful Tokenmaxxing](<../prompt-engineering/context-engineering/[AINews] Tasteful Tokenmaxxing.md>) · `context-engineering` · latent-space
   Explores tokenmaxxing as a context-engineering pattern and the tradeoff between more context and better taste.
+- **2026-04-23** — [AIE Europe Debrief + Agent Labs Thesis: Unsupervised Learning x Latent Space Crossover Special (2026)](<../industry/trends/AIE Europe Debrief + Agent Labs Thesis Unsupervised Learning x Latent Space Crossover Special (2026).md>) · `trends` · latent-space
+  Dense 2026 crossover on AI engineering trends, coding agents, context engineering, RL, memory, and specialized models.
 - **2026-04-22** — [[AINews] OpenAI launches GPT-Image-2](<../models/multimodal/[AINews] OpenAI launches GPT-Image-2.md>) · `multimodal` · latent-space
   Covers GPT-Image-2 and image generation capability movement in multimodal model products.
 - **2026-04-22** — [Shopify’s AI Phase Transition: 2026 Usage Explosion, Unlimited Opus-4.6 Token Budget, Tangle, Tangent, SimGym — with Mikhail Parakhin, Shopify CTO](<../product-engineering/architecture/Shopify’s AI Phase Transition 2026 Usage Explosion, Unlimited Opus-4.6 Token Budget, Tangle, Tangent, SimGym — with Mikhail Parakhin, Shopify CTO.md>) · `architecture` · latent-space
@@ -96,6 +102,8 @@
   Deep dive on extreme harness engineering for high-volume agentic coding and token-heavy workflows.
 - **2026-04-02** — [Moonlake: Causal World Models should be Multimodal, Interactive, and Efficient — with Chris Manning and Fan-yun Sun](<../models/multimodal/Moonlake Causal World Models should be Multimodal, Interactive, and Efficient — with Chris Manning and Fan-yun Sun.md>) · `multimodal` · latent-space
   Moonlake interview on causal world models that are multimodal, interactive, and efficient.
+- **2026-03-30** — [Mistral: Voxtral TTS, Forge, Leanstral, & what's next for Mistral 4 — w/ Pavan Kumar Reddy & Guillaume Lample](<../models/multimodal/Mistral Voxtral TTS, Forge, Leanstral, & what's next for Mistral 4 — w Pavan Kumar Reddy & Guillaume Lample.md>) · `multimodal` · latent-space
+  Mistral interview covering Voxtral TTS, Forge, Leanstral, and multimodal model release direction.
 - **2026-03-27** — [[AINews] Everything is CLI](<../agents/tool-use/[AINews] Everything is CLI.md>) · `tool-use` · latent-space
   Argues for CLI interfaces as durable tool boundaries for agents and coding workflows.
 - **2026-03-20** — [Dreamer: the Personal Agent OS — David Singleton](<../agents/memory-context/Dreamer the Personal Agent OS — David Singleton.md>) · `memory-context` · latent-space
@@ -110,6 +118,8 @@
   Discusses raising expectations for LLM-powered workflows and designing systems that use more model capability.
 - **2026-03-12** — [[AINews] Replit Agent 4: The Knowledge Work Agent](<../agents/computer-use/[AINews] Replit Agent 4 The Knowledge Work Agent.md>) · `computer-use` · latent-space
   Covers Replit Agent 4 as a knowledge-work agent and what that implies for coding-agent workflows.
+- **2026-03-12** — [Retrieval After RAG: Hybrid Search, Agents, and Database Design — Simon Hørup Eskildsen of Turbopuffer](<../rag-retrieval/search/Retrieval After RAG Hybrid Search, Agents, and Database Design — Simon Hørup Eskildsen of Turbopuffer.md>) · `search` · latent-space
+  Turbopuffer interview on retrieval after RAG, hybrid search, vector database design, and agent-oriented data systems.
 - **2026-03-11** — [[AINews] Yann LeCun’s AMI Labs launches with a $1B seed @ $4.5B to build world models around JEPA](<../models/reasoning/[AINews] Yann LeCun’s AMI Labs launches with a $1B seed @ $4.5B to build world models around JEPA.md>) · `reasoning` · latent-space
   Covers AMI Labs and world-model approaches, relevant to model architectures for agents beyond pure text prediction.
 - **2026-03-10** — [[AINews] Autoresearch: Sparks of Recursive Self Improvement](<../agents/planning/[AINews] Autoresearch Sparks of Recursive Self Improvement.md>) · `planning` · latent-space
@@ -218,6 +228,10 @@
   Anthropic interpretability interview on circuit tracing and why model internals matter for understanding behavior.
 - **2025-05-29** — [Factory.ai: The A-SWE Droid Army](<../agents/computer-use/Factory.ai The A-SWE Droid Army.md>) · `computer-use` · latent-space
   Factory.ai interview on A-SWE droids and multi-agent software engineering workflows.
+- **2025-05-24** — [SWE Agents Too Cheap To Meter, The Token Data War, and the rise of Tiny Teams](<../industry/trends/SWE Agents Too Cheap To Meter, The Token Data War, and the rise of Tiny Teams.md>) · `trends` · latent-space
+  Analyzes coding-agent pricing, user data acquisition, LMArena, and the shift from token margins to feedback/data loops.
+- **2025-05-23** — [⚡️Multi-Turn RL for Multi-Hour Agents — with Will Brown, Prime Intellect](<../models/fine-tuning/⚡️Multi-Turn RL for Multi-Hour Agents — with Will Brown, Prime Intellect.md>) · `fine-tuning` · latent-space
+  Prime Intellect interview on multi-turn RL for multi-hour agents and training long-horizon agent behavior.
 - **2025-05-17** — [ChatGPT Codex: The Missing Manual](<../agents/computer-use/ChatGPT Codex The Missing Manual.md>) · `computer-use` · latent-space
   ChatGPT Codex missing manual covering coding-agent workflows, capabilities, and operating patterns.
 - **2025-05-07** — [Claude Code: Anthropic's Agent in Your Terminal](<../agents/computer-use/Claude Code Anthropic's Agent in Your Terminal.md>) · `computer-use` · latent-space
@@ -232,6 +246,8 @@
   SF Compute interview on commoditizing GPU compute, cluster supply, and cost structure for AI workloads.
 - **2025-04-03** — [The Creators of Model Context Protocol](<../agents/tool-use/The Creators of Model Context Protocol.md>) · `tool-use` · latent-space
   Interview with the creators of Model Context Protocol covering standard tool/context interfaces for agents.
+- **2025-03-29** — [Unsupervised Learning x Latent Space Crossover Special](<../industry/trends/Unsupervised Learning x Latent Space Crossover Special.md>) · `trends` · latent-space
+  Crossover discussion on open models, AI applications, product-market fit, infrastructure, and agent trends.
 - **2025-03-28** — [The Agent Network — Dharmesh Shah](<../agents/multi-agent/The Agent Network — Dharmesh Shah.md>) · `multi-agent` · latent-space
   Dharmesh Shah interview on agent networks and how agents can coordinate across company workflows.
 - **2025-03-24** — [Agent Engineering](<../agents/planning/Agent Engineering.md>) · `planning` · latent-space
@@ -240,6 +256,8 @@
   Snipd case study on building an AI podcast learning app with search, summarization, and product workflow lessons.
 - **2025-03-11** — [⚡️The new OpenAI Agents Platform](<../agents/planning/⚡️The new OpenAI Agents Platform.md>) · `planning` · latent-space
   Overview of the OpenAI Agents Platform and its implications for agent-building primitives.
+- **2025-03-10** — [Why MCP Won](<../agents/tool-use/Why MCP Won.md>) · `tool-use` · latent-space
+  Explains why MCP became the dominant tool protocol for agents and what builders should learn from its adoption.
 - **2025-02-28** — [Open Operator, Serverless Browsers and the Future of Computer-Using Agents](<../agents/computer-use/Open Operator, Serverless Browsers and the Future of Computer-Using Agents.md>) · `computer-use` · latent-space
   Covers serverless browsers and open operator patterns for computer-using agents that need reliable browser execution.
 - **2025-02-18** — [The Inventors of Deep Research](<../agents/planning/The Inventors of Deep Research.md>) · `planning` · latent-space
@@ -274,6 +292,8 @@
   Reviews the 2024 open model landscape, including capability gains, benchmark movement, and deployment implications.
 - **2024-12-22** — [2024 in Vision [LS Live @ NeurIPS]](<../models/multimodal/2024 in Vision [LS Live @ NeurIPS].md>) · `multimodal` · latent-space
   Reviews 2024 vision model progress and multimodal capability trends relevant to AI product builders.
+- **2024-12-13** — [Windsurf: The Enterprise AI IDE - with Varun and Anshul of Codeium AI](<../agents/computer-use/Windsurf The Enterprise AI IDE - with Varun and Anshul of Codeium AI.md>) · `computer-use` · latent-space
+  Windsurf interview on enterprise AI IDE design, Codeium evolution, and production developer-agent workflows.
 - **2024-12-10** — [Generative Video WorldSim, Diffusion, Vision, Reinforcement Learning and Robotics — ICML 2024 Part 1](<../models/multimodal/Generative Video WorldSim, Diffusion, Vision, Reinforcement Learning and Robotics — ICML 2024 Part 1.md>) · `multimodal` · latent-space
   ICML recap on generative video world simulation, diffusion, vision, RL, and robotics.
 - **2024-12-02** — [Bolt.new, Flow Engineering for Code Agents, and >$8m ARR in 2 months as a Claude Wrapper](<../agents/computer-use/Bolt.new, Flow Engineering for Code Agents, and $8m ARR in 2 months as a Claude Wrapper.md>) · `computer-use` · latent-space
@@ -320,6 +340,8 @@
   Covers Llama 2, 3, and 4, including synthetic data, RLHF, and open-source agent progress.
 - **2024-07-12** — [Benchmarks 201: Why Leaderboards > Arenas >> LLM-as-Judge](<../models/benchmarks/Benchmarks 201 Why Leaderboards Arenas LLM-as-Judge.md>) · `benchmarks` · latent-space
   Advanced benchmark guide comparing leaderboards, arenas, and LLM-as-judge approaches.
+- **2024-07-05** — [The 10,000x Yolo Researcher Metagame — with Yi Tay of Reka](<../models/reasoning/The 10,000x Yolo Researcher Metagame — with Yi Tay of Reka.md>) · `reasoning` · latent-space
+  Yi Tay interview on researcher workflows, model training, reasoning, and the metagame of high-velocity AI research.
 - **2024-06-25** — [State of the Art: Training >70B LLMs on 10,000 H100 clusters](<../models/fine-tuning/State of the Art Training 70B LLMs on 10,000 H100 clusters.md>) · `fine-tuning` · latent-space
   State-of-the-art overview of training >70B LLMs on 10,000-H100 clusters.
 - **2024-06-11** — [How AI is eating Finance — with Mike Conover of Brightwave](<../product-engineering/case-studies/How AI is eating Finance — with Mike Conover of Brightwave.md>) · `case-studies` · latent-space
@@ -348,6 +370,8 @@
   Replicate interview on standardizing model deployment and serving generative models.
 - **2024-02-16** — [Truly Serverless Infra for AI Engineers - with Erik Bernhardsson of Modal](<../infra-platform/deployment/Truly Serverless Infra for AI Engineers - with Erik Bernhardsson of Modal.md>) · `deployment` · latent-space
   Modal interview on serverless infrastructure for AI engineers and deployment ergonomics.
+- **2024-02-08** — [Cloud Intelligence at the speed of 5000 tok/s - with Ce Zhang and Vipul Ved Prakash of Together AI](<../inference/serving/Cloud Intelligence at the speed of 5000 toks - with Ce Zhang and Vipul Ved Prakash of Together AI.md>) · `serving` · latent-space
+  Together AI interview on high-throughput cloud inference, serving architecture, and the economics of fast token generation.
 - **2024-02-01** — [Why StackOverflow usage is down 50% — with David Hsu of Retool](<../product-engineering/architecture/Why StackOverflow usage is down 50% — with David Hsu of Retool.md>) · `architecture` · latent-space
   Retool interview on AI’s impact on StackOverflow and internal software development workflows.
 - **2024-01-19** — [How to train your own Large Multimodal Model — with Hugo Laurençon & Leo Tronchon of HuggingFace M4 Research](<../models/multimodal/How to train your own Large Multimodal Model — with Hugo Laurençon & Leo Tronchon of HuggingFace M4 Research.md>) · `multimodal` · latent-space
@@ -382,6 +406,8 @@
   LlamaIndex interview arguing RAG is a hack and discussing better data/application abstractions for LLM systems.
 - **2023-09-29** — [Building the Foundation Model Ops Platform — with Raza Habib of Humanloop](<../evals-observability/evaluation/Building the Foundation Model Ops Platform — with Raza Habib of Humanloop.md>) · `evaluation` · latent-space
   Humanloop interview on foundation-model operations, prompt/eval workflows, and production LLM iteration.
+- **2023-09-20** — [Heralds of the AI Content Flippening — with Youssef Rizk of Wondercraft.ai](<../models/multimodal/Heralds of the AI Content Flippening — with Youssef Rizk of Wondercraft.ai.md>) · `multimodal` · latent-space
+  Wondercraft interview on generative audio, AI content workflows, and productizing voice/content generation.
 - **2023-09-14** — [Doing it the Hard Way: Making the AI engine and language 🔥 of the future — with Chris Lattner of Modular](<../inference/optimization/Doing it the Hard Way Making the AI engine and language 🔥 of the future — with Chris Lattner of Modular.md>) · `optimization` · latent-space
   Modular interview on building AI engines and languages for high-performance AI systems.
 - **2023-09-06** — [The Point of LangChain — with Harrison Chase of LangChain](<../agents/planning/The Point of LangChain — with Harrison Chase of LangChain.md>) · `planning` · latent-space
@@ -390,6 +416,8 @@
   RWKV interview on reinventing RNNs for the Transformer era and efficient sequence modeling.
 - **2023-08-22** — [Cursor.so: The AI-first Code Editor — with Aman Sanger of Anysphere](<../agents/computer-use/Cursor.so The AI-first Code Editor — with Aman Sanger of Anysphere.md>) · `computer-use` · latent-space
   Interview on Cursor as an AI-first code editor, including interaction design and coding-agent workflows.
+- **2023-08-16** — [The Mathematics of Training LLMs — with Quentin Anthony of Eleuther AI](<../models/fine-tuning/The Mathematics of Training LLMs — with Quentin Anthony of Eleuther AI.md>) · `fine-tuning` · latent-space
+  EleutherAI deep dive on the mathematics and systems constraints of training LLMs at scale.
 - **2023-08-10** — [LLMs Everywhere: Running 70B models in browsers and iPhones using MLC — with Tianqi Chen of CMU / OctoML](<../inference/optimization/LLMs Everywhere Running 70B models in browsers and iPhones using MLC — with Tianqi Chen of CMU OctoML.md>) · `optimization` · latent-space
   MLC interview on running 70B models in browsers and phones, covering local inference and deployment.
 - **2023-07-26** — [FlashAttention 2: making Transformers 800% faster w/o approximation - with Tri Dao of Together AI](<../inference/optimization/FlashAttention 2 making Transformers 800% faster wo approximation - with Tri Dao of Together AI.md>) · `optimization` · latent-space
@@ -438,9 +466,15 @@
   Emergency pod on ChatGPT plugins as an app-store moment, covering tool ecosystems and agent product surfaces.
 - **2023-03-15** — [The Multi-modal, Multi-model, Multi-everything Future of AGI](<../models/multimodal/The Multi-modal, Multi-model, Multi-everything Future of AGI.md>) · `multimodal` · latent-space
   Essay on the multimodal, multi-model future of AGI and product implications.
+- **2023-03-02** — [97% Cheaper, Faster, Better, Correct AI — with Varun Mohan of Codeium](<../agents/computer-use/97% Cheaper, Faster, Better, Correct AI — with Varun Mohan of Codeium.md>) · `computer-use` · latent-space
+  Codeium interview on building cheaper, faster, more correct AI coding assistants and developer-agent workflows.
 - **2023-02-23** — [ChatGPT, GPT4 hype, and Building LLM-native products — with Logan Kilpatrick of OpenAI](<../product-engineering/architecture/ChatGPT, GPT4 hype, and Building LLM-native products — with Logan Kilpatrick of OpenAI.md>) · `architecture` · latent-space
   OpenAI interview on building LLM-native products after ChatGPT and GPT-4, with lessons for applied AI product design.
 - **2022-12-28** — [Reverse Prompt Engineering for Fun and (no) Profit](<../prompt-engineering/techniques/Reverse Prompt Engineering for Fun and (no) Profit.md>) · `techniques` · latent-space
   Explains reverse prompt engineering as a practical technique for understanding and recreating LLM product behavior.
+- **2022-12-19** — [What Building "Copilot for X" Really Takes](<../product-engineering/architecture/What Building Copilot for X Really Takes.md>) · `architecture` · latent-space
+  Explains what it takes to build a Copilot-for-X product, including UX, context, workflow integration, and reliability.
+- **2022-11-25** — [Why "Prompt Engineering" and "Generative AI" are overhyped](<../prompt-engineering/techniques/Why Prompt Engineering and Generative AI are overhyped.md>) · `techniques` · latent-space
+  Early essay on why prompt engineering and generative AI were overhyped, useful as historical context for prompt technique limits.
 - **2022-10-09** — [How Open Source is eating AI](<../models/releases/How Open Source is eating AI.md>) · `releases` · latent-space
   Essay on how open source is eating AI and why open model ecosystems matter for product builders.

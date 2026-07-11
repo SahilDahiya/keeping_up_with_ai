@@ -731,6 +731,8 @@
   Anthropic interpretability interview on circuit tracing and why model internals matter for understanding behavior.
 - **2025-06-04** — [Synthetic data pipeline for fine-tuning and evaluation](<../models/fine-tuning/Synthetic data pipeline for fine-tuning and evaluation.md>) · `fine-tuning` · fireworks
   Describes a synthetic-data pipeline that connects task definition, generation, SFT/RFT, evaluation, and cleanup.
+- **2025-05-24** — [SWE Agents Too Cheap To Meter, The Token Data War, and the rise of Tiny Teams](<../industry/trends/SWE Agents Too Cheap To Meter, The Token Data War, and the rise of Tiny Teams.md>) · `trends` · latent-space
+  Analyzes coding-agent pricing, user data acquisition, LMArena, and the shift from token margins to feedback/data loops.
 - **2025-05-22** — [Why Speech to Text Is the Hidden Engine Behind Contact Center AI Performance](<../models/multimodal/Why Speech to Text Is the Hidden Engine Behind Contact Center AI Performance.md>) · `multimodal` · cresta
   Explains how speech-to-text quality drives downstream AI performance and why it should be treated as a system dependency.
 - **2025-04-18** — [Why Transcription Performance Is Holding Back Your AI Strategy](<../models/multimodal/Why Transcription Performance Is Holding Back Your AI Strategy.md>) · `multimodal` · cresta
