@@ -1,6 +1,6 @@
 # product-engineering
 
-88 articles.
+90 articles.
 
 - **2026-07-10** — [AI-pilling our company: lessons learned](<case-studies/AI-pilling our company lessons learned.md>) · `case-studies` · sierra
   Internal adoption case study on spreading AI workflows through a company, including practical lessons for using agents and tools in day-to-day work.
@@ -70,6 +70,8 @@
   Connects AI compliance and governance to engineering controls such as observability, audit trails, data boundaries, review workflows, and policy enforcement.
 - **2026-04-08** — [Scaling Managed Agents: Decoupling the brain from the hands](<architecture/Scaling Managed Agents Decoupling the brain from the hands.md>) · `architecture` · anthropic-engineering
   Architecture of Claude Managed Agents: decoupling the agent loop (the brain) from sandboxed tool execution (the hands) to scale hosted long-running sessions.
+- **2026-04-03** — [AI for Systems: Using LLMs to Optimize Database Query Execution](<architecture/AI for Systems Using LLMs to Optimize Database Query Execution.md>) · `architecture` · together
+  Explores using LLMs to optimize database query execution as an AI-for-systems pattern.
 - **2026-03-27** — [Evals are the new PRD](<architecture/Evals are the new PRD.md>) · `architecture` · braintrust
   Argues that evals can act as executable product requirements for AI systems, aligning teams around expected behavior and measurable quality.
 - **2026-03-25** — [How Perplexity Brought Voice Search to Millions Using the Realtime API | OpenAI Developers](<case-studies/How Perplexity Brought Voice Search to Millions Using the Realtime API OpenAI Developers.md>) · `case-studies` · openai-devs
@@ -96,6 +98,8 @@
   Explains data-control choices for AI observability, including where data lives, how security boundaries are enforced, and deployment implications.
 - **2026-01-11** — [Supercharging Codex with JetBrains MCP at Skyscanner | OpenAI Developers](<case-studies/Supercharging Codex with JetBrains MCP at Skyscanner OpenAI Developers.md>) · `case-studies` · openai-devs
   Skyscanner wires Codex CLI to the JetBrains MCP server so the agent gets IDE feedback loops: get_file_problems surfaced a non-compiling Databricks SDK NotFound constructor immediately instead of after a test run, cutting iteration time.
+- **2026-01-08** — [How to choose the right open model for production](<architecture/How to choose the right open model for production.md>) · `architecture` · together
+  Guide to choosing open models for production based on workload, quality, and serving constraints.
 - **2026-01-01** — [How Coursera builds next-generation learning tools](<case-studies/How Coursera builds next-generation learning tools.md>) · `case-studies` · braintrust
   Customer case study on Coursera's next-generation learning tools and how evaluation workflows support quality for education-focused AI features.
 - **2026-01-01** — [How Fintool generates millions of financial insights](<case-studies/How Fintool generates millions of financial insights.md>) · `case-studies` · braintrust
