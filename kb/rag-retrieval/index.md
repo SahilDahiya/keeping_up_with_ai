@@ -1,6 +1,6 @@
 # rag-retrieval
 
-15 articles.
+18 articles.
 
 - **2026-07-07** — [Faster phrase search with shingled bloom filters in Brainstore](<search/Faster phrase search with shingled bloom filters in Brainstore.md>) · `search` · braintrust
   Explains faster phrase search over Brainstore data using shingled bloom filters, aimed at efficient trace and log search for AI observability.
@@ -10,6 +10,12 @@
   Deep dive on constructing and querying SmithDB's inverted index for full-text search over observability data.
 - **2026-06-10** — [Full Text Search in SmithDB: Designing an Inverted Index for Object Storage](<search/Full Text Search in SmithDB Designing an Inverted Index for Object Storage.md>) · `search` · langchain
   Architecture writeup on designing an inverted index for object storage in SmithDB, motivated by full-text search over agent traces.
+- **2026-05-12** — [Expert Answers: Turn everyday support conversations into compounding knowledge](<pipelines/Expert Answers Turn everyday support conversations into compounding knowledge.md>) · `pipelines` · sierra
+  Describes turning everyday support conversations into compounding knowledge, using agent interactions to improve knowledge bases and answers.
+- **2026-05-12** — [Golden articles: Evaluating and improving search](<search/Golden articles Evaluating and improving search.md>) · `search` · sierra
+  Covers golden-article evaluation for search quality and how retrieval systems can be measured and improved for support agents.
+- **2026-05-12** — [Meet Linnaeus and Darwin: Search models that drive higher resolution rates](<search/Meet Linnaeus and Darwin Search models that drive higher resolution rates.md>) · `search` · sierra
+  Introduces Sierra search models for improving support-agent resolution rates through better knowledge retrieval and answer grounding.
 - **2026-01-01** — [How Dropbox built an evaluation pipeline for AI search](<search/How Dropbox built an evaluation pipeline for AI search.md>) · `search` · braintrust
   Case study of Dropbox's evaluation pipeline for AI search, focused on measuring retrieval and answer quality for production search experiences.
 - **2025-10-28** — [RAG Observability and Evals](<pipelines/RAG Observability and Evals.md>) · `pipelines` · langfuse
@@ -51,6 +57,8 @@
   Technical report comparing GLM-5.2 and Opus 4.8, including benchmark methodology, long-context retrieval behavior, and model-performance tradeoffs.
 - **2026-06-24** — [How to Build Memory into AI Agents](<../agents/memory-context/How to Build Memory into AI Agents.md>) · `memory-context` · langchain
   Explains how to build memory into AI agents through state, retrieval, persistence, and context injection patterns.
+- **2026-05-13** — [Tau-Knowledge: benchmarking agents on realistic knowledge](<../evals-observability/evaluation/Tau-Knowledge benchmarking agents on realistic knowledge.md>) · `evaluation` · sierra
+  Introduces tau-knowledge for benchmarking agents on realistic knowledge tasks that require grounded retrieval and use of external information.
 - **2025-09-09** — [AI that knows your data](<../agents/tool-use/AI that knows your data.md>) · `tool-use` · braintrust
   Discusses MCP-style access to data and tools so AI systems can retrieve context and act against application-specific resources.
 - **2024-11-18** — [Building a RAG app with MongoDB Atlas](<pipelines/Building a RAG app with MongoDB Atlas.md>) · `pipelines` · braintrust

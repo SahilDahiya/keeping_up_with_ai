@@ -1,6 +1,6 @@
 # agents
 
-85 articles.
+89 articles.
 
 - **2026-07-10** — [OpenWiki Brains: Proactive Memory for AI Agents](<memory-context/OpenWiki Brains Proactive Memory for AI Agents.md>) · `memory-context` · langchain
   Introduces OpenWiki Brains as proactive wiki memory for agents, focused on persistent context and retrieval over project knowledge.
@@ -58,8 +58,16 @@
   Explains LangSmith Engine, an agent for improving agents through trace analysis, feedback, evals, and iterative changes.
 - **2026-05-13** — [LangSmith Sandboxes are Generally Available](<computer-use/LangSmith Sandboxes are Generally Available.md>) · `computer-use` · langchain
   Covers LangSmith Sandboxes for safely running agent code and tools in isolated execution environments.
+- **2026-05-12** — [Sierra Agent OS 2.0: from answers to memory and action](<memory-context/Sierra Agent OS 2.0 from answers to memory and action.md>) · `memory-context` · sierra
+  Describes Agent OS 2.0 moving agents from answers to memory and action, covering persistent context, tool use, and stateful behavior.
 - **2026-05-12** — [Delta Channels: How We’re Evolving our Runtime for Long-Running Agents](<planning/Delta Channels How We’re Evolving our Runtime for Long-Running Agents.md>) · `planning` · langchain
   Describes Delta Channels as an evolution of the LangGraph runtime for long-running agents, focused on durable state and runtime communication.
+- **2026-05-12** — [Explorer: The agent-optimizing agent](<planning/Explorer The agent-optimizing agent.md>) · `planning` · sierra
+  Introduces Explorer as an agent-optimizing agent that analyzes conversations and identifies improvement opportunities for deployed agents.
+- **2026-05-12** — [Shipping and scaling AI agents](<planning/Shipping and scaling AI agents.md>) · `planning` · sierra
+  Practical guide to shipping and scaling AI agents, including lifecycle, reliability, deployment, and continuous improvement concerns.
+- **2026-05-12** — [The Agent Development Life Cycle](<planning/The Agent Development Life Cycle.md>) · `planning` · sierra
+  Defines an agent development lifecycle from design and simulation through evaluation, deployment, monitoring, and continuous improvement.
 - **2026-05-09** — [The Agent Development Lifecycle: Build, Test, Deploy & Monitor AI Agents](<planning/The Agent Development Lifecycle Build, Test, Deploy & Monitor AI Agents.md>) · `planning` · langchain
   Defines the agent development lifecycle from build and test through deployment, monitoring, and iterative improvement.
 - **2026-04-30** — [Agents can now create Cloudflare accounts, buy domains, and deploy](<tool-use/Agents can now create Cloudflare accounts, buy domains, and deploy.md>) · `tool-use` · cloudflare-ai
@@ -175,6 +183,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-07-10** — [AI-pilling our company: lessons learned](<../product-engineering/case-studies/AI-pilling our company lessons learned.md>) · `case-studies` · sierra
+  Internal adoption case study on spreading AI workflows through a company, including practical lessons for using agents and tools in day-to-day work.
 - **2026-07-09** — [The new GPT-5.6 family: Luna, Terra, Sol](<../models/releases/The new GPT-5.6 family Luna, Terra, Sol.md>) · `releases` · simon-willison
   Notes on the GPT-5.6 Luna, Terra, and Sol release, including pricing, million-token context, agentic benchmark claims, SWE-Bench Pro caveats, programmatic tool calling, subagents, and prompt-cache breakpoints.
 - **2026-07-08** — [Rewriting Bun in Rust](<../product-engineering/case-studies/Rewriting Bun in Rust.md>) · `case-studies` · simon-willison
@@ -243,6 +253,38 @@
   Guide to evaluating multi-turn conversations, including state, conversation-level criteria, turn-level scoring, and agent-like interaction failures.
 - **2026-05-13** — [How we use Alyx to build Alyx: How to build an AI agent feedback loop](<../evals-observability/monitoring/How we use Alyx to build Alyx How to build an AI agent feedback loop.md>) · `monitoring` · arize
   Describes how Arize uses Alyx to improve Alyx through a feedback loop that captures failures, analyzes traces, and routes product improvements back into the agent.
+- **2026-05-12** — [Sierra Agent OS 2.0: from answers to memory and action](<memory-context/Sierra Agent OS 2.0 from answers to memory and action.md>) · `memory-context` · sierra
+  Describes Agent OS 2.0 moving agents from answers to memory and action, covering persistent context, tool use, and stateful behavior.
+- **2026-05-12** — [Sierra speaks](<../models/multimodal/Sierra speaks.md>) · `multimodal` · sierra
+  Launch writeup for Sierra voice agents with useful architecture details on interruptions, latency, call-center integration, escalation, and multi-channel agent reuse.
+- **2026-05-12** — [Constellation of models: the architecture powering Sierra's agents](<../models/reasoning/Constellation of models the architecture powering Sierra's agents.md>) · `reasoning` · sierra
+  Describes a constellation-of-models architecture for powering agents, combining multiple models and routing behavior around task needs.
+- **2026-05-12** — [Preserving agent behavior while serving LLMs reliably](<../inference/serving/Preserving agent behavior while serving LLMs reliably.md>) · `serving` · sierra
+  Covers model failover for preserving agent behavior while serving LLMs reliably across model/provider disruptions.
+- **2026-05-12** — [Context engineering: the key to great agents](<../prompt-engineering/context-engineering/Context engineering the key to great agents.md>) · `context-engineering` · sierra
+  Explains context engineering for agents, including how the right knowledge, state, and instructions shape agent quality.
+- **2026-05-12** — [Expert Answers: Turn everyday support conversations into compounding knowledge](<../rag-retrieval/pipelines/Expert Answers Turn everyday support conversations into compounding knowledge.md>) · `pipelines` · sierra
+  Describes turning everyday support conversations into compounding knowledge, using agent interactions to improve knowledge bases and answers.
+- **2026-05-12** — [Tau-Bench: Benchmarking AI agents for the real-world](<../evals-observability/evaluation/Tau-Bench Benchmarking AI agents for the real-world.md>) · `evaluation` · sierra
+  Introduces tau-Bench as a benchmark for real-world AI agents, focusing on task completion, tool use, and operational realism.
+- **2026-05-12** — [Tau-Bench shaping development and evaluation agents](<../evals-observability/evaluation/Tau-Bench shaping development and evaluation agents.md>) · `evaluation` · sierra
+  Explains how tau-bench shapes agent development and evaluation by providing realistic tasks and measurable behavior.
+- **2026-05-12** — [Tau2-Bench](<../evals-observability/evaluation/Tau2-Bench.md>) · `evaluation` · sierra
+  Introduces tau2-bench for evaluating agents in collaborative real-world scenarios where task success depends on interaction dynamics.
+- **2026-05-12** — [Tau3-Bench: Advancing agent evaluation to knowledge and voice](<../evals-observability/evaluation/Tau3-Bench Advancing agent evaluation to knowledge and voice.md>) · `evaluation` · sierra
+  Introduces tau3-Bench for extending agent evaluation to knowledge and voice tasks, expanding beyond text-only transactional benchmarks.
+- **2026-05-12** — [Insights 2.0: AI that improves your AI](<../evals-observability/monitoring/Insights 2.0 AI that improves your AI.md>) · `monitoring` · sierra
+  Describes using AI-generated insights from production conversations to improve deployed agents and surface recurring issues.
+- **2026-05-12** — [Who monitors the monitors?](<../evals-observability/monitoring/Who monitors the monitors.md>) · `monitoring` · sierra
+  Discusses monitoring AI agents and the meta-problem of monitoring the monitors, with emphasis on operational feedback and quality controls.
+- **2026-05-12** — [Simulations: the secret behind every great agent](<../evals-observability/testing/Simulations the secret behind every great agent.md>) · `testing` · sierra
+  Explains simulation as a testing strategy for agents, using realistic scenarios to validate behavior before customer deployment.
+- **2026-05-12** — [Agent Traces: getting to the fix, fast](<../evals-observability/tracing/Agent Traces getting to the fix, fast.md>) · `tracing` · sierra
+  Introduces agent traces as a debugging workflow for finding failures quickly across conversations, tools, and agent decisions.
+- **2026-05-12** — [From LLMs to enterprise-grade agents](<../product-engineering/architecture/From LLMs to enterprise-grade agents.md>) · `architecture` · sierra
+  Explains what distinguishes enterprise-grade agents from raw LLMs, including integrations, policy controls, reliability, and operational lifecycle.
+- **2026-05-12** — [Industry first: PCI-compliant agents](<../product-engineering/security/Industry first PCI-compliant agents.md>) · `security` · sierra
+  Explains PCI-compliant payment workflows for agents, focusing on secure action-taking and sensitive-data handling.
 - **2026-05-05** — [Agent observability needs feedback to power learning](<../evals-observability/monitoring/Agent observability needs feedback to power learning.md>) · `monitoring` · langchain
   Explains why agent observability needs feedback loops from users, evaluators, and production traces to power ongoing agent learning and improvement.
 - **2026-05-01** — [Why agent telemetry needs standards](<../evals-observability/tracing/Why agent telemetry needs standards.md>) · `tracing` · arize

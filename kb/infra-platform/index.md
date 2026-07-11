@@ -1,6 +1,6 @@
 # infra-platform
 
-31 articles.
+32 articles.
 
 - **2026-07-02** — [Your coding agent bill doubled. Here’s how to fix it.](<cost/Your coding agent bill doubled. Here’s how to fix it.md>) · `cost` · langchain
   Practical guide to reducing coding-agent spend through model choice, caching, harness tuning, and workflow design.
@@ -24,6 +24,8 @@
   Cloudflare-Anthropic integration running Claude Managed Agents against Cloudflare Sandboxes: the agent loop stays on the Claude Platform while Cloudflare provides microVM or isolate sandboxes, credential-injecting proxies, private service connectivity, browser session audit trails, and per-agent email.
 - **2026-05-13** — [We built SmithDB, the data layer for agent observability](<deployment/We built SmithDB, the data layer for agent observability.md>) · `deployment` · langchain
   Introduces SmithDB as a data layer for agent observability, optimized for storing and querying trace-heavy workloads.
+- **2026-05-12** — [Load testing: how Sierra scales for surges](<deployment/Load testing how Sierra scales for surges.md>) · `deployment` · sierra
+  Explains load testing for agent systems so conversation serving can scale through traffic surges without quality or latency collapse.
 - **2026-03-16** — [Arize AX Adds Native Support for NVIDIA NIM as AI Model Provider](<deployment/Arize AX Adds Native Support for NVIDIA NIM as AI Model Provider.md>) · `deployment` · arize
   Announces native NVIDIA NIM support in Arize AX so teams can connect hosted model providers into evaluation and observability workflows.
 - **2026-03-10** — [Simplifying Langfuse for Scale](<deployment/Simplifying Langfuse for Scale.md>) · `deployment` · langfuse
@@ -103,6 +105,10 @@
   Explains model neutrality and why avoiding AI vendor lock-in matters for provider routing, cost control, and long-term architecture.
 - **2026-05-12** — [Delta Channels: How We’re Evolving our Runtime for Long-Running Agents](<../agents/planning/Delta Channels How We’re Evolving our Runtime for Long-Running Agents.md>) · `planning` · langchain
   Describes Delta Channels as an evolution of the LangGraph runtime for long-running agents, focused on durable state and runtime communication.
+- **2026-05-12** — [Shipping and scaling AI agents](<../agents/planning/Shipping and scaling AI agents.md>) · `planning` · sierra
+  Practical guide to shipping and scaling AI agents, including lifecycle, reliability, deployment, and continuous improvement concerns.
+- **2026-05-12** — [A more reliable inference layer for foundation models](<../inference/serving/A more reliable inference layer for foundation models.md>) · `serving` · sierra
+  Explains Sierra's inference-layer reliability strategy for foundation models, including routing, redundancy, and serving behavior preservation under provider failures.
 - **2026-04-30** — [Agents can now create Cloudflare accounts, buy domains, and deploy](<../agents/tool-use/Agents can now create Cloudflare accounts, buy domains, and deploy.md>) · `tool-use` · cloudflare-ai
   Via a protocol co-designed with Stripe for Stripe Projects, coding agents can now provision a Cloudflare account, start a paid subscription, register a domain, and receive an API token to deploy — end-to-end with humans only approving payment and terms of service.
 - **2026-04-20** — [The AI engineering stack we built internally — on the platform we ship](<../product-engineering/case-studies/The AI engineering stack we built internally — on the platform we ship.md>) · `case-studies` · cloudflare-ai

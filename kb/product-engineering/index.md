@@ -1,7 +1,9 @@
 # product-engineering
 
-75 articles.
+80 articles.
 
+- **2026-07-10** — [AI-pilling our company: lessons learned](<case-studies/AI-pilling our company lessons learned.md>) · `case-studies` · sierra
+  Internal adoption case study on spreading AI workflows through a company, including practical lessons for using agents and tools in day-to-day work.
 - **2026-07-08** — [Rewriting Bun in Rust](<case-studies/Rewriting Bun in Rust.md>) · `case-studies` · simon-willison
   Case study of an agent-assisted Bun rewrite from Zig to Rust using a large conformance test suite, dynamic workflows, adversarial review, and process-level fixes to build confidence in LLM-authored code.
 - **2026-07-08** — [The agent is the user now: lessons from the founder of WorkOS](<security/The agent is the user now lessons from the founder of WorkOS.md>) · `security` · arize
@@ -38,6 +40,8 @@
   Harmonic case study on rebuilding Scout with Deep Agents and LangSmith, linking agent architecture to retention and evaluation.
 - **2026-06-01** — [How Rippling built production AI in 6 months with Deep Agents and LangSmith](<case-studies/How Rippling built production AI in 6 months with Deep Agents and LangSmith.md>) · `case-studies` · langchain
   Rippling case study on rolling production AI across products with Deep Agents and LangSmith in a six-month buildout.
+- **2026-05-28** — [AI-native product localization](<architecture/AI-native product localization.md>) · `architecture` · sierra
+  Case study of AI-native product localization, covering workflows for translating and adapting product surfaces with model assistance.
 - **2026-05-28** — [How we built Cloudflare's data platform and an AI agent on top of it](<architecture/How we built Cloudflare's data platform and an AI agent on top of it.md>) · `architecture` · cloudflare-ai
   How Cloudflare built Town Lake, a single-SQL-interface data platform on R2/Workers/Workflows unifying Postgres, ClickHouse, Kafka, and BigQuery sprawl (1B+ events/sec), and Skipper, an AI agent on top that answers plain-English questions with auditable queries and PII-aware governance.
 - **2026-05-27** — [How Lyft Built a Self-Serve AI Agent Platform with LangGraph and LangSmith](<case-studies/How Lyft Built a Self-Serve AI Agent Platform with LangGraph and LangSmith.md>) · `case-studies` · langchain
@@ -46,6 +50,12 @@
   Anthropic's layered containment architecture for Claude's code execution and browsing across products: sandboxes, egress control, and per-surface trust boundaries.
 - **2026-05-18** — [Project Glasswing: what Mythos showed us](<security/Project Glasswing what Mythos showed us.md>) · `security` · cloudflare-ai
   Cloudflare's findings from running Anthropic's Mythos Preview (Project Glasswing) against 50+ of its own repos: the model constructs multi-primitive exploit chains and compiles/runs its own proofs-of-concept, but its organic refusals are inconsistent and false-positive rates spike in C/C++ codebases.
+- **2026-05-12** — [From LLMs to enterprise-grade agents](<architecture/From LLMs to enterprise-grade agents.md>) · `architecture` · sierra
+  Explains what distinguishes enterprise-grade agents from raw LLMs, including integrations, policy controls, reliability, and operational lifecycle.
+- **2026-05-12** — [Industry first: PCI-compliant agents](<security/Industry first PCI-compliant agents.md>) · `security` · sierra
+  Explains PCI-compliant payment workflows for agents, focusing on secure action-taking and sensitive-data handling.
+- **2026-05-12** — [Meet the Voice Sommelier](<ux-patterns/Meet the Voice Sommelier.md>) · `ux-patterns` · sierra
+  Explains voice-agent experience design, including brand voice selection, vocal cues, conversation design, and metrics for acceptance and satisfaction.
 - **2026-04-27** — [How LangSmith and LangChain OSS Help You Meet EU AI Act Requirements](<security/How LangSmith and LangChain OSS Help You Meet EU AI Act Requirements.md>) · `security` · langchain
   Connects LangSmith and LangChain OSS workflows to EU AI Act readiness, including observability, evaluation, governance, and auditability.
 - **2026-04-21** — [Moving past bots vs. humans](<security/Moving past bots vs. humans.md>) · `security` · cloudflare-ai
@@ -163,6 +173,8 @@
   Release and implementation notes for a Claude Code-style coding agent built on Simon Willison's LLM framework, including file-editing, command execution, search, read, and write tools plus approval modes.
 - **2026-07-01** — [Unmasking the crawls with Attribution Business Insights](<../industry/business/Unmasking the crawls with Attribution Business Insights.md>) · `business` · cloudflare-ai
   Announces the Attribution Business Insights dashboard for Bot Management customers: per-operator crawl-to-referral ratios (observed from 118:1 to ~50,000:1 for AI crawlers), bot-vs-human traffic breakdowns, and crawler classification into Training, Search, and Agent purposes.
+- **2026-06-30** — [Let your customers shape your agents](<../evals-observability/evaluation/Let your customers shape your agents.md>) · `evaluation` · sierra
+  Explains experimentation loops for agent improvement, using customer behavior, A/B tests, and statistical confidence to shape agent changes.
 - **2026-06-16** — [The Art of Loop Engineering](<../agents/planning/The Art of Loop Engineering.md>) · `planning` · langchain
   Discusses loop engineering for agents, focusing on the control loops that govern planning, action, observation, and refinement.
 - **2026-06-12** — [How to Choose the Right Sandbox for AI Agents](<../agents/computer-use/How to Choose the Right Sandbox for AI Agents.md>) · `computer-use` · langchain
@@ -177,6 +189,16 @@
   Cloudflare-Anthropic integration running Claude Managed Agents against Cloudflare Sandboxes: the agent loop stays on the Claude Platform while Cloudflare provides microVM or isolate sandboxes, credential-injecting proxies, private service connectivity, browser session audit trails, and per-agent email.
 - **2026-05-13** — [LangSmith Sandboxes are Generally Available](<../agents/computer-use/LangSmith Sandboxes are Generally Available.md>) · `computer-use` · langchain
   Covers LangSmith Sandboxes for safely running agent code and tools in isolated execution environments.
+- **2026-05-12** — [Building more human voice experiences](<../models/multimodal/Building more human voice experiences.md>) · `multimodal` · sierra
+  Explains design and engineering considerations for more human voice-agent experiences, including timing, emotion, and conversational flow.
+- **2026-05-12** — [Multilingual voice: building agents that speak to everyone](<../models/multimodal/Multilingual voice building agents that speak to everyone.md>) · `multimodal` · sierra
+  Describes building multilingual voice agents, including speech recognition, language coverage, and user-experience considerations.
+- **2026-05-12** — [Sierra speaks](<../models/multimodal/Sierra speaks.md>) · `multimodal` · sierra
+  Launch writeup for Sierra voice agents with useful architecture details on interruptions, latency, call-center integration, escalation, and multi-channel agent reuse.
+- **2026-05-12** — [Visual Attachments: A new dimension for chat agents](<../models/multimodal/Visual Attachments A new dimension for chat agents.md>) · `multimodal` · sierra
+  Covers visual attachments in chat agents and how images expand support-agent context and user interaction patterns.
+- **2026-05-12** — [From LLMs to enterprise-grade agents](<architecture/From LLMs to enterprise-grade agents.md>) · `architecture` · sierra
+  Explains what distinguishes enterprise-grade agents from raw LLMs, including integrations, policy controls, reliability, and operational lifecycle.
 - **2026-04-28** — [How to earn stakeholder trust with evals and observability](<../evals-observability/monitoring/How to earn stakeholder trust with evals and observability.md>) · `monitoring` · braintrust
   Explains how evals and observability help build stakeholder trust by making AI product quality measurable, reviewable, and improvable.
 - **2026-04-23** — [An update on recent Claude Code quality reports](<../evals-observability/monitoring/An update on recent Claude Code quality reports.md>) · `monitoring` · anthropic-engineering

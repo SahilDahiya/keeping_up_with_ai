@@ -1,9 +1,11 @@
 # prompt-engineering
 
-9 articles.
+10 articles.
 
 - **2026-06-26** — [Prompt Caching with Deep Agents](<context-engineering/Prompt Caching with Deep Agents.md>) · `context-engineering` · langchain
   Explains prompt caching for Deep Agents and how cache-aware context design reduces latency and cost for repeated agent work.
+- **2026-05-12** — [Context engineering: the key to great agents](<context-engineering/Context engineering the key to great agents.md>) · `context-engineering` · sierra
+  Explains context engineering for agents, including how the right knowledge, state, and instructions shape agent quality.
 - **2026-03-20** — [Designing delightful frontends with GPT-5.4 | OpenAI Developers](<techniques/Designing delightful frontends with GPT-5.4 OpenAI Developers.md>) · `techniques` · openai-devs
   Prompting guide for steering GPT-5.4 toward non-generic frontend design: the model was trained for UI work, native image search/generation (e.g. prompt it to build mood boards first), and computer use for self-verification with tools like Playwright.
 - **2026-02-16** — [Using Agent Skills to Automatically Improve your Prompts](<techniques/Using Agent Skills to Automatically Improve your Prompts.md>) · `techniques` · langfuse

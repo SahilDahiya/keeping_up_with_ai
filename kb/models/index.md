@@ -1,6 +1,6 @@
 # models
 
-32 articles.
+40 articles.
 
 - **2026-07-10** — [Evaluating the GPT-5.6 family](<benchmarks/Evaluating the GPT-5.6 family.md>) · `benchmarks` · braintrust
   Evaluates the GPT-5.6 model family and presents a decision map for choosing models based on quality, cost, and task requirements.
@@ -12,6 +12,22 @@
   Technical report comparing GLM-5.2 and Opus 4.8, including benchmark methodology, long-context retrieval behavior, and model-performance tradeoffs.
 - **2026-06-30** — [What’s new in Claude Sonnet 5](<releases/What’s new in Claude Sonnet 5.md>) · `releases` · simon-willison
   Developer-focused notes on Claude Sonnet 5 covering adaptive thinking defaults, removed sampling parameters, million-token context, pricing/tokenizer changes, and comparative tokenization cost across document types.
+- **2026-05-18** — [Voice AI is only as good as what it hears](<multimodal/Voice AI is only as good as what it hears.md>) · `multimodal` · sierra
+  Explains why voice-agent quality depends on transcription accuracy and how hearing failures propagate into agent behavior.
+- **2026-05-12** — [Mu-Bench: an open multilingual transcription benchmark](<benchmarks/Mu-Bench an open multilingual transcription benchmark.md>) · `benchmarks` · sierra
+  Introduces mu-Bench, an open multilingual transcription benchmark for evaluating speech recognition quality across languages.
+- **2026-05-12** — [Improving voice performance with post-training](<fine-tuning/Improving voice performance with post-training.md>) · `fine-tuning` · sierra
+  Describes post-training techniques for improving voice model performance and agent interaction quality.
+- **2026-05-12** — [Building more human voice experiences](<multimodal/Building more human voice experiences.md>) · `multimodal` · sierra
+  Explains design and engineering considerations for more human voice-agent experiences, including timing, emotion, and conversational flow.
+- **2026-05-12** — [Multilingual voice: building agents that speak to everyone](<multimodal/Multilingual voice building agents that speak to everyone.md>) · `multimodal` · sierra
+  Describes building multilingual voice agents, including speech recognition, language coverage, and user-experience considerations.
+- **2026-05-12** — [Sierra speaks](<multimodal/Sierra speaks.md>) · `multimodal` · sierra
+  Launch writeup for Sierra voice agents with useful architecture details on interruptions, latency, call-center integration, escalation, and multi-channel agent reuse.
+- **2026-05-12** — [Visual Attachments: A new dimension for chat agents](<multimodal/Visual Attachments A new dimension for chat agents.md>) · `multimodal` · sierra
+  Covers visual attachments in chat agents and how images expand support-agent context and user interaction patterns.
+- **2026-05-12** — [Constellation of models: the architecture powering Sierra's agents](<reasoning/Constellation of models the architecture powering Sierra's agents.md>) · `reasoning` · sierra
+  Describes a constellation-of-models architecture for powering agents, combining multiple models and routing behavior around task needs.
 - **2025-12-15** — [Updates for developers building with voice | OpenAI Developers](<releases/Updates for developers building with voice OpenAI Developers.md>) · `releases` · openai-devs
   Release notes for four December 2025 audio model snapshots (gpt-4o-mini-transcribe, gpt-4o-mini-tts, gpt-realtime-mini, gpt-audio-mini): lower word-error rates on noisy audio, fewer hallucinations during silence, better tool calling in the minis, and broader Custom Voices access at unchanged pricing.
 - **2025-09-29** — [Claude Sonnet 4.5 analysis](<benchmarks/Claude Sonnet 4.5 analysis.md>) · `benchmarks` · braintrust
@@ -75,8 +91,30 @@
   Developer-focused notes on Claude Sonnet 5 covering adaptive thinking defaults, removed sampling parameters, million-token context, pricing/tokenizer changes, and comparative tokenization cost across document types.
 - **2026-06-30** — [Benchmarking GLM-5.2 vs Opus 4.8 for real-world long-context retrieval](<../rag-retrieval/search/Benchmarking GLM-5.2 vs Opus 4.8 for real-world long-context retrieval.md>) · `search` · braintrust
   Benchmarks GLM-5.2 against Opus 4.8 on real-world long-context retrieval, focusing on retrieval quality under large-context conditions.
+- **2026-05-28** — [AI-native product localization](<../product-engineering/architecture/AI-native product localization.md>) · `architecture` · sierra
+  Case study of AI-native product localization, covering workflows for translating and adapting product surfaces with model assistance.
 - **2026-05-18** — [Project Glasswing: what Mythos showed us](<../product-engineering/security/Project Glasswing what Mythos showed us.md>) · `security` · cloudflare-ai
   Cloudflare's findings from running Anthropic's Mythos Preview (Project Glasswing) against 50+ of its own repos: the model constructs multi-primitive exploit chains and compiles/runs its own proofs-of-concept, but its organic refusals are inconsistent and false-positive rates spike in C/C++ codebases.
+- **2026-05-12** — [Mu-Bench: an open multilingual transcription benchmark](<benchmarks/Mu-Bench an open multilingual transcription benchmark.md>) · `benchmarks` · sierra
+  Introduces mu-Bench, an open multilingual transcription benchmark for evaluating speech recognition quality across languages.
+- **2026-05-12** — [Improving voice performance with post-training](<fine-tuning/Improving voice performance with post-training.md>) · `fine-tuning` · sierra
+  Describes post-training techniques for improving voice model performance and agent interaction quality.
+- **2026-05-12** — [Engineering low-latency voice agents](<../inference/optimization/Engineering low-latency voice agents.md>) · `optimization` · sierra
+  Engineering note on low-latency voice agents, covering response-time constraints and optimization across speech and model serving.
+- **2026-05-12** — [Meet Linnaeus and Darwin: Search models that drive higher resolution rates](<../rag-retrieval/search/Meet Linnaeus and Darwin Search models that drive higher resolution rates.md>) · `search` · sierra
+  Introduces Sierra search models for improving support-agent resolution rates through better knowledge retrieval and answer grounding.
+- **2026-05-12** — [Tau-Bench leaderboard: compare, explore, and understand agent performance](<../evals-observability/evaluation/Tau-Bench leaderboard compare, explore, and understand agent performance.md>) · `evaluation` · sierra
+  Introduces a tau-Bench leaderboard for comparing and analyzing agent performance across benchmark tasks.
+- **2026-05-12** — [Tau-Voice: benchmarking real-time voice agents](<../evals-observability/evaluation/Tau-Voice benchmarking real-time voice agents.md>) · `evaluation` · sierra
+  Introduces tau-voice for benchmarking real-time voice agents on realistic tasks, including speech interaction and task-completion quality.
+- **2026-05-12** — [Tau3-Bench: Advancing agent evaluation to knowledge and voice](<../evals-observability/evaluation/Tau3-Bench Advancing agent evaluation to knowledge and voice.md>) · `evaluation` · sierra
+  Introduces tau3-Bench for extending agent evaluation to knowledge and voice tasks, expanding beyond text-only transactional benchmarks.
+- **2026-05-12** — [How Voice Sims work](<../evals-observability/testing/How Voice Sims work.md>) · `testing` · sierra
+  Explains how voice simulations test agents before production by generating realistic spoken interactions and edge cases.
+- **2026-05-12** — [Voice Sims: testing real conversations before real customers](<../evals-observability/testing/Voice Sims testing real conversations before real customers.md>) · `testing` · sierra
+  Explains voice simulations for testing agents under real-world speech conditions before production customer calls.
+- **2026-05-12** — [Meet the Voice Sommelier](<../product-engineering/ux-patterns/Meet the Voice Sommelier.md>) · `ux-patterns` · sierra
+  Explains voice-agent experience design, including brand voice selection, vocal cues, conversation design, and metrics for acceptance and satisfaction.
 - **2026-03-25** — [How Perplexity Brought Voice Search to Millions Using the Realtime API | OpenAI Developers](<../product-engineering/case-studies/How Perplexity Brought Voice Search to Millions Using the Realtime API OpenAI Developers.md>) · `case-studies` · openai-devs
   Perplexity's production lessons running Realtime-1.5 voice across Comet and Computer: feed context in 2,000-token chunks to avoid all-or-nothing truncation, get system/user/assistant role semantics right, standardize audio via a Rust SDK (48 kHz mono, WebRTC APM), and a 'voice lock' pattern for user pauses.
 - **2026-03-20** — [Designing delightful frontends with GPT-5.4 | OpenAI Developers](<../prompt-engineering/techniques/Designing delightful frontends with GPT-5.4 OpenAI Developers.md>) · `techniques` · openai-devs

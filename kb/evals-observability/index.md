@@ -1,6 +1,6 @@
 # evals-observability
 
-122 articles.
+136 articles.
 
 - **2026-07-07** — [Improving Agents is a Data Mining Problem](<monitoring/Improving Agents is a Data Mining Problem.md>) · `monitoring` · langchain
   Argues that improving agents is a data-mining problem over traces, failures, feedback, and recurring behavioral patterns.
@@ -10,6 +10,8 @@
   Argues that AI evaluation is a data science workflow requiring careful labeling, slices, standards, and failure analysis rather than a simple dashboard metric.
 - **2026-06-30** — [Harbor x LangChain: A Unified Stack for Evaluating Agents](<evaluation/Harbor x LangChain A Unified Stack for Evaluating Agents.md>) · `evaluation` · langchain
   Describes a unified stack for evaluating agents, integrating agent execution, traces, datasets, and scoring workflows.
+- **2026-06-30** — [Let your customers shape your agents](<evaluation/Let your customers shape your agents.md>) · `evaluation` · sierra
+  Explains experimentation loops for agent improvement, using customer behavior, A/B tests, and statistical confidence to shape agent changes.
 - **2026-06-26** — [How to eval stateful agents](<evaluation/How to eval stateful agents.md>) · `evaluation` · braintrust
   Guide to evaluating stateful agents, including memory, conversation state, trace review, and tests for behavior that depends on previous interactions.
 - **2026-06-22** — [Designing the runtime for Langfuse code evaluators](<testing/Designing the runtime for Langfuse code evaluators.md>) · `testing` · langfuse
@@ -36,8 +38,34 @@
   Explains how human review improves golden datasets for evals by correcting labels, surfacing ambiguity, and tightening quality standards.
 - **2026-05-14** — [How to evaluate multi-turn conversations](<evaluation/How to evaluate multi-turn conversations.md>) · `evaluation` · braintrust
   Guide to evaluating multi-turn conversations, including state, conversation-level criteria, turn-level scoring, and agent-like interaction failures.
+- **2026-05-13** — [Tau-Knowledge: benchmarking agents on realistic knowledge](<evaluation/Tau-Knowledge benchmarking agents on realistic knowledge.md>) · `evaluation` · sierra
+  Introduces tau-knowledge for benchmarking agents on realistic knowledge tasks that require grounded retrieval and use of external information.
 - **2026-05-13** — [How we use Alyx to build Alyx: How to build an AI agent feedback loop](<monitoring/How we use Alyx to build Alyx How to build an AI agent feedback loop.md>) · `monitoring` · arize
   Describes how Arize uses Alyx to improve Alyx through a feedback loop that captures failures, analyzes traces, and routes product improvements back into the agent.
+- **2026-05-12** — [Tau-Bench: Benchmarking AI agents for the real-world](<evaluation/Tau-Bench Benchmarking AI agents for the real-world.md>) · `evaluation` · sierra
+  Introduces tau-Bench as a benchmark for real-world AI agents, focusing on task completion, tool use, and operational realism.
+- **2026-05-12** — [Tau-Bench leaderboard: compare, explore, and understand agent performance](<evaluation/Tau-Bench leaderboard compare, explore, and understand agent performance.md>) · `evaluation` · sierra
+  Introduces a tau-Bench leaderboard for comparing and analyzing agent performance across benchmark tasks.
+- **2026-05-12** — [Tau-Bench shaping development and evaluation agents](<evaluation/Tau-Bench shaping development and evaluation agents.md>) · `evaluation` · sierra
+  Explains how tau-bench shapes agent development and evaluation by providing realistic tasks and measurable behavior.
+- **2026-05-12** — [Tau-Voice: benchmarking real-time voice agents](<evaluation/Tau-Voice benchmarking real-time voice agents.md>) · `evaluation` · sierra
+  Introduces tau-voice for benchmarking real-time voice agents on realistic tasks, including speech interaction and task-completion quality.
+- **2026-05-12** — [Tau2-Bench](<evaluation/Tau2-Bench.md>) · `evaluation` · sierra
+  Introduces tau2-bench for evaluating agents in collaborative real-world scenarios where task success depends on interaction dynamics.
+- **2026-05-12** — [Tau3-Bench: Advancing agent evaluation to knowledge and voice](<evaluation/Tau3-Bench Advancing agent evaluation to knowledge and voice.md>) · `evaluation` · sierra
+  Introduces tau3-Bench for extending agent evaluation to knowledge and voice tasks, expanding beyond text-only transactional benchmarks.
+- **2026-05-12** — [Insights 2.0: AI that improves your AI](<monitoring/Insights 2.0 AI that improves your AI.md>) · `monitoring` · sierra
+  Describes using AI-generated insights from production conversations to improve deployed agents and surface recurring issues.
+- **2026-05-12** — [Who monitors the monitors?](<monitoring/Who monitors the monitors.md>) · `monitoring` · sierra
+  Discusses monitoring AI agents and the meta-problem of monitoring the monitors, with emphasis on operational feedback and quality controls.
+- **2026-05-12** — [How Voice Sims work](<testing/How Voice Sims work.md>) · `testing` · sierra
+  Explains how voice simulations test agents before production by generating realistic spoken interactions and edge cases.
+- **2026-05-12** — [Simulations: the secret behind every great agent](<testing/Simulations the secret behind every great agent.md>) · `testing` · sierra
+  Explains simulation as a testing strategy for agents, using realistic scenarios to validate behavior before customer deployment.
+- **2026-05-12** — [Voice Sims: testing real conversations before real customers](<testing/Voice Sims testing real conversations before real customers.md>) · `testing` · sierra
+  Explains voice simulations for testing agents under real-world speech conditions before production customer calls.
+- **2026-05-12** — [Agent Traces: getting to the fix, fast](<tracing/Agent Traces getting to the fix, fast.md>) · `tracing` · sierra
+  Introduces agent traces as a debugging workflow for finding failures quickly across conversations, tools, and agent decisions.
 - **2026-05-11** — [Why your traces and evals belong in the same place](<tracing/Why your traces and evals belong in the same place.md>) · `tracing` · braintrust
   Argues that traces and evals should live together so teams can connect production behavior, offline experiments, and failure analysis.
 - **2026-05-05** — [Agent observability needs feedback to power learning](<monitoring/Agent observability needs feedback to power learning.md>) · `monitoring` · langchain
@@ -303,8 +331,18 @@
   Explains how human review improves golden datasets for evals by correcting labels, surfacing ambiguity, and tightening quality standards.
 - **2026-05-19** — [How We Built LangSmith Engine, Our Agent for Improving Agents](<../agents/planning/How We Built LangSmith Engine, Our Agent for Improving Agents.md>) · `planning` · langchain
   Explains LangSmith Engine, an agent for improving agents through trace analysis, feedback, evals, and iterative changes.
+- **2026-05-18** — [Voice AI is only as good as what it hears](<../models/multimodal/Voice AI is only as good as what it hears.md>) · `multimodal` · sierra
+  Explains why voice-agent quality depends on transcription accuracy and how hearing failures propagate into agent behavior.
 - **2026-05-13** — [We built SmithDB, the data layer for agent observability](<../infra-platform/deployment/We built SmithDB, the data layer for agent observability.md>) · `deployment` · langchain
   Introduces SmithDB as a data layer for agent observability, optimized for storing and querying trace-heavy workloads.
+- **2026-05-12** — [Explorer: The agent-optimizing agent](<../agents/planning/Explorer The agent-optimizing agent.md>) · `planning` · sierra
+  Introduces Explorer as an agent-optimizing agent that analyzes conversations and identifies improvement opportunities for deployed agents.
+- **2026-05-12** — [The Agent Development Life Cycle](<../agents/planning/The Agent Development Life Cycle.md>) · `planning` · sierra
+  Defines an agent development lifecycle from design and simulation through evaluation, deployment, monitoring, and continuous improvement.
+- **2026-05-12** — [Golden articles: Evaluating and improving search](<../rag-retrieval/search/Golden articles Evaluating and improving search.md>) · `search` · sierra
+  Covers golden-article evaluation for search quality and how retrieval systems can be measured and improved for support agents.
+- **2026-05-12** — [Load testing: how Sierra scales for surges](<../infra-platform/deployment/Load testing how Sierra scales for surges.md>) · `deployment` · sierra
+  Explains load testing for agent systems so conversation serving can scale through traffic surges without quality or latency collapse.
 - **2026-05-11** — [Why your traces and evals belong in the same place](<tracing/Why your traces and evals belong in the same place.md>) · `tracing` · braintrust
   Argues that traces and evals should live together so teams can connect production behavior, offline experiments, and failure analysis.
 - **2026-05-09** — [The Agent Development Lifecycle: Build, Test, Deploy & Monitor AI Agents](<../agents/planning/The Agent Development Lifecycle Build, Test, Deploy & Monitor AI Agents.md>) · `planning` · langchain
