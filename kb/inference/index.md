@@ -1,6 +1,6 @@
 # inference
 
-107 articles.
+110 articles.
 
 - **2026-07-10** — [Optimizing MiniMax M3 Sparse Attention on NVIDIA Blackwell](<optimization/Optimizing MiniMax M3 Sparse Attention on NVIDIA Blackwell.md>) · `optimization` · fireworks
   Deep dive into sparse-attention kernel optimization for MiniMax M3 on NVIDIA Blackwell hardware.
@@ -64,6 +64,8 @@
   Covers FlashAttention-4 algorithm and kernel co-design for asymmetric hardware scaling.
 - **2026-03-04** — [Cache-aware prefill-decode disaggregation for long-context LLM serving](<serving/Cache-aware prefill-decode disaggregation for long-context LLM serving.md>) · `serving` · together
   Explains cache-aware prefill/decode disaggregation for faster long-context LLM serving.
+- **2026-02-28** — [Dylan Patel of SemiAnalysis on the $200B AI CapEx, Chip Wars, and Why Google Might Have No Profits in 2027 — In-Context Cooking](<hardware/Dylan Patel of SemiAnalysis on the $200B AI CapEx, Chip Wars, and Why Google Might Have No Profits in 2027 — In-Context Cooking.md>) · `hardware` · latent-space
+  Dylan Patel discussion of AI capex, chip constraints, and infrastructure economics shaping model deployment.
 - **2026-02-21** — [[AINews] The Custom ASIC Thesis](<hardware/[AINews] The Custom ASIC Thesis.md>) · `hardware` · latent-space
   Summarizes the custom ASIC thesis for AI infrastructure and why specialized chips matter for inference economics.
 - **2026-02-19** — [Consistency diffusion language models: Up to 14x faster inference without sacrificing quality](<optimization/Consistency diffusion language models Up to 14x faster inference without sacrificing quality.md>) · `optimization` · together
@@ -210,8 +212,12 @@
   Guide to Stable Diffusion XL inference optimization for sub-2-second image generation.
 - **2023-08-29** — [Speed, Python: Pick Two. How CUDA Graphs Enable Fast Python Code for Deep Learning](<optimization/Speed, Python Pick Two. How CUDA Graphs Enable Fast Python Code for Deep Learning.md>) · `optimization` · fireworks
   Explains how CUDA Graphs reduce Python overhead for fast deep-learning execution.
+- **2023-07-26** — [FlashAttention 2: making Transformers 800% faster w/o approximation - with Tri Dao of Together AI](<optimization/FlashAttention 2 making Transformers 800% faster wo approximation - with Tri Dao of Together AI.md>) · `optimization` · latent-space
+  Tri Dao interview on FlashAttention 2 and efficient Transformer attention without approximation.
 - **2023-07-17** — [FlashAttention-2 for faster training and inference](<optimization/FlashAttention-2 for faster training and inference.md>) · `optimization` · together
   Introduces FlashAttention-2 and its impact on training and inference speed.
+- **2023-06-20** — [Commoditizing the Petaflop — with George Hotz of the tiny corp](<hardware/Commoditizing the Petaflop — with George Hotz of the tiny corp.md>) · `hardware` · latent-space
+  George Hotz interview on commoditizing petaflop-scale compute and what low-cost AI hardware means for builders.
 - **2023-04-27** — [Comparing NVIDIA GPUs for AI: T4 vs A10](<hardware/Comparing NVIDIA GPUs for AI T4 vs A10.md>) · `hardware` · baseten
   Compares NVIDIA T4 and A10 GPUs for AI inference workloads and cost-performance tradeoffs.
 - **2021-09-07** — [A friendly introduction to machine learning compilers and optimizers](<optimization/A friendly introduction to machine learning compilers and optimizers.md>) · `optimization` · chip-huyen
@@ -299,12 +305,16 @@
   Describes 2x faster inference through KV-cache-aware routing with NVIDIA Dynamo.
 - **2025-09-26** — [We reverse-engineered Flash Attention 4](<optimization/We reverse-engineered Flash Attention 4.md>) · `optimization` · modal
   Reverse-engineering writeup for FlashAttention-4, explaining how kernel design choices affect attention performance.
+- **2025-09-05** — [A Technical History of Generative Media — with Gorkem and Batuhan from Fal.ai](<../models/multimodal/A Technical History of Generative Media — with Gorkem and Batuhan from Fal.ai.md>) · `multimodal` · latent-space
+  Technical history of generative media with Fal.ai, covering model serving and media-generation infrastructure.
 - **2025-09-05** — [NVIDIA's Peter Belcak Distills Why Small Language Models are the Future of Agentic AI](<../models/reasoning/NVIDIA's Peter Belcak Distills Why Small Language Models are the Future of Agentic AI.md>) · `reasoning` · arize
   Summarizes the argument for small language models in agentic AI and where they can replace larger models.
 - **2025-08-21** — [AI agents for efficient LLM inference engineering](<../agents/tool-use/AI agents for efficient LLM inference engineering.md>) · `tool-use` · together
   Case study of using AI agents to automate engineering tasks while developing efficient inference systems.
 - **2025-08-13** — [Evaluating Model Performance Across Clouds](<../models/benchmarks/Evaluating Model Performance Across Clouds.md>) · `benchmarks` · langfuse
   Evaluates model performance across cloud providers, focusing on latency, cost, quality, and provider-selection tradeoffs for production inference.
+- **2025-08-07** — [GPT-5's Router: how it works and why Frontier Labs are now targeting the Pareto Frontier](<../models/reasoning/GPT-5's Router how it works and why Frontier Labs are now targeting the Pareto Frontier.md>) · `reasoning` · latent-space
+  Explains GPT-5 routing and why frontier labs optimize along a Pareto frontier of model capabilities and latency.
 - **2025-08-07** — [How we run GPT OSS 120B at 500+ tokens per second on NVIDIA GPUs](<optimization/How we run GPT OSS 120B at 500+ tokens per second on NVIDIA GPUs.md>) · `optimization` · baseten
   Explains how to run GPT-OSS 120B at high token throughput on NVIDIA GPUs.
 - **2025-07-28** — [Building Voice AI That Actually Works: Balancing Realistic Voices vs. Production-Ready Performance](<../models/multimodal/Building Voice AI That Actually Works Balancing Realistic Voices vs. Production-Ready Performance.md>) · `multimodal` · cresta
@@ -337,6 +347,8 @@
   Explains DeepSeek V3 and R1 architecture choices, including why the models are efficient for reasoning workloads.
 - **2025-02-07** — [Testing Llama 3.3 70B inference performance on NVIDIA GH200 in Lambda Cloud](<../evals-observability/evaluation/Testing Llama 3.3 70B inference performance on NVIDIA GH200 in Lambda Cloud.md>) · `evaluation` · baseten
   Tests Llama 3.3 70B inference performance on NVIDIA GH200 and discusses benchmark results.
+- **2025-02-06** — [LLM Gateway: The One Decision That Removes 100 AI Engineering Decisions](<../infra-platform/deployment/LLM Gateway The One Decision That Removes 100 AI Engineering Decisions.md>) · `deployment` · latent-space
+  Explains LLM gateways as a central abstraction for routing, policy, observability, and provider management.
 - **2025-01-28** — [Memory snapshots: Checkpoint and restore for sub-second startup](<../infra-platform/deployment/Memory snapshots Checkpoint and restore for sub-second startup.md>) · `deployment` · modal
   Explains memory snapshots as checkpoint/restore infrastructure for faster startup in serverless AI workloads.
 - **2025-01-09** — [Driving model performance optimization: 2024 highlights](<optimization/Driving model performance optimization 2024 highlights.md>) · `optimization` · baseten
@@ -347,6 +359,8 @@
   Deep dive into production-ready speculative decoding with TensorRT-LLM.
 - **2024-12-09** — [20x faster Whisper than OpenAI - Fireworks audio transcribes 1 hour in 4 seconds](<../models/multimodal/20x faster Whisper than OpenAI - Fireworks audio transcribes 1 hour in 4 seconds.md>) · `multimodal` · fireworks
   Describes high-throughput Whisper transcription serving and the latency/cost tradeoffs in batch audio inference.
+- **2024-11-25** — [Why Compound AI + Open Source will beat Closed AI](<../models/releases/Why Compound AI + Open Source will beat Closed AI.md>) · `releases` · latent-space
+  Fireworks interview arguing compound AI and open source can compete with closed AI through serving and system composition.
 - **2024-10-30** — [Even Better, Even Faster Quantized LLMs with QTIP](<quantization/Even Better, Even Faster Quantized LLMs with QTIP.md>) · `quantization` · together
   Explains QTIP quantization for faster LLM inference with improved quality preservation.
 - **2024-10-15** — [FireAttention V3: Enabling AMD as a viable alternative for GPU inference](<hardware/FireAttention V3 Enabling AMD as a viable alternative for GPU inference.md>) · `hardware` · fireworks

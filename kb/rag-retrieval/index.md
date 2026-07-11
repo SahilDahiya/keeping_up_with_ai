@@ -1,6 +1,6 @@
 # rag-retrieval
 
-45 articles.
+47 articles.
 
 - **2026-07-07** — [Faster phrase search with shingled bloom filters in Brainstore](<search/Faster phrase search with shingled bloom filters in Brainstore.md>) · `search` · braintrust
   Explains faster phrase search over Brainstore data using shingled bloom filters, aimed at efficient trace and log search for AI observability.
@@ -40,6 +40,8 @@
   Deep dive into BEI, a high-throughput embedding, reranker, and classifier inference system.
 - **2025-02-05** — [Understanding Agentic RAG](<pipelines/Understanding Agentic RAG.md>) · `pipelines` · arize
   Explains agentic RAG and how agents change retrieval planning, tool use, and synthesis workflows.
+- **2025-01-10** — [Beating Google at Search with Neural PageRank and $5M of H200s — with Will Bryk of Exa.ai](<search/Beating Google at Search with Neural PageRank and $5M of H200s — with Will Bryk of Exa.ai.md>) · `search` · latent-space
+  Exa interview on neural search and Neural PageRank, relevant to web-scale retrieval for AI systems.
 - **2024-11-18** — [Building a RAG app with MongoDB Atlas](<pipelines/Building a RAG app with MongoDB Atlas.md>) · `pipelines` · braintrust
   Walkthrough of building a RAG app with MongoDB Atlas, covering retrieval setup, model calls, and evaluation of the generated answers.
 - **2024-10-08** — [Multimodal Document RAG with Llama 3.2 Vision and ColQwen2](<pipelines/Multimodal Document RAG with Llama 3.2 Vision and ColQwen2.md>) · `pipelines` · together
@@ -90,6 +92,8 @@
   Summarizes HyDE for zero-shot dense retrieval and how hypothetical document generation can improve semantic search.
 - **2023-06-09** — [Retrieval-Augmented Generation - Paper Reading and Discussion](<pipelines/Retrieval-Augmented Generation - Paper Reading and Discussion.md>) · `pipelines` · arize
   Paper-reading summary of retrieval-augmented generation and the architecture behind combining retrieval with generation.
+- **2023-04-22** — [AI-native Search for the Enterprise — with Deedy Das of Glean](<search/AI-native Search for the Enterprise — with Deedy Das of Glean.md>) · `search` · latent-space
+  Glean interview on AI-native enterprise search, grounding, permissions, and retrieval over company knowledge.
 - **2022-12-31** — [Measuring Embedding Drift](<embeddings/Measuring Embedding Drift.md>) · `embeddings` · arize
   Explains embedding drift and how teams can measure changes in embedding distributions over time.
 
@@ -123,6 +127,8 @@
   Describes an open deep research system combining retrieval, planning, and tool use.
 - **2025-04-09** — [Building Enterprise-Scale RAG Systems with Fireworks AI and MongoDB Atlas](<pipelines/Building Enterprise-Scale RAG Systems with Fireworks AI and MongoDB Atlas.md>) · `pipelines` · fireworks
   Builds an enterprise-scale RAG system with MongoDB Atlas and Fireworks, covering retrieval and serving pieces.
+- **2025-02-18** — [The Inventors of Deep Research](<../agents/planning/The Inventors of Deep Research.md>) · `planning` · latent-space
+  Interview with deep-research inventors on agentic research workflows, retrieval, synthesis, and evaluation.
 - **2024-11-18** — [Building a RAG app with MongoDB Atlas](<pipelines/Building a RAG app with MongoDB Atlas.md>) · `pipelines` · braintrust
   Walkthrough of building a RAG app with MongoDB Atlas, covering retrieval setup, model calls, and evaluation of the generated answers.
 - **2024-09-24** — [Hybrid search over California embeddings with Modal, MongoDB, and Clay](<search/Hybrid search over California embeddings with Modal, MongoDB, and Clay.md>) · `search` · modal

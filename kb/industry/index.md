@@ -1,6 +1,6 @@
 # industry
 
-18 articles.
+22 articles.
 
 - **2026-07-03** — [AIEWF Daily Dispatch: The great loops debate and the state of AI engineering](<trends/AIEWF Daily Dispatch The great loops debate and the state of AI engineering.md>) · `trends` · latent-space
   Dispatch on the loops debate and the state of AI engineering, capturing emerging vocabulary for production AI systems.
@@ -12,6 +12,8 @@
   Announces the Attribution Business Insights dashboard for Bot Management customers: per-operator crawl-to-referral ratios (observed from 118:1 to ~50,000:1 for AI crawlers), bot-vs-human traffic breakdowns, and crawler classification into Training, Search, and Agent purposes.
 - **2026-07-01** — [Content Independence Day, one year on- building the business model for the agentic Internet](<trends/Content Independence Day, one year on- building the business model for the agentic Internet.md>) · `trends` · cloudflare-ai
   Data report one year after Content Independence Day: over 50% of Internet traffic is now non-human, AI-training crawling grew from 22% to 52% of crawler requests (June 2026), heavily crawled categories lost up to 40% of human traffic, and publishers brace for 'Google Zero'.
+- **2026-06-24** — [Why the Frontier Ecosystem must be Open — Matei Zaharia and Reynold Xin, Databricks](<trends/Why the Frontier Ecosystem must be Open — Matei Zaharia and Reynold Xin, Databricks.md>) · `trends` · latent-space
+  Databricks interview on why the frontier AI ecosystem needs open models and open infrastructure, with implications for model builders and deployers.
 - **2026-06-15** — [Growing the Cloudflare AI team with talent from Ensemble AI](<announcements/Growing the Cloudflare AI team with talent from Ensemble AI.md>) · `announcements` · cloudflare-ai
   Ensemble AI's team joins Cloudflare's Workers AI to improve inference economics, bringing NdLinear — a drop-in linear-layer replacement operating on multidimensional activations to cut parameters and compute — and NdLinear-LoRA for parameter-efficient fine-tuning, complementing Infire and Unweight.
 - **2026-06-09** — [AI is eating the AI engineering loop](<trends/AI is eating the AI engineering loop.md>) · `trends` · langfuse
@@ -26,12 +28,18 @@
   Year-in-review of OpenAI's 2025 developer platform: reasoning converging from separate o1/o3/o4-mini lines into unified flagship models, multimodal I/O becoming default, agent building blocks (Responses API, Agents SDK, AgentKit), and GPT-5.2-Codex for long-horizon coding.
 - **2025-10-13** — [State of LLMs on the Application Layer](<trends/State of LLMs on the Application Layer.md>) · `trends` · langfuse
   Application-layer snapshot of LLM usage and model trends, useful for understanding production model adoption and quality/cost tradeoffs.
+- **2025-10-07** — [Developers as the distribution layer of AGI (OpenAI Dev Day 2025, ft. Sherwin Wu and Christina Huang)](<trends/Developers as the distribution layer of AGI (OpenAI Dev Day 2025, ft. Sherwin Wu and Christina Huang).md>) · `trends` · latent-space
+  OpenAI DevDay 2025 discussion on developers as the distribution layer for AGI, including Apps SDK, Agent Kit, and Codex direction.
 - **2025-06-13** — [AI Engineering Goes Mainstream](<trends/AI Engineering Goes Mainstream.md>) · `trends` · latent-space
   Summarizes AI engineering becoming mainstream, with emphasis on agent engineering and applied AI system practices.
 - **2025-01-12** — [[Ride Home] Simon Willison: Things we learned about LLMs in 2024](<trends/[Ride Home] Simon Willison Things we learned about LLMs in 2024.md>) · `trends` · latent-space
   Simon Willison recap of practical LLM lessons from 2024, including tools, agents, model behavior, and developer workflow changes.
+- **2024-10-03** — [Building AGI in Real Time (OpenAI Dev Day 2024)](<trends/Building AGI in Real Time (OpenAI Dev Day 2024).md>) · `trends` · latent-space
+  OpenAI DevDay 2024 recap covering realtime APIs, model/application direction, and practical developer platform implications.
 - **2024-03-14** — [What I learned from looking at 900 most popular open source AI tools](<trends/What I learned from looking at 900 most popular open source AI tools.md>) · `trends` · chip-huyen
   Maps 900 open-source AI tools into infrastructure, model-development, and application-development layers, highlighting growth in agents, prompt engineering, vector search, evaluation, and inference tooling.
+- **2023-11-08** — [AGI is Being Achieved Incrementally (OpenAI DevDay w/ Simon Willison, Alex Volkov, Jim Fan, Raza Habib, Shreya Rajpal, Rahul Ligma, et al)](<trends/AGI is Being Achieved Incrementally (OpenAI DevDay w Simon Willison, Alex Volkov, Jim Fan, Raza Habib, Shreya Rajpal, Rahul Ligma, et al).md>) · `trends` · latent-space
+  OpenAI DevDay discussion of incremental AGI progress, developer APIs, tools, and model-product integration.
 - **2023-06-30** — [The Rise of the AI Engineer](<trends/The Rise of the AI Engineer.md>) · `trends` · latent-space
   Foundational essay on the rise of the AI engineer role and the shift from model research to applied AI system building.
 - **2022-09-22** — [The Death of Central ML Is Greatly Exaggerated](<trends/The Death of Central ML Is Greatly Exaggerated.md>) · `trends` · arize

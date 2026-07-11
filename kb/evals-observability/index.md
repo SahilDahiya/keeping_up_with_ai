@@ -599,6 +599,8 @@
   Connects agent-framework design with observability requirements, arguing that runtime structure determines what teams can debug and evaluate.
 - **2026-02-07** — [Experts Have World Models. LLMs Have Word Models.](<../models/reasoning/Experts Have World Models. LLMs Have Word Models.md>) · `reasoning` · latent-space
   Explores world models versus word models and why adversarial reasoning exposes limits in current LLM behavior.
+- **2026-02-06** — [The First Mechanistic Interpretability Frontier Lab — Myra Deng & Mark Bissell of Goodfire AI](<../models/reasoning/The First Mechanistic Interpretability Frontier Lab — Myra Deng & Mark Bissell of Goodfire AI.md>) · `reasoning` · latent-space
+  Goodfire interview on mechanistic interpretability as a frontier-lab discipline for understanding and steering models.
 - **2026-02-04** — [[AINews] Context Graphs and Agent Traces](<../agents/memory-context/[AINews] Context Graphs and Agent Traces.md>) · `memory-context` · latent-space
   Covers context graphs and agent traces as infrastructure for durable agent memory and system improvement.
 - **2026-02-02** — [Fine-tuning open LLM judges to outperform GPT-5.2](<../models/fine-tuning/Fine-tuning open LLM judges to outperform GPT-5.2.md>) · `fine-tuning` · together
@@ -789,6 +791,8 @@
   Describes AI development loops where logs, evals, human review, and product iteration form the core workflow for improving AI applications.
 - **2024-04-24** — [Getting started with automated evaluations](<testing/Getting started with automated evaluations.md>) · `testing` · braintrust
   Introductory guide to automated evaluations, covering datasets, scorers, experiments, and how to start measuring AI application quality.
+- **2024-04-11** — [Supervise the Process of AI Research — with Jungwon Byun and Andreas Stuhlmüller of Elicit](<../agents/planning/Supervise the Process of AI Research — with Jungwon Byun and Andreas Stuhlmüller of Elicit.md>) · `planning` · latent-space
+  Elicit interview on supervising AI research processes, with lessons for research agents and process-level evaluation.
 - **2024-03-15** — [Benchmarking Query Analysis in High Cardinality Situations](<../rag-retrieval/search/Benchmarking Query Analysis in High Cardinality Situations.md>) · `search` · langchain
   Benchmarks query analysis in high-cardinality situations, relevant to retrieval, search, and observability filtering workloads.
 - **2024-03-06** — [Evaluate RAG with LLM Evals and Benchmarks](<../rag-retrieval/pipelines/Evaluate RAG with LLM Evals and Benchmarks.md>) · `pipelines` · arize

@@ -117,6 +117,8 @@
   Explains long-context retrieval models using Monarch Mixer.
 - **2023-12-05** — [Extraction Benchmarking](<../models/benchmarks/Extraction Benchmarking.md>) · `benchmarks` · langchain
   Benchmarking post for extraction tasks, comparing structured-output performance and evaluation approaches for information extraction.
+- **2023-10-19** — [The End of Finetuning — with Jeremy Howard of Fast.ai](<../models/fine-tuning/The End of Finetuning — with Jeremy Howard of Fast.ai.md>) · `fine-tuning` · latent-space
+  Jeremy Howard interview on the end of fine-tuning, open-source AI, and when adaptation should move into context or product loops.
 - **2023-10-12** — [Flash-Decoding for long-context inference](<../inference/optimization/Flash-Decoding for long-context inference.md>) · `optimization` · together
   Introduces Flash-Decoding for efficient long-context inference.
 - **2023-08-07** — [Extending the Context Window of LLaMA Models Paper Reading](<../models/reasoning/Extending the Context Window of LLaMA Models Paper Reading.md>) · `reasoning` · arize

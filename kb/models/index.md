@@ -1,6 +1,6 @@
 # models
 
-182 articles.
+188 articles.
 
 - **2026-07-10** — [Evaluating the GPT-5.6 family](<benchmarks/Evaluating the GPT-5.6 family.md>) · `benchmarks` · braintrust
   Evaluates the GPT-5.6 model family and presents a decision map for choosing models based on quality, cost, and task requirements.
@@ -104,6 +104,8 @@
   Explores world models versus word models and why adversarial reasoning exposes limits in current LLM behavior.
 - **2026-02-06** — [[AINews] OpenAI and Anthropic go to war: Claude Opus 4.6 vs GPT 5.3 Codex](<benchmarks/[AINews] OpenAI and Anthropic go to war Claude Opus 4.6 vs GPT 5.3 Codex.md>) · `benchmarks` · latent-space
   Compares Claude Opus and GPT Codex-era models through capability and coding-agent lenses.
+- **2026-02-06** — [The First Mechanistic Interpretability Frontier Lab — Myra Deng & Mark Bissell of Goodfire AI](<reasoning/The First Mechanistic Interpretability Frontier Lab — Myra Deng & Mark Bissell of Goodfire AI.md>) · `reasoning` · latent-space
+  Goodfire interview on mechanistic interpretability as a frontier-lab discipline for understanding and steering models.
 - **2026-02-02** — [Fine-tuning open LLM judges to outperform GPT-5.2](<fine-tuning/Fine-tuning open LLM judges to outperform GPT-5.2.md>) · `fine-tuning` · together
   Explains fine-tuning open LLM judges to outperform a frontier judge model.
 - **2026-01-28** — [[AINews] Moonshot Kimi K2.5 - Beats Sonnet 4.5 at half the cost, SOTA Open Model, first Native Image+Video, 100 parallel Agent Swarm manager](<releases/[AINews] Moonshot Kimi K2.5 - Beats Sonnet 4.5 at half the cost, SOTA Open Model, first Native Image+Video, 100 parallel Agent Swarm manager.md>) · `releases` · latent-space
@@ -140,6 +142,8 @@
   Analyzes Claude Sonnet 4.5 with aspirational evals, focusing on how harder task suites reveal model strengths and gaps beyond standard benchmarks.
 - **2025-09-12** — [Developer notes on the Realtime API | OpenAI Developers](<releases/Developer notes on the Realtime API OpenAI Developers.md>) · `releases` · openai-devs
   Developer notes on the Realtime API GA and the gpt-realtime speech-to-speech model: beta-to-GA interface migration, new marin/cedar voices, and advice to rewrite prompts because instruction-following improved enough that literal instructions are now honored.
+- **2025-09-05** — [A Technical History of Generative Media — with Gorkem and Batuhan from Fal.ai](<multimodal/A Technical History of Generative Media — with Gorkem and Batuhan from Fal.ai.md>) · `multimodal` · latent-space
+  Technical history of generative media with Fal.ai, covering model serving and media-generation infrastructure.
 - **2025-09-05** — [NVIDIA's Peter Belcak Distills Why Small Language Models are the Future of Agentic AI](<reasoning/NVIDIA's Peter Belcak Distills Why Small Language Models are the Future of Agentic AI.md>) · `reasoning` · arize
   Summarizes the argument for small language models in agentic AI and where they can replace larger models.
 - **2025-08-19** — [How to fine-tune gpt-oss-120b with Baseten and Axolotl](<fine-tuning/How to fine-tune gpt-oss-120b with Baseten and Axolotl.md>) · `fine-tuning` · baseten
@@ -152,6 +156,10 @@
   Evaluates model performance across cloud providers, focusing on latency, cost, quality, and provider-selection tradeoffs for production inference.
 - **2025-08-08** — [GPT-5 vs. Claude Opus 4.1](<benchmarks/GPT-5 vs. Claude Opus 4.1.md>) · `benchmarks` · braintrust
   Compares GPT-5 and Claude Opus 4.1 with eval-driven analysis of strengths, weaknesses, and model-selection implications.
+- **2025-08-07** — [GPT-5 Hands-On: Welcome to the Stone Age](<benchmarks/GPT-5 Hands-On Welcome to the Stone Age.md>) · `benchmarks` · latent-space
+  Hands-on GPT-5 review focused on model behavior, capability limits, and practical benchmark impressions.
+- **2025-08-07** — [GPT-5's Router: how it works and why Frontier Labs are now targeting the Pareto Frontier](<reasoning/GPT-5's Router how it works and why Frontier Labs are now targeting the Pareto Frontier.md>) · `reasoning` · latent-space
+  Explains GPT-5 routing and why frontier labs optimize along a Pareto frontier of model capabilities and latency.
 - **2025-08-01** — [Kimi K2: Architecture, Capabilities & Benchmarks](<reasoning/Kimi K2 Architecture, Capabilities & Benchmarks.md>) · `reasoning` · fireworks
   Explains Kimi K2 architecture, capabilities, and benchmark behavior for agent and reasoning workloads.
 - **2025-08-01** — [Qwen3 Instruct vs Thinking vs Coder: Model Selection Guide](<reasoning/Qwen3 Instruct vs Thinking vs Coder Model Selection Guide.md>) · `reasoning` · fireworks
@@ -234,6 +242,8 @@
   Technical deep dive into fine-tuning LLMs for multi-turn conversations.
 - **2024-11-25** — [Long Context Fine-Tuning: A Technical Deep Dive](<fine-tuning/Long Context Fine-Tuning A Technical Deep Dive.md>) · `fine-tuning` · together
   Technical deep dive into long-context fine-tuning.
+- **2024-11-25** — [Why Compound AI + Open Source will beat Closed AI](<releases/Why Compound AI + Open Source will beat Closed AI.md>) · `releases` · latent-space
+  Fireworks interview arguing compound AI and open source can compete with closed AI through serving and system composition.
 - **2024-11-14** — [Evaluating Gemini models for vision](<multimodal/Evaluating Gemini models for vision.md>) · `multimodal` · braintrust
   Evaluates Gemini vision models and shows how multimodal evals can compare image-understanding behavior across model versions.
 - **2024-11-04** — [Building serverless apps with the OpenAI Realtime API](<multimodal/Building serverless apps with the OpenAI Realtime API.md>) · `multimodal` · braintrust
@@ -318,6 +328,8 @@
   Summarizes monosemanticity and dictionary learning work for decomposing language model internals.
 - **2023-10-30** — [RedPajama-Data-v2: An open dataset with 30 trillion tokens for training large language models](<fine-tuning/RedPajama-Data-v2 An open dataset with 30 trillion tokens for training large language models.md>) · `fine-tuning` · together
   Introduces RedPajama-Data-v2, a large web dataset for training language models.
+- **2023-10-19** — [The End of Finetuning — with Jeremy Howard of Fast.ai](<fine-tuning/The End of Finetuning — with Jeremy Howard of Fast.ai.md>) · `fine-tuning` · latent-space
+  Jeremy Howard interview on the end of fine-tuning, open-source AI, and when adaptation should move into context or product loops.
 - **2023-10-16** — [Testing Fine Tuned Open Source Models in LangSmith](<fine-tuning/Testing Fine Tuned Open Source Models in LangSmith.md>) · `fine-tuning` · langchain
   Shows how to test fine-tuned open-source models in LangSmith using evaluations and comparison workflows.
 - **2023-10-10** — [Multimodality and Large Multimodal Models (LMMs)](<multimodal/Multimodality and Large Multimodal Models (LMMs).md>) · `multimodal` · chip-huyen
@@ -385,6 +397,8 @@
   Explains a worker-advisor pattern that combines open-source worker agents with closed-source advisors for cost-quality tradeoffs.
 - **2026-06-24** — [Frontier-lab training infrastructure, now as a service](<../infra-platform/gpu-clusters/Frontier-lab training infrastructure, now as a service.md>) · `gpu-clusters` · fireworks
   Describes training infrastructure as a service for frontier-lab workloads, including scale, orchestration, and reliability needs.
+- **2026-06-24** — [Why the Frontier Ecosystem must be Open — Matei Zaharia and Reynold Xin, Databricks](<../industry/trends/Why the Frontier Ecosystem must be Open — Matei Zaharia and Reynold Xin, Databricks.md>) · `trends` · latent-space
+  Databricks interview on why the frontier AI ecosystem needs open models and open infrastructure, with implications for model builders and deployers.
 - **2026-06-22** — [Achieve state-of-the-art inference latencies with speculative decoding](<../inference/optimization/Achieve state-of-the-art inference latencies with speculative decoding.md>) · `optimization` · modal
   Explains speculative decoding for lower inference latency, including draft-model tradeoffs and production serving considerations.
 - **2026-06-19** — [Speculation Is All You Need](<../inference/optimization/Speculation Is All You Need.md>) · `optimization` · modal
@@ -507,10 +521,14 @@
   Application-layer snapshot of LLM usage and model trends, useful for understanding production model adoption and quality/cost tradeoffs.
 - **2025-10-10** — [ATLAS runtime-learning accelerators for LLM inference](<../inference/optimization/ATLAS runtime-learning accelerators for LLM inference.md>) · `optimization` · together
   Introduces ATLAS, a runtime-learning accelerator for improving LLM inference.
+- **2025-10-02** — [Taste is your moat — with Dylan Field, Figma](<../product-engineering/ux-patterns/Taste is your moat — with Dylan Field, Figma.md>) · `ux-patterns` · latent-space
+  Dylan Field interview on taste as a moat and AI product design for creative workflows.
 - **2025-09-22** — [Why we built the Responses API | OpenAI Developers](<../agents/tool-use/Why we built the Responses API OpenAI Developers.md>) · `tool-use` · openai-devs
   OpenAI's design rationale for the Responses API as an agentic loop unifying Chat Completions and Assistants: it preserves reasoning state across turns (+5% on TAUBench, better cache utilization) and emits multiple output items — tool calls, structured outputs, intermediate steps — not just the final message.
 - **2025-09-19** — [Atropos Health’s Arjun Mukerji, PhD, Explains RWESummary: A Framework and Test for Choosing LLMs to Summarize Real-World Evidence (RWE) Studies](<../evals-observability/evaluation/Atropos Health’s Arjun Mukerji, PhD, Explains RWESummary A Framework and Test for Choosing LLMs to Summarize Real-World Evidence (RWE) Studies.md>) · `evaluation` · arize
   Summarizes RWESummary, a healthcare-focused framework for choosing LLMs to summarize real-world evidence studies safely and reliably.
+- **2025-09-16** — [How GPT5 + Codex took over Agentic Coding — ft. Greg Brockman, OpenAI](<../agents/computer-use/How GPT5 + Codex took over Agentic Coding — ft. Greg Brockman, OpenAI.md>) · `computer-use` · latent-space
+  Greg Brockman interview on how GPT-5 and Codex advanced agentic coding workflows and model/product integration.
 - **2025-09-12** — [Developer notes on the Realtime API | OpenAI Developers](<releases/Developer notes on the Realtime API OpenAI Developers.md>) · `releases` · openai-devs
   Developer notes on the Realtime API GA and the gpt-realtime speech-to-speech model: beta-to-GA interface migration, new marin/cedar voices, and advice to rewrite prompts because instruction-following improved enough that literal instructions are now honored.
 - **2025-08-21** — [Voice AI Agents for Customer Experience: Why Decentralized Agent Architectures Can Outperform Central Orchestrators](<../agents/multi-agent/Voice AI Agents for Customer Experience Why Decentralized Agent Architectures Can Outperform Central Orchestrators.md>) · `multi-agent` · cresta
@@ -521,6 +539,8 @@
   Case study on fine-tuning small open-source LLMs to beat larger closed models on specialized tasks.
 - **2025-08-15** — [Your AI Benchmark is Lying to You. Here's How We Caught It](<../evals-observability/evaluation/Your AI Benchmark is Lying to You. Here's How We Caught It.md>) · `evaluation` · fireworks
   Explains how benchmark methodology can mislead model selection and how to evaluate models against real workload constraints.
+- **2025-08-07** — [GPT-5 Hands-On: Welcome to the Stone Age](<benchmarks/GPT-5 Hands-On Welcome to the Stone Age.md>) · `benchmarks` · latent-space
+  Hands-on GPT-5 review focused on model behavior, capability limits, and practical benchmark impressions.
 - **2025-08-01** — [Kimi K2: Architecture, Capabilities & Benchmarks](<reasoning/Kimi K2 Architecture, Capabilities & Benchmarks.md>) · `reasoning` · fireworks
   Explains Kimi K2 architecture, capabilities, and benchmark behavior for agent and reasoning workloads.
 - **2025-08-01** — [Qwen3 Instruct vs Thinking vs Coder: Model Selection Guide](<reasoning/Qwen3 Instruct vs Thinking vs Coder Model Selection Guide.md>) · `reasoning` · fireworks
@@ -571,6 +591,8 @@
   Discusses distilling reasoning behavior from DeepSeek R1 and the limits of teacher-model supervision.
 - **2025-01-24** — [DeepSeek-R1 Overview: Features, Capabilities, Parameters](<reasoning/DeepSeek-R1 Overview Features, Capabilities, Parameters.md>) · `reasoning` · fireworks
   Deep dive into DeepSeek-R1 capabilities, parameters, and reasoning behavior for production model selection.
+- **2025-01-10** — [Beating Google at Search with Neural PageRank and $5M of H200s — with Will Bryk of Exa.ai](<../rag-retrieval/search/Beating Google at Search with Neural PageRank and $5M of H200s — with Will Bryk of Exa.ai.md>) · `search` · latent-space
+  Exa interview on neural search and Neural PageRank, relevant to web-scale retrieval for AI systems.
 - **2024-12-24** — [2024 in Synthetic Data and Smol Models [LS Live @ NeurIPS]](<fine-tuning/2024 in Synthetic Data and Smol Models [LS Live @ NeurIPS].md>) · `fine-tuning` · latent-space
   Recaps synthetic data and small-model progress, including how data generation and smaller models affect AI engineering workflows.
 - **2024-12-23** — [2024 in Open Models [LS Live @ NeurIPS]](<releases/2024 in Open Models [LS Live @ NeurIPS].md>) · `releases` · latent-space
@@ -675,6 +697,8 @@
   Guide to Stable Diffusion XL inference optimization for sub-2-second image generation.
 - **2023-08-04** — [Llama 2: Open Foundation and Fine-Tuned Chat Models Paper Reading](<releases/Llama 2 Open Foundation and Fine-Tuned Chat Models Paper Reading.md>) · `releases` · arize
   Technical paper-reading summary of Llama 2, including foundation and chat-tuned model behavior.
+- **2023-07-26** — [FlashAttention 2: making Transformers 800% faster w/o approximation - with Tri Dao of Together AI](<../inference/optimization/FlashAttention 2 making Transformers 800% faster wo approximation - with Tri Dao of Together AI.md>) · `optimization` · latent-space
+  Tri Dao interview on FlashAttention 2 and efficient Transformer attention without approximation.
 - **2023-07-14** — [Orca: Progressive Learning from Complex Explanation Traces of GPT-4 Paper Reading](<fine-tuning/Orca Progressive Learning from Complex Explanation Traces of GPT-4 Paper Reading.md>) · `fine-tuning` · arize
   Summarizes Orca and progressive learning from GPT-4 explanation traces as a post-training strategy.
 - **2023-03-21** — [Toolformer: Training LLMs To Use Tools](<../agents/tool-use/Toolformer Training LLMs To Use Tools.md>) · `tool-use` · arize

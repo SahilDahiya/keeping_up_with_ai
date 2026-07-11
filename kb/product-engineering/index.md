@@ -1,6 +1,6 @@
 # product-engineering
 
-114 articles.
+115 articles.
 
 - **2026-07-10** — [AI-pilling our company: lessons learned](<case-studies/AI-pilling our company lessons learned.md>) · `case-studies` · sierra
   Internal adoption case study on spreading AI workflows through a company, including practical lessons for using agents and tools in day-to-day work.
@@ -150,6 +150,8 @@
   Introduces sandboxed bash execution and filesystem/network isolation in Claude Code, reducing permission prompts while containing what the agent can touch.
 - **2025-10-10** — [How Codex ran OpenAI DevDay 2025](<case-studies/How Codex ran OpenAI DevDay 2025.md>) · `case-studies` · openai-devs
   Behind-the-scenes account of OpenAI using Codex to build DevDay 2025: it implemented the 1990s VISCA protocol to control venue cameras, built an MCP server for stage lighting, and used Codex Cloud best-of-N to iterate Apps SDK demos like a beat pad in parallel.
+- **2025-10-02** — [Taste is your moat — with Dylan Field, Figma](<ux-patterns/Taste is your moat — with Dylan Field, Figma.md>) · `ux-patterns` · latent-space
+  Dylan Field interview on taste as a moat and AI product design for creative workflows.
 - **2025-09-11** — [Monte Carlo: Building Data + AI Observability Agents with LangGraph and LangSmith](<case-studies/Monte Carlo Building Data + AI Observability Agents with LangGraph and LangSmith.md>) · `case-studies` · langchain
   Monte Carlo case study on building data and AI observability agents with LangGraph and LangSmith.
 - **2025-09-08** — [Cresta’s Three Strategic Pillars of AI Agent Defense for Enterprise Security and Compliance](<security/Cresta’s Three Strategic Pillars of AI Agent Defense for Enterprise Security and Compliance.md>) · `security` · cresta
@@ -263,6 +265,8 @@
   Argues for giving agents isolated computers or sandboxes so they can run tools while preserving control, safety, and reproducibility.
 - **2026-06-03** — [How to Build a Custom Agent Harness](<../agents/planning/How to Build a Custom Agent Harness.md>) · `planning` · langchain
   Guide to building a custom agent harness, covering control loop design, state, tools, observability, and evaluation hooks.
+- **2026-06-02** — [GitHub's plan for Agents — Kyle Daigle, GitHub](<../agents/computer-use/GitHub's plan for Agents — Kyle Daigle, GitHub.md>) · `computer-use` · latent-space
+  GitHub interview on its plan for agents, including developer workflows, repositories, and coding-agent integration.
 - **2026-06-01** — [How Hermes implements an open source agent harness architecture](<../agents/planning/How Hermes implements an open source agent harness architecture.md>) · `planning` · arize
   Breaks down Hermes as an open-source agent harness architecture, focusing on components, control flow, and implementation boundaries.
 - **2026-05-20** — [EU macroeconomic analysis with Deep Agents, LangSmith, and the You.com Finance Research API](<../agents/tool-use/EU macroeconomic analysis with Deep Agents, LangSmith, and the You.com Finance Research API.md>) · `tool-use` · langchain
@@ -297,6 +301,8 @@
   Detailed production-monitoring pattern for AI customer-support agents using high-signal LLM-as-judge classifiers to detect rage-click-like failure modes.
 - **2026-03-24** — [Harness design for long-running application development](<../agents/planning/Harness design for long-running application development.md>) · `planning` · anthropic-engineering
   Deep dive on harness design for multi-day application builds: state management, verification loops, task queues, and recovery when the agent goes off track.
+- **2026-03-20** — [Dreamer: the Personal Agent OS — David Singleton](<../agents/memory-context/Dreamer the Personal Agent OS — David Singleton.md>) · `memory-context` · latent-space
+  Dreamer interview on a personal agent OS, persistent memory, and user-facing agent product design.
 - **2026-03-13** — [How We Built an Agent Skill to Synthesize what Langfuse Users want](<../agents/tool-use/How We Built an Agent Skill to Synthesize what Langfuse Users want.md>) · `tool-use` · langfuse
   Case study of building an agent skill to synthesize user feedback and product needs, showing how agents can support operational product workflows.
 - **2026-03-09** — [Using skills to accelerate OSS maintenance | OpenAI Developers](<../agents/tool-use/Using skills to accelerate OSS maintenance OpenAI Developers.md>) · `tool-use` · openai-devs
@@ -351,6 +357,8 @@
   Deep dive on Claude Code as a terminal agent, including workflows, tool use, and coding-agent product design.
 - **2025-04-20** — [How to think about agent frameworks](<../agents/planning/How to think about agent frameworks.md>) · `planning` · langchain
   Framework for evaluating agent frameworks by abstraction level, control, durability, observability, and fit to production workflows.
+- **2025-03-28** — [The Agent Network — Dharmesh Shah](<../agents/multi-agent/The Agent Network — Dharmesh Shah.md>) · `multi-agent` · latent-space
+  Dharmesh Shah interview on agent networks and how agents can coordinate across company workflows.
 - **2025-03-07** — [Prompt Management from First Principles](<../prompt-engineering/techniques/Prompt Management from First Principles.md>) · `techniques` · arize
   Frames prompt management from first principles, including versioning, ownership, and production workflow concerns.
 - **2025-02-13** — [Bee AI: The Wearable Ambient Agent](<../agents/memory-context/Bee AI The Wearable Ambient Agent.md>) · `memory-context` · latent-space
@@ -369,12 +377,16 @@
   Covers Bolt.new and flow engineering for code agents, including product lessons from rapid agentic coding growth.
 - **2024-12-02** — [WireGuard at Modal: Static IPs for serverless containers](<../infra-platform/deployment/WireGuard at Modal Static IPs for serverless containers.md>) · `deployment` · modal
   Explains static IP support for serverless containers using WireGuard, relevant to secure networked AI deployments.
+- **2024-11-11** — [Agents @ Work: Dust.tt](<../agents/planning/Agents @ Work Dust.tt.md>) · `planning` · latent-space
+  Dust interview on agents at work, including enterprise deployment patterns and workflow-specific agents.
 - **2024-11-11** — [How to Improve LLM Safety and Reliability](<../evals-observability/testing/How to Improve LLM Safety and Reliability.md>) · `testing` · arize
   Covers testing and monitoring practices for improving LLM application safety and reliability in production.
 - **2024-11-04** — [Building serverless apps with the OpenAI Realtime API](<../models/multimodal/Building serverless apps with the OpenAI Realtime API.md>) · `multimodal` · braintrust
   Guide to building serverless apps with the OpenAI Realtime API, focusing on real-time voice interaction architecture and deployment patterns.
 - **2024-10-11** — [Production AI Engineering starts with Evals — with Ankur Goyal of Braintrust](<../evals-observability/evaluation/Production AI Engineering starts with Evals — with Ankur Goyal of Braintrust.md>) · `evaluation` · latent-space
   Interview with Braintrust on why production AI engineering starts with evals and how eval infrastructure fits into product loops.
+- **2024-10-03** — [Building AGI in Real Time (OpenAI Dev Day 2024)](<../industry/trends/Building AGI in Real Time (OpenAI Dev Day 2024).md>) · `trends` · latent-space
+  OpenAI DevDay 2024 recap covering realtime APIs, model/application direction, and practical developer platform implications.
 - **2024-09-23** — [Should you use an LLM Proxy to Build your Application?](<../infra-platform/deployment/Should you use an LLM Proxy to Build your Application.md>) · `deployment` · langfuse
   Explains the LLM proxy pattern for AI applications, including provider abstraction, centralized logging, key management, routing, and governance tradeoffs.
 - **2024-09-17** — [Building high-performance compound AI applications with MongoDB Atlas and Baseten](<../rag-retrieval/pipelines/Building high-performance compound AI applications with MongoDB Atlas and Baseten.md>) · `pipelines` · baseten
@@ -409,10 +421,14 @@
   Interview on Cursor as an AI-first code editor, including interaction design and coding-agent workflows.
 - **2023-06-30** — [The Rise of the AI Engineer](<../industry/trends/The Rise of the AI Engineer.md>) · `trends` · latent-space
   Foundational essay on the rise of the AI engineer role and the shift from model research to applied AI system building.
+- **2023-06-14** — [Emergency Pod: OpenAI's new Functions API, up to 75% Price Drop, 4x Context Length (w/ Simon Willison, Riley Goodside, Roie Schwaber-Cohen, Joshua Lochner, Stefania Druga, Eric Elliott, Mayo Oshin)](<../agents/tool-use/Emergency Pod OpenAI's new Functions API, up to 75% Price Drop, 4x Context Length (w Simon Willison, Riley Goodside, Roie Schwaber-Cohen, Joshua Lochn.md>) · `tool-use` · latent-space
+  OpenAI Functions API emergency pod covering function calling, tool interfaces, cheaper inference, and expanded context windows.
 - **2023-06-08** — [From RLHF to RLHB: The Case for Learning from Human Behavior - with Jeffrey Wang and Joe Reeve of Amplitude](<../evals-observability/evaluation/From RLHF to RLHB The Case for Learning from Human Behavior - with Jeffrey Wang and Joe Reeve of Amplitude.md>) · `evaluation` · latent-space
   Explores RLHF to learning from human behavior, connecting product analytics signals with AI system optimization.
 - **2023-05-17** — [Evaluating Model Fairness](<../evals-observability/evaluation/Evaluating Model Fairness.md>) · `evaluation` · arize
   Explains model fairness evaluation and how to assess bias and fairness risks in production systems.
+- **2023-04-22** — [AI-native Search for the Enterprise — with Deedy Das of Glean](<../rag-retrieval/search/AI-native Search for the Enterprise — with Deedy Das of Glean.md>) · `search` · latent-space
+  Glean interview on AI-native enterprise search, grounding, permissions, and retrieval over company knowledge.
 - **2023-03-24** — [Emergency Pod: ChatGPT's App Store Moment (w/ OpenAI's Logan Kilpatrick, LindyAI's Florent Crivello and Nader Dabit)](<../agents/tool-use/Emergency Pod ChatGPT's App Store Moment (w OpenAI's Logan Kilpatrick, LindyAI's Florent Crivello and Nader Dabit).md>) · `tool-use` · latent-space
   Emergency pod on ChatGPT plugins as an app-store moment, covering tool ecosystems and agent product surfaces.
 - **2023-02-17** — [Technical deep dive: Truss live reload](<../infra-platform/deployment/Technical deep dive Truss live reload.md>) · `deployment` · baseten
