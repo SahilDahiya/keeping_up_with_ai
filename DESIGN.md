@@ -51,8 +51,11 @@ Two workloads, one pipeline:
                 │ 4. EXTRACT    trafilatura → markdown + metadata│─▶ article record
                 └────────────────────────────────────────────────┘
                 ┌────────────────────────────────────────────────┐
-                │ 5. STORE      kb/ file tree + frontmatter      │
-                │ 6. INDEX      per-source index.md, catalog.jsonl│
+ taxonomy.yaml ▶│ 5. CLASSIFY   LLM → topic/subtopic + summary   │─▶ classified record
+                └────────────────────────────────────────────────┘
+                ┌────────────────────────────────────────────────┐
+                │ 6. STORE      kb/<topic>/<subtopic>/<Title>.md │
+                │ 7. INDEX      per-topic index.md, catalog.jsonl │
                 └────────────────────────────────────────────────┘
 ```
 
@@ -111,61 +114,129 @@ SQLite is scraper-internal bookkeeping only — the knowledge base never depends
   source during rollout; fall back to targeted `<article>`-subtree conversion
   (html→markdown via markdownify on a selector) where trafilatura drops them.
 
-### 2.5 Store — knowledge base layout
+### 2.5 Classify — topic & subtopic assignment
 
-One markdown file per article. Flat, predictable, greppable:
+Articles carry no shared taxonomy (each blog's own tags are inconsistent or absent), so a
+classification stage assigns every article a **primary topic + subtopic** from a
+controlled taxonomy, plus secondary topics and a 1–2 sentence summary (the summary feeds
+the indexes for free).
+
+- **Taxonomy is controlled, not open-ended.** `kb/taxonomy.yaml` defines the two-level
+  tree; the classifier must pick from it. Free-form labels would fragment the KB
+  ("RAG" vs "retrieval" vs "rag-pipelines"). Seed taxonomy (evolves deliberately, see
+  below):
+
+  ```yaml
+  agents:          [tool-use, multi-agent, memory-context, planning, computer-use]
+  models:          [releases, benchmarks, fine-tuning, reasoning, multimodal]
+  inference:       [optimization, serving, hardware, quantization]
+  prompt-engineering: [techniques, context-engineering, structured-output]
+  rag-retrieval:   [pipelines, embeddings, chunking, search]
+  evals-observability: [evaluation, tracing, monitoring, testing]
+  infra-platform:  [gpu-clusters, deployment, cost, edge]
+  product-engineering: [ux-patterns, case-studies, architecture, security]
+  industry:        [trends, business, opinion, announcements]
+  ```
+
+- **Classifier:** one LLM call per article — `claude-haiku-4-5` (cheapest current model;
+  short classification is exactly its lane), title + first ~1,500 words in, structured
+  output (JSON schema) out: `{topic, subtopic, secondary_topics[], summary, confidence}`.
+  Backfill runs go through the **Batches API** (50% off, no rate-limit pressure) —
+  classifying a full ~5k-article backfill costs on the order of **a few dollars**. Daily
+  updates (a handful of articles) use synchronous calls.
+- **Low confidence → `unclassified/`** holding folder, flagged in the run report for
+  manual (or agent-assisted) triage — never silently wrong-binned.
+- **No-API-key fallback:** keyword-rule classifier (regex table in `taxonomy.yaml`) so
+  the pipeline still functions degraded; articles classified by rules are marked
+  `classifier: rules` in frontmatter for later re-classification.
+- **Taxonomy evolution:** adding a subtopic is cheap (edit YAML). Renaming/merging topics
+  triggers `scraper reclassify --topic X` which moves files — git tracks the renames.
+  The taxonomy is versioned in frontmatter (`taxonomy_rev`) so stale classifications are
+  detectable.
+
+### 2.6 Store — knowledge base layout
+
+**Organized by topic → subtopic** (not by source or date — those live in frontmatter and
+generated indexes). One markdown file per article, **named by its title**:
 
 ```
 kb/
-  CLAUDE.md                      # tells research agents how this KB is organized
-  catalog.jsonl                  # 1 line per article: {source, url, date, title, path, tags, words}
-  <source-slug>/                 # e.g. anthropic-engineering/, simon-willison/
-    index.md                     # reverse-chron table: date | title | relative path
-    2026/
-      2026-05-14--how-we-built-x.md
-    2025/
-      ...
+  CLAUDE.md                        # tells research agents how this KB is organized
+  taxonomy.yaml                    # the controlled topic tree (see §2.5)
+  catalog.jsonl                    # 1 line per article: {topic, subtopic, source, url, date, title, path, summary}
+  agents/
+    index.md                       # all agents/ articles: date | title | subtopic | source | summary
+    tool-use/
+      Writing effective tools for AI agents.md
+      How we built our multi-tool orchestrator.md
+    multi-agent/
+    memory-context/
+  inference/
+    optimization/
+    serving/
+  evals-observability/
+    ...
+  unclassified/                    # low-confidence holding pen (should trend to zero)
+  _sources/                        # generated per-source views (index files only, no articles)
+    anthropic-engineering.md       # reverse-chron list linking into the topic tree
+    simon-willison.md
 ```
 
 Article file format:
 
 ```markdown
 ---
+title: "Writing effective tools for AI agents"
+topic: agents
+subtopic: tool-use
+secondary_topics: [evals-observability/evaluation]
+summary: "Anthropic's guidance on designing tool interfaces agents can use reliably."
 source: anthropic-engineering
-url: https://www.anthropic.com/engineering/how-we-built-x
-title: "How we built X"
+url: https://www.anthropic.com/engineering/writing-tools-for-agents
 author: "..."
 published: 2026-05-14
 fetched: 2026-07-11T04:20:00Z
-tags: [agents, evals]
+classifier: claude-haiku-4-5
+taxonomy_rev: 1
 words: 2140
 content_sha256: ab12…
 ---
 
-# How we built X
+# Writing effective tools for AI agents
 
 ...clean markdown body, code blocks preserved...
 ```
 
-- Filename: `YYYY-MM-DD--<slug>.md` (slug from URL; date `0000-00-00` prefix replaced by
-  `undated/` folder if truly unknown — rare).
+- **Filename = article title**, sanitized only as far as the filesystem requires
+  (strip `/ \ : * ? " < > |`, collapse whitespace, cap at ~150 chars). Date and source
+  stay in frontmatter.
+- **Title collisions** (two posts titled "Introducing our new model"): append the source
+  slug — `Introducing our new model (baseten).md`. Same title + same source (rare
+  repost): append the year.
+- **Multi-topic articles** live in exactly **one** place (primary topic decides the
+  folder — no duplicate files, no symlinks); secondary topics are frontmatter, and each
+  topic's `index.md` includes a "Also relevant" section listing articles cross-referenced
+  from other folders. `catalog.jsonl` makes multi-topic queries trivial regardless.
 - Images are **not** downloaded (text KB); image URLs remain as absolute links in the
   markdown.
-- `index.md` and `catalog.jsonl` are regenerated from frontmatter after every run
-  (derived data, never hand-edited).
+- All `index.md` files, `_sources/*.md`, and `catalog.jsonl` are regenerated from
+  frontmatter after every run (derived data, never hand-edited).
 - The whole `kb/` tree is committed to git → history, diffs of updated articles, and free
   sync/backup. If volume ever becomes a problem (Simon Willison alone is thousands of
   posts), `kb/` moves to its own repo or a git-lfs/object-store setup — layout unchanged.
 
-### 2.6 Index / research layer
+### 2.7 Index / research layer
 
 Phase 1 deliberately keeps this minimal, because agents are already good at
 grep-and-read over well-organized markdown:
 
-- `kb/CLAUDE.md` — explains layout, frontmatter schema, and research recipes
-  ("newest posts: head each source's index.md"; "topic search: grep -ril across kb/").
+- `kb/CLAUDE.md` — explains the taxonomy, frontmatter schema, and research recipes
+  ("what's new in agents: head `agents/index.md`"; "everything from one blog:
+  `_sources/<slug>.md`"; "cross-topic search: grep -ril across kb/ or jq the catalog").
+- Per-topic `index.md` — reverse-chron table with per-article summaries, so an agent can
+  survey a topic without opening every file.
 - `catalog.jsonl` — one JSON object per article for programmatic filtering
-  (`jq 'select(.tags[]=="inference")' `).
+  (`jq 'select(.topic=="inference" and .date > "2026-01")'`).
 
 Phase 3 (optional, only if grep proves insufficient): SQLite FTS5 full-text index and/or
 local embeddings for semantic search — built *from* the markdown, always regenerable.
@@ -265,8 +336,10 @@ Notes:
 scraper discover [--source SLUG]     # dry-run: show what each tier finds, verify config
 scraper backfill [--source SLUG] [--since 2020-01-01]
 scraper update   [--source SLUG]     # feeds + state diff; the daily job
-scraper reindex                      # rebuild index.md + catalog.jsonl from frontmatter
-scraper report                       # last-run stats: new / updated / failed per source
+scraper classify [--only-unclassified | --topic X]  # (re)run the LLM classifier
+scraper reclassify --topic X         # after a taxonomy change: re-bin + move files
+scraper reindex                      # rebuild index.md files + catalog.jsonl from frontmatter
+scraper report                       # last-run stats: new / updated / failed / unclassified per source
 ```
 
 - **Daily update** via cron or a GitHub Actions workflow (`schedule:`) that runs
@@ -292,6 +365,7 @@ Python 3.12. Small, boring dependencies:
 | HTML parsing | `selectolax` |
 | JS rendering | `playwright` (chromium), only for `render: playwright` sources |
 | State | `sqlite3` (stdlib) |
+| Classification | `anthropic` SDK — `claude-haiku-4-5`, structured outputs; Batches API for backfill |
 | Config | `PyYAML` + `pydantic` models |
 | CLI | `typer` |
 
@@ -300,15 +374,16 @@ Repo layout:
 ```
 scraper/
   __main__.py        # typer CLI
-  config.py          # sources.yaml loading + pydantic models
+  config.py          # sources.yaml + taxonomy.yaml loading + pydantic models
   discover/          # feed.py, sitemap.py, htmlindex.py
   fetch.py           # rate limiting, retries, conditional GET, playwright bridge
   extract.py         # trafilatura pipeline + per-source overrides
-  store.py           # kb/ writer: frontmatter, slugs, layout
-  index.py           # index.md + catalog.jsonl generation
+  classify.py        # LLM topic/subtopic classifier + keyword-rules fallback
+  store.py           # kb/ writer: title filenames, topic tree, frontmatter
+  index.py           # per-topic index.md + _sources/ views + catalog.jsonl generation
   state.py           # sqlite wrapper
 sources.yaml
-kb/                  # the knowledge base (committed)
+kb/                  # the knowledge base (committed) — taxonomy.yaml lives here
 tests/               # extraction fixtures: saved HTML → expected markdown, per source
 ```
 
@@ -316,13 +391,16 @@ tests/               # extraction fixtures: saved HTML → expected markdown, pe
 
 ## 6. Phased plan
 
-1. **Phase 1 — MVP (feeds + sitemaps, http-only).** Engine + `sources.yaml` + KB writer
-   + indexes. Onboard **all 16 sources** — verified reachable over plain HTTP with no JS
-   rendering — using the feed/sitemap URLs in §3. Daily update job. (simonwillison.net
-   ingests filtered/`--since`-bounded; modal.com is feed-depth-limited.)
-2. **Phase 2 — Deep backfill + quality.** Full sitemap backfill; modal.com HTML-index
-   pagination (the one tier-3 case); extraction-quality passes (code blocks, authors)
-   per source; `scraper report`.
+1. **Phase 1 — MVP (feeds + sitemaps, http-only).** Engine + `sources.yaml` +
+   `taxonomy.yaml` + LLM classifier + topic-tree KB writer + indexes. Onboard **all 16
+   sources** — verified reachable over plain HTTP with no JS rendering — using the
+   feed/sitemap URLs in §3. Daily update job. (simonwillison.net ingests
+   filtered/`--since`-bounded; modal.com is feed-depth-limited.)
+2. **Phase 2 — Deep backfill + quality.** Full sitemap backfill (classification via
+   Batches API); modal.com HTML-index pagination (the one tier-3 case);
+   extraction-quality passes (code blocks, authors) per source; taxonomy tuning after
+   seeing real distribution (split oversized subtopics, merge empty ones);
+   `scraper report`.
 3. **Phase 3 — Research ergonomics (optional).** FTS5 index, per-week digest generation
    ("what's new this week across the KB"), embeddings if grep ever falls short.
 
@@ -348,4 +426,17 @@ tests/               # extraction fixtures: saved HTML → expected markdown, pe
   at Phase 2 whether the whole `kb/` tree should split into its own repo / git-lfs.
 - **Content updates**: re-fetching everything to detect silent edits is wasteful; we rely
   on sitemap `lastmod` + feed `updated`, accepting that some silent edits are missed.
-```
+- **Misclassification**: a wrong primary topic buries an article in the wrong folder.
+  Mitigations: controlled taxonomy + structured output (no invented labels), confidence
+  threshold → `unclassified/`, secondary topics + `catalog.jsonl` as a safety net (an
+  agent grepping the whole tree still finds it), and `scraper reclassify` for corrections.
+- **Taxonomy drift**: the field moves fast — today's taxonomy won't fit 2027's posts.
+  Treat `taxonomy.yaml` as versioned config: additions are cheap, renames go through
+  `reclassify` (git tracks file moves), and the Phase-2 tuning pass right-sizes it
+  against real article distribution.
+- **Title-based filenames**: titles get edited upstream ("Introducing X" → "Introducing
+  X (updated)"). The canonical URL in `state.db` maps to the existing `kb_path`, so a
+  re-fetch updates the same file and renames it only when the title actually changed
+  (a tracked git rename, indexes regenerate). Filesystem-hostile titles (emoji, very
+  long, non-Latin) are preserved as-is except for the illegal-character strip — modern
+  filesystems and git handle them fine.
