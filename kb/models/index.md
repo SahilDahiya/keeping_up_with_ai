@@ -1,6 +1,6 @@
 # models
 
-152 articles.
+164 articles.
 
 - **2026-07-10** — [Evaluating the GPT-5.6 family](<benchmarks/Evaluating the GPT-5.6 family.md>) · `benchmarks` · braintrust
   Evaluates the GPT-5.6 model family and presents a decision map for choosing models based on quality, cost, and task requirements.
@@ -16,8 +16,14 @@
   Describes live draft-model training for speculative decoding systems.
 - **2026-06-24** — [Long-horizon agent benchmarks are fragmenting: a field guide to what each one actually measures](<benchmarks/Long-horizon agent benchmarks are fragmenting a field guide to what each one actually measures.md>) · `benchmarks` · arize
   Field guide to long-horizon agent benchmarks and what each benchmark family reveals about agent performance.
+- **2026-06-17** — [[AINews] GLM-5.2: the top Frontend Coding model in the world, IndexShare for Speculative Decoding](<benchmarks/[AINews] GLM-5.2 the top Frontend Coding model in the world, IndexShare for Speculative Decoding.md>) · `benchmarks` · latent-space
+  Covers GLM-5.2 as a frontend coding model and related benchmark claims for coding-agent workloads.
 - **2026-06-17** — [Two labs started dreaming, and they built two different architectures](<reasoning/Two labs started dreaming, and they built two different architectures.md>) · `reasoning` · arize
   Compares two different AI architecture directions from research labs, focusing on design choices and implications.
+- **2026-06-11** — [[AINews] Open Models, Model Labs vs Agent Labs, and What's Untrainable — Sarah Guo](<releases/[AINews] Open Models, Model Labs vs Agent Labs, and What's Untrainable — Sarah Guo.md>) · `releases` · latent-space
+  Discusses open models, model labs versus agent labs, and what remains hard to train directly.
+- **2026-06-09** — [[AINews] FrontierCode: Benchmarking for Code Quality over Slop](<benchmarks/[AINews] FrontierCode Benchmarking for Code Quality over Slop.md>) · `benchmarks` · latent-space
+  Covers FrontierCode and the need for code-quality benchmarks that resist superficial generated-code quality.
 - **2026-06-02** — [The end of fine-tuning: Why evals, context, and traces matter more](<fine-tuning/The end of fine-tuning Why evals, context, and traces matter more.md>) · `fine-tuning` · arize
   Argues that evals, context, and traces can reduce the need for fine-tuning in many production AI workflows.
 - **2026-05-29** — [How Together AI built a fast speech-to-text stack](<multimodal/How Together AI built a fast speech-to-text stack.md>) · `multimodal` · together
@@ -50,6 +56,8 @@
   Covers visual attachments in chat agents and how images expand support-agent context and user interaction patterns.
 - **2026-05-12** — [Constellation of models: the architecture powering Sierra's agents](<reasoning/Constellation of models the architecture powering Sierra's agents.md>) · `reasoning` · sierra
   Describes a constellation-of-models architecture for powering agents, combining multiple models and routing behavior around task needs.
+- **2026-05-08** — [[AINews] GPT-Realtime-2, -Translate, and -Whisper: new SOTA realtime voice APIs](<multimodal/[AINews] GPT-Realtime-2, -Translate, and -Whisper new SOTA realtime voice APIs.md>) · `multimodal` · latent-space
+  Covers realtime voice APIs, translation, and speech model improvements relevant to multimodal product engineering.
 - **2026-04-20** — [Building an RL theorem-proving workflow on Modal](<reasoning/Building an RL theorem-proving workflow on Modal.md>) · `reasoning` · modal
   Walks through an RL theorem-proving workflow, connecting reasoning tasks, training loops, and scalable remote execution.
 - **2026-04-15** — [Parcae: Doing more with fewer parameters using stable looped models](<reasoning/Parcae Doing more with fewer parameters using stable looped models.md>) · `reasoning` · together
@@ -66,14 +74,22 @@
   Argues that frontier reinforcement learning can be cost-effective with the right infrastructure and training-loop design.
 - **2026-03-17** — [Mamba-3](<reasoning/Mamba-3.md>) · `reasoning` · together
   Describes Mamba-3 and its implications for efficient sequence modeling.
+- **2026-03-06** — [[AINews] GPT 5.4: SOTA Knowledge Work -and- Coding -and- CUA Model, OpenAI is so very back](<benchmarks/[AINews] GPT 5.4 SOTA Knowledge Work -and- Coding -and- CUA Model, OpenAI is so very back.md>) · `benchmarks` · latent-space
+  Covers GPT-5.4 capability claims across knowledge work, coding, and computer-use automation.
 - **2026-03-05** — [When the Call Runs Too Long: Modeling Outcomes for Long Conversations](<reasoning/When the Call Runs Too Long Modeling Outcomes for Long Conversations.md>) · `reasoning` · cresta
   Discusses modeling outcomes for long conversations, including challenges around sequence length and delayed success signals.
 - **2026-02-27** — [DeepSeek Models: V3.2, R1, Distills, and Production Caveats](<reasoning/DeepSeek Models V3.2, R1, Distills, and Production Caveats.md>) · `reasoning` · fireworks
   Surveys DeepSeek model variants with production caveats around serving, reasoning behavior, and deployment tradeoffs.
 - **2026-02-23** — [How speech models fail where it matters the most and what to do about it](<multimodal/How speech models fail where it matters the most and what to do about it.md>) · `multimodal` · together
   Analyzes speech model failure modes that matter for production applications.
+- **2026-02-07** — [Experts Have World Models. LLMs Have Word Models.](<reasoning/Experts Have World Models. LLMs Have Word Models.md>) · `reasoning` · latent-space
+  Explores world models versus word models and why adversarial reasoning exposes limits in current LLM behavior.
+- **2026-02-06** — [[AINews] OpenAI and Anthropic go to war: Claude Opus 4.6 vs GPT 5.3 Codex](<benchmarks/[AINews] OpenAI and Anthropic go to war Claude Opus 4.6 vs GPT 5.3 Codex.md>) · `benchmarks` · latent-space
+  Compares Claude Opus and GPT Codex-era models through capability and coding-agent lenses.
 - **2026-02-02** — [Fine-tuning open LLM judges to outperform GPT-5.2](<fine-tuning/Fine-tuning open LLM judges to outperform GPT-5.2.md>) · `fine-tuning` · together
   Explains fine-tuning open LLM judges to outperform a frontier judge model.
+- **2026-01-28** — [[AINews] Moonshot Kimi K2.5 - Beats Sonnet 4.5 at half the cost, SOTA Open Model, first Native Image+Video, 100 parallel Agent Swarm manager](<releases/[AINews] Moonshot Kimi K2.5 - Beats Sonnet 4.5 at half the cost, SOTA Open Model, first Native Image+Video, 100 parallel Agent Swarm manager.md>) · `releases` · latent-space
+  Covers Kimi K2.5 open-model capability claims, including native multimodal behavior and parallel agent-swarm management.
 - **2025-12-31** — [DPO as reinforcement learning](<fine-tuning/DPO as reinforcement learning.md>) · `fine-tuning` · fireworks
   Connects DPO and RL-style training loops, explaining preference optimization as part of continuous model improvement.
 - **2025-12-19** — [Evaluating AI Voices – What Does It Mean to Sound “Good”?](<multimodal/Evaluating AI Voices – What Does It Mean to Sound “Good”.md>) · `multimodal` · cresta
@@ -176,6 +192,14 @@
   Covers evaluation and monitoring for voice AI agents, including speech-specific quality signals and agent behavior beyond text-only evals.
 - **2025-01-06** — [Claude SWE-Bench Performance](<benchmarks/Claude SWE-Bench Performance.md>) · `benchmarks` · anthropic-engineering
   How Anthropic scaffolded Claude 3.5 Sonnet to 49% on SWE-bench Verified with a minimal agent harness, detailing tool design and error analysis.
+- **2024-12-24** — [2024 in Synthetic Data and Smol Models [LS Live @ NeurIPS]](<fine-tuning/2024 in Synthetic Data and Smol Models [LS Live @ NeurIPS].md>) · `fine-tuning` · latent-space
+  Recaps synthetic data and small-model progress, including how data generation and smaller models affect AI engineering workflows.
+- **2024-12-24** — [2024 in Post-Transformers Architectures (State Space Models, RWKV) [LS Live @ NeurIPS]](<reasoning/2024 in Post-Transformers Architectures (State Space Models, RWKV) [LS Live @ NeurIPS].md>) · `reasoning` · latent-space
+  Surveys post-Transformer architectures such as state space models and RWKV, focusing on sequence-modeling tradeoffs.
+- **2024-12-23** — [2024 in Open Models [LS Live @ NeurIPS]](<releases/2024 in Open Models [LS Live @ NeurIPS].md>) · `releases` · latent-space
+  Reviews the 2024 open model landscape, including capability gains, benchmark movement, and deployment implications.
+- **2024-12-22** — [2024 in Vision [LS Live @ NeurIPS]](<multimodal/2024 in Vision [LS Live @ NeurIPS].md>) · `multimodal` · latent-space
+  Reviews 2024 vision model progress and multimodal capability trends relevant to AI product builders.
 - **2024-12-10** — [What is LLM fine-tuning?](<fine-tuning/What is LLM fine-tuning.md>) · `fine-tuning` · modal
   Overview of LLM fine-tuning concepts, when to fine-tune, and how training data and serving constraints affect the workflow.
 - **2024-12-09** — [20x faster Whisper than OpenAI - Fireworks audio transcribes 1 hour in 4 seconds](<multimodal/20x faster Whisper than OpenAI - Fireworks audio transcribes 1 hour in 4 seconds.md>) · `multimodal` · fireworks
@@ -311,10 +335,14 @@
 
 - **2026-07-08** — [Tuning the harness, not the model: a Nemotron 3 Ultra playbook](<../agents/planning/Tuning the harness, not the model a Nemotron 3 Ultra playbook.md>) · `planning` · langchain
   Nemotron 3 Ultra playbook arguing for harness tuning over model tuning, with practical agent-system design and eval implications.
+- **2026-07-08** — [[AINews] Lilian Weng summarizes 35 papers on Harness Engineering for RSI](<../agents/planning/[AINews] Lilian Weng summarizes 35 papers on Harness Engineering for RSI.md>) · `planning` · latent-space
+  Summarizes harness-engineering papers through Lilian Weng’s lens, connecting agent structure with recursive improvement.
 - **2026-06-30** — [What’s new in Claude Sonnet 5](<releases/What’s new in Claude Sonnet 5.md>) · `releases` · simon-willison
   Developer-focused notes on Claude Sonnet 5 covering adaptive thinking defaults, removed sampling parameters, million-token context, pricing/tokenizer changes, and comparative tokenization cost across document types.
 - **2026-06-30** — [Multi-token Residual Prediction](<../inference/optimization/Multi-token Residual Prediction.md>) · `optimization` · modal
   Explains multi-token residual prediction as an inference acceleration technique for generating multiple tokens per step.
+- **2026-06-30** — [Ahmad Osman on why local AI is catching up](<../inference/serving/Ahmad Osman on why local AI is catching up.md>) · `serving` · latent-space
+  Discusses local AI progress and the deployment implications of increasingly capable local models.
 - **2026-06-30** — [Benchmarking GLM-5.2 vs Opus 4.8 for real-world long-context retrieval](<../rag-retrieval/search/Benchmarking GLM-5.2 vs Opus 4.8 for real-world long-context retrieval.md>) · `search` · braintrust
   Benchmarks GLM-5.2 against Opus 4.8 on real-world long-context retrieval, focusing on retrieval quality under large-context conditions.
 - **2026-06-24** — [Frontier AI at a fraction of the cost: open-source worker agents with a closed-source advisor.](<../agents/multi-agent/Frontier AI at a fraction of the cost open-source worker agents with a closed-source advisor.md>) · `multi-agent` · fireworks
@@ -495,6 +523,12 @@
   Discusses distilling reasoning behavior from DeepSeek R1 and the limits of teacher-model supervision.
 - **2025-01-24** — [DeepSeek-R1 Overview: Features, Capabilities, Parameters](<reasoning/DeepSeek-R1 Overview Features, Capabilities, Parameters.md>) · `reasoning` · fireworks
   Deep dive into DeepSeek-R1 capabilities, parameters, and reasoning behavior for production model selection.
+- **2024-12-24** — [2024 in Synthetic Data and Smol Models [LS Live @ NeurIPS]](<fine-tuning/2024 in Synthetic Data and Smol Models [LS Live @ NeurIPS].md>) · `fine-tuning` · latent-space
+  Recaps synthetic data and small-model progress, including how data generation and smaller models affect AI engineering workflows.
+- **2024-12-23** — [2024 in Open Models [LS Live @ NeurIPS]](<releases/2024 in Open Models [LS Live @ NeurIPS].md>) · `releases` · latent-space
+  Reviews the 2024 open model landscape, including capability gains, benchmark movement, and deployment implications.
+- **2024-12-22** — [2024 in Vision [LS Live @ NeurIPS]](<multimodal/2024 in Vision [LS Live @ NeurIPS].md>) · `multimodal` · latent-space
+  Reviews 2024 vision model progress and multimodal capability trends relevant to AI product builders.
 - **2024-12-19** — [A quick introduction to speculative decoding](<../inference/optimization/A quick introduction to speculative decoding.md>) · `optimization` · baseten
   Introduces speculative decoding and the draft-target model pattern for lower LLM inference latency.
 - **2024-12-10** — [Merge, Ensemble, and Cooperate! A Survey on Collaborative LLM Strategies](<../agents/multi-agent/Merge, Ensemble, and Cooperate! A Survey on Collaborative LLM Strategies.md>) · `multi-agent` · arize
@@ -559,6 +593,8 @@
   Deep dive into Amazon Chronos for time-series modeling, including model behavior and evaluation context.
 - **2024-03-26** — [Anthropic Claude 3](<releases/Anthropic Claude 3.md>) · `releases` · arize
   Overview of Anthropic Claude 3 model releases and capabilities, including model comparisons and implications for LLM application builders.
+- **2024-03-22** — [Why Google failed to make GPT-3 + why Multimodal Agents are the path to AGI — with David Luan of Adept](<../agents/computer-use/Why Google failed to make GPT-3 + why Multimodal Agents are the path to AGI — with David Luan of Adept.md>) · `computer-use` · latent-space
+  Interview on Adept, multimodal agents, and why action-oriented models require product and systems design beyond chat.
 - **2024-03-15** — [Reinforcement Learning in the Era of LLMs](<fine-tuning/Reinforcement Learning in the Era of LLMs.md>) · `fine-tuning` · arize
   Explains reinforcement learning concepts in the LLM era and how RL fits into model improvement workflows.
 - **2024-02-28** — [Predictive Human Preference: From Model Ranking to Model Routing](<../evals-observability/evaluation/Predictive Human Preference From Model Ranking to Model Routing.md>) · `evaluation` · chip-huyen

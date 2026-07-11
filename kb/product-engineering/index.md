@@ -1,6 +1,6 @@
 # product-engineering
 
-103 articles.
+105 articles.
 
 - **2026-07-10** — [AI-pilling our company: lessons learned](<case-studies/AI-pilling our company lessons learned.md>) · `case-studies` · sierra
   Internal adoption case study on spreading AI workflows through a company, including practical lessons for using agents and tools in day-to-day work.
@@ -194,6 +194,10 @@
   Frames the AI product development journey around iterative prototyping, evaluation, logging, feedback, and production-quality improvement loops.
 - **2023-07-19** — [Streamline and Centralize AI Analytics With Snowflake and Arize AI](<case-studies/Streamline and Centralize AI Analytics With Snowflake and Arize AI.md>) · `case-studies` · arize
   Describes using Snowflake with Arize to centralize AI analytics and observability data for model performance analysis.
+- **2023-07-07** — [How to Make AI UX Your Moat](<ux-patterns/How to Make AI UX Your Moat.md>) · `ux-patterns` · latent-space
+  Argues that AI UX can become a durable moat through workflow design, interaction quality, and product-specific context.
+- **2023-06-01** — [Building the AI × UX Scenius - with Linus Lee of Notion](<ux-patterns/Building the AI × UX Scenius - with Linus Lee of Notion.md>) · `ux-patterns` · latent-space
+  Explores AI interface design through Notion, focusing on product surfaces, context, and workflows for AI-native UX.
 - **2023-04-28** — [Lessons From Building an Early ChatGPT Plugin In Under 24 Hours](<case-studies/Lessons From Building an Early ChatGPT Plugin In Under 24 Hours.md>) · `case-studies` · arize
   Retrospective on building an early ChatGPT plugin quickly, including product workflow lessons and integration constraints from the plugin ecosystem.
 - **2023-04-11** — [Building LLM applications for production](<architecture/Building LLM applications for production.md>) · `architecture` · chip-huyen
@@ -217,6 +221,8 @@
   Case study of using Claude Fable and GPT-5.5 to review and harden a sqlite-utils release, including release-blocking bug discovery, cross-model review, subagent cost accounting, and agent-written release notes.
 - **2026-07-02** — [Release: llm-coding-agent 0.1a0](<../agents/tool-use/Release llm-coding-agent 0.1a0.md>) · `tool-use` · simon-willison
   Release and implementation notes for a Claude Code-style coding agent built on Simon Willison's LLM framework, including file-editing, command execution, search, read, and write tools plus approval modes.
+- **2026-07-01** — [AIEWF Daily Dispatch: Loops, Software Factories & Forward Deployed Engineers](<../agents/planning/AIEWF Daily Dispatch Loops, Software Factories & Forward Deployed Engineers.md>) · `planning` · latent-space
+  Covers loops, software factories, and forward-deployed engineering as recurring patterns in AI engineering practice.
 - **2026-07-01** — [Unmasking the crawls with Attribution Business Insights](<../industry/business/Unmasking the crawls with Attribution Business Insights.md>) · `business` · cloudflare-ai
   Announces the Attribution Business Insights dashboard for Bot Management customers: per-operator crawl-to-referral ratios (observed from 118:1 to ~50,000:1 for AI crawlers), bot-vs-human traffic breakdowns, and crawler classification into Training, Search, and Agent purposes.
 - **2026-06-30** — [Let your customers shape your agents](<../evals-observability/evaluation/Let your customers shape your agents.md>) · `evaluation` · sierra
@@ -253,6 +259,8 @@
   Explains what distinguishes enterprise-grade agents from raw LLMs, including integrations, policy controls, reliability, and operational lifecycle.
 - **2026-04-28** — [How to earn stakeholder trust with evals and observability](<../evals-observability/monitoring/How to earn stakeholder trust with evals and observability.md>) · `monitoring` · braintrust
   Explains how evals and observability help build stakeholder trust by making AI product quality measurable, reviewable, and improvable.
+- **2026-04-24** — [[AINews] GPT 5.5 and OpenAI Codex Superapp](<../agents/computer-use/[AINews] GPT 5.5 and OpenAI Codex Superapp.md>) · `computer-use` · latent-space
+  Covers GPT-5.5 and the OpenAI Codex app direction, relevant to coding-agent product architecture.
 - **2026-04-23** — [An update on recent Claude Code quality reports](<../evals-observability/monitoring/An update on recent Claude Code quality reports.md>) · `monitoring` · anthropic-engineering
   Follow-up on Claude Code quality regression reports: how the issues were traced, what infrastructure changes caused them, and monitoring added to catch recurrence.
 - **2026-04-21** — [AI to Human Agent Handoff Best Practices](<../agents/planning/AI to Human Agent Handoff Best Practices.md>) · `planning` · cresta
@@ -275,6 +283,14 @@
   Introduces Alyx 2.0 as an agent that plans over observability workflows, covering product design lessons from building a more capable AI analyst.
 - **2026-02-05** — [Building a C compiler with a team of parallel Claudes](<../agents/multi-agent/Building a C compiler with a team of parallel Claudes.md>) · `multi-agent` · anthropic-engineering
   Case study orchestrating a team of parallel Claude instances to build a working C compiler, covering task decomposition, shared state, and verification loops.
+- **2026-02-03** — [[AINews] OpenAI Codex App: death of the VSCode fork, multitasking worktrees, Skills Automations](<../agents/computer-use/[AINews] OpenAI Codex App death of the VSCode fork, multitasking worktrees, Skills Automations.md>) · `computer-use` · latent-space
+  Covers OpenAI Codex app architecture themes including multitasking worktrees, skills, and automation surfaces.
+- **2026-01-31** — [[AINews] Moltbook — the first Social Network for AI Agents (Clawdbots/OpenClaw bots)](<../agents/multi-agent/[AINews] Moltbook — the first Social Network for AI Agents (ClawdbotsOpenClaw bots).md>) · `multi-agent` · latent-space
+  Covers a social-network framing for AI agents and what agent-to-agent interaction implies for product design.
+- **2026-01-27** — [[AINews] Anthropic launches the MCP Apps open spec, in Claude.ai](<../agents/tool-use/[AINews] Anthropic launches the MCP Apps open spec, in Claude.ai.md>) · `tool-use` · latent-space
+  Covers Anthropic MCP app spec and why standardized tool/app interfaces matter for agent ecosystems.
+- **2026-01-23** — [Scaling without Slop](<../industry/trends/Scaling without Slop.md>) · `trends` · latent-space
+  Argues for scaling AI systems without low-quality output, emphasizing engineering taste, workflows, and quality controls.
 - **2025-12-09** — [Building Langfuse's MCP Server: Code Reuse and Developer Experience](<../agents/tool-use/Building Langfuse's MCP Server Code Reuse and Developer Experience.md>) · `tool-use` · langfuse
   Engineering writeup on building the Langfuse MCP server, focusing on code reuse, developer experience, and exposing observability workflows to agents.
 - **2025-12-04** — [How We Built a State-of-the-Art Research Agent for Call Center Conversation Analytics](<../agents/planning/How We Built a State-of-the-Art Research Agent for Call Center Conversation Analytics.md>) · `planning` · cresta
@@ -345,6 +361,8 @@
   Explains large multimodal model architecture and training patterns, modality fusion, data challenges, and product capabilities unlocked by image, text, audio, and video models.
 - **2023-09-12** — [It's time to build reliable AI](<../evals-observability/evaluation/It's time to build reliable AI.md>) · `evaluation` · braintrust
   Early argument for reliable AI systems built around evals, logging, feedback loops, and engineering practices rather than ad hoc demos.
+- **2023-06-30** — [The Rise of the AI Engineer](<../industry/trends/The Rise of the AI Engineer.md>) · `trends` · latent-space
+  Foundational essay on the rise of the AI engineer role and the shift from model research to applied AI system building.
 - **2023-05-17** — [Evaluating Model Fairness](<../evals-observability/evaluation/Evaluating Model Fairness.md>) · `evaluation` · arize
   Explains model fairness evaluation and how to assess bias and fairness risks in production systems.
 - **2023-02-17** — [Technical deep dive: Truss live reload](<../infra-platform/deployment/Technical deep dive Truss live reload.md>) · `deployment` · baseten

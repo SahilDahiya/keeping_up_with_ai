@@ -1,6 +1,6 @@
 # inference
 
-103 articles.
+104 articles.
 
 - **2026-07-10** — [Optimizing MiniMax M3 Sparse Attention on NVIDIA Blackwell](<optimization/Optimizing MiniMax M3 Sparse Attention on NVIDIA Blackwell.md>) · `optimization` · fireworks
   Deep dive into sparse-attention kernel optimization for MiniMax M3 on NVIDIA Blackwell hardware.
@@ -8,6 +8,8 @@
   Compares H100, H200, and B200 GPUs for choosing hardware for inference workloads.
 - **2026-06-30** — [Multi-token Residual Prediction](<optimization/Multi-token Residual Prediction.md>) · `optimization` · modal
   Explains multi-token residual prediction as an inference acceleration technique for generating multiple tokens per step.
+- **2026-06-30** — [Ahmad Osman on why local AI is catching up](<serving/Ahmad Osman on why local AI is catching up.md>) · `serving` · latent-space
+  Discusses local AI progress and the deployment implications of increasingly capable local models.
 - **2026-06-30** — [Using OSS models to save on inference costs without cutting quality](<serving/Using OSS models to save on inference costs without cutting quality.md>) · `serving` · braintrust
   Explains using open-source models to reduce inference cost without sacrificing quality, emphasizing eval-driven model selection and serving tradeoffs.
 - **2026-06-25** — [Proxying inference requests in 6ms with Pingora, Envoy, and Spanner](<serving/Proxying inference requests in 6ms with Pingora, Envoy, and Spanner.md>) · `serving` · modal
@@ -241,6 +243,8 @@
   Describes a constellation-of-models architecture for powering agents, combining multiple models and routing behavior around task needs.
 - **2026-05-12** — [How we achieved truly serverless GPUs](<../infra-platform/gpu-clusters/How we achieved truly serverless GPUs.md>) · `gpu-clusters` · modal
   Explains Modal’s serverless GPU architecture, including scheduling, cold starts, isolation, and utilization constraints.
+- **2026-05-08** — [[AINews] GPT-Realtime-2, -Translate, and -Whisper: new SOTA realtime voice APIs](<../models/multimodal/[AINews] GPT-Realtime-2, -Translate, and -Whisper new SOTA realtime voice APIs.md>) · `multimodal` · latent-space
+  Covers realtime voice APIs, translation, and speech model improvements relevant to multimodal product engineering.
 - **2026-05-04** — [Foundational research powering efficient inference at scale](<optimization/Foundational research powering efficient inference at scale.md>) · `optimization` · together
   Summarizes research lines behind efficient inference at production scale.
 - **2026-04-17** — [Making FlashAttention-4 faster for inference](<optimization/Making FlashAttention-4 faster for inference.md>) · `optimization` · modal
@@ -329,6 +333,8 @@
   Explains memory snapshots as checkpoint/restore infrastructure for faster startup in serverless AI workloads.
 - **2025-01-09** — [Driving model performance optimization: 2024 highlights](<optimization/Driving model performance optimization 2024 highlights.md>) · `optimization` · baseten
   Summarizes concrete model-performance optimization work across inference serving, batching, and hardware.
+- **2024-12-24** — [2024 in Post-Transformers Architectures (State Space Models, RWKV) [LS Live @ NeurIPS]](<../models/reasoning/2024 in Post-Transformers Architectures (State Space Models, RWKV) [LS Live @ NeurIPS].md>) · `reasoning` · latent-space
+  Surveys post-Transformer architectures such as state space models and RWKV, focusing on sequence-modeling tradeoffs.
 - **2024-12-19** — [How we built production-ready speculative decoding with TensorRT-LLM](<optimization/How we built production-ready speculative decoding with TensorRT-LLM.md>) · `optimization` · baseten
   Deep dive into production-ready speculative decoding with TensorRT-LLM.
 - **2024-12-09** — [20x faster Whisper than OpenAI - Fireworks audio transcribes 1 hour in 4 seconds](<../models/multimodal/20x faster Whisper than OpenAI - Fireworks audio transcribes 1 hour in 4 seconds.md>) · `multimodal` · fireworks

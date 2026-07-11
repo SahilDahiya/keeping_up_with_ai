@@ -1,0 +1,92 @@
+---
+title: '[AINews] Everything is CLI'
+topic: agents
+subtopic: tool-use
+secondary_topics:
+- agents/computer-use
+summary: Argues for CLI interfaces as durable tool boundaries for agents and coding
+  workflows.
+source: latent-space
+url: https://www.latent.space/p/ainews-everything-is-cli
+author: Latent Space
+published: '2026-03-27'
+fetched: '2026-07-11T05:13:09Z'
+classifier: codex
+taxonomy_rev: 1
+words: 1704
+content_sha256: b878d64093903acc3df376c8c80e324612a2174bb3fe60972cda1349353181a7
+---
+
+# [AINews] Everything is CLI
+
+# [AINews] Everything is CLI
+
+### a quiet day lets us reflect on the growing trend of CLIs for ~everything~ agents
+
+On its own, [the launch of Projects.dev](https://x.com/patrickc/status/2037190688950161709?s=20), a way for agents to instantly provision services, is not immediately title-story worthy except for 2 things: 1) it comes from **STRIPE**, 2) it is a CLI. Run `stripe projects add posthog/analytics` and it’ll create a PostHog account, get an API key, and set up billing.
+
+![](https://substackcdn.com/image/fetch/$s_!j5_Y!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa29a5ad3-a76b-4aa4-b5eb-58bb7e229370_665x500.jpeg)
+
+If that sounds weird to you, it’s because Stripe doesn’t really have anything to do with PostHog’s setup or signup process. Neither do [these launch partners](https://projects.dev/):
+
+![](https://substackcdn.com/image/fetch/$s_!7BUC!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F4235a84e-655c-4e77-bced-3d73e105e793_1876x394.png)
+
+Stripe is just doing this *because they can*, and [Patrick cites Andrej’s MenuGen as direct inspiration](https://x.com/karpathy/status/2037200624450936940) for how it is too hard for agents to set up backend services today. You’re sure to see the rest of the [agent-native](https://x.com/nikunj/status/2036572222081606065?s=12) infra vendor [landscape charts](https://x.com/loujaybee/status/2036852320797925822?s=46) all lobby Stripe for real estate:
+
+![](https://substackcdn.com/image/fetch/$s_!13Ey!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0d122eee-c93b-4e8d-bbde-6924d3559da9_1065x1164.png)
+
+But let’s not stop there: scroll down the timeline a little further and [here’s Ramp](https://x.com/RampLabs/status/2037253351583141910?s=20)’s CLI also launching today, with some [handy usecases](https://x.com/nikunj/status/2037305617589948818?s=20):
+
+![](https://substackcdn.com/image/fetch/$s_!bvhe!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6c2ebb50-77e8-4904-9bb1-d9b9e873bc3e_1096x1240.png)
+
+Oh and look over here! It’s [the Sendblue CLI](https://x.com/nikita_builds/status/2037220813888176563?s=20) (iMessage) you’ve always wanted, also launching today! catching up from [the Kapso CLI](https://x.com/andresmatte/status/2036061707529834773?s=20) (WhatsApp) from Monday! and did you miss [the ElevenLabs CLI](https://x.com/ElevenLabsDevs/status/2036802792061333989?s=20) from yesterday? That’s fine, because you could also try [the Visa CLI](https://x.com/cuysheffield/status/2034294126565626179?s=20), [the Resend CLI](https://x.com/zenorocha/status/2032459310341800314?s=20), or the [steipete’s Discord CLI](https://x.com/steipete/status/2030371936405188776?s=20), the big momma, [the official Google Workspace CLI](https://x.com/addyosmani/status/2029372736267805081?s=20)!
+
+[Many](https://x.com/karpathy/status/2026360908398862478?s=20), [many](https://mariozechner.at/posts/2025-11-02-what-if-you-dont-need-mcp/) people have written about why CLIs can be handier than MCPs, which isn’t necessarily a fair nor false comparison, but at this point the trend is undeniable and worth reporting. We credit [Cloudflare’s Code Mode](https://blog.cloudflare.com/code-mode/) from last September in kicking off the “use more computer to wrap MCP” trend, and now of course CLIs in themselves don’t really expose or care about their underlying communication protocols.
+
+AI News for 3/23/2026-3/24/2026. We checked 12 subreddits,
+
+[544 Twitters](https://twitter.com/i/lists/1585430245762441216)and no further Discords.[AINews’ website](https://news.smol.ai/)lets you search all past issues. As a reminder,[AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can[opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack)of email frequencies!
+
+**AI Twitter Recap**
+
+**Model and Product Releases: Gemini 3.1 Flash Live, Mistral Voxtral TTS, Cohere Transcribe, and OpenAI GPT-5.4 mini/nano**
+
+- **Google’s realtime push with Gemini 3.1 Flash Live**: Google rolled out- **Gemini 3.1 Flash Live**as its new realtime model for- **voice and vision agents**, emphasizing lower latency, improved function calling, better noisy-environment robustness, and- **2x longer conversation memory**in Gemini Live. The launch spans- **Gemini Live**,- **Search Live**,- **AI Studio preview**, and enterprise CX surfaces, with Google citing- **70 languages**,- **128k context**, and watermarking of generated audio via- **SynthID**in some developer-facing summaries (- [Logan Kilpatrick](https://x.com/OfficialLoganK/status/2037187750005240307),- [Google DeepMind](https://x.com/GoogleDeepMind/status/2037190678883524716),- [Sundar Pichai](https://x.com/sundarpichai/status/2037189971359261081),- [Google](https://x.com/Google/status/2037190616061284353)). Third-party benchmarking from- [Artificial Analysis](https://x.com/ArtificialAnlys/status/2037195442489090485)highlights the new “thinking level” tradeoff:- **95.9% Big Bench Audio**at- **high**reasoning with- **2.98s TTFA**, versus- **70.5%**at- **minimal**with- **0.96s TTFA**.
+- **Speech stack gets crowded fast**:- **Mistral AI**released- **Voxtral TTS**, an open-weight TTS model aimed at production voice agents, with- **9-language**support, low latency, and strong human preference metrics; several summaries cite a- **3B/4B-class**model footprint,- **~90 ms time-to-first-audio**, and favorable comparisons to ElevenLabs in preference tests (- [Mistral AI](https://x.com/MistralAI/status/2037183026539483288),- [Guillaume Lample](https://x.com/GuillaumeLample/status/2037274172607594609),- [vLLM](https://x.com/vllm_project/status/2037193518519902408),- [kimmonismus](https://x.com/kimmonismus/status/2037149838023024753)).- **Cohere**launched- **Cohere Transcribe**, its first audio model, under- **Apache 2.0**, claiming the top English spot on the Hugging Face Open ASR leaderboard with- **5.42 WER**and- **14-language**support (- [Cohere](https://x.com/cohere/status/2037159129345614174),- [Aidan Gomez](https://x.com/aidangomez/status/2037172942803701838),- [Jay Alammar](https://x.com/JayAlammar/status/2037172878165053951)). Notably, Cohere also contributed- **encoder-decoder serving optimizations**to vLLM—variable-length encoder batching and packed decoder attention—reportedly yielding up to- **2x throughput**gains for speech workloads (- [vLLM](https://x.com/vllm_project/status/2037197243111895066)).
+- **OpenAI’s smaller GPT-5.4 variants look cost-competitive, with caveats**:- [Artificial Analysis](https://x.com/ArtificialAnlys/status/2037043552405119395)reported on- **GPT-5.4 mini**and- **GPT-5.4 nano**, both multimodal with- **400k context**and the same reasoning modes as GPT-5.4. The standout is- **GPT-5.4 nano**, which was benchmarked ahead of- **Claude Haiku 4.5**and- **Gemini 3.1 Flash-Lite Preview**on several agentic and terminal-style tasks while remaining cheaper on an effective-cost basis. The downside: both variants were described as- **highly verbose**, with elevated output-token usage and weak- **AA-Omniscience**performance driven by high hallucination rates. That matches anecdotal complaints from developers about codex/GPT-5.4 verbosity in practice (- [giffmana](https://x.com/giffmana/status/2037194495389810863)).
+- **Other notable releases**:- [Zai](https://x.com/Zai_org/status/2037148488983511527)made- **GLM-5-Turbo**available to GLM Coding Plan users;- [Reka](https://x.com/RekaAILabs/status/2037186645246530025)put- **Reka Edge**and- **Flash 3**on OpenRouter;- [Google/Gemini](https://x.com/GeminiApp/status/2037247063382167567)also began rolling out- **chat-history and preference import**from other AI apps; and multiple posts reported that- **OpenAI**has deprioritized side projects including- **Sora**and an- **“adult mode” chatbot**in favor of core productivity efforts (- [Andrew Curran](https://x.com/AndrewCurran_/status/2037145999094002104),- [kimmonismus](https://x.com/kimmonismus/status/2037130214522708303)).
+
+**Agent Infrastructure, Harnesses, and Multi-Agent UX**
+
+- **Cline Kanban crystallizes a new multi-agent UX**: The clearest tooling launch of the day was- **Cline Kanban**, a- **free, open-source local web app**for orchestrating multiple CLI coding agents in parallel across isolated- **git worktrees**. It supports- **Claude Code, Codex, and Cline**, lets users chain task dependencies, review diffs, and manage branches from one board (- [Cline](https://x.com/cline/status/2037182739695493399),- [Cline](https://x.com/cline/status/2037182747446567255)). The reaction from builders was strong, with several calling this the likely default multi-agent interface because it tackles the two practical bottlenecks of current coding-agent workflows:- **inference-bound waiting**and- **merge-conflict-heavy parallelism**(- [Arafat](https://x.com/arafatkatze/status/2037188879422292467),- [testingcatalog](https://x.com/testingcatalog/status/2037188884925190497),- [sdrzn](https://x.com/sdrzn/status/2037185866427482522)).
+- **“Harness engineering” is becoming a category**: A recurring theme across tweets was that model quality is no longer the whole story; the- **agent harness**—middleware, memory, task orchestration, tool interfaces, safety policies, and evaluation loops—is increasingly the real product.- [LangChain](https://x.com/LangChain/status/2037185311789154505),- [hwchase17](https://x.com/hwchase17/status/2037188499938697309), and others emphasized- **middleware**as the customization layer for agent behavior.- [voooooogel](https://x.com/voooooogel/status/2037240394040435113)made the stronger claim that users casually say “LLM” when what they’re actually using is an integrated- **agentic language system**with formatting, parsers, tool use, structured generation, and memory around the base model.
+- **Hermes vs. OpenClaw: memory and long-running autonomy matter**: A large cluster of posts praised- **Nous Research’s Hermes Agent**as more usable than- **OpenClaw/OpenClaw-derived stacks**for long-running, cross-platform agent workflows. Examples included- **persistent memory across Slack and Telegram**, shared memory across agents, lower maintenance overhead, and user reports of agents running unattended for hours on local or cloud setups (- [IcarusHermes](https://x.com/IcarusHermes/status/2037030845635084785),- [jayweeldreyer](https://x.com/jayweeldreyer/status/2037179820975562791),- [Niels Rogge](https://x.com/NielsRogge/status/2037161010377674785)).- [Teknium](https://x.com/Teknium/status/2037284871513768344)also teased a controversial- **GODMODE skill**for persistent jailbreaking, underscoring that capability and safety are now being productized at the harness layer, not just the base model.
+- **Tooling expansion around agents**: OpenAI’s Codex team solicited requests for expanded toolkit integrations (- [reach_vb](https://x.com/reach_vb/status/2037072273517973880)), while Google published how it built a- **Gemini API skill**to teach models about newer APIs and SDKs, improving- **Gemini 3.1 Pro**to- **95% pass rate on 117 eval tests**(- [Phil Schmid](https://x.com/_philschmid/status/2037076548692463722)).- [OpenEnv](https://x.com/ben_burtenshaw/status/2037184956124828083)was introduced as an open standard for- **agentic RL environments**with async APIs, websocket transport, MCP-native tool discovery, and deploy-anywhere packaging.
+
+**Research Systems and Training Infrastructure: AI Scientist, ProRL Agent, and Real-Time RL**
+
+- **Sakana AI’s AI Scientist gets a Nature milestone and a scaling-law claim**: The most substantive research-system update came from- **Sakana AI**, which highlighted a- **Nature**paper on end-to-end automation of AI research and a notable empirical result: using an automated reviewer to grade generated papers, they observed a- **scaling law for AI science**, where stronger foundation models produce stronger scientific papers, and argued that this should improve both with better base models and more- **inference-time compute**(- [Sakana AI](https://x.com/SakanaAILabs/status/2036999652298678630),- [paper/code follow-up](https://x.com/SakanaAILabs/status/2037205439109095712)). Chris Lu added that- **AI Scientist V1**predated o1-preview-style reasoning models, implying substantial headroom from today’s stronger models (- [Chris Lu](https://x.com/_chris_lu_/status/2037090588550418510)).
+- **Infrastructure bottlenecks, not model bottlenecks, may be capping agent RL**: One of the more important systems threads argued that agentic RL frameworks have been architected incorrectly by coupling rollout and optimization in the same process. The post summarizing- **NVIDIA’s ProRL Agent**claims fully decoupling rollout into a standalone service nearly doubled- **Qwen 8B**on- **SWE-Bench Verified**from- **9.6% to 18.0%**, with similar gains for 4B and 14B variants, alongside much higher GPU utilization (- [rryssf_](https://x.com/rryssf_/status/2037122412236648835)). If accurate, this is a strong reminder that agent training benchmarks can be infra-limited, not purely capability-limited.
+- **Cursor’s “real-time RL” is a notable production-training pattern**:- [Cursor](https://x.com/cursor_ai/status/2037205514975629493)said it can ship improved- **Composer 2**checkpoints every- **five hours**, presenting this as a productized RL feedback loop rather than a static model-release cadence. Multiple engineers read this as an early sign of- **continual learning in production**, especially for vertically integrated apps with high-frequency interaction data (- [eliebakouch](https://x.com/eliebakouch/status/2037212964114125099),- [code_star](https://x.com/code_star/status/2037271007027982440)).
+
+**Architecture, Retrieval, and Inference Efficiency**
+
+- **Transformer depth is becoming “queryable”**:- **Kimi/Moonshot**described- **Attention Residuals (AttnRes)**as turning depth into an attention problem, allowing layers to retrieve selectively from prior layer outputs rather than passively accumulating residuals (- [Kimi](https://x.com/Kimi_Moonshot/status/2037010118957817988)). A strong secondary explainer from- [The Turing Post](https://x.com/TheTuringPost/status/2037107923109953788)framed this as a broader trend: deep transformers moving from fixed residual addition toward- **adaptive retrieval over depth**.
+- **Compression and memory-efficiency work remains central**:- **TurboQuant**drew attention as a practical route to- **3-bit-like compression with near-zero accuracy loss**, combining- **PolarQuant**and- **1-bit error correction (QJL)**to accelerate attention and vector search, reduce KV cache memory, and avoid retraining (- [The Turing Post](https://x.com/TheTuringPost/status/2037182800466698718)). Separately, a subtle but impactful production bugfix landed in- **vLLM’s Mamba-1 CUDA kernel**after- **AI21**tracked a silent- `uint32_t`overflow that caused logprob mismatches in GRPO training; the fix was effectively changing- `uint32_t`to- `size_t`(- [vLLM](https://x.com/vllm_project/status/2037123968939987428),- [AI21](https://x.com/AI21Labs/status/2037133107166331132)).
+- **Retrieval is trending multimodal and specialized**: Several posts pointed to a shift away from generic RAG recipes.- [Victoria Slocum](https://x.com/victorialslocum/status/2037113651174199778)highlighted- **IRPAPERS**, showing that- **OCR/text retrieval**and- **image-page retrieval**fail on different queries, and that multimodal fusion beats either alone on scientific PDFs.- [Chroma](https://x.com/jeffreyhuber/status/2037247377275576380)open-sourced- **Context-1**, a search-focused model trained with SFT+RL over- **8,000+ synthetic tasks**, claiming better/faster/cheaper search than frontier general-purpose models;- [John Schulman](https://x.com/johnschulman2/status/2037260655989014706)called out its curriculum, verified synthetic data, and context-pruning tool as especially interesting.
+
+**Top tweets (by engagement)**
+
+- **Meta’s TRIBE v2**: Meta released- **TRIBE v2**, a trimodal brain encoder trained on- **500+ hours of fMRI from 700+ people**, claiming- **2–3x**improvement over prior methods and zero-shot prediction for unseen subjects, languages, and tasks (- [Meta AI](https://x.com/AIatMeta/status/2037153756346016207),- [details](https://x.com/AIatMeta/status/2037153758455750717)).
+- **Claude Code auto-fix in the cloud**: Anthropic shipped remote- **PR-following auto-fix**for Claude Code web/mobile sessions, allowing unattended CI-failure fixing and comment resolution (- [Noah Zweben](https://x.com/noahzweben/status/2037219115002405076)).
+- **Karpathy on full-stack software automation**:- [Andrej Karpathy](https://x.com/karpathy/status/2037200624450936940)argued the hard part of “build me this startup” is not code generation but the full- **DevOps/service orchestration lifecycle**—payments, auth, infra, security, deployment—which he sees as just becoming tractable for agents.
+- **Cline Kanban**: The launch of multi-agent worktree orchestration for coding agents generated unusually strong developer interest (- [Cline](https://x.com/cline/status/2037182739695493399)).
+- **Cohere Transcribe and Mistral Voxtral**: Open, production-oriented audio releases continue to gather momentum, especially where they come with permissive licensing and immediate infra support (- [Cohere](https://x.com/cohere/status/2037159129345614174),- [Mistral](https://x.com/MistralAI/status/2037183026539483288)).
+
+**AI Reddit Recap**
+
+**/r/LocalLlama + /r/localLLM Recap**
+
+## Keep reading with a 7-day free trial
+
+Subscribe to Latent.Space to keep reading this post and get 7 days of free access to the full post archives.
