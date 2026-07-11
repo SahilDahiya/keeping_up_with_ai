@@ -1,6 +1,6 @@
 # evals-observability
 
-147 articles.
+153 articles.
 
 - **2026-07-07** — [Improving Agents is a Data Mining Problem](<monitoring/Improving Agents is a Data Mining Problem.md>) · `monitoring` · langchain
   Argues that improving agents is a data-mining problem over traces, failures, feedback, and recurring behavioral patterns.
@@ -128,6 +128,10 @@
   Argues that coding-agent telemetry can close the loop toward self-improving software by capturing agent behavior, failures, and feedback.
 - **2026-02-12** — [The 5 pillars of AI model performance](<evaluation/The 5 pillars of AI model performance.md>) · `evaluation` · braintrust
   Defines five pillars of AI model performance and how to measure quality beyond a single aggregate benchmark score.
+- **2026-02-09** — [AI Model Performance Metrics Explained](<monitoring/AI Model Performance Metrics Explained.md>) · `monitoring` · baseten
+  Explains model performance metrics used in production inference, including latency, throughput, and quality signals.
+- **2026-02-05** — [How to run LLM performance benchmarks (and why you should)](<evaluation/How to run LLM performance benchmarks (and why you should).md>) · `evaluation` · baseten
+  Explains how to run LLM performance benchmarks and which serving metrics matter.
 - **2026-02-05** — [Quantifying infrastructure noise in agentic coding evals](<evaluation/Quantifying infrastructure noise in agentic coding evals.md>) · `evaluation` · anthropic-engineering
   Quantifies how infrastructure flakiness (timeouts, container variance) injects noise into agentic coding evals, and methods to measure and control for it.
 - **2026-02-03** — [The Benchmark Gap: What It Takes to Ship Kimi K2.5](<evaluation/The Benchmark Gap What It Takes to Ship Kimi K2.5.md>) · `evaluation` · fireworks
@@ -216,6 +220,8 @@
   Practical overview of LLM evaluation best practices, common challenges, scorer choices, datasets, and proven techniques for measuring application quality.
 - **2025-02-26** — [Evaluating Large Language Models With OpenEvals](<evaluation/Evaluating Large Language Models With OpenEvals.md>) · `evaluation` · langchain
   Guide to evaluating large language models with OpenEvals, including reusable evaluators and model comparison workflows.
+- **2025-02-07** — [Testing Llama 3.3 70B inference performance on NVIDIA GH200 in Lambda Cloud](<evaluation/Testing Llama 3.3 70B inference performance on NVIDIA GH200 in Lambda Cloud.md>) · `evaluation` · baseten
+  Tests Llama 3.3 70B inference performance on NVIDIA GH200 and discusses benchmark results.
 - **2024-12-04** — [What to do when a new AI model comes out](<evaluation/What to do when a new AI model comes out.md>) · `evaluation` · braintrust
   Playbook for responding when a new AI model ships: run targeted evals, compare cost and quality, inspect regressions, and decide rollout strategy.
 - **2024-11-22** — [Agent-as-a-Judge: Evaluate Agents with Agents](<evaluation/Agent-as-a-Judge Evaluate Agents with Agents.md>) · `evaluation` · arize
@@ -256,10 +262,16 @@
   Explains eval feedback loops where production observations and human review continuously improve prompts, datasets, and model behavior.
 - **2024-03-24** — [Trace complex LLM applications with the Langfuse decorator (Python)](<tracing/Trace complex LLM applications with the Langfuse decorator (Python).md>) · `tracing` · langfuse
   Shows how to trace complex Python LLM applications with the Langfuse decorator, including nested calls, metadata, and observability patterns for multi-step workflows.
+- **2024-03-14** — [Benchmarking fast Mistral 7B inference](<evaluation/Benchmarking fast Mistral 7B inference.md>) · `evaluation` · baseten
+  Benchmarks Mistral 7B inference performance and the serving choices that affect throughput and latency.
 - **2024-03-11** — [Iterating Towards LLM Reliability with Evaluation Driven Development](<testing/Iterating Towards LLM Reliability with Evaluation Driven Development.md>) · `testing` · langchain
   Explains evaluation-driven development for LLM reliability using regression tests, examples, and iterative quality gates.
 - **2024-02-28** — [Predictive Human Preference: From Model Ranking to Model Routing](<evaluation/Predictive Human Preference From Model Ranking to Model Routing.md>) · `evaluation` · chip-huyen
   Describes predictive human preference for model ranking and model routing, using preference models and evaluations to choose among LLMs by quality, cost, and latency.
+- **2024-01-31** — [How to benchmark image generation models like Stable Diffusion XL](<evaluation/How to benchmark image generation models like Stable Diffusion XL.md>) · `evaluation` · baseten
+  Explains how to benchmark image-generation models with attention to quality, latency, and reproducibility.
+- **2024-01-12** — [Understanding performance benchmarks for LLM inference](<evaluation/Understanding performance benchmarks for LLM inference.md>) · `evaluation` · baseten
+  Explains LLM inference performance benchmarks and how to interpret serving metrics.
 - **2023-12-07** — [Calling All Functions: Benchmarking OpenAI Function Calling and Explanations](<evaluation/Calling All Functions Benchmarking OpenAI Function Calling and Explanations.md>) · `evaluation` · arize
   Benchmarks OpenAI function calling and explanation quality, using evaluations to understand third-party LLM tool behavior.
 - **2023-10-26** — [AI ROI: Guide To Observability Value Statistics](<monitoring/AI ROI Guide To Observability Value Statistics.md>) · `monitoring` · arize
@@ -373,6 +385,8 @@
   Connects LangSmith and LangChain OSS workflows to EU AI Act readiness, including observability, evaluation, governance, and auditability.
 - **2026-04-20** — [Code is free, technical debt isn’t: Notes from AI Engineer Europe](<../industry/trends/Code is free, technical debt isn’t Notes from AI Engineer Europe.md>) · `trends` · arize
   AI Engineer Europe notes arguing that faster code generation increases the need for verification, standards, and technical-debt management.
+- **2026-04-16** — [Harnesses are everything. Here's how to optimize yours.](<../agents/planning/Harnesses are everything. Here's how to optimize yours.md>) · `planning` · baseten
+  Explains why agent harness design matters and how to optimize harnesses for reliable agent behavior.
 - **2026-04-16** — [Reusable Evaluators and Evaluator Templates in LangSmith](<evaluation/Reusable Evaluators and Evaluator Templates in LangSmith.md>) · `evaluation` · langchain
   Covers reusable evaluator templates in LangSmith for standardizing scoring logic across teams and experiments.
 - **2026-04-14** — [Building smarter AI agents: architecture, evals, and lessons from the field](<../agents/planning/Building smarter AI agents architecture, evals, and lessons from the field.md>) · `planning` · arize
@@ -475,6 +489,8 @@
   Compares GPT-5 and Claude Opus 4.1 with eval-driven analysis of strengths, weaknesses, and model-selection implications.
 - **2025-07-17** — [Five hard-learned lessons about AI evals](<evaluation/Five hard-learned lessons about AI evals.md>) · `evaluation` · braintrust
   Five practical lessons for building AI evals, emphasizing dataset quality, scorer design, failure analysis, and iteration over dashboard theater.
+- **2025-07-15** — [Building reliable AI agents](<../agents/planning/Building reliable AI agents.md>) · `planning` · baseten
+  Covers practical design patterns for building more reliable AI agents.
 - **2025-07-14** — [Braintrust is not an eval framework](<monitoring/Braintrust is not an eval framework.md>) · `monitoring` · braintrust
   Argues that production AI quality needs a full observability and iteration system around evals, not only an isolated evaluation framework.
 - **2025-06-13** — [How we built our multi-agent research system](<../agents/multi-agent/How we built our multi-agent research system.md>) · `multi-agent` · anthropic-engineering
@@ -513,6 +529,8 @@
   Introduces Promptim as an experimental prompt-optimization library that uses evaluation feedback to improve prompts.
 - **2024-11-13** — [LLM Product Development for Product Managers](<../product-engineering/ux-patterns/LLM Product Development for Product Managers.md>) · `ux-patterns` · langfuse
   Product-management guide for LLM applications, connecting user workflows, quality criteria, feedback, and evals to AI product development decisions.
+- **2024-10-22** — [Evaluating NVIDIA H200 Tensor Core GPUs for LLM inference](<../inference/hardware/Evaluating NVIDIA H200 Tensor Core GPUs for LLM inference.md>) · `hardware` · baseten
+  Evaluates NVIDIA H200 GPUs for LLM inference and compares their serving performance characteristics.
 - **2024-10-17** — [I ran an eval. Now what?](<evaluation/I ran an eval. Now what.md>) · `evaluation` · braintrust
   Walks through what to do after an eval run: inspect failures, slice results, improve datasets and scorers, and turn findings into product or prompt changes.
 - **2024-09-30** — [Arize AI + MongoDB: Leveraging Agent Evaluation and Memory to Build Robust Agentic Systems](<../agents/memory-context/Arize AI + MongoDB Leveraging Agent Evaluation and Memory to Build Robust Agentic Systems.md>) · `memory-context` · arize

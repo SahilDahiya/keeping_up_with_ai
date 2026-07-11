@@ -1,6 +1,6 @@
 # rag-retrieval
 
-24 articles.
+28 articles.
 
 - **2026-07-07** — [Faster phrase search with shingled bloom filters in Brainstore](<search/Faster phrase search with shingled bloom filters in Brainstore.md>) · `search` · braintrust
   Explains faster phrase search over Brainstore data using shingled bloom filters, aimed at efficient trace and log search for AI observability.
@@ -22,14 +22,20 @@
   Explains observability and evaluation for RAG systems, including tracing retrieval/generation steps and measuring answer and context quality.
 - **2025-09-12** — [Understanding embeddings and reranking at scale](<search/Understanding embeddings and reranking at scale.md>) · `search` · fireworks
   Explains embeddings, reranking, and retrieval architecture patterns for production RAG systems.
+- **2025-06-12** — [Your client code matters: 12x higher embedding throughput with Python and Rust](<embeddings/Your client code matters 12x higher embedding throughput with Python and Rust.md>) · `embeddings` · baseten
+  Shows how client implementation choices in Python and Rust affect embedding throughput.
 - **2025-04-09** — [Building Enterprise-Scale RAG Systems with Fireworks AI and MongoDB Atlas](<pipelines/Building Enterprise-Scale RAG Systems with Fireworks AI and MongoDB Atlas.md>) · `pipelines` · fireworks
   Builds an enterprise-scale RAG system with MongoDB Atlas and Fireworks, covering retrieval and serving pieces.
+- **2025-03-27** — [How we built BEI: high-throughput embedding, reranker, and classifier inference](<embeddings/How we built BEI high-throughput embedding, reranker, and classifier inference.md>) · `embeddings` · baseten
+  Deep dive into BEI, a high-throughput embedding, reranker, and classifier inference system.
 - **2024-11-18** — [Building a RAG app with MongoDB Atlas](<pipelines/Building a RAG app with MongoDB Atlas.md>) · `pipelines` · braintrust
   Walkthrough of building a RAG app with MongoDB Atlas, covering retrieval setup, model calls, and evaluation of the generated answers.
 - **2024-09-24** — [Hybrid search over California embeddings with Modal, MongoDB, and Clay](<search/Hybrid search over California embeddings with Modal, MongoDB, and Clay.md>) · `search` · modal
   Example of hybrid search over embeddings, combining vector retrieval with MongoDB and a geospatial dataset.
 - **2024-09-19** — [Contextual Retrieval in AI Systems](<pipelines/Contextual Retrieval in AI Systems.md>) · `pipelines` · anthropic-engineering
   Introduces contextual retrieval: prepending chunk-situating context before embedding and BM25 indexing, cutting retrieval failure rates by 49% (67% with reranking).
+- **2024-09-17** — [Building high-performance compound AI applications with MongoDB Atlas and Baseten](<pipelines/Building high-performance compound AI applications with MongoDB Atlas and Baseten.md>) · `pipelines` · baseten
+  Shows how to build high-performance compound AI applications with retrieval, orchestration, and model serving.
 - **2024-08-14** — [Building a RAG with Astro, FastAPI, SurrealDB and Llama 3.1](<pipelines/Building a RAG with Astro, FastAPI, SurrealDB and Llama 3.1.md>) · `pipelines` · fireworks
   End-to-end RAG application example using Astro, FastAPI, SurrealDB, and Llama 3.1.
 - **2024-07-02** — [Improving Memory Retrieval: How New Computer achieved 50% higher recall with LangSmith](<search/Improving Memory Retrieval How New Computer achieved 50% higher recall with LangSmith.md>) · `search` · langchain
@@ -48,6 +54,8 @@
   Walkthrough for building and deploying a RAG application with Pinecone Serverless and LangChain components.
 - **2024-01-01** — [Evaluate RAG with LLM Evals and Benchmarking](<pipelines/Evaluate RAG with LLM Evals and Benchmarking.md>) · `pipelines` · arize
   Workshop recap on evaluating RAG systems with LLM evals and benchmarking.
+- **2023-11-02** — [Deployment and inference for open source text embedding models](<embeddings/Deployment and inference for open source text embedding models.md>) · `embeddings` · baseten
+  Covers deployment and inference patterns for open-source text embedding models.
 - **2022-12-31** — [Measuring Embedding Drift](<embeddings/Measuring Embedding Drift.md>) · `embeddings` · arize
   Explains embedding drift and how teams can measure changes in embedding distributions over time.
 

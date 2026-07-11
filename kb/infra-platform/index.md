@@ -1,6 +1,6 @@
 # infra-platform
 
-46 articles.
+55 articles.
 
 - **2026-07-06** — [How to price serverless GPUs](<cost/How to price serverless GPUs.md>) · `cost` · modal
   Explains serverless GPU pricing from utilization, scheduling, and workload-shape constraints rather than simple hourly rates.
@@ -20,6 +20,8 @@
   Describes a three-layer production agent stack — framework (Flue, from the Astro team, built on the Pi harness), harness (Project Think, Pi), and runtime (Cloudflare Agents SDK) — with durable execution, dynamic code execution, and a durable filesystem exposed to any harness.
 - **2026-06-15** — [How LangChain Made Coding Agent Spend Predictable](<cost/How LangChain Made Coding Agent Spend Predictable.md>) · `cost` · langchain
   Explains how LangChain made coding-agent spend more predictable using constraints, monitoring, and workflow-level cost controls.
+- **2026-06-12** — [Rolling deployments for zero-downtime model updates](<deployment/Rolling deployments for zero-downtime model updates.md>) · `deployment` · baseten
+  Explains rolling deployments for zero-downtime model updates in production serving systems.
 - **2026-06-05** — [Your AI bill is out of control. Cloudflare can fix it now.](<cost/Your AI bill is out of control. Cloudflare can fix it now.md>) · `cost` · cloudflare-ai
   AI Gateway adds dollar-denominated spend limits plus a closed beta of identity-driven budgets and model routing via Cloudflare Access, so enterprises can attribute LLM spend per person/team (e.g. $5,000/month frontier models for engineering, $200 for interns) instead of one opaque shared API key.
 - **2026-06-04** — [Model Neutrality: Why Avoiding AI Vendor Lock-In Matters](<deployment/Model Neutrality Why Avoiding AI Vendor Lock-In Matters.md>) · `deployment` · langchain
@@ -34,6 +36,10 @@
   Explains load testing for agent systems so conversation serving can scale through traffic surges without quality or latency collapse.
 - **2026-05-12** — [How we achieved truly serverless GPUs](<gpu-clusters/How we achieved truly serverless GPUs.md>) · `gpu-clusters` · modal
   Explains Modal’s serverless GPU architecture, including scheduling, cold starts, isolation, and utilization constraints.
+- **2026-04-09** — [How the Baseten Delivery Network (BDN) makes cold starts fast](<deployment/How the Baseten Delivery Network (BDN) makes cold starts fast.md>) · `deployment` · baseten
+  Deep dive into how the Baseten Delivery Network reduces cold starts for model serving.
+- **2026-03-19** — [Introducing the Baseten Delivery Network: Fast cold starts for big models](<deployment/Introducing the Baseten Delivery Network Fast cold starts for big models.md>) · `deployment` · baseten
+  Introduces the Baseten Delivery Network for reducing cold starts when serving large models.
 - **2026-03-16** — [Arize AX Adds Native Support for NVIDIA NIM as AI Model Provider](<deployment/Arize AX Adds Native Support for NVIDIA NIM as AI Model Provider.md>) · `deployment` · arize
   Announces native NVIDIA NIM support in Arize AX so teams can connect hosted model providers into evaluation and observability workflows.
 - **2026-03-10** — [Simplifying Langfuse for Scale](<deployment/Simplifying Langfuse for Scale.md>) · `deployment` · langfuse
@@ -52,6 +58,10 @@
   Describes realtime ingestion design for Arize database, including scale requirements for AI observability data and production trace ingestion.
 - **2025-07-16** — [Dollars per token considered harmful](<cost/Dollars per token considered harmful.md>) · `cost` · modal
   Critiques dollars-per-token as an inference cost metric and explains why workload shape, latency, and utilization matter more.
+- **2025-06-23** — [How we built Multi-cloud Capacity Management (MCM)](<gpu-clusters/How we built Multi-cloud Capacity Management (MCM).md>) · `gpu-clusters` · baseten
+  Engineering writeup on building multi-cloud capacity management for inference infrastructure.
+- **2025-06-09** — [How Baseten multi-cloud capacity management unifies deployments](<gpu-clusters/How Baseten multi-cloud capacity management unifies deployments.md>) · `gpu-clusters` · baseten
+  Explains multi-cloud capacity management for unifying cloud, self-hosted, and hybrid inference deployments.
 - **2025-05-19** — [Arize AI Accelerates Enterprise AI Adoption On-Premises With NVIDIA](<deployment/Arize AI Accelerates Enterprise AI Adoption On-Premises With NVIDIA.md>) · `deployment` · arize
   Announcement of Arize and NVIDIA collaboration for on-prem enterprise AI deployment and observability infrastructure.
 - **2025-05-07** — [Linear programming for fun and profit](<cost/Linear programming for fun and profit.md>) · `cost` · modal
@@ -74,8 +84,12 @@
   Shows how to run GPU jobs from Airflow, connecting existing orchestration systems to elastic AI compute.
 - **2024-06-03** — [GPUs on-demand: Not serverless, not reserved, but some third thing](<gpu-clusters/GPUs on-demand Not serverless, not reserved, but some third thing.md>) · `gpu-clusters` · fireworks
   Explains on-demand GPU infrastructure as a middle ground between serverless and reserved capacity.
+- **2024-05-30** — [Control plane vs workload plane in model serving infrastructure](<deployment/Control plane vs workload plane in model serving infrastructure.md>) · `deployment` · baseten
+  Explains the control-plane/workload-plane split in model serving infrastructure.
 - **2024-05-21** — [Arize AI Brings LLM Evaluation, Observability To Microsoft Azure AI Model Catalog](<deployment/Arize AI Brings LLM Evaluation, Observability To Microsoft Azure AI Model Catalog.md>) · `deployment` · arize
   Describes Arize integration with Microsoft Azure AI Model Catalog for LLM evaluation and observability in Azure-hosted development workflows.
+- **2024-04-30** — [CI-CD for AI model deployments](<deployment/CI-CD for AI model deployments.md>) · `deployment` · baseten
+  Covers CI/CD practices for AI model deployments, including versioning, release flow, and operational safety.
 - **2024-03-14** — [Lambda on hard mode: Inside Modal's web infrastructure](<deployment/Lambda on hard mode Inside Modal's web infrastructure.md>) · `deployment` · modal
   Deep dive into Modal web infrastructure, including serverless HTTP routing, isolation, and platform architecture.
 - **2023-11-27** — [Open sourcing the AI proxy](<deployment/Open sourcing the AI proxy.md>) · `deployment` · braintrust
@@ -84,8 +98,12 @@
   Introduces an AI proxy pattern for routing model calls across providers while centralizing logging, credentials, access control, and production visibility.
 - **2023-09-19** — [Arize AI Debuts Integration with Anyscale Endpoints](<deployment/Arize AI Debuts Integration with Anyscale Endpoints.md>) · `deployment` · arize
   Announcement and integration walkthrough for using Arize with Anyscale Endpoints to monitor hosted open-model inference.
+- **2023-02-17** — [Technical deep dive: Truss live reload](<deployment/Technical deep dive Truss live reload.md>) · `deployment` · baseten
+  Technical deep dive into Truss live reload and faster model-server development loops.
 - **2023-01-08** — [Self-serve feature platforms: architectures and APIs](<deployment/Self-serve feature platforms architectures and APIs.md>) · `deployment` · chip-huyen
   Breaks down self-serve feature-platform architecture and APIs, covering feature definitions, pipelines, storage, discovery, and ergonomics for ML teams that need reusable production features.
+- **2022-12-08** — [Accelerating model deployment: 100X faster dev loops with development deployments](<deployment/Accelerating model deployment 100X faster dev loops with development deployments.md>) · `deployment` · baseten
+  Explains development deployments and draft models as a way to shorten model deployment iteration loops.
 - **2022-08-03** — [Introduction to streaming for data scientists](<deployment/Introduction to streaming for data scientists.md>) · `deployment` · chip-huyen
   Introduces stream processing for ML systems, comparing batch and streaming architectures, event-time semantics, joins, windows, and why streaming underpins real-time features.
 - **2021-09-13** — [Why data scientists shouldn’t need to know Kubernetes](<deployment/Why data scientists shouldn’t need to know Kubernetes.md>) · `deployment` · chip-huyen
@@ -103,6 +121,8 @@
   Schneider Electric case study on building enterprise LLMOps foundations with LangSmith at scale.
 - **2026-07-03** — [Fable's judgement](<../agents/multi-agent/Fable's judgement.md>) · `multi-agent` · simon-willison
   Practical coding-agent pattern for delegating implementation work to cheaper subagents while reserving the main model for judgment, review, synthesis, and model-selection decisions.
+- **2026-07-02** — [H100 vs. H200 vs. B200: which GPU should you use?](<../inference/hardware/H100 vs. H200 vs. B200 which GPU should you use.md>) · `hardware` · baseten
+  Compares H100, H200, and B200 GPUs for choosing hardware for inference workloads.
 - **2026-07-01** — [Announcing the Monetization Gateway: charge for any resource behind Cloudflare via x402](<../industry/business/Announcing the Monetization Gateway charge for any resource behind Cloudflare via x402.md>) · `business` · cloudflare-ai
   Announces the Monetization Gateway: charge agents for any Cloudflare-protected resource (pages, datasets, APIs, MCP tools) with payment verification enforced at the edge, settling sub-cent stablecoin micropayments over the x402 protocol now stewarded by a 25+ member Linux Foundation x402 Foundation.
 - **2026-06-30** — [What’s new in Claude Sonnet 5](<../models/releases/What’s new in Claude Sonnet 5.md>) · `releases` · simon-willison
@@ -151,6 +171,8 @@
   Explains Sierra's inference-layer reliability strategy for foundation models, including routing, redundancy, and serving behavior preservation under provider failures.
 - **2026-04-30** — [Agents can now create Cloudflare accounts, buy domains, and deploy](<../agents/tool-use/Agents can now create Cloudflare accounts, buy domains, and deploy.md>) · `tool-use` · cloudflare-ai
   Via a protocol co-designed with Stripe for Stripe Projects, coding agents can now provision a Cloudflare account, start a paid subscription, register a domain, and receive an API token to deploy — end-to-end with humans only approving payment and terms of service.
+- **2026-04-23** — [How we built RBAC that scales for the enterprise](<../product-engineering/security/How we built RBAC that scales for the enterprise.md>) · `security` · baseten
+  Engineering writeup on building RBAC for enterprise AI infrastructure and balancing autonomy with control.
 - **2026-04-20** — [Building an RL theorem-proving workflow on Modal](<../models/reasoning/Building an RL theorem-proving workflow on Modal.md>) · `reasoning` · modal
   Walks through an RL theorem-proving workflow, connecting reasoning tasks, training loops, and scalable remote execution.
 - **2026-04-20** — [The AI engineering stack we built internally — on the platform we ship](<../product-engineering/case-studies/The AI engineering stack we built internally — on the platform we ship.md>) · `case-studies` · cloudflare-ai
@@ -167,6 +189,10 @@
   Architecture of Claude Managed Agents: decoupling the agent loop (the brain) from sandboxed tool execution (the hands) to scale hosted long-running sessions.
 - **2026-04-06** — [How Brainstore works: architecture for AI observability at scale](<../evals-observability/monitoring/How Brainstore works architecture for AI observability at scale.md>) · `monitoring` · braintrust
   Deep dive into Brainstore's architecture for AI observability at scale, covering storage, indexing, query patterns, and trace/log workloads.
+- **2026-03-31** — [Baseten Training: an autoresearch substrate](<../models/fine-tuning/Baseten Training an autoresearch substrate.md>) · `fine-tuning` · baseten
+  Frames model training infrastructure as an autoresearch substrate for running iterative experiments and training jobs.
+- **2026-03-31** — [Open-source LLM training is a mess. Here is how it all works.](<../models/fine-tuning/Open-source LLM training is a mess. Here is how it all works.md>) · `fine-tuning` · baseten
+  Explains the moving pieces of open-source LLM training, including data, trainers, infrastructure, and evaluation.
 - **2026-03-28** — [The Fine-Tuning Bottleneck Isn't the Algorithm](<../models/fine-tuning/The Fine-Tuning Bottleneck Isn't the Algorithm.md>) · `fine-tuning` · fireworks
   Explains why fine-tuning bottlenecks often come from data, evaluation, orchestration, and serving rather than algorithms alone.
 - **2026-03-23** — [Frontier RL Is Cheaper Than You Think](<../models/fine-tuning/Frontier RL Is Cheaper Than You Think.md>) · `fine-tuning` · fireworks
@@ -193,10 +219,16 @@
   Describes architecture concerns for AI coding platforms that need to scale sandboxed coding sessions to large user volumes.
 - **2025-09-04** — [Building LangGraph: Designing an Agent Runtime from first principles](<../agents/planning/Building LangGraph Designing an Agent Runtime from first principles.md>) · `planning` · langchain
   Design history of LangGraph as an agent runtime from first principles, covering control flow, state, durability, and production requirements.
+- **2025-08-19** — [How to fine-tune gpt-oss-120b with Baseten and Axolotl](<../models/fine-tuning/How to fine-tune gpt-oss-120b with Baseten and Axolotl.md>) · `fine-tuning` · baseten
+  Guide to fine-tuning GPT-OSS 120B with Axolotl and scalable training infrastructure.
 - **2025-08-13** — [Evaluating Model Performance Across Clouds](<../models/benchmarks/Evaluating Model Performance Across Clouds.md>) · `benchmarks` · langfuse
   Evaluates model performance across cloud providers, focusing on latency, cost, quality, and provider-selection tradeoffs for production inference.
 - **2025-07-30** — [GPU Memory Snapshots: Supercharging sub-second startup](<../inference/optimization/GPU Memory Snapshots Supercharging sub-second startup.md>) · `optimization` · modal
   Explains GPU memory snapshots for reducing cold-start latency and preserving loaded model state across invocations.
+- **2025-06-23** — [How we built Multi-cloud Capacity Management (MCM)](<gpu-clusters/How we built Multi-cloud Capacity Management (MCM).md>) · `gpu-clusters` · baseten
+  Engineering writeup on building multi-cloud capacity management for inference infrastructure.
+- **2025-06-09** — [How Baseten multi-cloud capacity management unifies deployments](<gpu-clusters/How Baseten multi-cloud capacity management unifies deployments.md>) · `gpu-clusters` · baseten
+  Explains multi-cloud capacity management for unifying cloud, self-hosted, and hybrid inference deployments.
 - **2025-05-21** — [How we Built Scalable & Customizable Dashboards](<../evals-observability/monitoring/How we Built Scalable & Customizable Dashboards.md>) · `monitoring` · langfuse
   Engineering writeup on building scalable customizable dashboards for observability data, covering query, rendering, and product architecture concerns.
 - **2025-05-07** — [Linear programming for fun and profit](<cost/Linear programming for fun and profit.md>) · `cost` · modal
@@ -209,24 +241,42 @@
   Shows how Arize Phoenix, Langflow, and NVIDIA can support fast experimentation loops for improving AI application accuracy.
 - **2025-02-24** — ['I paid for the whole GPU, I am going to use the whole GPU': A high-level guide to GPU utilization](<../inference/hardware/'I paid for the whole GPU, I am going to use the whole GPU' A high-level guide to GPU utilization.md>) · `hardware` · modal
   Guide to GPU utilization for AI workloads, covering bottlenecks, throughput, batching, and cost-aware usage.
+- **2025-02-13** — [How multi-node inference works for massive LLMs like DeepSeek-R1](<../inference/serving/How multi-node inference works for massive LLMs like DeepSeek-R1.md>) · `serving` · baseten
+  Explains multi-node inference for very large LLMs such as DeepSeek-R1.
 - **2024-11-01** — [Arize, Vertex AI API: Evaluation Workflows to Accelerate Generative App Development and AI ROI](<../evals-observability/evaluation/Arize, Vertex AI API Evaluation Workflows to Accelerate Generative App Development and AI ROI.md>) · `evaluation` · arize
   Describes Arize and Vertex AI API evaluation workflows for accelerating generative application development and measuring AI ROI.
 - **2024-10-14** — [OpenTelemetry (OTel) for LLM Observability](<../evals-observability/tracing/OpenTelemetry (OTel) for LLM Observability.md>) · `tracing` · langfuse
   Introduces OpenTelemetry for LLM observability and how OTel-style traces can standardize spans, metadata, and interoperability across AI systems.
+- **2024-07-25** — [Deploying custom ComfyUI workflows as APIs](<../models/multimodal/Deploying custom ComfyUI workflows as APIs.md>) · `multimodal` · baseten
+  Shows how to deploy custom ComfyUI image-generation workflows behind API endpoints.
 - **2024-07-25** — [Building A Generative AI Platform](<../product-engineering/architecture/Building A Generative AI Platform.md>) · `architecture` · chip-huyen
   Reference architecture for generative AI platforms covering context construction and RAG, guardrails, gateways and routers, caching, observability, orchestration, and tool/action layers.
+- **2024-07-11** — [Using asynchronous inference in production](<../inference/serving/Using asynchronous inference in production.md>) · `serving` · baseten
+  Explains asynchronous inference patterns for production model-serving workloads.
 - **2024-06-06** — [How to catch crypto miners using syscall signatures](<../product-engineering/security/How to catch crypto miners using syscall signatures.md>) · `security` · modal
   Explains detecting abusive GPU workloads with syscall signatures, a useful pattern for securing shared AI infrastructure.
 - **2024-06-03** — [GPUs on-demand: Not serverless, not reserved, but some third thing](<gpu-clusters/GPUs on-demand Not serverless, not reserved, but some third thing.md>) · `gpu-clusters` · fireworks
   Explains on-demand GPU infrastructure as a middle ground between serverless and reserved capacity.
+- **2024-03-28** — [Using fractional H100 GPUs for efficient model serving](<../inference/serving/Using fractional H100 GPUs for efficient model serving.md>) · `serving` · baseten
+  Explains fractional H100 usage for efficient model serving and better GPU utilization.
 - **2024-03-14** — [What I learned from looking at 900 most popular open source AI tools](<../industry/trends/What I learned from looking at 900 most popular open source AI tools.md>) · `trends` · chip-huyen
   Maps 900 open-source AI tools into infrastructure, model-development, and application-development layers, highlighting growth in agents, prompt engineering, vector search, evaluation, and inference tooling.
 - **2024-02-28** — [Predictive Human Preference: From Model Ranking to Model Routing](<../evals-observability/evaluation/Predictive Human Preference From Model Ranking to Model Routing.md>) · `evaluation` · chip-huyen
   Describes predictive human preference for model ranking and model routing, using preference models and evaluations to choose among LLMs by quality, cost, and latency.
+- **2024-02-20** — [Why GPU utilization matters for model inference](<../inference/hardware/Why GPU utilization matters for model inference.md>) · `hardware` · baseten
+  Explains why GPU utilization is central to inference cost and performance.
 - **2024-01-23** — [Embedding English Wikipedia in under 15 minutes](<../rag-retrieval/embeddings/Embedding English Wikipedia in under 15 minutes.md>) · `embeddings` · modal
   Walkthrough of embedding English Wikipedia quickly, covering large-scale embedding jobs, batching, and storage workflow.
+- **2023-12-08** — [How to serve your ComfyUI model behind an API endpoint](<../models/multimodal/How to serve your ComfyUI model behind an API endpoint.md>) · `multimodal` · baseten
+  Shows how to serve a ComfyUI model behind an API endpoint for production image workflows.
+- **2023-11-28** — [NVIDIA A10 vs A10G for ML model inference](<../inference/hardware/NVIDIA A10 vs A10G for ML model inference.md>) · `hardware` · baseten
+  Compares NVIDIA A10 and A10G GPUs for model inference performance and cost.
 - **2023-10-26** — [AI ROI: Guide To Observability Value Statistics](<../evals-observability/monitoring/AI ROI Guide To Observability Value Statistics.md>) · `monitoring` · arize
   Frames AI observability value through ROI statistics, linking monitoring and model performance visibility to business outcomes.
+- **2023-09-15** — [NVIDIA A10 vs A100 GPUs for LLM and Stable Diffusion inference](<../inference/hardware/NVIDIA A10 vs A100 GPUs for LLM and Stable Diffusion inference.md>) · `hardware` · baseten
+  Compares NVIDIA A10 and A100 GPUs for LLM and Stable Diffusion inference workloads.
+- **2023-04-27** — [Comparing NVIDIA GPUs for AI: T4 vs A10](<../inference/hardware/Comparing NVIDIA GPUs for AI T4 vs A10.md>) · `hardware` · baseten
+  Compares NVIDIA T4 and A10 GPUs for AI inference workloads and cost-performance tradeoffs.
 - **2022-12-22** — [Hugging Face + Arize: Partnership and Code Example](<../evals-observability/monitoring/Hugging Face + Arize Partnership and Code Example.md>) · `monitoring` · arize
   Partnership and code example showing how to monitor Hugging Face model workflows with Arize observability.
 - **2022-12-16** — [Calculate Real-Time AI ROI With Custom Metrics](<../evals-observability/monitoring/Calculate Real-Time AI ROI With Custom Metrics.md>) · `monitoring` · arize

@@ -1,6 +1,6 @@
 # prompt-engineering
 
-12 articles.
+13 articles.
 
 - **2026-06-26** — [Prompt Caching with Deep Agents](<context-engineering/Prompt Caching with Deep Agents.md>) · `context-engineering` · langchain
   Explains prompt caching for Deep Agents and how cache-aware context design reduces latency and cost for repeated agent work.
@@ -22,6 +22,8 @@
   Explains constrained generation for structured extraction with reasoning models and schema-bound outputs.
 - **2024-11-13** — [Promptim: an experimental library for prompt optimization](<techniques/Promptim an experimental library for prompt optimization.md>) · `techniques` · langchain
   Introduces Promptim as an experimental prompt-optimization library that uses evaluation feedback to improve prompts.
+- **2024-09-12** — [How to build function calling and JSON mode for open-source and fine-tuned LLMs](<structured-output/How to build function calling and JSON mode for open-source and fine-tuned LLMs.md>) · `structured-output` · baseten
+  Shows how to build function calling and JSON mode for open-source and fine-tuned LLMs.
 - **2024-07-24** — [DSPy Assertions: Computational Constraints for Self-Refining Language Model Pipelines](<techniques/DSPy Assertions Computational Constraints for Self-Refining Language Model Pipelines.md>) · `techniques` · arize
   Explains DSPy assertions as computational constraints for self-refining language-model pipelines.
 - **2024-02-20** — [Why do all LLMs need structured output modes?](<structured-output/Why do all LLMs need structured output modes.md>) · `structured-output` · fireworks
@@ -43,6 +45,8 @@
   Alpic distills 15 lessons from building two dozen ChatGPT Apps on the Apps SDK, centered on 'context asymmetry' between user, UI widget, and model — deciding which tool-output fields each party sees — and packaged into their open-source Skybridge framework.
 - **2025-12-04** — [Fine-tuning LLMs as classifiers](<../models/fine-tuning/Fine-tuning LLMs as classifiers.md>) · `fine-tuning` · fireworks
   Shows how to adapt generative LLMs for classification tasks while preserving probability outputs and efficient serving.
+- **2025-11-05** — [Tool Calling in Inference](<../agents/tool-use/Tool Calling in Inference.md>) · `tool-use` · baseten
+  Explains tool calling in inference and how model servers support structured external actions.
 - **2025-11-04** — [Code execution with MCP: building more efficient AI agents](<../agents/tool-use/Code execution with MCP building more efficient AI agents.md>) · `tool-use` · anthropic-engineering
   Argues agents should write code that calls MCP tools rather than invoking tools directly, cutting token usage and enabling control flow over intermediate results.
 - **2025-10-27** — [Using Codex for education at Dagster Labs | OpenAI Developers](<../product-engineering/case-studies/Using Codex for education at Dagster Labs OpenAI Developers.md>) · `case-studies` · openai-devs
@@ -73,3 +77,5 @@
   Explains FireAttention V2 and the serving optimizations that make long-context inference more practical.
 - **2023-12-05** — [Extraction Benchmarking](<../models/benchmarks/Extraction Benchmarking.md>) · `benchmarks` · langchain
   Benchmarking post for extraction tasks, comparing structured-output performance and evaluation approaches for information extraction.
+- **2023-06-15** — [Three techniques to adapt LLMs for any use case](<../models/fine-tuning/Three techniques to adapt LLMs for any use case.md>) · `fine-tuning` · baseten
+  Explains prompt engineering, fine-tuning, and related techniques for adapting LLMs to use cases.

@@ -1,6 +1,6 @@
 # agents
 
-104 articles.
+107 articles.
 
 - **2026-07-10** — [OpenWiki Brains: Proactive Memory for AI Agents](<memory-context/OpenWiki Brains Proactive Memory for AI Agents.md>) · `memory-context` · langchain
   Introduces OpenWiki Brains as proactive wiki memory for agents, focused on persistent context and retrieval over project knowledge.
@@ -84,6 +84,8 @@
   Deep dive into Cloudflare's CI-native AI code review built on OpenCode: up to seven specialized reviewer agents (security, performance, quality, docs, compliance) plus a coordinator that deduplicates findings and posts one structured review, run across tens of thousands of GitLab merge requests via a plugin architecture.
 - **2026-04-17** — [Agentic Engineering: How Swarms of AI Agents Are Redefining Software Engineering](<multi-agent/Agentic Engineering How Swarms of AI Agents Are Redefining Software Engineering.md>) · `multi-agent` · langchain
   Discusses how swarms of agents change software engineering workflows, including orchestration, delegation, review, and human oversight.
+- **2026-04-16** — [Harnesses are everything. Here's how to optimize yours.](<planning/Harnesses are everything. Here's how to optimize yours.md>) · `planning` · baseten
+  Explains why agent harness design matters and how to optimize harnesses for reliable agent behavior.
 - **2026-04-14** — [Building smarter AI agents: architecture, evals, and lessons from the field](<planning/Building smarter AI agents architecture, evals, and lessons from the field.md>) · `planning` · arize
   Summarizes field lessons on production agent architecture, evaluation, and reliability from AI Builders events.
 - **2026-04-14** — [Autoscaling Autoresearch: Give your agents elastic GPUs on Modal](<tool-use/Autoscaling Autoresearch Give your agents elastic GPUs on Modal.md>) · `tool-use` · modal
@@ -140,6 +142,8 @@
   Introduces tool search, programmatic tool calling, and tool-use examples on the Claude Developer Platform to scale agents past context-window limits on large tool sets.
 - **2025-11-19** — [50 Trillion Tokens Per Day: The State of Agent Environments](<computer-use/50 Trillion Tokens Per Day The State of Agent Environments.md>) · `computer-use` · fireworks
   Surveys the state of agent environments, emphasizing execution scale, sandboxing, and environment design.
+- **2025-11-05** — [Tool Calling in Inference](<tool-use/Tool Calling in Inference.md>) · `tool-use` · baseten
+  Explains tool calling in inference and how model servers support structured external actions.
 - **2025-11-04** — [Code execution with MCP: building more efficient AI agents](<tool-use/Code execution with MCP building more efficient AI agents.md>) · `tool-use` · anthropic-engineering
   Argues agents should write code that calls MCP tools rather than invoking tools directly, cutting token usage and enabling control flow over intermediate results.
 - **2025-10-16** — [Equipping agents for the real world with Agent Skills](<tool-use/Equipping agents for the real world with Agent Skills.md>) · `tool-use` · anthropic-engineering
@@ -164,6 +168,8 @@
   Introduces Open SWE as an open-source asynchronous coding agent and discusses its architecture for long-running coding tasks.
 - **2025-07-24** — [What is an AI code sandbox?](<computer-use/What is an AI code sandbox.md>) · `computer-use` · modal
   Explains AI code sandboxes as isolated execution environments for coding agents, including safety and state considerations.
+- **2025-07-15** — [Building reliable AI agents](<planning/Building reliable AI agents.md>) · `planning` · baseten
+  Covers practical design patterns for building more reliable AI agents.
 - **2025-07-11** — [Function calling for agentic AI systems](<tool-use/Function calling for agentic AI systems.md>) · `tool-use` · fireworks
   Explains function calling as the bridge between LLM outputs, external tools, and agentic execution loops.
 - **2025-06-16** — [How and when to build multi-agent systems](<multi-agent/How and when to build multi-agent systems.md>) · `multi-agent` · langchain
@@ -331,6 +337,8 @@
   Explains where human judgment fits into the agent improvement loop, including review, labeling, feedback, and evaluator calibration.
 - **2026-04-08** — [Agentic eval development with the Braintrust CLI](<../evals-observability/testing/Agentic eval development with the Braintrust CLI.md>) · `testing` · braintrust
   Shows how to use the Braintrust CLI for agentic eval development, turning local experiments into repeatable tests for agent behavior.
+- **2026-03-31** — [Baseten Training: an autoresearch substrate](<../models/fine-tuning/Baseten Training an autoresearch substrate.md>) · `fine-tuning` · baseten
+  Frames model training infrastructure as an autoresearch substrate for running iterative experiments and training jobs.
 - **2026-03-27** — [Agent Evaluation Readiness Checklist](<../evals-observability/evaluation/Agent Evaluation Readiness Checklist.md>) · `evaluation` · langchain
   Checklist for agent-evaluation readiness covering task definitions, datasets, traces, scoring, human review, and rollout criteria.
 - **2026-03-26** — [How we build evals for Deep Agents](<../evals-observability/evaluation/How we build evals for Deep Agents.md>) · `evaluation` · langchain
@@ -461,10 +469,16 @@
   Explains observability needs for multi-step LLM systems, including tracing chains, tools, intermediate state, and failure points across complex application flows.
 - **2024-09-26** — [Pushing LangSmith to new limits with Replit Agent's complex workflows](<../product-engineering/case-studies/Pushing LangSmith to new limits with Replit Agent's complex workflows.md>) · `case-studies` · langchain
   Replit Agent case study on tracing and managing complex agent workflows with LangSmith.
+- **2024-09-12** — [How to build function calling and JSON mode for open-source and fine-tuned LLMs](<../prompt-engineering/structured-output/How to build function calling and JSON mode for open-source and fine-tuned LLMs.md>) · `structured-output` · baseten
+  Shows how to build function calling and JSON mode for open-source and fine-tuned LLMs.
+- **2024-08-06** — [Compound AI systems explained](<../product-engineering/architecture/Compound AI systems explained.md>) · `architecture` · baseten
+  Explains compound AI systems and how multiple models, tools, and control logic combine into applications.
 - **2024-07-30** — [Developing Copilot: What AI Engineers Can Learn from Our Experience Building An AI Assistant](<../product-engineering/case-studies/Developing Copilot What AI Engineers Can Learn from Our Experience Building An AI Assistant.md>) · `case-studies` · arize
   Arize Copilot case study covering lessons from building an AI assistant for data scientists and AI engineers.
 - **2024-07-02** — [Improving Memory Retrieval: How New Computer achieved 50% higher recall with LangSmith](<../rag-retrieval/search/Improving Memory Retrieval How New Computer achieved 50% higher recall with LangSmith.md>) · `search` · langchain
   New Computer case study on improving memory retrieval recall with LangSmith-backed evaluation and debugging.
+- **2024-07-02** — [Building multi-component AI workflows at scale with Chains](<../product-engineering/architecture/Building multi-component AI workflows at scale with Chains.md>) · `architecture` · baseten
+  Explains multi-component AI workflows with Chains, including orchestration across model and application steps.
 - **2024-06-23** — [How Cursor built Fast Apply using the Speculative Decoding API](<../inference/optimization/How Cursor built Fast Apply using the Speculative Decoding API.md>) · `optimization` · fireworks
   Case study of Cursor Fast Apply using speculative decoding to reduce coding-assistant latency.
 - **2024-03-14** — [What I learned from looking at 900 most popular open source AI tools](<../industry/trends/What I learned from looking at 900 most popular open source AI tools.md>) · `trends` · chip-huyen
