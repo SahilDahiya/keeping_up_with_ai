@@ -1,6 +1,6 @@
 # industry
 
-23 articles.
+25 articles.
 
 - **2026-07-03** — [AIEWF Daily Dispatch: The great loops debate and the state of AI engineering](<trends/AIEWF Daily Dispatch The great loops debate and the state of AI engineering.md>) · `trends` · latent-space
   Dispatch on the loops debate and the state of AI engineering, capturing emerging vocabulary for production AI systems.
@@ -30,12 +30,16 @@
   Application-layer snapshot of LLM usage and model trends, useful for understanding production model adoption and quality/cost tradeoffs.
 - **2025-10-07** — [Developers as the distribution layer of AGI (OpenAI Dev Day 2025, ft. Sherwin Wu and Christina Huang)](<trends/Developers as the distribution layer of AGI (OpenAI Dev Day 2025, ft. Sherwin Wu and Christina Huang).md>) · `trends` · latent-space
   OpenAI DevDay 2025 discussion on developers as the distribution layer for AGI, including Apps SDK, Agent Kit, and Codex direction.
+- **2025-06-17** — [Andrej Karpathy on Software 3.0: Software in the Age of AI](<trends/Andrej Karpathy on Software 3.0 Software in the Age of AI.md>) · `trends` · latent-space
+  Karpathy Software 3.0 discussion on software in the age of AI and what changes for builders.
 - **2025-06-13** — [AI Engineering Goes Mainstream](<trends/AI Engineering Goes Mainstream.md>) · `trends` · latent-space
   Summarizes AI engineering becoming mainstream, with emphasis on agent engineering and applied AI system practices.
 - **2025-01-12** — [[Ride Home] Simon Willison: Things we learned about LLMs in 2024](<trends/[Ride Home] Simon Willison Things we learned about LLMs in 2024.md>) · `trends` · latent-space
   Simon Willison recap of practical LLM lessons from 2024, including tools, agents, model behavior, and developer workflow changes.
 - **2024-10-03** — [Building AGI in Real Time (OpenAI Dev Day 2024)](<trends/Building AGI in Real Time (OpenAI Dev Day 2024).md>) · `trends` · latent-space
   OpenAI DevDay 2024 recap covering realtime APIs, model/application direction, and practical developer platform implications.
+- **2024-08-02** — [The Winds of AI Winter (Q2 Four Wars Recap) + ChatGPT Voice Mode Preview](<trends/The Winds of AI Winter (Q2 Four Wars Recap) + ChatGPT Voice Mode Preview.md>) · `trends` · latent-space
+  Dense Q2 2024 recap covering the AI stack, ChatGPT voice, and major model/product shifts.
 - **2024-03-14** — [What I learned from looking at 900 most popular open source AI tools](<trends/What I learned from looking at 900 most popular open source AI tools.md>) · `trends` · chip-huyen
   Maps 900 open-source AI tools into infrastructure, model-development, and application-development layers, highlighting growth in agents, prompt engineering, vector search, evaluation, and inference tooling.
 - **2024-03-09** — [OpenAI Sora, Google Gemini, Groq Math, and our Top 5 Research Trends (Jan-Feb 2024 Audio Recap + Latent Space Anniversary!)](<trends/OpenAI Sora, Google Gemini, Groq Math, and our Top 5 Research Trends (Jan-Feb 2024 Audio Recap + Latent Space Anniversary!).md>) · `trends` · latent-space
@@ -67,10 +71,14 @@
   Announcement of Arize and NVIDIA collaboration for on-prem enterprise AI deployment and observability infrastructure.
 - **2024-10-15** — [Google's NotebookLM and the Future of AI-Generated Audio](<../models/multimodal/Google's NotebookLM and the Future of AI-Generated Audio.md>) · `multimodal` · arize
   Paper-reading style overview of Google NotebookLM and AI-generated audio as a multimodal product pattern.
+- **2023-05-05** — [No Moat: Closed AI gets its Open Source wakeup call — ft. Simon Willison](<../models/releases/No Moat Closed AI gets its Open Source wakeup call — ft. Simon Willison.md>) · `releases` · latent-space
+  Simon Willison discussion of open-source AI as a wakeup call to closed AI and the implications for builders.
 - **2023-04-19** — [The Anatomy of Autonomy: Why Agents are the next AI Killer App after ChatGPT](<../agents/planning/The Anatomy of Autonomy Why Agents are the next AI Killer App after ChatGPT.md>) · `planning` · latent-space
   Explains why agents became a major AI application pattern after ChatGPT and what autonomy changes in product design.
 - **2023-03-15** — [The Multi-modal, Multi-model, Multi-everything Future of AGI](<../models/multimodal/The Multi-modal, Multi-model, Multi-everything Future of AGI.md>) · `multimodal` · latent-space
   Essay on the multimodal, multi-model future of AGI and product implications.
+- **2022-10-09** — [How Open Source is eating AI](<../models/releases/How Open Source is eating AI.md>) · `releases` · latent-space
+  Essay on how open source is eating AI and why open model ecosystems matter for product builders.
 - **2021-10-21** — [Rise of the ML Engineer: Chick-fil-A's Korri Jones](<../product-engineering/case-studies/Rise of the ML Engineer Chick-fil-A's Korri Jones.md>) · `case-studies` · arize
   Interview with Chick-fil-A ML engineer Korri Jones on production ML work and applied model operations in a large business.
 - **2021-06-07** — [Arize Partners with UbiOps to Accelerate Model Building & Deployment](<../infra-platform/deployment/Arize Partners with UbiOps to Accelerate Model Building & Deployment.md>) · `deployment` · arize

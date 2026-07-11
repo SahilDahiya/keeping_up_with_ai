@@ -1,6 +1,6 @@
 # inference
 
-113 articles.
+116 articles.
 
 - **2026-07-10** — [Optimizing MiniMax M3 Sparse Attention on NVIDIA Blackwell](<optimization/Optimizing MiniMax M3 Sparse Attention on NVIDIA Blackwell.md>) · `optimization` · fireworks
   Deep dive into sparse-attention kernel optimization for MiniMax M3 on NVIDIA Blackwell hardware.
@@ -56,6 +56,8 @@
   Mathematical deep dive into TurboQuant and its quantization behavior for LLM inference.
 - **2026-03-10** — [Training-Inference Parity in MoE Models: Where Numerics Drift](<optimization/Training-Inference Parity in MoE Models Where Numerics Drift.md>) · `optimization` · fireworks
   Explains training-inference parity issues in MoE models and how numeric drift can affect production behavior.
+- **2026-03-10** — [NVIDIA's AI Engineers: Agent Inference at Planetary Scale and "Speed of Light" — Nader Khalil (Brev), Kyle Kranen (Dynamo)](<serving/NVIDIA's AI Engineers Agent Inference at Planetary Scale and Speed of Light — Nader Khalil (Brev), Kyle Kranen (Dynamo).md>) · `serving` · latent-space
+  NVIDIA interview on agent inference at planetary scale, Brev, Dynamo, and serving-speed constraints.
 - **2026-03-06** — [How we built the fastest GLM 5 API](<optimization/How we built the fastest GLM 5 API.md>) · `optimization` · baseten
   Explains serving optimizations used to build a fast GLM 5 API.
 - **2026-03-06** — [Inference providers vs. API routers](<serving/Inference providers vs. API routers.md>) · `serving` · fireworks
@@ -152,6 +154,8 @@
   Shows how kernel work improves H200 and H100 GPU cluster performance.
 - **2024-09-05** — [Speculative decoding for high-throughput long-context inference](<optimization/Speculative decoding for high-throughput long-context inference.md>) · `optimization` · together
   Explains speculative decoding for high-throughput long-context inference.
+- **2024-09-03** — [Efficiency is Coming: 3000x Faster, Cheaper, Better AI Inference from Hardware Improvements, Quantization, and Synthetic Data Distillation](<optimization/Efficiency is Coming 3000x Faster, Cheaper, Better AI Inference from Hardware Improvements, Quantization, and Synthetic Data Distillation.md>) · `optimization` · latent-space
+  Nyla interview on faster and cheaper inference through hardware, quantization, and synthetic-data distillation.
 - **2024-08-30** — [FireOptimizer: Customizing latency and quality for your production inference workload](<serving/FireOptimizer Customizing latency and quality for your production inference workload.md>) · `serving` · fireworks
   Explains FireOptimizer for tuning production inference workloads across latency, quality, and cost objectives.
 - **2024-08-28** — [TEAL: Training-Free Activation Sparsity in Large Language Models](<optimization/TEAL Training-Free Activation Sparsity in Large Language Models.md>) · `optimization` · together
@@ -184,6 +188,8 @@
   Explains high-performance model inference with NVIDIA TensorRT and related deployment considerations.
 - **2024-03-07** — [FP8: Efficient model inference with 8-bit floating point numbers](<quantization/FP8 Efficient model inference with 8-bit floating point numbers.md>) · `quantization` · baseten
   Explains FP8 numeric formats and why 8-bit floating point can improve efficient model inference.
+- **2024-02-28** — [One standard to deploy them all - with Ben Firshman of Replicate](<serving/One standard to deploy them all - with Ben Firshman of Replicate.md>) · `serving` · latent-space
+  Replicate interview on standardizing model deployment and serving generative models.
 - **2024-02-22** — [40% faster Stable Diffusion XL inference with NVIDIA TensorRT](<optimization/40% faster Stable Diffusion XL inference with NVIDIA TensorRT.md>) · `optimization` · baseten
   Explains TensorRT optimization for Stable Diffusion XL inference, including latency and throughput gains.
 - **2024-02-20** — [Why GPU utilization matters for model inference](<hardware/Why GPU utilization matters for model inference.md>) · `hardware` · baseten
@@ -371,6 +377,8 @@
   Describes high-throughput Whisper transcription serving and the latency/cost tradeoffs in batch audio inference.
 - **2024-11-25** — [Why Compound AI + Open Source will beat Closed AI](<../models/releases/Why Compound AI + Open Source will beat Closed AI.md>) · `releases` · latent-space
   Fireworks interview arguing compound AI and open source can compete with closed AI through serving and system composition.
+- **2024-11-21** — [OpenAI Realtime API: The Missing Manual](<../models/multimodal/OpenAI Realtime API The Missing Manual.md>) · `multimodal` · latent-space
+  OpenAI Realtime API missing manual covering realtime voice interaction and deployment patterns.
 - **2024-10-30** — [Even Better, Even Faster Quantized LLMs with QTIP](<quantization/Even Better, Even Faster Quantized LLMs with QTIP.md>) · `quantization` · together
   Explains QTIP quantization for faster LLM inference with improved quality preservation.
 - **2024-10-15** — [FireAttention V3: Enabling AMD as a viable alternative for GPU inference](<hardware/FireAttention V3 Enabling AMD as a viable alternative for GPU inference.md>) · `hardware` · fireworks
@@ -381,6 +389,8 @@
   Explains the GPU bubble burst and what lower H100 prices imply for AI infrastructure economics.
 - **2024-09-18** — [Multi-LoRA: Personalize AI at scale and deliver the best experience for each customer and use case, with 100x cost-efficiency](<../models/fine-tuning/Multi-LoRA Personalize AI at scale and deliver the best experience for each customer and use case, with 100x cost-efficiency.md>) · `fine-tuning` · fireworks
   Explains Multi-LoRA serving for personalized models at scale with better cost efficiency.
+- **2024-09-03** — [Efficiency is Coming: 3000x Faster, Cheaper, Better AI Inference from Hardware Improvements, Quantization, and Synthetic Data Distillation](<optimization/Efficiency is Coming 3000x Faster, Cheaper, Better AI Inference from Hardware Improvements, Quantization, and Synthetic Data Distillation.md>) · `optimization` · latent-space
+  Nyla interview on faster and cheaper inference through hardware, quantization, and synthetic-data distillation.
 - **2024-08-30** — [FireOptimizer: Customizing latency and quality for your production inference workload](<serving/FireOptimizer Customizing latency and quality for your production inference workload.md>) · `serving` · fireworks
   Explains FireOptimizer for tuning production inference workloads across latency, quality, and cost objectives.
 - **2024-08-01** — [Introducing automatic LLM optimization with TensorRT-LLM Engine Builder](<optimization/Introducing automatic LLM optimization with TensorRT-LLM Engine Builder.md>) · `optimization` · baseten
@@ -427,6 +437,8 @@
   Covers deployment and inference patterns for open-source text embedding models.
 - **2023-09-19** — [Arize AI Debuts Integration with Anyscale Endpoints](<../infra-platform/deployment/Arize AI Debuts Integration with Anyscale Endpoints.md>) · `deployment` · arize
   Announcement and integration walkthrough for using Arize with Anyscale Endpoints to monitor hosted open-model inference.
+- **2023-08-30** — [RWKV: Reinventing RNNs for the Transformer Era — with Eugene Cheah of UIlicious](<../models/reasoning/RWKV Reinventing RNNs for the Transformer Era — with Eugene Cheah of UIlicious.md>) · `reasoning` · latent-space
+  RWKV interview on reinventing RNNs for the Transformer era and efficient sequence modeling.
 - **2023-08-29** — [Speed, Python: Pick Two. How CUDA Graphs Enable Fast Python Code for Deep Learning](<optimization/Speed, Python Pick Two. How CUDA Graphs Enable Fast Python Code for Deep Learning.md>) · `optimization` · fireworks
   Explains how CUDA Graphs reduce Python overhead for fast deep-learning execution.
 - **2023-08-24** — [Skeleton of Thought: LLMs Can Do Parallel Decoding Paper Reading](<../models/reasoning/Skeleton of Thought LLMs Can Do Parallel Decoding Paper Reading.md>) · `reasoning` · arize

@@ -813,6 +813,8 @@
   Healthcare and life-sciences case discussion on what it takes to build successful LLM applications, including domain constraints and evaluation needs.
 - **2024-02-16** — [Evaluating the Generation Stage in RAG](<../rag-retrieval/pipelines/Evaluating the Generation Stage in RAG.md>) · `pipelines` · arize
   Focuses on evaluating the generation stage in RAG pipelines, complementing retrieval-focused evaluation.
+- **2024-01-11** — [RLHF 201 - with Nathan Lambert of AI2 and Interconnects](<../models/fine-tuning/RLHF 201 - with Nathan Lambert of AI2 and Interconnects.md>) · `fine-tuning` · latent-space
+  Nathan Lambert deep dive on RLHF beyond basics, including preference data and alignment training.
 - **2024-01-01** — [Evaluate RAG with LLM Evals and Benchmarking](<../rag-retrieval/pipelines/Evaluate RAG with LLM Evals and Benchmarking.md>) · `pipelines` · arize
   Workshop recap on evaluating RAG systems with LLM evals and benchmarking.
 - **2023-12-20** — [Benchmarking Agent Tool Use](<../agents/tool-use/Benchmarking Agent Tool Use.md>) · `tool-use` · langchain

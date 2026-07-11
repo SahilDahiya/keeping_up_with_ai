@@ -1,6 +1,6 @@
 # prompt-engineering
 
-26 articles.
+28 articles.
 
 - **2026-06-26** — [Prompt Caching with Deep Agents](<context-engineering/Prompt Caching with Deep Agents.md>) · `context-engineering` · langchain
   Explains prompt caching for Deep Agents and how cache-aware context design reduces latency and cost for repeated agent work.
@@ -30,6 +30,8 @@
   Examines prompting strategies for LLM-as-judge evaluators, including explanations and chain-of-thought design choices.
 - **2025-07-18** — [Prompt Learning: Using English Feedback to Optimize LLM Systems](<techniques/Prompt Learning Using English Feedback to Optimize LLM Systems.md>) · `techniques` · arize
   Explains prompt learning driven by natural-language feedback as an optimization loop for LLM systems.
+- **2025-06-10** — [God is hungry for Context: First thoughts on o3 pro](<context-engineering/God is hungry for Context First thoughts on o3 pro.md>) · `context-engineering` · latent-space
+  First thoughts on o3 pro framed around context hunger and reasoning-model workflows.
 - **2025-03-17** — [Prompt Optimization Techniques](<techniques/Prompt Optimization Techniques.md>) · `techniques` · arize
   Covers few-shot prompting and prompt optimization techniques with an emphasis on measurable improvement.
 - **2025-03-07** — [Prompt Management from First Principles](<techniques/Prompt Management from First Principles.md>) · `techniques` · arize
@@ -54,6 +56,8 @@
   Practical guide to Text-to-SQL prompting, including schema context, output constraints, and evaluation considerations.
 - **2023-05-16** — [Guaranteed quality and structure in LLM outputs - with Shreya Rajpal of Guardrails AI](<structured-output/Guaranteed quality and structure in LLM outputs - with Shreya Rajpal of Guardrails AI.md>) · `structured-output` · latent-space
   Guardrails AI interview on guaranteeing quality and structure in LLM outputs through constraints, validation, and evals.
+- **2022-12-28** — [Reverse Prompt Engineering for Fun and (no) Profit](<techniques/Reverse Prompt Engineering for Fun and (no) Profit.md>) · `techniques` · latent-space
+  Explains reverse prompt engineering as a practical technique for understanding and recreating LLM product behavior.
 
 ## Also relevant (filed elsewhere)
 
@@ -101,12 +105,18 @@
   Adding a no-op 'think' tool gives Claude space for intermediate reasoning mid-task, significantly improving policy-heavy agentic benchmarks like tau-bench.
 - **2025-02-26** — [Memory and State in LLM Applications](<../agents/memory-context/Memory and State in LLM Applications.md>) · `memory-context` · arize
   Explains memory and state patterns in LLM applications and how they affect reliability across interactions.
+- **2025-02-06** — [Agent Engineering with Pydantic + Graphs — with Samuel Colvin](<../agents/planning/Agent Engineering with Pydantic + Graphs — with Samuel Colvin.md>) · `planning` · latent-space
+  Samuel Colvin interview on agent engineering with Pydantic and graphs for structured agent systems.
 - **2025-01-16** — [Common pitfalls when building generative AI applications](<../product-engineering/architecture/Common pitfalls when building generative AI applications.md>) · `architecture` · chip-huyen
   Covers common generative-AI application pitfalls, including overusing LLMs, confusing product problems with model failures, premature framework complexity, and weak evaluation/product iteration.
+- **2025-01-12** — [o1 isn’t a chat model (and that’s the point)](<../models/reasoning/o1 isn’t a chat model (and that’s the point).md>) · `reasoning` · latent-space
+  Explains why o1 is not a chat model and how reasoning models require different interaction patterns.
 - **2024-11-25** — [Long Context Fine-Tuning: A Technical Deep Dive](<../models/fine-tuning/Long Context Fine-Tuning A Technical Deep Dive.md>) · `fine-tuning` · together
   Technical deep dive into long-context fine-tuning.
 - **2024-10-08** — [Functions: flexible AI engineering primitives](<../agents/tool-use/Functions flexible AI engineering primitives.md>) · `tool-use` · braintrust
   Introduces functions as flexible AI engineering primitives for tool calling, structured behavior, and reusable evaluation or workflow components.
+- **2024-09-13** — [From API to AGI: Structured Outputs, OpenAI API platform and O1 Q&A — with Michelle Pokrass & OpenAI Devrel + Strawberry team](<../models/reasoning/From API to AGI Structured Outputs, OpenAI API platform and O1 Q&A — with Michelle Pokrass & OpenAI Devrel + Strawberry team.md>) · `reasoning` · latent-space
+  OpenAI API and o1 Q&A covering structured outputs, platform direction, and reasoning-model use.
 - **2024-09-11** — [Composable Interventions for Language Models](<../models/reasoning/Composable Interventions for Language Models.md>) · `reasoning` · arize
   Deep dive on composable interventions for language models, covering techniques for steering or modifying model behavior.
 - **2024-09-05** — [Speculative decoding for high-throughput long-context inference](<../inference/optimization/Speculative decoding for high-throughput long-context inference.md>) · `optimization` · together

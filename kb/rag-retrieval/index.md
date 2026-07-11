@@ -133,6 +133,8 @@
   Interview with deep-research inventors on agentic research workflows, retrieval, synthesis, and evaluation.
 - **2024-11-18** — [Building a RAG app with MongoDB Atlas](<pipelines/Building a RAG app with MongoDB Atlas.md>) · `pipelines` · braintrust
   Walkthrough of building a RAG app with MongoDB Atlas, covering retrieval setup, model calls, and evaluation of the generated answers.
+- **2024-10-25** — [How NotebookLM Was Made](<../product-engineering/case-studies/How NotebookLM Was Made.md>) · `case-studies` · latent-space
+  NotebookLM build story covering grounded product design, retrieval, and synthesis over user documents.
 - **2024-09-24** — [Hybrid search over California embeddings with Modal, MongoDB, and Clay](<search/Hybrid search over California embeddings with Modal, MongoDB, and Clay.md>) · `search` · modal
   Example of hybrid search over embeddings, combining vector retrieval with MongoDB and a geospatial dataset.
 - **2024-07-25** — [Building A Generative AI Platform](<../product-engineering/architecture/Building A Generative AI Platform.md>) · `architecture` · chip-huyen

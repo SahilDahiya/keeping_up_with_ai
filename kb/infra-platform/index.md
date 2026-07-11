@@ -1,6 +1,6 @@
 # infra-platform
 
-70 articles.
+71 articles.
 
 - **2026-07-09** — [Trace before you migrate: Measuring Kubernetes bottlenecks in AI agent sandboxes](<deployment/Trace before you migrate Measuring Kubernetes bottlenecks in AI agent sandboxes.md>) · `deployment` · arize
   Shows how tracing can diagnose Kubernetes bottlenecks in AI agent sandboxes before migration decisions.
@@ -34,6 +34,8 @@
   Explains model neutrality and why avoiding AI vendor lock-in matters for provider routing, cost control, and long-term architecture.
 - **2026-05-26** — [Mission Control for Self-Hosted LangSmith on Kubernetes](<deployment/Mission Control for Self-Hosted LangSmith on Kubernetes.md>) · `deployment` · langchain
   Guide to operating self-hosted LangSmith on Kubernetes, covering deployment, operations, and control-plane concerns.
+- **2026-05-20** — [Railway: The Agent-Native Cloud — Jake Cooper](<deployment/Railway The Agent-Native Cloud — Jake Cooper.md>) · `deployment` · latent-space
+  Railway interview on agent-native cloud infrastructure and deployment ergonomics for AI builders.
 - **2026-05-19** — [Announcing Claude Managed Agents on Cloudflare](<deployment/Announcing Claude Managed Agents on Cloudflare.md>) · `deployment` · cloudflare-ai
   Cloudflare-Anthropic integration running Claude Managed Agents against Cloudflare Sandboxes: the agent loop stays on the Claude Platform while Cloudflare provides microVM or isolate sandboxes, credential-injecting proxies, private service connectivity, browser session audit trails, and per-agent email.
 - **2026-05-14** — [The Three Pillars of Voice Integration: Building Hybrid AI Contact Centers That Work With Your Existing Infrastructure](<deployment/The Three Pillars of Voice Integration Building Hybrid AI Contact Centers That Work With Your Existing Infrastructure.md>) · `deployment` · cresta
@@ -241,6 +243,8 @@
   Anthropic interview on why AI should have its own computer, covering desktop agents, sandboxing, and runtime UX.
 - **2026-03-12** — [Supporting privacy and compliance for EU teams](<../product-engineering/security/Supporting privacy and compliance for EU teams.md>) · `security` · braintrust
   Covers privacy and compliance requirements for EU AI teams, including data residency, controls, and deployment choices for observability data.
+- **2026-03-10** — [NVIDIA's AI Engineers: Agent Inference at Planetary Scale and "Speed of Light" — Nader Khalil (Brev), Kyle Kranen (Dynamo)](<../inference/serving/NVIDIA's AI Engineers Agent Inference at Planetary Scale and Speed of Light — Nader Khalil (Brev), Kyle Kranen (Dynamo).md>) · `serving` · latent-space
+  NVIDIA interview on agent inference at planetary scale, Brev, Dynamo, and serving-speed constraints.
 - **2026-03-06** — [Cursor's Third Era: Cloud Agents](<../agents/computer-use/Cursor's Third Era Cloud Agents.md>) · `computer-use` · latent-space
   Covers Cursor’s cloud-agent era and how coding agents move from local IDE assistance to async cloud work.
 - **2026-03-06** — [Inference providers vs. API routers](<../inference/serving/Inference providers vs. API routers.md>) · `serving` · fireworks
@@ -337,6 +341,8 @@
   Explains fractional H100 usage for efficient model serving and better GPU utilization.
 - **2024-03-14** — [What I learned from looking at 900 most popular open source AI tools](<../industry/trends/What I learned from looking at 900 most popular open source AI tools.md>) · `trends` · chip-huyen
   Maps 900 open-source AI tools into infrastructure, model-development, and application-development layers, highlighting growth in agents, prompt engineering, vector search, evaluation, and inference tooling.
+- **2024-02-28** — [One standard to deploy them all - with Ben Firshman of Replicate](<../inference/serving/One standard to deploy them all - with Ben Firshman of Replicate.md>) · `serving` · latent-space
+  Replicate interview on standardizing model deployment and serving generative models.
 - **2024-02-28** — [Predictive Human Preference: From Model Ranking to Model Routing](<../evals-observability/evaluation/Predictive Human Preference From Model Ranking to Model Routing.md>) · `evaluation` · chip-huyen
   Describes predictive human preference for model ranking and model routing, using preference models and evaluations to choose among LLMs by quality, cost, and latency.
 - **2024-02-20** — [Why GPU utilization matters for model inference](<../inference/hardware/Why GPU utilization matters for model inference.md>) · `hardware` · baseten
