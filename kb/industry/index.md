@@ -1,6 +1,6 @@
 # industry
 
-9 articles.
+11 articles.
 
 - **2026-07-01** — [Announcing the Monetization Gateway: charge for any resource behind Cloudflare via x402](<business/Announcing the Monetization Gateway charge for any resource behind Cloudflare via x402.md>) · `business` · cloudflare-ai
   Announces the Monetization Gateway: charge agents for any Cloudflare-protected resource (pages, datasets, APIs, MCP tools) with payment verification enforced at the edge, settling sub-cent stablecoin micropayments over the x402 protocol now stewarded by a 25+ member Linux Foundation x402 Foundation.
@@ -18,8 +18,12 @@
   AI Engineer Europe notes arguing that faster code generation increases the need for verification, standards, and technical-debt management.
 - **2025-12-30** — [OpenAI for Developers in 2025](<trends/OpenAI for Developers in 2025.md>) · `trends` · openai-devs
   Year-in-review of OpenAI's 2025 developer platform: reasoning converging from separate o1/o3/o4-mini lines into unified flagship models, multimodal I/O becoming default, agent building blocks (Responses API, Agents SDK, AgentKit), and GPT-5.2-Codex for long-horizon coding.
+- **2024-03-14** — [What I learned from looking at 900 most popular open source AI tools](<trends/What I learned from looking at 900 most popular open source AI tools.md>) · `trends` · chip-huyen
+  Maps 900 open-source AI tools into infrastructure, model-development, and application-development layers, highlighting growth in agents, prompt engineering, vector search, evaluation, and inference tooling.
 - **2022-09-22** — [The Death of Central ML Is Greatly Exaggerated](<trends/The Death of Central ML Is Greatly Exaggerated.md>) · `trends` · arize
   Argues that centralized ML teams remain important as organizations mature, covering organizational patterns for production ML work.
+- **2020-12-30** — [Machine Learning Tools Landscape v2 (+84 new tools)](<trends/Machine Learning Tools Landscape v2 (+84 new tools).md>) · `trends` · chip-huyen
+  Updates the MLOps tooling landscape to 284 tools and identifies deployment, monitoring, serving hardware, and regional infrastructure divergence as major production-ML trends.
 
 ## Also relevant (filed elsewhere)
 

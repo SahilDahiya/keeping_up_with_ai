@@ -1,6 +1,6 @@
 # infra-platform
 
-12 articles.
+16 articles.
 
 - **2026-07-01** — [Model subsidies are ending. What do you do now?](<cost/Model subsidies are ending. What do you do now.md>) · `cost` · arize
   Analyzes the end of subsidized LLM pricing and what agentic task success rates imply for real inference cost per correct result.
@@ -24,8 +24,16 @@
   Describes Arize integration with Microsoft Azure AI Model Catalog for LLM evaluation and observability in Azure-hosted development workflows.
 - **2023-09-19** — [Arize AI Debuts Integration with Anyscale Endpoints](<deployment/Arize AI Debuts Integration with Anyscale Endpoints.md>) · `deployment` · arize
   Announcement and integration walkthrough for using Arize with Anyscale Endpoints to monitor hosted open-model inference.
+- **2023-01-08** — [Self-serve feature platforms: architectures and APIs](<deployment/Self-serve feature platforms architectures and APIs.md>) · `deployment` · chip-huyen
+  Breaks down self-serve feature-platform architecture and APIs, covering feature definitions, pipelines, storage, discovery, and ergonomics for ML teams that need reusable production features.
+- **2022-08-03** — [Introduction to streaming for data scientists](<deployment/Introduction to streaming for data scientists.md>) · `deployment` · chip-huyen
+  Introduces stream processing for ML systems, comparing batch and streaming architectures, event-time semantics, joins, windows, and why streaming underpins real-time features.
+- **2021-09-13** — [Why data scientists shouldn’t need to know Kubernetes](<deployment/Why data scientists shouldn’t need to know Kubernetes.md>) · `deployment` · chip-huyen
+  Argues that data scientists should consume self-serve infrastructure abstractions rather than raw Kubernetes, outlining platform requirements for development, deployment, and operational ownership.
 - **2021-06-07** — [Arize Partners with UbiOps to Accelerate Model Building & Deployment](<deployment/Arize Partners with UbiOps to Accelerate Model Building & Deployment.md>) · `deployment` · arize
   Partnership announcement with UbiOps focused on connecting model building, deployment, and observability workflows.
+- **2020-06-22** — [What I learned from looking at 200 machine learning tools](<deployment/What I learned from looking at 200 machine learning tools.md>) · `deployment` · chip-huyen
+  Analyzes 200 machine learning tools and maps the MLOps stack across data pipelines, training, deployment, monitoring, labeling, and orchestration for production ML systems.
 
 ## Also relevant (filed elsewhere)
 
@@ -49,9 +57,21 @@
   Shows how Arize Phoenix, Langflow, and NVIDIA can support fast experimentation loops for improving AI application accuracy.
 - **2024-11-01** — [Arize, Vertex AI API: Evaluation Workflows to Accelerate Generative App Development and AI ROI](<../evals-observability/evaluation/Arize, Vertex AI API Evaluation Workflows to Accelerate Generative App Development and AI ROI.md>) · `evaluation` · arize
   Describes Arize and Vertex AI API evaluation workflows for accelerating generative application development and measuring AI ROI.
+- **2024-07-25** — [Building A Generative AI Platform](<../product-engineering/architecture/Building A Generative AI Platform.md>) · `architecture` · chip-huyen
+  Reference architecture for generative AI platforms covering context construction and RAG, guardrails, gateways and routers, caching, observability, orchestration, and tool/action layers.
+- **2024-03-14** — [What I learned from looking at 900 most popular open source AI tools](<../industry/trends/What I learned from looking at 900 most popular open source AI tools.md>) · `trends` · chip-huyen
+  Maps 900 open-source AI tools into infrastructure, model-development, and application-development layers, highlighting growth in agents, prompt engineering, vector search, evaluation, and inference tooling.
+- **2024-02-28** — [Predictive Human Preference: From Model Ranking to Model Routing](<../evals-observability/evaluation/Predictive Human Preference From Model Ranking to Model Routing.md>) · `evaluation` · chip-huyen
+  Describes predictive human preference for model ranking and model routing, using preference models and evaluations to choose among LLMs by quality, cost, and latency.
 - **2023-10-26** — [AI ROI: Guide To Observability Value Statistics](<../evals-observability/monitoring/AI ROI Guide To Observability Value Statistics.md>) · `monitoring` · arize
   Frames AI observability value through ROI statistics, linking monitoring and model performance visibility to business outcomes.
 - **2022-12-22** — [Hugging Face + Arize: Partnership and Code Example](<../evals-observability/monitoring/Hugging Face + Arize Partnership and Code Example.md>) · `monitoring` · arize
   Partnership and code example showing how to monitor Hugging Face model workflows with Arize observability.
 - **2022-12-16** — [Calculate Real-Time AI ROI With Custom Metrics](<../evals-observability/monitoring/Calculate Real-Time AI ROI With Custom Metrics.md>) · `monitoring` · arize
   Shows how custom metrics can connect AI observability data to real-time ROI analysis and business impact.
+- **2022-01-02** — [Real-time machine learning: challenges and solutions](<../product-engineering/architecture/Real-time machine learning challenges and solutions.md>) · `architecture` · chip-huyen
+  Deep dive on real-time ML systems covering online prediction, feature freshness, stream processing, monitoring, feedback delays, and the tradeoffs needed to serve adaptive models in production.
+- **2020-12-30** — [Machine Learning Tools Landscape v2 (+84 new tools)](<../industry/trends/Machine Learning Tools Landscape v2 (+84 new tools).md>) · `trends` · chip-huyen
+  Updates the MLOps tooling landscape to 284 tools and identifies deployment, monitoring, serving hardware, and regional infrastructure divergence as major production-ML trends.
+- **2020-12-27** — [Machine learning is going real-time](<../product-engineering/architecture/Machine learning is going real-time.md>) · `architecture` · chip-huyen
+  Explains the shift from batch prediction to online ML, covering streaming features, low-latency inference, fresh feedback loops, and the architectural constraints behind real-time applications.

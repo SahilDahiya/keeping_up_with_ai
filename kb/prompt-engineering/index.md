@@ -37,5 +37,7 @@
   Walks through a recipe-bot homework workflow from an AI evals course, showing how to design tests and iterate on an LLM application.
 - **2025-03-20** — [The "think" tool: Enabling Claude to stop and think](<../agents/tool-use/The think tool Enabling Claude to stop and think.md>) · `tool-use` · anthropic-engineering
   Adding a no-op 'think' tool gives Claude space for intermediate reasoning mid-task, significantly improving policy-heavy agentic benchmarks like tau-bench.
+- **2025-01-16** — [Common pitfalls when building generative AI applications](<../product-engineering/architecture/Common pitfalls when building generative AI applications.md>) · `architecture` · chip-huyen
+  Covers common generative-AI application pitfalls, including overusing LLMs, confusing product problems with model failures, premature framework complexity, and weak evaluation/product iteration.
 - **2024-09-11** — [Composable Interventions for Language Models](<../models/reasoning/Composable Interventions for Language Models.md>) · `reasoning` · arize
   Deep dive on composable interventions for language models, covering techniques for steering or modifying model behavior.

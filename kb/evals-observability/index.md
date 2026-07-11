@@ -1,6 +1,6 @@
 # evals-observability
 
-52 articles.
+54 articles.
 
 - **2026-07-07** — [Evals in CI: How to write your LLM evals as tests with Arize Phoenix](<testing/Evals in CI How to write your LLM evals as tests with Arize Phoenix.md>) · `testing` · arize
   Practical guide to writing LLM evals as CI tests with Arize Phoenix, including how to start with executable checks.
@@ -76,6 +76,8 @@
   Survey of instrumentation approaches for LLM applications, focused on tracing and observability setup choices.
 - **2024-05-13** — [Breaking Down EvalGen: Who Validates the Validators?](<evaluation/Breaking Down EvalGen Who Validates the Validators.md>) · `evaluation` · arize
   Deep dive on EvalGen and the problem of validating LLM-generated evaluators, including human review limitations and evaluator reliability.
+- **2024-02-28** — [Predictive Human Preference: From Model Ranking to Model Routing](<evaluation/Predictive Human Preference From Model Ranking to Model Routing.md>) · `evaluation` · chip-huyen
+  Describes predictive human preference for model ranking and model routing, using preference models and evaluations to choose among LLMs by quality, cost, and latency.
 - **2023-12-07** — [Calling All Functions: Benchmarking OpenAI Function Calling and Explanations](<evaluation/Calling All Functions Benchmarking OpenAI Function Calling and Explanations.md>) · `evaluation` · arize
   Benchmarks OpenAI function calling and explanation quality, using evaluations to understand third-party LLM tool behavior.
 - **2023-10-26** — [AI ROI: Guide To Observability Value Statistics](<monitoring/AI ROI Guide To Observability Value Statistics.md>) · `monitoring` · arize
@@ -90,6 +92,8 @@
   Shows how custom metrics can connect AI observability data to real-time ROI analysis and business impact.
 - **2022-09-30** — [Arize AI + OpenAI](<monitoring/Arize AI + OpenAI.md>) · `monitoring` · arize
   Introduces Arize support for monitoring OpenAI-powered applications, connecting hosted LLM usage with observability and performance analysis.
+- **2022-02-07** — [Data Distribution Shifts and Monitoring](<monitoring/Data Distribution Shifts and Monitoring.md>) · `monitoring` · chip-huyen
+  Taxonomy of covariate, label, and concept shifts with production monitoring strategies, data-quality checks, slice analysis, alerting tradeoffs, and examples of real-world ML failure modes.
 - **2022-01-05** — [Best Practices In ML Observability for Customer Lifetime Value (LTV) Models](<monitoring/Best Practices In ML Observability for Customer Lifetime Value (LTV) Models.md>) · `monitoring` · arize
   Best practices for monitoring customer lifetime value models in production using ML observability techniques.
 - **2021-12-18** — [Best Practices In ML Observability for Click-Through Rate Models](<monitoring/Best Practices In ML Observability for Click-Through Rate Models.md>) · `monitoring` · arize
@@ -141,6 +145,10 @@
   How Anthropic built Claude's Research feature on an orchestrator-worker multi-agent architecture, with prompting lessons, token economics, and eval methodology.
 - **2025-04-04** — [AI Benchmark Deep Dive: Gemini 2.5 and Humanity's Last Exam](<../models/benchmarks/AI Benchmark Deep Dive Gemini 2.5 and Humanity's Last Exam.md>) · `benchmarks` · arize
   Paper-reading recap on Gemini 2.5 and Humanity's Last Exam, focusing on benchmark interpretation and what modern evaluation results do and do not show.
+- **2025-01-16** — [Common pitfalls when building generative AI applications](<../product-engineering/architecture/Common pitfalls when building generative AI applications.md>) · `architecture` · chip-huyen
+  Covers common generative-AI application pitfalls, including overusing LLMs, confusing product problems with model failures, premature framework complexity, and weak evaluation/product iteration.
+- **2025-01-07** — [Agents](<../agents/planning/Agents.md>) · `planning` · chip-huyen
+  Framework for foundation-model agents covering environments, tools, planning, action selection, failure modes, and evaluation for multi-step agentic applications.
 - **2024-12-03** — [Building an AI Agent that Thrives in the Real World](<../agents/planning/Building an AI Agent that Thrives in the Real World.md>) · `planning` · arize
   Practical guidance for building production AI agents that survive real-world failures through monitoring, iteration, and reliability practices.
 - **2024-09-30** — [Arize AI + MongoDB: Leveraging Agent Evaluation and Memory to Build Robust Agentic Systems](<../agents/memory-context/Arize AI + MongoDB Leveraging Agent Evaluation and Memory to Build Robust Agentic Systems.md>) · `memory-context` · arize
@@ -157,9 +165,19 @@
   Focuses on evaluating the generation stage in RAG pipelines, complementing retrieval-focused evaluation.
 - **2024-01-01** — [Evaluate RAG with LLM Evals and Benchmarking](<../rag-retrieval/pipelines/Evaluate RAG with LLM Evals and Benchmarking.md>) · `pipelines` · arize
   Workshop recap on evaluating RAG systems with LLM evals and benchmarking.
+- **2023-08-16** — [Open challenges in LLM research](<../models/reasoning/Open challenges in LLM research.md>) · `reasoning` · chip-huyen
+  Surveys open LLM research problems around hallucination, context length, efficiency, multimodality, agents, evaluation, and post-training behavior that shape engineering constraints.
 - **2023-07-19** — [Streamline and Centralize AI Analytics With Snowflake and Arize AI](<../product-engineering/case-studies/Streamline and Centralize AI Analytics With Snowflake and Arize AI.md>) · `case-studies` · arize
   Describes using Snowflake with Arize to centralize AI analytics and observability data for model performance analysis.
+- **2023-05-02** — [RLHF: Reinforcement Learning from Human Feedback](<../models/fine-tuning/RLHF Reinforcement Learning from Human Feedback.md>) · `fine-tuning` · chip-huyen
+  Explains the RLHF pipeline from preference data through reward modeling and policy optimization, including why human feedback changes model behavior and where evaluation matters.
+- **2023-04-11** — [Building LLM applications for production](<../product-engineering/architecture/Building LLM applications for production.md>) · `architecture` · chip-huyen
+  Practical guide to production LLM applications covering task decomposition, retrieval, prompt construction, evaluation, monitoring, and latency/cost tradeoffs.
 - **2022-12-31** — [Measuring Embedding Drift](<../rag-retrieval/embeddings/Measuring Embedding Drift.md>) · `embeddings` · arize
   Explains embedding drift and how teams can measure changes in embedding distributions over time.
 - **2022-06-22** — [Deploying Models In An Evolving Housing Market](<../product-engineering/case-studies/Deploying Models In An Evolving Housing Market.md>) · `case-studies` · arize
   Case discussion on deploying models in a changing housing market and monitoring model behavior under shifting real-world conditions.
+- **2022-01-02** — [Real-time machine learning: challenges and solutions](<../product-engineering/architecture/Real-time machine learning challenges and solutions.md>) · `architecture` · chip-huyen
+  Deep dive on real-time ML systems covering online prediction, feature freshness, stream processing, monitoring, feedback delays, and the tradeoffs needed to serve adaptive models in production.
+- **2020-06-22** — [What I learned from looking at 200 machine learning tools](<../infra-platform/deployment/What I learned from looking at 200 machine learning tools.md>) · `deployment` · chip-huyen
+  Analyzes 200 machine learning tools and maps the MLOps stack across data pipelines, training, deployment, monitoring, labeling, and orchestration for production ML systems.

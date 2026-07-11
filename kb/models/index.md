@@ -1,6 +1,6 @@
 # models
 
-13 articles.
+17 articles.
 
 - **2025-12-15** — [Updates for developers building with voice | OpenAI Developers](<releases/Updates for developers building with voice OpenAI Developers.md>) · `releases` · openai-devs
   Release notes for four December 2025 audio model snapshots (gpt-4o-mini-transcribe, gpt-4o-mini-tts, gpt-realtime-mini, gpt-audio-mini): lower word-error rates on noisy audio, fewer hallucinations during silence, better tool calling in the minis, and broader Custom Voices access at unchanged pricing.
@@ -24,10 +24,18 @@
   Deep dive into Amazon Chronos for time-series modeling, including model behavior and evaluation context.
 - **2024-03-26** — [Anthropic Claude 3](<releases/Anthropic Claude 3.md>) · `releases` · arize
   Overview of Anthropic Claude 3 model releases and capabilities, including model comparisons and implications for LLM application builders.
+- **2024-01-16** — [Generation configurations: temperature, top-k, top-p, and test time compute](<reasoning/Generation configurations temperature, top-k, top-p, and test time compute.md>) · `reasoning` · chip-huyen
+  Explains decoding parameters such as temperature, top-k, top-p, and test-time compute, connecting generation configuration to reliability, diversity, latency, and cost.
+- **2023-10-10** — [Multimodality and Large Multimodal Models (LMMs)](<multimodal/Multimodality and Large Multimodal Models (LMMs).md>) · `multimodal` · chip-huyen
+  Explains large multimodal model architecture and training patterns, modality fusion, data challenges, and product capabilities unlocked by image, text, audio, and video models.
 - **2023-10-06** — [Explaining Grokking Through Circuit Efficiency](<reasoning/Explaining Grokking Through Circuit Efficiency.md>) · `reasoning` · arize
   Paper-reading deep dive on grokking and circuit efficiency as a way to understand model generalization.
+- **2023-08-16** — [Open challenges in LLM research](<reasoning/Open challenges in LLM research.md>) · `reasoning` · chip-huyen
+  Surveys open LLM research problems around hallucination, context length, efficiency, multimodality, agents, evaluation, and post-training behavior that shape engineering constraints.
 - **2023-06-01** — [Drag Your GAN: Interactive Point-Based Manipulation on the Generative Image Manifold](<multimodal/Drag Your GAN Interactive Point-Based Manipulation on the Generative Image Manifold.md>) · `multimodal` · arize
   Paper-reading deep dive on DragGAN and interactive point-based image manipulation in generative model latent spaces.
+- **2023-05-02** — [RLHF: Reinforcement Learning from Human Feedback](<fine-tuning/RLHF Reinforcement Learning from Human Feedback.md>) · `fine-tuning` · chip-huyen
+  Explains the RLHF pipeline from preference data through reward modeling and policy optimization, including why human feedback changes model behavior and where evaluation matters.
 
 ## Also relevant (filed elsewhere)
 
@@ -67,5 +75,7 @@
   Deep dive into Amazon Chronos for time-series modeling, including model behavior and evaluation context.
 - **2024-03-26** — [Anthropic Claude 3](<releases/Anthropic Claude 3.md>) · `releases` · arize
   Overview of Anthropic Claude 3 model releases and capabilities, including model comparisons and implications for LLM application builders.
+- **2024-02-28** — [Predictive Human Preference: From Model Ranking to Model Routing](<../evals-observability/evaluation/Predictive Human Preference From Model Ranking to Model Routing.md>) · `evaluation` · chip-huyen
+  Describes predictive human preference for model ranking and model routing, using preference models and evaluations to choose among LLMs by quality, cost, and latency.
 - **2022-09-30** — [Arize AI + OpenAI](<../evals-observability/monitoring/Arize AI + OpenAI.md>) · `monitoring` · arize
   Introduces Arize support for monitoring OpenAI-powered applications, connecting hosted LLM usage with observability and performance analysis.

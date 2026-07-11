@@ -1,6 +1,6 @@
 # product-engineering
 
-32 articles.
+37 articles.
 
 - **2026-07-08** — [The agent is the user now: lessons from the founder of WorkOS](<security/The agent is the user now lessons from the founder of WorkOS.md>) · `security` · arize
   Interview-driven discussion of agents as users, covering identity, permissions, memory, evals, and feedback loops as core production-agent infrastructure.
@@ -52,8 +52,12 @@
   Summary of a paper-reading session on watermarking generated text from large language models, including detection goals and implications for responsible deployment.
 - **2025-06-26** — [Claude Desktop Extensions: One-click MCP server installation for Claude Desktop](<ux-patterns/Claude Desktop Extensions One-click MCP server installation for Claude Desktop.md>) · `ux-patterns` · anthropic-engineering
   Introduces Desktop Extensions (.dxt): a packaging format for one-click installation of local MCP servers in Claude Desktop, with manifest spec and distribution details.
+- **2025-01-16** — [Common pitfalls when building generative AI applications](<architecture/Common pitfalls when building generative AI applications.md>) · `architecture` · chip-huyen
+  Covers common generative-AI application pitfalls, including overusing LLMs, confusing product problems with model failures, premature framework complexity, and weak evaluation/product iteration.
 - **2024-07-30** — [Developing Copilot: What AI Engineers Can Learn from Our Experience Building An AI Assistant](<case-studies/Developing Copilot What AI Engineers Can Learn from Our Experience Building An AI Assistant.md>) · `case-studies` · arize
   Arize Copilot case study covering lessons from building an AI assistant for data scientists and AI engineers.
+- **2024-07-25** — [Building A Generative AI Platform](<architecture/Building A Generative AI Platform.md>) · `architecture` · chip-huyen
+  Reference architecture for generative AI platforms covering context construction and RAG, guardrails, gateways and routers, caching, observability, orchestration, and tool/action layers.
 - **2024-02-21** — [What Does It Take To Pioneer Successful LLM Applications In Healthcare and the Life Sciences?](<case-studies/What Does It Take To Pioneer Successful LLM Applications In Healthcare and the Life Sciences.md>) · `case-studies` · arize
   Healthcare and life-sciences case discussion on what it takes to build successful LLM applications, including domain constraints and evaluation needs.
 - **2024-02-18** — [The Shift from Models to Compound AI Systems](<architecture/The Shift from Models to Compound AI Systems.md>) · `architecture` · arize
@@ -62,10 +66,16 @@
   Describes using Snowflake with Arize to centralize AI analytics and observability data for model performance analysis.
 - **2023-04-28** — [Lessons From Building an Early ChatGPT Plugin In Under 24 Hours](<case-studies/Lessons From Building an Early ChatGPT Plugin In Under 24 Hours.md>) · `case-studies` · arize
   Retrospective on building an early ChatGPT plugin quickly, including product workflow lessons and integration constraints from the plugin ecosystem.
+- **2023-04-11** — [Building LLM applications for production](<architecture/Building LLM applications for production.md>) · `architecture` · chip-huyen
+  Practical guide to production LLM applications covering task decomposition, retrieval, prompt construction, evaluation, monitoring, and latency/cost tradeoffs.
 - **2022-06-22** — [Deploying Models In An Evolving Housing Market](<case-studies/Deploying Models In An Evolving Housing Market.md>) · `case-studies` · arize
   Case discussion on deploying models in a changing housing market and monitoring model behavior under shifting real-world conditions.
+- **2022-01-02** — [Real-time machine learning: challenges and solutions](<architecture/Real-time machine learning challenges and solutions.md>) · `architecture` · chip-huyen
+  Deep dive on real-time ML systems covering online prediction, feature freshness, stream processing, monitoring, feedback delays, and the tradeoffs needed to serve adaptive models in production.
 - **2021-10-21** — [Rise of the ML Engineer: Chick-fil-A's Korri Jones](<case-studies/Rise of the ML Engineer Chick-fil-A's Korri Jones.md>) · `case-studies` · arize
   Interview with Chick-fil-A ML engineer Korri Jones on production ML work and applied model operations in a large business.
+- **2020-12-27** — [Machine learning is going real-time](<architecture/Machine learning is going real-time.md>) · `architecture` · chip-huyen
+  Explains the shift from batch prediction to online ML, covering streaming features, low-latency inference, fresh feedback loops, and the architectural constraints behind real-time applications.
 
 ## Also relevant (filed elsewhere)
 
@@ -99,11 +109,21 @@
   Anthropic's canonical guide to agent design patterns: when to use workflows (prompt chaining, routing, orchestrator-workers) versus autonomous agents, and why simple composable patterns beat frameworks.
 - **2024-12-04** — [AI Agent Workflows and Architectures Masterclass](<../agents/planning/AI Agent Workflows and Architectures Masterclass.md>) · `planning` · arize
   Introduces practical agent workflow and architecture patterns, emphasizing simple tool-calling loops and design choices over vague autonomy claims.
+- **2023-10-10** — [Multimodality and Large Multimodal Models (LMMs)](<../models/multimodal/Multimodality and Large Multimodal Models (LMMs).md>) · `multimodal` · chip-huyen
+  Explains large multimodal model architecture and training patterns, modality fusion, data challenges, and product capabilities unlocked by image, text, audio, and video models.
 - **2023-05-17** — [Evaluating Model Fairness](<../evals-observability/evaluation/Evaluating Model Fairness.md>) · `evaluation` · arize
   Explains model fairness evaluation and how to assess bias and fairness risks in production systems.
+- **2023-01-08** — [Self-serve feature platforms: architectures and APIs](<../infra-platform/deployment/Self-serve feature platforms architectures and APIs.md>) · `deployment` · chip-huyen
+  Breaks down self-serve feature-platform architecture and APIs, covering feature definitions, pipelines, storage, discovery, and ergonomics for ML teams that need reusable production features.
 - **2022-09-22** — [The Death of Central ML Is Greatly Exaggerated](<../industry/trends/The Death of Central ML Is Greatly Exaggerated.md>) · `trends` · arize
   Argues that centralized ML teams remain important as organizations mature, covering organizational patterns for production ML work.
+- **2022-08-03** — [Introduction to streaming for data scientists](<../infra-platform/deployment/Introduction to streaming for data scientists.md>) · `deployment` · chip-huyen
+  Introduces stream processing for ML systems, comparing batch and streaming architectures, event-time semantics, joins, windows, and why streaming underpins real-time features.
+- **2022-02-07** — [Data Distribution Shifts and Monitoring](<../evals-observability/monitoring/Data Distribution Shifts and Monitoring.md>) · `monitoring` · chip-huyen
+  Taxonomy of covariate, label, and concept shifts with production monitoring strategies, data-quality checks, slice analysis, alerting tradeoffs, and examples of real-world ML failure modes.
 - **2021-10-27** — [Best Practices In ML Observability for Monitoring, Mitigating and Preventing Fraud](<../evals-observability/monitoring/Best Practices In ML Observability for Monitoring, Mitigating and Preventing Fraud.md>) · `monitoring` · arize
   Best practices for fraud-model observability, covering monitoring, mitigation, and prevention workflows for production risk systems.
+- **2021-09-13** — [Why data scientists shouldn’t need to know Kubernetes](<../infra-platform/deployment/Why data scientists shouldn’t need to know Kubernetes.md>) · `deployment` · chip-huyen
+  Argues that data scientists should consume self-serve infrastructure abstractions rather than raw Kubernetes, outlining platform requirements for development, deployment, and operational ownership.
 - **2021-09-11** — [Overcoming AI's Transparency Paradox](<../evals-observability/monitoring/Overcoming AI's Transparency Paradox.md>) · `monitoring` · arize
   Discusses AI transparency and explainability challenges, positioning observability as a way to understand opaque model behavior in production.

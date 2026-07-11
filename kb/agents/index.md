@@ -1,6 +1,6 @@
 # agents
 
-33 articles.
+34 articles.
 
 - **2026-07-10** — [3 production patterns for AI agents and how to evaluate each one](<planning/3 production patterns for AI agents and how to evaluate each one.md>) · `planning` · arize
   Breaks production agents into local coding agents, in-app assistants, and operational agents, then maps each pattern to different harness, rollout, and evaluation needs.
@@ -58,6 +58,8 @@
   Adding a no-op 'think' tool gives Claude space for intermediate reasoning mid-task, significantly improving policy-heavy agentic benchmarks like tau-bench.
 - **2025-01-31** — [Best Practices for Building an Agent Router](<planning/Best Practices for Building an Agent Router.md>) · `planning` · arize
   Explains agent-router design as a decision layer that routes user requests to the right tools, services, or actions in larger agent systems.
+- **2025-01-07** — [Agents](<planning/Agents.md>) · `planning` · chip-huyen
+  Framework for foundation-model agents covering environments, tools, planning, action selection, failure modes, and evaluation for multi-step agentic applications.
 - **2024-12-19** — [Building Effective AI Agents](<planning/Building Effective AI Agents.md>) · `planning` · anthropic-engineering
   Anthropic's canonical guide to agent design patterns: when to use workflows (prompt chaining, routing, orchestrator-workers) versus autonomous agents, and why simple composable patterns beat frameworks.
 - **2024-12-04** — [AI Agent Workflows and Architectures Masterclass](<planning/AI Agent Workflows and Architectures Masterclass.md>) · `planning` · arize
@@ -145,6 +147,8 @@
   Describes using Arize with NVIDIA NeMo to automate LLM performance optimization and support self-improving agent workflows.
 - **2025-01-31** — [Best Practices for Building an Agent Router](<planning/Best Practices for Building an Agent Router.md>) · `planning` · arize
   Explains agent-router design as a decision layer that routes user requests to the right tools, services, or actions in larger agent systems.
+- **2025-01-07** — [Agents](<planning/Agents.md>) · `planning` · chip-huyen
+  Framework for foundation-model agents covering environments, tools, planning, action selection, failure modes, and evaluation for multi-step agentic applications.
 - **2025-01-06** — [Claude SWE-Bench Performance](<../models/benchmarks/Claude SWE-Bench Performance.md>) · `benchmarks` · anthropic-engineering
   How Anthropic scaffolded Claude 3.5 Sonnet to 49% on SWE-bench Verified with a minimal agent harness, detailing tool design and error analysis.
 - **2024-11-22** — [Agent-as-a-Judge: Evaluate Agents with Agents](<../evals-observability/evaluation/Agent-as-a-Judge Evaluate Agents with Agents.md>) · `evaluation` · arize
@@ -153,6 +157,8 @@
   Compares OpenAI Swarm with other multi-agent frameworks, highlighting orchestration patterns and framework tradeoffs.
 - **2024-07-30** — [Developing Copilot: What AI Engineers Can Learn from Our Experience Building An AI Assistant](<../product-engineering/case-studies/Developing Copilot What AI Engineers Can Learn from Our Experience Building An AI Assistant.md>) · `case-studies` · arize
   Arize Copilot case study covering lessons from building an AI assistant for data scientists and AI engineers.
+- **2024-03-14** — [What I learned from looking at 900 most popular open source AI tools](<../industry/trends/What I learned from looking at 900 most popular open source AI tools.md>) · `trends` · chip-huyen
+  Maps 900 open-source AI tools into infrastructure, model-development, and application-development layers, highlighting growth in agents, prompt engineering, vector search, evaluation, and inference tooling.
 - **2024-02-18** — [The Shift from Models to Compound AI Systems](<../product-engineering/architecture/The Shift from Models to Compound AI Systems.md>) · `architecture` · arize
   Explains the shift from standalone models to compound AI systems that combine models, retrieval, tools, orchestration, and evaluation into production applications.
 - **2023-12-07** — [Calling All Functions: Benchmarking OpenAI Function Calling and Explanations](<../evals-observability/evaluation/Calling All Functions Benchmarking OpenAI Function Calling and Explanations.md>) · `evaluation` · arize
