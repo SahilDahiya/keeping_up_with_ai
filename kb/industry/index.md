@@ -37,6 +37,10 @@
   Data report one year after Content Independence Day: over 50% of Internet traffic is now non-human, AI-training crawling grew from 22% to 52% of crawler requests (June 2026), heavily crawled categories lost up to 40% of human traffic, and publishers brace for 'Google Zero'.
 - **2026-04-21** — [Moving past bots vs. humans](<../product-engineering/security/Moving past bots vs. humans.md>) · `security` · cloudflare-ai
   Argues bot detection must move from 'bots vs. humans' to intent and behavior as AI agents fetch raw content without rendering pages: covers Web Bot Auth (HTTP message signatures) for crawler identification and private rate limiting for clients that no longer behave like browsers.
+- **2026-04-17** — [Agentic Engineering: How Swarms of AI Agents Are Redefining Software Engineering](<../agents/multi-agent/Agentic Engineering How Swarms of AI Agents Are Redefining Software Engineering.md>) · `multi-agent` · langchain
+  Discusses how swarms of agents change software engineering workflows, including orchestration, delegation, review, and human oversight.
+- **2025-12-09** — [Agent Engineering: A New Discipline](<../agents/planning/Agent Engineering A New Discipline.md>) · `planning` · langchain
+  Defines agent engineering as a discipline around designing, evaluating, observing, and iterating on production agents rather than treating them as prompt-only systems.
 - **2025-05-19** — [Arize AI Accelerates Enterprise AI Adoption On-Premises With NVIDIA](<../infra-platform/deployment/Arize AI Accelerates Enterprise AI Adoption On-Premises With NVIDIA.md>) · `deployment` · arize
   Announcement of Arize and NVIDIA collaboration for on-prem enterprise AI deployment and observability infrastructure.
 - **2024-10-15** — [Google's NotebookLM and the Future of AI-Generated Audio](<../models/multimodal/Google's NotebookLM and the Future of AI-Generated Audio.md>) · `multimodal` · arize
