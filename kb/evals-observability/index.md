@@ -1,6 +1,6 @@
 # evals-observability
 
-136 articles.
+138 articles.
 
 - **2026-07-07** — [Improving Agents is a Data Mining Problem](<monitoring/Improving Agents is a Data Mining Problem.md>) · `monitoring` · langchain
   Argues that improving agents is a data-mining problem over traces, failures, feedback, and recurring behavioral patterns.
@@ -180,6 +180,8 @@
   Five practical lessons for building AI evals, emphasizing dataset quality, scorer design, failure analysis, and iteration over dashboard theater.
 - **2025-07-14** — [Braintrust is not an eval framework](<monitoring/Braintrust is not an eval framework.md>) · `monitoring` · braintrust
   Argues that production AI quality needs a full observability and iteration system around evals, not only an isolated evaluation framework.
+- **2025-07-02** — [How we used evals and inference-time compute scaling to generate beautiful QR codes that actually work](<evaluation/How we used evals and inference-time compute scaling to generate beautiful QR codes that actually work.md>) · `evaluation` · modal
+  Case study using evals and inference-time compute scaling to generate QR codes that satisfy visual and functional constraints.
 - **2025-05-21** — [How we Built Scalable & Customizable Dashboards](<monitoring/How we Built Scalable & Customizable Dashboards.md>) · `monitoring` · langfuse
   Engineering writeup on building scalable customizable dashboards for observability data, covering query, rendering, and product architecture concerns.
 - **2025-04-10** — [Building and Deploying Observable AI Agents with Google Agent Framework and Arize](<tracing/Building and Deploying Observable AI Agents with Google Agent Framework and Arize.md>) · `tracing` · arize
@@ -216,6 +218,8 @@
   Explains how to create and validate synthetic datasets for LLM evaluation and experimentation workflows.
 - **2024-08-30** — [Evaluating an Image Classifier](<evaluation/Evaluating an Image Classifier.md>) · `evaluation` · arize
   Tutorial on evaluating an image classifier with Phoenix, using multimodal experiment and tracing workflows.
+- **2024-08-05** — [Beat GPT-4o at Python by searching with 100 dumb LLaMAs](<evaluation/Beat GPT-4o at Python by searching with 100 dumb LLaMAs.md>) · `evaluation` · modal
+  Explores using many small Llama runs and search to improve Python benchmark performance against GPT-4o baselines.
 - **2024-07-25** — [Different Ways to Instrument Your LLM Application](<tracing/Different Ways to Instrument Your LLM Application.md>) · `tracing` · arize
   Survey of instrumentation approaches for LLM applications, focused on tracing and observability setup choices.
 - **2024-06-26** — [Aligning LLM-as-a-Judge with Human Preferences](<evaluation/Aligning LLM-as-a-Judge with Human Preferences.md>) · `evaluation` · langchain

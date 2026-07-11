@@ -1,6 +1,6 @@
 # agents
 
-89 articles.
+95 articles.
 
 - **2026-07-10** — [OpenWiki Brains: Proactive Memory for AI Agents](<memory-context/OpenWiki Brains Proactive Memory for AI Agents.md>) · `memory-context` · langchain
   Introduces OpenWiki Brains as proactive wiki memory for agents, focused on persistent context and retrieval over project knowledge.
@@ -56,6 +56,8 @@
   Case study building a financial research agent for EU macroeconomic analysis with Deep Agents, LangSmith, and the You.com Finance Research API.
 - **2026-05-19** — [How We Built LangSmith Engine, Our Agent for Improving Agents](<planning/How We Built LangSmith Engine, Our Agent for Improving Agents.md>) · `planning` · langchain
   Explains LangSmith Engine, an agent for improving agents through trace analysis, feedback, evals, and iterative changes.
+- **2026-05-18** — [Introducing Claude Managed Agents with Modal Sandboxes](<computer-use/Introducing Claude Managed Agents with Modal Sandboxes.md>) · `computer-use` · modal
+  Shows how Claude managed agents can use Modal sandboxes for isolated execution, filesystem state, and scalable agent workloads.
 - **2026-05-13** — [LangSmith Sandboxes are Generally Available](<computer-use/LangSmith Sandboxes are Generally Available.md>) · `computer-use` · langchain
   Covers LangSmith Sandboxes for safely running agent code and tools in isolated execution environments.
 - **2026-05-12** — [Sierra Agent OS 2.0: from answers to memory and action](<memory-context/Sierra Agent OS 2.0 from answers to memory and action.md>) · `memory-context` · sierra
@@ -80,6 +82,10 @@
   Discusses how swarms of agents change software engineering workflows, including orchestration, delegation, review, and human oversight.
 - **2026-04-14** — [Building smarter AI agents: architecture, evals, and lessons from the field](<planning/Building smarter AI agents architecture, evals, and lessons from the field.md>) · `planning` · arize
   Summarizes field lessons on production agent architecture, evaluation, and reliability from AI Builders events.
+- **2026-04-14** — [Autoscaling Autoresearch: Give your agents elastic GPUs on Modal](<tool-use/Autoscaling Autoresearch Give your agents elastic GPUs on Modal.md>) · `tool-use` · modal
+  Shows how autoresearch agents can use elastic GPU compute for parallel experiments, background jobs, and scalable tool execution.
+- **2026-04-14** — [Building with Modal and the OpenAI Agents SDK](<tool-use/Building with Modal and the OpenAI Agents SDK.md>) · `tool-use` · modal
+  Guide to running OpenAI Agents SDK workflows on Modal, including tool execution, deployment, and scalable background compute.
 - **2026-04-03** — [Braintrust CLI and MCP](<tool-use/Braintrust CLI and MCP.md>) · `tool-use` · braintrust
   Covers Braintrust CLI and MCP support for connecting agent tools, local workflows, and observability/eval data into AI development loops.
 - **2026-03-24** — [Harness design for long-running application development](<planning/Harness design for long-running application development.md>) · `planning` · anthropic-engineering
@@ -98,6 +104,8 @@
   Introduces Alyx 2.0 as an agent that plans over observability workflows, covering product design lessons from building a more capable AI analyst.
 - **2026-02-23** — [Run long horizon tasks with Codex | OpenAI Developers](<planning/Run long horizon tasks with Codex OpenAI Developers.md>) · `planning` · openai-devs
   Stress test of long-horizon agentic coding: GPT-5.3-Codex at Extra High reasoning ran ~25 hours uninterrupted, consuming ~13M tokens and generating ~30k lines to build a design tool from a blank repo, framed by METR's ~7-month doubling time for agent task horizons.
+- **2026-02-18** — [How Ramp built a full context background coding agent on Modal](<computer-use/How Ramp built a full context background coding agent on Modal.md>) · `computer-use` · modal
+  Case study of a background coding agent architecture that gives agents full project context through remote sandboxes.
 - **2026-02-13** — [On Agent Frameworks and Agent Observability](<planning/On Agent Frameworks and Agent Observability.md>) · `planning` · langchain
   Connects agent-framework design with observability requirements, arguing that runtime structure determines what teams can debug and evaluate.
 - **2026-02-11** — [CUGA Agent: From Benchmarks to Business Impact of IBM's Generalist Agent](<planning/CUGA Agent From Benchmarks to Business Impact of IBM's Generalist Agent.md>) · `planning` · arize
@@ -128,6 +136,8 @@
   Argues agents should write code that calls MCP tools rather than invoking tools directly, cutting token usage and enabling control flow over intermediate results.
 - **2025-10-16** — [Equipping agents for the real world with Agent Skills](<tool-use/Equipping agents for the real world with Agent Skills.md>) · `tool-use` · anthropic-engineering
   Introduces Agent Skills: folder-based packages of instructions, scripts, and resources that agents load progressively to gain domain expertise on demand.
+- **2025-09-22** — [Build an AI coding platform that scales to millions of monthly sessions](<computer-use/Build an AI coding platform that scales to millions of monthly sessions.md>) · `computer-use` · modal
+  Describes architecture concerns for AI coding platforms that need to scale sandboxed coding sessions to large user volumes.
 - **2025-09-22** — [Why we built the Responses API | OpenAI Developers](<tool-use/Why we built the Responses API OpenAI Developers.md>) · `tool-use` · openai-devs
   OpenAI's design rationale for the Responses API as an agentic loop unifying Chat Completions and Assistants: it preserves reasoning state across turns (+5% on TAUBench, better cache utilization) and emits multiple output items — tool calls, structured outputs, intermediate steps — not just the final message.
 - **2025-09-11** — [How to turn Claude Code into a domain specific coding agent](<tool-use/How to turn Claude Code into a domain specific coding agent.md>) · `tool-use` · langchain
@@ -144,6 +154,8 @@
   Frames the canonical agent architecture as a while loop around model calls, tool use, state updates, and termination criteria for controllable agent behavior.
 - **2025-08-06** — [Introducing Open SWE: An Open-Source Asynchronous Coding Agent](<tool-use/Introducing Open SWE An Open-Source Asynchronous Coding Agent.md>) · `tool-use` · langchain
   Introduces Open SWE as an open-source asynchronous coding agent and discusses its architecture for long-running coding tasks.
+- **2025-07-24** — [What is an AI code sandbox?](<computer-use/What is an AI code sandbox.md>) · `computer-use` · modal
+  Explains AI code sandboxes as isolated execution environments for coding agents, including safety and state considerations.
 - **2025-06-16** — [How and when to build multi-agent systems](<multi-agent/How and when to build multi-agent systems.md>) · `multi-agent` · langchain
   Guidance on when multi-agent systems are warranted and how to design agent roles, coordination, and boundaries.
 - **2025-06-13** — [How we built our multi-agent research system](<multi-agent/How we built our multi-agent research system.md>) · `multi-agent` · anthropic-engineering
@@ -213,6 +225,8 @@
   Engineering design of OpenAI's Secure MCP Tunnel: a customer-run open-source client beside a private MCP server opens outbound-only HTTPS to OpenAI, forwarding MCP requests (including streaming and auth flows) so ChatGPT/Codex can reach the server without public endpoints, VPNs, or third-party tunnels.
 - **2026-06-19** — [Temporary Cloudflare Accounts for AI agents](<../infra-platform/deployment/Temporary Cloudflare Accounts for AI agents.md>) · `deployment` · cloudflare-ai
   Temporary Cloudflare Accounts let agents run 'wrangler deploy --temporary' to ship a Worker with zero signup — a 60-minute claimable account with auto-provisioned API token — with Wrangler itself prompting agents about the flag, removing human-built OAuth/dashboard friction from the deploy loop.
+- **2026-06-19** — [Unpacking sandbox startup latency: why started is not ready](<../infra-platform/deployment/Unpacking sandbox startup latency why started is not ready.md>) · `deployment` · modal
+  Breaks down sandbox startup latency and why ready-state semantics matter for agent and remote-execution workflows.
 - **2026-06-18** — [Build your own vulnerability harness](<../product-engineering/security/Build your own vulnerability harness.md>) · `security` · cloudflare-ai
   How Cloudflare grew a ~450-line security-audit skill into a model-agnostic, fleet-wide vulnerability-scanning harness: parallel recon agents, per-attack-class Hunter agents, adversarial validators, schema-checked findings.json, and independent re-verification, with different models cross-testing discovery vs. validation.
 - **2026-06-17** — [Bringing more agent harnesses and frameworks to Cloudflare, starting with Flue](<../infra-platform/deployment/Bringing more agent harnesses and frameworks to Cloudflare, starting with Flue.md>) · `deployment` · cloudflare-ai
@@ -321,6 +335,8 @@
   Explains how to evaluate AI agent skills, including task design, scoring, trace inspection, and regression testing for reusable agent capabilities.
 - **2026-02-26** — [Agent Observability: How to Monitor and Evaluate LLM Agents in Production](<../evals-observability/monitoring/Agent Observability How to Monitor and Evaluate LLM Agents in Production.md>) · `monitoring` · langchain
   Guide to monitoring and evaluating LLM agents in production, including traces, feedback, evals, and alerting signals.
+- **2026-02-23** — [Directory Snapshots: Resumable project state for Sandboxes](<../infra-platform/deployment/Directory Snapshots Resumable project state for Sandboxes.md>) · `deployment` · modal
+  Introduces directory snapshots for sandbox state, enabling resumable project files across agent and remote-execution sessions.
 - **2026-02-20** — [AI Agent Observability, Tracing & Evaluation with Langfuse](<../evals-observability/tracing/AI Agent Observability, Tracing & Evaluation with Langfuse.md>) · `tracing` · langfuse
   Guide to observability for AI agents, covering traces, spans, tool calls, evaluations, and debugging workflows for agentic systems.
 - **2026-02-17** — [Closing the Loop: Coding Agents, Telemetry, and the Path to Self-Improving Software](<../evals-observability/tracing/Closing the Loop Coding Agents, Telemetry, and the Path to Self-Improving Software.md>) · `tracing` · arize
@@ -355,6 +371,8 @@
   Case study of building a custom annotation UI for eval workflows with AI-assisted coding, highlighting review ergonomics and human feedback collection.
 - **2025-11-20** — [CLAUDE.md: Best Practices Learned from Optimizing Claude Code with Prompt Learning](<../prompt-engineering/context-engineering/CLAUDE.md Best Practices Learned from Optimizing Claude Code with Prompt Learning.md>) · `context-engineering` · arize
   Extracts CLAUDE.md best practices from prompt-learning experiments that optimized Claude Code behavior through repository instructions.
+- **2025-11-20** — [Agents need good developer experience too](<../product-engineering/architecture/Agents need good developer experience too.md>) · `architecture` · modal
+  Argues that agent systems need strong developer experience, covering observability, iteration loops, deployment ergonomics, and tool surfaces.
 - **2025-11-18** — [Evaluating and Improving AI Agents at Scale with Microsoft Foundry](<../evals-observability/evaluation/Evaluating and Improving AI Agents at Scale with Microsoft Foundry.md>) · `evaluation` · arize
   Guide to evaluating and improving production AI agents at scale with Microsoft Foundry and Arize workflows.
 - **2025-11-06** — [Systematic Evaluation of AI Agents](<../evals-observability/evaluation/Systematic Evaluation of AI Agents.md>) · `evaluation` · langfuse

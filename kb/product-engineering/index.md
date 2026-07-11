@@ -1,6 +1,6 @@
 # product-engineering
 
-80 articles.
+83 articles.
 
 - **2026-07-10** — [AI-pilling our company: lessons learned](<case-studies/AI-pilling our company lessons learned.md>) · `case-studies` · sierra
   Internal adoption case study on spreading AI workflows through a company, including practical lessons for using agents and tools in day-to-day work.
@@ -82,6 +82,8 @@
   One-year retrospective on the Responses API told through five developer stories, including Raindrop AI's production agent-monitoring platform (failure detection and debugging on GPT-5.2 via the Vercel AI SDK) built on its hosted-tool and background-analysis primitives.
 - **2026-03-09** — [How we built LangChain’s GTM Agent](<case-studies/How we built LangChain’s GTM Agent.md>) · `case-studies` · langchain
   Case study of building LangChain's GTM agent, covering workflow design, tool use, and production iteration.
+- **2026-02-25** — [Accelerating AI research that accelerates AI research](<case-studies/Accelerating AI research that accelerates AI research.md>) · `case-studies` · modal
+  Case study on using elastic compute to accelerate AI research workflows, including experiment throughput and infrastructure offload.
 - **2026-02-18** — [monday Service + LangSmith: Building a Code-First Evaluation Strategy from Day 1](<case-studies/monday Service + LangSmith Building a Code-First Evaluation Strategy from Day 1.md>) · `case-studies` · langchain
   monday Service case study on building a code-first evaluation strategy for AI product quality from day one.
 - **2026-02-04** — [15 lessons learned building ChatGPT Apps | OpenAI Developers](<ux-patterns/15 lessons learned building ChatGPT Apps OpenAI Developers.md>) · `ux-patterns` · openai-devs
@@ -110,6 +112,8 @@
   Case study of building a custom annotation UI for eval workflows with AI-assisted coding, highlighting review ergonomics and human feedback collection.
 - **2025-11-24** — [What makes a great ChatGPT app | OpenAI Developers](<ux-patterns/What makes a great ChatGPT app OpenAI Developers.md>) · `ux-patterns` · openai-devs
   Design guidance for ChatGPT Apps: instead of porting an existing app's screens and navigation, expose a few narrow 'specific powers' the model can invoke mid-conversation, design for conversational entry points and discovery, and measure whether the app actually improves conversations.
+- **2025-11-20** — [Agents need good developer experience too](<architecture/Agents need good developer experience too.md>) · `architecture` · modal
+  Argues that agent systems need strong developer experience, covering observability, iteration loops, deployment ergonomics, and tool surfaces.
 - **2025-10-27** — [Using Codex for education at Dagster Labs | OpenAI Developers](<case-studies/Using Codex for education at Dagster Labs OpenAI Developers.md>) · `case-studies` · openai-devs
   Dagster Labs describes using Codex to accelerate documentation work — writing docs, translating content across mediums, and measuring doc completeness — and finds a well-structured CONTRIBUTING.md doubles as high-leverage scaffolding for the agent.
 - **2025-10-20** — [Making Claude Code more secure and autonomous with sandboxing](<security/Making Claude Code more secure and autonomous with sandboxing.md>) · `security` · anthropic-engineering
@@ -138,6 +142,8 @@
   Reference architecture for generative AI platforms covering context construction and RAG, guardrails, gateways and routers, caching, observability, orchestration, and tool/action layers.
 - **2024-06-19** — [How Factory used LangSmith to automate their feedback loop and improve iteration speed by 2x](<case-studies/How Factory used LangSmith to automate their feedback loop and improve iteration speed by 2x.md>) · `case-studies` · langchain
   Factory case study on automating feedback loops with LangSmith to improve iteration speed and production agent quality.
+- **2024-06-06** — [How to catch crypto miners using syscall signatures](<security/How to catch crypto miners using syscall signatures.md>) · `security` · modal
+  Explains detecting abusive GPU workloads with syscall signatures, a useful pattern for securing shared AI infrastructure.
 - **2024-05-14** — [Monitoring LLM Security & Reducing LLM Risks](<security/Monitoring LLM Security & Reducing LLM Risks.md>) · `security` · langfuse
   Covers monitoring patterns for LLM security risks such as prompt injection, data leakage, and unsafe outputs, with observability as part of the mitigation loop.
 - **2024-05-06** — [AI development loops](<architecture/AI development loops.md>) · `architecture` · braintrust
@@ -231,12 +237,16 @@
   Practical guide to automated testing for LLM applications, covering test cases, regression checks, CI-style workflows, and quality gates.
 - **2025-09-22** — [Why we built the Responses API | OpenAI Developers](<../agents/tool-use/Why we built the Responses API OpenAI Developers.md>) · `tool-use` · openai-devs
   OpenAI's design rationale for the Responses API as an agentic loop unifying Chat Completions and Assistants: it preserves reasoning state across turns (+5% on TAUBench, better cache utilization) and emits multiple output items — tool calls, structured outputs, intermediate steps — not just the final message.
+- **2025-09-16** — [Inside Modal Notebooks: How we built a cloud GPU notebook that boots in seconds](<../infra-platform/deployment/Inside Modal Notebooks How we built a cloud GPU notebook that boots in seconds.md>) · `deployment` · modal
+  Engineering writeup on cloud GPU notebooks that boot quickly, covering startup paths, state, and execution isolation.
 - **2025-09-03** — [A/B testing can't keep up with AI](<../evals-observability/evaluation/AB testing can't keep up with AI.md>) · `evaluation` · braintrust
   Explains why traditional A/B testing is too slow for AI products and argues for eval-driven experimentation loops that compare model, prompt, and product changes before rollout.
 - **2025-08-28** — [Claude Code vs Cursor: A Power-User’s Playbook](<../agents/tool-use/Claude Code vs Cursor A Power-User’s Playbook.md>) · `tool-use` · arize
   Compares Claude Code and Cursor from a power-user workflow perspective, focusing on coding-agent interfaces and usage patterns.
 - **2025-08-06** — [Introducing Open SWE: An Open-Source Asynchronous Coding Agent](<../agents/tool-use/Introducing Open SWE An Open-Source Asynchronous Coding Agent.md>) · `tool-use` · langchain
   Introduces Open SWE as an open-source asynchronous coding agent and discusses its architecture for long-running coding tasks.
+- **2025-07-24** — [What is an AI code sandbox?](<../agents/computer-use/What is an AI code sandbox.md>) · `computer-use` · modal
+  Explains AI code sandboxes as isolated execution environments for coding agents, including safety and state considerations.
 - **2025-04-20** — [How to think about agent frameworks](<../agents/planning/How to think about agent frameworks.md>) · `planning` · langchain
   Framework for evaluating agent frameworks by abstraction level, control, durability, observability, and fit to production workflows.
 - **2025-01-22** — [Building Audio Support with OpenAI: Insights from our Journey](<../models/multimodal/Building Audio Support with OpenAI Insights from our Journey.md>) · `multimodal` · arize
@@ -247,6 +257,8 @@
   Anthropic's canonical guide to agent design patterns: when to use workflows (prompt chaining, routing, orchestrator-workers) versus autonomous agents, and why simple composable patterns beat frameworks.
 - **2024-12-04** — [AI Agent Workflows and Architectures Masterclass](<../agents/planning/AI Agent Workflows and Architectures Masterclass.md>) · `planning` · arize
   Introduces practical agent workflow and architecture patterns, emphasizing simple tool-calling loops and design choices over vague autonomy claims.
+- **2024-12-02** — [WireGuard at Modal: Static IPs for serverless containers](<../infra-platform/deployment/WireGuard at Modal Static IPs for serverless containers.md>) · `deployment` · modal
+  Explains static IP support for serverless containers using WireGuard, relevant to secure networked AI deployments.
 - **2024-11-04** — [Building serverless apps with the OpenAI Realtime API](<../models/multimodal/Building serverless apps with the OpenAI Realtime API.md>) · `multimodal` · braintrust
   Guide to building serverless apps with the OpenAI Realtime API, focusing on real-time voice interaction architecture and deployment patterns.
 - **2024-09-23** — [Should you use an LLM Proxy to Build your Application?](<../infra-platform/deployment/Should you use an LLM Proxy to Build your Application.md>) · `deployment` · langfuse
@@ -257,6 +269,8 @@
   Explains eval feedback loops where production observations and human review continuously improve prompts, datasets, and model behavior.
 - **2024-03-24** — [Trace complex LLM applications with the Langfuse decorator (Python)](<../evals-observability/tracing/Trace complex LLM applications with the Langfuse decorator (Python).md>) · `tracing` · langfuse
   Shows how to trace complex Python LLM applications with the Langfuse decorator, including nested calls, metadata, and observability patterns for multi-step workflows.
+- **2024-03-14** — [Lambda on hard mode: Inside Modal's web infrastructure](<../infra-platform/deployment/Lambda on hard mode Inside Modal's web infrastructure.md>) · `deployment` · modal
+  Deep dive into Modal web infrastructure, including serverless HTTP routing, isolation, and platform architecture.
 - **2024-03-11** — [Iterating Towards LLM Reliability with Evaluation Driven Development](<../evals-observability/testing/Iterating Towards LLM Reliability with Evaluation Driven Development.md>) · `testing` · langchain
   Explains evaluation-driven development for LLM reliability using regression tests, examples, and iterative quality gates.
 - **2023-11-27** — [Open sourcing the AI proxy](<../infra-platform/deployment/Open sourcing the AI proxy.md>) · `deployment` · braintrust

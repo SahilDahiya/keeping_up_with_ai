@@ -1,13 +1,17 @@
 # infra-platform
 
-32 articles.
+44 articles.
 
+- **2026-07-06** — [How to price serverless GPUs](<cost/How to price serverless GPUs.md>) · `cost` · modal
+  Explains serverless GPU pricing from utilization, scheduling, and workload-shape constraints rather than simple hourly rates.
 - **2026-07-02** — [Your coding agent bill doubled. Here’s how to fix it.](<cost/Your coding agent bill doubled. Here’s how to fix it.md>) · `cost` · langchain
   Practical guide to reducing coding-agent spend through model choice, caching, harness tuning, and workflow design.
 - **2026-07-01** — [Model subsidies are ending. What do you do now?](<cost/Model subsidies are ending. What do you do now.md>) · `cost` · arize
   Analyzes the end of subsidized LLM pricing and what agentic task success rates imply for real inference cost per correct result.
 - **2026-06-19** — [Temporary Cloudflare Accounts for AI agents](<deployment/Temporary Cloudflare Accounts for AI agents.md>) · `deployment` · cloudflare-ai
   Temporary Cloudflare Accounts let agents run 'wrangler deploy --temporary' to ship a Worker with zero signup — a 60-minute claimable account with auto-provisioned API token — with Wrangler itself prompting agents about the flag, removing human-built OAuth/dashboard friction from the deploy loop.
+- **2026-06-19** — [Unpacking sandbox startup latency: why started is not ready](<deployment/Unpacking sandbox startup latency why started is not ready.md>) · `deployment` · modal
+  Breaks down sandbox startup latency and why ready-state semantics matter for agent and remote-execution workflows.
 - **2026-06-17** — [How to test agent cost-efficiency with Braintrust](<cost/How to test agent cost-efficiency with Braintrust.md>) · `cost` · braintrust
   Explains how to test agent cost-efficiency by measuring task success against token, model, and tool-use costs.
 - **2026-06-17** — [Bringing more agent harnesses and frameworks to Cloudflare, starting with Flue](<deployment/Bringing more agent harnesses and frameworks to Cloudflare, starting with Flue.md>) · `deployment` · cloudflare-ai
@@ -26,30 +30,50 @@
   Introduces SmithDB as a data layer for agent observability, optimized for storing and querying trace-heavy workloads.
 - **2026-05-12** — [Load testing: how Sierra scales for surges](<deployment/Load testing how Sierra scales for surges.md>) · `deployment` · sierra
   Explains load testing for agent systems so conversation serving can scale through traffic surges without quality or latency collapse.
+- **2026-05-12** — [How we achieved truly serverless GPUs](<gpu-clusters/How we achieved truly serverless GPUs.md>) · `gpu-clusters` · modal
+  Explains Modal’s serverless GPU architecture, including scheduling, cold starts, isolation, and utilization constraints.
 - **2026-03-16** — [Arize AX Adds Native Support for NVIDIA NIM as AI Model Provider](<deployment/Arize AX Adds Native Support for NVIDIA NIM as AI Model Provider.md>) · `deployment` · arize
   Announces native NVIDIA NIM support in Arize AX so teams can connect hosted model providers into evaluation and observability workflows.
 - **2026-03-10** — [Simplifying Langfuse for Scale](<deployment/Simplifying Langfuse for Scale.md>) · `deployment` · langfuse
   Architecture case study on simplifying Langfuse for scale, covering operational complexity, storage and compute boundaries, and reliability improvements.
+- **2026-02-23** — [Directory Snapshots: Resumable project state for Sandboxes](<deployment/Directory Snapshots Resumable project state for Sandboxes.md>) · `deployment` · modal
+  Introduces directory snapshots for sandbox state, enabling resumable project files across agent and remote-execution sessions.
+- **2025-12-28** — [Keeping 20,000 GPUs healthy](<gpu-clusters/Keeping 20,000 GPUs healthy.md>) · `gpu-clusters` · modal
+  Describes operational practices for keeping a large GPU fleet healthy, including failure detection and reliability management.
 - **2025-11-20** — [Incident Report for Nov 18, 2025](<deployment/Incident Report for Nov 18, 2025.md>) · `deployment` · langfuse
   Incident report with reliability lessons for production observability infrastructure, including failure analysis and operational follow-up.
 - **2025-09-17** — [adb Benchmarks](<deployment/adb Benchmarks.md>) · `deployment` · arize
   Benchmarks Arize database performance at the storage and application level for AI observability workloads powered by high-volume traces and model data.
+- **2025-09-16** — [Inside Modal Notebooks: How we built a cloud GPU notebook that boots in seconds](<deployment/Inside Modal Notebooks How we built a cloud GPU notebook that boots in seconds.md>) · `deployment` · modal
+  Engineering writeup on cloud GPU notebooks that boot quickly, covering startup paths, state, and execution isolation.
 - **2025-08-11** — [adb Database: Realtime Ingestion At Scale](<deployment/adb Database Realtime Ingestion At Scale.md>) · `deployment` · arize
   Describes realtime ingestion design for Arize database, including scale requirements for AI observability data and production trace ingestion.
+- **2025-07-16** — [Dollars per token considered harmful](<cost/Dollars per token considered harmful.md>) · `cost` · modal
+  Critiques dollars-per-token as an inference cost metric and explains why workload shape, latency, and utilization matter more.
 - **2025-05-19** — [Arize AI Accelerates Enterprise AI Adoption On-Premises With NVIDIA](<deployment/Arize AI Accelerates Enterprise AI Adoption On-Premises With NVIDIA.md>) · `deployment` · arize
   Announcement of Arize and NVIDIA collaboration for on-prem enterprise AI deployment and observability infrastructure.
+- **2025-05-07** — [Linear programming for fun and profit](<cost/Linear programming for fun and profit.md>) · `cost` · modal
+  Shows how linear programming can allocate compute resources under constraints, useful for GPU scheduling and cost control.
 - **2025-03-13** — [Hugging Face and Langfuse: 5 Ways to use them Together](<deployment/Hugging Face and Langfuse 5 Ways to use them Together.md>) · `deployment` · langfuse
   Shows ways to combine Hugging Face workflows with Langfuse for model experimentation, tracing, evaluation, and deployment feedback loops.
 - **2025-03-03** — [Brainstore: the database designed for the AI engineering era](<deployment/Brainstore the database designed for the AI engineering era.md>) · `deployment` · braintrust
   Introduces Brainstore as a database for AI engineering workloads, optimized for traces, evals, logs, and large-scale observability queries.
+- **2025-01-28** — [Memory snapshots: Checkpoint and restore for sub-second startup](<deployment/Memory snapshots Checkpoint and restore for sub-second startup.md>) · `deployment` · modal
+  Explains memory snapshots as checkpoint/restore infrastructure for faster startup in serverless AI workloads.
 - **2025-01-08** — [Our approach to hybrid deployment](<deployment/Our approach to hybrid deployment.md>) · `deployment` · braintrust
   Describes a hybrid deployment approach for AI observability, balancing managed services with customer-controlled data and infrastructure boundaries.
+- **2024-12-02** — [WireGuard at Modal: Static IPs for serverless containers](<deployment/WireGuard at Modal Static IPs for serverless containers.md>) · `deployment` · modal
+  Explains static IP support for serverless containers using WireGuard, relevant to secure networked AI deployments.
 - **2024-11-17** — [From Zero to Scale: Langfuse's Infrastructure Evolution](<deployment/From Zero to Scale Langfuse's Infrastructure Evolution.md>) · `deployment` · langfuse
   Case study of Langfuse infrastructure evolution from early product to scale, including data architecture, observability workloads, and operational tradeoffs.
 - **2024-09-23** — [Should you use an LLM Proxy to Build your Application?](<deployment/Should you use an LLM Proxy to Build your Application.md>) · `deployment` · langfuse
   Explains the LLM proxy pattern for AI applications, including provider abstraction, centralized logging, key management, routing, and governance tradeoffs.
+- **2024-06-20** — [Run GPU jobs from Airflow with Modal](<deployment/Run GPU jobs from Airflow with Modal.md>) · `deployment` · modal
+  Shows how to run GPU jobs from Airflow, connecting existing orchestration systems to elastic AI compute.
 - **2024-05-21** — [Arize AI Brings LLM Evaluation, Observability To Microsoft Azure AI Model Catalog](<deployment/Arize AI Brings LLM Evaluation, Observability To Microsoft Azure AI Model Catalog.md>) · `deployment` · arize
   Describes Arize integration with Microsoft Azure AI Model Catalog for LLM evaluation and observability in Azure-hosted development workflows.
+- **2024-03-14** — [Lambda on hard mode: Inside Modal's web infrastructure](<deployment/Lambda on hard mode Inside Modal's web infrastructure.md>) · `deployment` · modal
+  Deep dive into Modal web infrastructure, including serverless HTTP routing, isolation, and platform architecture.
 - **2023-11-27** — [Open sourcing the AI proxy](<deployment/Open sourcing the AI proxy.md>) · `deployment` · braintrust
   Open-source AI proxy notes focused on provider routing, logging, credentials, access control, and observability for model calls.
 - **2023-11-20** — [AI proxy: fostering a more open ecosystem](<deployment/AI proxy fostering a more open ecosystem.md>) · `deployment` · braintrust
@@ -83,8 +107,12 @@
   Explains using open-source models to reduce inference cost without sacrificing quality, emphasizing eval-driven model selection and serving tradeoffs.
 - **2026-06-26** — [Prompt Caching with Deep Agents](<../prompt-engineering/context-engineering/Prompt Caching with Deep Agents.md>) · `context-engineering` · langchain
   Explains prompt caching for Deep Agents and how cache-aware context design reduces latency and cost for repeated agent work.
+- **2026-06-25** — [Proxying inference requests in 6ms with Pingora, Envoy, and Spanner](<../inference/serving/Proxying inference requests in 6ms with Pingora, Envoy, and Spanner.md>) · `serving` · modal
+  Explains low-latency inference proxying with Pingora, Envoy, and Spanner, including request-routing architecture.
 - **2026-06-25** — [How we built SmithDB’s inverted index for full-text search](<../rag-retrieval/search/How we built SmithDB’s inverted index for full-text search.md>) · `search` · langchain
   Deep dive on constructing and querying SmithDB's inverted index for full-text search over observability data.
+- **2026-06-22** — [Introducing Modal Auto Endpoints: Optimized inference you actually own](<../inference/serving/Introducing Modal Auto Endpoints Optimized inference you actually own.md>) · `serving` · modal
+  Describes auto endpoints for owned inference deployments, including optimized serving configuration and operational control.
 - **2026-06-22** — [Designing the runtime for Langfuse code evaluators](<../evals-observability/testing/Designing the runtime for Langfuse code evaluators.md>) · `testing` · langfuse
   Design deep dive on the runtime for Langfuse code evaluators, covering execution isolation, evaluator lifecycle, and safe scalable scoring infrastructure.
 - **2026-06-16** — [How to use Braintrust with any framework or provider](<../evals-observability/tracing/How to use Braintrust with any framework or provider.md>) · `tracing` · braintrust
@@ -103,6 +131,12 @@
   Architecture deep dive on continuous trace intelligence at scale, including how production traces are clustered and surfaced for analysis.
 - **2026-06-04** — [Model Neutrality: Why Avoiding AI Vendor Lock-In Matters](<deployment/Model Neutrality Why Avoiding AI Vendor Lock-In Matters.md>) · `deployment` · langchain
   Explains model neutrality and why avoiding AI vendor lock-in matters for provider routing, cost control, and long-term architecture.
+- **2026-05-28** — [Reinforcement learning is an infrastructure problem](<../models/fine-tuning/Reinforcement learning is an infrastructure problem.md>) · `fine-tuning` · modal
+  Argues that reinforcement learning progress depends heavily on infrastructure for scheduling, iteration, and scalable experiments.
+- **2026-05-19** — [Scaling reinforcement learning at Applied Compute](<../models/fine-tuning/Scaling reinforcement learning at Applied Compute.md>) · `fine-tuning` · modal
+  Case study on scaling reinforcement learning workloads with elastic GPU infrastructure and faster experiment iteration.
+- **2026-05-18** — [Introducing Claude Managed Agents with Modal Sandboxes](<../agents/computer-use/Introducing Claude Managed Agents with Modal Sandboxes.md>) · `computer-use` · modal
+  Shows how Claude managed agents can use Modal sandboxes for isolated execution, filesystem state, and scalable agent workloads.
 - **2026-05-12** — [Delta Channels: How We’re Evolving our Runtime for Long-Running Agents](<../agents/planning/Delta Channels How We’re Evolving our Runtime for Long-Running Agents.md>) · `planning` · langchain
   Describes Delta Channels as an evolution of the LangGraph runtime for long-running agents, focused on durable state and runtime communication.
 - **2026-05-12** — [Shipping and scaling AI agents](<../agents/planning/Shipping and scaling AI agents.md>) · `planning` · sierra
@@ -111,46 +145,70 @@
   Explains Sierra's inference-layer reliability strategy for foundation models, including routing, redundancy, and serving behavior preservation under provider failures.
 - **2026-04-30** — [Agents can now create Cloudflare accounts, buy domains, and deploy](<../agents/tool-use/Agents can now create Cloudflare accounts, buy domains, and deploy.md>) · `tool-use` · cloudflare-ai
   Via a protocol co-designed with Stripe for Stripe Projects, coding agents can now provision a Cloudflare account, start a paid subscription, register a domain, and receive an API token to deploy — end-to-end with humans only approving payment and terms of service.
+- **2026-04-20** — [Building an RL theorem-proving workflow on Modal](<../models/reasoning/Building an RL theorem-proving workflow on Modal.md>) · `reasoning` · modal
+  Walks through an RL theorem-proving workflow, connecting reasoning tasks, training loops, and scalable remote execution.
 - **2026-04-20** — [The AI engineering stack we built internally — on the platform we ship](<../product-engineering/case-studies/The AI engineering stack we built internally — on the platform we ship.md>) · `case-studies` · cloudflare-ai
   Eleven-month buildout of Cloudflare's internal AI engineering stack on its own products: 3,683 users (93% of R&D), 47.95M AI requests and 241B tokens/month through AI Gateway, an MCP Server Portal with single OAuth, and merge requests nearly doubling from ~5,600 to 10,952/week.
 - **2026-04-20** — [Building the agentic cloud: everything we launched during Agents Week 2026](<../industry/announcements/Building the agentic cloud everything we launched during Agents Week 2026.md>) · `announcements` · cloudflare-ai
   Roundup of every Agents Week 2026 launch for Cloudflare's 'agentic cloud': Artifacts (Git-compatible versioned storage), Sandboxes with Outbound Workers for zero-trust egress, Durable Object Facets, and Workflows rearchitected to 50,000 concurrency for durable background agents.
 - **2026-04-15** — [Data Fabric: Querying agent traces in BigQuery](<../evals-observability/tracing/Data Fabric Querying agent traces in BigQuery.md>) · `tracing` · arize
   Shows how to query production agent traces in BigQuery by connecting observability data with warehouse analysis workflows.
+- **2026-04-14** — [Autoscaling Autoresearch: Give your agents elastic GPUs on Modal](<../agents/tool-use/Autoscaling Autoresearch Give your agents elastic GPUs on Modal.md>) · `tool-use` · modal
+  Shows how autoresearch agents can use elastic GPU compute for parallel experiments, background jobs, and scalable tool execution.
+- **2026-04-14** — [Building with Modal and the OpenAI Agents SDK](<../agents/tool-use/Building with Modal and the OpenAI Agents SDK.md>) · `tool-use` · modal
+  Guide to running OpenAI Agents SDK workflows on Modal, including tool execution, deployment, and scalable background compute.
 - **2026-04-08** — [Scaling Managed Agents: Decoupling the brain from the hands](<../product-engineering/architecture/Scaling Managed Agents Decoupling the brain from the hands.md>) · `architecture` · anthropic-engineering
   Architecture of Claude Managed Agents: decoupling the agent loop (the brain) from sandboxed tool execution (the hands) to scale hosted long-running sessions.
 - **2026-04-06** — [How Brainstore works: architecture for AI observability at scale](<../evals-observability/monitoring/How Brainstore works architecture for AI observability at scale.md>) · `monitoring` · braintrust
   Deep dive into Brainstore's architecture for AI observability at scale, covering storage, indexing, query patterns, and trace/log workloads.
 - **2026-03-12** — [Supporting privacy and compliance for EU teams](<../product-engineering/security/Supporting privacy and compliance for EU teams.md>) · `security` · braintrust
   Covers privacy and compliance requirements for EU AI teams, including data residency, controls, and deployment choices for observability data.
+- **2026-02-25** — [Accelerating AI research that accelerates AI research](<../product-engineering/case-studies/Accelerating AI research that accelerates AI research.md>) · `case-studies` · modal
+  Case study on using elastic compute to accelerate AI research workflows, including experiment throughput and infrastructure offload.
+- **2026-02-18** — [How Ramp built a full context background coding agent on Modal](<../agents/computer-use/How Ramp built a full context background coding agent on Modal.md>) · `computer-use` · modal
+  Case study of a background coding agent architecture that gives agents full project context through remote sandboxes.
 - **2026-02-05** — [Quantifying infrastructure noise in agentic coding evals](<../evals-observability/evaluation/Quantifying infrastructure noise in agentic coding evals.md>) · `evaluation` · anthropic-engineering
   Quantifies how infrastructure flakiness (timeouts, container variance) injects noise into agentic coding evals, and methods to measure and control for it.
 - **2026-01-21** — [Security is a choice: how Braintrust lets you decide where your AI data lives](<../product-engineering/security/Security is a choice how Braintrust lets you decide where your AI data lives.md>) · `security` · braintrust
   Explains data-control choices for AI observability, including where data lives, how security boundaries are enforced, and deployment implications.
 - **2025-12-18** — [Brainstore makes AI observability at scale possible](<../evals-observability/monitoring/Brainstore makes AI observability at scale possible.md>) · `monitoring` · braintrust
   Benchmark-oriented note on Brainstore performance and why purpose-built storage is needed for high-volume AI observability workloads.
+- **2025-11-18** — [Host overhead is killing your inference efficiency](<../inference/optimization/Host overhead is killing your inference efficiency.md>) · `optimization` · modal
+  Analyzes host overhead as an inference bottleneck and shows why CPU-side orchestration can dominate model-serving efficiency.
+- **2025-09-22** — [Build an AI coding platform that scales to millions of monthly sessions](<../agents/computer-use/Build an AI coding platform that scales to millions of monthly sessions.md>) · `computer-use` · modal
+  Describes architecture concerns for AI coding platforms that need to scale sandboxed coding sessions to large user volumes.
 - **2025-09-04** — [Building LangGraph: Designing an Agent Runtime from first principles](<../agents/planning/Building LangGraph Designing an Agent Runtime from first principles.md>) · `planning` · langchain
   Design history of LangGraph as an agent runtime from first principles, covering control flow, state, durability, and production requirements.
 - **2025-08-13** — [Evaluating Model Performance Across Clouds](<../models/benchmarks/Evaluating Model Performance Across Clouds.md>) · `benchmarks` · langfuse
   Evaluates model performance across cloud providers, focusing on latency, cost, quality, and provider-selection tradeoffs for production inference.
+- **2025-07-30** — [GPU Memory Snapshots: Supercharging sub-second startup](<../inference/optimization/GPU Memory Snapshots Supercharging sub-second startup.md>) · `optimization` · modal
+  Explains GPU memory snapshots for reducing cold-start latency and preserving loaded model state across invocations.
 - **2025-05-21** — [How we Built Scalable & Customizable Dashboards](<../evals-observability/monitoring/How we Built Scalable & Customizable Dashboards.md>) · `monitoring` · langfuse
   Engineering writeup on building scalable customizable dashboards for observability data, covering query, rendering, and product architecture concerns.
+- **2025-05-07** — [Linear programming for fun and profit](<cost/Linear programming for fun and profit.md>) · `cost` · modal
+  Shows how linear programming can allocate compute resources under constraints, useful for GPU scheduling and cost control.
 - **2025-04-03** — [Resilient observability by design](<../evals-observability/monitoring/Resilient observability by design.md>) · `monitoring` · braintrust
   Describes resilient observability design for AI systems, including reliability considerations for storing, querying, and using production traces.
 - **2025-03-27** — [Introducing End-to-End OpenTelemetry Support in LangSmith](<../evals-observability/tracing/Introducing End-to-End OpenTelemetry Support in LangSmith.md>) · `tracing` · langchain
   Introduces end-to-end OpenTelemetry support in LangSmith for standardizing traces across AI application components.
 - **2025-03-05** — [Build More Accurate AI Apps Through Fast Experimentation with Arize Phoenix, Langflow, and NVIDIA](<../evals-observability/evaluation/Build More Accurate AI Apps Through Fast Experimentation with Arize Phoenix, Langflow, and NVIDIA.md>) · `evaluation` · arize
   Shows how Arize Phoenix, Langflow, and NVIDIA can support fast experimentation loops for improving AI application accuracy.
+- **2025-02-24** — ['I paid for the whole GPU, I am going to use the whole GPU': A high-level guide to GPU utilization](<../inference/hardware/'I paid for the whole GPU, I am going to use the whole GPU' A high-level guide to GPU utilization.md>) · `hardware` · modal
+  Guide to GPU utilization for AI workloads, covering bottlenecks, throughput, batching, and cost-aware usage.
 - **2024-11-01** — [Arize, Vertex AI API: Evaluation Workflows to Accelerate Generative App Development and AI ROI](<../evals-observability/evaluation/Arize, Vertex AI API Evaluation Workflows to Accelerate Generative App Development and AI ROI.md>) · `evaluation` · arize
   Describes Arize and Vertex AI API evaluation workflows for accelerating generative application development and measuring AI ROI.
 - **2024-10-14** — [OpenTelemetry (OTel) for LLM Observability](<../evals-observability/tracing/OpenTelemetry (OTel) for LLM Observability.md>) · `tracing` · langfuse
   Introduces OpenTelemetry for LLM observability and how OTel-style traces can standardize spans, metadata, and interoperability across AI systems.
 - **2024-07-25** — [Building A Generative AI Platform](<../product-engineering/architecture/Building A Generative AI Platform.md>) · `architecture` · chip-huyen
   Reference architecture for generative AI platforms covering context construction and RAG, guardrails, gateways and routers, caching, observability, orchestration, and tool/action layers.
+- **2024-06-06** — [How to catch crypto miners using syscall signatures](<../product-engineering/security/How to catch crypto miners using syscall signatures.md>) · `security` · modal
+  Explains detecting abusive GPU workloads with syscall signatures, a useful pattern for securing shared AI infrastructure.
 - **2024-03-14** — [What I learned from looking at 900 most popular open source AI tools](<../industry/trends/What I learned from looking at 900 most popular open source AI tools.md>) · `trends` · chip-huyen
   Maps 900 open-source AI tools into infrastructure, model-development, and application-development layers, highlighting growth in agents, prompt engineering, vector search, evaluation, and inference tooling.
 - **2024-02-28** — [Predictive Human Preference: From Model Ranking to Model Routing](<../evals-observability/evaluation/Predictive Human Preference From Model Ranking to Model Routing.md>) · `evaluation` · chip-huyen
   Describes predictive human preference for model ranking and model routing, using preference models and evaluations to choose among LLMs by quality, cost, and latency.
+- **2024-01-23** — [Embedding English Wikipedia in under 15 minutes](<../rag-retrieval/embeddings/Embedding English Wikipedia in under 15 minutes.md>) · `embeddings` · modal
+  Walkthrough of embedding English Wikipedia quickly, covering large-scale embedding jobs, batching, and storage workflow.
 - **2023-10-26** — [AI ROI: Guide To Observability Value Statistics](<../evals-observability/monitoring/AI ROI Guide To Observability Value Statistics.md>) · `monitoring` · arize
   Frames AI observability value through ROI statistics, linking monitoring and model performance visibility to business outcomes.
 - **2022-12-22** — [Hugging Face + Arize: Partnership and Code Example](<../evals-observability/monitoring/Hugging Face + Arize Partnership and Code Example.md>) · `monitoring` · arize
