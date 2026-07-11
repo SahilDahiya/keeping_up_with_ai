@@ -138,17 +138,31 @@ the indexes for free).
   industry:        [trends, business, opinion, announcements]
   ```
 
-- **Classifier:** one LLM call per article — `claude-haiku-4-5` (cheapest current model;
-  short classification is exactly its lane), title + first ~1,500 words in, structured
-  output (JSON schema) out: `{topic, subtopic, secondary_topics[], summary, confidence}`.
-  Backfill runs go through the **Batches API** (50% off, no rate-limit pressure) —
-  classifying a full ~5k-article backfill costs on the order of **a few dollars**. Daily
-  updates (a handful of articles) use synchronous calls.
-- **Low confidence → `unclassified/`** holding folder, flagged in the run report for
-  manual (or agent-assisted) triage — never silently wrong-binned.
-- **No-API-key fallback:** keyword-rule classifier (regex table in `taxonomy.yaml`) so
-  the pipeline still functions degraded; articles classified by rules are marked
-  `classifier: rules` in frontmatter for later re-classification.
+**Who classifies: the Claude Code agent, via a skill — no API key required.** The scraper
+CLI is deliberately LLM-free; it stops at a staging inbox. Classification is judgment
+work done by the agent already running in this repo:
+
+1. `scraper update` (or `backfill`) writes extracted articles to `kb/_inbox/` — full
+   markdown with frontmatter complete *except* `topic`/`subtopic`/`secondary_topics`/
+   `summary`.
+2. The **`/organize-kb` skill** (`.claude/skills/organize-kb/SKILL.md`) instructs the
+   agent to: read `taxonomy.yaml`, process inbox files in batches (title + skim of body),
+   fill in the classification frontmatter, then run `scraper file` to move each article
+   to `kb/<topic>/<subtopic>/<Title>.md` and `scraper reindex` to regenerate indexes.
+3. The agent commits. Anything it isn't confident about goes to `unclassified/` with a
+   note — never silently wrong-binned.
+
+The mechanical halves stay in the CLI (`scraper file` validates against the taxonomy,
+handles filename sanitization/collisions and the state.db path mapping; `scraper reindex`
+is pure code) so classification quality is the *only* thing that depends on the agent.
+
+- **Daily volume is trivial** for this flow: ~5–15 new articles/day across 16 blogs, one
+  short agent session (or a scheduled Claude Code run) clears the inbox.
+- **Backfill (~thousands of articles)** works the same way, just in batches across a few
+  sessions — the skill processes e.g. 100 at a time from title+summary-skim, which is
+  cheap in context. The **optional API mode** (`scraper classify`, `claude-haiku-4-5`
+  via the Batches API, ~a few dollars for a full backfill) exists as an accelerator for
+  exactly this case — it needs an `ANTHROPIC_API_KEY` but is never required.
 - **Taxonomy evolution:** adding a subtopic is cheap (edit YAML). Renaming/merging topics
   triggers `scraper reclassify --topic X` which moves files — git tracks the renames.
   The taxonomy is versioned in frontmatter (`taxonomy_rev`) so stale classifications are
@@ -177,6 +191,7 @@ kb/
   evals-observability/
     ...
   unclassified/                    # low-confidence holding pen (should trend to zero)
+  _inbox/                          # staging: scraped but not yet classified (agent clears it)
   _sources/                        # generated per-source views (index files only, no articles)
     anthropic-engineering.md       # reverse-chron list linking into the topic tree
     simon-willison.md
@@ -334,13 +349,19 @@ Notes:
 
 ```
 scraper discover [--source SLUG]     # dry-run: show what each tier finds, verify config
-scraper backfill [--source SLUG] [--since 2020-01-01]
-scraper update   [--source SLUG]     # feeds + state diff; the daily job
-scraper classify [--only-unclassified | --topic X]  # (re)run the LLM classifier
+scraper backfill [--source SLUG] [--since 2020-01-01]   # → kb/_inbox/
+scraper update   [--source SLUG]     # feeds + state diff; the daily job → kb/_inbox/
+scraper file <inbox-file>            # validate frontmatter vs taxonomy, move into topic tree
+scraper classify [...]               # OPTIONAL API-key accelerator (Haiku/Batches) for bulk backfill
 scraper reclassify --topic X         # after a taxonomy change: re-bin + move files
 scraper reindex                      # rebuild index.md files + catalog.jsonl from frontmatter
-scraper report                       # last-run stats: new / updated / failed / unclassified per source
+scraper report                       # last-run stats: new / updated / failed / inbox-pending per source
 ```
+
+Classification loop (default, no API key): run `scraper update`, then invoke the
+**`/organize-kb`** skill — the Claude Code agent classifies everything in `kb/_inbox/`,
+runs `scraper file` + `scraper reindex`, and commits. One command + one skill invocation;
+in a scheduled Claude Code session the agent runs both ends itself.
 
 - **Daily update** via cron or a GitHub Actions workflow (`schedule:`) that runs
   `scraper update`, commits new KB files, and pushes. Weekly job re-runs sitemap
@@ -365,7 +386,7 @@ Python 3.12. Small, boring dependencies:
 | HTML parsing | `selectolax` |
 | JS rendering | `playwright` (chromium), only for `render: playwright` sources |
 | State | `sqlite3` (stdlib) |
-| Classification | `anthropic` SDK — `claude-haiku-4-5`, structured outputs; Batches API for backfill |
+| Classification | **Claude Code agent via `/organize-kb` skill** (default, no key). Optional: `anthropic` SDK + `claude-haiku-4-5` Batches for bulk backfill |
 | Config | `PyYAML` + `pydantic` models |
 | CLI | `typer` |
 
@@ -377,11 +398,12 @@ scraper/
   config.py          # sources.yaml + taxonomy.yaml loading + pydantic models
   discover/          # feed.py, sitemap.py, htmlindex.py
   fetch.py           # rate limiting, retries, conditional GET, playwright bridge
-  extract.py         # trafilatura pipeline + per-source overrides
-  classify.py        # LLM topic/subtopic classifier + keyword-rules fallback
-  store.py           # kb/ writer: title filenames, topic tree, frontmatter
+  extract.py         # trafilatura pipeline + per-source overrides → kb/_inbox/
+  classify.py        # OPTIONAL API classifier (only imported when ANTHROPIC_API_KEY set)
+  store.py           # `scraper file`: taxonomy validation, title filenames, topic tree
   index.py           # per-topic index.md + _sources/ views + catalog.jsonl generation
   state.py           # sqlite wrapper
+.claude/skills/organize-kb/SKILL.md   # agent-side classification workflow
 sources.yaml
 kb/                  # the knowledge base (committed) — taxonomy.yaml lives here
 tests/               # extraction fixtures: saved HTML → expected markdown, per source
@@ -391,16 +413,16 @@ tests/               # extraction fixtures: saved HTML → expected markdown, pe
 
 ## 6. Phased plan
 
-1. **Phase 1 — MVP (feeds + sitemaps, http-only).** Engine + `sources.yaml` +
-   `taxonomy.yaml` + LLM classifier + topic-tree KB writer + indexes. Onboard **all 16
-   sources** — verified reachable over plain HTTP with no JS rendering — using the
-   feed/sitemap URLs in §3. Daily update job. (simonwillison.net ingests
-   filtered/`--since`-bounded; modal.com is feed-depth-limited.)
-2. **Phase 2 — Deep backfill + quality.** Full sitemap backfill (classification via
-   Batches API); modal.com HTML-index pagination (the one tier-3 case);
-   extraction-quality passes (code blocks, authors) per source; taxonomy tuning after
-   seeing real distribution (split oversized subtopics, merge empty ones);
-   `scraper report`.
+1. **Phase 1 — MVP (feeds + sitemaps, http-only, no API key).** Engine + `sources.yaml`
+   + `taxonomy.yaml` + inbox flow + `/organize-kb` skill + `scraper file`/`reindex` +
+   indexes. Onboard **all 16 sources** — verified reachable over plain HTTP with no JS
+   rendering — using the feed/sitemap URLs in §3. Daily update job. (simonwillison.net
+   ingests filtered/`--since`-bounded; modal.com is feed-depth-limited.)
+2. **Phase 2 — Deep backfill + quality.** Full sitemap backfill (agent classifies in
+   batched sessions; optional Haiku/Batches accelerator if a key is available);
+   modal.com HTML-index pagination (the one tier-3 case); extraction-quality passes
+   (code blocks, authors) per source; taxonomy tuning after seeing real distribution
+   (split oversized subtopics, merge empty ones); `scraper report`.
 3. **Phase 3 — Research ergonomics (optional).** FTS5 index, per-week digest generation
    ("what's new this week across the KB"), embeddings if grep ever falls short.
 
