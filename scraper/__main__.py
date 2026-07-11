@@ -13,7 +13,14 @@ from .extract import ExtractionError, extract_article
 from .fetch import Fetcher, FetchError
 from .index import rebuild_indexes
 from .state import State
-from .store import FilingError, content_hash, file_article, update_filed_body, write_inbox
+from .store import (
+    FilingError,
+    content_hash,
+    file_article,
+    parse_frontmatter,
+    update_filed_body,
+    write_inbox,
+)
 
 app = typer.Typer(no_args_is_help=True, add_completion=False)
 
@@ -30,6 +37,20 @@ def _dedupe(items: list[Discovered]) -> list[Discovered]:
         if d.url not in seen or (d.date_hint and not seen[d.url].date_hint):
             seen[d.url] = d
     return list(seen.values())
+
+
+def _classified_inbox_targets() -> list[Path]:
+    """Inbox files with classification work started; untouched null-frontmatter files wait."""
+    targets: list[Path] = []
+    for candidate in sorted(INBOX_DIR.glob("*.md")):
+        try:
+            fm, _ = parse_frontmatter(candidate.read_text())
+        except Exception:
+            targets.append(candidate)
+            continue
+        if any(fm.get(key) not in (None, "") for key in ("topic", "summary", "classifier")):
+            targets.append(candidate)
+    return targets
 
 
 def _process(source: SourceConfig, discovered: list[Discovered], fetcher: Fetcher,
@@ -101,7 +122,11 @@ def update(source: Optional[str] = typer.Option(None, "--source"),
         typer.echo(f"== {src.slug}")
         discovered: list[Discovered] = []
         for tier in src.discovery:
-            discovered = _TIERS[tier](fetcher, src)
+            try:
+                discovered = _TIERS[tier](fetcher, src)
+            except Exception as e:  # a broken tier must not kill the multi-source run
+                typer.echo(f"  {tier} discovery failed: {e}")
+                discovered = []
             if discovered:
                 break
         stats = _process(src, _dedupe(discovered), fetcher, state, limit=limit, since=None)
@@ -118,7 +143,10 @@ def backfill(source: Optional[str] = typer.Option(None, "--source"),
         typer.echo(f"== {src.slug}")
         discovered: list[Discovered] = []
         for tier in src.discovery:
-            discovered.extend(_TIERS[tier](fetcher, src))
+            try:
+                discovered.extend(_TIERS[tier](fetcher, src))
+            except Exception as e:
+                typer.echo(f"  {tier} discovery failed: {e}")
         stats = _process(src, _dedupe(discovered), fetcher, state,
                          limit=limit, since=since or src.since)
         typer.echo(f"  {stats}")
@@ -130,7 +158,7 @@ def file(path: Optional[Path] = typer.Argument(None),
     """Validate classification frontmatter and move inbox item(s) into the topic tree."""
     taxonomy = load_taxonomy()
     state = State()
-    targets = sorted(INBOX_DIR.glob("*.md")) if all else [path] if path else []
+    targets = _classified_inbox_targets() if all else [path] if path else []
     if not targets:
         typer.echo("nothing to file (pass a path or --all)")
         raise typer.Exit(1)
@@ -142,7 +170,6 @@ def file(path: Optional[Path] = typer.Argument(None),
             typer.echo(f"  SKIP {e}")
             errors += 1
             continue
-        from .store import parse_frontmatter
         fm, _ = parse_frontmatter(dest.read_text())
         repo_root = Path(__file__).resolve().parent.parent
         state.mark(fm["url"], fm["source"], "filed", kb_path=dest.relative_to(repo_root).as_posix())
@@ -169,7 +196,8 @@ def report():
     pending = len(list(INBOX_DIR.glob("*.md"))) if INBOX_DIR.exists() else 0
     typer.echo(f"\ninbox pending: {pending}")
     if pending:
-        typer.echo("→ run the /organize-kb skill in Claude Code to classify them")
+        typer.echo(f"classified ready to file: {len(_classified_inbox_targets())}")
+        typer.echo("→ ask Codex to organize the KB inbox, or run Claude Code's /organize-kb skill")
 
 
 if __name__ == "__main__":

@@ -138,17 +138,19 @@ the indexes for free).
   industry:        [trends, business, opinion, announcements]
   ```
 
-**Who classifies: the Claude Code agent, via a skill — no API key required.** The scraper
-CLI is deliberately LLM-free; it stops at a staging inbox. Classification is judgment
-work done by the agent already running in this repo:
+**Who classifies: the coding agent — no API key required.** The scraper CLI is
+deliberately LLM-free; it stops at a staging inbox. Classification is judgment work done
+by the agent already running in this repo:
 
 1. `scraper update` (or `backfill`) writes extracted articles to `kb/_inbox/` — full
    markdown with frontmatter complete *except* `topic`/`subtopic`/`secondary_topics`/
    `summary`.
-2. The **`/organize-kb` skill** (`.claude/skills/organize-kb/SKILL.md`) instructs the
-   agent to: read `taxonomy.yaml`, process inbox files in batches (title + skim of body),
-   fill in the classification frontmatter, then run `scraper file` to move each article
-   to `kb/<topic>/<subtopic>/<Title>.md` and `scraper reindex` to regenerate indexes.
+2. Codex follows `AGENTS.md` (and the mirror `.codex/skills/organize-kb/SKILL.md`, when
+   available); Claude Code follows `.claude/skills/organize-kb/SKILL.md`. The workflow
+   is the same: read `taxonomy.yaml`, process inbox files in batches (title + skim of
+   body), fill in the classification frontmatter, then run `scraper file` to move each
+   article to `kb/<topic>/<subtopic>/<Title>.md` and `scraper reindex` to regenerate
+   indexes.
 3. The agent commits. Anything it isn't confident about goes to `unclassified/` with a
    note — never silently wrong-binned.
 
@@ -157,9 +159,9 @@ handles filename sanitization/collisions and the state.db path mapping; `scraper
 is pure code) so classification quality is the *only* thing that depends on the agent.
 
 - **Daily volume is trivial** for this flow: ~5–15 new articles/day across 16 blogs, one
-  short agent session (or a scheduled Claude Code run) clears the inbox.
+  short agent session (or a scheduled agent run) clears the inbox.
 - **Backfill (~thousands of articles)** works the same way, just in batches across a few
-  sessions — the skill processes e.g. 100 at a time from title+summary-skim, which is
+  sessions — the agent processes e.g. 100 at a time from title+summary-skim, which is
   cheap in context. The **optional API mode** (`scraper classify`, `claude-haiku-4-5`
   via the Batches API, ~a few dollars for a full backfill) exists as an accelerator for
   exactly this case — it needs an `ANTHROPIC_API_KEY` but is never required.
@@ -175,7 +177,8 @@ generated indexes). One markdown file per article, **named by its title**:
 
 ```
 kb/
-  CLAUDE.md                        # tells research agents how this KB is organized
+  AGENTS.md                        # Codex-facing KB research/classification rules
+  CLAUDE.md                        # Claude-facing KB research rules
   taxonomy.yaml                    # the controlled topic tree (see §2.5)
   catalog.jsonl                    # 1 line per article: {topic, subtopic, source, url, date, title, path, summary}
   agents/
@@ -358,10 +361,11 @@ scraper reindex                      # rebuild index.md files + catalog.jsonl fr
 scraper report                       # last-run stats: new / updated / failed / inbox-pending per source
 ```
 
-Classification loop (default, no API key): run `scraper update`, then invoke the
-**`/organize-kb`** skill — the Claude Code agent classifies everything in `kb/_inbox/`,
-runs `scraper file` + `scraper reindex`, and commits. One command + one skill invocation;
-in a scheduled Claude Code session the agent runs both ends itself.
+Classification loop (default, no API key): run `scraper update`, then ask Codex to
+organize the KB inbox (or invoke Claude Code's **`/organize-kb`** skill). The agent
+classifies `kb/_inbox/`, runs `scraper file` + `scraper reindex`, and reports the
+result. One scraper command + one agent workflow; in a scheduled agent session the agent
+runs both ends itself.
 
 - **Daily update** via cron or a GitHub Actions workflow (`schedule:`) that runs
   `scraper update`, commits new KB files, and pushes. Weekly job re-runs sitemap
@@ -386,7 +390,7 @@ Python 3.12. Small, boring dependencies:
 | HTML parsing | `selectolax` |
 | JS rendering | `playwright` (chromium), only for `render: playwright` sources |
 | State | `sqlite3` (stdlib) |
-| Classification | **Claude Code agent via `/organize-kb` skill** (default, no key). Optional: `anthropic` SDK + `claude-haiku-4-5` Batches for bulk backfill |
+| Classification | **Codex via `AGENTS.md` or Claude Code via `/organize-kb` skill** (default, no key). Optional: `anthropic` SDK + `claude-haiku-4-5` Batches for bulk backfill |
 | Config | `PyYAML` + `pydantic` models |
 | CLI | `typer` |
 
@@ -403,7 +407,9 @@ scraper/
   store.py           # `scraper file`: taxonomy validation, title filenames, topic tree
   index.py           # per-topic index.md + _sources/ views + catalog.jsonl generation
   state.py           # sqlite wrapper
-.claude/skills/organize-kb/SKILL.md   # agent-side classification workflow
+AGENTS.md                             # Codex repo instructions + classification workflow
+.codex/skills/organize-kb/SKILL.md    # Codex skill mirror, when project skills are available
+.claude/skills/organize-kb/SKILL.md   # Claude Code classification workflow
 sources.yaml
 kb/                  # the knowledge base (committed) — taxonomy.yaml lives here
 tests/               # extraction fixtures: saved HTML → expected markdown, per source
@@ -414,7 +420,7 @@ tests/               # extraction fixtures: saved HTML → expected markdown, pe
 ## 6. Phased plan
 
 1. **Phase 1 — MVP (feeds + sitemaps, http-only, no API key).** Engine + `sources.yaml`
-   + `taxonomy.yaml` + inbox flow + `/organize-kb` skill + `scraper file`/`reindex` +
+   + `taxonomy.yaml` + inbox flow + Codex/Claude organize workflow + `scraper file`/`reindex` +
    indexes. Onboard **all 16 sources** — verified reachable over plain HTTP with no JS
    rendering — using the feed/sitemap URLs in §3. Daily update job. (simonwillison.net
    ingests filtered/`--since`-bounded; modal.com is feed-depth-limited.)

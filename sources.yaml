@@ -41,6 +41,7 @@ sources:
     feed: https://developers.openai.com/rss.xml
     sitemap: https://developers.openai.com/sitemap-index.xml
     include_prefixes: ["/blog/"]
+    exclude_regex: "^/blog/topic/"   # tag-index listing pages, not articles
     tags: [llm-vendors]
 
   - slug: cloudflare-ai

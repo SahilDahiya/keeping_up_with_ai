@@ -16,7 +16,7 @@ is plain markdown with YAML frontmatter — research it with grep/glob/read.
   (`topic, subtopic, secondary_topics, source, url, date, title, path, summary, words`).
   Use for programmatic queries: `jq 'select(.topic=="agents")' catalog.jsonl`.
 - `_inbox/` — scraped but not yet classified. Not part of the researched KB;
-  cleared by the `/organize-kb` skill.
+  cleared by Codex using `AGENTS.md` or by Claude Code's `/organize-kb` skill.
 - `unclassified/` — articles the classifier wasn't confident about.
 
 ## Frontmatter schema
