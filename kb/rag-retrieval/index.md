@@ -1,6 +1,6 @@
 # rag-retrieval
 
-41 articles.
+43 articles.
 
 - **2026-07-07** — [Faster phrase search with shingled bloom filters in Brainstore](<search/Faster phrase search with shingled bloom filters in Brainstore.md>) · `search` · braintrust
   Explains faster phrase search over Brainstore data using shingled bloom filters, aimed at efficient trace and log search for AI observability.
@@ -24,8 +24,12 @@
   Case study of Dropbox's evaluation pipeline for AI search, focused on measuring retrieval and answer quality for production search experiences.
 - **2025-10-28** — [RAG Observability and Evals](<pipelines/RAG Observability and Evals.md>) · `pipelines` · langfuse
   Explains observability and evaluation for RAG systems, including tracing retrieval/generation steps and measuring answer and context quality.
+- **2025-10-07** — [AI-Ready Knowledge for Contact Centers: Closing the Gap Between the Knowledge Base and AI](<pipelines/AI-Ready Knowledge for Contact Centers Closing the Gap Between the Knowledge Base and AI.md>) · `pipelines` · cresta
+  Explains how operational knowledge bases need to be structured for AI agents, with emphasis on grounding and retrieval readiness.
 - **2025-09-12** — [Understanding embeddings and reranking at scale](<search/Understanding embeddings and reranking at scale.md>) · `search` · fireworks
   Explains embeddings, reranking, and retrieval architecture patterns for production RAG systems.
+- **2025-08-06** — [Grounding Reality – How Cresta Tackles LLM Hallucinations in Enterprise AI](<pipelines/Grounding Reality – How Cresta Tackles LLM Hallucinations in Enterprise AI.md>) · `pipelines` · cresta
+  Explains grounding strategies for reducing hallucinations in enterprise AI systems, with emphasis on knowledge and evaluation loops.
 - **2025-06-12** — [Your client code matters: 12x higher embedding throughput with Python and Rust](<embeddings/Your client code matters 12x higher embedding throughput with Python and Rust.md>) · `embeddings` · baseten
   Shows how client implementation choices in Python and Rust affect embedding throughput.
 - **2025-04-09** — [Building Enterprise-Scale RAG Systems with Fireworks AI and MongoDB Atlas](<pipelines/Building Enterprise-Scale RAG Systems with Fireworks AI and MongoDB Atlas.md>) · `pipelines` · fireworks
@@ -121,6 +125,8 @@
   Example of hybrid search over embeddings, combining vector retrieval with MongoDB and a geospatial dataset.
 - **2024-07-25** — [Building A Generative AI Platform](<../product-engineering/architecture/Building A Generative AI Platform.md>) · `architecture` · chip-huyen
   Reference architecture for generative AI platforms covering context construction and RAG, guardrails, gateways and routers, caching, observability, orchestration, and tool/action layers.
+- **2024-04-29** — [How fine tuned LLMs power knowledge assist, summarization, and chat suggestions](<../models/fine-tuning/How fine tuned LLMs power knowledge assist, summarization, and chat suggestions.md>) · `fine-tuning` · cresta
+  Explains how fine-tuned LLMs support knowledge assist, summarization, and chat suggestions in production workflows.
 - **2024-04-26** — [Beating proprietary models with a quick fine-tune](<../models/fine-tuning/Beating proprietary models with a quick fine-tune.md>) · `fine-tuning` · modal
   Explains fine-tuning embedding models to beat proprietary baselines for a retrieval task with a compact training loop.
 - **2024-03-21** — [Optimizing Retrieval Augmented Generation (RAG) with MongoDB Atlas and Fireworks AI](<pipelines/Optimizing Retrieval Augmented Generation (RAG) with MongoDB Atlas and Fireworks AI.md>) · `pipelines` · fireworks

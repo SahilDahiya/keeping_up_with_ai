@@ -1,6 +1,6 @@
 # models
 
-142 articles.
+152 articles.
 
 - **2026-07-10** — [Evaluating the GPT-5.6 family](<benchmarks/Evaluating the GPT-5.6 family.md>) · `benchmarks` · braintrust
   Evaluates the GPT-5.6 model family and presents a decision map for choosing models based on quality, cost, and task requirements.
@@ -66,6 +66,8 @@
   Argues that frontier reinforcement learning can be cost-effective with the right infrastructure and training-loop design.
 - **2026-03-17** — [Mamba-3](<reasoning/Mamba-3.md>) · `reasoning` · together
   Describes Mamba-3 and its implications for efficient sequence modeling.
+- **2026-03-05** — [When the Call Runs Too Long: Modeling Outcomes for Long Conversations](<reasoning/When the Call Runs Too Long Modeling Outcomes for Long Conversations.md>) · `reasoning` · cresta
+  Discusses modeling outcomes for long conversations, including challenges around sequence length and delayed success signals.
 - **2026-02-27** — [DeepSeek Models: V3.2, R1, Distills, and Production Caveats](<reasoning/DeepSeek Models V3.2, R1, Distills, and Production Caveats.md>) · `reasoning` · fireworks
   Surveys DeepSeek model variants with production caveats around serving, reasoning behavior, and deployment tradeoffs.
 - **2026-02-23** — [How speech models fail where it matters the most and what to do about it](<multimodal/How speech models fail where it matters the most and what to do about it.md>) · `multimodal` · together
@@ -74,6 +76,10 @@
   Explains fine-tuning open LLM judges to outperform a frontier judge model.
 - **2025-12-31** — [DPO as reinforcement learning](<fine-tuning/DPO as reinforcement learning.md>) · `fine-tuning` · fireworks
   Connects DPO and RL-style training loops, explaining preference optimization as part of continuous model improvement.
+- **2025-12-19** — [Evaluating AI Voices – What Does It Mean to Sound “Good”?](<multimodal/Evaluating AI Voices – What Does It Mean to Sound “Good”.md>) · `multimodal` · cresta
+  Explores how to evaluate AI voice quality beyond subjective preference, including production criteria for speech experiences.
+- **2025-12-17** — [When Every Word Matters: Engineering Real-Time Multilingual Intelligence for Human Conversations](<multimodal/When Every Word Matters Engineering Real-Time Multilingual Intelligence for Human Conversations.md>) · `multimodal` · cresta
+  Engineering guide to real-time multilingual intelligence for conversations, focusing on latency and speech-language quality.
 - **2025-12-15** — [Updates for developers building with voice | OpenAI Developers](<releases/Updates for developers building with voice OpenAI Developers.md>) · `releases` · openai-devs
   Release notes for four December 2025 audio model snapshots (gpt-4o-mini-transcribe, gpt-4o-mini-tts, gpt-realtime-mini, gpt-audio-mini): lower word-error rates on noisy audio, fewer hallucinations during silence, better tool calling in the minis, and broader Custom Voices access at unchanged pricing.
 - **2025-12-10** — [Best Practices for Multi-Turn RL](<fine-tuning/Best Practices for Multi-Turn RL.md>) · `fine-tuning` · fireworks
@@ -112,6 +118,8 @@
   Explains Kimi K2 architecture, capabilities, and benchmark behavior for agent and reasoning workloads.
 - **2025-08-01** — [Qwen3 Instruct vs Thinking vs Coder: Model Selection Guide](<reasoning/Qwen3 Instruct vs Thinking vs Coder Model Selection Guide.md>) · `reasoning` · fireworks
   Compares Qwen3 Instruct, Thinking, and Coder variants for model selection across reasoning and coding tasks.
+- **2025-07-28** — [Building Voice AI That Actually Works: Balancing Realistic Voices vs. Production-Ready Performance](<multimodal/Building Voice AI That Actually Works Balancing Realistic Voices vs. Production-Ready Performance.md>) · `multimodal` · cresta
+  Explains tradeoffs in building production voice AI, balancing naturalness, latency, reliability, and operational constraints.
 - **2025-07-23** — [Transcribe speech 100x faster and 100x cheaper with open models](<multimodal/Transcribe speech 100x faster and 100x cheaper with open models.md>) · `multimodal` · modal
   Shows how open speech models and batch execution can reduce transcription latency and cost at large scale.
 - **2025-07-22** — [Kimi QK-Clip and multi-head latent attention](<reasoning/Kimi QK-Clip and multi-head latent attention.md>) · `reasoning` · fireworks
@@ -128,12 +136,16 @@
   Describes a synthetic-data pipeline that connects task definition, generation, SFT/RFT, evaluation, and cleanup.
 - **2025-05-28** — [Mixture-of-Agents Alignment for post-training](<fine-tuning/Mixture-of-Agents Alignment for post-training.md>) · `fine-tuning` · together
   Explains Mixture-of-Agents Alignment for improving post-training with collective model intelligence.
+- **2025-05-22** — [Why Speech to Text Is the Hidden Engine Behind Contact Center AI Performance](<multimodal/Why Speech to Text Is the Hidden Engine Behind Contact Center AI Performance.md>) · `multimodal` · cresta
+  Explains how speech-to-text quality drives downstream AI performance and why it should be treated as a system dependency.
 - **2025-05-16** — [Scalable Chain of Thoughts via Elastic Reasoning](<reasoning/Scalable Chain of Thoughts via Elastic Reasoning.md>) · `reasoning` · arize
   Summarizes elastic reasoning and scalable chain-of-thought ideas for allocating reasoning compute more flexibly.
 - **2025-05-12** — [Supervised Fine-Tuning (SFT) with LoRA on Fireworks AI: Tutorial](<fine-tuning/Supervised Fine-Tuning (SFT) with LoRA on Fireworks AI Tutorial.md>) · `fine-tuning` · fireworks
   Tutorial for supervised fine-tuning with LoRA, including setup, training, and deployment workflow.
 - **2025-04-29** — [Day zero benchmarks for Qwen 3 with SGLang on Baseten](<benchmarks/Day zero benchmarks for Qwen 3 with SGLang on Baseten.md>) · `benchmarks` · baseten
   Provides day-zero Qwen 3 benchmarks with SGLang and discusses serving-performance implications.
+- **2025-04-18** — [Why Transcription Performance Is Holding Back Your AI Strategy](<multimodal/Why Transcription Performance Is Holding Back Your AI Strategy.md>) · `multimodal` · cresta
+  Connects transcription performance to broader AI application quality, especially for voice-first systems.
 - **2025-04-17** — [Continued Fine-tuning of LLMs: A Technical Deep Dive](<fine-tuning/Continued Fine-tuning of LLMs A Technical Deep Dive.md>) · `fine-tuning` · together
   Technical deep dive into continued fine-tuning of LLMs.
 - **2025-04-17** — [Direct Preference Optimization: A Technical Deep Dive](<fine-tuning/Direct Preference Optimization A Technical Deep Dive.md>) · `fine-tuning` · together
@@ -146,6 +158,8 @@
   Paper-reading recap on Gemini 2.5 and Humanity's Last Exam, focusing on benchmark interpretation and what modern evaluation results do and do not show.
 - **2025-03-12** — [Fine-Tuning DeepSeek v3 & R1 to optimize quality, latency, & cost](<fine-tuning/Fine-Tuning DeepSeek v3 & R1 to optimize quality, latency, & cost.md>) · `fine-tuning` · fireworks
   Guide to fine-tuning DeepSeek V3 and R1 models while balancing quality, latency, and cost.
+- **2025-03-04** — [Understanding Cresta’s Voice Platform - The Voice Stack](<multimodal/Understanding Cresta’s Voice Platform - The Voice Stack.md>) · `multimodal` · cresta
+  Breaks down the components of a production voice AI stack, including telephony, speech, model, and orchestration layers.
 - **2025-02-25** — [Minions: embracing small LMs, shifting compute on-device, and cutting cloud costs in the process](<reasoning/Minions embracing small LMs, shifting compute on-device, and cutting cloud costs in the process.md>) · `reasoning` · together
   Explores using small language models and on-device compute to reduce cloud inference costs.
 - **2025-02-07** — [DeepSeek v3 and R1 Model Architecture: Why it's powerful and economical](<reasoning/DeepSeek v3 and R1 Model Architecture Why it's powerful and economical.md>) · `reasoning` · fireworks
@@ -206,6 +220,8 @@
   Practical example of fine-tuning Stable Diffusion for a custom image-generation domain using Modal infrastructure.
 - **2024-05-01** — [FAQ: Building LLMs with RedPajama-v2, a 30 trillion token web dataset](<fine-tuning/FAQ Building LLMs with RedPajama-v2, a 30 trillion token web dataset.md>) · `fine-tuning` · together
   FAQ-style technical explanation of building LLMs with the RedPajama-v2 dataset.
+- **2024-04-29** — [How fine tuned LLMs power knowledge assist, summarization, and chat suggestions](<fine-tuning/How fine tuned LLMs power knowledge assist, summarization, and chat suggestions.md>) · `fine-tuning` · cresta
+  Explains how fine-tuned LLMs support knowledge assist, summarization, and chat suggestions in production workflows.
 - **2024-04-26** — [Beating proprietary models with a quick fine-tune](<fine-tuning/Beating proprietary models with a quick fine-tune.md>) · `fine-tuning` · modal
   Explains fine-tuning embedding models to beat proprietary baselines for a retrieval task with a compact training loop.
 - **2024-04-18** — [Streaming real-time text to speech with XTTS V2](<multimodal/Streaming real-time text to speech with XTTS V2.md>) · `multimodal` · baseten
@@ -286,6 +302,10 @@
   Explains FlashConv and efficient state-space model execution.
 - **2022-11-17** — [HELM: benchmarking large language models on the Together Research Computer](<benchmarks/HELM benchmarking large language models on the Together Research Computer.md>) · `benchmarks` · together
   Describes HELM benchmarking on the Together Research Computer.
+- **2022-02-10** — [Why Transcription is Vital to Contact Center AI](<multimodal/Why Transcription is Vital to Contact Center AI.md>) · `multimodal` · cresta
+  Explains why transcription quality is a core dependency for downstream AI systems that operate on spoken conversations.
+- **2021-01-13** — [Action Directed GPT-2](<reasoning/Action Directed GPT-2.md>) · `reasoning` · cresta
+  Explains Action Directed GPT-2 as an early pattern for steering language model behavior toward actions, relevant to tool-using and task-oriented agents.
 
 ## Also relevant (filed elsewhere)
 
@@ -319,6 +339,8 @@
   Explains sub-second image generation with FLUX.2 and Qwen-Image serving optimizations.
 - **2026-05-18** — [Project Glasswing: what Mythos showed us](<../product-engineering/security/Project Glasswing what Mythos showed us.md>) · `security` · cloudflare-ai
   Cloudflare's findings from running Anthropic's Mythos Preview (Project Glasswing) against 50+ of its own repos: the model constructs multi-primitive exploit chains and compiles/runs its own proofs-of-concept, but its organic refusals are inconsistent and false-positive rates spike in C/C++ codebases.
+- **2026-05-14** — [The Three Pillars of Voice Integration: Building Hybrid AI Contact Centers That Work With Your Existing Infrastructure](<../infra-platform/deployment/The Three Pillars of Voice Integration Building Hybrid AI Contact Centers That Work With Your Existing Infrastructure.md>) · `deployment` · cresta
+  Covers hybrid voice-agent integration patterns for deploying AI into existing telephony and contact-center infrastructure.
 - **2026-05-12** — [Mu-Bench: an open multilingual transcription benchmark](<benchmarks/Mu-Bench an open multilingual transcription benchmark.md>) · `benchmarks` · sierra
   Introduces mu-Bench, an open multilingual transcription benchmark for evaluating speech recognition quality across languages.
 - **2026-05-12** — [Improving voice performance with post-training](<fine-tuning/Improving voice performance with post-training.md>) · `fine-tuning` · sierra
@@ -403,6 +425,8 @@
   Explains DeepSeek-OCR and why compression can be useful for multimodal model workflows.
 - **2025-10-22** — [Large Reasoning Models Fail to Follow Instructions During Reasoning: A Benchmark Study](<../evals-observability/evaluation/Large Reasoning Models Fail to Follow Instructions During Reasoning A Benchmark Study.md>) · `evaluation` · together
   Benchmark study showing instruction-following failures during reasoning.
+- **2025-10-21** — [Engineering for Real-Time Voice Agent Latency](<../inference/serving/Engineering for Real-Time Voice Agent Latency.md>) · `serving` · cresta
+  Technical discussion of latency in real-time voice agents and the engineering constraints behind responsive spoken interaction.
 - **2025-10-13** — [State of LLMs on the Application Layer](<../industry/trends/State of LLMs on the Application Layer.md>) · `trends` · langfuse
   Application-layer snapshot of LLM usage and model trends, useful for understanding production model adoption and quality/cost tradeoffs.
 - **2025-10-10** — [ATLAS runtime-learning accelerators for LLM inference](<../inference/optimization/ATLAS runtime-learning accelerators for LLM inference.md>) · `optimization` · together
@@ -413,6 +437,8 @@
   Summarizes RWESummary, a healthcare-focused framework for choosing LLMs to summarize real-world evidence studies safely and reliably.
 - **2025-09-12** — [Developer notes on the Realtime API | OpenAI Developers](<releases/Developer notes on the Realtime API OpenAI Developers.md>) · `releases` · openai-devs
   Developer notes on the Realtime API GA and the gpt-realtime speech-to-speech model: beta-to-GA interface migration, new marin/cedar voices, and advice to rewrite prompts because instruction-following improved enough that literal instructions are now honored.
+- **2025-08-21** — [Voice AI Agents for Customer Experience: Why Decentralized Agent Architectures Can Outperform Central Orchestrators](<../agents/multi-agent/Voice AI Agents for Customer Experience Why Decentralized Agent Architectures Can Outperform Central Orchestrators.md>) · `multi-agent` · cresta
+  Argues for decentralized voice-agent architectures over central orchestration in some customer-experience workloads.
 - **2025-08-15** — [Fine-tuning small open-source LLMs for specialized tasks](<fine-tuning/Fine-tuning small open-source LLMs for specialized tasks.md>) · `fine-tuning` · together
   Case study fine-tuning small open-source LLMs to beat larger closed models on specialized tasks.
 - **2025-08-15** — [Fine-tuning small open-source LLMs to outperform large closed-source models by 60% on specialized tasks](<fine-tuning/Fine-tuning small open-source LLMs to outperform large closed-source models by 60% on specialized tasks.md>) · `fine-tuning` · baseten
@@ -451,12 +477,16 @@
   Technical deep dive into Direct Preference Optimization for aligning language models.
 - **2025-04-08** — [DeepCoder: A Fully Open-Source 14B Coder at O3-mini Level](<../agents/tool-use/DeepCoder A Fully Open-Source 14B Coder at O3-mini Level.md>) · `tool-use` · together
   Describes DeepCoder, an open-source coding model trained for O3-mini-level coding performance.
+- **2025-03-13** — [Understanding Cresta’s Voice Platform - ML Services, Inference Graphs, and Real-Time Intelligence](<../inference/serving/Understanding Cresta’s Voice Platform - ML Services, Inference Graphs, and Real-Time Intelligence.md>) · `serving` · cresta
+  Explains ML services, inference graphs, and real-time intelligence components in a production voice platform.
 - **2025-03-13** — [Hugging Face and Langfuse: 5 Ways to use them Together](<../infra-platform/deployment/Hugging Face and Langfuse 5 Ways to use them Together.md>) · `deployment` · langfuse
   Shows ways to combine Hugging Face workflows with Langfuse for model experimentation, tracing, evaluation, and deployment feedback loops.
 - **2025-03-12** — [Fine-Tuning DeepSeek v3 & R1 to optimize quality, latency, & cost](<fine-tuning/Fine-Tuning DeepSeek v3 & R1 to optimize quality, latency, & cost.md>) · `fine-tuning` · fireworks
   Guide to fine-tuning DeepSeek V3 and R1 models while balancing quality, latency, and cost.
 - **2025-02-26** — [Evaluating Large Language Models With OpenEvals](<../evals-observability/evaluation/Evaluating Large Language Models With OpenEvals.md>) · `evaluation` · langchain
   Guide to evaluating large language models with OpenEvals, including reusable evaluators and model comparison workflows.
+- **2025-02-25** — [Understanding Cresta’s Voice Platform - Handling Incoming Traffic with Customer-Specific Subdomains](<../infra-platform/deployment/Understanding Cresta’s Voice Platform - Handling Incoming Traffic with Customer-Specific Subdomains.md>) · `deployment` · cresta
+  Architecture note on routing incoming voice traffic with customer-specific subdomains in a production voice platform.
 - **2025-02-13** — [Together AI Achieves 90% Faster BF16 Training with NVIDIA Blackwell Platform and Together Kernel Collection](<../inference/hardware/Together AI Achieves 90% Faster BF16 Training with NVIDIA Blackwell Platform and Together Kernel Collection.md>) · `hardware` · together
   Describes Blackwell BF16 training acceleration with the Together Kernel Collection.
 - **2025-02-01** — [From text to task: Constrained generation for structured extraction in R1](<../prompt-engineering/structured-output/From text to task Constrained generation for structured extraction in R1.md>) · `structured-output` · fireworks
@@ -571,3 +601,5 @@
   Explains communication bottlenecks in decentralized foundation-model training.
 - **2022-09-30** — [Arize AI + OpenAI](<../evals-observability/monitoring/Arize AI + OpenAI.md>) · `monitoring` · arize
   Introduces Arize support for monitoring OpenAI-powered applications, connecting hosted LLM usage with observability and performance analysis.
+- **1997-08-15** — [Evaluating Speech-to-Text Quality: Beyond Word Error Rate](<../evals-observability/evaluation/Evaluating Speech-to-Text Quality Beyond Word Error Rate.md>) · `evaluation` · cresta
+  Explains why word error rate is insufficient for speech-to-text evaluation and what production teams should measure instead.

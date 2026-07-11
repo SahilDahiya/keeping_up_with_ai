@@ -1,6 +1,6 @@
 # infra-platform
 
-63 articles.
+66 articles.
 
 - **2026-07-09** — [Trace before you migrate: Measuring Kubernetes bottlenecks in AI agent sandboxes](<deployment/Trace before you migrate Measuring Kubernetes bottlenecks in AI agent sandboxes.md>) · `deployment` · arize
   Shows how tracing can diagnose Kubernetes bottlenecks in AI agent sandboxes before migration decisions.
@@ -34,6 +34,8 @@
   Guide to operating self-hosted LangSmith on Kubernetes, covering deployment, operations, and control-plane concerns.
 - **2026-05-19** — [Announcing Claude Managed Agents on Cloudflare](<deployment/Announcing Claude Managed Agents on Cloudflare.md>) · `deployment` · cloudflare-ai
   Cloudflare-Anthropic integration running Claude Managed Agents against Cloudflare Sandboxes: the agent loop stays on the Claude Platform while Cloudflare provides microVM or isolate sandboxes, credential-injecting proxies, private service connectivity, browser session audit trails, and per-agent email.
+- **2026-05-14** — [The Three Pillars of Voice Integration: Building Hybrid AI Contact Centers That Work With Your Existing Infrastructure](<deployment/The Three Pillars of Voice Integration Building Hybrid AI Contact Centers That Work With Your Existing Infrastructure.md>) · `deployment` · cresta
+  Covers hybrid voice-agent integration patterns for deploying AI into existing telephony and contact-center infrastructure.
 - **2026-05-13** — [We built SmithDB, the data layer for agent observability](<deployment/We built SmithDB, the data layer for agent observability.md>) · `deployment` · langchain
   Introduces SmithDB as a data layer for agent observability, optimized for storing and querying trace-heavy workloads.
 - **2026-05-12** — [Load testing: how Sierra scales for surges](<deployment/Load testing how Sierra scales for surges.md>) · `deployment` · sierra
@@ -80,6 +82,10 @@
   Shows ways to combine Hugging Face workflows with Langfuse for model experimentation, tracing, evaluation, and deployment feedback loops.
 - **2025-03-03** — [Brainstore: the database designed for the AI engineering era](<deployment/Brainstore the database designed for the AI engineering era.md>) · `deployment` · braintrust
   Introduces Brainstore as a database for AI engineering workloads, optimized for traces, evals, logs, and large-scale observability queries.
+- **2025-02-25** — [Understanding Cresta’s Voice Platform - Handling Incoming Traffic with Customer-Specific Subdomains](<deployment/Understanding Cresta’s Voice Platform - Handling Incoming Traffic with Customer-Specific Subdomains.md>) · `deployment` · cresta
+  Architecture note on routing incoming voice traffic with customer-specific subdomains in a production voice platform.
+- **2025-01-28** — [How Cresta Scales Real-Time Insights with ClickHouse](<deployment/How Cresta Scales Real-Time Insights with ClickHouse.md>) · `deployment` · cresta
+  Architecture case study on scaling real-time AI insights with ClickHouse for high-volume conversation analytics.
 - **2025-01-28** — [Memory snapshots: Checkpoint and restore for sub-second startup](<deployment/Memory snapshots Checkpoint and restore for sub-second startup.md>) · `deployment` · modal
   Explains memory snapshots as checkpoint/restore infrastructure for faster startup in serverless AI workloads.
 - **2025-01-08** — [Our approach to hybrid deployment](<deployment/Our approach to hybrid deployment.md>) · `deployment` · braintrust
@@ -235,6 +241,8 @@
   Explains data-control choices for AI observability, including where data lives, how security boundaries are enforced, and deployment implications.
 - **2025-12-18** — [Brainstore makes AI observability at scale possible](<../evals-observability/monitoring/Brainstore makes AI observability at scale possible.md>) · `monitoring` · braintrust
   Benchmark-oriented note on Brainstore performance and why purpose-built storage is needed for high-volume AI observability workloads.
+- **2025-11-25** — [Building and Deploying Production‑Grade AI Agents: Cresta’s End‑to‑End Approach](<../agents/planning/Building and Deploying Production‑Grade AI Agents Cresta’s End‑to‑End Approach.md>) · `planning` · cresta
+  End-to-end guide to production AI agent deployment, including design, launch, monitoring, and operational controls.
 - **2025-11-19** — [50 Trillion Tokens Per Day: The State of Agent Environments](<../agents/computer-use/50 Trillion Tokens Per Day The State of Agent Environments.md>) · `computer-use` · fireworks
   Surveys the state of agent environments, emphasizing execution scale, sandboxing, and environment design.
 - **2025-11-18** — [Host overhead is killing your inference efficiency](<../inference/optimization/Host overhead is killing your inference efficiency.md>) · `optimization` · modal
@@ -261,8 +269,12 @@
   Describes resilient observability design for AI systems, including reliability considerations for storing, querying, and using production traces.
 - **2025-03-27** — [Introducing End-to-End OpenTelemetry Support in LangSmith](<../evals-observability/tracing/Introducing End-to-End OpenTelemetry Support in LangSmith.md>) · `tracing` · langchain
   Introduces end-to-end OpenTelemetry support in LangSmith for standardizing traces across AI application components.
+- **2025-03-20** — [Build vs. Buy: How Cresta Engineered Its Own Customer Data Access Solution](<../product-engineering/architecture/Build vs. Buy How Cresta Engineered Its Own Customer Data Access Solution.md>) · `architecture` · cresta
+  Engineering case study on building a customer data access layer, useful for understanding integration tradeoffs in enterprise AI products.
 - **2025-03-05** — [Build More Accurate AI Apps Through Fast Experimentation with Arize Phoenix, Langflow, and NVIDIA](<../evals-observability/evaluation/Build More Accurate AI Apps Through Fast Experimentation with Arize Phoenix, Langflow, and NVIDIA.md>) · `evaluation` · arize
   Shows how Arize Phoenix, Langflow, and NVIDIA can support fast experimentation loops for improving AI application accuracy.
+- **2025-03-04** — [Understanding Cresta’s Voice Platform - The Voice Stack](<../models/multimodal/Understanding Cresta’s Voice Platform - The Voice Stack.md>) · `multimodal` · cresta
+  Breaks down the components of a production voice AI stack, including telephony, speech, model, and orchestration layers.
 - **2025-02-25** — [Minions: embracing small LMs, shifting compute on-device, and cutting cloud costs in the process](<../models/reasoning/Minions embracing small LMs, shifting compute on-device, and cutting cloud costs in the process.md>) · `reasoning` · together
   Explores using small language models and on-device compute to reduce cloud inference costs.
 - **2025-02-24** — ['I paid for the whole GPU, I am going to use the whole GPU': A high-level guide to GPU utilization](<../inference/hardware/'I paid for the whole GPU, I am going to use the whole GPU' A high-level guide to GPU utilization.md>) · `hardware` · modal

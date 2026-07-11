@@ -1,6 +1,6 @@
 # product-engineering
 
-97 articles.
+103 articles.
 
 - **2026-07-10** — [AI-pilling our company: lessons learned](<case-studies/AI-pilling our company lessons learned.md>) · `case-studies` · sierra
   Internal adoption case study on spreading AI workflows through a company, including practical lessons for using agents and tools in day-to-day work.
@@ -58,6 +58,8 @@
   Explains PCI-compliant payment workflows for agents, focusing on secure action-taking and sensitive-data handling.
 - **2026-05-12** — [Meet the Voice Sommelier](<ux-patterns/Meet the Voice Sommelier.md>) · `ux-patterns` · sierra
   Explains voice-agent experience design, including brand voice selection, vocal cues, conversation design, and metrics for acceptance and satisfaction.
+- **2026-05-01** — [Designing the AI Agent Supervision Experience](<ux-patterns/Designing the AI Agent Supervision Experience.md>) · `ux-patterns` · cresta
+  Discusses UX and workflow design for supervising AI agents, including human oversight and intervention surfaces.
 - **2026-04-27** — [How LangSmith and LangChain OSS Help You Meet EU AI Act Requirements](<security/How LangSmith and LangChain OSS Help You Meet EU AI Act Requirements.md>) · `security` · langchain
   Connects LangSmith and LangChain OSS workflows to EU AI Act readiness, including observability, evaluation, governance, and auditability.
 - **2026-04-24** — [How we fixed prompt injection for all models on Fireworks](<security/How we fixed prompt injection for all models on Fireworks.md>) · `security` · fireworks
@@ -68,6 +70,8 @@
   Argues bot detection must move from 'bots vs. humans' to intent and behavior as AI agents fetch raw content without rendering pages: covers Web Bot Auth (HTTP message signatures) for crawler identification and private rate limiting for clients that no longer behave like browsers.
 - **2026-04-20** — [The AI engineering stack we built internally — on the platform we ship](<case-studies/The AI engineering stack we built internally — on the platform we ship.md>) · `case-studies` · cloudflare-ai
   Eleven-month buildout of Cloudflare's internal AI engineering stack on its own products: 3,683 users (93% of R&D), 47.95M AI requests and 241B tokens/month through AI Gateway, an MCP Server Portal with single OAuth, and merge requests nearly doubling from ~5,600 to 10,952/week.
+- **2026-04-15** — [Automation Discovery: Designing Systems to Extract Blueprints from Conversation Data](<architecture/Automation Discovery Designing Systems to Extract Blueprints from Conversation Data.md>) · `architecture` · cresta
+  Describes systems that mine conversation data to discover automation opportunities and generate process blueprints.
 - **2026-04-13** — [How to prepare for AI compliance and governance](<security/How to prepare for AI compliance and governance.md>) · `security` · braintrust
   Connects AI compliance and governance to engineering controls such as observability, audit trails, data boundaries, review workflows, and policy enforcement.
 - **2026-04-08** — [Scaling Managed Agents: Decoupling the brain from the hands](<architecture/Scaling Managed Agents Decoupling the brain from the hands.md>) · `architecture` · anthropic-engineering
@@ -142,6 +146,8 @@
   Behind-the-scenes account of OpenAI using Codex to build DevDay 2025: it implemented the 1990s VISCA protocol to control venue cameras, built an MCP server for stage lighting, and used Codex Cloud best-of-N to iterate Apps SDK demos like a beat pad in parallel.
 - **2025-09-11** — [Monte Carlo: Building Data + AI Observability Agents with LangGraph and LangSmith](<case-studies/Monte Carlo Building Data + AI Observability Agents with LangGraph and LangSmith.md>) · `case-studies` · langchain
   Monte Carlo case study on building data and AI observability agents with LangGraph and LangSmith.
+- **2025-09-08** — [Cresta’s Three Strategic Pillars of AI Agent Defense for Enterprise Security and Compliance](<security/Cresta’s Three Strategic Pillars of AI Agent Defense for Enterprise Security and Compliance.md>) · `security` · cresta
+  Frames AI agent defense around enterprise security, compliance, testing, and operational safeguards.
 - **2025-08-19** — [The rise of async programming](<architecture/The rise of async programming.md>) · `architecture` · braintrust
   Explains why asynchronous programming patterns matter for long-running AI workflows, background jobs, agent tasks, and responsive product experiences.
 - **2025-07-30** — [A Watermark for Large Language Models](<security/A Watermark for Large Language Models.md>) · `security` · arize
@@ -150,6 +156,10 @@
   Introduces Desktop Extensions (.dxt): a packaging format for one-click installation of local MCP servers in Claude Desktop, with manifest spec and distribution details.
 - **2025-04-24** — [How we use LLMs to build and scale Langfuse](<case-studies/How we use LLMs to build and scale Langfuse.md>) · `case-studies` · langfuse
   Case study of how Langfuse uses LLMs internally to build and scale the product, including practical workflows for AI-assisted engineering and operations.
+- **2025-03-20** — [Build vs. Buy: How Cresta Engineered Its Own Customer Data Access Solution](<architecture/Build vs. Buy How Cresta Engineered Its Own Customer Data Access Solution.md>) · `architecture` · cresta
+  Engineering case study on building a customer data access layer, useful for understanding integration tradeoffs in enterprise AI products.
+- **2025-03-18** — [Our Own Zero to One: Lessons Learned in Building The Brinks Home AI Agent](<case-studies/Our Own Zero to One Lessons Learned in Building The Brinks Home AI Agent.md>) · `case-studies` · cresta
+  Production case study on building an AI agent from zero to one, with lessons about scope, rollout, and operational constraints.
 - **2025-02-12** — [How 100X AI Uses Phoenix to Supercharge AI-Driven Troubleshooting](<case-studies/How 100X AI Uses Phoenix to Supercharge AI-Driven Troubleshooting.md>) · `case-studies` · arize
   Case study on using Phoenix traces and observability to improve AI-driven troubleshooting workflows in production.
 - **2025-01-16** — [Common pitfalls when building generative AI applications](<architecture/Common pitfalls when building generative AI applications.md>) · `architecture` · chip-huyen
@@ -196,6 +206,8 @@
   Interview with Chick-fil-A ML engineer Korri Jones on production ML work and applied model operations in a large business.
 - **2020-12-27** — [Machine learning is going real-time](<architecture/Machine learning is going real-time.md>) · `architecture` · chip-huyen
   Explains the shift from batch prediction to online ML, covering streaming features, low-latency inference, fresh feedback loops, and the architectural constraints behind real-time applications.
+- **2020-06-30** — [3 Key Concepts for Creating AI Product Experiences](<ux-patterns/3 Key Concepts for Creating AI Product Experiences.md>) · `ux-patterns` · cresta
+  Covers product-design principles for understandable AI experiences, including how users form trust and interpret system behavior.
 
 ## Also relevant (filed elsewhere)
 
@@ -215,6 +227,8 @@
   Discusses loop engineering for agents, focusing on the control loops that govern planning, action, observation, and refinement.
 - **2026-06-12** — [How to Choose the Right Sandbox for AI Agents](<../agents/computer-use/How to Choose the Right Sandbox for AI Agents.md>) · `computer-use` · langchain
   Guide to choosing an agent sandbox based on isolation, tool access, persistence, security, and operational constraints.
+- **2026-06-12** — [Agent Assist: What It Is, How It Works & How to Choose](<../agents/tool-use/Agent Assist What It Is, How It Works & How to Choose.md>) · `tool-use` · cresta
+  Explains real-time agent assist as a tool-augmented workflow that surfaces guidance during live interactions.
 - **2026-06-05** — [Give your agent its own computer](<../agents/computer-use/Give your agent its own computer.md>) · `computer-use` · langchain
   Argues for giving agents isolated computers or sandboxes so they can run tools while preserving control, safety, and reproducibility.
 - **2026-06-03** — [How to Build a Custom Agent Harness](<../agents/planning/How to Build a Custom Agent Harness.md>) · `planning` · langchain
@@ -241,6 +255,8 @@
   Explains how evals and observability help build stakeholder trust by making AI product quality measurable, reviewable, and improvable.
 - **2026-04-23** — [An update on recent Claude Code quality reports](<../evals-observability/monitoring/An update on recent Claude Code quality reports.md>) · `monitoring` · anthropic-engineering
   Follow-up on Claude Code quality regression reports: how the issues were traced, what infrastructure changes caused them, and monitoring added to catch recurrence.
+- **2026-04-21** — [AI to Human Agent Handoff Best Practices](<../agents/planning/AI to Human Agent Handoff Best Practices.md>) · `planning` · cresta
+  Covers best practices for AI-to-human handoffs, including when agents should escalate and how handoff context should be preserved.
 - **2026-04-20** — [Orchestrating AI Code Review at scale](<../agents/multi-agent/Orchestrating AI Code Review at scale.md>) · `multi-agent` · cloudflare-ai
   Deep dive into Cloudflare's CI-native AI code review built on OpenCode: up to seven specialized reviewer agents (security, performance, quality, docs, compliance) plus a coordinator that deduplicates findings and posts one structured review, run across tens of thousands of GitLab merge requests via a plugin architecture.
 - **2026-04-01** — [The Rage Clicks of LLM apps: High-Signal Production Monitoring for AI Customer Support Agents](<../evals-observability/monitoring/The Rage Clicks of LLM apps High-Signal Production Monitoring for AI Customer Support Agents.md>) · `monitoring` · langfuse
@@ -261,6 +277,8 @@
   Case study orchestrating a team of parallel Claude instances to build a working C compiler, covering task decomposition, shared state, and verification loops.
 - **2025-12-09** — [Building Langfuse's MCP Server: Code Reuse and Developer Experience](<../agents/tool-use/Building Langfuse's MCP Server Code Reuse and Developer Experience.md>) · `tool-use` · langfuse
   Engineering writeup on building the Langfuse MCP server, focusing on code reuse, developer experience, and exposing observability workflows to agents.
+- **2025-12-04** — [How We Built a State-of-the-Art Research Agent for Call Center Conversation Analytics](<../agents/planning/How We Built a State-of-the-Art Research Agent for Call Center Conversation Analytics.md>) · `planning` · cresta
+  Detailed build story for a research agent over conversation analytics, covering agent design and domain-specific workflow constraints.
 - **2025-11-25** — [Evals are a team sport: How we built Loop](<../evals-observability/testing/Evals are a team sport How we built Loop.md>) · `testing` · braintrust
   Describes collaborative eval workflows for teams, including feedback loops that turn production examples, review, and datasets into better AI behavior.
 - **2025-11-24** — [Turn production data into better AI with Loop](<../evals-observability/monitoring/Turn production data into better AI with Loop.md>) · `monitoring` · braintrust
@@ -275,6 +293,8 @@
   Explains why traditional A/B testing is too slow for AI products and argues for eval-driven experimentation loops that compare model, prompt, and product changes before rollout.
 - **2025-08-28** — [Claude Code vs Cursor: A Power-User’s Playbook](<../agents/tool-use/Claude Code vs Cursor A Power-User’s Playbook.md>) · `tool-use` · arize
   Compares Claude Code and Cursor from a power-user workflow perspective, focusing on coding-agent interfaces and usage patterns.
+- **2025-08-14** — [More than Just a Model: How Cresta Delivers Precise, Adaptable Summaries with Ultra-Low Latency](<../inference/serving/More than Just a Model How Cresta Delivers Precise, Adaptable Summaries with Ultra-Low Latency.md>) · `serving` · cresta
+  Explains production summarization architecture focused on low latency, adaptability, and precision rather than model choice alone.
 - **2025-08-06** — [Introducing Open SWE: An Open-Source Asynchronous Coding Agent](<../agents/tool-use/Introducing Open SWE An Open-Source Asynchronous Coding Agent.md>) · `tool-use` · langchain
   Introduces Open SWE as an open-source asynchronous coding agent and discusses its architecture for long-running coding tasks.
 - **2025-07-24** — [What is an AI code sandbox?](<../agents/computer-use/What is an AI code sandbox.md>) · `computer-use` · modal
@@ -343,3 +363,5 @@
   Argues that data scientists should consume self-serve infrastructure abstractions rather than raw Kubernetes, outlining platform requirements for development, deployment, and operational ownership.
 - **2021-09-11** — [Overcoming AI's Transparency Paradox](<../evals-observability/monitoring/Overcoming AI's Transparency Paradox.md>) · `monitoring` · arize
   Discusses AI transparency and explainability challenges, positioning observability as a way to understand opaque model behavior in production.
+- **2021-01-29** — [How We Reduced Our Labeling Cost by 10x](<../evals-observability/evaluation/How We Reduced Our Labeling Cost by 10x.md>) · `evaluation` · cresta
+  Explains how labeling costs were reduced through process and model-assisted annotation changes, relevant to eval dataset operations.

@@ -1,6 +1,6 @@
 # inference
 
-100 articles.
+103 articles.
 
 - **2026-07-10** — [Optimizing MiniMax M3 Sparse Attention on NVIDIA Blackwell](<optimization/Optimizing MiniMax M3 Sparse Attention on NVIDIA Blackwell.md>) · `optimization` · fireworks
   Deep dive into sparse-attention kernel optimization for MiniMax M3 on NVIDIA Blackwell hardware.
@@ -80,6 +80,8 @@
   Builds a low-latency voice-to-voice system with open models, covering speech pipeline latency and serving architecture.
 - **2025-10-24** — [How we made the fastest GPT-OSS on NVIDIA GPUs 60% faster](<optimization/How we made the fastest GPT-OSS on NVIDIA GPUs 60% faster.md>) · `optimization` · baseten
   Explains optimization work that made GPT-OSS inference faster on NVIDIA GPUs.
+- **2025-10-21** — [Engineering for Real-Time Voice Agent Latency](<serving/Engineering for Real-Time Voice Agent Latency.md>) · `serving` · cresta
+  Technical discussion of latency in real-time voice agents and the engineering constraints behind responsive spoken interaction.
 - **2025-10-16** — [2x faster inference with KV cache-aware routing](<optimization/2x faster inference with KV cache-aware routing.md>) · `optimization` · baseten
   Describes 2x faster inference through KV-cache-aware routing with NVIDIA Dynamo.
 - **2025-10-10** — [ATLAS runtime-learning accelerators for LLM inference](<optimization/ATLAS runtime-learning accelerators for LLM inference.md>) · `optimization` · together
@@ -88,6 +90,8 @@
   Reverse-engineering writeup for FlashAttention-4, explaining how kernel design choices affect attention performance.
 - **2025-09-17** — [A postmortem of three recent issues](<serving/A postmortem of three recent issues.md>) · `serving` · anthropic-engineering
   Postmortem of three overlapping serving-stack bugs that silently degraded Claude's output quality, and the detection and rollout changes made in response.
+- **2025-08-14** — [More than Just a Model: How Cresta Delivers Precise, Adaptable Summaries with Ultra-Low Latency](<serving/More than Just a Model How Cresta Delivers Precise, Adaptable Summaries with Ultra-Low Latency.md>) · `serving` · cresta
+  Explains production summarization architecture focused on low latency, adaptability, and precision rather than model choice alone.
 - **2025-08-07** — [How we run GPT OSS 120B at 500+ tokens per second on NVIDIA GPUs](<optimization/How we run GPT OSS 120B at 500+ tokens per second on NVIDIA GPUs.md>) · `optimization` · baseten
   Explains how to run GPT-OSS 120B at high token throughput on NVIDIA GPUs.
 - **2025-07-30** — [GPU Memory Snapshots: Supercharging sub-second startup](<optimization/GPU Memory Snapshots Supercharging sub-second startup.md>) · `optimization` · modal
@@ -110,6 +114,8 @@
   Covers inference acceleration on NVIDIA B200 GPUs and the hardware features relevant to model serving.
 - **2025-03-15** — [ThunderKittens Now Optimized for NVIDIA Blackwell GPUs](<hardware/ThunderKittens Now Optimized for NVIDIA Blackwell GPUs.md>) · `hardware` · together
   Describes ThunderKittens optimizations for NVIDIA Blackwell GPUs.
+- **2025-03-13** — [Understanding Cresta’s Voice Platform - ML Services, Inference Graphs, and Real-Time Intelligence](<serving/Understanding Cresta’s Voice Platform - ML Services, Inference Graphs, and Real-Time Intelligence.md>) · `serving` · cresta
+  Explains ML services, inference graphs, and real-time intelligence components in a production voice platform.
 - **2025-02-24** — ['I paid for the whole GPU, I am going to use the whole GPU': A high-level guide to GPU utilization](<hardware/'I paid for the whole GPU, I am going to use the whole GPU' A high-level guide to GPU utilization.md>) · `hardware` · modal
   Guide to GPU utilization for AI workloads, covering bottlenecks, throughput, batching, and cost-aware usage.
 - **2025-02-13** — [Together AI Achieves 90% Faster BF16 Training with NVIDIA Blackwell Platform and Together Kernel Collection](<hardware/Together AI Achieves 90% Faster BF16 Training with NVIDIA Blackwell Platform and Together Kernel Collection.md>) · `hardware` · together
@@ -271,6 +277,8 @@
   Describes Baseten inference-stack ideas presented around NVIDIA Dynamo and production serving.
 - **2025-12-28** — [Keeping 20,000 GPUs healthy](<../infra-platform/gpu-clusters/Keeping 20,000 GPUs healthy.md>) · `gpu-clusters` · modal
   Describes operational practices for keeping a large GPU fleet healthy, including failure detection and reliability management.
+- **2025-12-17** — [When Every Word Matters: Engineering Real-Time Multilingual Intelligence for Human Conversations](<../models/multimodal/When Every Word Matters Engineering Real-Time Multilingual Intelligence for Human Conversations.md>) · `multimodal` · cresta
+  Engineering guide to real-time multilingual intelligence for conversations, focusing on latency and speech-language quality.
 - **2025-11-03** — [Vercel code fixing with open models, speculative decoding, and RFT](<../product-engineering/case-studies/Vercel code fixing with open models speculative decoding and RFT.md>) · `case-studies` · fireworks
   Case study of improving Vercel code-fixing outputs with open models, speculative decoding, and reinforcement fine-tuning.
 - **2025-10-24** — [How we made the fastest GPT-OSS on NVIDIA GPUs 60% faster](<optimization/How we made the fastest GPT-OSS on NVIDIA GPUs 60% faster.md>) · `optimization` · baseten
@@ -287,6 +295,8 @@
   Evaluates model performance across cloud providers, focusing on latency, cost, quality, and provider-selection tradeoffs for production inference.
 - **2025-08-07** — [How we run GPT OSS 120B at 500+ tokens per second on NVIDIA GPUs](<optimization/How we run GPT OSS 120B at 500+ tokens per second on NVIDIA GPUs.md>) · `optimization` · baseten
   Explains how to run GPT-OSS 120B at high token throughput on NVIDIA GPUs.
+- **2025-07-28** — [Building Voice AI That Actually Works: Balancing Realistic Voices vs. Production-Ready Performance](<../models/multimodal/Building Voice AI That Actually Works Balancing Realistic Voices vs. Production-Ready Performance.md>) · `multimodal` · cresta
+  Explains tradeoffs in building production voice AI, balancing naturalness, latency, reliability, and operational constraints.
 - **2025-07-23** — [Transcribe speech 100x faster and 100x cheaper with open models](<../models/multimodal/Transcribe speech 100x faster and 100x cheaper with open models.md>) · `multimodal` · modal
   Shows how open speech models and batch execution can reduce transcription latency and cost at large scale.
 - **2025-07-22** — [Kimi QK-Clip and multi-head latent attention](<../models/reasoning/Kimi QK-Clip and multi-head latent attention.md>) · `reasoning` · fireworks
