@@ -229,6 +229,8 @@
   Argues that frontier reinforcement learning can be cost-effective with the right infrastructure and training-loop design.
 - **2026-03-12** — [Supporting privacy and compliance for EU teams](<../product-engineering/security/Supporting privacy and compliance for EU teams.md>) · `security` · braintrust
   Covers privacy and compliance requirements for EU AI teams, including data residency, controls, and deployment choices for observability data.
+- **2026-03-06** — [Cursor's Third Era: Cloud Agents](<../agents/computer-use/Cursor's Third Era Cloud Agents.md>) · `computer-use` · latent-space
+  Covers Cursor’s cloud-agent era and how coding agents move from local IDE assistance to async cloud work.
 - **2026-03-06** — [Inference providers vs. API routers](<../inference/serving/Inference providers vs. API routers.md>) · `serving` · fireworks
   Explains the operational difference between inference providers and API routers, including routing, control, and token provenance.
 - **2026-03-05** — [Every Agent Needs a Box — Aaron Levie, Box](<../agents/computer-use/Every Agent Needs a Box — Aaron Levie, Box.md>) · `computer-use` · latent-space
@@ -281,6 +283,8 @@
   Shows how Arize Phoenix, Langflow, and NVIDIA can support fast experimentation loops for improving AI application accuracy.
 - **2025-03-04** — [Understanding Cresta’s Voice Platform - The Voice Stack](<../models/multimodal/Understanding Cresta’s Voice Platform - The Voice Stack.md>) · `multimodal` · cresta
   Breaks down the components of a production voice AI stack, including telephony, speech, model, and orchestration layers.
+- **2025-02-28** — [Open Operator, Serverless Browsers and the Future of Computer-Using Agents](<../agents/computer-use/Open Operator, Serverless Browsers and the Future of Computer-Using Agents.md>) · `computer-use` · latent-space
+  Covers serverless browsers and open operator patterns for computer-using agents that need reliable browser execution.
 - **2025-02-25** — [Minions: embracing small LMs, shifting compute on-device, and cutting cloud costs in the process](<../models/reasoning/Minions embracing small LMs, shifting compute on-device, and cutting cloud costs in the process.md>) · `reasoning` · together
   Explores using small language models and on-device compute to reduce cloud inference costs.
 - **2025-02-24** — ['I paid for the whole GPU, I am going to use the whole GPU': A high-level guide to GPU utilization](<../inference/hardware/'I paid for the whole GPU, I am going to use the whole GPU' A high-level guide to GPU utilization.md>) · `hardware` · modal

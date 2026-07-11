@@ -1,6 +1,6 @@
 # rag-retrieval
 
-43 articles.
+45 articles.
 
 - **2026-07-07** — [Faster phrase search with shingled bloom filters in Brainstore](<search/Faster phrase search with shingled bloom filters in Brainstore.md>) · `search` · braintrust
   Explains faster phrase search over Brainstore data using shingled bloom filters, aimed at efficient trace and log search for AI observability.
@@ -28,6 +28,8 @@
   Explains how operational knowledge bases need to be structured for AI agents, with emphasis on grounding and retrieval readiness.
 - **2025-09-12** — [Understanding embeddings and reranking at scale](<search/Understanding embeddings and reranking at scale.md>) · `search` · fireworks
   Explains embeddings, reranking, and retrieval architecture patterns for production RAG systems.
+- **2025-08-19** — ["RAG is Dead, Context Engineering is King" — with Jeff Huber of Chroma](<pipelines/RAG is Dead, Context Engineering is King — with Jeff Huber of Chroma.md>) · `pipelines` · latent-space
+  Chroma interview arguing that context engineering changes how teams should think about RAG and retrieval systems.
 - **2025-08-06** — [Grounding Reality – How Cresta Tackles LLM Hallucinations in Enterprise AI](<pipelines/Grounding Reality – How Cresta Tackles LLM Hallucinations in Enterprise AI.md>) · `pipelines` · cresta
   Explains grounding strategies for reducing hallucinations in enterprise AI systems, with emphasis on knowledge and evaluation loops.
 - **2025-06-12** — [Your client code matters: 12x higher embedding throughput with Python and Rust](<embeddings/Your client code matters 12x higher embedding throughput with Python and Rust.md>) · `embeddings` · baseten
@@ -76,6 +78,8 @@
   Explains long-context retrieval models using Monarch Mixer.
 - **2024-01-01** — [Evaluate RAG with LLM Evals and Benchmarking](<pipelines/Evaluate RAG with LLM Evals and Benchmarking.md>) · `pipelines` · arize
   Workshop recap on evaluating RAG systems with LLM evals and benchmarking.
+- **2023-11-29** — [Notebooks = Chat++ and RAG = RecSys! — with Bryan Bischof of Hex Magic](<pipelines/Notebooks = Chat++ and RAG = RecSys! — with Bryan Bischof of Hex Magic.md>) · `pipelines` · latent-space
+  Connects notebooks, chat interfaces, RAG, and recommender-system thinking for data-oriented AI products.
 - **2023-11-08** — [Ingesting Data for Semantic Searches in a Production-Ready Way](<pipelines/Ingesting Data for Semantic Searches in a Production-Ready Way.md>) · `pipelines` · arize
   Explains production ingestion concerns for semantic search, including data preparation and retrieval pipeline reliability.
 - **2023-11-02** — [Deployment and inference for open source text embedding models](<embeddings/Deployment and inference for open source text embedding models.md>) · `embeddings` · baseten
@@ -125,6 +129,8 @@
   Example of hybrid search over embeddings, combining vector retrieval with MongoDB and a geospatial dataset.
 - **2024-07-25** — [Building A Generative AI Platform](<../product-engineering/architecture/Building A Generative AI Platform.md>) · `architecture` · chip-huyen
   Reference architecture for generative AI platforms covering context construction and RAG, guardrails, gateways and routers, caching, observability, orchestration, and tool/action layers.
+- **2024-06-11** — [How AI is eating Finance — with Mike Conover of Brightwave](<../product-engineering/case-studies/How AI is eating Finance — with Mike Conover of Brightwave.md>) · `case-studies` · latent-space
+  Interview on AI-native finance workflows, including retrieval, analysis, and product design for financial knowledge work.
 - **2024-04-29** — [How fine tuned LLMs power knowledge assist, summarization, and chat suggestions](<../models/fine-tuning/How fine tuned LLMs power knowledge assist, summarization, and chat suggestions.md>) · `fine-tuning` · cresta
   Explains how fine-tuned LLMs support knowledge assist, summarization, and chat suggestions in production workflows.
 - **2024-04-26** — [Beating proprietary models with a quick fine-tune](<../models/fine-tuning/Beating proprietary models with a quick fine-tune.md>) · `fine-tuning` · modal
@@ -137,6 +143,8 @@
   Walkthrough for building and deploying a RAG application with Pinecone Serverless and LangChain components.
 - **2023-11-08** — [Ingesting Data for Semantic Searches in a Production-Ready Way](<pipelines/Ingesting Data for Semantic Searches in a Production-Ready Way.md>) · `pipelines` · arize
   Explains production ingestion concerns for semantic search, including data preparation and retrieval pipeline reliability.
+- **2023-10-26** — [Powering your Copilot for Data – with Artem Keydunov of Cube.dev](<../product-engineering/architecture/Powering your Copilot for Data – with Artem Keydunov of Cube.dev.md>) · `architecture` · latent-space
+  Covers building a copilot for data with Cube.dev, including semantic layers and analytics-oriented AI architecture.
 - **2023-06-27** — [HyDE: Precise Zero-Shot Dense Retrieval without Relevance Labels](<search/HyDE Precise Zero-Shot Dense Retrieval without Relevance Labels.md>) · `search` · arize
   Summarizes HyDE for zero-shot dense retrieval and how hypothetical document generation can improve semantic search.
 - **2023-04-11** — [Building LLM applications for production](<../product-engineering/architecture/Building LLM applications for production.md>) · `architecture` · chip-huyen
