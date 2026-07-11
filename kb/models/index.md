@@ -69,5 +69,3 @@
   Overview of Anthropic Claude 3 model releases and capabilities, including model comparisons and implications for LLM application builders.
 - **2022-09-30** — [Arize AI + OpenAI](<../evals-observability/monitoring/Arize AI + OpenAI.md>) · `monitoring` · arize
   Introduces Arize support for monitoring OpenAI-powered applications, connecting hosted LLM usage with observability and performance analysis.
-- **2022-06-09** — [Can Reinforcement Learning Help Fix the Mental Health Crisis?](<../industry/trends/Can Reinforcement Learning Help Fix the Mental Health Crisis.md>) · `trends` · arize
-  Application-oriented discussion of reinforcement learning in mental health, useful mainly as industry context for AI use cases.

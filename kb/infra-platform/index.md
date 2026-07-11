@@ -45,14 +45,10 @@
   Architecture of Claude Managed Agents: decoupling the agent loop (the brain) from sandboxed tool execution (the hands) to scale hosted long-running sessions.
 - **2026-02-05** — [Quantifying infrastructure noise in agentic coding evals](<../evals-observability/evaluation/Quantifying infrastructure noise in agentic coding evals.md>) · `evaluation` · anthropic-engineering
   Quantifies how infrastructure flakiness (timeouts, container variance) injects noise into agentic coding evals, and methods to measure and control for it.
-- **2025-05-19** — [Arize AI Now Generally Available As Part of Azure Native Integrations](<../industry/announcements/Arize AI Now Generally Available As Part of Azure Native Integrations.md>) · `announcements` · arize
-  Announcement of Arize general availability through Azure Native Integrations, relevant to cloud deployment and procurement channels.
 - **2025-03-05** — [Build More Accurate AI Apps Through Fast Experimentation with Arize Phoenix, Langflow, and NVIDIA](<../evals-observability/evaluation/Build More Accurate AI Apps Through Fast Experimentation with Arize Phoenix, Langflow, and NVIDIA.md>) · `evaluation` · arize
   Shows how Arize Phoenix, Langflow, and NVIDIA can support fast experimentation loops for improving AI application accuracy.
 - **2024-11-01** — [Arize, Vertex AI API: Evaluation Workflows to Accelerate Generative App Development and AI ROI](<../evals-observability/evaluation/Arize, Vertex AI API Evaluation Workflows to Accelerate Generative App Development and AI ROI.md>) · `evaluation` · arize
   Describes Arize and Vertex AI API evaluation workflows for accelerating generative application development and measuring AI ROI.
-- **2024-01-26** — [Diving Into Enterprise Data Strategy With Samsung Research’s Prashanth Rajendran](<../industry/business/Diving Into Enterprise Data Strategy With Samsung Research’s Prashanth Rajendran.md>) · `business` · arize
-  Interview on enterprise data strategy with Samsung Research, relevant to organizational data infrastructure for AI systems.
 - **2023-10-26** — [AI ROI: Guide To Observability Value Statistics](<../evals-observability/monitoring/AI ROI Guide To Observability Value Statistics.md>) · `monitoring` · arize
   Frames AI observability value through ROI statistics, linking monitoring and model performance visibility to business outcomes.
 - **2022-12-22** — [Hugging Face + Arize: Partnership and Code Example](<../evals-observability/monitoring/Hugging Face + Arize Partnership and Code Example.md>) · `monitoring` · arize

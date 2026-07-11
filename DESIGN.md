@@ -148,15 +148,20 @@ by the agent already running in this repo:
 2. Codex follows `AGENTS.md` (and the mirror `.codex/skills/organize-kb/SKILL.md`, when
    available); Claude Code follows `.claude/skills/organize-kb/SKILL.md`. The workflow
    is the same: read `taxonomy.yaml`, process inbox files in batches (title + skim of
-   body), fill in the classification frontmatter, then run `scraper file` to move each
-   article to `kb/<topic>/<subtopic>/<Title>.md` and `scraper reindex` to regenerate
-   indexes.
+   body), skip low-signal junk with `scraper skip`, fill in classification frontmatter
+   for kept articles, then run `scraper file` to move each article to
+   `kb/<topic>/<subtopic>/<Title>.md` and `scraper reindex` to regenerate indexes.
 3. The agent commits. Anything it isn't confident about goes to `unclassified/` with a
    note — never silently wrong-binned.
 
-The mechanical halves stay in the CLI (`scraper file` validates against the taxonomy,
-handles filename sanitization/collisions and the state.db path mapping; `scraper reindex`
-is pure code) so classification quality is the *only* thing that depends on the agent.
+The mechanical halves stay in the CLI (`scraper skip` records intentional exclusions,
+`scraper file` validates against the taxonomy, handles filename sanitization/collisions
+and the state.db path mapping; `scraper reindex` is pure code) so triage/classification
+quality is the *only* thing that depends on the agent.
+
+Triage is intentionally strict: archive/tag/category/listing pages, promotions, pure
+company news, low-detail release notes, event listicles, broad business commentary,
+duplicates, off-topic pages, and too-shallow pages are skipped rather than filed.
 
 - **Daily volume is trivial** for this flow: ~5–15 new articles/day across 16 blogs, one
   short agent session (or a scheduled agent run) clears the inbox.
@@ -354,6 +359,7 @@ Notes:
 scraper discover [--source SLUG]     # dry-run: show what each tier finds, verify config
 scraper backfill [--source SLUG] [--since 2020-01-01]   # → kb/_inbox/
 scraper update   [--source SLUG]     # feeds + state diff; the daily job → kb/_inbox/
+scraper skip <inbox-file> --reason too-shallow  # remove junk from inbox, mark skipped
 scraper file <inbox-file>            # validate frontmatter vs taxonomy, move into topic tree
 scraper classify [...]               # OPTIONAL API-key accelerator (Haiku/Batches) for bulk backfill
 scraper reclassify --topic X         # after a taxonomy change: re-bin + move files

@@ -89,8 +89,6 @@
   Introduces Alyx 2.0 as an agent that plans over observability workflows, covering product design lessons from building a more capable AI analyst.
 - **2026-02-05** — [Building a C compiler with a team of parallel Claudes](<../agents/multi-agent/Building a C compiler with a team of parallel Claudes.md>) · `multi-agent` · anthropic-engineering
   Case study orchestrating a team of parallel Claude instances to build a working C compiler, covering task decomposition, shared state, and verification loops.
-- **2025-10-20** — [Arize AI Achieves ISO/IEC 27001 Certification](<../industry/announcements/Arize AI Achieves ISOIEC 27001 Certification.md>) · `announcements` · arize
-  Company announcement of Arize ISO/IEC 27001 certification, relevant as a security and compliance milestone for production AI observability.
 - **2025-09-22** — [Why we built the Responses API | OpenAI Developers](<../agents/tool-use/Why we built the Responses API OpenAI Developers.md>) · `tool-use` · openai-devs
   OpenAI's design rationale for the Responses API as an agentic loop unifying Chat Completions and Assistants: it preserves reasoning state across turns (+5% on TAUBench, better cache utilization) and emits multiple output items — tool calls, structured outputs, intermediate steps — not just the final message.
 - **2025-08-28** — [Claude Code vs Cursor: A Power-User’s Playbook](<../agents/tool-use/Claude Code vs Cursor A Power-User’s Playbook.md>) · `tool-use` · arize
@@ -101,31 +99,11 @@
   Anthropic's canonical guide to agent design patterns: when to use workflows (prompt chaining, routing, orchestrator-workers) versus autonomous agents, and why simple composable patterns beat frameworks.
 - **2024-12-04** — [AI Agent Workflows and Architectures Masterclass](<../agents/planning/AI Agent Workflows and Architectures Masterclass.md>) · `planning` · arize
   Introduces practical agent workflow and architecture patterns, emphasizing simple tool-calling loops and design choices over vague autonomy claims.
-- **2024-08-01** — [Arize AI: Support for EU Data Residency](<../industry/announcements/Arize AI Support for EU Data Residency.md>) · `announcements` · arize
-  Brief announcement of EU data residency support for Arize, relevant to enterprise compliance and regional data handling.
-- **2023-06-02** — [AI Ethical Issues Unraveled: Building a Fair, Transparent, and Responsible Future](<../industry/trends/AI Ethical Issues Unraveled Building a Fair, Transparent, and Responsible Future.md>) · `trends` · arize
-  Overview of AI ethics issues such as fairness, transparency, and accountability, framed for teams building and operating responsible AI systems.
 - **2023-05-17** — [Evaluating Model Fairness](<../evals-observability/evaluation/Evaluating Model Fairness.md>) · `evaluation` · arize
   Explains model fairness evaluation and how to assess bias and fairness risks in production systems.
 - **2022-09-22** — [The Death of Central ML Is Greatly Exaggerated](<../industry/trends/The Death of Central ML Is Greatly Exaggerated.md>) · `trends` · arize
   Argues that centralized ML teams remain important as organizations mature, covering organizational patterns for production ML work.
-- **2022-08-29** — [Arize Receives Certifications Validating Health Information Security for HIPAA Compliance](<../industry/announcements/Arize Receives Certifications Validating Health Information Security for HIPAA Compliance.md>) · `announcements` · arize
-  Compliance announcement describing Arize certifications for HIPAA-relevant health information security.
-- **2022-07-11** — [Can AI Be a Force for Good In Improving Diversity In Hiring?](<../industry/trends/Can AI Be a Force for Good In Improving Diversity In Hiring.md>) · `trends` · arize
-  Discusses AI in hiring and diversity, with emphasis on fairness, responsible deployment, and social impact risks.
-- **2022-05-03** — [Building the Future of AI-Powered Retail Starts With Trust](<../industry/trends/Building the Future of AI-Powered Retail Starts With Trust.md>) · `trends` · arize
-  Retail-focused discussion of AI adoption and why trust, monitoring, and responsible deployment matter for customer-facing AI systems.
-- **2021-12-14** — [Can AI Help Make Social Media More Accessible, Inclusive and Safe?](<../industry/trends/Can AI Help Make Social Media More Accessible, Inclusive and Safe.md>) · `trends` · arize
-  Examines AI applications for social media accessibility, inclusion, and safety, focusing on responsible deployment tradeoffs.
 - **2021-10-27** — [Best Practices In ML Observability for Monitoring, Mitigating and Preventing Fraud](<../evals-observability/monitoring/Best Practices In ML Observability for Monitoring, Mitigating and Preventing Fraud.md>) · `monitoring` · arize
   Best practices for fraud-model observability, covering monitoring, mitigation, and prevention workflows for production risk systems.
-- **2021-09-27** — [Arize AI Listed In 2021 Gartner Market Guide for AI Trust, Risk and Security Management (AI TRiSM)](<../industry/announcements/Arize AI Listed In 2021 Gartner Market Guide for AI Trust, Risk and Security Management (AI TRiSM).md>) · `announcements` · arize
-  Announcement that Arize was listed in Gartner's AI TRiSM market guide, relevant as market context for AI trust, risk, and security tooling.
 - **2021-09-11** — [Overcoming AI's Transparency Paradox](<../evals-observability/monitoring/Overcoming AI's Transparency Paradox.md>) · `monitoring` · arize
   Discusses AI transparency and explainability challenges, positioning observability as a way to understand opaque model behavior in production.
-- **2021-07-14** — [Unleashing the Power of a Diverse Team to Build More Ethical AI Technologies](<../industry/trends/Unleashing the Power of a Diverse Team to Build More Ethical AI Technologies.md>) · `trends` · arize
-  Discusses the role of diverse teams in building more ethical AI technologies and reducing deployment harms.
-- **2021-05-06** — [If Data Is The New Oil, What’s Happening To Its Precious New Source?](<../industry/trends/If Data Is The New Oil, What’s Happening To Its Precious New Source.md>) · `trends` · arize
-  Discusses data ethics and AI development in Africa, centered on governance, access, and responsible data use.
-- **2021-04-15** — [Coded Bias: An Insightful Look At AI, Algorithms And Their Risks To Society](<../industry/trends/Coded Bias An Insightful Look At AI, Algorithms And Their Risks To Society.md>) · `trends` · arize
-  Discussion of Coded Bias and societal risks from AI systems, centered on bias, accountability, and responsible AI deployment.

@@ -28,8 +28,17 @@ jq 'select(.date >= "2026-01-01")' kb/catalog.jsonl
 ## Classification
 
 For files in `_inbox/`, follow the root `AGENTS.md` organizing workflow. Use only
-topics/subtopics from `taxonomy.yaml`, set `classifier: codex` for Codex-classified
-items, then run:
+topics/subtopics from `taxonomy.yaml`.
+
+Triage before classification. Skip archive pages, promotions, low-detail release
+notes, company-news posts, event listicles, broad business commentary, duplicates,
+off-topic pages, and too-shallow pages with:
+
+```bash
+.venv/bin/scraper skip <inbox-file> --reason <reason>
+```
+
+For kept articles, set `classifier: codex`, then run:
 
 ```bash
 .venv/bin/scraper file --all

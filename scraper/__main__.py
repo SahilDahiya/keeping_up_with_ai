@@ -25,6 +25,17 @@ from .store import (
 app = typer.Typer(no_args_is_help=True, add_completion=False)
 
 _TIERS = {"feed": discover_feed, "sitemap": discover_sitemap}
+_SKIP_REASONS = {
+    "archive-page",
+    "promotion",
+    "company-news",
+    "release-note-lite",
+    "event-list",
+    "thought-leadership-lite",
+    "duplicate",
+    "too-shallow",
+    "off-topic",
+}
 
 
 def _sources(slug: Optional[str]) -> list[SourceConfig]:
@@ -51,6 +62,21 @@ def _classified_inbox_targets() -> list[Path]:
         if any(fm.get(key) not in (None, "") for key in ("topic", "summary", "classifier")):
             targets.append(candidate)
     return targets
+
+
+def _skip_targets(path: Optional[Path], pattern: Optional[str]) -> list[Path]:
+    if path and pattern:
+        raise typer.BadParameter("pass either PATH or --pattern, not both")
+    if path:
+        return [path]
+    if pattern:
+        base = Path(".") if "/" in pattern else INBOX_DIR
+        return sorted(base.glob(pattern))
+    return []
+
+
+def _repo_root() -> Path:
+    return Path(__file__).resolve().parent.parent
 
 
 def _process(source: SourceConfig, discovered: list[Discovered], fetcher: Fetcher,
@@ -182,6 +208,47 @@ def file(path: Optional[Path] = typer.Argument(None),
 
 
 @app.command()
+def skip(path: Optional[Path] = typer.Argument(None),
+         reason: str = typer.Option(..., "--reason", "-r", help="Why this item is junk"),
+         pattern: Optional[str] = typer.Option(None, "--pattern", "-p",
+                                               help="Inbox glob, e.g. 'arize--blog-category-*.md'")):
+    """Remove junk inbox/filed item(s), mark their URLs skipped, and preserve a skip reason."""
+    if reason not in _SKIP_REASONS:
+        allowed = ", ".join(sorted(_SKIP_REASONS))
+        raise typer.BadParameter(f"unknown reason {reason!r}; allowed: {allowed}")
+    targets = _skip_targets(path, pattern)
+    if not targets:
+        typer.echo("nothing to skip (pass a path or --pattern)")
+        raise typer.Exit(1)
+
+    state = State()
+    skipped = errors = filed_removed = 0
+    repo_root = _repo_root()
+    for target in targets:
+        try:
+            fm, _ = parse_frontmatter(target.read_text())
+            url, source = fm["url"], fm["source"]
+        except Exception as e:
+            typer.echo(f"  SKIP-ERROR {target}: {e}")
+            errors += 1
+            continue
+        state.mark(url, source, "skipped", skip_reason=reason)
+        try:
+            rel_parts = target.resolve().relative_to(repo_root).parts
+        except ValueError:
+            rel_parts = ()
+        if rel_parts and rel_parts[0] == "kb" and "_inbox" not in rel_parts:
+            filed_removed += 1
+        target.unlink()
+        typer.echo(f"  skipped: {target.name} ({reason})")
+        skipped += 1
+    typer.echo(f"{skipped} skipped, {errors} errors")
+    if filed_removed:
+        stats = rebuild_indexes()
+        typer.echo(f"reindexed: {stats}")
+
+
+@app.command()
 def reindex():
     """Rebuild per-topic index.md files, _sources/ views, and catalog.jsonl."""
     typer.echo(f"reindexed: {rebuild_indexes()}")
@@ -198,6 +265,11 @@ def report():
     if pending:
         typer.echo(f"classified ready to file: {len(_classified_inbox_targets())}")
         typer.echo("→ ask Codex to organize the KB inbox, or run Claude Code's /organize-kb skill")
+    skip_counts = state.skip_counts()
+    if skip_counts:
+        typer.echo("\nskip reasons:")
+        for row in skip_counts:
+            typer.echo(f"{row['reason']:24s} {row['n']}")
 
 
 if __name__ == "__main__":

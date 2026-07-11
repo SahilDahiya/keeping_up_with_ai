@@ -39,3 +39,6 @@ content_sha256`
   hand-edit; run `scraper reindex` after any manual file move.
 - If an article looks misfiled, fix its `topic`/`subtopic` frontmatter, move the file
   to the matching folder, and run `scraper reindex`.
+- Keep the KB tight. Skip archive pages, promotions, low-detail release notes,
+  company-news posts, event listicles, broad business commentary, duplicates,
+  off-topic pages, and too-shallow pages with `scraper skip`.

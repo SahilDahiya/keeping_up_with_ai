@@ -1,6 +1,6 @@
 # cloudflare-ai
 
-20 articles.
+19 articles.
 
 - **2026-07-01** — [Your site, your rules: new AI traffic options for all customers](<../product-engineering/security/Your site, your rules new AI traffic options for all customers.md>) · `security` · cloudflare-ai
   Cloudflare replaces the binary 'Block AI Bots' toggle with per-use-case controls — Search, Agent, and Training crawlers — for all customers including Free tier, and pushes bot operators to split multi-purpose crawlers so site owners can allow discovery without donating training data.
@@ -24,8 +24,6 @@
   Follow-up to Project Glasswing detailing Cloudflare's customer-zero defense architecture against frontier cyber models — which compress discovery, exploit-chain construction, and PoC generation — using Cloudforce One threat intel feeding WAF rules deployed network-wide in under 30 seconds (e.g. React2Shell pre-advisory).
 - **2026-06-05** — [Your AI bill is out of control. Cloudflare can fix it now.](<../infra-platform/cost/Your AI bill is out of control. Cloudflare can fix it now.md>) · `cost` · cloudflare-ai
   AI Gateway adds dollar-denominated spend limits plus a closed beta of identity-driven budgets and model routing via Cloudflare Access, so enterprises can attribute LLM spend per person/team (e.g. $5,000/month frontier models for engineering, $200 for interns) instead of one opaque shared API key.
-- **2026-06-04** — [VoidZero is joining Cloudflare](<../industry/announcements/VoidZero is joining Cloudflare.md>) · `announcements` · cloudflare-ai
-  VoidZero — the company behind Vite, Vitest, Rolldown, Oxc, and Vite+ — joins Cloudflare, with commitments that the tools stay MIT-licensed, vendor-agnostic, and community-led, mirroring the earlier Astro acquisition; notable AI angle is Cloudflare consolidating the JS toolchain under its developer platform.
 - **2026-05-28** — [How we built Cloudflare's data platform and an AI agent on top of it](<../product-engineering/architecture/How we built Cloudflare's data platform and an AI agent on top of it.md>) · `architecture` · cloudflare-ai
   How Cloudflare built Town Lake, a single-SQL-interface data platform on R2/Workers/Workflows unifying Postgres, ClickHouse, Kafka, and BigQuery sprawl (1B+ events/sec), and Skipper, an AI agent on top that answers plain-English questions with auditable queries and PII-aware governance.
 - **2026-05-19** — [Announcing Claude Managed Agents on Cloudflare](<../infra-platform/deployment/Announcing Claude Managed Agents on Cloudflare.md>) · `deployment` · cloudflare-ai

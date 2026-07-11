@@ -1,6 +1,6 @@
 # openai-devs
 
-20 articles.
+19 articles.
 
 - **2026-06-26** — [Making private MCP servers reachable without making them public | OpenAI Developers](<../product-engineering/security/Making private MCP servers reachable without making them public OpenAI Developers.md>) · `security` · openai-devs
   Engineering design of OpenAI's Secure MCP Tunnel: a customer-run open-source client beside a private MCP server opens outbound-only HTTPS to OpenAI, forwarding MCP requests (including streaming and auth flows) so ChatGPT/Codex can reach the server without public endpoints, VPNs, or third-party tunnels.
@@ -40,5 +40,3 @@
   OpenAI's design rationale for the Responses API as an agentic loop unifying Chat Completions and Assistants: it preserves reasoning state across turns (+5% on TAUBench, better cache utilization) and emits multiple output items — tool calls, structured outputs, intermediate steps — not just the final message.
 - **2025-09-12** — [Developer notes on the Realtime API | OpenAI Developers](<../models/releases/Developer notes on the Realtime API OpenAI Developers.md>) · `releases` · openai-devs
   Developer notes on the Realtime API GA and the gpt-realtime speech-to-speech model: beta-to-GA interface migration, new marin/cedar voices, and advice to rewrite prompts because instruction-following improved enough that literal instructions are now honored.
-- **2025-09-11** — [Hello, world! | OpenAI Developers](<../industry/announcements/Hello, world! OpenAI Developers.md>) · `announcements` · openai-devs
-  Launch post for the OpenAI Developers blog, positioned as engineering notes between documentation and changelog, debuting alongside the developer notes on the Realtime API GA.

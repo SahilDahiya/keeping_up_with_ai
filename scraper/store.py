@@ -52,6 +52,8 @@ def write_inbox(source_slug: str, article: Article) -> Path:
         "subtopic": None,
         "secondary_topics": [],
         "summary": None,
+        "triage": None,
+        "skip_reason": None,
         "source": source_slug,
         "url": article.url,
         "author": article.author,

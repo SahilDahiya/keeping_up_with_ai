@@ -141,36 +141,10 @@
   How Anthropic built Claude's Research feature on an orchestrator-worker multi-agent architecture, with prompting lessons, token economics, and eval methodology.
 - **2025-04-04** — [AI Benchmark Deep Dive: Gemini 2.5 and Humanity's Last Exam](<../models/benchmarks/AI Benchmark Deep Dive Gemini 2.5 and Humanity's Last Exam.md>) · `benchmarks` · arize
   Paper-reading recap on Gemini 2.5 and Humanity's Last Exam, focusing on benchmark interpretation and what modern evaluation results do and do not show.
-- **2025-03-04** — [Arize Release Notes: Labeling Queues, Expand/Collapse Rows in Trace Table](<../industry/announcements/Arize Release Notes Labeling Queues, ExpandCollapse Rows in Trace Table.md>) · `announcements` · arize
-  Arize release notes covering labeling queues and trace-table usability improvements.
-- **2025-02-20** — [Arize AI Raises $70M Series C to Build the Gold Standard for AI Evaluation & Observability](<../industry/business/Arize AI Raises $70M Series C to Build the Gold Standard for AI Evaluation & Observability.md>) · `business` · arize
-  Funding announcement for Arize's Series C, framing AI evaluation and observability as core infrastructure for production AI systems.
-- **2025-02-14** — [Arize Release Notes: Monitor Runtime, Create a Dataset from CSV, and More](<../industry/announcements/Arize Release Notes Monitor Runtime, Create a Dataset from CSV, and More.md>) · `announcements` · arize
-  Arize release notes covering monitor runtime, dataset creation from CSV, and related product updates.
-- **2024-12-30** — [Arize Phoenix: 2024 in Review](<../industry/announcements/Arize Phoenix 2024 in Review.md>) · `announcements` · arize
-  Year-in-review post summarizing Arize Phoenix product growth and observability features shipped during 2024.
-- **2024-12-19** — [Arize Release Notes: Prompt Hub, Managed Code Evaluators and More](<../industry/announcements/Arize Release Notes Prompt Hub, Managed Code Evaluators and More.md>) · `announcements` · arize
-  Arize release notes covering Prompt Hub, managed code evaluators, and evaluation workflow improvements.
-- **2024-12-05** — [Arize Release Notes: Copilot Enhancements, Experiment Projects, and More](<../industry/announcements/Arize Release Notes Copilot Enhancements, Experiment Projects, and More.md>) · `announcements` · arize
-  Arize release notes covering Copilot enhancements, experiment projects, and related evaluation workflow updates.
 - **2024-12-03** — [Building an AI Agent that Thrives in the Real World](<../agents/planning/Building an AI Agent that Thrives in the Real World.md>) · `planning` · arize
   Practical guidance for building production AI agents that survive real-world failures through monitoring, iteration, and reliability practices.
-- **2024-11-07** — [Arize Release Notes: New Copilot Skills, Local Explainability, and More.](<../industry/announcements/Arize Release Notes New Copilot Skills, Local Explainability, and More.md>) · `announcements` · arize
-  Arize release notes covering new Copilot skills, local explainability, and other model observability improvements.
-- **2024-10-24** — [Arize Release Notes: Test Tasks, Filter Experiments, and More](<../industry/announcements/Arize Release Notes Test Tasks, Filter Experiments, and More.md>) · `announcements` · arize
-  Arize release notes covering test tasks, experiment filtering, and evaluation workflow updates.
-- **2024-10-03** — [Arize Release Notes: Embeddings Tracing, Experiments Details, and More.](<../industry/announcements/Arize Release Notes Embeddings Tracing, Experiments Details, and More.md>) · `announcements` · arize
-  Arize release notes covering embeddings, tracing, experiment details, and observability workflow improvements.
 - **2024-09-30** — [Arize AI + MongoDB: Leveraging Agent Evaluation and Memory to Build Robust Agentic Systems](<../agents/memory-context/Arize AI + MongoDB Leveraging Agent Evaluation and Memory to Build Robust Agentic Systems.md>) · `memory-context` · arize
   Explains how Arize and MongoDB combine agent evaluation and memory patterns for more robust agentic systems.
-- **2024-09-19** — [Arize Release Notes: AI Search V2, Copilot Updates, and More](<../industry/announcements/Arize Release Notes AI Search V2, Copilot Updates, and More.md>) · `announcements` · arize
-  Arize release notes covering AI Search V2, Copilot updates, and related product improvements for observability workflows.
-- **2024-09-05** — [Arize Release Notes: Sep 5, 2024](<../industry/announcements/Arize Release Notes Sep 5, 2024.md>) · `announcements` · arize
-  Short Arize release notes entry for September 5, 2024, summarizing product updates.
-- **2024-08-24** — [Arize Release Notes: Aug 23, 2024](<../industry/announcements/Arize Release Notes Aug 23, 2024.md>) · `announcements` · arize
-  Short Arize release notes entry for August 23, 2024, summarizing product updates.
-- **2024-08-08** — [Arize Release Notes: Aug 8, 2024](<../industry/announcements/Arize Release Notes Aug 8, 2024.md>) · `announcements` · arize
-  Short Arize release notes entry for August 8, 2024, summarizing observability product updates.
 - **2024-07-24** — [DSPy Assertions: Computational Constraints for Self-Refining Language Model Pipelines](<../prompt-engineering/techniques/DSPy Assertions Computational Constraints for Self-Refining Language Model Pipelines.md>) · `techniques` · arize
   Explains DSPy assertions as computational constraints for self-refining language-model pipelines.
 - **2024-05-21** — [Arize AI Brings LLM Evaluation, Observability To Microsoft Azure AI Model Catalog](<../infra-platform/deployment/Arize AI Brings LLM Evaluation, Observability To Microsoft Azure AI Model Catalog.md>) · `deployment` · arize
@@ -189,13 +163,3 @@
   Explains embedding drift and how teams can measure changes in embedding distributions over time.
 - **2022-06-22** — [Deploying Models In An Evolving Housing Market](<../product-engineering/case-studies/Deploying Models In An Evolving Housing Market.md>) · `case-studies` · arize
   Case discussion on deploying models in a changing housing market and monitoring model behavior under shifting real-world conditions.
-- **2022-04-08** — [Eight Takeaways From The Industry’s Largest Event On Machine Learning Observability](<../industry/trends/Eight Takeaways From The Industry’s Largest Event On Machine Learning Observability.md>) · `trends` · arize
-  Event recap summarizing major themes from a machine-learning observability gathering.
-- **2021-09-28** — [Arize AI Raises $19 Million Series A As Organizations Move To Address ML Observability, the Missing Foundational Piece of ML infrastructure](<../industry/business/Arize AI Raises $19 Million Series A As Organizations Move To Address ML Observability, the Missing Foundational Piece of ML infrastructure.md>) · `business` · arize
-  Series A funding announcement positioning ML observability as foundational infrastructure for production machine learning.
-- **2021-04-19** — [Arize AI Partners with Algorithmia to Enable Better MLOps and Observability for Enterprises](<../industry/announcements/Arize AI Partners with Algorithmia to Enable Better MLOps and Observability for Enterprises.md>) · `announcements` · arize
-  Partnership announcement between Arize and Algorithmia focused on bringing ML observability into enterprise MLOps workflows.
-- **2021-02-08** — [Arize AI Partners with Spell to Bring ML Observability to the Spell Platform](<../industry/announcements/Arize AI Partners with Spell to Bring ML Observability to the Spell Platform.md>) · `announcements` · arize
-  Partnership announcement for integrating Arize ML observability with the Spell platform so teams can monitor models after deployment.
-- **2020-10-16** — [Arize AI and Paperspace Announce a Partnership to Bring Deep ML Observability Solutions to Data Science Teams](<../industry/announcements/Arize AI and Paperspace Announce a Partnership to Bring Deep ML Observability Solutions to Data Science Teams.md>) · `announcements` · arize
-  Partnership announcement between Arize and Paperspace to bring ML observability workflows to data science teams.

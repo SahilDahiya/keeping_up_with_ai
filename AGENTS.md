@@ -25,6 +25,8 @@ Prefer the repo virtualenv when present:
 .venv/bin/scraper discover --source anthropic-engineering
 .venv/bin/scraper update --source openai-devs --limit 5
 .venv/bin/scraper backfill --source modal --limit 20
+.venv/bin/scraper skip kb/_inbox/example.md --reason too-shallow
+.venv/bin/scraper skip --pattern 'arize--blog-category-*.md' --reason archive-page
 .venv/bin/scraper file --all
 .venv/bin/scraper reindex
 ```
@@ -37,26 +39,42 @@ Before a broad scrape, check for an existing scraper process and run a small
 ## Organizing `kb/_inbox`
 
 When the user asks to organize, classify, file, or clean the KB inbox, act as the
-classification stage:
+triage and classification stage:
 
 1. Read `kb/taxonomy.yaml`. Use only topics/subtopics defined there.
 2. List pending files with `find kb/_inbox -maxdepth 1 -type f -name '*.md'`.
 3. Process in batches of about 50-100 files unless the user asks for a specific
    size. For each article, title/frontmatter plus the first 40-80 lines is usually
    enough; read deeper only when ambiguous.
-4. Edit only classification frontmatter:
+4. Triage first. File only articles with durable AI engineering value:
+   - agents, evals, observability, inference, model behavior, RAG, prompt/context
+     engineering
+   - production architecture, deployment, security, cost, reliability
+   - concrete case studies with implementation lessons
+5. Skip low-signal items before classification:
+   - archive/category/tag/listing pages
+   - pure funding, hiring, awards, certifications, or partnership announcements
+   - generic product announcements without technical detail
+   - release notes that only list UI/product changes
+   - event/conference listicles
+   - broad AI ethics/business commentary without engineering takeaways
+   - duplicate, off-topic, or too-shallow pages
+6. Use `.venv/bin/scraper skip PATH --reason REASON` for skipped items. Valid reasons
+   are `archive-page`, `promotion`, `company-news`, `release-note-lite`, `event-list`,
+   `thought-leadership-lite`, `duplicate`, `too-shallow`, and `off-topic`.
+7. For articles that survive triage, edit only classification frontmatter:
    - `topic`
    - `subtopic`
    - `secondary_topics`
    - `summary`
    - `classifier`
-5. Set `classifier: codex` for classifications done by Codex. Leave existing
+8. Set `classifier: codex` for classifications done by Codex. Leave existing
    `classifier: claude` values alone unless reclassifying that article.
-6. Run `.venv/bin/scraper file --all` after each batch. It validates the taxonomy,
+9. Run `.venv/bin/scraper file --all` after each batch. It validates the taxonomy,
    moves valid articles into `kb/<topic>/<subtopic>/`, updates `state.db`, and
    rebuilds indexes if anything was filed.
-7. Fix rejected files and rerun the command.
-8. Verify with `.venv/bin/scraper report` and an inbox count.
+10. Fix rejected files and rerun the command.
+11. Verify with `.venv/bin/scraper report` and an inbox count.
 
 Classification judgment:
 
@@ -65,8 +83,9 @@ Classification judgment:
 - Use 0-2 `secondary_topics` in `topic/subtopic` form, only for genuinely useful
   cross-references.
 - Write concrete 1-2 sentence summaries. Avoid generic summaries like "Discusses AI."
-- Marketing or company-news posts still get classified, usually as
-  `industry/announcements` or `industry/business`.
+- A release or announcement is worth filing only if it contains engineering substance:
+  architecture, evals, model behavior, infrastructure, API design, reliability,
+  security, cost, or concrete production lessons.
 - If an article is truly unrelated or unclassifiable, use `topic: unclassified`,
   `subtopic: null`, and explain why in `summary`.
 
