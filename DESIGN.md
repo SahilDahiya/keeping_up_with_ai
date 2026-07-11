@@ -64,10 +64,14 @@ Per source, tiered — first tier that works wins; results are merged for backfi
 |------|-----------|----------|-------|
 | 1 | RSS/Atom feed | updates (+ recent backfill) | Cheapest; usually only last 10–50 posts |
 | 2 | `sitemap.xml` | backfill + weekly safety net | Full history, `lastmod` timestamps; filter URLs by blog path prefix (e.g. `/blog/`) |
-| 3 | HTML index pagination | last resort | Paginate the listing page, collect article links via CSS selector; Playwright if listing is client-rendered |
+| 3 | HTML index pagination | last resort | Paginate the listing page, collect article links via CSS selector. Currently needed by **exactly one source (modal.com, for deep backfill only)** — every other source is fully covered by tiers 1–2. |
 
 The discovery result is a list of `(url, published_hint, lastmod_hint)` tuples. Feeds also
 provide title/summary hints that are carried forward.
+
+**Verified coverage (2026-07-10):** all 16 sources are reachable via tier 1 and/or tier 2
+(see §3 table). 10 expose an RSS/Atom feed; 15 expose a sitemap; modal.com is the sole
+feed-only source. Tier 3 is therefore a Phase-2 nicety, not a Phase-1 dependency.
 
 ### 2.2 Plan
 
@@ -181,10 +185,10 @@ sources:
   - slug: anthropic-engineering
     name: Anthropic Engineering
     home: https://www.anthropic.com/engineering
+    sitemap: https://www.anthropic.com/sitemap.xml   # verified; no feed exposed
     include_prefixes: ["/engineering/"]
-    discovery: [feed, sitemap]        # tiers to try, in order
-    render: playwright                # expected bot protection
-    tags: [agents, llm-vendors]
+    discovery: [sitemap]              # tiers to try, in order
+    tags: [agents, llm-vendors]       # render defaults to http (no JS needed)
 
   - slug: latent-space
     name: Latent Space
@@ -194,32 +198,62 @@ sources:
     tags: [podcast, newsletter]
 ```
 
-Expected mechanism per source (educated defaults — **autodiscovery verifies each at
-first run**, and the run report flags any source where discovery found nothing):
+Mechanism per source — **verified 2026-07-10** by probing each site (feed autodiscovery,
+`robots.txt` → sitemap, and common feed paths). All URLs below returned `200` with an
+XML content-type. The run report still flags any source where discovery later returns
+nothing (feeds move, sites get redesigned).
 
-| Source | Platform (expected) | Update path | Backfill path | Render |
+| Source | Update feed (verified) | Backfill (verified) | Filter needed | Render |
 |---|---|---|---|---|
-| sierra.ai/blog/engineering | Next.js custom | sitemap | sitemap | playwright likely |
-| cresta.com/blog | WordPress | `/feed/` | wp-sitemap | http |
-| baseten.co/blog | Next.js/headless CMS | sitemap | sitemap | maybe |
-| anthropic.com/engineering | Next.js custom | sitemap | sitemap | playwright likely |
-| developers.openai.com/blog | custom | rss (autodiscover) | sitemap | http |
-| blog.cloudflare.com/tag/ai/ | Ghost | `/tag/ai/rss/` | tag pagination | http |
-| fireworks.ai/blog | Next.js | sitemap | sitemap | maybe |
-| together.ai/blog | Webflow-ish | sitemap | sitemap | http |
-| modal.com/blog | custom | sitemap | sitemap | http |
-| braintrust.dev/blog | Next.js | sitemap | sitemap | maybe |
-| langfuse.com/blog | Nextra | autodiscover | sitemap | http |
-| blog.langchain.com | Ghost | `/rss/` | sitemap | http |
-| arize.com/blog | WordPress | `/blog/feed/` | wp-sitemap | http |
-| simonwillison.net | Django (custom) | `/atom/everything/` | archive pages / sitemap | http |
-| huyenchip.com/blog | Jekyll | `/feed.xml` | sitemap | http |
-| latent.space | Substack | `/feed` | `/archive` + sitemap | http |
+| sierra.ai/blog/engineering | `sierra.ai/rss.xml` | `sierra.ai/sitemap.xml` | **yes** — feed is site-wide; keep `/blog/` (engineering subset, see note) | http |
+| cresta.com/blog | — (none exposed) | `cresta.com/sitemap.xml` | **yes** — multilingual `urlset`; keep `/blog/`, drop `/es`, `/de` & hreflang dupes | http |
+| baseten.co/blog | — (none exposed) | `www.baseten.co/sitemap.xml` | keep `/blog/` prefix | http |
+| anthropic.com/engineering | — (none exposed) | `www.anthropic.com/sitemap.xml` (**25** `/engineering/` URLs) | keep `/engineering/` | http ✓ (no JS needed) |
+| developers.openai.com/blog | `developers.openai.com/rss.xml` | `developers.openai.com/sitemap-index.xml` | keep `/blog/` | http |
+| blog.cloudflare.com/tag/ai/ | `blog.cloudflare.com/tag/ai/rss` | tag feed pagination (`/tag/ai/rss` + `?page=`) | AI tag only (by design) | http |
+| fireworks.ai/blog | — (none exposed) | `fireworks.ai/sitemap.xml` | keep `/blog/` | http |
+| together.ai/blog | `www.together.ai/blog/rss.xml` | `www.together.ai/sitemap.xml` | keep `/blog/` | http |
+| modal.com/blog | `modal.com/blog/atom.xml` | **feed only — no sitemap** (see note) | — | http |
+| braintrust.dev/blog | — (none exposed) | `www.braintrust.dev/sitemap.xml` | keep `/blog/` | http |
+| langfuse.com/blog | — (none exposed) | `langfuse.com/sitemap.xml` | keep `/blog/` | http |
+| blog.langchain.com | `blog.langchain.com/rss.xml` | `blog.langchain.com/sitemap.xml` (Ghost `sitemap-posts.xml`) | — | http |
+| arize.com/blog | `arize.com/feed/` | `arize.com/sitemap_index.xml` (WP) | keep `/blog/` | http |
+| simonwillison.net | `simonwillison.net/atom/everything/` | `simonwillison.net/sitemap.xml` (**16,746 URLs**) | see note | http |
+| huyenchip.com/blog | `huyenchip.com/feed.xml` | `huyenchip.com/sitemap.xml` | keep `/blog/` | http |
+| latent.space | `www.latent.space/feed` | `www.latent.space/sitemap.xml` | — | http |
 
 Notes:
-- **Cloudflare tag feed** covers only the AI tag, as requested — not the whole firehose.
-- **Simon Willison** is high-volume (posts + link blog + TILs). Start with everything;
-  a `min_words` or entry-type filter per source is a knob in YAML if it drowns the KB.
+- **No Playwright is needed for any of the 16.** Discovery relies entirely on XML
+  feeds/sitemaps (served as static XML), and article HTML for the "custom Next.js" sites
+  (sierra, anthropic, baseten, fireworks, braintrust) fetched over plain HTTP returned
+  full server-rendered content in spot checks. `render: playwright` stays in the config
+  schema as a per-source escape hatch, but ships **off**. Re-evaluate only if a specific
+  source's extraction comes back empty.
+- **6 of 16 expose no update feed** (cresta, baseten, anthropic, fireworks, braintrust,
+  langfuse). For these, "update" = re-fetch the sitemap and diff against `state.db` using
+  `lastmod`. Sitemaps are cheap (one request) so a daily sitemap diff is fine; these
+  sources simply skip the feed tier.
+- **Feeds are excerpt-only.** Verified: `blog.langchain.com/rss.xml` has no
+  `content:encoded`. So the pipeline **always fetches the full article page** and never
+  stores the feed body — feeds are used only as a URL+date discovery source, same role as
+  sitemaps. (Where a feed *does* carry full content, that's a free bonus we can use to skip
+  a fetch, but the design never depends on it.)
+- **modal.com is the one weak spot:** no sitemap (`/sitemap.xml` → 404), only
+  `/blog/atom.xml` which carries just recent posts. Update coverage is fine; **deep
+  backfill isn't possible from the feed alone.** Phase-2 fallback for modal only: paginate
+  the `/blog` HTML index for older links. Accept shallow history until then.
+- **sierra** `rss.xml` is the whole company blog, not just engineering. The `/blog/engineering`
+  URL the user gave is a *view*, not a separate path — individual posts live at
+  `/blog/<slug>`. Start by keeping all `/blog/` posts (the blog is small and AI-focused);
+  if non-engineering marketing posts intrude, add a per-source category/keyword filter.
+- **cresta** sitemap includes `/es`, `/de` locale trees and `hreflang` alternate entries.
+  Filter to canonical English `/blog/` URLs and de-dupe.
+- **Cloudflare** tag feed covers only the AI tag, as requested — not the whole firehose.
+  Backfill uses the paginated tag RSS rather than the site-wide sitemap.
+- **Simon Willison** is very high-volume — the sitemap lists **16,746 URLs** (blog posts +
+  link-blog "blogmarks" + quotations + TILs). This one source would dominate the KB.
+  Decision for Phase 1: ingest **`/YYYY/` blog entries + TILs only** via a URL-pattern
+  filter, and/or `--since 2023-01-01`, skipping the link-blog firehose. Both are YAML knobs.
 - **Latent Space** is Substack: feed covers essays and podcast episodes (episode pages
   include full show notes, which extract fine).
 
@@ -283,10 +317,12 @@ tests/               # extraction fixtures: saved HTML → expected markdown, pe
 ## 6. Phased plan
 
 1. **Phase 1 — MVP (feeds + sitemaps, http-only).** Engine + `sources.yaml` + KB writer
-   + indexes. Onboard the ~12 sources that don't need JS rendering. Daily update job.
-2. **Phase 2 — Backfill + hard sites.** Sitemap backfill for all sources; Playwright
-   path for the Next.js/bot-protected ones; extraction-quality passes (code blocks,
-   authors) per source; `scraper report`.
+   + indexes. Onboard **all 16 sources** — verified reachable over plain HTTP with no JS
+   rendering — using the feed/sitemap URLs in §3. Daily update job. (simonwillison.net
+   ingests filtered/`--since`-bounded; modal.com is feed-depth-limited.)
+2. **Phase 2 — Deep backfill + quality.** Full sitemap backfill; modal.com HTML-index
+   pagination (the one tier-3 case); extraction-quality passes (code blocks, authors)
+   per source; `scraper report`.
 3. **Phase 3 — Research ergonomics (optional).** FTS5 index, per-week digest generation
    ("what's new this week across the KB"), embeddings if grep ever falls short.
 
@@ -294,19 +330,22 @@ tests/               # extraction fixtures: saved HTML → expected markdown, pe
 
 ## 7. Risks & open questions
 
-- **Bot protection (Cloudflare/Vercel challenges)** on anthropic.com and others may block
-  plain HTTP; Playwright with a real Chromium usually passes, but if a source hard-blocks,
-  the fallback is feed-only coverage for it (accept shallow history) — flagged in the run
-  report either way.
-- **This remote environment's network policy currently blocks all 16 blog domains**
-  (CONNECT 403 at the proxy — verified during design). Implementation and the scheduled
-  job need either an updated environment network policy, GitHub Actions, or a local run.
-  The design assumes nothing about where it runs.
-- **Feed history depth varies** — backfill must not rely on feeds; sitemap is the
-  authority for the past.
-- **KB size in git**: full backfill of simonwillison.net is likely 10k+ files. Decide at
-  Phase 2 whether to cap backfill depth per source (e.g. `--since 2022-01-01`) or split
-  `kb/` into its own repo.
+- **Bot protection** — *not observed on any of the 16 as of 2026-07-10.* All feeds,
+  sitemaps, and spot-checked article pages returned `200` over plain HTTP. Risk is future
+  drift (a site adds a Cloudflare/Vercel challenge); mitigation is the `render: playwright`
+  per-source escape hatch already in the schema, flagged by the run report if a fetch
+  starts coming back empty.
+- **Environment / runtime networking.** Earlier design work ran in a sandbox whose proxy
+  blocked these domains (CONNECT 403); the current dev machine reaches all 16 fine. The
+  scheduled job still needs egress to these domains wherever it runs — GitHub Actions
+  (unrestricted egress) is the recommended host for the daily job. The design assumes
+  nothing about where it runs.
+- **Feed history depth varies / 6 sources have no feed** — backfill must not rely on
+  feeds; the sitemap is the authority for the past. modal.com has neither a deep feed nor
+  a sitemap (tier-3 pagination in Phase 2).
+- **KB size in git**: simonwillison.net's sitemap alone is **16,746 URLs**. Phase 1 ships
+  a URL-pattern + `--since` filter for it (blog posts + TILs, not the link-blog). Revisit
+  at Phase 2 whether the whole `kb/` tree should split into its own repo / git-lfs.
 - **Content updates**: re-fetching everything to detect silent edits is wasteful; we rely
   on sitemap `lastmod` + feed `updated`, accepting that some silent edits are missed.
 ```
