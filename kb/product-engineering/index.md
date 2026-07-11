@@ -1,6 +1,6 @@
 # product-engineering
 
-115 articles.
+117 articles.
 
 - **2026-07-10** — [AI-pilling our company: lessons learned](<case-studies/AI-pilling our company lessons learned.md>) · `case-studies` · sierra
   Internal adoption case study on spreading AI workflows through a company, including practical lessons for using agents and tools in day-to-day work.
@@ -22,6 +22,8 @@
   Engineering design of OpenAI's Secure MCP Tunnel: a customer-run open-source client beside a private MCP server opens outbound-only HTTPS to OpenAI, forwarding MCP requests (including streaming and auth flows) so ChatGPT/Codex can reach the server without public endpoints, VPNs, or third-party tunnels.
 - **2026-06-23** — [Mastering remote engineering work from your phone | OpenAI Developers](<ux-patterns/Mastering remote engineering work from your phone OpenAI Developers.md>) · `ux-patterns` · openai-devs
   Power-user field guide to Codex Remote in the ChatGPT mobile app, framing the phone as a control plane for agents running on your own machines: worktrees, goals, side chats, inline code review, queued vs. steering prompts, and command-approval security controls.
+- **2026-06-22** — [Red-Teaming after Mythos — Zico Kolter & Matt Fredrikson, Gray Swan](<security/Red-Teaming after Mythos — Zico Kolter & Matt Fredrikson, Gray Swan.md>) · `security` · latent-space
+  Gray Swan interview on red-teaming frontier models after Mythos, with lessons for AI security evaluation.
 - **2026-06-18** — [Build your own vulnerability harness](<security/Build your own vulnerability harness.md>) · `security` · cloudflare-ai
   How Cloudflare grew a ~450-line security-audit skill into a model-agnostic, fleet-wide vulnerability-scanning harness: parallel recon agents, per-attack-class Hunter agents, adversarial validators, schema-checked findings.json, and independent re-verification, with different models cross-testing discovery vs. validation.
 - **2026-06-16** — [Why Fleet Has General Purpose Chat and Specialized Agents](<architecture/Why Fleet Has General Purpose Chat and Specialized Agents.md>) · `architecture` · langchain
@@ -172,6 +174,8 @@
   Case study on using Phoenix traces and observability to improve AI-driven troubleshooting workflows in production.
 - **2025-02-11** — [The AI Architect — Bret Taylor](<architecture/The AI Architect — Bret Taylor.md>) · `architecture` · latent-space
   Interview with Bret Taylor on AI architecture, product strategy, and how agentic systems change software design.
+- **2025-02-01** — [The Agent Reasoning Interface: o1/o3, Claude 3, ChatGPT Canvas, Tasks, and Operator — with Karina Nguyen of OpenAI](<ux-patterns/The Agent Reasoning Interface o1o3, Claude 3, ChatGPT Canvas, Tasks, and Operator — with Karina Nguyen of OpenAI.md>) · `ux-patterns` · latent-space
+  Karina Nguyen interview on the agent reasoning interface across o1/o3, Canvas, Tasks, and Operator.
 - **2025-01-16** — [Common pitfalls when building generative AI applications](<architecture/Common pitfalls when building generative AI applications.md>) · `architecture` · chip-huyen
   Covers common generative-AI application pitfalls, including overusing LLMs, confusing product problems with model failures, premature framework complexity, and weak evaluation/product iteration.
 - **2024-11-13** — [LLM Product Development for Product Managers](<ux-patterns/LLM Product Development for Product Managers.md>) · `ux-patterns` · langfuse
@@ -357,6 +361,8 @@
   Deep dive on Claude Code as a terminal agent, including workflows, tool use, and coding-agent product design.
 - **2025-04-20** — [How to think about agent frameworks](<../agents/planning/How to think about agent frameworks.md>) · `planning` · langchain
   Framework for evaluating agent frameworks by abstraction level, control, durability, observability, and fit to production workflows.
+- **2025-04-03** — [The Creators of Model Context Protocol](<../agents/tool-use/The Creators of Model Context Protocol.md>) · `tool-use` · latent-space
+  Interview with the creators of Model Context Protocol covering standard tool/context interfaces for agents.
 - **2025-03-28** — [The Agent Network — Dharmesh Shah](<../agents/multi-agent/The Agent Network — Dharmesh Shah.md>) · `multi-agent` · latent-space
   Dharmesh Shah interview on agent networks and how agents can coordinate across company workflows.
 - **2025-03-07** — [Prompt Management from First Principles](<../prompt-engineering/techniques/Prompt Management from First Principles.md>) · `techniques` · arize
@@ -377,6 +383,8 @@
   Covers Bolt.new and flow engineering for code agents, including product lessons from rapid agentic coding growth.
 - **2024-12-02** — [WireGuard at Modal: Static IPs for serverless containers](<../infra-platform/deployment/WireGuard at Modal Static IPs for serverless containers.md>) · `deployment` · modal
   Explains static IP support for serverless containers using WireGuard, relevant to secure networked AI deployments.
+- **2024-11-15** — [Agents @ Work: Lindy.ai](<../agents/planning/Agents @ Work Lindy.ai.md>) · `planning` · latent-space
+  Lindy interview on agents at work and the product/workflow design of general-purpose office agents.
 - **2024-11-11** — [Agents @ Work: Dust.tt](<../agents/planning/Agents @ Work Dust.tt.md>) · `planning` · latent-space
   Dust interview on agents at work, including enterprise deployment patterns and workflow-specific agents.
 - **2024-11-11** — [How to Improve LLM Safety and Reliability](<../evals-observability/testing/How to Improve LLM Safety and Reliability.md>) · `testing` · arize
@@ -399,6 +407,8 @@
   Explains regression testing with LangSmith for preventing LLM application quality regressions during prompt, model, or code changes.
 - **2024-04-30** — [CI-CD for AI model deployments](<../infra-platform/deployment/CI-CD for AI model deployments.md>) · `deployment` · baseten
   Covers CI/CD practices for AI model deployments, including versioning, release flow, and operational safety.
+- **2024-04-19** — [High Agency Pydantic > VC Backed Frameworks — with Jason Liu of Instructor](<../prompt-engineering/structured-output/High Agency Pydantic VC Backed Frameworks — with Jason Liu of Instructor.md>) · `structured-output` · latent-space
+  Jason Liu interview on Instructor, Pydantic-first structured output, and pragmatic framework design.
 - **2024-04-17** — [Eval feedback loops](<../evals-observability/evaluation/Eval feedback loops.md>) · `evaluation` · braintrust
   Explains eval feedback loops where production observations and human review continuously improve prompts, datasets, and model behavior.
 - **2024-03-24** — [Trace complex LLM applications with the Langfuse decorator (Python)](<../evals-observability/tracing/Trace complex LLM applications with the Langfuse decorator (Python).md>) · `tracing` · langfuse
@@ -415,6 +425,8 @@
   Introduces an AI proxy pattern for routing model calls across providers while centralizing logging, credentials, access control, and production visibility.
 - **2023-10-10** — [Multimodality and Large Multimodal Models (LMMs)](<../models/multimodal/Multimodality and Large Multimodal Models (LMMs).md>) · `multimodal` · chip-huyen
   Explains large multimodal model architecture and training patterns, modality fusion, data challenges, and product capabilities unlocked by image, text, audio, and video models.
+- **2023-09-29** — [Building the Foundation Model Ops Platform — with Raza Habib of Humanloop](<../evals-observability/evaluation/Building the Foundation Model Ops Platform — with Raza Habib of Humanloop.md>) · `evaluation` · latent-space
+  Humanloop interview on foundation-model operations, prompt/eval workflows, and production LLM iteration.
 - **2023-09-12** — [It's time to build reliable AI](<../evals-observability/evaluation/It's time to build reliable AI.md>) · `evaluation` · braintrust
   Early argument for reliable AI systems built around evals, logging, feedback loops, and engineering practices rather than ad hoc demos.
 - **2023-08-22** — [Cursor.so: The AI-first Code Editor — with Aman Sanger of Anysphere](<../agents/computer-use/Cursor.so The AI-first Code Editor — with Aman Sanger of Anysphere.md>) · `computer-use` · latent-space

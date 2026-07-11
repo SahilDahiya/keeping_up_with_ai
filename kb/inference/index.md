@@ -1,6 +1,6 @@
 # inference
 
-110 articles.
+113 articles.
 
 - **2026-07-10** — [Optimizing MiniMax M3 Sparse Attention on NVIDIA Blackwell](<optimization/Optimizing MiniMax M3 Sparse Attention on NVIDIA Blackwell.md>) · `optimization` · fireworks
   Deep dive into sparse-attention kernel optimization for MiniMax M3 on NVIDIA Blackwell hardware.
@@ -108,6 +108,8 @@
   Explains optimizations for running FLUX.1-dev faster, including inference configuration and image-model serving tradeoffs.
 - **2025-06-14** — [3D FireOptimizer: Automating the Multi-Dimensional Tradeoffs in LLM Serving](<serving/3D FireOptimizer Automating the Multi-Dimensional Tradeoffs in LLM Serving.md>) · `serving` · fireworks
   Explains multi-dimensional optimization for LLM serving, balancing latency, cost, throughput, and quality tradeoffs.
+- **2025-06-13** — [The Shape of Compute — with Chris Lattner for Modular](<hardware/The Shape of Compute — with Chris Lattner for Modular.md>) · `hardware` · latent-space
+  Chris Lattner interview on the shape of compute and how AI systems should map to future hardware/software stacks.
 - **2025-06-05** — [Accurate KV Cache Quantization with Outlier Tokens Tracing](<quantization/Accurate KV Cache Quantization with Outlier Tokens Tracing.md>) · `quantization` · arize
   Summarizes research on KV-cache quantization with outlier token tracing to reduce LLM inference memory cost while preserving output quality.
 - **2025-06-05** — [Model-Preserving Adaptive Rounding with YAQA](<quantization/Model-Preserving Adaptive Rounding with YAQA.md>) · `quantization` · together
@@ -206,12 +208,16 @@
   Introduces Flash-Decoding for efficient long-context inference.
 - **2023-09-15** — [NVIDIA A10 vs A100 GPUs for LLM and Stable Diffusion inference](<hardware/NVIDIA A10 vs A100 GPUs for LLM and Stable Diffusion inference.md>) · `hardware` · baseten
   Compares NVIDIA A10 and A100 GPUs for LLM and Stable Diffusion inference workloads.
+- **2023-09-14** — [Doing it the Hard Way: Making the AI engine and language 🔥 of the future — with Chris Lattner of Modular](<optimization/Doing it the Hard Way Making the AI engine and language 🔥 of the future — with Chris Lattner of Modular.md>) · `optimization` · latent-space
+  Modular interview on building AI engines and languages for high-performance AI systems.
 - **2023-09-11** — [Medusa: Simple framework for accelerating LLM generation with multiple decoding heads](<optimization/Medusa Simple framework for accelerating LLM generation with multiple decoding heads.md>) · `optimization` · together
   Introduces Medusa, a multi-decoding-head framework for accelerating LLM generation.
 - **2023-08-30** — [SDXL inference in under 2 seconds](<optimization/SDXL inference in under 2 seconds.md>) · `optimization` · baseten
   Guide to Stable Diffusion XL inference optimization for sub-2-second image generation.
 - **2023-08-29** — [Speed, Python: Pick Two. How CUDA Graphs Enable Fast Python Code for Deep Learning](<optimization/Speed, Python Pick Two. How CUDA Graphs Enable Fast Python Code for Deep Learning.md>) · `optimization` · fireworks
   Explains how CUDA Graphs reduce Python overhead for fast deep-learning execution.
+- **2023-08-10** — [LLMs Everywhere: Running 70B models in browsers and iPhones using MLC — with Tianqi Chen of CMU / OctoML](<optimization/LLMs Everywhere Running 70B models in browsers and iPhones using MLC — with Tianqi Chen of CMU OctoML.md>) · `optimization` · latent-space
+  MLC interview on running 70B models in browsers and phones, covering local inference and deployment.
 - **2023-07-26** — [FlashAttention 2: making Transformers 800% faster w/o approximation - with Tri Dao of Together AI](<optimization/FlashAttention 2 making Transformers 800% faster wo approximation - with Tri Dao of Together AI.md>) · `optimization` · latent-space
   Tri Dao interview on FlashAttention 2 and efficient Transformer attention without approximation.
 - **2023-07-17** — [FlashAttention-2 for faster training and inference](<optimization/FlashAttention-2 for faster training and inference.md>) · `optimization` · together
@@ -287,6 +293,8 @@
   Surveys DeepSeek model variants with production caveats around serving, reasoning behavior, and deployment tradeoffs.
 - **2026-02-18** — [4-Bit Quantization for Inference Optimization](<quantization/4-Bit Quantization for Inference Optimization.md>) · `quantization` · baseten
   Deep dive into 4-bit quantization for inference, covering math, tradeoffs, and production optimization.
+- **2026-02-12** — [Owning the AI Pareto Frontier — Jeff Dean](<../models/reasoning/Owning the AI Pareto Frontier — Jeff Dean.md>) · `reasoning` · latent-space
+  Jeff Dean interview on owning the AI Pareto frontier across models, systems, and efficient scaling.
 - **2026-02-09** — [AI Model Performance Metrics Explained](<../evals-observability/monitoring/AI Model Performance Metrics Explained.md>) · `monitoring` · baseten
   Explains model performance metrics used in production inference, including latency, throughput, and quality signals.
 - **2026-02-05** — [How to run LLM performance benchmarks (and why you should)](<../evals-observability/evaluation/How to run LLM performance benchmarks (and why you should).md>) · `evaluation` · baseten
@@ -329,6 +337,8 @@
   Case study using evals and inference-time compute scaling to generate QR codes that satisfy visual and functional constraints.
 - **2025-06-14** — [3D FireOptimizer: Automating the Multi-Dimensional Tradeoffs in LLM Serving](<serving/3D FireOptimizer Automating the Multi-Dimensional Tradeoffs in LLM Serving.md>) · `serving` · fireworks
   Explains multi-dimensional optimization for LLM serving, balancing latency, cost, throughput, and quality tradeoffs.
+- **2025-06-13** — [The Shape of Compute — with Chris Lattner for Modular](<hardware/The Shape of Compute — with Chris Lattner for Modular.md>) · `hardware` · latent-space
+  Chris Lattner interview on the shape of compute and how AI systems should map to future hardware/software stacks.
 - **2025-06-12** — [Your client code matters: 12x higher embedding throughput with Python and Rust](<../rag-retrieval/embeddings/Your client code matters 12x higher embedding throughput with Python and Rust.md>) · `embeddings` · baseten
   Shows how client implementation choices in Python and Rust affect embedding throughput.
 - **2025-06-05** — [Accurate KV Cache Quantization with Outlier Tokens Tracing](<quantization/Accurate KV Cache Quantization with Outlier Tokens Tracing.md>) · `quantization` · arize
@@ -367,6 +377,8 @@
   Describes FireAttention V3 and optimizations that make AMD GPUs more viable for inference workloads.
 - **2024-10-14** — [Linearizing LLMs with LoLCATs](<../models/reasoning/Linearizing LLMs with LoLCATs.md>) · `reasoning` · together
   Explains LoLCATs for linearizing LLM attention while preserving useful behavior.
+- **2024-10-11** — [$2 H100s: How the GPU Bubble Burst](<../infra-platform/cost/$2 H100s How the GPU Bubble Burst.md>) · `cost` · latent-space
+  Explains the GPU bubble burst and what lower H100 prices imply for AI infrastructure economics.
 - **2024-09-18** — [Multi-LoRA: Personalize AI at scale and deliver the best experience for each customer and use case, with 100x cost-efficiency](<../models/fine-tuning/Multi-LoRA Personalize AI at scale and deliver the best experience for each customer and use case, with 100x cost-efficiency.md>) · `fine-tuning` · fireworks
   Explains Multi-LoRA serving for personalized models at scale with better cost efficiency.
 - **2024-08-30** — [FireOptimizer: Customizing latency and quality for your production inference workload](<serving/FireOptimizer Customizing latency and quality for your production inference workload.md>) · `serving` · fireworks
@@ -395,6 +407,8 @@
   Explains BASED linear-attention language models and the recall-throughput tradeoff.
 - **2024-02-20** — [BitDelta: Your Fine-Tune May Only Be Worth One Bit](<../models/fine-tuning/BitDelta Your Fine-Tune May Only Be Worth One Bit.md>) · `fine-tuning` · together
   Explains BitDelta and how small weight deltas can represent fine-tuned model changes.
+- **2024-02-16** — [Truly Serverless Infra for AI Engineers - with Erik Bernhardsson of Modal](<../infra-platform/deployment/Truly Serverless Infra for AI Engineers - with Erik Bernhardsson of Modal.md>) · `deployment` · latent-space
+  Modal interview on serverless infrastructure for AI engineers and deployment ergonomics.
 - **2024-02-06** — [Unlocking the full power of NVIDIA H100 GPUs for ML inference with TensorRT](<optimization/Unlocking the full power of NVIDIA H100 GPUs for ML inference with TensorRT.md>) · `optimization` · baseten
   Shows how TensorRT unlocks H100 performance for model inference.
 - **2024-01-16** — [Generation configurations: temperature, top-k, top-p, and test time compute](<../models/reasoning/Generation configurations temperature, top-k, top-p, and test time compute.md>) · `reasoning` · chip-huyen
@@ -417,6 +431,8 @@
   Explains how CUDA Graphs reduce Python overhead for fast deep-learning execution.
 - **2023-08-24** — [Skeleton of Thought: LLMs Can Do Parallel Decoding Paper Reading](<../models/reasoning/Skeleton of Thought LLMs Can Do Parallel Decoding Paper Reading.md>) · `reasoning` · arize
   Summarizes Skeleton of Thought and how parallel decoding can speed structured reasoning.
+- **2023-08-10** — [LLMs Everywhere: Running 70B models in browsers and iPhones using MLC — with Tianqi Chen of CMU / OctoML](<optimization/LLMs Everywhere Running 70B models in browsers and iPhones using MLC — with Tianqi Chen of CMU OctoML.md>) · `optimization` · latent-space
+  MLC interview on running 70B models in browsers and phones, covering local inference and deployment.
 - **2023-07-25** — [Monarch Mixer: A new model architecture for increased efficiency](<../models/reasoning/Monarch Mixer A new model architecture for increased efficiency.md>) · `reasoning` · together
   Introduces Monarch Mixer as an efficient model architecture.
 - **2023-07-17** — [FlashAttention-2 for faster training and inference](<optimization/FlashAttention-2 for faster training and inference.md>) · `optimization` · together

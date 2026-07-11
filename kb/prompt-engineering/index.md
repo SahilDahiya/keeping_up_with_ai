@@ -1,6 +1,6 @@
 # prompt-engineering
 
-23 articles.
+26 articles.
 
 - **2026-06-26** — [Prompt Caching with Deep Agents](<context-engineering/Prompt Caching with Deep Agents.md>) · `context-engineering` · langchain
   Explains prompt caching for Deep Agents and how cache-aware context design reduces latency and cost for repeated agent work.
@@ -38,16 +38,22 @@
   Explains constrained generation for structured extraction with reasoning models and schema-bound outputs.
 - **2024-11-13** — [Promptim: an experimental library for prompt optimization](<techniques/Promptim an experimental library for prompt optimization.md>) · `techniques` · langchain
   Introduces Promptim as an experimental prompt-optimization library that uses evaluation feedback to improve prompts.
+- **2024-09-20** — [The Ultimate Guide to Prompting](<techniques/The Ultimate Guide to Prompting.md>) · `techniques` · latent-space
+  Comprehensive guide to prompting techniques for applied AI systems.
 - **2024-09-12** — [How to build function calling and JSON mode for open-source and fine-tuned LLMs](<structured-output/How to build function calling and JSON mode for open-source and fine-tuned LLMs.md>) · `structured-output` · baseten
   Shows how to build function calling and JSON mode for open-source and fine-tuned LLMs.
 - **2024-07-24** — [DSPy Assertions: Computational Constraints for Self-Refining Language Model Pipelines](<techniques/DSPy Assertions Computational Constraints for Self-Refining Language Model Pipelines.md>) · `techniques` · arize
   Explains DSPy assertions as computational constraints for self-refining language-model pipelines.
+- **2024-04-19** — [High Agency Pydantic > VC Backed Frameworks — with Jason Liu of Instructor](<structured-output/High Agency Pydantic VC Backed Frameworks — with Jason Liu of Instructor.md>) · `structured-output` · latent-space
+  Jason Liu interview on Instructor, Pydantic-first structured output, and pragmatic framework design.
 - **2024-02-20** — [Why do all LLMs need structured output modes?](<structured-output/Why do all LLMs need structured output modes.md>) · `structured-output` · fireworks
   Explains why structured-output modes matter for reliable LLM applications and tool-calling systems.
 - **2024-01-31** — [Function calling and JSON mode](<structured-output/Function calling and JSON mode.md>) · `structured-output` · together
   Explains function calling and JSON mode for structured LLM application outputs.
 - **2023-12-18** — [How to Prompt LLMs for Text-to-SQL](<structured-output/How to Prompt LLMs for Text-to-SQL.md>) · `structured-output` · arize
   Practical guide to Text-to-SQL prompting, including schema context, output constraints, and evaluation considerations.
+- **2023-05-16** — [Guaranteed quality and structure in LLM outputs - with Shreya Rajpal of Guardrails AI](<structured-output/Guaranteed quality and structure in LLM outputs - with Shreya Rajpal of Guardrails AI.md>) · `structured-output` · latent-space
+  Guardrails AI interview on guaranteeing quality and structure in LLM outputs through constraints, validation, and evals.
 
 ## Also relevant (filed elsewhere)
 
@@ -111,6 +117,8 @@
   Covers aligning LLM-as-judge evaluators with human preferences through calibration, examples, and evaluation design.
 - **2024-06-20** — [FireAttention V2: 12x faster to make Long Contexts practical for Online Inference](<../inference/optimization/FireAttention V2 12x faster to make Long Contexts practical for Online Inference.md>) · `optimization` · fireworks
   Explains FireAttention V2 and the serving optimizations that make long-context inference more practical.
+- **2024-05-30** — [How to train a Million Context LLM — with Mark Huang of Gradient.ai](<../models/reasoning/How to train a Million Context LLM — with Mark Huang of Gradient.ai.md>) · `reasoning` · latent-space
+  Gradient.ai interview on training a million-context LLM and the engineering tradeoffs of long-context models.
 - **2024-02-27** — [Evo: Long-context modeling from molecular to genome scale](<../models/reasoning/Evo Long-context modeling from molecular to genome scale.md>) · `reasoning` · together
   Explains Evo and long-context modeling from molecular to genome-scale sequences.
 - **2024-01-11** — [Long context retrieval models with Monarch Mixer](<../rag-retrieval/search/Long context retrieval models with Monarch Mixer.md>) · `search` · together
@@ -127,5 +135,7 @@
   Summarizes the Lost in the Middle findings on long-context model behavior and retrieval sensitivity.
 - **2023-06-15** — [Three techniques to adapt LLMs for any use case](<../models/fine-tuning/Three techniques to adapt LLMs for any use case.md>) · `fine-tuning` · baseten
   Explains prompt engineering, fine-tuning, and related techniques for adapting LLMs to use cases.
+- **2023-05-20** — [MPT-7B and The Beginning of Context=Infinity — with Jonathan Frankle and Abhinav Venigalla of MosaicML](<../models/releases/MPT-7B and The Beginning of Context=Infinity — with Jonathan Frankle and Abhinav Venigalla of MosaicML.md>) · `releases` · latent-space
+  MosaicML interview on MPT-7B and the beginning of long-context open models.
 - **2023-02-23** — [ChatGPT, GPT4 hype, and Building LLM-native products — with Logan Kilpatrick of OpenAI](<../product-engineering/architecture/ChatGPT, GPT4 hype, and Building LLM-native products — with Logan Kilpatrick of OpenAI.md>) · `architecture` · latent-space
   OpenAI interview on building LLM-native products after ChatGPT and GPT-4, with lessons for applied AI product design.

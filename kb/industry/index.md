@@ -1,6 +1,6 @@
 # industry
 
-22 articles.
+23 articles.
 
 - **2026-07-03** — [AIEWF Daily Dispatch: The great loops debate and the state of AI engineering](<trends/AIEWF Daily Dispatch The great loops debate and the state of AI engineering.md>) · `trends` · latent-space
   Dispatch on the loops debate and the state of AI engineering, capturing emerging vocabulary for production AI systems.
@@ -38,6 +38,8 @@
   OpenAI DevDay 2024 recap covering realtime APIs, model/application direction, and practical developer platform implications.
 - **2024-03-14** — [What I learned from looking at 900 most popular open source AI tools](<trends/What I learned from looking at 900 most popular open source AI tools.md>) · `trends` · chip-huyen
   Maps 900 open-source AI tools into infrastructure, model-development, and application-development layers, highlighting growth in agents, prompt engineering, vector search, evaluation, and inference tooling.
+- **2024-03-09** — [OpenAI Sora, Google Gemini, Groq Math, and our Top 5 Research Trends (Jan-Feb 2024 Audio Recap + Latent Space Anniversary!)](<trends/OpenAI Sora, Google Gemini, Groq Math, and our Top 5 Research Trends (Jan-Feb 2024 Audio Recap + Latent Space Anniversary!).md>) · `trends` · latent-space
+  Long Jan-Feb 2024 recap covering Sora, Gemini, Groq, and major AI research trends.
 - **2023-11-08** — [AGI is Being Achieved Incrementally (OpenAI DevDay w/ Simon Willison, Alex Volkov, Jim Fan, Raza Habib, Shreya Rajpal, Rahul Ligma, et al)](<trends/AGI is Being Achieved Incrementally (OpenAI DevDay w Simon Willison, Alex Volkov, Jim Fan, Raza Habib, Shreya Rajpal, Rahul Ligma, et al).md>) · `trends` · latent-space
   OpenAI DevDay discussion of incremental AGI progress, developer APIs, tools, and model-product integration.
 - **2023-06-30** — [The Rise of the AI Engineer](<trends/The Rise of the AI Engineer.md>) · `trends` · latent-space
@@ -67,6 +69,8 @@
   Paper-reading style overview of Google NotebookLM and AI-generated audio as a multimodal product pattern.
 - **2023-04-19** — [The Anatomy of Autonomy: Why Agents are the next AI Killer App after ChatGPT](<../agents/planning/The Anatomy of Autonomy Why Agents are the next AI Killer App after ChatGPT.md>) · `planning` · latent-space
   Explains why agents became a major AI application pattern after ChatGPT and what autonomy changes in product design.
+- **2023-03-15** — [The Multi-modal, Multi-model, Multi-everything Future of AGI](<../models/multimodal/The Multi-modal, Multi-model, Multi-everything Future of AGI.md>) · `multimodal` · latent-space
+  Essay on the multimodal, multi-model future of AGI and product implications.
 - **2021-10-21** — [Rise of the ML Engineer: Chick-fil-A's Korri Jones](<../product-engineering/case-studies/Rise of the ML Engineer Chick-fil-A's Korri Jones.md>) · `case-studies` · arize
   Interview with Chick-fil-A ML engineer Korri Jones on production ML work and applied model operations in a large business.
 - **2021-06-07** — [Arize Partners with UbiOps to Accelerate Model Building & Deployment](<../infra-platform/deployment/Arize Partners with UbiOps to Accelerate Model Building & Deployment.md>) · `deployment` · arize

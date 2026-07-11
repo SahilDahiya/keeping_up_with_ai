@@ -1,6 +1,6 @@
 # rag-retrieval
 
-47 articles.
+48 articles.
 
 - **2026-07-07** — [Faster phrase search with shingled bloom filters in Brainstore](<search/Faster phrase search with shingled bloom filters in Brainstore.md>) · `search` · braintrust
   Explains faster phrase search over Brainstore data using shingled bloom filters, aimed at efficient trace and log search for AI observability.
@@ -88,6 +88,8 @@
   Covers deployment and inference patterns for open-source text embedding models.
 - **2023-10-17** — [RankVicuna: Zero-Shot Listwise Document Reranking with Open-Source Large Language Models](<search/RankVicuna Zero-Shot Listwise Document Reranking with Open-Source Large Language Models.md>) · `search` · arize
   Summarizes RankVicuna for zero-shot listwise reranking and its implications for LLM-powered search.
+- **2023-10-05** — [RAG Is A Hack - with Jerry Liu from LlamaIndex](<pipelines/RAG Is A Hack - with Jerry Liu from LlamaIndex.md>) · `pipelines` · latent-space
+  LlamaIndex interview arguing RAG is a hack and discussing better data/application abstractions for LLM systems.
 - **2023-06-27** — [HyDE: Precise Zero-Shot Dense Retrieval without Relevance Labels](<search/HyDE Precise Zero-Shot Dense Retrieval without Relevance Labels.md>) · `search` · arize
   Summarizes HyDE for zero-shot dense retrieval and how hypothetical document generation can improve semantic search.
 - **2023-06-09** — [Retrieval-Augmented Generation - Paper Reading and Discussion](<pipelines/Retrieval-Augmented Generation - Paper Reading and Discussion.md>) · `pipelines` · arize
@@ -151,6 +153,8 @@
   Explains production ingestion concerns for semantic search, including data preparation and retrieval pipeline reliability.
 - **2023-10-26** — [Powering your Copilot for Data – with Artem Keydunov of Cube.dev](<../product-engineering/architecture/Powering your Copilot for Data – with Artem Keydunov of Cube.dev.md>) · `architecture` · latent-space
   Covers building a copilot for data with Cube.dev, including semantic layers and analytics-oriented AI architecture.
+- **2023-09-06** — [The Point of LangChain — with Harrison Chase of LangChain](<../agents/planning/The Point of LangChain — with Harrison Chase of LangChain.md>) · `planning` · latent-space
+  Harrison Chase interview on the point of LangChain and abstractions for building agentic LLM applications.
 - **2023-06-27** — [HyDE: Precise Zero-Shot Dense Retrieval without Relevance Labels](<search/HyDE Precise Zero-Shot Dense Retrieval without Relevance Labels.md>) · `search` · arize
   Summarizes HyDE for zero-shot dense retrieval and how hypothetical document generation can improve semantic search.
 - **2023-04-11** — [Building LLM applications for production](<../product-engineering/architecture/Building LLM applications for production.md>) · `architecture` · chip-huyen

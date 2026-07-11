@@ -1,6 +1,6 @@
 # models
 
-188 articles.
+202 articles.
 
 - **2026-07-10** — [Evaluating the GPT-5.6 family](<benchmarks/Evaluating the GPT-5.6 family.md>) · `benchmarks` · braintrust
   Evaluates the GPT-5.6 model family and presents a decision map for choosing models based on quality, cost, and task requirements.
@@ -76,6 +76,8 @@
   Explains stable looped models for doing more with fewer parameters.
 - **2026-04-13** — [How to train custom EAGLE-3 heads for speculative decoding](<fine-tuning/How to train custom EAGLE-3 heads for speculative decoding.md>) · `fine-tuning` · baseten
   Explains training custom EAGLE-3 heads for speculative decoding acceleration.
+- **2026-04-02** — [Moonlake: Causal World Models should be Multimodal, Interactive, and Efficient — with Chris Manning and Fan-yun Sun](<multimodal/Moonlake Causal World Models should be Multimodal, Interactive, and Efficient — with Chris Manning and Fan-yun Sun.md>) · `multimodal` · latent-space
+  Moonlake interview on causal world models that are multimodal, interactive, and efficient.
 - **2026-03-31** — [Baseten Training: an autoresearch substrate](<fine-tuning/Baseten Training an autoresearch substrate.md>) · `fine-tuning` · baseten
   Frames model training infrastructure as an autoresearch substrate for running iterative experiments and training jobs.
 - **2026-03-31** — [Open-source LLM training is a mess. Here is how it all works.](<fine-tuning/Open-source LLM training is a mess. Here is how it all works.md>) · `fine-tuning` · baseten
@@ -96,6 +98,8 @@
   Surveys DeepSeek model variants with production caveats around serving, reasoning behavior, and deployment tradeoffs.
 - **2026-02-23** — [How speech models fail where it matters the most and what to do about it](<multimodal/How speech models fail where it matters the most and what to do about it.md>) · `multimodal` · together
   Analyzes speech model failure modes that matter for production applications.
+- **2026-02-12** — [Owning the AI Pareto Frontier — Jeff Dean](<reasoning/Owning the AI Pareto Frontier — Jeff Dean.md>) · `reasoning` · latent-space
+  Jeff Dean interview on owning the AI Pareto frontier across models, systems, and efficient scaling.
 - **2026-02-12** — [[AINews] Z.ai GLM-5: New SOTA Open Weights LLM](<releases/[AINews] Z.ai GLM-5 New SOTA Open Weights LLM.md>) · `releases` · latent-space
   Covers GLM-5 as an open-weights model release and tracks benchmark/capability claims for open models.
 - **2026-02-11** — [[AINews] Qwen Image 2 and Seedance 2](<multimodal/[AINews] Qwen Image 2 and Seedance 2.md>) · `multimodal` · latent-space
@@ -236,6 +240,8 @@
   Reviews 2024 vision model progress and multimodal capability trends relevant to AI product builders.
 - **2024-12-10** — [What is LLM fine-tuning?](<fine-tuning/What is LLM fine-tuning.md>) · `fine-tuning` · modal
   Overview of LLM fine-tuning concepts, when to fine-tune, and how training data and serving constraints affect the workflow.
+- **2024-12-10** — [Generative Video WorldSim, Diffusion, Vision, Reinforcement Learning and Robotics — ICML 2024 Part 1](<multimodal/Generative Video WorldSim, Diffusion, Vision, Reinforcement Learning and Robotics — ICML 2024 Part 1.md>) · `multimodal` · latent-space
+  ICML recap on generative video world simulation, diffusion, vision, RL, and robotics.
 - **2024-12-09** — [20x faster Whisper than OpenAI - Fireworks audio transcribes 1 hour in 4 seconds](<multimodal/20x faster Whisper than OpenAI - Fireworks audio transcribes 1 hour in 4 seconds.md>) · `multimodal` · fireworks
   Describes high-throughput Whisper transcription serving and the latency/cost tradeoffs in batch audio inference.
 - **2024-11-25** — [Fine-Tuning LLMs for Multi-Turn Conversations: A Technical Deep Dive](<fine-tuning/Fine-Tuning LLMs for Multi-Turn Conversations A Technical Deep Dive.md>) · `fine-tuning` · together
@@ -248,6 +254,8 @@
   Evaluates Gemini vision models and shows how multimodal evals can compare image-understanding behavior across model versions.
 - **2024-11-04** — [Building serverless apps with the OpenAI Realtime API](<multimodal/Building serverless apps with the OpenAI Realtime API.md>) · `multimodal` · braintrust
   Guide to building serverless apps with the OpenAI Realtime API, focusing on real-time voice interaction architecture and deployment patterns.
+- **2024-11-01** — [In the Arena: How LMSys changed LLM Benchmarking Forever](<benchmarks/In the Arena How LMSys changed LLM Benchmarking Forever.md>) · `benchmarks` · latent-space
+  LMSys interview on how arena-style evaluation changed LLM benchmarking.
 - **2024-10-15** — [Google's NotebookLM and the Future of AI-Generated Audio](<multimodal/Google's NotebookLM and the Future of AI-Generated Audio.md>) · `multimodal` · arize
   Paper-reading style overview of Google NotebookLM and AI-generated audio as a multimodal product pattern.
 - **2024-10-14** — [Linearizing LLMs with LoLCATs](<reasoning/Linearizing LLMs with LoLCATs.md>) · `reasoning` · together
@@ -270,18 +278,28 @@
   Technical overview of Meta's Llama 3 model family, including architecture, capabilities, and benchmark interpretation.
 - **2024-07-25** — [Deploying custom ComfyUI workflows as APIs](<multimodal/Deploying custom ComfyUI workflows as APIs.md>) · `multimodal` · baseten
   Shows how to deploy custom ComfyUI image-generation workflows behind API endpoints.
+- **2024-07-23** — [Llama 2, 3 & 4: Synthetic Data, RLHF, Agents on the path to Open Source AGI](<releases/Llama 2, 3 & 4 Synthetic Data, RLHF, Agents on the path to Open Source AGI.md>) · `releases` · latent-space
+  Covers Llama 2, 3, and 4, including synthetic data, RLHF, and open-source agent progress.
 - **2024-07-12** — [Benchmarks 201: Why Leaderboards > Arenas >> LLM-as-Judge](<benchmarks/Benchmarks 201 Why Leaderboards Arenas LLM-as-Judge.md>) · `benchmarks` · latent-space
   Advanced benchmark guide comparing leaderboards, arenas, and LLM-as-judge approaches.
 - **2024-07-12** — [Fine-tuning Llama-3 toward GPT-4 performance at lower cost](<fine-tuning/Fine-tuning Llama-3 toward GPT-4 performance at lower cost.md>) · `fine-tuning` · together
   Shows fine-tuning Llama 3 toward GPT-4-like task performance at lower cost.
+- **2024-06-25** — [State of the Art: Training >70B LLMs on 10,000 H100 clusters](<fine-tuning/State of the Art Training 70B LLMs on 10,000 H100 clusters.md>) · `fine-tuning` · latent-space
+  State-of-the-art overview of training >70B LLMs on 10,000-H100 clusters.
 - **2024-06-14** — [Comparing few-step image generation models](<benchmarks/Comparing few-step image generation models.md>) · `benchmarks` · baseten
   Compares few-step image generation models and the tradeoffs between speed and output quality.
 - **2024-06-14** — [LLM Interpretability and Sparse Autoencoders: Research from OpenAI and Anthropic](<reasoning/LLM Interpretability and Sparse Autoencoders Research from OpenAI and Anthropic.md>) · `reasoning` · arize
   Explains sparse autoencoders and interpretability research from OpenAI and Anthropic as tools for understanding model internals.
+- **2024-06-10** — [ICLR 2024 — Best Papers & Talks (Benchmarks, Reasoning & Agents) — ft. Graham Neubig, Aman Sanger, Moritz Hardt)](<benchmarks/ICLR 2024 — Best Papers & Talks (Benchmarks, Reasoning & Agents) — ft. Graham Neubig, Aman Sanger, Moritz Hardt).md>) · `benchmarks` · latent-space
+  ICLR 2024 recap focused on benchmarks, reasoning, and agents, with pointers to durable research themes.
 - **2024-06-06** — [Dragonfly: A large vision-language model with multi-resolution zoom](<multimodal/Dragonfly A large vision-language model with multi-resolution zoom.md>) · `multimodal` · together
   Introduces Dragonfly, a vision-language model with multi-resolution zoom.
 - **2024-06-04** — [How latent consistency models work](<multimodal/How latent consistency models work.md>) · `multimodal` · baseten
   Explains latent consistency models and how they enable faster image generation.
+- **2024-05-30** — [How to train a Million Context LLM — with Mark Huang of Gradient.ai](<reasoning/How to train a Million Context LLM — with Mark Huang of Gradient.ai.md>) · `reasoning` · latent-space
+  Gradient.ai interview on training a million-context LLM and the engineering tradeoffs of long-context models.
+- **2024-05-27** — [ICLR 2024 — Best Papers & Talks (ImageGen, Vision, Transformers, State Space Models) ft. Durk Kingma, Christian Szegedy, Ilya Sutskever](<reasoning/ICLR 2024 — Best Papers & Talks (ImageGen, Vision, Transformers, State Space Models) ft. Durk Kingma, Christian Szegedy, Ilya Sutskever.md>) · `reasoning` · latent-space
+  ICLR 2024 recap covering image generation, vision, Transformers, and state-space model research.
 - **2024-05-21** — [Create an infinite icon library by fine-tuning Stable Diffusion](<fine-tuning/Create an infinite icon library by fine-tuning Stable Diffusion.md>) · `fine-tuning` · modal
   Practical example of fine-tuning Stable Diffusion for a custom image-generation domain using Modal infrastructure.
 - **2024-05-01** — [FAQ: Building LLMs with RedPajama-v2, a 30 trillion token web dataset](<fine-tuning/FAQ Building LLMs with RedPajama-v2, a 30 trillion token web dataset.md>) · `fine-tuning` · together
@@ -306,6 +324,8 @@
   Explains BitDelta and how small weight deltas can represent fine-tuned model changes.
 - **2024-01-31** — [Phi-2 Model](<releases/Phi-2 Model.md>) · `releases` · arize
   Technical overview of Phi-2, including model characteristics, benchmark behavior, and small-model implications.
+- **2024-01-19** — [How to train your own Large Multimodal Model — with Hugo Laurençon & Leo Tronchon of HuggingFace M4 Research](<multimodal/How to train your own Large Multimodal Model — with Hugo Laurençon & Leo Tronchon of HuggingFace M4 Research.md>) · `multimodal` · latent-space
+  Hugging Face M4 interview on training large multimodal models and the IDEFICS project.
 - **2024-01-16** — [Generation configurations: temperature, top-k, top-p, and test time compute](<reasoning/Generation configurations temperature, top-k, top-p, and test time compute.md>) · `reasoning` · chip-huyen
   Explains decoding parameters such as temperature, top-k, top-p, and test-time compute, connecting generation configuration to reliability, diversity, latency, and cost.
 - **2023-12-27** — [Mistral AI (Mixtral-8x7B): Performance, Benchmarks](<releases/Mistral AI (Mixtral-8x7B) Performance, Benchmarks.md>) · `releases` · arize
@@ -348,6 +368,8 @@
   Summarizes the Lost in the Middle findings on long-context model behavior and retrieval sensitivity.
 - **2023-07-25** — [Monarch Mixer: A new model architecture for increased efficiency](<reasoning/Monarch Mixer A new model architecture for increased efficiency.md>) · `reasoning` · together
   Introduces Monarch Mixer as an efficient model architecture.
+- **2023-07-19** — [Llama 2: The New Open LLM SOTA (ft. Nathan Lambert, Matt Bornstein, Anton Troynikov, Russell Kaplan, Whole Mars Catalog et al.)](<releases/Llama 2 The New Open LLM SOTA (ft. Nathan Lambert, Matt Bornstein, Anton Troynikov, Russell Kaplan, Whole Mars Catalog et al.).md>) · `releases` · latent-space
+  Llama 2 launch discussion covering open LLM capability, ecosystem impact, and deployment considerations.
 - **2023-07-14** — [Orca: Progressive Learning from Complex Explanation Traces of GPT-4 Paper Reading](<fine-tuning/Orca Progressive Learning from Complex Explanation Traces of GPT-4 Paper Reading.md>) · `fine-tuning` · arize
   Summarizes Orca and progressive learning from GPT-4 explanation traces as a post-training strategy.
 - **2023-07-12** — [Multi-Query Attention is All You Need](<reasoning/Multi-Query Attention is All You Need.md>) · `reasoning` · fireworks
@@ -362,14 +384,20 @@
   Summarizes LIMA and the idea that small high-quality instruction data can have outsized impact on alignment tuning.
 - **2023-06-01** — [Drag Your GAN: Interactive Point-Based Manipulation on the Generative Image Manifold](<multimodal/Drag Your GAN Interactive Point-Based Manipulation on the Generative Image Manifold.md>) · `multimodal` · arize
   Paper-reading deep dive on DragGAN and interactive point-based image manipulation in generative model latent spaces.
+- **2023-05-20** — [MPT-7B and The Beginning of Context=Infinity — with Jonathan Frankle and Abhinav Venigalla of MosaicML](<releases/MPT-7B and The Beginning of Context=Infinity — with Jonathan Frankle and Abhinav Venigalla of MosaicML.md>) · `releases` · latent-space
+  MosaicML interview on MPT-7B and the beginning of long-context open models.
 - **2023-05-05** — [OpenAI on Reinforcement Learning With Human Feedback (RLHF)](<fine-tuning/OpenAI on Reinforcement Learning With Human Feedback (RLHF).md>) · `fine-tuning` · arize
   Summarizes RLHF concepts from OpenAI and how human feedback changes model behavior during post-training.
 - **2023-05-02** — [RLHF: Reinforcement Learning from Human Feedback](<fine-tuning/RLHF Reinforcement Learning from Human Feedback.md>) · `fine-tuning` · chip-huyen
   Explains the RLHF pipeline from preference data through reward modeling and policy optimization, including why human feedback changes model behavior and where evaluation matters.
+- **2023-04-29** — [Mapping the future of *truly* Open Models and Training Dolly for $30 — with Mike Conover of Databricks](<releases/Mapping the future of truly Open Models and Training Dolly for $30 — with Mike Conover of Databricks.md>) · `releases` · latent-space
+  Mike Conover interview on truly open models and training Dolly cheaply at Databricks.
 - **2023-04-07** — [AI Fundamentals: Benchmarks 101](<benchmarks/AI Fundamentals Benchmarks 101.md>) · `benchmarks` · latent-space
   Foundational guide to model benchmarks and how AI engineers should interpret benchmark results.
 - **2023-03-29** — [Hungry Hungry Hippos (H3) and Language Modeling with State Space Models](<reasoning/Hungry Hungry Hippos (H3) and Language Modeling with State Space Models.md>) · `reasoning` · arize
   Explains H3/state-space model ideas as alternatives to standard attention and why they matter for sequence modeling efficiency.
+- **2023-03-15** — [The Multi-modal, Multi-model, Multi-everything Future of AGI](<multimodal/The Multi-modal, Multi-model, Multi-everything Future of AGI.md>) · `multimodal` · latent-space
+  Essay on the multimodal, multi-model future of AGI and product implications.
 - **2023-01-23** — [FlashConv: speeding up state space models](<reasoning/FlashConv speeding up state space models.md>) · `reasoning` · together
   Explains FlashConv and efficient state-space model execution.
 - **2022-11-17** — [HELM: benchmarking large language models on the Together Research Computer](<benchmarks/HELM benchmarking large language models on the Together Research Computer.md>) · `benchmarks` · together
@@ -457,6 +485,8 @@
   Walks through an RL theorem-proving workflow, connecting reasoning tasks, training loops, and scalable remote execution.
 - **2026-04-06** — [Sub-3 millisecond named entity recognition (NER) inference](<../inference/optimization/Sub-3 millisecond named entity recognition (NER) inference.md>) · `optimization` · baseten
   Shows how to achieve sub-3-millisecond NER inference with optimized serving.
+- **2026-04-02** — [Moonlake: Causal World Models should be Multimodal, Interactive, and Efficient — with Chris Manning and Fan-yun Sun](<multimodal/Moonlake Causal World Models should be Multimodal, Interactive, and Efficient — with Chris Manning and Fan-yun Sun.md>) · `multimodal` · latent-space
+  Moonlake interview on causal world models that are multimodal, interactive, and efficient.
 - **2026-03-27** — [I spent 31 hours on the math behind TurboQuant so you don't have to](<../inference/quantization/I spent 31 hours on the math behind TurboQuant so you don't have to.md>) · `quantization` · baseten
   Mathematical deep dive into TurboQuant and its quantization behavior for LLM inference.
 - **2026-03-25** — [How Perplexity Brought Voice Search to Millions Using the Realtime API | OpenAI Developers](<../product-engineering/case-studies/How Perplexity Brought Voice Search to Millions Using the Realtime API OpenAI Developers.md>) · `case-studies` · openai-devs
@@ -587,6 +617,8 @@
   Describes Blackwell BF16 training acceleration with the Together Kernel Collection.
 - **2025-02-01** — [From text to task: Constrained generation for structured extraction in R1](<../prompt-engineering/structured-output/From text to task Constrained generation for structured extraction in R1.md>) · `structured-output` · fireworks
   Explains constrained generation for structured extraction with reasoning models and schema-bound outputs.
+- **2025-02-01** — [The Agent Reasoning Interface: o1/o3, Claude 3, ChatGPT Canvas, Tasks, and Operator — with Karina Nguyen of OpenAI](<../product-engineering/ux-patterns/The Agent Reasoning Interface o1o3, Claude 3, ChatGPT Canvas, Tasks, and Operator — with Karina Nguyen of OpenAI.md>) · `ux-patterns` · latent-space
+  Karina Nguyen interview on the agent reasoning interface across o1/o3, Canvas, Tasks, and Operator.
 - **2025-01-31** — [Distillation with Reasoning: Can DeepSeek R1 Teach Better Than Humans?](<fine-tuning/Distillation with Reasoning Can DeepSeek R1 Teach Better Than Humans.md>) · `fine-tuning` · fireworks
   Discusses distilling reasoning behavior from DeepSeek R1 and the limits of teacher-model supervision.
 - **2025-01-24** — [DeepSeek-R1 Overview: Features, Capabilities, Parameters](<reasoning/DeepSeek-R1 Overview Features, Capabilities, Parameters.md>) · `reasoning` · fireworks
@@ -603,6 +635,8 @@
   Introduces speculative decoding and the draft-target model pattern for lower LLM inference latency.
 - **2024-12-10** — [Merge, Ensemble, and Cooperate! A Survey on Collaborative LLM Strategies](<../agents/multi-agent/Merge, Ensemble, and Cooperate! A Survey on Collaborative LLM Strategies.md>) · `multi-agent` · arize
   Summarizes collaborative LLM strategies such as merging, ensembling, and cooperation for multi-model or multi-agent systems.
+- **2024-12-10** — [Generative Video WorldSim, Diffusion, Vision, Reinforcement Learning and Robotics — ICML 2024 Part 1](<multimodal/Generative Video WorldSim, Diffusion, Vision, Reinforcement Learning and Robotics — ICML 2024 Part 1.md>) · `multimodal` · latent-space
+  ICML recap on generative video world simulation, diffusion, vision, RL, and robotics.
 - **2024-12-04** — [What to do when a new AI model comes out](<../evals-observability/evaluation/What to do when a new AI model comes out.md>) · `evaluation` · braintrust
   Playbook for responding when a new AI model ships: run targeted evals, compare cost and quality, inspect regressions, and decide rollout strategy.
 - **2024-11-28** — [The new Claude 3.5 Sonnet, Computer Use, and Building SOTA Agents — with Erik Schluntz, Anthropic](<../agents/computer-use/The new Claude 3.5 Sonnet, Computer Use, and Building SOTA Agents — with Erik Schluntz, Anthropic.md>) · `computer-use` · latent-space
@@ -633,6 +667,8 @@
   Explores using many small Llama runs and search to improve Python benchmark performance against GPT-4o baselines.
 - **2024-07-31** — [Llama 3.1: Same model, different results. The impact of a percentage point.](<../evals-observability/evaluation/Llama 3.1 Same model, different results. The impact of a percentage point.md>) · `evaluation` · together
   Explains how small quality differences and deployment choices affect Llama 3.1 results.
+- **2024-07-23** — [Llama 2, 3 & 4: Synthetic Data, RLHF, Agents on the path to Open Source AGI](<releases/Llama 2, 3 & 4 Synthetic Data, RLHF, Agents on the path to Open Source AGI.md>) · `releases` · latent-space
+  Covers Llama 2, 3, and 4, including synthetic data, RLHF, and open-source agent progress.
 - **2024-07-23** — [How to serve 10,000 fine-tuned LLMs from a single GPU](<../inference/serving/How to serve 10,000 fine-tuned LLMs from a single GPU.md>) · `serving` · baseten
   Explains serving many fine-tuned LLM adapters from a single GPU with efficient multiplexing.
 - **2024-07-12** — [Fine-tuning Llama-3 toward GPT-4 performance at lower cost](<fine-tuning/Fine-tuning Llama-3 toward GPT-4 performance at lower cost.md>) · `fine-tuning` · together
@@ -651,6 +687,8 @@
   Introduces Dragonfly, a vision-language model with multi-resolution zoom.
 - **2024-05-29** — [Trustworthy LLMs: A Survey and Guideline for Evaluating Large Language Models' Alignment](<../evals-observability/evaluation/Trustworthy LLMs A Survey and Guideline for Evaluating Large Language Models' Alignment.md>) · `evaluation` · arize
   Survey-style guide to evaluating trustworthy and aligned LLM behavior across reliability, safety, and quality dimensions.
+- **2024-05-27** — [ICLR 2024 — Best Papers & Talks (ImageGen, Vision, Transformers, State Space Models) ft. Durk Kingma, Christian Szegedy, Ilya Sutskever](<reasoning/ICLR 2024 — Best Papers & Talks (ImageGen, Vision, Transformers, State Space Models) ft. Durk Kingma, Christian Szegedy, Ilya Sutskever.md>) · `reasoning` · latent-space
+  ICLR 2024 recap covering image generation, vision, Transformers, and state-space model research.
 - **2024-05-21** — [Create an infinite icon library by fine-tuning Stable Diffusion](<fine-tuning/Create an infinite icon library by fine-tuning Stable Diffusion.md>) · `fine-tuning` · modal
   Practical example of fine-tuning Stable Diffusion for a custom image-generation domain using Modal infrastructure.
 - **2024-05-15** — [Pairwise Evaluations with LangSmith](<../evals-observability/evaluation/Pairwise Evaluations with LangSmith.md>) · `evaluation` · langchain
@@ -669,6 +707,8 @@
   Interview on Adept, multimodal agents, and why action-oriented models require product and systems design beyond chat.
 - **2024-03-15** — [Reinforcement Learning in the Era of LLMs](<fine-tuning/Reinforcement Learning in the Era of LLMs.md>) · `fine-tuning` · arize
   Explains reinforcement learning concepts in the LLM era and how RL fits into model improvement workflows.
+- **2024-03-09** — [OpenAI Sora, Google Gemini, Groq Math, and our Top 5 Research Trends (Jan-Feb 2024 Audio Recap + Latent Space Anniversary!)](<../industry/trends/OpenAI Sora, Google Gemini, Groq Math, and our Top 5 Research Trends (Jan-Feb 2024 Audio Recap + Latent Space Anniversary!).md>) · `trends` · latent-space
+  Long Jan-Feb 2024 recap covering Sora, Gemini, Groq, and major AI research trends.
 - **2024-02-28** — [Predictive Human Preference: From Model Ranking to Model Routing](<../evals-observability/evaluation/Predictive Human Preference From Model Ranking to Model Routing.md>) · `evaluation` · chip-huyen
   Describes predictive human preference for model ranking and model routing, using preference models and evaluations to choose among LLMs by quality, cost, and latency.
 - **2024-02-22** — [40% faster Stable Diffusion XL inference with NVIDIA TensorRT](<../inference/optimization/40% faster Stable Diffusion XL inference with NVIDIA TensorRT.md>) · `optimization` · baseten
@@ -681,6 +721,8 @@
   Introduces model quantization concepts and how they affect inference efficiency and model quality.
 - **2024-01-31** — [How to benchmark image generation models like Stable Diffusion XL](<../evals-observability/evaluation/How to benchmark image generation models like Stable Diffusion XL.md>) · `evaluation` · baseten
   Explains how to benchmark image-generation models with attention to quality, latency, and reproducibility.
+- **2024-01-19** — [How to train your own Large Multimodal Model — with Hugo Laurençon & Leo Tronchon of HuggingFace M4 Research](<multimodal/How to train your own Large Multimodal Model — with Hugo Laurençon & Leo Tronchon of HuggingFace M4 Research.md>) · `multimodal` · latent-space
+  Hugging Face M4 interview on training large multimodal models and the IDEFICS project.
 - **2023-12-27** — [Mistral AI (Mixtral-8x7B): Performance, Benchmarks](<releases/Mistral AI (Mixtral-8x7B) Performance, Benchmarks.md>) · `releases` · arize
   Technical overview of Mistral and Mixtral model behavior, performance, and benchmark positioning.
 - **2023-12-13** — [Playground v2 vs Stable Diffusion XL 1.0 for text-to-image generation](<benchmarks/Playground v2 vs Stable Diffusion XL 1.0 for text-to-image generation.md>) · `benchmarks` · baseten
@@ -699,8 +741,12 @@
   Technical paper-reading summary of Llama 2, including foundation and chat-tuned model behavior.
 - **2023-07-26** — [FlashAttention 2: making Transformers 800% faster w/o approximation - with Tri Dao of Together AI](<../inference/optimization/FlashAttention 2 making Transformers 800% faster wo approximation - with Tri Dao of Together AI.md>) · `optimization` · latent-space
   Tri Dao interview on FlashAttention 2 and efficient Transformer attention without approximation.
+- **2023-07-19** — [Llama 2: The New Open LLM SOTA (ft. Nathan Lambert, Matt Bornstein, Anton Troynikov, Russell Kaplan, Whole Mars Catalog et al.)](<releases/Llama 2 The New Open LLM SOTA (ft. Nathan Lambert, Matt Bornstein, Anton Troynikov, Russell Kaplan, Whole Mars Catalog et al.).md>) · `releases` · latent-space
+  Llama 2 launch discussion covering open LLM capability, ecosystem impact, and deployment considerations.
 - **2023-07-14** — [Orca: Progressive Learning from Complex Explanation Traces of GPT-4 Paper Reading](<fine-tuning/Orca Progressive Learning from Complex Explanation Traces of GPT-4 Paper Reading.md>) · `fine-tuning` · arize
   Summarizes Orca and progressive learning from GPT-4 explanation traces as a post-training strategy.
+- **2023-04-29** — [Mapping the future of *truly* Open Models and Training Dolly for $30 — with Mike Conover of Databricks](<releases/Mapping the future of truly Open Models and Training Dolly for $30 — with Mike Conover of Databricks.md>) · `releases` · latent-space
+  Mike Conover interview on truly open models and training Dolly cheaply at Databricks.
 - **2023-03-21** — [Toolformer: Training LLMs To Use Tools](<../agents/tool-use/Toolformer Training LLMs To Use Tools.md>) · `tool-use` · arize
   Summarizes Toolformer and how language models can learn to use external tools.
 - **2022-12-08** — [Accelerating model deployment: 100X faster dev loops with development deployments](<../infra-platform/deployment/Accelerating model deployment 100X faster dev loops with development deployments.md>) · `deployment` · baseten

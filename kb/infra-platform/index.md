@@ -1,9 +1,11 @@
 # infra-platform
 
-67 articles.
+70 articles.
 
 - **2026-07-09** — [Trace before you migrate: Measuring Kubernetes bottlenecks in AI agent sandboxes](<deployment/Trace before you migrate Measuring Kubernetes bottlenecks in AI agent sandboxes.md>) · `deployment` · arize
   Shows how tracing can diagnose Kubernetes bottlenecks in AI agent sandboxes before migration decisions.
+- **2026-07-08** — [Why AI Infrastructure must evolve for Agent Experience — Akshat Bubna, Modal CTO](<deployment/Why AI Infrastructure must evolve for Agent Experience — Akshat Bubna, Modal CTO.md>) · `deployment` · latent-space
+  Modal CTO interview on evolving AI infrastructure for agent experience and execution-heavy workloads.
 - **2026-07-06** — [How to price serverless GPUs](<cost/How to price serverless GPUs.md>) · `cost` · modal
   Explains serverless GPU pricing from utilization, scheduling, and workload-shape constraints rather than simple hourly rates.
 - **2026-07-02** — [Your coding agent bill doubled. Here’s how to fix it.](<cost/Your coding agent bill doubled. Here’s how to fix it.md>) · `cost` · langchain
@@ -96,6 +98,8 @@
   Explains static IP support for serverless containers using WireGuard, relevant to secure networked AI deployments.
 - **2024-11-17** — [From Zero to Scale: Langfuse's Infrastructure Evolution](<deployment/From Zero to Scale Langfuse's Infrastructure Evolution.md>) · `deployment` · langfuse
   Case study of Langfuse infrastructure evolution from early product to scale, including data architecture, observability workloads, and operational tradeoffs.
+- **2024-10-11** — [$2 H100s: How the GPU Bubble Burst](<cost/$2 H100s How the GPU Bubble Burst.md>) · `cost` · latent-space
+  Explains the GPU bubble burst and what lower H100 prices imply for AI infrastructure economics.
 - **2024-09-23** — [Should you use an LLM Proxy to Build your Application?](<deployment/Should you use an LLM Proxy to Build your Application.md>) · `deployment` · langfuse
   Explains the LLM proxy pattern for AI applications, including provider abstraction, centralized logging, key management, routing, and governance tradeoffs.
 - **2024-08-13** — [A practitioner's guide to testing and running large GPU clusters for training generative AI models](<gpu-clusters/A practitioner's guide to testing and running large GPU clusters for training generative AI models.md>) · `gpu-clusters` · together
@@ -112,6 +116,8 @@
   Covers CI/CD practices for AI model deployments, including versioning, release flow, and operational safety.
 - **2024-03-14** — [Lambda on hard mode: Inside Modal's web infrastructure](<deployment/Lambda on hard mode Inside Modal's web infrastructure.md>) · `deployment` · modal
   Deep dive into Modal web infrastructure, including serverless HTTP routing, isolation, and platform architecture.
+- **2024-02-16** — [Truly Serverless Infra for AI Engineers - with Erik Bernhardsson of Modal](<deployment/Truly Serverless Infra for AI Engineers - with Erik Bernhardsson of Modal.md>) · `deployment` · latent-space
+  Modal interview on serverless infrastructure for AI engineers and deployment ergonomics.
 - **2023-11-27** — [Open sourcing the AI proxy](<deployment/Open sourcing the AI proxy.md>) · `deployment` · braintrust
   Open-source AI proxy notes focused on provider routing, logging, credentials, access control, and observability for model calls.
 - **2023-11-20** — [AI proxy: fostering a more open ecosystem](<deployment/AI proxy fostering a more open ecosystem.md>) · `deployment` · braintrust
@@ -319,6 +325,8 @@
   Reference architecture for generative AI platforms covering context construction and RAG, guardrails, gateways and routers, caching, observability, orchestration, and tool/action layers.
 - **2024-07-11** — [Using asynchronous inference in production](<../inference/serving/Using asynchronous inference in production.md>) · `serving` · baseten
   Explains asynchronous inference patterns for production model-serving workloads.
+- **2024-06-25** — [State of the Art: Training >70B LLMs on 10,000 H100 clusters](<../models/fine-tuning/State of the Art Training 70B LLMs on 10,000 H100 clusters.md>) · `fine-tuning` · latent-space
+  State-of-the-art overview of training >70B LLMs on 10,000-H100 clusters.
 - **2024-06-20** — [Managing and Monitoring Your Open Source LLM Applications](<../evals-observability/monitoring/Managing and Monitoring Your Open Source LLM Applications.md>) · `monitoring` · arize
   Covers practical monitoring needs for open-source LLM applications, including operational metrics and deployment feedback.
 - **2024-06-06** — [How to catch crypto miners using syscall signatures](<../product-engineering/security/How to catch crypto miners using syscall signatures.md>) · `security` · modal
@@ -343,6 +351,8 @@
   Frames AI observability value through ROI statistics, linking monitoring and model performance visibility to business outcomes.
 - **2023-09-15** — [NVIDIA A10 vs A100 GPUs for LLM and Stable Diffusion inference](<../inference/hardware/NVIDIA A10 vs A100 GPUs for LLM and Stable Diffusion inference.md>) · `hardware` · baseten
   Compares NVIDIA A10 and A100 GPUs for LLM and Stable Diffusion inference workloads.
+- **2023-09-14** — [Doing it the Hard Way: Making the AI engine and language 🔥 of the future — with Chris Lattner of Modular](<../inference/optimization/Doing it the Hard Way Making the AI engine and language 🔥 of the future — with Chris Lattner of Modular.md>) · `optimization` · latent-space
+  Modular interview on building AI engines and languages for high-performance AI systems.
 - **2023-06-20** — [Commoditizing the Petaflop — with George Hotz of the tiny corp](<../inference/hardware/Commoditizing the Petaflop — with George Hotz of the tiny corp.md>) · `hardware` · latent-space
   George Hotz interview on commoditizing petaflop-scale compute and what low-cost AI hardware means for builders.
 - **2023-04-27** — [Comparing NVIDIA GPUs for AI: T4 vs A10](<../inference/hardware/Comparing NVIDIA GPUs for AI T4 vs A10.md>) · `hardware` · baseten

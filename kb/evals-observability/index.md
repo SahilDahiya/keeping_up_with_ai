@@ -1,6 +1,6 @@
 # evals-observability
 
-209 articles.
+211 articles.
 
 - **2026-07-07** — [Improving Agents is a Data Mining Problem](<monitoring/Improving Agents is a Data Mining Problem.md>) · `monitoring` · langchain
   Argues that improving agents is a data-mining problem over traces, failures, feedback, and recurring behavioral patterns.
@@ -158,6 +158,8 @@
   Explains how to evaluate agent skills as reusable capabilities, with tests that isolate skill behavior from the full agent loop.
 - **2026-03-02** — [How to Evaluate Tool-Calling Agents](<evaluation/How to Evaluate Tool-Calling Agents.md>) · `evaluation` · arize
   Covers evaluation methods for tool-calling agents, including how to assess action selection and tool-use correctness.
+- **2026-02-27** — [METR’s Joel Becker on exponential Time Horizon Evals, Threat Models, and the Limits of AI Productivity](<evaluation/METR’s Joel Becker on exponential Time Horizon Evals, Threat Models, and the Limits of AI Productivity.md>) · `evaluation` · latent-space
+  METR discussion of time-horizon evals, threat models, and productivity limits for advanced AI systems.
 - **2026-02-27** — [Best AI Observability Tools for Autonomous Agents in 2026](<monitoring/Best AI Observability Tools for Autonomous Agents in 2026.md>) · `monitoring` · arize
   Survey of AI observability tools for autonomous agents, emphasizing monitoring failure modes specific to tool use, autonomy, and production traces.
 - **2026-02-27** — [Add Observability to Your Open Agent Spec Agents with Arize Phoenix](<tracing/Add Observability to Your Open Agent Spec Agents with Arize Phoenix.md>) · `tracing` · arize
@@ -376,6 +378,8 @@
   Explains test-run comparisons for evaluating changes across LLM application versions and identifying regressions.
 - **2023-10-02** — [LLM Tracing and Observability](<tracing/LLM Tracing and Observability.md>) · `tracing` · arize
   Explains LLM tracing and observability concepts using Phoenix as the concrete implementation context.
+- **2023-09-29** — [Building the Foundation Model Ops Platform — with Raza Habib of Humanloop](<evaluation/Building the Foundation Model Ops Platform — with Raza Habib of Humanloop.md>) · `evaluation` · latent-space
+  Humanloop interview on foundation-model operations, prompt/eval workflows, and production LLM iteration.
 - **2023-09-12** — [It's time to build reliable AI](<evaluation/It's time to build reliable AI.md>) · `evaluation` · braintrust
   Early argument for reliable AI systems built around evals, logging, feedback loops, and engineering practices rather than ad hoc demos.
 - **2023-06-08** — [From RLHF to RLHB: The Case for Learning from Human Behavior - with Jeffrey Wang and Joe Reeve of Amplitude](<evaluation/From RLHF to RLHB The Case for Learning from Human Behavior - with Jeffrey Wang and Joe Reeve of Amplitude.md>) · `evaluation` · latent-space
@@ -465,12 +469,16 @@
   Walkthrough for building an auditable VC research agent with Perplexity, LangGraph, and LangSmith, emphasizing traceability and review.
 - **2026-06-24** — [Using Braintrust to eval agentic setups from large-scale Hugging Face data](<../agents/planning/Using Braintrust to eval agentic setups from large-scale Hugging Face data.md>) · `planning` · braintrust
   Uses large-scale Hugging Face agent traces to evaluate agentic setups, connecting trace analysis to agent behavior and reliability measurement.
+- **2026-06-22** — [Red-Teaming after Mythos — Zico Kolter & Matt Fredrikson, Gray Swan](<../product-engineering/security/Red-Teaming after Mythos — Zico Kolter & Matt Fredrikson, Gray Swan.md>) · `security` · latent-space
+  Gray Swan interview on red-teaming frontier models after Mythos, with lessons for AI security evaluation.
 - **2026-06-19** — [Why AI token costs don't tell you if your AI is working](<../infra-platform/cost/Why AI token costs don't tell you if your AI is working.md>) · `cost` · arize
   Explains why token cost alone is an incomplete production metric and how quality, latency, and outcomes must be measured together.
 - **2026-06-17** — [How to test agent cost-efficiency with Braintrust](<../infra-platform/cost/How to test agent cost-efficiency with Braintrust.md>) · `cost` · braintrust
   Explains how to test agent cost-efficiency by measuring task success against token, model, and tool-use costs.
 - **2026-06-16** — [What is agent orchestration? Frameworks, runtimes, and observability explained](<../agents/planning/What is agent orchestration Frameworks, runtimes, and observability explained.md>) · `planning` · arize
   Explains agent orchestration across frameworks, runtimes, and observability concerns.
+- **2026-06-12** — [[AINews] Loopcraft: The Art of Stacking Loops](<../agents/planning/[AINews] Loopcraft The Art of Stacking Loops.md>) · `planning` · latent-space
+  AINews piece on Loopcraft and stacking feedback loops for AI systems.
 - **2026-06-11** — [Cresta Conductor: The Agent for AI Agent Development](<../agents/planning/Cresta Conductor The Agent for AI Agent Development.md>) · `planning` · cresta
   Introduces an agent used to help develop other AI agents, with lessons around orchestration, testing, and iteration workflows.
 - **2026-06-09** — [How to detect credential theft in AI agent harness traces](<../product-engineering/security/How to detect credential theft in AI agent harness traces.md>) · `security` · arize
@@ -553,6 +561,8 @@
   Explains EinsteinArena for using collective agent intelligence to advance scientific tasks.
 - **2026-04-13** — [How to prepare for AI compliance and governance](<../product-engineering/security/How to prepare for AI compliance and governance.md>) · `security` · braintrust
   Connects AI compliance and governance to engineering controls such as observability, audit trails, data boundaries, review workflows, and policy enforcement.
+- **2026-04-07** — [Extreme Harness Engineering for Token Billionaires: 1M LOC, 1B toks/day, 0% human code, 0% human review — Ryan Lopopolo, OpenAI Frontier & Symphony](<../agents/planning/Extreme Harness Engineering for Token Billionaires 1M LOC, 1B toksday, 0% human code, 0% human review — Ryan Lopopolo, OpenAI Frontier & Symphony.md>) · `planning` · latent-space
+  Deep dive on extreme harness engineering for high-volume agentic coding and token-heavy workflows.
 - **2026-04-04** — [How Arize Skills Improved RAG Recall from 39% to 75% in 8 Hours](<../rag-retrieval/pipelines/How Arize Skills Improved RAG Recall from 39% to 75% in 8 Hours.md>) · `pipelines` · arize
   Uses an eval-guided RAG improvement loop to show how retrieval recall can be diagnosed and improved quickly.
 - **2026-04-03** — [Braintrust CLI and MCP](<../agents/tool-use/Braintrust CLI and MCP.md>) · `tool-use` · braintrust
@@ -755,6 +765,8 @@
   Introduces Promptim as an experimental prompt-optimization library that uses evaluation feedback to improve prompts.
 - **2024-11-13** — [LLM Product Development for Product Managers](<../product-engineering/ux-patterns/LLM Product Development for Product Managers.md>) · `ux-patterns` · langfuse
   Product-management guide for LLM applications, connecting user workflows, quality criteria, feedback, and evals to AI product development decisions.
+- **2024-11-01** — [In the Arena: How LMSys changed LLM Benchmarking Forever](<../models/benchmarks/In the Arena How LMSys changed LLM Benchmarking Forever.md>) · `benchmarks` · latent-space
+  LMSys interview on how arena-style evaluation changed LLM benchmarking.
 - **2024-10-22** — [Evaluating NVIDIA H200 Tensor Core GPUs for LLM inference](<../inference/hardware/Evaluating NVIDIA H200 Tensor Core GPUs for LLM inference.md>) · `hardware` · baseten
   Evaluates NVIDIA H200 GPUs for LLM inference and compares their serving performance characteristics.
 - **2024-10-17** — [I ran an eval. Now what?](<evaluation/I ran an eval. Now what.md>) · `evaluation` · braintrust
@@ -817,12 +829,16 @@
   Explains test-run comparisons for evaluating changes across LLM application versions and identifying regressions.
 - **2023-10-16** — [Testing Fine Tuned Open Source Models in LangSmith](<../models/fine-tuning/Testing Fine Tuned Open Source Models in LangSmith.md>) · `fine-tuning` · langchain
   Shows how to test fine-tuned open-source models in LangSmith using evaluations and comparison workflows.
+- **2023-10-14** — [Why AI Agents Don't Work (yet) - with Kanjun Qiu of Imbue](<../agents/planning/Why AI Agents Don't Work (yet) - with Kanjun Qiu of Imbue.md>) · `planning` · latent-space
+  Imbue interview on why AI agents do not work yet, covering reliability, reasoning, and evaluation limits.
 - **2023-08-16** — [Open challenges in LLM research](<../models/reasoning/Open challenges in LLM research.md>) · `reasoning` · chip-huyen
   Surveys open LLM research problems around hallucination, context length, efficiency, multimodality, agents, evaluation, and post-training behavior that shape engineering constraints.
 - **2023-07-19** — [Streamline and Centralize AI Analytics With Snowflake and Arize AI](<../product-engineering/case-studies/Streamline and Centralize AI Analytics With Snowflake and Arize AI.md>) · `case-studies` · arize
   Describes using Snowflake with Arize to centralize AI analytics and observability data for model performance analysis.
 - **2023-05-25** — [Debugging the Internet with AI agents – with Itamar Friedman of Codium AI and AutoGPT](<../agents/computer-use/Debugging the Internet with AI agents – with Itamar Friedman of Codium AI and AutoGPT.md>) · `computer-use` · latent-space
   Interview on debugging the internet with AI agents, Codium AI, and AutoGPT-style agent workflows.
+- **2023-05-16** — [Guaranteed quality and structure in LLM outputs - with Shreya Rajpal of Guardrails AI](<../prompt-engineering/structured-output/Guaranteed quality and structure in LLM outputs - with Shreya Rajpal of Guardrails AI.md>) · `structured-output` · latent-space
+  Guardrails AI interview on guaranteeing quality and structure in LLM outputs through constraints, validation, and evals.
 - **2023-05-02** — [RLHF: Reinforcement Learning from Human Feedback](<../models/fine-tuning/RLHF Reinforcement Learning from Human Feedback.md>) · `fine-tuning` · chip-huyen
   Explains the RLHF pipeline from preference data through reward modeling and policy optimization, including why human feedback changes model behavior and where evaluation matters.
 - **2023-04-11** — [Building LLM applications for production](<../product-engineering/architecture/Building LLM applications for production.md>) · `architecture` · chip-huyen
