@@ -433,6 +433,8 @@
   Introduces StripedHyena-7B and efficient architectures beyond Transformers.
 - **2023-11-17** — [A guide to LLM inference and performance](<serving/A guide to LLM inference and performance.md>) · `serving` · baseten
   Comprehensive guide to LLM inference, transformer serving, latency, and throughput performance.
+- **2023-11-17** — [The State of Silicon and the GPU Poors - with Dylan Patel of SemiAnalysis](<../infra-platform/gpu-clusters/The State of Silicon and the GPU Poors - with Dylan Patel of SemiAnalysis.md>) · `gpu-clusters` · latent-space
+  SemiAnalysis interview on GPU scarcity, silicon constraints, and the infrastructure economics behind frontier AI systems.
 - **2023-11-02** — [Deployment and inference for open source text embedding models](<../rag-retrieval/embeddings/Deployment and inference for open source text embedding models.md>) · `embeddings` · baseten
   Covers deployment and inference patterns for open-source text embedding models.
 - **2023-09-19** — [Arize AI Debuts Integration with Anyscale Endpoints](<../infra-platform/deployment/Arize AI Debuts Integration with Anyscale Endpoints.md>) · `deployment` · arize

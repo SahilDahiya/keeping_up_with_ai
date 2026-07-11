@@ -1,6 +1,6 @@
 # product-engineering
 
-120 articles.
+125 articles.
 
 - **2026-07-10** — [AI-pilling our company: lessons learned](<case-studies/AI-pilling our company lessons learned.md>) · `case-studies` · sierra
   Internal adoption case study on spreading AI workflows through a company, including practical lessons for using agents and tools in day-to-day work.
@@ -10,6 +10,8 @@
   Interview-driven discussion of agents as users, covering identity, permissions, memory, evals, and feedback loops as core production-agent infrastructure.
 - **2026-07-07** — [How Schneider Electric Built Their LLMOps Foundations With LangSmith](<case-studies/How Schneider Electric Built Their LLMOps Foundations With LangSmith.md>) · `case-studies` · langchain
   Schneider Electric case study on building enterprise LLMOps foundations with LangSmith at scale.
+- **2026-07-02** — [The website of the future may assemble itself for every visitor](<architecture/The website of the future may assemble itself for every visitor.md>) · `architecture` · latent-space
+  Adobe agentic-sites case study on assembling grounded personalized web pages for humans and agents.
 - **2026-07-01** — [How Pendo uses LangSmith to trace Novus from user behavior to code fixes](<case-studies/How Pendo uses LangSmith to trace Novus from user behavior to code fixes.md>) · `case-studies` · langchain
   Pendo case study tracing Novus from user behavior to code fixes, showing how traces connect product signals to agent improvements.
 - **2026-07-01** — [Your site, your rules: new AI traffic options for all customers](<security/Your site, your rules new AI traffic options for all customers.md>) · `security` · cloudflare-ai
@@ -68,6 +70,8 @@
   Explains a tokenizer-level prompt-injection fix and the implications for securing model-serving systems.
 - **2026-04-23** — [How we built RBAC that scales for the enterprise](<security/How we built RBAC that scales for the enterprise.md>) · `security` · baseten
   Engineering writeup on building RBAC for enterprise AI infrastructure and balancing autonomy with control.
+- **2026-04-22** — [Shopify’s AI Phase Transition: 2026 Usage Explosion, Unlimited Opus-4.6 Token Budget, Tangle, Tangent, SimGym — with Mikhail Parakhin, Shopify CTO](<architecture/Shopify’s AI Phase Transition 2026 Usage Explosion, Unlimited Opus-4.6 Token Budget, Tangle, Tangent, SimGym — with Mikhail Parakhin, Shopify CTO.md>) · `architecture` · latent-space
+  Shopify case study on large-scale AI usage, coding assistants, agent workflows, and organizational rollout patterns.
 - **2026-04-21** — [Moving past bots vs. humans](<security/Moving past bots vs. humans.md>) · `security` · cloudflare-ai
   Argues bot detection must move from 'bots vs. humans' to intent and behavior as AI agents fetch raw content without rendering pages: covers Web Bot Auth (HTTP message signatures) for crawler identification and private rate limiting for clients that no longer behave like browsers.
 - **2026-04-20** — [The AI engineering stack we built internally — on the platform we ship](<case-studies/The AI engineering stack we built internally — on the platform we ship.md>) · `case-studies` · cloudflare-ai
@@ -172,6 +176,8 @@
   Engineering case study on building a customer data access layer, useful for understanding integration tradeoffs in enterprise AI products.
 - **2025-03-18** — [Our Own Zero to One: Lessons Learned in Building The Brinks Home AI Agent](<case-studies/Our Own Zero to One Lessons Learned in Building The Brinks Home AI Agent.md>) · `case-studies` · cresta
   Production case study on building an AI agent from zero to one, with lessons about scope, rollout, and operational constraints.
+- **2025-03-14** — [Building Snipd: The AI Podcast App for Learning](<case-studies/Building Snipd The AI Podcast App for Learning.md>) · `case-studies` · latent-space
+  Snipd case study on building an AI podcast learning app with search, summarization, and product workflow lessons.
 - **2025-02-12** — [How 100X AI Uses Phoenix to Supercharge AI-Driven Troubleshooting](<case-studies/How 100X AI Uses Phoenix to Supercharge AI-Driven Troubleshooting.md>) · `case-studies` · arize
   Case study on using Phoenix traces and observability to improve AI-driven troubleshooting workflows in production.
 - **2025-02-11** — [The AI Architect — Bret Taylor](<architecture/The AI Architect — Bret Taylor.md>) · `architecture` · latent-space
@@ -214,6 +220,10 @@
   Explains the shift from standalone models to compound AI systems that combine models, retrieval, tools, orchestration, and evaluation into production applications.
 - **2024-02-01** — [Why StackOverflow usage is down 50% — with David Hsu of Retool](<architecture/Why StackOverflow usage is down 50% — with David Hsu of Retool.md>) · `architecture` · latent-space
   Retool interview on AI’s impact on StackOverflow and internal software development workflows.
+- **2024-01-05** — [The Accidental AI Canvas - with Steve Ruiz of tldraw](<ux-patterns/The Accidental AI Canvas - with Steve Ruiz of tldraw.md>) · `ux-patterns` · latent-space
+  tldraw interview on AI canvas interfaces, generative UI, and product patterns for multimodal creation tools.
+- **2023-12-20** — [The AI-First Graphics Editor - with Suhail Doshi of Playground AI](<case-studies/The AI-First Graphics Editor - with Suhail Doshi of Playground AI.md>) · `case-studies` · latent-space
+  Playground AI interview on AI-first graphics editing, multimodal UX, and product iteration around image generation.
 - **2023-11-13** — [The AI product development journey](<architecture/The AI product development journey.md>) · `architecture` · braintrust
   Frames the AI product development journey around iterative prototyping, evaluation, logging, feedback, and production-quality improvement loops.
 - **2023-10-26** — [Powering your Copilot for Data – with Artem Keydunov of Cube.dev](<architecture/Powering your Copilot for Data – with Artem Keydunov of Cube.dev.md>) · `architecture` · latent-space
@@ -253,6 +263,8 @@
   Release and implementation notes for a Claude Code-style coding agent built on Simon Willison's LLM framework, including file-editing, command execution, search, read, and write tools plus approval modes.
 - **2026-07-01** — [How Cursor deploys AI inside the enterprise](<../agents/computer-use/How Cursor deploys AI inside the enterprise.md>) · `computer-use` · latent-space
   Explains how Cursor deploys AI inside enterprises, with lessons about forward-deployed engineering and adoption.
+- **2026-07-01** — [Warp CEO Zach Lloyd on why software factories are the next phase of coding](<../agents/computer-use/Warp CEO Zach Lloyd on why software factories are the next phase of coding.md>) · `computer-use` · latent-space
+  Warp interview on software factories as the next phase of coding agents and AI-assisted development systems.
 - **2026-07-01** — [AIEWF Daily Dispatch: Loops, Software Factories & Forward Deployed Engineers](<../agents/planning/AIEWF Daily Dispatch Loops, Software Factories & Forward Deployed Engineers.md>) · `planning` · latent-space
   Covers loops, software factories, and forward-deployed engineering as recurring patterns in AI engineering practice.
 - **2026-07-01** — [Unmasking the crawls with Attribution Business Insights](<../industry/business/Unmasking the crawls with Attribution Business Insights.md>) · `business` · cloudflare-ai
@@ -347,6 +359,8 @@
   Describes collaborative eval workflows for teams, including feedback loops that turn production examples, review, and datasets into better AI behavior.
 - **2025-11-24** — [Turn production data into better AI with Loop](<../evals-observability/monitoring/Turn production data into better AI with Loop.md>) · `monitoring` · braintrust
   Explains Loop as a way to turn production data into AI improvements through review, labeling, datasets, and feedback-driven iteration.
+- **2025-10-30** — [Agentic Commerce Protocol and building the Economic Infrastructure for AI — with Emily Glassberg Sands, Head of Data & AI at Stripe](<../agents/tool-use/Agentic Commerce Protocol and building the Economic Infrastructure for AI — with Emily Glassberg Sands, Head of Data & AI at Stripe.md>) · `tool-use` · latent-space
+  Stripe interview on Agentic Commerce Protocol and economic infrastructure for AI agent transactions.
 - **2025-10-21** — [LLM Testing: A Practical Guide to Automated Testing for LLM Applications](<../evals-observability/testing/LLM Testing A Practical Guide to Automated Testing for LLM Applications.md>) · `testing` · langfuse
   Practical guide to automated testing for LLM applications, covering test cases, regression checks, CI-style workflows, and quality gates.
 - **2025-09-22** — [Why we built the Responses API | OpenAI Developers](<../agents/tool-use/Why we built the Responses API OpenAI Developers.md>) · `tool-use` · openai-devs
@@ -427,10 +441,14 @@
   Explains eval feedback loops where production observations and human review continuously improve prompts, datasets, and model behavior.
 - **2024-03-24** — [Trace complex LLM applications with the Langfuse decorator (Python)](<../evals-observability/tracing/Trace complex LLM applications with the Langfuse decorator (Python).md>) · `tracing` · langfuse
   Shows how to trace complex Python LLM applications with the Langfuse decorator, including nested calls, metadata, and observability patterns for multi-step workflows.
+- **2024-03-14** — [Making Transformers Sing - with Mikey Shulman of Suno](<../models/multimodal/Making Transformers Sing - with Mikey Shulman of Suno.md>) · `multimodal` · latent-space
+  Suno interview on transformer-based music generation and the product challenges of building generative audio systems.
 - **2024-03-14** — [Lambda on hard mode: Inside Modal's web infrastructure](<../infra-platform/deployment/Lambda on hard mode Inside Modal's web infrastructure.md>) · `deployment` · modal
   Deep dive into Modal web infrastructure, including serverless HTTP routing, isolation, and platform architecture.
 - **2024-03-11** — [Iterating Towards LLM Reliability with Evaluation Driven Development](<../evals-observability/testing/Iterating Towards LLM Reliability with Evaluation Driven Development.md>) · `testing` · langchain
   Explains evaluation-driven development for LLM reliability using regression tests, examples, and iterative quality gates.
+- **2023-12-14** — [The "Normsky" architecture for AI coding agents — with Beyang Liu + Steve Yegge of SourceGraph](<../agents/computer-use/The Normsky architecture for AI coding agents — with Beyang Liu + Steve Yegge of SourceGraph.md>) · `computer-use` · latent-space
+  Sourcegraph interview on the Normsky architecture for AI coding agents and practical IDE/developer-agent design.
 - **2023-11-29** — [Notebooks = Chat++ and RAG = RecSys! — with Bryan Bischof of Hex Magic](<../rag-retrieval/pipelines/Notebooks = Chat++ and RAG = RecSys! — with Bryan Bischof of Hex Magic.md>) · `pipelines` · latent-space
   Connects notebooks, chat interfaces, RAG, and recommender-system thinking for data-oriented AI products.
 - **2023-11-27** — [Open sourcing the AI proxy](<../infra-platform/deployment/Open sourcing the AI proxy.md>) · `deployment` · braintrust
@@ -455,6 +473,8 @@
   Explains model fairness evaluation and how to assess bias and fairness risks in production systems.
 - **2023-04-22** — [AI-native Search for the Enterprise — with Deedy Das of Glean](<../rag-retrieval/search/AI-native Search for the Enterprise — with Deedy Das of Glean.md>) · `search` · latent-space
   Glean interview on AI-native enterprise search, grounding, permissions, and retrieval over company knowledge.
+- **2023-04-13** — [Segment Anything Model and the Hard Problems of Computer Vision — with Joseph Nelson of Roboflow](<../models/multimodal/Segment Anything Model and the Hard Problems of Computer Vision — with Joseph Nelson of Roboflow.md>) · `multimodal` · latent-space
+  Roboflow interview on Segment Anything, computer vision productization, annotation workflows, and practical CV deployment problems.
 - **2023-03-24** — [Emergency Pod: ChatGPT's App Store Moment (w/ OpenAI's Logan Kilpatrick, LindyAI's Florent Crivello and Nader Dabit)](<../agents/tool-use/Emergency Pod ChatGPT's App Store Moment (w OpenAI's Logan Kilpatrick, LindyAI's Florent Crivello and Nader Dabit).md>) · `tool-use` · latent-space
   Emergency pod on ChatGPT plugins as an app-store moment, covering tool ecosystems and agent product surfaces.
 - **2023-02-17** — [Technical deep dive: Truss live reload](<../infra-platform/deployment/Technical deep dive Truss live reload.md>) · `deployment` · baseten

@@ -1,6 +1,6 @@
 # evals-observability
 
-211 articles.
+215 articles.
 
 - **2026-07-07** — [Improving Agents is a Data Mining Problem](<monitoring/Improving Agents is a Data Mining Problem.md>) · `monitoring` · langchain
   Argues that improving agents is a data-mining problem over traces, failures, feedback, and recurring behavioral patterns.
@@ -172,6 +172,8 @@
   Case study from shipping Arize Alyx that distills debugging lessons around traces, failure analysis, context inspection, and production agent iteration.
 - **2026-02-25** — [Automatically discover what matters in your production traces with Topics](<tracing/Automatically discover what matters in your production traces with Topics.md>) · `tracing` · braintrust
   Introduces automatic topic discovery over production traces as a way to find recurring behavior patterns and quality issues.
+- **2026-02-23** — [⚡️The End of SWE-Bench Verified — Mia Glaese & Olivia Watkins, OpenAI Frontier Evals & Human Data](<evaluation/⚡️The End of SWE-Bench Verified — Mia Glaese & Olivia Watkins, OpenAI Frontier Evals & Human Data.md>) · `evaluation` · latent-space
+  OpenAI Frontier Evals discussion on the limits of SWE-bench Verified and the future of coding-agent evaluation.
 - **2026-02-20** — [AI Agent Observability, Tracing & Evaluation with Langfuse](<tracing/AI Agent Observability, Tracing & Evaluation with Langfuse.md>) · `tracing` · langfuse
   Guide to observability for AI agents, covering traces, spans, tool calls, evaluations, and debugging workflows for agentic systems.
 - **2026-02-17** — [Closing the Loop: Coding Agents, Telemetry, and the Path to Self-Improving Software](<tracing/Closing the Loop Coding Agents, Telemetry, and the Path to Self-Improving Software.md>) · `tracing` · arize
@@ -204,6 +206,10 @@
   Debugging walkthrough using Braintrust logs to inspect AI application behavior, identify failure causes, and close the loop with improvements.
 - **2026-01-09** — [Demystifying evals for AI agents](<evaluation/Demystifying evals for AI agents.md>) · `evaluation` · anthropic-engineering
   A practical framework for building agent evals: grader design, task suites, pass@k metrics, and evolving evals as agent capabilities improve.
+- **2026-01-06** — [[State of Evals] LMArena's $1.7B Vision — Anastasios Angelopoulos, LMArena](<evaluation/[State of Evals] LMArena's $1.7B Vision — Anastasios Angelopoulos, LMArena.md>) · `evaluation` · latent-space
+  State-of-evals recap on LMArena, benchmark governance, and vision evaluation trends.
+- **2025-12-31** — [[State of Code Evals] After SWE-bench, Code Clash & SOTA Coding Benchmarks recap — John Yang](<evaluation/[State of Code Evals] After SWE-bench, Code Clash & SOTA Coding Benchmarks recap — John Yang.md>) · `evaluation` · latent-space
+  Compact state-of-code-evals recap covering SWE-bench successors, Code Clash, and coding benchmark direction.
 - **2025-12-18** — [Brainstore makes AI observability at scale possible](<monitoring/Brainstore makes AI observability at scale possible.md>) · `monitoring` · braintrust
   Benchmark-oriented note on Brainstore performance and why purpose-built storage is needed for high-volume AI observability workloads.
 - **2025-12-03** — [Evaluating Deep Agents: Our Learnings](<evaluation/Evaluating Deep Agents Our Learnings.md>) · `evaluation` · langchain
@@ -388,6 +394,8 @@
   Overview of cross-validation from classic ML through LLM applications, focused on evaluation methodology.
 - **2023-05-17** — [Evaluating Model Fairness](<evaluation/Evaluating Model Fairness.md>) · `evaluation` · arize
   Explains model fairness evaluation and how to assess bias and fairness risks in production systems.
+- **2023-03-29** — [Grounded Research: From Google Brain to MLOps to LLMOps — with Shreya Shankar of UC Berkeley](<testing/Grounded Research From Google Brain to MLOps to LLMOps — with Shreya Shankar of UC Berkeley.md>) · `testing` · latent-space
+  Shreya Shankar interview connecting MLOps and LLMOps with testing, data leakage, monitoring, and grounded ML systems.
 - **2022-12-22** — [Hugging Face + Arize: Partnership and Code Example](<monitoring/Hugging Face + Arize Partnership and Code Example.md>) · `monitoring` · arize
   Partnership and code example showing how to monitor Hugging Face model workflows with Arize observability.
 - **2022-12-16** — [Calculate Real-Time AI ROI With Custom Metrics](<monitoring/Calculate Real-Time AI ROI With Custom Metrics.md>) · `monitoring` · arize
@@ -643,6 +651,8 @@
   Case study of Retool using production logs and Loop-style review to turn AI usage data into roadmap and quality decisions.
 - **2026-01-01** — [How Zapier builds production-ready AI products](<../product-engineering/case-studies/How Zapier builds production-ready AI products.md>) · `case-studies` · braintrust
   Case study of Zapier building production-ready AI products with observability, evals, and feedback loops across real customer workflows.
+- **2025-12-30** — [[State of RL/Reasoning] IMO/IOI Gold, OpenAI o3/GPT-5, and Cursor Composer — Ashvin Nair, Cursor](<../models/reasoning/[State of RLReasoning] IMOIOI Gold, OpenAI o3GPT-5, and Cursor Composer — Ashvin Nair, Cursor.md>) · `reasoning` · latent-space
+  State-of-RL reasoning recap covering IMO and IOI results, o3, GPT-5, and Cursor Composer.
 - **2025-12-23** — [Claude Code meets Braintrust](<../agents/tool-use/Claude Code meets Braintrust.md>) · `tool-use` · braintrust
   Shows how Claude Code workflows can connect to Braintrust so coding-agent traces, experiments, and eval data are captured for review.
 - **2025-12-22** — [EU AI Act Compliance: What AI Engineering Teams Should Monitor](<../product-engineering/security/EU AI Act Compliance What AI Engineering Teams Should Monitor.md>) · `security` · arize
@@ -699,6 +709,8 @@
   Examines prompting strategies for LLM-as-judge evaluators, including explanations and chain-of-thought design choices.
 - **2025-08-11** — [adb Database: Realtime Ingestion At Scale](<../infra-platform/deployment/adb Database Realtime Ingestion At Scale.md>) · `deployment` · arize
   Describes realtime ingestion design for Arize database, including scale requirements for AI observability data and production trace ingestion.
+- **2025-08-09** — [Can coding agents self-improve?](<../agents/computer-use/Can coding agents self-improve.md>) · `computer-use` · latent-space
+  Examines whether coding agents can self-improve, with implications for agent loops, benchmarks, and automated software iteration.
 - **2025-08-08** — [GPT-5 vs. Claude Opus 4.1](<../models/benchmarks/GPT-5 vs. Claude Opus 4.1.md>) · `benchmarks` · braintrust
   Compares GPT-5 and Claude Opus 4.1 with eval-driven analysis of strengths, weaknesses, and model-selection implications.
 - **2025-08-06** — [Grounding Reality – How Cresta Tackles LLM Hallucinations in Enterprise AI](<../rag-retrieval/pipelines/Grounding Reality – How Cresta Tackles LLM Hallucinations in Enterprise AI.md>) · `pipelines` · cresta
@@ -847,6 +859,8 @@
   Practical guide to production LLM applications covering task decomposition, retrieval, prompt construction, evaluation, monitoring, and latency/cost tradeoffs.
 - **2023-04-07** — [AI Fundamentals: Benchmarks 101](<../models/benchmarks/AI Fundamentals Benchmarks 101.md>) · `benchmarks` · latent-space
   Foundational guide to model benchmarks and how AI engineers should interpret benchmark results.
+- **2023-03-29** — [Grounded Research: From Google Brain to MLOps to LLMOps — with Shreya Shankar of UC Berkeley](<testing/Grounded Research From Google Brain to MLOps to LLMOps — with Shreya Shankar of UC Berkeley.md>) · `testing` · latent-space
+  Shreya Shankar interview connecting MLOps and LLMOps with testing, data leakage, monitoring, and grounded ML systems.
 - **2022-12-31** — [Measuring Embedding Drift](<../rag-retrieval/embeddings/Measuring Embedding Drift.md>) · `embeddings` · arize
   Explains embedding drift and how teams can measure changes in embedding distributions over time.
 - **2022-11-17** — [HELM: benchmarking large language models on the Together Research Computer](<../models/benchmarks/HELM benchmarking large language models on the Together Research Computer.md>) · `benchmarks` · together

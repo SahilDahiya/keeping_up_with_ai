@@ -1,6 +1,6 @@
 # agents
 
-214 articles.
+219 articles.
 
 - **2026-07-10** — [OpenWiki Brains: Proactive Memory for AI Agents](<memory-context/OpenWiki Brains Proactive Memory for AI Agents.md>) · `memory-context` · langchain
   Introduces OpenWiki Brains as proactive wiki memory for agents, focused on persistent context and retrieval over project knowledge.
@@ -32,6 +32,8 @@
   Release and implementation notes for a Claude Code-style coding agent built on Simon Willison's LLM framework, including file-editing, command execution, search, read, and write tools plus approval modes.
 - **2026-07-01** — [How Cursor deploys AI inside the enterprise](<computer-use/How Cursor deploys AI inside the enterprise.md>) · `computer-use` · latent-space
   Explains how Cursor deploys AI inside enterprises, with lessons about forward-deployed engineering and adoption.
+- **2026-07-01** — [Warp CEO Zach Lloyd on why software factories are the next phase of coding](<computer-use/Warp CEO Zach Lloyd on why software factories are the next phase of coding.md>) · `computer-use` · latent-space
+  Warp interview on software factories as the next phase of coding agents and AI-assisted development systems.
 - **2026-07-01** — [How to Use RLMs in Deep Agents](<memory-context/How to Use RLMs in Deep Agents.md>) · `memory-context` · langchain
   Explains how to use retrieval language models in Deep Agents to improve context selection and long-running agent performance.
 - **2026-07-01** — [AIEWF Daily Dispatch: Loops, Software Factories & Forward Deployed Engineers](<planning/AIEWF Daily Dispatch Loops, Software Factories & Forward Deployed Engineers.md>) · `planning` · latent-space
@@ -268,6 +270,8 @@
   Explains tool calling in inference and how model servers support structured external actions.
 - **2025-11-04** — [Code execution with MCP: building more efficient AI agents](<tool-use/Code execution with MCP building more efficient AI agents.md>) · `tool-use` · anthropic-engineering
   Argues agents should write code that calls MCP tools rather than invoking tools directly, cutting token usage and enabling control flow over intermediate results.
+- **2025-10-30** — [Agentic Commerce Protocol and building the Economic Infrastructure for AI — with Emily Glassberg Sands, Head of Data & AI at Stripe](<tool-use/Agentic Commerce Protocol and building the Economic Infrastructure for AI — with Emily Glassberg Sands, Head of Data & AI at Stripe.md>) · `tool-use` · latent-space
+  Stripe interview on Agentic Commerce Protocol and economic infrastructure for AI agent transactions.
 - **2025-10-16** — [Equipping agents for the real world with Agent Skills](<tool-use/Equipping agents for the real world with Agent Skills.md>) · `tool-use` · anthropic-engineering
   Introduces Agent Skills: folder-based packages of instructions, scripts, and resources that agents load progressively to gain domain expertise on demand.
 - **2025-10-14** — [Optimizing Coding Agent Rules (./clinerules) for Improved Accuracy](<computer-use/Optimizing Coding Agent Rules (.clinerules) for Improved Accuracy.md>) · `computer-use` · arize
@@ -294,6 +298,8 @@
   Argues for decentralized voice-agent architectures over central orchestration in some customer-experience workloads.
 - **2025-08-21** — [AI agents for efficient LLM inference engineering](<tool-use/AI agents for efficient LLM inference engineering.md>) · `tool-use` · together
   Case study of using AI agents to automate engineering tasks while developing efficient inference systems.
+- **2025-08-09** — [Can coding agents self-improve?](<computer-use/Can coding agents self-improve.md>) · `computer-use` · latent-space
+  Examines whether coding agents can self-improve, with implications for agent loops, benchmarks, and automated software iteration.
 - **2025-08-07** — [The canonical agent architecture: A while loop with tools](<planning/The canonical agent architecture A while loop with tools.md>) · `planning` · braintrust
   Frames the canonical agent architecture as a while loop around model calls, tool use, state updates, and termination criteria for controllable agent behavior.
 - **2025-08-06** — [Introducing Open SWE: An Open-Source Asynchronous Coding Agent](<tool-use/Introducing Open SWE An Open-Source Asynchronous Coding Agent.md>) · `tool-use` · langchain
@@ -394,6 +400,8 @@
   Introduces functions as flexible AI engineering primitives for tool calling, structured behavior, and reusable evaluation or workflow components.
 - **2024-09-30** — [Arize AI + MongoDB: Leveraging Agent Evaluation and Memory to Build Robust Agentic Systems](<memory-context/Arize AI + MongoDB Leveraging Agent Evaluation and Memory to Build Robust Agentic Systems.md>) · `memory-context` · arize
   Explains how Arize and MongoDB combine agent evaluation and memory patterns for more robust agentic systems.
+- **2024-09-27** — [Language Agents: From Reasoning to Acting](<planning/Language Agents From Reasoning to Acting.md>) · `planning` · latent-space
+  Shunyu Yao interview on language agents, reasoning-to-acting patterns, planning, and tool use.
 - **2024-08-29** — [Build Your Own Flight Recommendation System using FastAPI, SerpAPI, and Firefunction](<tool-use/Build Your Own Flight Recommendation System using FastAPI, SerpAPI, and Firefunction.md>) · `tool-use` · fireworks
   Tutorial for building a function-calling application with FastAPI, SerpAPI, and structured tool invocation.
 - **2024-08-08** — [LlamaIndex Workflows: Navigating a New Way To Build Cyclical Agents](<planning/LlamaIndex Workflows Navigating a New Way To Build Cyclical Agents.md>) · `planning` · arize
@@ -410,6 +418,8 @@
   Interview on Adept, multimodal agents, and why action-oriented models require product and systems design beyond chat.
 - **2023-12-20** — [Benchmarking Agent Tool Use](<tool-use/Benchmarking Agent Tool Use.md>) · `tool-use` · langchain
   Benchmarking study for agent tool use, focused on measuring whether agents choose and invoke tools correctly across tasks.
+- **2023-12-14** — [The "Normsky" architecture for AI coding agents — with Beyang Liu + Steve Yegge of SourceGraph](<computer-use/The Normsky architecture for AI coding agents — with Beyang Liu + Steve Yegge of SourceGraph.md>) · `computer-use` · latent-space
+  Sourcegraph interview on the Normsky architecture for AI coding agents and practical IDE/developer-agent design.
 - **2023-10-14** — [Why AI Agents Don't Work (yet) - with Kanjun Qiu of Imbue](<planning/Why AI Agents Don't Work (yet) - with Kanjun Qiu of Imbue.md>) · `planning` · latent-space
   Imbue interview on why AI agents do not work yet, covering reliability, reasoning, and evaluation limits.
 - **2023-09-06** — [The Point of LangChain — with Harrison Chase of LangChain](<planning/The Point of LangChain — with Harrison Chase of LangChain.md>) · `planning` · latent-space
@@ -449,10 +459,14 @@
   Argues that improving agents is a data-mining problem over traces, failures, feedback, and recurring behavioral patterns.
 - **2026-07-03** — [AIEWF Daily Dispatch: The great loops debate and the state of AI engineering](<../industry/trends/AIEWF Daily Dispatch The great loops debate and the state of AI engineering.md>) · `trends` · latent-space
   Dispatch on the loops debate and the state of AI engineering, capturing emerging vocabulary for production AI systems.
+- **2026-07-02** — [Skill engineering and the case against one-shot AI design](<../prompt-engineering/context-engineering/Skill engineering and the case against one-shot AI design.md>) · `context-engineering` · latent-space
+  Argues for skill engineering over one-shot design, focusing on reusable instructions and context for AI-assisted creation.
 - **2026-07-02** — [How to evaluate AI agents, avoid reward hacking, and build better specs](<../evals-observability/evaluation/How to evaluate AI agents, avoid reward hacking, and build better specs.md>) · `evaluation` · arize
   Connects agent evaluation with specification quality, including reward hacking risks and tighter behavioral contracts.
 - **2026-07-02** — [Your coding agent bill doubled. Here’s how to fix it.](<../infra-platform/cost/Your coding agent bill doubled. Here’s how to fix it.md>) · `cost` · langchain
   Practical guide to reducing coding-agent spend through model choice, caching, harness tuning, and workflow design.
+- **2026-07-02** — [The website of the future may assemble itself for every visitor](<../product-engineering/architecture/The website of the future may assemble itself for every visitor.md>) · `architecture` · latent-space
+  Adobe agentic-sites case study on assembling grounded personalized web pages for humans and agents.
 - **2026-07-01** — [How Pendo uses LangSmith to trace Novus from user behavior to code fixes](<../product-engineering/case-studies/How Pendo uses LangSmith to trace Novus from user behavior to code fixes.md>) · `case-studies` · langchain
   Pendo case study tracing Novus from user behavior to code fixes, showing how traces connect product signals to agent improvements.
 - **2026-06-30** — [Harbor x LangChain: A Unified Stack for Evaluating Agents](<../evals-observability/evaluation/Harbor x LangChain A Unified Stack for Evaluating Agents.md>) · `evaluation` · langchain
@@ -603,6 +617,8 @@
   Explains why production agents depend on context quality and eval loops, not just model choice, and outlines how to evaluate behavior on real workflows.
 - **2026-04-22** — [How to add an evaluation harness to your Gemini CLI coding agent](<../evals-observability/testing/How to add an evaluation harness to your Gemini CLI coding agent.md>) · `testing` · arize
   Walks through adding an evaluation harness to a Gemini CLI coding agent, including how to measure and compare agent behavior.
+- **2026-04-22** — [Shopify’s AI Phase Transition: 2026 Usage Explosion, Unlimited Opus-4.6 Token Budget, Tangle, Tangent, SimGym — with Mikhail Parakhin, Shopify CTO](<../product-engineering/architecture/Shopify’s AI Phase Transition 2026 Usage Explosion, Unlimited Opus-4.6 Token Budget, Tangle, Tangent, SimGym — with Mikhail Parakhin, Shopify CTO.md>) · `architecture` · latent-space
+  Shopify case study on large-scale AI usage, coding assistants, agent workflows, and organizational rollout patterns.
 - **2026-04-16** — [[AINews] RIP Pull Requests (2005-2026)](<../product-engineering/architecture/[AINews] RIP Pull Requests (2005-2026).md>) · `architecture` · latent-space
   Argues that agentic development changes the pull-request workflow and software delivery loop.
 - **2026-04-15** — [Notion’s Token Town: 5 Rebuilds, 100+ Tools, MCP vs CLIs and the Software Factory Future — Simon Last & Sarah Sachs of Notion](<../product-engineering/architecture/Notion’s Token Town 5 Rebuilds, 100+ Tools, MCP vs CLIs and the Software Factory Future — Simon Last & Sarah Sachs of Notion.md>) · `architecture` · latent-space
@@ -665,6 +681,8 @@
   Guide to monitoring and evaluating LLM agents in production, including traces, feedback, evals, and alerting signals.
 - **2026-02-23** — [Mastering Production RAG with Google ADK and Arize AX for Enterprise Knowledge Systems](<../rag-retrieval/pipelines/Mastering Production RAG with Google ADK and Arize AX for Enterprise Knowledge Systems.md>) · `pipelines` · arize
   Explains production RAG architecture with Google ADK and Arize AX, including agentic retrieval and evaluation concerns.
+- **2026-02-23** — [⚡️The End of SWE-Bench Verified — Mia Glaese & Olivia Watkins, OpenAI Frontier Evals & Human Data](<../evals-observability/evaluation/⚡️The End of SWE-Bench Verified — Mia Glaese & Olivia Watkins, OpenAI Frontier Evals & Human Data.md>) · `evaluation` · latent-space
+  OpenAI Frontier Evals discussion on the limits of SWE-bench Verified and the future of coding-agent evaluation.
 - **2026-02-23** — [Directory Snapshots: Resumable project state for Sandboxes](<../infra-platform/deployment/Directory Snapshots Resumable project state for Sandboxes.md>) · `deployment` · modal
   Introduces directory snapshots for sandbox state, enabling resumable project files across agent and remote-execution sessions.
 - **2026-02-20** — [AI Agent Observability, Tracing & Evaluation with Langfuse](<../evals-observability/tracing/AI Agent Observability, Tracing & Evaluation with Langfuse.md>) · `tracing` · langfuse
@@ -677,6 +695,8 @@
   Shows how agent skills can automatically improve prompts, using evaluation feedback and reusable agent workflows to iterate on prompt quality.
 - **2026-02-11** — [Shell + Skills + Compaction: Tips for long-running agents that do real work | OpenAI Developers](<tool-use/Shell + Skills + Compaction Tips for long-running agents that do real work OpenAI Developers.md>) · `tool-use` · openai-devs
   Nonobvious patterns for three new Responses API primitives for long-running agents — skills (on-demand SKILL.md playbooks), the hosted/local shell tool, and server-side compaction that auto-compresses conversation history — drawn from Codex internals and Glean's production use.
+- **2026-02-10** — [The Scientist and the Simulator](<../models/reasoning/The Scientist and the Simulator.md>) · `reasoning` · latent-space
+  Framework for AI-for-science systems separating LLM scientist agents from domain simulators and data infrastructure.
 - **2026-02-06** — [[AINews] OpenAI and Anthropic go to war: Claude Opus 4.6 vs GPT 5.3 Codex](<../models/benchmarks/[AINews] OpenAI and Anthropic go to war Claude Opus 4.6 vs GPT 5.3 Codex.md>) · `benchmarks` · latent-space
   Compares Claude Opus and GPT Codex-era models through capability and coding-agent lenses.
 - **2026-01-29** — [Hierarchical Memory Management In Agent Harnesses](<memory-context/Hierarchical Memory Management In Agent Harnesses.md>) · `memory-context` · arize
@@ -707,6 +727,8 @@
   A practical framework for building agent evals: grader design, task suites, pass@k metrics, and evolving evals as agent capabilities improve.
 - **2026-01-01** — [How Graphite builds reliable AI code review at scale](<../product-engineering/case-studies/How Graphite builds reliable AI code review at scale.md>) · `case-studies` · braintrust
   Case study of Graphite building reliable AI code review at scale, with evaluation and workflow design for production developer tooling.
+- **2025-12-31** — [[State of Code Evals] After SWE-bench, Code Clash & SOTA Coding Benchmarks recap — John Yang](<../evals-observability/evaluation/[State of Code Evals] After SWE-bench, Code Clash & SOTA Coding Benchmarks recap — John Yang.md>) · `evaluation` · latent-space
+  Compact state-of-code-evals recap covering SWE-bench successors, Code Clash, and coding benchmark direction.
 - **2025-12-10** — [Best Practices for Multi-Turn RL](<../models/fine-tuning/Best Practices for Multi-Turn RL.md>) · `fine-tuning` · fireworks
   Covers best practices for multi-turn reinforcement learning, including environment design and reward structure.
 - **2025-12-03** — [Evaluating Deep Agents: Our Learnings](<../evals-observability/evaluation/Evaluating Deep Agents Our Learnings.md>) · `evaluation` · langchain
@@ -831,6 +853,8 @@
   Explains observability needs for multi-step LLM systems, including tracing chains, tools, intermediate state, and failure points across complex application flows.
 - **2024-10-03** — [Building AI Assistants with Vectara-agentic and Arize](<../rag-retrieval/pipelines/Building AI Assistants with Vectara-agentic and Arize.md>) · `pipelines` · arize
   Shows how to build AI assistants with Vectara-agentic and Arize, tying retrieval, agent tools, and observability together.
+- **2024-09-27** — [Language Agents: From Reasoning to Acting](<planning/Language Agents From Reasoning to Acting.md>) · `planning` · latent-space
+  Shunyu Yao interview on language agents, reasoning-to-acting patterns, planning, and tool use.
 - **2024-09-26** — [Pushing LangSmith to new limits with Replit Agent's complex workflows](<../product-engineering/case-studies/Pushing LangSmith to new limits with Replit Agent's complex workflows.md>) · `case-studies` · langchain
   Replit Agent case study on tracing and managing complex agent workflows with LangSmith.
 - **2024-09-12** — [How to build function calling and JSON mode for open-source and fine-tuned LLMs](<../prompt-engineering/structured-output/How to build function calling and JSON mode for open-source and fine-tuned LLMs.md>) · `structured-output` · baseten

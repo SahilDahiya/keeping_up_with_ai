@@ -1,7 +1,9 @@
 # prompt-engineering
 
-28 articles.
+29 articles.
 
+- **2026-07-02** — [Skill engineering and the case against one-shot AI design](<context-engineering/Skill engineering and the case against one-shot AI design.md>) · `context-engineering` · latent-space
+  Argues for skill engineering over one-shot design, focusing on reusable instructions and context for AI-assisted creation.
 - **2026-06-26** — [Prompt Caching with Deep Agents](<context-engineering/Prompt Caching with Deep Agents.md>) · `context-engineering` · langchain
   Explains prompt caching for Deep Agents and how cache-aware context design reduces latency and cost for repeated agent work.
 - **2026-06-18** — [The Professor of Outputmaxxing — Anjney Midha, AMP](<techniques/The Professor of Outputmaxxing — Anjney Midha, AMP.md>) · `techniques` · latent-space

@@ -71,6 +71,8 @@
   Announcement of Arize and NVIDIA collaboration for on-prem enterprise AI deployment and observability infrastructure.
 - **2024-10-15** — [Google's NotebookLM and the Future of AI-Generated Audio](<../models/multimodal/Google's NotebookLM and the Future of AI-Generated Audio.md>) · `multimodal` · arize
   Paper-reading style overview of Google NotebookLM and AI-generated audio as a multimodal product pattern.
+- **2024-03-06** — [Open Source AI is AI we can Trust — with Soumith Chintala of Meta AI](<../models/releases/Open Source AI is AI we can Trust — with Soumith Chintala of Meta AI.md>) · `releases` · latent-space
+  Soumith Chintala interview on open-source AI, trust, model ecosystems, and Meta AI engineering culture.
 - **2023-05-05** — [No Moat: Closed AI gets its Open Source wakeup call — ft. Simon Willison](<../models/releases/No Moat Closed AI gets its Open Source wakeup call — ft. Simon Willison.md>) · `releases` · latent-space
   Simon Willison discussion of open-source AI as a wakeup call to closed AI and the implications for builders.
 - **2023-04-19** — [The Anatomy of Autonomy: Why Agents are the next AI Killer App after ChatGPT](<../agents/planning/The Anatomy of Autonomy Why Agents are the next AI Killer App after ChatGPT.md>) · `planning` · latent-space

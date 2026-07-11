@@ -129,6 +129,8 @@
   Describes an open deep research system combining retrieval, planning, and tool use.
 - **2025-04-09** — [Building Enterprise-Scale RAG Systems with Fireworks AI and MongoDB Atlas](<pipelines/Building Enterprise-Scale RAG Systems with Fireworks AI and MongoDB Atlas.md>) · `pipelines` · fireworks
   Builds an enterprise-scale RAG system with MongoDB Atlas and Fireworks, covering retrieval and serving pieces.
+- **2025-03-14** — [Building Snipd: The AI Podcast App for Learning](<../product-engineering/case-studies/Building Snipd The AI Podcast App for Learning.md>) · `case-studies` · latent-space
+  Snipd case study on building an AI podcast learning app with search, summarization, and product workflow lessons.
 - **2025-02-18** — [The Inventors of Deep Research](<../agents/planning/The Inventors of Deep Research.md>) · `planning` · latent-space
   Interview with deep-research inventors on agentic research workflows, retrieval, synthesis, and evaluation.
 - **2024-11-18** — [Building a RAG app with MongoDB Atlas](<pipelines/Building a RAG app with MongoDB Atlas.md>) · `pipelines` · braintrust

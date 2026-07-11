@@ -1,6 +1,6 @@
 # infra-platform
 
-71 articles.
+73 articles.
 
 - **2026-07-09** — [Trace before you migrate: Measuring Kubernetes bottlenecks in AI agent sandboxes](<deployment/Trace before you migrate Measuring Kubernetes bottlenecks in AI agent sandboxes.md>) · `deployment` · arize
   Shows how tracing can diagnose Kubernetes bottlenecks in AI agent sandboxes before migration decisions.
@@ -82,6 +82,8 @@
   Announcement of Arize and NVIDIA collaboration for on-prem enterprise AI deployment and observability infrastructure.
 - **2025-05-07** — [Linear programming for fun and profit](<cost/Linear programming for fun and profit.md>) · `cost` · modal
   Shows how linear programming can allocate compute resources under constraints, useful for GPU scheduling and cost control.
+- **2025-04-11** — [SF Compute: Commoditizing Compute to solve the GPU Bubble forever](<gpu-clusters/SF Compute Commoditizing Compute to solve the GPU Bubble forever.md>) · `gpu-clusters` · latent-space
+  SF Compute interview on commoditizing GPU compute, cluster supply, and cost structure for AI workloads.
 - **2025-03-13** — [Hugging Face and Langfuse: 5 Ways to use them Together](<deployment/Hugging Face and Langfuse 5 Ways to use them Together.md>) · `deployment` · langfuse
   Shows ways to combine Hugging Face workflows with Langfuse for model experimentation, tracing, evaluation, and deployment feedback loops.
 - **2025-03-03** — [Brainstore: the database designed for the AI engineering era](<deployment/Brainstore the database designed for the AI engineering era.md>) · `deployment` · braintrust
@@ -124,6 +126,8 @@
   Open-source AI proxy notes focused on provider routing, logging, credentials, access control, and observability for model calls.
 - **2023-11-20** — [AI proxy: fostering a more open ecosystem](<deployment/AI proxy fostering a more open ecosystem.md>) · `deployment` · braintrust
   Introduces an AI proxy pattern for routing model calls across providers while centralizing logging, credentials, access control, and production visibility.
+- **2023-11-17** — [The State of Silicon and the GPU Poors - with Dylan Patel of SemiAnalysis](<gpu-clusters/The State of Silicon and the GPU Poors - with Dylan Patel of SemiAnalysis.md>) · `gpu-clusters` · latent-space
+  SemiAnalysis interview on GPU scarcity, silicon constraints, and the infrastructure economics behind frontier AI systems.
 - **2023-09-19** — [Arize AI Debuts Integration with Anyscale Endpoints](<deployment/Arize AI Debuts Integration with Anyscale Endpoints.md>) · `deployment` · arize
   Announcement and integration walkthrough for using Arize with Anyscale Endpoints to monitor hosted open-model inference.
 - **2023-02-17** — [Technical deep dive: Truss live reload](<deployment/Technical deep dive Truss live reload.md>) · `deployment` · baseten
@@ -293,6 +297,8 @@
   Shows how linear programming can allocate compute resources under constraints, useful for GPU scheduling and cost control.
 - **2025-04-24** — [Why Every Agent needs Open Source Cloud Sandboxes](<../agents/computer-use/Why Every Agent needs Open Source Cloud Sandboxes.md>) · `computer-use` · latent-space
   E2B interview on open-source cloud sandboxes and why code-executing agents need isolated runtime environments.
+- **2025-04-11** — [SF Compute: Commoditizing Compute to solve the GPU Bubble forever](<gpu-clusters/SF Compute Commoditizing Compute to solve the GPU Bubble forever.md>) · `gpu-clusters` · latent-space
+  SF Compute interview on commoditizing GPU compute, cluster supply, and cost structure for AI workloads.
 - **2025-04-03** — [Resilient observability by design](<../evals-observability/monitoring/Resilient observability by design.md>) · `monitoring` · braintrust
   Describes resilient observability design for AI systems, including reliability considerations for storing, querying, and using production traces.
 - **2025-03-27** — [Introducing End-to-End OpenTelemetry Support in LangSmith](<../evals-observability/tracing/Introducing End-to-End OpenTelemetry Support in LangSmith.md>) · `tracing` · langchain

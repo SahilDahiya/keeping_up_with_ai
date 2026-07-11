@@ -1,6 +1,6 @@
 # models
 
-214 articles.
+223 articles.
 
 - **2026-07-10** — [Evaluating the GPT-5.6 family](<benchmarks/Evaluating the GPT-5.6 family.md>) · `benchmarks` · braintrust
   Evaluates the GPT-5.6 model family and presents a decision map for choosing models based on quality, cost, and task requirements.
@@ -10,6 +10,8 @@
   Evaluates speech-to-text models for voice AI workflows, covering datasets, scoring, and tradeoffs in transcription quality.
 - **2026-07-09** — [The new GPT-5.6 family: Luna, Terra, Sol](<releases/The new GPT-5.6 family Luna, Terra, Sol.md>) · `releases` · simon-willison
   Notes on the GPT-5.6 Luna, Terra, and Sol release, including pricing, million-token context, agentic benchmark claims, SWE-Bench Pro caveats, programmatic tool calling, subagents, and prompt-cache breakpoints.
+- **2026-07-01** — [🔬 The Coolest Diffusion Research Isn't in LLMs — Evan Feinberg & Sergey Edunov, Genesis Molecular AI](<multimodal/🔬 The Coolest Diffusion Research Isn't in LLMs — Evan Feinberg & Sergey Edunov, Genesis Molecular AI.md>) · `multimodal` · latent-space
+  Research-focused overview of diffusion advances outside LLMs, including implications for generative multimodal systems.
 - **2026-06-30** — [GLM-5.2 vs. Opus 4.8 technical report](<benchmarks/GLM-5.2 vs. Opus 4.8 technical report.md>) · `benchmarks` · braintrust
   Technical report comparing GLM-5.2 and Opus 4.8, including benchmark methodology, long-context retrieval behavior, and model-performance tradeoffs.
 - **2026-06-30** — [What’s new in Claude Sonnet 5](<releases/What’s new in Claude Sonnet 5.md>) · `releases` · simon-willison
@@ -104,6 +106,8 @@
   Covers GLM-5 as an open-weights model release and tracks benchmark/capability claims for open models.
 - **2026-02-11** — [[AINews] Qwen Image 2 and Seedance 2](<multimodal/[AINews] Qwen Image 2 and Seedance 2.md>) · `multimodal` · latent-space
   Covers Qwen Image 2 and Seedance 2, useful for tracking image and video model capability trends.
+- **2026-02-10** — [The Scientist and the Simulator](<reasoning/The Scientist and the Simulator.md>) · `reasoning` · latent-space
+  Framework for AI-for-science systems separating LLM scientist agents from domain simulators and data infrastructure.
 - **2026-02-07** — [Experts Have World Models. LLMs Have Word Models.](<reasoning/Experts Have World Models. LLMs Have Word Models.md>) · `reasoning` · latent-space
   Explores world models versus word models and why adversarial reasoning exposes limits in current LLM behavior.
 - **2026-02-06** — [[AINews] OpenAI and Anthropic go to war: Claude Opus 4.6 vs GPT 5.3 Codex](<benchmarks/[AINews] OpenAI and Anthropic go to war Claude Opus 4.6 vs GPT 5.3 Codex.md>) · `benchmarks` · latent-space
@@ -120,6 +124,10 @@
   Interview on Artificial Analysis and independent LLM evals as a service, covering benchmark methodology and provider comparison.
 - **2025-12-31** — [DPO as reinforcement learning](<fine-tuning/DPO as reinforcement learning.md>) · `fine-tuning` · fireworks
   Connects DPO and RL-style training loops, explaining preference optimization as part of continuous model improvement.
+- **2025-12-31** — [[State of Post-Training] From GPT-4.1 to 5.1: RLVR, Agent & Token Efficiency — Josh McGrath, OpenAI](<fine-tuning/[State of Post-Training] From GPT-4.1 to 5.1 RLVR, Agent & Token Efficiency — Josh McGrath, OpenAI.md>) · `fine-tuning` · latent-space
+  State-of-post-training recap covering RLVR, agent training, token efficiency, and GPT-4.1 to GPT-5.1 shifts.
+- **2025-12-30** — [[State of RL/Reasoning] IMO/IOI Gold, OpenAI o3/GPT-5, and Cursor Composer — Ashvin Nair, Cursor](<reasoning/[State of RLReasoning] IMOIOI Gold, OpenAI o3GPT-5, and Cursor Composer — Ashvin Nair, Cursor.md>) · `reasoning` · latent-space
+  State-of-RL reasoning recap covering IMO and IOI results, o3, GPT-5, and Cursor Composer.
 - **2025-12-19** — [Evaluating AI Voices – What Does It Mean to Sound “Good”?](<multimodal/Evaluating AI Voices – What Does It Mean to Sound “Good”.md>) · `multimodal` · cresta
   Explores how to evaluate AI voice quality beyond subjective preference, including production criteria for speech experiences.
 - **2025-12-17** — [When Every Word Matters: Engineering Real-Time Multilingual Intelligence for Human Conversations](<multimodal/When Every Word Matters Engineering Real-Time Multilingual Intelligence for Human Conversations.md>) · `multimodal` · cresta
@@ -168,6 +176,8 @@
   Explains Kimi K2 architecture, capabilities, and benchmark behavior for agent and reasoning workloads.
 - **2025-08-01** — [Qwen3 Instruct vs Thinking vs Coder: Model Selection Guide](<reasoning/Qwen3 Instruct vs Thinking vs Coder Model Selection Guide.md>) · `reasoning` · fireworks
   Compares Qwen3 Instruct, Thinking, and Coder variants for model selection across reasoning and coding tasks.
+- **2025-07-31** — [The RLVR Revolution — with Nathan Lambert (AI2, Interconnects.ai)](<fine-tuning/The RLVR Revolution — with Nathan Lambert (AI2, Interconnects.ai).md>) · `fine-tuning` · latent-space
+  Nathan Lambert discussion of RLVR and why reinforcement learning is reshaping post-training for reasoning models.
 - **2025-07-28** — [Building Voice AI That Actually Works: Balancing Realistic Voices vs. Production-Ready Performance](<multimodal/Building Voice AI That Actually Works Balancing Realistic Voices vs. Production-Ready Performance.md>) · `multimodal` · cresta
   Explains tradeoffs in building production voice AI, balancing naturalness, latency, reliability, and operational constraints.
 - **2025-07-23** — [Transcribe speech 100x faster and 100x cheaper with open models](<multimodal/Transcribe speech 100x faster and 100x cheaper with open models.md>) · `multimodal` · modal
@@ -316,6 +326,8 @@
   FAQ-style technical explanation of building LLMs with the RedPajama-v2 dataset.
 - **2024-04-29** — [How fine tuned LLMs power knowledge assist, summarization, and chat suggestions](<fine-tuning/How fine tuned LLMs power knowledge assist, summarization, and chat suggestions.md>) · `fine-tuning` · cresta
   Explains how fine-tuned LLMs support knowledge assist, summarization, and chat suggestions in production workflows.
+- **2024-04-27** — [WebSim, WorldSim, and The Summer of Simulative AI — with Joscha Bach of Liquid AI, Karan Malhotra of Nous Research, Rob Haisfield of WebSim.ai](<reasoning/WebSim, WorldSim, and The Summer of Simulative AI — with Joscha Bach of Liquid AI, Karan Malhotra of Nous Research, Rob Haisfield of WebSim.ai.md>) · `reasoning` · latent-space
+  Joscha Bach discussion of WebSim, WorldSim, and simulative AI as approaches to world modeling and reasoning.
 - **2024-04-26** — [Beating proprietary models with a quick fine-tune](<fine-tuning/Beating proprietary models with a quick fine-tune.md>) · `fine-tuning` · modal
   Explains fine-tuning embedding models to beat proprietary baselines for a retrieval task with a compact training loop.
 - **2024-04-18** — [Streaming real-time text to speech with XTTS V2](<multimodal/Streaming real-time text to speech with XTTS V2.md>) · `multimodal` · baseten
@@ -326,6 +338,10 @@
   Overview of Anthropic Claude 3 model releases and capabilities, including model comparisons and implications for LLM application builders.
 - **2024-03-15** — [Reinforcement Learning in the Era of LLMs](<fine-tuning/Reinforcement Learning in the Era of LLMs.md>) · `fine-tuning` · arize
   Explains reinforcement learning concepts in the LLM era and how RL fits into model improvement workflows.
+- **2024-03-14** — [Making Transformers Sing - with Mikey Shulman of Suno](<multimodal/Making Transformers Sing - with Mikey Shulman of Suno.md>) · `multimodal` · latent-space
+  Suno interview on transformer-based music generation and the product challenges of building generative audio systems.
+- **2024-03-06** — [Open Source AI is AI we can Trust — with Soumith Chintala of Meta AI](<releases/Open Source AI is AI we can Trust — with Soumith Chintala of Meta AI.md>) · `releases` · latent-space
+  Soumith Chintala interview on open-source AI, trust, model ecosystems, and Meta AI engineering culture.
 - **2024-03-04** — [BASED: Simple linear attention language models balance the recall-throughput tradeoff](<reasoning/BASED Simple linear attention language models balance the recall-throughput tradeoff.md>) · `reasoning` · together
   Explains BASED linear-attention language models and the recall-throughput tradeoff.
 - **2024-02-27** — [Evo: Long-context modeling from molecular to genome scale](<reasoning/Evo Long-context modeling from molecular to genome scale.md>) · `reasoning` · together
@@ -414,6 +430,8 @@
   Explains the RLHF pipeline from preference data through reward modeling and policy optimization, including why human feedback changes model behavior and where evaluation matters.
 - **2023-04-29** — [Mapping the future of *truly* Open Models and Training Dolly for $30 — with Mike Conover of Databricks](<releases/Mapping the future of truly Open Models and Training Dolly for $30 — with Mike Conover of Databricks.md>) · `releases` · latent-space
   Mike Conover interview on truly open models and training Dolly cheaply at Databricks.
+- **2023-04-13** — [Segment Anything Model and the Hard Problems of Computer Vision — with Joseph Nelson of Roboflow](<multimodal/Segment Anything Model and the Hard Problems of Computer Vision — with Joseph Nelson of Roboflow.md>) · `multimodal` · latent-space
+  Roboflow interview on Segment Anything, computer vision productization, annotation workflows, and practical CV deployment problems.
 - **2023-04-07** — [AI Fundamentals: Benchmarks 101](<benchmarks/AI Fundamentals Benchmarks 101.md>) · `benchmarks` · latent-space
   Foundational guide to model benchmarks and how AI engineers should interpret benchmark results.
 - **2023-03-29** — [Hungry Hungry Hippos (H3) and Language Modeling with State Space Models](<reasoning/Hungry Hungry Hippos (H3) and Language Modeling with State Space Models.md>) · `reasoning` · arize
@@ -437,6 +455,8 @@
   Nemotron 3 Ultra playbook arguing for harness tuning over model tuning, with practical agent-system design and eval implications.
 - **2026-07-08** — [[AINews] Lilian Weng summarizes 35 papers on Harness Engineering for RSI](<../agents/planning/[AINews] Lilian Weng summarizes 35 papers on Harness Engineering for RSI.md>) · `planning` · latent-space
   Summarizes harness-engineering papers through Lilian Weng’s lens, connecting agent structure with recursive improvement.
+- **2026-07-01** — [🔬 The Coolest Diffusion Research Isn't in LLMs — Evan Feinberg & Sergey Edunov, Genesis Molecular AI](<multimodal/🔬 The Coolest Diffusion Research Isn't in LLMs — Evan Feinberg & Sergey Edunov, Genesis Molecular AI.md>) · `multimodal` · latent-space
+  Research-focused overview of diffusion advances outside LLMs, including implications for generative multimodal systems.
 - **2026-06-30** — [What’s new in Claude Sonnet 5](<releases/What’s new in Claude Sonnet 5.md>) · `releases` · simon-willison
   Developer-focused notes on Claude Sonnet 5 covering adaptive thinking defaults, removed sampling parameters, million-token context, pricing/tokenizer changes, and comparative tokenization cost across document types.
 - **2026-06-30** — [Multi-token Residual Prediction](<../inference/optimization/Multi-token Residual Prediction.md>) · `optimization` · modal
@@ -537,6 +557,8 @@
   Covers Qwen Image 2 and Seedance 2, useful for tracking image and video model capability trends.
 - **2026-02-11** — [How we built the fastest Kimi K2.5 on Artificial Analysis](<../inference/optimization/How we built the fastest Kimi K2.5 on Artificial Analysis.md>) · `optimization` · baseten
   Explains optimizations behind fast Kimi K2.5 serving on Artificial Analysis.
+- **2026-02-10** — [The Scientist and the Simulator](<reasoning/The Scientist and the Simulator.md>) · `reasoning` · latent-space
+  Framework for AI-for-science systems separating LLM scientist agents from domain simulators and data infrastructure.
 - **2026-02-06** — [What do LLMs think when you don't tell them what to think about?](<../evals-observability/evaluation/What do LLMs think when you don't tell them what to think about.md>) · `evaluation` · together
   Investigates what LLMs do under underspecified prompting and how that affects evaluation.
 - **2026-02-03** — [The Benchmark Gap: What It Takes to Ship Kimi K2.5](<../evals-observability/evaluation/The Benchmark Gap What It Takes to Ship Kimi K2.5.md>) · `evaluation` · fireworks
@@ -549,8 +571,12 @@
   Explains multi-node model training across GPU clusters and the coordination issues that appear at scale.
 - **2026-01-08** — [How to choose the right open model for production](<../product-engineering/architecture/How to choose the right open model for production.md>) · `architecture` · together
   Guide to choosing open models for production based on workload, quality, and serving constraints.
+- **2026-01-06** — [[State of Evals] LMArena's $1.7B Vision — Anastasios Angelopoulos, LMArena](<../evals-observability/evaluation/[State of Evals] LMArena's $1.7B Vision — Anastasios Angelopoulos, LMArena.md>) · `evaluation` · latent-space
+  State-of-evals recap on LMArena, benchmark governance, and vision evaluation trends.
 - **2025-12-31** — [DPO as reinforcement learning](<fine-tuning/DPO as reinforcement learning.md>) · `fine-tuning` · fireworks
   Connects DPO and RL-style training loops, explaining preference optimization as part of continuous model improvement.
+- **2025-12-31** — [[State of Post-Training] From GPT-4.1 to 5.1: RLVR, Agent & Token Efficiency — Josh McGrath, OpenAI](<fine-tuning/[State of Post-Training] From GPT-4.1 to 5.1 RLVR, Agent & Token Efficiency — Josh McGrath, OpenAI.md>) · `fine-tuning` · latent-space
+  State-of-post-training recap covering RLVR, agent training, token efficiency, and GPT-4.1 to GPT-5.1 shifts.
 - **2025-12-30** — [OpenAI for Developers in 2025](<../industry/trends/OpenAI for Developers in 2025.md>) · `trends` · openai-devs
   Year-in-review of OpenAI's 2025 developer platform: reasoning converging from separate o1/o3/o4-mini lines into unified flagship models, multimodal I/O becoming default, agent building blocks (Responses API, Agents SDK, AgentKit), and GPT-5.2-Codex for long-horizon coding.
 - **2025-12-15** — [Updates for developers building with voice | OpenAI Developers](<releases/Updates for developers building with voice OpenAI Developers.md>) · `releases` · openai-devs
@@ -599,6 +625,8 @@
   Explains Kimi K2 architecture, capabilities, and benchmark behavior for agent and reasoning workloads.
 - **2025-08-01** — [Qwen3 Instruct vs Thinking vs Coder: Model Selection Guide](<reasoning/Qwen3 Instruct vs Thinking vs Coder Model Selection Guide.md>) · `reasoning` · fireworks
   Compares Qwen3 Instruct, Thinking, and Coder variants for model selection across reasoning and coding tasks.
+- **2025-07-31** — [The RLVR Revolution — with Nathan Lambert (AI2, Interconnects.ai)](<fine-tuning/The RLVR Revolution — with Nathan Lambert (AI2, Interconnects.ai).md>) · `fine-tuning` · latent-space
+  Nathan Lambert discussion of RLVR and why reinforcement learning is reshaping post-training for reasoning models.
 - **2025-07-30** — [A Watermark for Large Language Models](<../product-engineering/security/A Watermark for Large Language Models.md>) · `security` · arize
   Summary of a paper-reading session on watermarking generated text from large language models, including detection goals and implications for responsible deployment.
 - **2025-07-15** — [MuonClip and Kimi K2 training stability](<reasoning/MuonClip and Kimi K2 training stability.md>) · `reasoning` · fireworks
@@ -725,6 +753,8 @@
   Discusses code-generation copilots with LLMs, including model behavior, latency, and developer workflow considerations.
 - **2024-05-01** — [FAQ: Building LLMs with RedPajama-v2, a 30 trillion token web dataset](<fine-tuning/FAQ Building LLMs with RedPajama-v2, a 30 trillion token web dataset.md>) · `fine-tuning` · together
   FAQ-style technical explanation of building LLMs with the RedPajama-v2 dataset.
+- **2024-04-27** — [WebSim, WorldSim, and The Summer of Simulative AI — with Joscha Bach of Liquid AI, Karan Malhotra of Nous Research, Rob Haisfield of WebSim.ai](<reasoning/WebSim, WorldSim, and The Summer of Simulative AI — with Joscha Bach of Liquid AI, Karan Malhotra of Nous Research, Rob Haisfield of WebSim.ai.md>) · `reasoning` · latent-space
+  Joscha Bach discussion of WebSim, WorldSim, and simulative AI as approaches to world modeling and reasoning.
 - **2024-04-26** — [Keys To Understanding ReAct: Synergizing Reasoning and Acting in Language Models](<../agents/tool-use/Keys To Understanding ReAct Synergizing Reasoning and Acting in Language Models.md>) · `tool-use` · arize
   Explains ReAct as a reasoning-plus-acting pattern for agents and how it structures tool use.
 - **2024-04-04** — [Demystifying Amazon's Chronos: Learning the Language of Time Series](<releases/Demystifying Amazon's Chronos Learning the Language of Time Series.md>) · `releases` · arize
@@ -751,10 +781,14 @@
   Explains how to benchmark image-generation models with attention to quality, latency, and reproducibility.
 - **2024-01-19** — [How to train your own Large Multimodal Model — with Hugo Laurençon & Leo Tronchon of HuggingFace M4 Research](<multimodal/How to train your own Large Multimodal Model — with Hugo Laurençon & Leo Tronchon of HuggingFace M4 Research.md>) · `multimodal` · latent-space
   Hugging Face M4 interview on training large multimodal models and the IDEFICS project.
+- **2024-01-05** — [The Accidental AI Canvas - with Steve Ruiz of tldraw](<../product-engineering/ux-patterns/The Accidental AI Canvas - with Steve Ruiz of tldraw.md>) · `ux-patterns` · latent-space
+  tldraw interview on AI canvas interfaces, generative UI, and product patterns for multimodal creation tools.
 - **2023-12-27** — [Mistral AI (Mixtral-8x7B): Performance, Benchmarks](<releases/Mistral AI (Mixtral-8x7B) Performance, Benchmarks.md>) · `releases` · arize
   Technical overview of Mistral and Mixtral model behavior, performance, and benchmark positioning.
 - **2023-12-23** — [NeurIPS 2023 Recap — Best Papers](<benchmarks/NeurIPS 2023 Recap — Best Papers.md>) · `benchmarks` · latent-space
   NeurIPS 2023 recap of best papers, useful for tracking durable research directions in models and evaluation.
+- **2023-12-20** — [The AI-First Graphics Editor - with Suhail Doshi of Playground AI](<../product-engineering/case-studies/The AI-First Graphics Editor - with Suhail Doshi of Playground AI.md>) · `case-studies` · latent-space
+  Playground AI interview on AI-first graphics editing, multimodal UX, and product iteration around image generation.
 - **2023-12-13** — [Playground v2 vs Stable Diffusion XL 1.0 for text-to-image generation](<benchmarks/Playground v2 vs Stable Diffusion XL 1.0 for text-to-image generation.md>) · `benchmarks` · baseten
   Compares Playground v2 and Stable Diffusion XL for text-to-image generation quality and serving use cases.
 - **2023-11-13** — [FlashFFTConv: Efficient Convolutions for Long Sequences with Tensor Cores](<../inference/optimization/FlashFFTConv Efficient Convolutions for Long Sequences with Tensor Cores.md>) · `optimization` · together
