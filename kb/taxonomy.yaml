@@ -1,0 +1,52 @@
+# Controlled topic tree for the knowledge base.
+# The classifier (Claude via /organize-kb) must pick from this — no invented labels.
+# Adding a subtopic is cheap. Renames/merges go through `scraper reclassify` (Phase 2).
+rev: 1
+
+topics:
+  agents:
+    - tool-use
+    - multi-agent
+    - memory-context
+    - planning
+    - computer-use
+  models:
+    - releases
+    - benchmarks
+    - fine-tuning
+    - reasoning
+    - multimodal
+  inference:
+    - optimization
+    - serving
+    - hardware
+    - quantization
+  prompt-engineering:
+    - techniques
+    - context-engineering
+    - structured-output
+  rag-retrieval:
+    - pipelines
+    - embeddings
+    - chunking
+    - search
+  evals-observability:
+    - evaluation
+    - tracing
+    - monitoring
+    - testing
+  infra-platform:
+    - gpu-clusters
+    - deployment
+    - cost
+    - edge
+  product-engineering:
+    - ux-patterns
+    - case-studies
+    - architecture
+    - security
+  industry:
+    - trends
+    - business
+    - opinion
+    - announcements
