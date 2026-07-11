@@ -1,6 +1,6 @@
 # rag-retrieval
 
-31 articles.
+41 articles.
 
 - **2026-07-07** — [Faster phrase search with shingled bloom filters in Brainstore](<search/Faster phrase search with shingled bloom filters in Brainstore.md>) · `search` · braintrust
   Explains faster phrase search over Brainstore data using shingled bloom filters, aimed at efficient trace and log search for AI observability.
@@ -16,6 +16,10 @@
   Covers golden-article evaluation for search quality and how retrieval systems can be measured and improved for support agents.
 - **2026-05-12** — [Meet Linnaeus and Darwin: Search models that drive higher resolution rates](<search/Meet Linnaeus and Darwin Search models that drive higher resolution rates.md>) · `search` · sierra
   Introduces Sierra search models for improving support-agent resolution rates through better knowledge retrieval and answer grounding.
+- **2026-04-04** — [How Arize Skills Improved RAG Recall from 39% to 75% in 8 Hours](<pipelines/How Arize Skills Improved RAG Recall from 39% to 75% in 8 Hours.md>) · `pipelines` · arize
+  Uses an eval-guided RAG improvement loop to show how retrieval recall can be diagnosed and improved quickly.
+- **2026-02-23** — [Mastering Production RAG with Google ADK and Arize AX for Enterprise Knowledge Systems](<pipelines/Mastering Production RAG with Google ADK and Arize AX for Enterprise Knowledge Systems.md>) · `pipelines` · arize
+  Explains production RAG architecture with Google ADK and Arize AX, including agentic retrieval and evaluation concerns.
 - **2026-01-01** — [How Dropbox built an evaluation pipeline for AI search](<search/How Dropbox built an evaluation pipeline for AI search.md>) · `search` · braintrust
   Case study of Dropbox's evaluation pipeline for AI search, focused on measuring retrieval and answer quality for production search experiences.
 - **2025-10-28** — [RAG Observability and Evals](<pipelines/RAG Observability and Evals.md>) · `pipelines` · langfuse
@@ -28,10 +32,14 @@
   Builds an enterprise-scale RAG system with MongoDB Atlas and Fireworks, covering retrieval and serving pieces.
 - **2025-03-27** — [How we built BEI: high-throughput embedding, reranker, and classifier inference](<embeddings/How we built BEI high-throughput embedding, reranker, and classifier inference.md>) · `embeddings` · baseten
   Deep dive into BEI, a high-throughput embedding, reranker, and classifier inference system.
+- **2025-02-05** — [Understanding Agentic RAG](<pipelines/Understanding Agentic RAG.md>) · `pipelines` · arize
+  Explains agentic RAG and how agents change retrieval planning, tool use, and synthesis workflows.
 - **2024-11-18** — [Building a RAG app with MongoDB Atlas](<pipelines/Building a RAG app with MongoDB Atlas.md>) · `pipelines` · braintrust
   Walkthrough of building a RAG app with MongoDB Atlas, covering retrieval setup, model calls, and evaluation of the generated answers.
 - **2024-10-08** — [Multimodal Document RAG with Llama 3.2 Vision and ColQwen2](<pipelines/Multimodal Document RAG with Llama 3.2 Vision and ColQwen2.md>) · `pipelines` · together
   Builds a multimodal document RAG pipeline with Llama 3.2 Vision and ColQwen2.
+- **2024-10-03** — [Building AI Assistants with Vectara-agentic and Arize](<pipelines/Building AI Assistants with Vectara-agentic and Arize.md>) · `pipelines` · arize
+  Shows how to build AI assistants with Vectara-agentic and Arize, tying retrieval, agent tools, and observability together.
 - **2024-09-24** — [Hybrid search over California embeddings with Modal, MongoDB, and Clay](<search/Hybrid search over California embeddings with Modal, MongoDB, and Clay.md>) · `search` · modal
   Example of hybrid search over embeddings, combining vector retrieval with MongoDB and a geospatial dataset.
 - **2024-09-19** — [Contextual Retrieval in AI Systems](<pipelines/Contextual Retrieval in AI Systems.md>) · `pipelines` · anthropic-engineering
@@ -42,6 +50,8 @@
   End-to-end RAG application example using Astro, FastAPI, SurrealDB, and Llama 3.1.
 - **2024-07-02** — [Improving Memory Retrieval: How New Computer achieved 50% higher recall with LangSmith](<search/Improving Memory Retrieval How New Computer achieved 50% higher recall with LangSmith.md>) · `search` · langchain
   New Computer case study on improving memory retrieval recall with LangSmith-backed evaluation and debugging.
+- **2024-06-28** — [RAFT: Adapting Language Model to Domain Specific RAG](<pipelines/RAFT Adapting Language Model to Domain Specific RAG.md>) · `pipelines` · arize
+  Summarizes RAFT as a method for adapting language models to domain-specific RAG workflows.
 - **2024-06-24** — [Building a personalized code assistant with open-source LLMs using RAG Fine-tuning](<pipelines/Building a personalized code assistant with open-source LLMs using RAG Fine-tuning.md>) · `pipelines` · together
   Builds a personalized code assistant using RAG fine-tuning with open-source LLMs.
 - **2024-03-21** — [Optimizing Retrieval Augmented Generation (RAG) with MongoDB Atlas and Fireworks AI](<pipelines/Optimizing Retrieval Augmented Generation (RAG) with MongoDB Atlas and Fireworks AI.md>) · `pipelines` · fireworks
@@ -52,6 +62,8 @@
   Workshop recap on evaluating RAG systems with LLM evals and benchmarks.
 - **2024-02-16** — [Evaluating the Generation Stage in RAG](<pipelines/Evaluating the Generation Stage in RAG.md>) · `pipelines` · arize
   Focuses on evaluating the generation stage in RAG pipelines, complementing retrieval-focused evaluation.
+- **2024-02-08** — [RAG vs Fine-Tuning](<pipelines/RAG vs Fine-Tuning.md>) · `pipelines` · arize
+  Compares RAG and fine-tuning as adaptation strategies, including when retrieval is preferable to model updates.
 - **2024-01-23** — [Embedding English Wikipedia in under 15 minutes](<embeddings/Embedding English Wikipedia in under 15 minutes.md>) · `embeddings` · modal
   Walkthrough of embedding English Wikipedia quickly, covering large-scale embedding jobs, batching, and storage workflow.
 - **2024-01-16** — [Build and deploy a RAG app with Pinecone Serverless](<pipelines/Build and deploy a RAG app with Pinecone Serverless.md>) · `pipelines` · langchain
@@ -60,8 +72,16 @@
   Explains long-context retrieval models using Monarch Mixer.
 - **2024-01-01** — [Evaluate RAG with LLM Evals and Benchmarking](<pipelines/Evaluate RAG with LLM Evals and Benchmarking.md>) · `pipelines` · arize
   Workshop recap on evaluating RAG systems with LLM evals and benchmarking.
+- **2023-11-08** — [Ingesting Data for Semantic Searches in a Production-Ready Way](<pipelines/Ingesting Data for Semantic Searches in a Production-Ready Way.md>) · `pipelines` · arize
+  Explains production ingestion concerns for semantic search, including data preparation and retrieval pipeline reliability.
 - **2023-11-02** — [Deployment and inference for open source text embedding models](<embeddings/Deployment and inference for open source text embedding models.md>) · `embeddings` · baseten
   Covers deployment and inference patterns for open-source text embedding models.
+- **2023-10-17** — [RankVicuna: Zero-Shot Listwise Document Reranking with Open-Source Large Language Models](<search/RankVicuna Zero-Shot Listwise Document Reranking with Open-Source Large Language Models.md>) · `search` · arize
+  Summarizes RankVicuna for zero-shot listwise reranking and its implications for LLM-powered search.
+- **2023-06-27** — [HyDE: Precise Zero-Shot Dense Retrieval without Relevance Labels](<search/HyDE Precise Zero-Shot Dense Retrieval without Relevance Labels.md>) · `search` · arize
+  Summarizes HyDE for zero-shot dense retrieval and how hypothetical document generation can improve semantic search.
+- **2023-06-09** — [Retrieval-Augmented Generation - Paper Reading and Discussion](<pipelines/Retrieval-Augmented Generation - Paper Reading and Discussion.md>) · `pipelines` · arize
+  Paper-reading summary of retrieval-augmented generation and the architecture behind combining retrieval with generation.
 - **2022-12-31** — [Measuring Embedding Drift](<embeddings/Measuring Embedding Drift.md>) · `embeddings` · arize
   Explains embedding drift and how teams can measure changes in embedding distributions over time.
 
@@ -85,6 +105,8 @@
   Explains how to build memory into AI agents through state, retrieval, persistence, and context injection patterns.
 - **2026-05-13** — [Tau-Knowledge: benchmarking agents on realistic knowledge](<../evals-observability/evaluation/Tau-Knowledge benchmarking agents on realistic knowledge.md>) · `evaluation` · sierra
   Introduces tau-knowledge for benchmarking agents on realistic knowledge tasks that require grounded retrieval and use of external information.
+- **2026-04-29** — [Using context graphs: build a data moat like Google's using your enterprise data](<../agents/memory-context/Using context graphs build a data moat like Google's using your enterprise data.md>) · `memory-context` · arize
+  Explains context graphs as an enterprise memory layer for agents and retrieval-heavy AI systems.
 - **2025-09-12** — [Understanding embeddings and reranking at scale](<search/Understanding embeddings and reranking at scale.md>) · `search` · fireworks
   Explains embeddings, reranking, and retrieval architecture patterns for production RAG systems.
 - **2025-09-09** — [AI that knows your data](<../agents/tool-use/AI that knows your data.md>) · `tool-use` · braintrust
@@ -103,7 +125,19 @@
   Explains fine-tuning embedding models to beat proprietary baselines for a retrieval task with a compact training loop.
 - **2024-03-21** — [Optimizing Retrieval Augmented Generation (RAG) with MongoDB Atlas and Fireworks AI](<pipelines/Optimizing Retrieval Augmented Generation (RAG) with MongoDB Atlas and Fireworks AI.md>) · `pipelines` · fireworks
   Shows how to optimize a RAG pipeline with MongoDB Atlas and Fireworks models.
+- **2024-02-20** — [Evaluating and Analyzing Your RAG Pipeline with Ragas](<../evals-observability/evaluation/Evaluating and Analyzing Your RAG Pipeline with Ragas.md>) · `evaluation` · arize
+  Explains how to evaluate RAG pipelines with Ragas and Phoenix, including retrieval and generation quality dimensions.
 - **2024-01-16** — [Build and deploy a RAG app with Pinecone Serverless](<pipelines/Build and deploy a RAG app with Pinecone Serverless.md>) · `pipelines` · langchain
   Walkthrough for building and deploying a RAG application with Pinecone Serverless and LangChain components.
+- **2023-11-08** — [Ingesting Data for Semantic Searches in a Production-Ready Way](<pipelines/Ingesting Data for Semantic Searches in a Production-Ready Way.md>) · `pipelines` · arize
+  Explains production ingestion concerns for semantic search, including data preparation and retrieval pipeline reliability.
+- **2023-06-27** — [HyDE: Precise Zero-Shot Dense Retrieval without Relevance Labels](<search/HyDE Precise Zero-Shot Dense Retrieval without Relevance Labels.md>) · `search` · arize
+  Summarizes HyDE for zero-shot dense retrieval and how hypothetical document generation can improve semantic search.
 - **2023-04-11** — [Building LLM applications for production](<../product-engineering/architecture/Building LLM applications for production.md>) · `architecture` · chip-huyen
   Practical guide to production LLM applications covering task decomposition, retrieval, prompt construction, evaluation, monitoring, and latency/cost tradeoffs.
+- **2022-12-01** — [Why You Need To Monitor Recommender Systems](<../evals-observability/monitoring/Why You Need To Monitor Recommender Systems.md>) · `monitoring` · arize
+  Explains why recommender systems need monitoring and what signals matter for production ranking quality.
+- **2022-11-09** — [How to Monitor Ranking Models](<../evals-observability/monitoring/How to Monitor Ranking Models.md>) · `monitoring` · arize
+  Explains monitoring patterns for ranking models, including drift and performance signals relevant to search and recommendations.
+- **2022-06-08** — [Monitor Unstructured Data with Arize](<../evals-observability/monitoring/Monitor Unstructured Data with Arize.md>) · `monitoring` · arize
+  Covers monitoring techniques for unstructured data and embeddings in production AI systems.

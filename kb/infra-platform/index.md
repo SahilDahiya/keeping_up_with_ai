@@ -1,7 +1,9 @@
 # infra-platform
 
-61 articles.
+63 articles.
 
+- **2026-07-09** — [Trace before you migrate: Measuring Kubernetes bottlenecks in AI agent sandboxes](<deployment/Trace before you migrate Measuring Kubernetes bottlenecks in AI agent sandboxes.md>) · `deployment` · arize
+  Shows how tracing can diagnose Kubernetes bottlenecks in AI agent sandboxes before migration decisions.
 - **2026-07-06** — [How to price serverless GPUs](<cost/How to price serverless GPUs.md>) · `cost` · modal
   Explains serverless GPU pricing from utilization, scheduling, and workload-shape constraints rather than simple hourly rates.
 - **2026-07-02** — [Your coding agent bill doubled. Here’s how to fix it.](<cost/Your coding agent bill doubled. Here’s how to fix it.md>) · `cost` · langchain
@@ -10,6 +12,8 @@
   Analyzes the end of subsidized LLM pricing and what agentic task success rates imply for real inference cost per correct result.
 - **2026-06-24** — [Frontier-lab training infrastructure, now as a service](<gpu-clusters/Frontier-lab training infrastructure, now as a service.md>) · `gpu-clusters` · fireworks
   Describes training infrastructure as a service for frontier-lab workloads, including scale, orchestration, and reliability needs.
+- **2026-06-19** — [Why AI token costs don't tell you if your AI is working](<cost/Why AI token costs don't tell you if your AI is working.md>) · `cost` · arize
+  Explains why token cost alone is an incomplete production metric and how quality, latency, and outcomes must be measured together.
 - **2026-06-19** — [Temporary Cloudflare Accounts for AI agents](<deployment/Temporary Cloudflare Accounts for AI agents.md>) · `deployment` · cloudflare-ai
   Temporary Cloudflare Accounts let agents run 'wrangler deploy --temporary' to ship a Worker with zero signup — a 60-minute claimable account with auto-provisioned API token — with Wrangler itself prompting agents about the flag, removing human-built OAuth/dashboard friction from the deploy loop.
 - **2026-06-19** — [Unpacking sandbox startup latency: why started is not ready](<deployment/Unpacking sandbox startup latency why started is not ready.md>) · `deployment` · modal
@@ -155,6 +159,8 @@
   Integration guide for capturing Braintrust traces and evals across different AI frameworks and model providers without locking the application stack to one SDK.
 - **2026-06-15** — [Building a 100x Cheaper Trace Judge with Fireworks](<../evals-observability/evaluation/Building a 100x Cheaper Trace Judge with Fireworks.md>) · `evaluation` · langchain
   Shows how to build a lower-cost trace judge with Fireworks, focusing on evaluator cost reduction while preserving useful scoring quality.
+- **2026-06-15** — [One agent, two trace destinations: Arize AX + Databricks Unity Catalog](<../evals-observability/tracing/One agent, two trace destinations Arize AX + Databricks Unity Catalog.md>) · `tracing` · arize
+  Shows how a single agent can emit traces to multiple destinations, highlighting interoperability concerns for observability stacks.
 - **2026-06-11** — [Bring production agent traces from Arize into Databricks Unity Catalog](<../evals-observability/tracing/Bring production agent traces from Arize into Databricks Unity Catalog.md>) · `tracing` · arize
   Explains how to bring production agent traces, evaluations, and annotations from Arize into Databricks Unity Catalog for queryable analysis.
 - **2026-06-10** — [Full Text Search in SmithDB: Designing an Inverted Index for Object Storage](<../rag-retrieval/search/Full Text Search in SmithDB Designing an Inverted Index for Object Storage.md>) · `search` · langchain
@@ -183,6 +189,8 @@
   Explains Sierra's inference-layer reliability strategy for foundation models, including routing, redundancy, and serving behavior preservation under provider failures.
 - **2026-04-30** — [Agents can now create Cloudflare accounts, buy domains, and deploy](<../agents/tool-use/Agents can now create Cloudflare accounts, buy domains, and deploy.md>) · `tool-use` · cloudflare-ai
   Via a protocol co-designed with Stripe for Stripe Projects, coding agents can now provision a Cloudflare account, start a paid subscription, register a domain, and receive an API token to deploy — end-to-end with humans only approving payment and terms of service.
+- **2026-04-30** — [Prompt templates as configs, not code](<../prompt-engineering/context-engineering/Prompt templates as configs, not code.md>) · `context-engineering` · arize
+  Argues for treating prompt templates as configuration, improving iteration, versioning, and deployment safety.
 - **2026-04-23** — [How we built RBAC that scales for the enterprise](<../product-engineering/security/How we built RBAC that scales for the enterprise.md>) · `security` · baseten
   Engineering writeup on building RBAC for enterprise AI infrastructure and balancing autonomy with control.
 - **2026-04-21** — [Capacity without conflict: A guide to multi-tenant GPU cluster design for AI-native teams](<gpu-clusters/Capacity without conflict A guide to multi-tenant GPU cluster design for AI-native teams.md>) · `gpu-clusters` · together
@@ -261,10 +269,14 @@
   Guide to GPU utilization for AI workloads, covering bottlenecks, throughput, batching, and cost-aware usage.
 - **2025-02-13** — [How multi-node inference works for massive LLMs like DeepSeek-R1](<../inference/serving/How multi-node inference works for massive LLMs like DeepSeek-R1.md>) · `serving` · baseten
   Explains multi-node inference for very large LLMs such as DeepSeek-R1.
+- **2024-11-19** — [Instrumenting Your LLM Application: Arize Phoenix and Vercel AI SDK](<../evals-observability/tracing/Instrumenting Your LLM Application Arize Phoenix and Vercel AI SDK.md>) · `tracing` · arize
+  Shows how to instrument an LLM application with Phoenix and Vercel AI SDK so traces are available for debugging and evaluation.
 - **2024-11-01** — [Arize, Vertex AI API: Evaluation Workflows to Accelerate Generative App Development and AI ROI](<../evals-observability/evaluation/Arize, Vertex AI API Evaluation Workflows to Accelerate Generative App Development and AI ROI.md>) · `evaluation` · arize
   Describes Arize and Vertex AI API evaluation workflows for accelerating generative application development and measuring AI ROI.
 - **2024-10-14** — [OpenTelemetry (OTel) for LLM Observability](<../evals-observability/tracing/OpenTelemetry (OTel) for LLM Observability.md>) · `tracing` · langfuse
   Introduces OpenTelemetry for LLM observability and how OTel-style traces can standardize spans, metadata, and interoperability across AI systems.
+- **2024-10-08** — [The Role of OpenTelemetry (OTEL) in LLM Observability](<../evals-observability/tracing/The Role of OpenTelemetry (OTEL) in LLM Observability.md>) · `tracing` · arize
+  Explains OpenTelemetry’s role in LLM observability and why standard traces matter for production systems.
 - **2024-09-05** — [Supercharging NVIDIA H200 and H100 GPU Cluster Performance With Together Kernel Collection](<../inference/hardware/Supercharging NVIDIA H200 and H100 GPU Cluster Performance With Together Kernel Collection.md>) · `hardware` · together
   Shows how kernel work improves H200 and H100 GPU cluster performance.
 - **2024-07-25** — [Deploying custom ComfyUI workflows as APIs](<../models/multimodal/Deploying custom ComfyUI workflows as APIs.md>) · `multimodal` · baseten
@@ -273,6 +285,8 @@
   Reference architecture for generative AI platforms covering context construction and RAG, guardrails, gateways and routers, caching, observability, orchestration, and tool/action layers.
 - **2024-07-11** — [Using asynchronous inference in production](<../inference/serving/Using asynchronous inference in production.md>) · `serving` · baseten
   Explains asynchronous inference patterns for production model-serving workloads.
+- **2024-06-20** — [Managing and Monitoring Your Open Source LLM Applications](<../evals-observability/monitoring/Managing and Monitoring Your Open Source LLM Applications.md>) · `monitoring` · arize
+  Covers practical monitoring needs for open-source LLM applications, including operational metrics and deployment feedback.
 - **2024-06-06** — [How to catch crypto miners using syscall signatures](<../product-engineering/security/How to catch crypto miners using syscall signatures.md>) · `security` · modal
   Explains detecting abusive GPU workloads with syscall signatures, a useful pattern for securing shared AI infrastructure.
 - **2024-06-03** — [GPUs on-demand: Not serverless, not reserved, but some third thing](<gpu-clusters/GPUs on-demand Not serverless, not reserved, but some third thing.md>) · `gpu-clusters` · fireworks

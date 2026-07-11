@@ -279,6 +279,8 @@
   Describes 2x faster inference through KV-cache-aware routing with NVIDIA Dynamo.
 - **2025-09-26** — [We reverse-engineered Flash Attention 4](<optimization/We reverse-engineered Flash Attention 4.md>) · `optimization` · modal
   Reverse-engineering writeup for FlashAttention-4, explaining how kernel design choices affect attention performance.
+- **2025-09-05** — [NVIDIA's Peter Belcak Distills Why Small Language Models are the Future of Agentic AI](<../models/reasoning/NVIDIA's Peter Belcak Distills Why Small Language Models are the Future of Agentic AI.md>) · `reasoning` · arize
+  Summarizes the argument for small language models in agentic AI and where they can replace larger models.
 - **2025-08-21** — [AI agents for efficient LLM inference engineering](<../agents/tool-use/AI agents for efficient LLM inference engineering.md>) · `tool-use` · together
   Case study of using AI agents to automate engineering tasks while developing efficient inference systems.
 - **2025-08-13** — [Evaluating Model Performance Across Clouds](<../models/benchmarks/Evaluating Model Performance Across Clouds.md>) · `benchmarks` · langfuse
@@ -375,12 +377,16 @@
   Announcement and integration walkthrough for using Arize with Anyscale Endpoints to monitor hosted open-model inference.
 - **2023-08-29** — [Speed, Python: Pick Two. How CUDA Graphs Enable Fast Python Code for Deep Learning](<optimization/Speed, Python Pick Two. How CUDA Graphs Enable Fast Python Code for Deep Learning.md>) · `optimization` · fireworks
   Explains how CUDA Graphs reduce Python overhead for fast deep-learning execution.
+- **2023-08-24** — [Skeleton of Thought: LLMs Can Do Parallel Decoding Paper Reading](<../models/reasoning/Skeleton of Thought LLMs Can Do Parallel Decoding Paper Reading.md>) · `reasoning` · arize
+  Summarizes Skeleton of Thought and how parallel decoding can speed structured reasoning.
 - **2023-07-25** — [Monarch Mixer: A new model architecture for increased efficiency](<../models/reasoning/Monarch Mixer A new model architecture for increased efficiency.md>) · `reasoning` · together
   Introduces Monarch Mixer as an efficient model architecture.
 - **2023-07-17** — [FlashAttention-2 for faster training and inference](<optimization/FlashAttention-2 for faster training and inference.md>) · `optimization` · together
   Introduces FlashAttention-2 and its impact on training and inference speed.
 - **2023-07-12** — [Multi-Query Attention is All You Need](<../models/reasoning/Multi-Query Attention is All You Need.md>) · `reasoning` · fireworks
   Explains multi-query attention and why attention variants matter for efficient LLM inference.
+- **2023-03-29** — [Hungry Hungry Hippos (H3) and Language Modeling with State Space Models](<../models/reasoning/Hungry Hungry Hippos (H3) and Language Modeling with State Space Models.md>) · `reasoning` · arize
+  Explains H3/state-space model ideas as alternatives to standard attention and why they matter for sequence modeling efficiency.
 - **2023-01-23** — [FlashConv: speeding up state space models](<../models/reasoning/FlashConv speeding up state space models.md>) · `reasoning` · together
   Explains FlashConv and efficient state-space model execution.
 - **2021-09-07** — [A friendly introduction to machine learning compilers and optimizers](<optimization/A friendly introduction to machine learning compilers and optimizers.md>) · `optimization` · chip-huyen

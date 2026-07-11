@@ -1,6 +1,6 @@
 # models
 
-115 articles.
+142 articles.
 
 - **2026-07-10** — [Evaluating the GPT-5.6 family](<benchmarks/Evaluating the GPT-5.6 family.md>) · `benchmarks` · braintrust
   Evaluates the GPT-5.6 model family and presents a decision map for choosing models based on quality, cost, and task requirements.
@@ -14,18 +14,28 @@
   Developer-focused notes on Claude Sonnet 5 covering adaptive thinking defaults, removed sampling parameters, million-token context, pricing/tokenizer changes, and comparative tokenization cost across document types.
 - **2026-06-25** — [Live draft model training for speculative decoding](<fine-tuning/Live draft model training for speculative decoding.md>) · `fine-tuning` · baseten
   Describes live draft-model training for speculative decoding systems.
+- **2026-06-24** — [Long-horizon agent benchmarks are fragmenting: a field guide to what each one actually measures](<benchmarks/Long-horizon agent benchmarks are fragmenting a field guide to what each one actually measures.md>) · `benchmarks` · arize
+  Field guide to long-horizon agent benchmarks and what each benchmark family reveals about agent performance.
+- **2026-06-17** — [Two labs started dreaming, and they built two different architectures](<reasoning/Two labs started dreaming, and they built two different architectures.md>) · `reasoning` · arize
+  Compares two different AI architecture directions from research labs, focusing on design choices and implications.
+- **2026-06-02** — [The end of fine-tuning: Why evals, context, and traces matter more](<fine-tuning/The end of fine-tuning Why evals, context, and traces matter more.md>) · `fine-tuning` · arize
+  Argues that evals, context, and traces can reduce the need for fine-tuning in many production AI workflows.
 - **2026-05-29** — [How Together AI built a fast speech-to-text stack](<multimodal/How Together AI built a fast speech-to-text stack.md>) · `multimodal` · together
   Engineering writeup on building a fast speech-to-text stack.
 - **2026-05-29** — [Timestep distillation: 2.5x faster FLUX.2 image generation](<multimodal/Timestep distillation 2.5x faster FLUX.2 image generation.md>) · `multimodal` · baseten
   Explains timestep distillation for faster FLUX.2 image generation.
 - **2026-05-28** — [Reinforcement learning is an infrastructure problem](<fine-tuning/Reinforcement learning is an infrastructure problem.md>) · `fine-tuning` · modal
   Argues that reinforcement learning progress depends heavily on infrastructure for scheduling, iteration, and scalable experiments.
+- **2026-05-26** — [How to ship a local LLM that matches frontier LLMs with evals and prompt engineering](<fine-tuning/How to ship a local LLM that matches frontier LLMs with evals and prompt engineering.md>) · `fine-tuning` · arize
+  Explains how evals and prompt engineering can make smaller local models viable substitutes for frontier models on constrained tasks.
 - **2026-05-19** — [Scaling reinforcement learning at Applied Compute](<fine-tuning/Scaling reinforcement learning at Applied Compute.md>) · `fine-tuning` · modal
   Case study on scaling reinforcement learning workloads with elastic GPU infrastructure and faster experiment iteration.
 - **2026-05-18** — [Voice AI is only as good as what it hears](<multimodal/Voice AI is only as good as what it hears.md>) · `multimodal` · sierra
   Explains why voice-agent quality depends on transcription accuracy and how hearing failures propagate into agent behavior.
 - **2026-05-14** — [Cost-efficient, high-performance TTS with Qwen3-TTS](<multimodal/Cost-efficient, high-performance TTS with Qwen3-TTS.md>) · `multimodal` · baseten
   Describes cost-efficient high-performance Qwen3-TTS serving for text-to-speech workloads.
+- **2026-05-12** — [Models got an order of magnitude better at following instructions in one year](<benchmarks/Models got an order of magnitude better at following instructions in one year.md>) · `benchmarks` · arize
+  Analyzes instruction-following benchmark changes and what they imply for tracking model quality over time.
 - **2026-05-12** — [Mu-Bench: an open multilingual transcription benchmark](<benchmarks/Mu-Bench an open multilingual transcription benchmark.md>) · `benchmarks` · sierra
   Introduces mu-Bench, an open multilingual transcription benchmark for evaluating speech recognition quality across languages.
 - **2026-05-12** — [Improving voice performance with post-training](<fine-tuning/Improving voice performance with post-training.md>) · `fine-tuning` · sierra
@@ -86,6 +96,8 @@
   Analyzes Claude Sonnet 4.5 with aspirational evals, focusing on how harder task suites reveal model strengths and gaps beyond standard benchmarks.
 - **2025-09-12** — [Developer notes on the Realtime API | OpenAI Developers](<releases/Developer notes on the Realtime API OpenAI Developers.md>) · `releases` · openai-devs
   Developer notes on the Realtime API GA and the gpt-realtime speech-to-speech model: beta-to-GA interface migration, new marin/cedar voices, and advice to rewrite prompts because instruction-following improved enough that literal instructions are now honored.
+- **2025-09-05** — [NVIDIA's Peter Belcak Distills Why Small Language Models are the Future of Agentic AI](<reasoning/NVIDIA's Peter Belcak Distills Why Small Language Models are the Future of Agentic AI.md>) · `reasoning` · arize
+  Summarizes the argument for small language models in agentic AI and where they can replace larger models.
 - **2025-08-19** — [How to fine-tune gpt-oss-120b with Baseten and Axolotl](<fine-tuning/How to fine-tune gpt-oss-120b with Baseten and Axolotl.md>) · `fine-tuning` · baseten
   Guide to fine-tuning GPT-OSS 120B with Axolotl and scalable training infrastructure.
 - **2025-08-15** — [Fine-tuning small open-source LLMs for specialized tasks](<fine-tuning/Fine-tuning small open-source LLMs for specialized tasks.md>) · `fine-tuning` · together
@@ -108,12 +120,16 @@
   Explains MuonClip as a stability technique for large-scale Kimi-style model training.
 - **2025-07-11** — [Building with Grok 4](<releases/Building with Grok 4.md>) · `releases` · braintrust
   Notes on building with Grok 4, including model behavior, practical integration considerations, and evaluation needs for new model adoption.
+- **2025-06-20** — [The Illusion of Thinking: What the Apple AI Paper Says About LLM Reasoning](<reasoning/The Illusion of Thinking What the Apple AI Paper Says About LLM Reasoning.md>) · `reasoning` · arize
+  Analyzes the Apple reasoning paper and what it suggests about evaluating LLM reasoning limits.
 - **2025-06-09** — [Reinforcement Fine Tuning: Train expert open models to surpass closed frontier models](<fine-tuning/Reinforcement Fine Tuning Train expert open models to surpass closed frontier models.md>) · `fine-tuning` · fireworks
   Introduces reinforcement fine-tuning for training expert open models beyond supervised baselines.
 - **2025-06-04** — [Synthetic data pipeline for fine-tuning and evaluation](<fine-tuning/Synthetic data pipeline for fine-tuning and evaluation.md>) · `fine-tuning` · fireworks
   Describes a synthetic-data pipeline that connects task definition, generation, SFT/RFT, evaluation, and cleanup.
 - **2025-05-28** — [Mixture-of-Agents Alignment for post-training](<fine-tuning/Mixture-of-Agents Alignment for post-training.md>) · `fine-tuning` · together
   Explains Mixture-of-Agents Alignment for improving post-training with collective model intelligence.
+- **2025-05-16** — [Scalable Chain of Thoughts via Elastic Reasoning](<reasoning/Scalable Chain of Thoughts via Elastic Reasoning.md>) · `reasoning` · arize
+  Summarizes elastic reasoning and scalable chain-of-thought ideas for allocating reasoning compute more flexibly.
 - **2025-05-12** — [Supervised Fine-Tuning (SFT) with LoRA on Fireworks AI: Tutorial](<fine-tuning/Supervised Fine-Tuning (SFT) with LoRA on Fireworks AI Tutorial.md>) · `fine-tuning` · fireworks
   Tutorial for supervised fine-tuning with LoRA, including setup, training, and deployment workflow.
 - **2025-04-29** — [Day zero benchmarks for Qwen 3 with SGLang on Baseten](<benchmarks/Day zero benchmarks for Qwen 3 with SGLang on Baseten.md>) · `benchmarks` · baseten
@@ -122,6 +138,10 @@
   Technical deep dive into continued fine-tuning of LLMs.
 - **2025-04-17** — [Direct Preference Optimization: A Technical Deep Dive](<fine-tuning/Direct Preference Optimization A Technical Deep Dive.md>) · `fine-tuning` · together
   Technical deep dive into Direct Preference Optimization for aligning language models.
+- **2025-04-11** — [40 Large Language Model Benchmarks and The Future of Model Evaluation](<benchmarks/40 Large Language Model Benchmarks and The Future of Model Evaluation.md>) · `benchmarks` · arize
+  Surveys major LLM benchmarks and explains what different benchmark families measure for model evaluation.
+- **2025-04-08** — [Tracing and Evaluating Gemini Audio with Arize](<multimodal/Tracing and Evaluating Gemini Audio with Arize.md>) · `multimodal` · arize
+  Covers tracing and evaluation for Gemini audio applications, focusing on observability for multimodal systems.
 - **2025-04-04** — [AI Benchmark Deep Dive: Gemini 2.5 and Humanity's Last Exam](<benchmarks/AI Benchmark Deep Dive Gemini 2.5 and Humanity's Last Exam.md>) · `benchmarks` · arize
   Paper-reading recap on Gemini 2.5 and Humanity's Last Exam, focusing on benchmark interpretation and what modern evaluation results do and do not show.
 - **2025-03-12** — [Fine-Tuning DeepSeek v3 & R1 to optimize quality, latency, & cost](<fine-tuning/Fine-Tuning DeepSeek v3 & R1 to optimize quality, latency, & cost.md>) · `fine-tuning` · fireworks
@@ -158,6 +178,8 @@
   Paper-reading style overview of Google NotebookLM and AI-generated audio as a multimodal product pattern.
 - **2024-10-14** — [Linearizing LLMs with LoLCATs](<reasoning/Linearizing LLMs with LoLCATs.md>) · `reasoning` · together
   Explains LoLCATs for linearizing LLM attention while preserving useful behavior.
+- **2024-09-27** — [Exploring OpenAI's o1-preview and o1-mini](<reasoning/Exploring OpenAI's o1-preview and o1-mini.md>) · `reasoning` · arize
+  Analyzes OpenAI o1-preview and o1-mini from a reasoning-model perspective, including expected strengths, limits, and evaluation implications for production teams.
 - **2024-09-19** — [Breaking Down Reflection Tuning: Enhancing LLM Performance with Self-Learning](<fine-tuning/Breaking Down Reflection Tuning Enhancing LLM Performance with Self-Learning.md>) · `fine-tuning` · arize
   Explains reflection tuning as a self-learning approach for improving LLM performance through critique and iterative refinement.
 - **2024-09-18** — [Multi-LoRA: Personalize AI at scale and deliver the best experience for each customer and use case, with 100x cost-efficiency](<fine-tuning/Multi-LoRA Personalize AI at scale and deliver the best experience for each customer and use case, with 100x cost-efficiency.md>) · `fine-tuning` · fireworks
@@ -174,6 +196,8 @@
   Shows fine-tuning Llama 3 toward GPT-4-like task performance at lower cost.
 - **2024-06-14** — [Comparing few-step image generation models](<benchmarks/Comparing few-step image generation models.md>) · `benchmarks` · baseten
   Compares few-step image generation models and the tradeoffs between speed and output quality.
+- **2024-06-14** — [LLM Interpretability and Sparse Autoencoders: Research from OpenAI and Anthropic](<reasoning/LLM Interpretability and Sparse Autoencoders Research from OpenAI and Anthropic.md>) · `reasoning` · arize
+  Explains sparse autoencoders and interpretability research from OpenAI and Anthropic as tools for understanding model internals.
 - **2024-06-06** — [Dragonfly: A large vision-language model with multi-resolution zoom](<multimodal/Dragonfly A large vision-language model with multi-resolution zoom.md>) · `multimodal` · together
   Introduces Dragonfly, a vision-language model with multi-resolution zoom.
 - **2024-06-04** — [How latent consistency models work](<multimodal/How latent consistency models work.md>) · `multimodal` · baseten
@@ -190,14 +214,20 @@
   Deep dive into Amazon Chronos for time-series modeling, including model behavior and evaluation context.
 - **2024-03-26** — [Anthropic Claude 3](<releases/Anthropic Claude 3.md>) · `releases` · arize
   Overview of Anthropic Claude 3 model releases and capabilities, including model comparisons and implications for LLM application builders.
+- **2024-03-15** — [Reinforcement Learning in the Era of LLMs](<fine-tuning/Reinforcement Learning in the Era of LLMs.md>) · `fine-tuning` · arize
+  Explains reinforcement learning concepts in the LLM era and how RL fits into model improvement workflows.
 - **2024-03-04** — [BASED: Simple linear attention language models balance the recall-throughput tradeoff](<reasoning/BASED Simple linear attention language models balance the recall-throughput tradeoff.md>) · `reasoning` · together
   Explains BASED linear-attention language models and the recall-throughput tradeoff.
 - **2024-02-27** — [Evo: Long-context modeling from molecular to genome scale](<reasoning/Evo Long-context modeling from molecular to genome scale.md>) · `reasoning` · together
   Explains Evo and long-context modeling from molecular to genome-scale sequences.
 - **2024-02-20** — [BitDelta: Your Fine-Tune May Only Be Worth One Bit](<fine-tuning/BitDelta Your Fine-Tune May Only Be Worth One Bit.md>) · `fine-tuning` · together
   Explains BitDelta and how small weight deltas can represent fine-tuned model changes.
+- **2024-01-31** — [Phi-2 Model](<releases/Phi-2 Model.md>) · `releases` · arize
+  Technical overview of Phi-2, including model characteristics, benchmark behavior, and small-model implications.
 - **2024-01-16** — [Generation configurations: temperature, top-k, top-p, and test time compute](<reasoning/Generation configurations temperature, top-k, top-p, and test time compute.md>) · `reasoning` · chip-huyen
   Explains decoding parameters such as temperature, top-k, top-p, and test-time compute, connecting generation configuration to reliability, diversity, latency, and cost.
+- **2023-12-27** — [Mistral AI (Mixtral-8x7B): Performance, Benchmarks](<releases/Mistral AI (Mixtral-8x7B) Performance, Benchmarks.md>) · `releases` · arize
+  Technical overview of Mistral and Mixtral model behavior, performance, and benchmark positioning.
 - **2023-12-13** — [Playground v2 vs Stable Diffusion XL 1.0 for text-to-image generation](<benchmarks/Playground v2 vs Stable Diffusion XL 1.0 for text-to-image generation.md>) · `benchmarks` · baseten
   Compares Playground v2 and Stable Diffusion XL for text-to-image generation quality and serving use cases.
 - **2023-12-08** — [How to serve your ComfyUI model behind an API endpoint](<multimodal/How to serve your ComfyUI model behind an API endpoint.md>) · `multimodal` · baseten
@@ -208,6 +238,10 @@
   Benchmarking post for extraction tasks, comparing structured-output performance and evaluation approaches for information extraction.
 - **2023-11-22** — [Sharing LangSmith Benchmarks](<benchmarks/Sharing LangSmith Benchmarks.md>) · `benchmarks` · langchain
   Shares LangSmith benchmarks for evaluating models and chains, including methodology and public comparison workflows.
+- **2023-11-14** — [The Geometry of Truth: Emergent Linear Structure in LLM Representation of True/False Datasets](<reasoning/The Geometry of Truth Emergent Linear Structure in LLM Representation of TrueFalse Datasets.md>) · `reasoning` · arize
+  Summarizes research on linear structure in LLM representations of truth and falsehood, relevant to interpretability.
+- **2023-11-02** — [Towards Monosemanticity: Decomposing Language Models With Dictionary Learning](<reasoning/Towards Monosemanticity Decomposing Language Models With Dictionary Learning.md>) · `reasoning` · arize
+  Summarizes monosemanticity and dictionary learning work for decomposing language model internals.
 - **2023-10-30** — [RedPajama-Data-v2: An open dataset with 30 trillion tokens for training large language models](<fine-tuning/RedPajama-Data-v2 An open dataset with 30 trillion tokens for training large language models.md>) · `fine-tuning` · together
   Introduces RedPajama-Data-v2, a large web dataset for training language models.
 - **2023-10-16** — [Testing Fine Tuned Open Source Models in LangSmith](<fine-tuning/Testing Fine Tuned Open Source Models in LangSmith.md>) · `fine-tuning` · langchain
@@ -216,18 +250,38 @@
   Explains large multimodal model architecture and training patterns, modality fusion, data challenges, and product capabilities unlocked by image, text, audio, and video models.
 - **2023-10-06** — [Explaining Grokking Through Circuit Efficiency](<reasoning/Explaining Grokking Through Circuit Efficiency.md>) · `reasoning` · arize
   Paper-reading deep dive on grokking and circuit efficiency as a way to understand model generalization.
+- **2023-08-24** — [Skeleton of Thought: LLMs Can Do Parallel Decoding Paper Reading](<reasoning/Skeleton of Thought LLMs Can Do Parallel Decoding Paper Reading.md>) · `reasoning` · arize
+  Summarizes Skeleton of Thought and how parallel decoding can speed structured reasoning.
 - **2023-08-16** — [Open challenges in LLM research](<reasoning/Open challenges in LLM research.md>) · `reasoning` · chip-huyen
   Surveys open LLM research problems around hallucination, context length, efficiency, multimodality, agents, evaluation, and post-training behavior that shape engineering constraints.
+- **2023-08-07** — [Extending the Context Window of LLaMA Models Paper Reading](<reasoning/Extending the Context Window of LLaMA Models Paper Reading.md>) · `reasoning` · arize
+  Explains techniques for extending LLaMA context windows and the tradeoffs involved in long-context model behavior.
+- **2023-08-04** — [Llama 2: Open Foundation and Fine-Tuned Chat Models Paper Reading](<releases/Llama 2 Open Foundation and Fine-Tuned Chat Models Paper Reading.md>) · `releases` · arize
+  Technical paper-reading summary of Llama 2, including foundation and chat-tuned model behavior.
+- **2023-07-25** — [Lost in the Middle: How Language Models Use Long Contexts Paper Reading](<reasoning/Lost in the Middle How Language Models Use Long Contexts Paper Reading.md>) · `reasoning` · arize
+  Summarizes the Lost in the Middle findings on long-context model behavior and retrieval sensitivity.
 - **2023-07-25** — [Monarch Mixer: A new model architecture for increased efficiency](<reasoning/Monarch Mixer A new model architecture for increased efficiency.md>) · `reasoning` · together
   Introduces Monarch Mixer as an efficient model architecture.
+- **2023-07-14** — [Orca: Progressive Learning from Complex Explanation Traces of GPT-4 Paper Reading](<fine-tuning/Orca Progressive Learning from Complex Explanation Traces of GPT-4 Paper Reading.md>) · `fine-tuning` · arize
+  Summarizes Orca and progressive learning from GPT-4 explanation traces as a post-training strategy.
 - **2023-07-12** — [Multi-Query Attention is All You Need](<reasoning/Multi-Query Attention is All You Need.md>) · `reasoning` · fireworks
   Explains multi-query attention and why attention variants matter for efficient LLM inference.
+- **2023-07-03** — [One-for-All: Generalized LoRA for Parameter-Efficient Fine-tuning](<fine-tuning/One-for-All Generalized LoRA for Parameter-Efficient Fine-tuning.md>) · `fine-tuning` · arize
+  Summarizes Generalized LoRA as a parameter-efficient fine-tuning method and explains where it fits in adaptation workflows.
 - **2023-06-15** — [Three techniques to adapt LLMs for any use case](<fine-tuning/Three techniques to adapt LLMs for any use case.md>) · `fine-tuning` · baseten
   Explains prompt engineering, fine-tuning, and related techniques for adapting LLMs to use cases.
+- **2023-06-12** — [LoRA: Low-Rank Adaptation of Large Language Models Paper Reading and Discussion](<fine-tuning/LoRA Low-Rank Adaptation of Large Language Models Paper Reading and Discussion.md>) · `fine-tuning` · arize
+  Paper-reading guide to LoRA and why low-rank adaptation is useful for efficient LLM fine-tuning.
+- **2023-06-02** — [LIMA: Less Is More for Alignment - Paper Reading and Discussion](<fine-tuning/LIMA Less Is More for Alignment - Paper Reading and Discussion.md>) · `fine-tuning` · arize
+  Summarizes LIMA and the idea that small high-quality instruction data can have outsized impact on alignment tuning.
 - **2023-06-01** — [Drag Your GAN: Interactive Point-Based Manipulation on the Generative Image Manifold](<multimodal/Drag Your GAN Interactive Point-Based Manipulation on the Generative Image Manifold.md>) · `multimodal` · arize
   Paper-reading deep dive on DragGAN and interactive point-based image manipulation in generative model latent spaces.
+- **2023-05-05** — [OpenAI on Reinforcement Learning With Human Feedback (RLHF)](<fine-tuning/OpenAI on Reinforcement Learning With Human Feedback (RLHF).md>) · `fine-tuning` · arize
+  Summarizes RLHF concepts from OpenAI and how human feedback changes model behavior during post-training.
 - **2023-05-02** — [RLHF: Reinforcement Learning from Human Feedback](<fine-tuning/RLHF Reinforcement Learning from Human Feedback.md>) · `fine-tuning` · chip-huyen
   Explains the RLHF pipeline from preference data through reward modeling and policy optimization, including why human feedback changes model behavior and where evaluation matters.
+- **2023-03-29** — [Hungry Hungry Hippos (H3) and Language Modeling with State Space Models](<reasoning/Hungry Hungry Hippos (H3) and Language Modeling with State Space Models.md>) · `reasoning` · arize
+  Explains H3/state-space model ideas as alternatives to standard attention and why they matter for sequence modeling efficiency.
 - **2023-01-23** — [FlashConv: speeding up state space models](<reasoning/FlashConv speeding up state space models.md>) · `reasoning` · together
   Explains FlashConv and efficient state-space model execution.
 - **2022-11-17** — [HELM: benchmarking large language models on the Together Research Computer](<benchmarks/HELM benchmarking large language models on the Together Research Computer.md>) · `benchmarks` · together
@@ -251,12 +305,16 @@
   Explains speculative decoding for lower inference latency, including draft-model tradeoffs and production serving considerations.
 - **2026-06-19** — [Speculation Is All You Need](<../inference/optimization/Speculation Is All You Need.md>) · `optimization` · modal
   Deep dive into speculative decoding and related techniques for improving LLM inference latency and throughput.
+- **2026-06-17** — [Two labs started dreaming, and they built two different architectures](<reasoning/Two labs started dreaming, and they built two different architectures.md>) · `reasoning` · arize
+  Compares two different AI architecture directions from research labs, focusing on design choices and implications.
 - **2026-06-03** — [How Harvey & Fireworks Beat Closed Source on Cost + Quality](<../agents/multi-agent/How Harvey & Fireworks Beat Closed Source on Cost + Quality.md>) · `multi-agent` · fireworks
   Case study of using open-source agents with frontier advisors to improve cost and quality versus closed-source baselines.
 - **2026-06-02** — [MiniMax-M3 efficient 1M-token multimodal serving](<../inference/serving/MiniMax-M3 efficient 1M-token multimodal serving.md>) · `serving` · together
   Covers efficient MiniMax-M3 serving for million-token context and multimodal workloads.
 - **2026-05-28** — [AI-native product localization](<../product-engineering/architecture/AI-native product localization.md>) · `architecture` · sierra
   Case study of AI-native product localization, covering workflows for translating and adapting product surfaces with model assistance.
+- **2026-05-20** — [What we learned testing 7 models under the same agent harness](<../evals-observability/testing/What we learned testing 7 models under the same agent harness.md>) · `testing` · arize
+  Compares seven models under a shared agent harness, showing how harness-controlled tests expose model behavior differences.
 - **2026-05-18** — [Sub-second image generation with Flux.2 and Qwen-Image](<../inference/optimization/Sub-second image generation with Flux.2 and Qwen-Image.md>) · `optimization` · baseten
   Explains sub-second image generation with FLUX.2 and Qwen-Image serving optimizations.
 - **2026-05-18** — [Project Glasswing: what Mythos showed us](<../product-engineering/security/Project Glasswing what Mythos showed us.md>) · `security` · cloudflare-ai
@@ -377,6 +435,8 @@
   Explains DeepSWE, an open-source coding agent trained by scaling reinforcement learning.
 - **2025-07-02** — [How we used evals and inference-time compute scaling to generate beautiful QR codes that actually work](<../evals-observability/evaluation/How we used evals and inference-time compute scaling to generate beautiful QR codes that actually work.md>) · `evaluation` · modal
   Case study using evals and inference-time compute scaling to generate QR codes that satisfy visual and functional constraints.
+- **2025-06-20** — [The Illusion of Thinking: What the Apple AI Paper Says About LLM Reasoning](<reasoning/The Illusion of Thinking What the Apple AI Paper Says About LLM Reasoning.md>) · `reasoning` · arize
+  Analyzes the Apple reasoning paper and what it suggests about evaluating LLM reasoning limits.
 - **2025-06-18** — [Run FLUX.1-dev three times faster](<../inference/optimization/Run FLUX.1-dev three times faster.md>) · `optimization` · modal
   Explains optimizations for running FLUX.1-dev faster, including inference configuration and image-model serving tradeoffs.
 - **2025-06-09** — [Reinforcement Fine Tuning: Train expert open models to surpass closed frontier models](<fine-tuning/Reinforcement Fine Tuning Train expert open models to surpass closed frontier models.md>) · `fine-tuning` · fireworks
@@ -407,12 +467,16 @@
   Deep dive into DeepSeek-R1 capabilities, parameters, and reasoning behavior for production model selection.
 - **2024-12-19** — [A quick introduction to speculative decoding](<../inference/optimization/A quick introduction to speculative decoding.md>) · `optimization` · baseten
   Introduces speculative decoding and the draft-target model pattern for lower LLM inference latency.
+- **2024-12-10** — [Merge, Ensemble, and Cooperate! A Survey on Collaborative LLM Strategies](<../agents/multi-agent/Merge, Ensemble, and Cooperate! A Survey on Collaborative LLM Strategies.md>) · `multi-agent` · arize
+  Summarizes collaborative LLM strategies such as merging, ensembling, and cooperation for multi-model or multi-agent systems.
 - **2024-12-04** — [What to do when a new AI model comes out](<../evals-observability/evaluation/What to do when a new AI model comes out.md>) · `evaluation` · braintrust
   Playbook for responding when a new AI model ships: run targeted evals, compare cost and quality, inspect regressions, and decide rollout strategy.
 - **2024-10-08** — [Multimodal Document RAG with Llama 3.2 Vision and ColQwen2](<../rag-retrieval/pipelines/Multimodal Document RAG with Llama 3.2 Vision and ColQwen2.md>) · `pipelines` · together
   Builds a multimodal document RAG pipeline with Llama 3.2 Vision and ColQwen2.
 - **2024-09-30** — [Best Practices for Selecting the Right Model for LLM-as-a-Judge Evaluations](<../evals-observability/evaluation/Best Practices for Selecting the Right Model for LLM-as-a-Judge Evaluations.md>) · `evaluation` · arize
   Best practices for choosing an LLM-as-judge evaluation model, including tradeoffs in evaluator quality and fit for task.
+- **2024-09-27** — [Exploring OpenAI's o1-preview and o1-mini](<reasoning/Exploring OpenAI's o1-preview and o1-mini.md>) · `reasoning` · arize
+  Analyzes OpenAI o1-preview and o1-mini from a reasoning-model perspective, including expected strengths, limits, and evaluation implications for production teams.
 - **2024-09-19** — [Breaking Down Reflection Tuning: Enhancing LLM Performance with Self-Learning](<fine-tuning/Breaking Down Reflection Tuning Enhancing LLM Performance with Self-Learning.md>) · `fine-tuning` · arize
   Explains reflection tuning as a self-learning approach for improving LLM performance through critique and iterative refinement.
 - **2024-09-16** — [Boost your throughput with dynamic batching](<../inference/optimization/Boost your throughput with dynamic batching.md>) · `optimization` · modal
@@ -437,6 +501,8 @@
   Explains serving many fine-tuned LLM adapters from a single GPU with efficient multiplexing.
 - **2024-07-12** — [Fine-tuning Llama-3 toward GPT-4 performance at lower cost](<fine-tuning/Fine-tuning Llama-3 toward GPT-4 performance at lower cost.md>) · `fine-tuning` · together
   Shows fine-tuning Llama 3 toward GPT-4-like task performance at lower cost.
+- **2024-06-28** — [RAFT: Adapting Language Model to Domain Specific RAG](<../rag-retrieval/pipelines/RAFT Adapting Language Model to Domain Specific RAG.md>) · `pipelines` · arize
+  Summarizes RAFT as a method for adapting language models to domain-specific RAG workflows.
 - **2024-06-24** — [Building a personalized code assistant with open-source LLMs using RAG Fine-tuning](<../rag-retrieval/pipelines/Building a personalized code assistant with open-source LLMs using RAG Fine-tuning.md>) · `pipelines` · together
   Builds a personalized code assistant using RAG fine-tuning with open-source LLMs.
 - **2024-06-18** — [SpecExec: Massively Parallel Speculative Decoding for Interactive LLM Inference on Consumer Devices](<../inference/optimization/SpecExec Massively Parallel Speculative Decoding for Interactive LLM Inference on Consumer Devices.md>) · `optimization` · together
@@ -447,6 +513,8 @@
   Explains Mixture-of-Agents for improving model outputs through collective open-source model reasoning.
 - **2024-06-06** — [Dragonfly: A large vision-language model with multi-resolution zoom](<multimodal/Dragonfly A large vision-language model with multi-resolution zoom.md>) · `multimodal` · together
   Introduces Dragonfly, a vision-language model with multi-resolution zoom.
+- **2024-05-29** — [Trustworthy LLMs: A Survey and Guideline for Evaluating Large Language Models' Alignment](<../evals-observability/evaluation/Trustworthy LLMs A Survey and Guideline for Evaluating Large Language Models' Alignment.md>) · `evaluation` · arize
+  Survey-style guide to evaluating trustworthy and aligned LLM behavior across reliability, safety, and quality dimensions.
 - **2024-05-21** — [Create an infinite icon library by fine-tuning Stable Diffusion](<fine-tuning/Create an infinite icon library by fine-tuning Stable Diffusion.md>) · `fine-tuning` · modal
   Practical example of fine-tuning Stable Diffusion for a custom image-generation domain using Modal infrastructure.
 - **2024-05-15** — [Pairwise Evaluations with LangSmith](<../evals-observability/evaluation/Pairwise Evaluations with LangSmith.md>) · `evaluation` · langchain
@@ -455,28 +523,46 @@
   Discusses code-generation copilots with LLMs, including model behavior, latency, and developer workflow considerations.
 - **2024-05-01** — [FAQ: Building LLMs with RedPajama-v2, a 30 trillion token web dataset](<fine-tuning/FAQ Building LLMs with RedPajama-v2, a 30 trillion token web dataset.md>) · `fine-tuning` · together
   FAQ-style technical explanation of building LLMs with the RedPajama-v2 dataset.
+- **2024-04-26** — [Keys To Understanding ReAct: Synergizing Reasoning and Acting in Language Models](<../agents/tool-use/Keys To Understanding ReAct Synergizing Reasoning and Acting in Language Models.md>) · `tool-use` · arize
+  Explains ReAct as a reasoning-plus-acting pattern for agents and how it structures tool use.
 - **2024-04-04** — [Demystifying Amazon's Chronos: Learning the Language of Time Series](<releases/Demystifying Amazon's Chronos Learning the Language of Time Series.md>) · `releases` · arize
   Deep dive into Amazon Chronos for time-series modeling, including model behavior and evaluation context.
 - **2024-03-26** — [Anthropic Claude 3](<releases/Anthropic Claude 3.md>) · `releases` · arize
   Overview of Anthropic Claude 3 model releases and capabilities, including model comparisons and implications for LLM application builders.
+- **2024-03-15** — [Reinforcement Learning in the Era of LLMs](<fine-tuning/Reinforcement Learning in the Era of LLMs.md>) · `fine-tuning` · arize
+  Explains reinforcement learning concepts in the LLM era and how RL fits into model improvement workflows.
 - **2024-02-28** — [Predictive Human Preference: From Model Ranking to Model Routing](<../evals-observability/evaluation/Predictive Human Preference From Model Ranking to Model Routing.md>) · `evaluation` · chip-huyen
   Describes predictive human preference for model ranking and model routing, using preference models and evaluations to choose among LLMs by quality, cost, and latency.
 - **2024-02-22** — [40% faster Stable Diffusion XL inference with NVIDIA TensorRT](<../inference/optimization/40% faster Stable Diffusion XL inference with NVIDIA TensorRT.md>) · `optimization` · baseten
   Explains TensorRT optimization for Stable Diffusion XL inference, including latency and throughput gains.
+- **2024-02-08** — [RAG vs Fine-Tuning](<../rag-retrieval/pipelines/RAG vs Fine-Tuning.md>) · `pipelines` · arize
+  Compares RAG and fine-tuning as adaptation strategies, including when retrieval is preferable to model updates.
+- **2024-01-31** — [Phi-2 Model](<releases/Phi-2 Model.md>) · `releases` · arize
+  Technical overview of Phi-2, including model characteristics, benchmark behavior, and small-model implications.
 - **2024-01-31** — [Introduction to quantizing ML models](<../inference/quantization/Introduction to quantizing ML models.md>) · `quantization` · baseten
   Introduces model quantization concepts and how they affect inference efficiency and model quality.
 - **2024-01-31** — [How to benchmark image generation models like Stable Diffusion XL](<../evals-observability/evaluation/How to benchmark image generation models like Stable Diffusion XL.md>) · `evaluation` · baseten
   Explains how to benchmark image-generation models with attention to quality, latency, and reproducibility.
+- **2023-12-27** — [Mistral AI (Mixtral-8x7B): Performance, Benchmarks](<releases/Mistral AI (Mixtral-8x7B) Performance, Benchmarks.md>) · `releases` · arize
+  Technical overview of Mistral and Mixtral model behavior, performance, and benchmark positioning.
 - **2023-12-13** — [Playground v2 vs Stable Diffusion XL 1.0 for text-to-image generation](<benchmarks/Playground v2 vs Stable Diffusion XL 1.0 for text-to-image generation.md>) · `benchmarks` · baseten
   Compares Playground v2 and Stable Diffusion XL for text-to-image generation quality and serving use cases.
 - **2023-11-13** — [FlashFFTConv: Efficient Convolutions for Long Sequences with Tensor Cores](<../inference/optimization/FlashFFTConv Efficient Convolutions for Long Sequences with Tensor Cores.md>) · `optimization` · together
   Explains FlashFFTConv for efficient long-sequence convolutions on tensor cores.
 - **2023-10-30** — [RedPajama-Data-v2: An open dataset with 30 trillion tokens for training large language models](<fine-tuning/RedPajama-Data-v2 An open dataset with 30 trillion tokens for training large language models.md>) · `fine-tuning` · together
   Introduces RedPajama-Data-v2, a large web dataset for training language models.
+- **2023-10-17** — [RankVicuna: Zero-Shot Listwise Document Reranking with Open-Source Large Language Models](<../rag-retrieval/search/RankVicuna Zero-Shot Listwise Document Reranking with Open-Source Large Language Models.md>) · `search` · arize
+  Summarizes RankVicuna for zero-shot listwise reranking and its implications for LLM-powered search.
 - **2023-09-11** — [Medusa: Simple framework for accelerating LLM generation with multiple decoding heads](<../inference/optimization/Medusa Simple framework for accelerating LLM generation with multiple decoding heads.md>) · `optimization` · together
   Introduces Medusa, a multi-decoding-head framework for accelerating LLM generation.
 - **2023-08-30** — [SDXL inference in under 2 seconds](<../inference/optimization/SDXL inference in under 2 seconds.md>) · `optimization` · baseten
   Guide to Stable Diffusion XL inference optimization for sub-2-second image generation.
+- **2023-08-04** — [Llama 2: Open Foundation and Fine-Tuned Chat Models Paper Reading](<releases/Llama 2 Open Foundation and Fine-Tuned Chat Models Paper Reading.md>) · `releases` · arize
+  Technical paper-reading summary of Llama 2, including foundation and chat-tuned model behavior.
+- **2023-07-14** — [Orca: Progressive Learning from Complex Explanation Traces of GPT-4 Paper Reading](<fine-tuning/Orca Progressive Learning from Complex Explanation Traces of GPT-4 Paper Reading.md>) · `fine-tuning` · arize
+  Summarizes Orca and progressive learning from GPT-4 explanation traces as a post-training strategy.
+- **2023-03-21** — [Toolformer: Training LLMs To Use Tools](<../agents/tool-use/Toolformer Training LLMs To Use Tools.md>) · `tool-use` · arize
+  Summarizes Toolformer and how language models can learn to use external tools.
 - **2022-12-08** — [Accelerating model deployment: 100X faster dev loops with development deployments](<../infra-platform/deployment/Accelerating model deployment 100X faster dev loops with development deployments.md>) · `deployment` · baseten
   Explains development deployments and draft models as a way to shorten model deployment iteration loops.
 - **2022-12-05** — [Overcoming communication bottlenecks for decentralized training, part 2](<../infra-platform/gpu-clusters/Overcoming communication bottlenecks for decentralized training, part 2.md>) · `gpu-clusters` · together

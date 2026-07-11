@@ -1,23 +1,33 @@
 # prompt-engineering
 
-14 articles.
+20 articles.
 
 - **2026-06-26** — [Prompt Caching with Deep Agents](<context-engineering/Prompt Caching with Deep Agents.md>) · `context-engineering` · langchain
   Explains prompt caching for Deep Agents and how cache-aware context design reduces latency and cost for repeated agent work.
 - **2026-05-12** — [Context engineering: the key to great agents](<context-engineering/Context engineering the key to great agents.md>) · `context-engineering` · sierra
   Explains context engineering for agents, including how the right knowledge, state, and instructions shape agent quality.
+- **2026-04-30** — [Prompt templates as configs, not code](<context-engineering/Prompt templates as configs, not code.md>) · `context-engineering` · arize
+  Argues for treating prompt templates as configuration, improving iteration, versioning, and deployment safety.
 - **2026-03-20** — [Designing delightful frontends with GPT-5.4 | OpenAI Developers](<techniques/Designing delightful frontends with GPT-5.4 OpenAI Developers.md>) · `techniques` · openai-devs
   Prompting guide for steering GPT-5.4 toward non-generic frontend design: the model was trained for UI work, native image search/generation (e.g. prompt it to build mood boards first), and computer use for self-verification with tools like Playwright.
 - **2026-02-16** — [Using Agent Skills to Automatically Improve your Prompts](<techniques/Using Agent Skills to Automatically Improve your Prompts.md>) · `techniques` · langfuse
   Shows how agent skills can automatically improve prompts, using evaluation feedback and reusable agent workflows to iterate on prompt quality.
 - **2025-11-20** — [CLAUDE.md: Best Practices Learned from Optimizing Claude Code with Prompt Learning](<context-engineering/CLAUDE.md Best Practices Learned from Optimizing Claude Code with Prompt Learning.md>) · `context-engineering` · arize
   Extracts CLAUDE.md best practices from prompt-learning experiments that optimized Claude Code behavior through repository instructions.
+- **2025-11-17** — [GEPA vs Prompt Learning: Benchmarking Different Prompt Optimization Approaches](<techniques/GEPA vs Prompt Learning Benchmarking Different Prompt Optimization Approaches.md>) · `techniques` · arize
+  Benchmarks GEPA against prompt learning and frames prompt optimization as an eval-driven engineering loop.
 - **2025-10-28** — [8 Top Prompt Testing and Optimization Tools for LLMs and Multiagent Systems (2025)](<techniques/8 Top Prompt Testing and Optimization Tools for LLMs and Multiagent Systems (2025).md>) · `techniques` · arize
   Survey of prompt testing and optimization tools for LLM and multi-agent systems, focused on iteration workflows, evaluation support, and production prompt quality.
 - **2025-09-29** — [Effective context engineering for AI agents](<context-engineering/Effective context engineering for AI agents.md>) · `context-engineering` · anthropic-engineering
   Strategies for managing agent context windows—compaction, structured note-taking, sub-agent architectures—and why context engineering supersedes prompt engineering.
 - **2025-08-20** — [Evidence-Based Prompting Strategies for LLM-as-a-Judge: Explanations and Chain-of-Thought](<techniques/Evidence-Based Prompting Strategies for LLM-as-a-Judge Explanations and Chain-of-Thought.md>) · `techniques` · arize
   Examines prompting strategies for LLM-as-judge evaluators, including explanations and chain-of-thought design choices.
+- **2025-07-18** — [Prompt Learning: Using English Feedback to Optimize LLM Systems](<techniques/Prompt Learning Using English Feedback to Optimize LLM Systems.md>) · `techniques` · arize
+  Explains prompt learning driven by natural-language feedback as an optimization loop for LLM systems.
+- **2025-03-17** — [Prompt Optimization Techniques](<techniques/Prompt Optimization Techniques.md>) · `techniques` · arize
+  Covers few-shot prompting and prompt optimization techniques with an emphasis on measurable improvement.
+- **2025-03-07** — [Prompt Management from First Principles](<techniques/Prompt Management from First Principles.md>) · `techniques` · arize
+  Frames prompt management from first principles, including versioning, ownership, and production workflow concerns.
 - **2025-02-01** — [From text to task: Constrained generation for structured extraction in R1](<structured-output/From text to task Constrained generation for structured extraction in R1.md>) · `structured-output` · fireworks
   Explains constrained generation for structured extraction with reasoning models and schema-bound outputs.
 - **2024-11-13** — [Promptim: an experimental library for prompt optimization](<techniques/Promptim an experimental library for prompt optimization.md>) · `techniques` · langchain
@@ -30,6 +40,8 @@
   Explains why structured-output modes matter for reliable LLM applications and tool-calling systems.
 - **2024-01-31** — [Function calling and JSON mode](<structured-output/Function calling and JSON mode.md>) · `structured-output` · together
   Explains function calling and JSON mode for structured LLM application outputs.
+- **2023-12-18** — [How to Prompt LLMs for Text-to-SQL](<structured-output/How to Prompt LLMs for Text-to-SQL.md>) · `structured-output` · arize
+  Practical guide to Text-to-SQL prompting, including schema context, output constraints, and evaluation considerations.
 
 ## Also relevant (filed elsewhere)
 
@@ -43,6 +55,8 @@
   Shows how to classify user intent with categorical LLM-as-judge evaluators, including rubric design and structured scoring for production analysis.
 - **2026-03-25** — [How Perplexity Brought Voice Search to Millions Using the Realtime API | OpenAI Developers](<../product-engineering/case-studies/How Perplexity Brought Voice Search to Millions Using the Realtime API OpenAI Developers.md>) · `case-studies` · openai-devs
   Perplexity's production lessons running Realtime-1.5 voice across Comet and Computer: feed context in 2,000-token chunks to avoid all-or-nothing truncation, get system/user/assistant role semantics right, standardize audio via a Rust SDK (48 kHz mono, WebRTC APM), and a 'voice lock' pattern for user pauses.
+- **2026-03-19** — [Managing Memory in AI Agents: Beyond the Context Window](<../agents/memory-context/Managing Memory in AI Agents Beyond the Context Window.md>) · `memory-context` · arize
+  Covers memory and context-window management patterns for agents that need to preserve useful state over long tasks.
 - **2026-03-09** — [Using skills to accelerate OSS maintenance | OpenAI Developers](<../agents/tool-use/Using skills to accelerate OSS maintenance OpenAI Developers.md>) · `tool-use` · openai-devs
   How OpenAI maintains the Agents SDK repos with repo-local Codex skills, AGENTS.md policy, and the Codex GitHub Action — turning verification, release prep, and PR review into repeatable progressive-disclosure workflows; merged PRs rose from 316 to 457 quarter-over-quarter.
 - **2026-02-04** — [15 lessons learned building ChatGPT Apps | OpenAI Developers](<../product-engineering/ux-patterns/15 lessons learned building ChatGPT Apps OpenAI Developers.md>) · `ux-patterns` · openai-devs
@@ -57,6 +71,8 @@
   Dagster Labs describes using Codex to accelerate documentation work — writing docs, translating content across mediums, and measuring doc completeness — and finds a well-structured CONTRIBUTING.md doubles as high-leverage scaffolding for the agent.
 - **2025-10-16** — [Equipping agents for the real world with Agent Skills](<../agents/tool-use/Equipping agents for the real world with Agent Skills.md>) · `tool-use` · anthropic-engineering
   Introduces Agent Skills: folder-based packages of instructions, scripts, and resources that agents load progressively to gain domain expertise on demand.
+- **2025-10-14** — [Optimizing Coding Agent Rules (./clinerules) for Improved Accuracy](<../agents/computer-use/Optimizing Coding Agent Rules (.clinerules) for Improved Accuracy.md>) · `computer-use` · arize
+  Explains how coding-agent rule files affect accuracy and how to optimize them for better agent behavior.
 - **2025-09-11** — [How to turn Claude Code into a domain specific coding agent](<../agents/tool-use/How to turn Claude Code into a domain specific coding agent.md>) · `tool-use` · langchain
   Shows how to turn Claude Code into a domain-specific coding agent using instructions, tools, context, and workflow constraints.
 - **2025-09-09** — [Building a Multilingual Cypher Query Evaluation Pipeline](<../evals-observability/evaluation/Building a Multilingual Cypher Query Evaluation Pipeline.md>) · `evaluation` · arize
@@ -67,6 +83,8 @@
   Explains function calling as the bridge between LLM outputs, external tools, and agentic execution loops.
 - **2025-03-20** — [The "think" tool: Enabling Claude to stop and think](<../agents/tool-use/The think tool Enabling Claude to stop and think.md>) · `tool-use` · anthropic-engineering
   Adding a no-op 'think' tool gives Claude space for intermediate reasoning mid-task, significantly improving policy-heavy agentic benchmarks like tau-bench.
+- **2025-02-26** — [Memory and State in LLM Applications](<../agents/memory-context/Memory and State in LLM Applications.md>) · `memory-context` · arize
+  Explains memory and state patterns in LLM applications and how they affect reliability across interactions.
 - **2025-01-16** — [Common pitfalls when building generative AI applications](<../product-engineering/architecture/Common pitfalls when building generative AI applications.md>) · `architecture` · chip-huyen
   Covers common generative-AI application pitfalls, including overusing LLMs, confusing product problems with model failures, premature framework complexity, and weak evaluation/product iteration.
 - **2024-11-25** — [Long Context Fine-Tuning: A Technical Deep Dive](<../models/fine-tuning/Long Context Fine-Tuning A Technical Deep Dive.md>) · `fine-tuning` · together
@@ -91,5 +109,9 @@
   Benchmarking post for extraction tasks, comparing structured-output performance and evaluation approaches for information extraction.
 - **2023-10-12** — [Flash-Decoding for long-context inference](<../inference/optimization/Flash-Decoding for long-context inference.md>) · `optimization` · together
   Introduces Flash-Decoding for efficient long-context inference.
+- **2023-08-07** — [Extending the Context Window of LLaMA Models Paper Reading](<../models/reasoning/Extending the Context Window of LLaMA Models Paper Reading.md>) · `reasoning` · arize
+  Explains techniques for extending LLaMA context windows and the tradeoffs involved in long-context model behavior.
+- **2023-07-25** — [Lost in the Middle: How Language Models Use Long Contexts Paper Reading](<../models/reasoning/Lost in the Middle How Language Models Use Long Contexts Paper Reading.md>) · `reasoning` · arize
+  Summarizes the Lost in the Middle findings on long-context model behavior and retrieval sensitivity.
 - **2023-06-15** — [Three techniques to adapt LLMs for any use case](<../models/fine-tuning/Three techniques to adapt LLMs for any use case.md>) · `fine-tuning` · baseten
   Explains prompt engineering, fine-tuning, and related techniques for adapting LLMs to use cases.

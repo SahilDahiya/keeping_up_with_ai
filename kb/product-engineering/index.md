@@ -1,6 +1,6 @@
 # product-engineering
 
-90 articles.
+97 articles.
 
 - **2026-07-10** — [AI-pilling our company: lessons learned](<case-studies/AI-pilling our company lessons learned.md>) · `case-studies` · sierra
   Internal adoption case study on spreading AI workflows through a company, including practical lessons for using agents and tools in day-to-day work.
@@ -34,6 +34,8 @@
   Explains the missing application-layer pieces around agents, connecting agent runtimes to product interfaces, state, and deployment workflows.
 - **2026-06-09** — [Defend against frontier cyber models: Cloudflare's architecture as customer zero](<security/Defend against frontier cyber models Cloudflare's architecture as customer zero.md>) · `security` · cloudflare-ai
   Follow-up to Project Glasswing detailing Cloudflare's customer-zero defense architecture against frontier cyber models — which compress discovery, exploit-chain construction, and PoC generation — using Cloudforce One threat intel feeding WAF rules deployed network-wide in under 30 seconds (e.g. React2Shell pre-advisory).
+- **2026-06-09** — [How to detect credential theft in AI agent harness traces](<security/How to detect credential theft in AI agent harness traces.md>) · `security` · arize
+  Shows how agent harness traces can expose credential theft and other security failures during tool use.
 - **2026-06-05** — [How we use agents to review production infrastructure](<case-studies/How we use agents to review production infrastructure.md>) · `case-studies` · langfuse
   Case study of using agents to review production infrastructure, including operational workflows, review boundaries, and human oversight.
 - **2026-06-03** — [How Harmonic Rebuilt Scout on Deep Agents and 4x'd Retention with LangSmith](<case-studies/How Harmonic Rebuilt Scout on Deep Agents and 4x'd Retention with LangSmith.md>) · `case-studies` · langchain
@@ -92,8 +94,14 @@
   Case study on using elastic compute to accelerate AI research workflows, including experiment throughput and infrastructure offload.
 - **2026-02-18** — [monday Service + LangSmith: Building a Code-First Evaluation Strategy from Day 1](<case-studies/monday Service + LangSmith Building a Code-First Evaluation Strategy from Day 1.md>) · `case-studies` · langchain
   monday Service case study on building a code-first evaluation strategy for AI product quality from day one.
+- **2026-02-17** — [Inside Typeform’s AI Agent Stack](<case-studies/Inside Typeform’s AI Agent Stack.md>) · `case-studies` · arize
+  Case study of Typeform’s AI agent stack, useful for understanding production architecture choices in agent applications.
 - **2026-02-04** — [15 lessons learned building ChatGPT Apps | OpenAI Developers](<ux-patterns/15 lessons learned building ChatGPT Apps OpenAI Developers.md>) · `ux-patterns` · openai-devs
   Alpic distills 15 lessons from building two dozen ChatGPT Apps on the Apps SDK, centered on 'context asymmetry' between user, UI widget, and model — deciding which tool-output fields each party sees — and packaged into their open-source Skybridge framework.
+- **2026-01-29** — [OWASP Top 10 for Agentic Applications: Compliance Guide](<security/OWASP Top 10 for Agentic Applications Compliance Guide.md>) · `security` · arize
+  Maps OWASP risks to agentic applications and explains compliance-oriented controls for agent systems.
+- **2026-01-22** — [How Observability-Driven Sandboxing Secures AI Agents](<security/How Observability-Driven Sandboxing Secures AI Agents.md>) · `security` · arize
+  Explains how sandbox telemetry and observability can harden AI agents that execute code or use external tools.
 - **2026-01-21** — [Security is a choice: how Braintrust lets you decide where your AI data lives](<security/Security is a choice how Braintrust lets you decide where your AI data lives.md>) · `security` · braintrust
   Explains data-control choices for AI observability, including where data lives, how security boundaries are enforced, and deployment implications.
 - **2026-01-11** — [Supercharging Codex with JetBrains MCP at Skyscanner | OpenAI Developers](<case-studies/Supercharging Codex with JetBrains MCP at Skyscanner OpenAI Developers.md>) · `case-studies` · openai-devs
@@ -122,6 +130,8 @@
   Design guidance for ChatGPT Apps: instead of porting an existing app's screens and navigation, expose a few narrow 'specific powers' the model can invoke mid-conversation, design for conversational entry points and discovery, and measure whether the app actually improves conversations.
 - **2025-11-20** — [Agents need good developer experience too](<architecture/Agents need good developer experience too.md>) · `architecture` · modal
   Argues that agent systems need strong developer experience, covering observability, iteration loops, deployment ergonomics, and tool surfaces.
+- **2025-11-19** — [How To Improve AI Agent Security with Microsoft’s AI Red Teaming Agent in Microsoft Foundry](<security/How To Improve AI Agent Security with Microsoft’s AI Red Teaming Agent in Microsoft Foundry.md>) · `security` · arize
+  Explains how red-team agents can be used to find and test security weaknesses in agentic applications.
 - **2025-11-03** — [Vercel code fixing with open models, speculative decoding, and RFT](<case-studies/Vercel code fixing with open models speculative decoding and RFT.md>) · `case-studies` · fireworks
   Case study of improving Vercel code-fixing outputs with open models, speculative decoding, and reinforcement fine-tuning.
 - **2025-10-27** — [Using Codex for education at Dagster Labs | OpenAI Developers](<case-studies/Using Codex for education at Dagster Labs OpenAI Developers.md>) · `case-studies` · openai-devs
@@ -140,6 +150,8 @@
   Introduces Desktop Extensions (.dxt): a packaging format for one-click installation of local MCP servers in Claude Desktop, with manifest spec and distribution details.
 - **2025-04-24** — [How we use LLMs to build and scale Langfuse](<case-studies/How we use LLMs to build and scale Langfuse.md>) · `case-studies` · langfuse
   Case study of how Langfuse uses LLMs internally to build and scale the product, including practical workflows for AI-assisted engineering and operations.
+- **2025-02-12** — [How 100X AI Uses Phoenix to Supercharge AI-Driven Troubleshooting](<case-studies/How 100X AI Uses Phoenix to Supercharge AI-Driven Troubleshooting.md>) · `case-studies` · arize
+  Case study on using Phoenix traces and observability to improve AI-driven troubleshooting workflows in production.
 - **2025-01-16** — [Common pitfalls when building generative AI applications](<architecture/Common pitfalls when building generative AI applications.md>) · `architecture` · chip-huyen
   Covers common generative-AI application pitfalls, including overusing LLMs, confusing product problems with model failures, premature framework complexity, and weak evaluation/product iteration.
 - **2024-11-13** — [LLM Product Development for Product Managers](<ux-patterns/LLM Product Development for Product Managers.md>) · `ux-patterns` · langfuse
@@ -158,6 +170,8 @@
   Factory case study on automating feedback loops with LangSmith to improve iteration speed and production agent quality.
 - **2024-06-06** — [How to catch crypto miners using syscall signatures](<security/How to catch crypto miners using syscall signatures.md>) · `security` · modal
   Explains detecting abusive GPU workloads with syscall signatures, a useful pattern for securing shared AI infrastructure.
+- **2024-05-30** — [LLM Summarization: Getting To Production](<architecture/LLM Summarization Getting To Production.md>) · `architecture` · arize
+  Covers production considerations for LLM summarization systems, including quality controls and deployment pitfalls.
 - **2024-05-14** — [Monitoring LLM Security & Reducing LLM Risks](<security/Monitoring LLM Security & Reducing LLM Risks.md>) · `security` · langfuse
   Covers monitoring patterns for LLM security risks such as prompt injection, data leakage, and unsafe outputs, with observability as part of the mitigation loop.
 - **2024-05-06** — [AI development loops](<architecture/AI development loops.md>) · `architecture` · braintrust
@@ -195,6 +209,8 @@
   Announces the Attribution Business Insights dashboard for Bot Management customers: per-operator crawl-to-referral ratios (observed from 118:1 to ~50,000:1 for AI crawlers), bot-vs-human traffic breakdowns, and crawler classification into Training, Search, and Agent purposes.
 - **2026-06-30** — [Let your customers shape your agents](<../evals-observability/evaluation/Let your customers shape your agents.md>) · `evaluation` · sierra
   Explains experimentation loops for agent improvement, using customer behavior, A/B tests, and statistical confidence to shape agent changes.
+- **2026-06-18** — [What is an agent harness? Why harnesses are replacing agent frameworks](<../agents/planning/What is an agent harness Why harnesses are replacing agent frameworks.md>) · `planning` · arize
+  Explains why agent harnesses are replacing simple framework use as the unit of production agent engineering.
 - **2026-06-16** — [The Art of Loop Engineering](<../agents/planning/The Art of Loop Engineering.md>) · `planning` · langchain
   Discusses loop engineering for agents, focusing on the control loops that govern planning, action, observation, and refinement.
 - **2026-06-12** — [How to Choose the Right Sandbox for AI Agents](<../agents/computer-use/How to Choose the Right Sandbox for AI Agents.md>) · `computer-use` · langchain
@@ -203,6 +219,8 @@
   Argues for giving agents isolated computers or sandboxes so they can run tools while preserving control, safety, and reproducibility.
 - **2026-06-03** — [How to Build a Custom Agent Harness](<../agents/planning/How to Build a Custom Agent Harness.md>) · `planning` · langchain
   Guide to building a custom agent harness, covering control loop design, state, tools, observability, and evaluation hooks.
+- **2026-06-01** — [How Hermes implements an open source agent harness architecture](<../agents/planning/How Hermes implements an open source agent harness architecture.md>) · `planning` · arize
+  Breaks down Hermes as an open-source agent harness architecture, focusing on components, control flow, and implementation boundaries.
 - **2026-05-20** — [EU macroeconomic analysis with Deep Agents, LangSmith, and the You.com Finance Research API](<../agents/tool-use/EU macroeconomic analysis with Deep Agents, LangSmith, and the You.com Finance Research API.md>) · `tool-use` · langchain
   Case study building a financial research agent for EU macroeconomic analysis with Deep Agents, LangSmith, and the You.com Finance Research API.
 - **2026-05-19** — [Announcing Claude Managed Agents on Cloudflare](<../infra-platform/deployment/Announcing Claude Managed Agents on Cloudflare.md>) · `deployment` · cloudflare-ai
@@ -263,6 +281,8 @@
   Explains AI code sandboxes as isolated execution environments for coding agents, including safety and state considerations.
 - **2025-04-20** — [How to think about agent frameworks](<../agents/planning/How to think about agent frameworks.md>) · `planning` · langchain
   Framework for evaluating agent frameworks by abstraction level, control, durability, observability, and fit to production workflows.
+- **2025-03-07** — [Prompt Management from First Principles](<../prompt-engineering/techniques/Prompt Management from First Principles.md>) · `techniques` · arize
+  Frames prompt management from first principles, including versioning, ownership, and production workflow concerns.
 - **2025-01-22** — [Building Audio Support with OpenAI: Insights from our Journey](<../models/multimodal/Building Audio Support with OpenAI Insights from our Journey.md>) · `multimodal` · arize
   Case study on adding audio support with OpenAI models, covering product and engineering lessons from building multimodal support.
 - **2025-01-08** — [Our approach to hybrid deployment](<../infra-platform/deployment/Our approach to hybrid deployment.md>) · `deployment` · braintrust
@@ -273,12 +293,16 @@
   Introduces practical agent workflow and architecture patterns, emphasizing simple tool-calling loops and design choices over vague autonomy claims.
 - **2024-12-02** — [WireGuard at Modal: Static IPs for serverless containers](<../infra-platform/deployment/WireGuard at Modal Static IPs for serverless containers.md>) · `deployment` · modal
   Explains static IP support for serverless containers using WireGuard, relevant to secure networked AI deployments.
+- **2024-11-11** — [How to Improve LLM Safety and Reliability](<../evals-observability/testing/How to Improve LLM Safety and Reliability.md>) · `testing` · arize
+  Covers testing and monitoring practices for improving LLM application safety and reliability in production.
 - **2024-11-04** — [Building serverless apps with the OpenAI Realtime API](<../models/multimodal/Building serverless apps with the OpenAI Realtime API.md>) · `multimodal` · braintrust
   Guide to building serverless apps with the OpenAI Realtime API, focusing on real-time voice interaction architecture and deployment patterns.
 - **2024-09-23** — [Should you use an LLM Proxy to Build your Application?](<../infra-platform/deployment/Should you use an LLM Proxy to Build your Application.md>) · `deployment` · langfuse
   Explains the LLM proxy pattern for AI applications, including provider abstraction, centralized logging, key management, routing, and governance tradeoffs.
 - **2024-09-17** — [Building high-performance compound AI applications with MongoDB Atlas and Baseten](<../rag-retrieval/pipelines/Building high-performance compound AI applications with MongoDB Atlas and Baseten.md>) · `pipelines` · baseten
   Shows how to build high-performance compound AI applications with retrieval, orchestration, and model serving.
+- **2024-08-16** — [Judging the Judges: Evaluating Alignment and Vulnerabilities in LLMs-as-Judges](<../evals-observability/evaluation/Judging the Judges Evaluating Alignment and Vulnerabilities in LLMs-as-Judges.md>) · `evaluation` · arize
+  Analyzes vulnerabilities and alignment issues in LLM-as-judge systems, with implications for production evaluator design.
 - **2024-08-14** — [Building a RAG with Astro, FastAPI, SurrealDB and Llama 3.1](<../rag-retrieval/pipelines/Building a RAG with Astro, FastAPI, SurrealDB and Llama 3.1.md>) · `pipelines` · fireworks
   End-to-end RAG application example using Astro, FastAPI, SurrealDB, and Llama 3.1.
 - **2024-05-01** — [Regression Testing with LangSmith](<../evals-observability/testing/Regression Testing with LangSmith.md>) · `testing` · langchain
