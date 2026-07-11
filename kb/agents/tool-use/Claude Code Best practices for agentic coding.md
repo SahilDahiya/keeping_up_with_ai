@@ -34,11 +34,11 @@ Most best practices are based on one constraint: Claude’s context window fills
 
 Claude stops when the work looks done. Without a check it can run, “looks done” is the only signal available, and you become the verification loop: every mistake waits for you to notice it. Give Claude something that produces a pass or fail, and the loop closes on its own. Claude does the work, runs the check, reads the result, and iterates until the check passes. The check is anything that returns a signal Claude can read in the conversation: a test suite, a build exit code, a linter, a script that diffs output against a fixture, or a[browser screenshot](https://www.anthropic.com/docs/en/chrome)compared against a design.
 
-| Strategy | Before | After | 
+| Strategy | Before | After |
 |---|---|---|
-| Provide verification criteria | ”implement a function that validates email addresses" | "write a validateEmail function. example test cases: [user@example.com](mailto:user@example.com)is true, invalid is false,[user@.com](mailto:user@.com)is false. run the tests after implementing” | 
-| Verify UI changes visually | ”make the dashboard look better" | "[paste screenshot] implement this design. take a screenshot of the result and compare it to the original. list differences and fix them” | 
-| Address root causes, not symptoms | ”the build is failing" | "the build fails with this error: [paste error]. fix it and verify the build succeeds. address the root cause, don’t suppress the error” | 
+| Provide verification criteria | ”implement a function that validates email addresses" | "write a validateEmail function. example test cases: [user@example.com](mailto:user@example.com)is true, invalid is false,[user@.com](mailto:user@.com)is false. run the tests after implementing” |
+| Verify UI changes visually | ”make the dashboard look better" | "[paste screenshot] implement this design. take a screenshot of the result and compare it to the original. list differences and fix them” |
+| Address root causes, not symptoms | ”the build is failing" | "the build fails with this error: [paste error]. fix it and verify the build succeeds. address the root cause, don’t suppress the error” |
 
 - **In one prompt**: ask Claude to run the check and iterate in the same message, as in the table above.
 - **Across a session**: set the check as a- `/goal`condition
@@ -59,7 +59,7 @@ claude (plan mode)
 
 Plan
 
-Ask Claude to create a detailed implementation plan.Press 
+Ask Claude to create a detailed implementation plan.Press
 
 claude (plan mode)
 
@@ -73,12 +73,12 @@ Plan mode is useful, but also adds overhead.For tasks where the scope is clear a
 
 ## Provide specific context in your prompts
 
-Claude can infer intent, but it can’t read your mind. Reference specific files, mention constraints, and point to example patterns.| Strategy | Before | After | 
+Claude can infer intent, but it can’t read your mind. Reference specific files, mention constraints, and point to example patterns.| Strategy | Before | After |
 |---|---|---|
-| Scope the task.Specify which file, what scenario, and testing preferences. | ”add tests for foo.py" | "write a test for foo.py covering the edge case where the user is logged out. avoid mocks.” | 
-| Point to sources.Direct Claude to the source that can answer a question. | ”why does ExecutionFactory have such a weird api?" | "look through ExecutionFactory’s git history and summarize how its api came to be” | 
-| Reference existing patterns.Point Claude to patterns in your codebase. | ”add a calendar widget" | "look at how existing widgets are implemented on the home page to understand the patterns. HotDogWidget.php is a good example. follow the pattern to implement a new calendar widget that lets the user select a month and paginate forwards/backwards to pick a year. build from scratch without libraries other than the ones already used in the codebase.” | 
-| Describe the symptom.Provide the symptom, the likely location, and what “fixed” looks like. | ”fix the login bug" | "users report that login fails after session timeout. check the auth flow in src/auth/, especially token refresh. write a failing test that reproduces the issue, then fix it” | 
+| Scope the task.Specify which file, what scenario, and testing preferences. | ”add tests for foo.py" | "write a test for foo.py covering the edge case where the user is logged out. avoid mocks.” |
+| Point to sources.Direct Claude to the source that can answer a question. | ”why does ExecutionFactory have such a weird api?" | "look through ExecutionFactory’s git history and summarize how its api came to be” |
+| Reference existing patterns.Point Claude to patterns in your codebase. | ”add a calendar widget" | "look at how existing widgets are implemented on the home page to understand the patterns. HotDogWidget.php is a good example. follow the pattern to implement a new calendar widget that lets the user select a month and paginate forwards/backwards to pick a year. build from scratch without libraries other than the ones already used in the codebase.” |
+| Describe the symptom.Provide the symptom, the likely location, and what “fixed” looks like. | ”fix the login bug" | "users report that login fails after session timeout. check the auth flow in src/auth/, especially token refresh. write a failing test that reproduces the issue, then fix it” |
 
 `"what would you improve in this file?"` can surface things you wouldn’t have thought to ask about.
 ### Provide rich content
@@ -103,15 +103,15 @@ CLAUDE.md
 
 *“Would removing this cause Claude to make mistakes?”*If not, cut it. Bloated CLAUDE.md files cause Claude to ignore your actual instructions!
 
-| ✅ Include | ❌ Exclude | 
+| ✅ Include | ❌ Exclude |
 |---|---|
-| Bash commands Claude can’t guess | Anything Claude can figure out by reading code | 
-| Code style rules that differ from defaults | Standard language conventions Claude already knows | 
-| Testing instructions and preferred test runners | Detailed API documentation (link to docs instead) | 
-| Repository etiquette (branch naming, PR conventions) | Information that changes frequently | 
-| Architectural decisions specific to your project | Long explanations or tutorials | 
-| Developer environment quirks (required env vars) | File-by-file descriptions of the codebase | 
-| Common gotchas or non-obvious behaviors | Self-evident practices like “write clean code” | 
+| Bash commands Claude can’t guess | Anything Claude can figure out by reading code |
+| Code style rules that differ from defaults | Standard language conventions Claude already knows |
+| Testing instructions and preferred test runners | Detailed API documentation (link to docs instead) |
+| Repository etiquette (branch naming, PR conventions) | Information that changes frequently |
+| Architectural decisions specific to your project | Long explanations or tutorials |
+| Developer environment quirks (required env vars) | File-by-file descriptions of the codebase |
+| Common gotchas or non-obvious behaviors | Self-evident practices like “write clean code” |
 
 `@path/to/import` syntax:
 CLAUDE.md
@@ -232,17 +232,17 @@ Pick the parallel approach that fits how much coordination you want to do yourse
 - [Claude Code on the web](https://www.anthropic.com/docs/en/claude-code-on-the-web): run sessions on Anthropic-managed cloud infrastructure in isolated VMs
 - [Agent teams](https://www.anthropic.com/docs/en/agent-teams): automated coordination of multiple sessions with shared tasks, messaging, and a team lead
 
-| Session A (Writer) | Session B (Reviewer) | 
+| Session A (Writer) | Session B (Reviewer) |
 |---|---|
 | `Implement a rate limiter for our API endpoints` | |
 | `Review the rate limiter implementation in @src/middleware/rateLimiter.ts. Look for edge cases, race conditions, and consistency with our existing middleware patterns.` | |
-| `Here's the review feedback: [Session B output]. Address these issues.` | 
+| `Here's the review feedback: [Session B output]. Address these issues.` |
 
 ### Fan out across files
 
 For large migrations or analyses, you can distribute work across many parallel Claude invocations:Generate a task list
 
-Have Claude list all files that need migrating (e.g., 
+Have Claude list all files that need migrating (e.g.,
 
 `list all 2,000 Python files that need migrating`)`--verbose` for debugging during development, and turn it off in production.
 ### Run autonomously with auto mode

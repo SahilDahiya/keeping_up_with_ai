@@ -25,6 +25,7 @@ sources:
     sitemap: https://www.baseten.co/sitemap.xml
     discovery: [sitemap]
     include_prefixes: ["/blog/"]
+    exclude_regex: "^/blog/category/"         # category listing pages, not articles
     tags: [inference, infra]
 
   - slug: anthropic-engineering
@@ -105,6 +106,7 @@ sources:
     feed: https://arize.com/feed/
     sitemap: https://arize.com/sitemap_index.xml
     include_prefixes: ["/blog/"]
+    exclude_regex: "^/blog/(category|tag|resource-type|press-type)/"  # archive/listing pages, not articles
     tags: [observability, evals]
 
   - slug: simon-willison

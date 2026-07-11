@@ -89,10 +89,10 @@ LLMs can sometimes work simultaneously on a task and have their outputs aggregat
 
 - **Sectioning**:- Implementing guardrails where one model instance processes user queries while another screens them for inappropriate content or requests. This tends to perform better than having the same LLM call handle both guardrails and the core response.
 - Automating evals for evaluating LLM performance, where each LLM call evaluates a different aspect of the model’s performance on a given prompt.
- 
+
 - **Voting**:- Reviewing a piece of code for vulnerabilities, where several different prompts review and flag the code if they find a problem.
 - Evaluating whether a given piece of content is inappropriate, with multiple prompts evaluating different aspects or requiring different vote thresholds to balance false positives and negatives.
- 
+
 
 In the orchestrator-workers workflow, a central LLM dynamically breaks down tasks, delegates them to worker LLMs, and synthesizes their results.
 

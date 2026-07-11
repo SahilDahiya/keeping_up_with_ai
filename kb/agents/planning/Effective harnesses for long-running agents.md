@@ -108,12 +108,12 @@ Given all this, a typical session starts off with the following assistant messag
 ```
 Agent failure modes and solutions
 
-| Problem | Initializer Agent Behavior  | Coding Agent Behavior | 
+| Problem | Initializer Agent Behavior  | Coding Agent Behavior |
 |---|---|---|
-| Claude declares victory on the entire project too early. | Set up a feature list file: based on the input spec, set up a structured JSON file with a list of end-to-end feature descriptions. | Read the feature list file at the beginning of a session. Choose a single feature to start working on. | 
-| Claude leaves the environment in a state with bugs or undocumented progress. | An initial git repo and progress notes file is written. | Start the session by reading the progress notes file and git commit logs, and run a basic test on the development server to catch any undocumented bugs. End the session by writing a git commit and progress update. | 
-| Claude marks features as done prematurely. | Set up a feature list file. | Self-verify all features. Only mark features as “passing” after careful testing. | 
-| Claude has to spend time figuring out how to run the app. | Write an `init.sh`script that can run the development server. | Start the session by reading `init.sh`. | 
+| Claude declares victory on the entire project too early. | Set up a feature list file: based on the input spec, set up a structured JSON file with a list of end-to-end feature descriptions. | Read the feature list file at the beginning of a session. Choose a single feature to start working on. |
+| Claude leaves the environment in a state with bugs or undocumented progress. | An initial git repo and progress notes file is written. | Start the session by reading the progress notes file and git commit logs, and run a basic test on the development server to catch any undocumented bugs. End the session by writing a git commit and progress update. |
+| Claude marks features as done prematurely. | Set up a feature list file. | Self-verify all features. Only mark features as “passing” after careful testing. |
+| Claude has to spend time figuring out how to run the app. | Write an `init.sh`script that can run the development server. | Start the session by reading `init.sh`. |
 
 This research demonstrates one possible set of solutions in a long-running agent harness to enable the model to make incremental progress across many context windows. However, there remain open questions.
 

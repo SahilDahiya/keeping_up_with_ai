@@ -57,7 +57,7 @@ These defenses are strong. On Gray Swan's Agent Red Teaming benchmark, which tes
 
 Defenses should overlap and complement each other. When environmental defenses aren’t available, the model layer has to pick up the slack (this is precisely what Claude Code’s [auto mode](https://claude.com/blog/auto-mode) is designed for). Locally, the environment and model defenses can guard against malicious tool outputs, but defenses can be added higher up the chain by limiting the tool’s capabilities and access.
 
-Focusing on the environment layer, we describe three isolation patterns and how they’re tailored for each Claude platform—[claude.ai](http://claude.ai/redirect/website.v1.281285a0-a972-493f-852d-b0c09b78ff5b), Claude Code, and Cowork. We arrived at each design gradually, after finding the balance between the capabilities we need from the agent and the degree of intervention required from the user. 
+Focusing on the environment layer, we describe three isolation patterns and how they’re tailored for each Claude platform—[claude.ai](http://claude.ai/redirect/website.v1.281285a0-a972-493f-852d-b0c09b78ff5b), Claude Code, and Cowork. We arrived at each design gradually, after finding the balance between the capabilities we need from the agent and the degree of intervention required from the user.
 
 Though best known as a chat interface, claude.ai also writes and runs code, generates files, and calls connectors. When Claude runs code inside claude.ai, it does so in a [gVisor](https://en.wikipedia.org/wiki/GVisor) container on isolated infrastructure. The agent is entirely server-side; no code runs on the local machine, and the filesystem is ephemeral (per-session). The blast radius is minimal, but so is the ceiling on what Claude can do—there's no persistent workspace and no access to the user's filesystem.
 
@@ -111,11 +111,11 @@ When evaluating Claude Cowork, enterprise security teams asked, "Why can't our E
 
 Isolation reduces visibility, and opacity is problematic for teams whose compliance posture depends on endpoint visibility. Our current mitigation is to use pull-based [OTLP](https://opentelemetry.io/docs/specs/otel/protocol/) exports that let administrators retrieve event logs after the fact, but this is not the same as live monitoring. If you're building something similar, budget for this conversation early.
 
-|  Environment | Ephemeral container ( [claude.ai](http://claude.ai)) | HITL sandbox (Claude Code) | Sealed VM (Claude Cowork) | 
+|  Environment | Ephemeral container ( [claude.ai](http://claude.ai)) | HITL sandbox (Claude Code) | Sealed VM (Claude Cowork) |
 |---|---|---|---|
-| Cost: Isolation Overhead | Container spin-up | Low-latency native sandbox | Full VM boot | 
-| Cost: User Reliance | N/A | Must interpret bash | N/A | 
-| Risk: Blast Radius | Server-side container (guarded by gVisor + host infra boundary) | Local workspace | Mounted workspace (guarded by vsock + hypervisor boundary) | 
+| Cost: Isolation Overhead | Container spin-up | Low-latency native sandbox | Full VM boot |
+| Cost: User Reliance | N/A | Must interpret bash | N/A |
+| Risk: Blast Radius | Server-side container (guarded by gVisor + host infra boundary) | Local workspace | Mounted workspace (guarded by vsock + hypervisor boundary) |
 
 Enterprises often ask us how to secure MCP connections. It's a good question, but the right one is broader than MCP specifically. Any external resource provided to an agent represents two risks at once: a code execution risk, in the traditional supply-chain sense, and a prompt injection vector. Traditional dependency auditing (pinning versions, verifying signatures, reviewing source) addresses the first, but misses the second.
 

@@ -23,7 +23,7 @@ content_sha256: 7806ee738ae015339cbd1fd59c043f6f808e740ba250406a0a69982218a5edb3
 
 Product updates, how-tos, community spotlights, and more. Delivered monthly to your inbox.
 
-- File extension update - Sep 11, 2025 - Claude Desktop Extensions now use the .mcpb (MCP Bundle) file extension instead of .dxt. Existing .dxt extensions will continue to work, but we recommend developers use .mcpb for new extensions going forward. All functionality remains the same - this is purely a naming convention update. 
+- File extension update - Sep 11, 2025 - Claude Desktop Extensions now use the .mcpb (MCP Bundle) file extension instead of .dxt. Existing .dxt extensions will continue to work, but we recommend developers use .mcpb for new extensions going forward. All functionality remains the same - this is purely a naming convention update.
 
 —
 
@@ -46,10 +46,10 @@ Desktop Extensions (`.mcpb` files) solve these problems by bundling an entire MC
 **Before:**
 
 ```
-# Install Node.js first 
-npm install -g @example/mcp-server 
-# Edit ~/.claude/claude_desktop_config.json manually 
-# Restart Claude Desktop 
+# Install Node.js first
+npm install -g @example/mcp-server
+# Edit ~/.claude/claude_desktop_config.json manually
+# Restart Claude Desktop
 # Hope it works
 ```
 **After:**
@@ -66,7 +66,7 @@ A Desktop Extension is a zip archive containing the local MCP server as well as 
 extension.mcpb (ZIP archive)
 ├── manifest.json         # Extension metadata and configuration
 ├── server/               # MCP server implementation
-│   └── [server files]    
+│   └── [server files]
 ├── dependencies/         # All required packages/libraries
 └── icon.png             # Optional: Extension icon
 # Example: Node.js Extension
@@ -111,7 +111,7 @@ The manifest contains human-readable information (like the name, description, or
       "command": "node",                    // Command to run the server
       "args": [                             // Arguments passed to the command
         "${__dirname}/server/index.js"      // ${__dirname} is replaced with the extension's directory
-      ]                              
+      ]
     }
   }
 }

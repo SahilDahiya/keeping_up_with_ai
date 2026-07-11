@@ -163,9 +163,9 @@ The spec for our Edit Tool is shown below:
 ```
 In general, the upgraded Claude 3.5 Sonnet demonstrates higher reasoning, coding, and mathematical abilities than our prior models, and the [previous state-of-the-art](https://solverai.com/) model. It also demonstrates improved agentic capabilities: the tools and scaffolding help put those improved abilities to their best use.
 
-| Model | Claude 3.5 Sonnet (new) | Previous SOTA | Claude 3.5 Sonnet (old) | Claude 3 Opus | 
+| Model | Claude 3.5 Sonnet (new) | Previous SOTA | Claude 3.5 Sonnet (old) | Claude 3 Opus |
 |---|---|---|---|---|
-| SWE-bench Verified score | 49% | 45% | 33% | 22% | 
+| SWE-bench Verified score | 49% | 45% | 33% | 22% |
 
 For running the benchmark, we used the [SWE-Agent](https://swe-agent.com/) framework as a foundation for our agent code. In our logs below, we render the agent's text output, tool calls, and tool responses as THOUGHT, ACTION, and OBSERVATION, even though we don’t constrain the model to a fixed ordering.
 
@@ -189,7 +189,7 @@ from sklearn import linear_model as lm
 n = 100
 x = np.random.randn(n, 30)
 y = np.random.normal(size = n)
-rr = lm.RidgeClassifierCV(alphas = np.arange(0.1, 1000, 0.1), normalize = True, 
+rr = lm.RidgeClassifierCV(alphas = np.arange(0.1, 1000, 0.1), normalize = True,
                                          store_cv_values = True).fit(x, y)
 #### Expected Results
 Expected to get the usual ridge regression model output, keeping the cross validation predictions as attribute.
@@ -242,7 +242,7 @@ from sklearn import linear_model as lm
 n = 100
 x = np.random.randn(n, 30)
 y = np.random.normal(size = n)
-rr = lm.RidgeClassifierCV(alphas=np.arange(0.1, 1000, 0.1), normalize=True, 
+rr = lm.RidgeClassifierCV(alphas=np.arange(0.1, 1000, 0.1), normalize=True,
                          store_cv_values=True).fit(x, y)
 OBSERVATION:
 File created successfully at: /repo/reproduce_error.py

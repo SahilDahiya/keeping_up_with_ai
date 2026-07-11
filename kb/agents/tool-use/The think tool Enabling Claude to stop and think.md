@@ -23,7 +23,7 @@ content_sha256: 0378a8495cb1c2b92934cb6a63938fc2ee387350bc7776495cbf35345203589b
 
 Product updates, how-tos, community spotlights, and more. Delivered monthly to your inbox.
 
-- Extended thinking update - Dec 15, 2025 - Extended thinking capabilities have improved since its initial release, such that we recommend using that feature instead of a dedicated think tool in most cases. Extended thinking provides similar benefits—giving Claude space to reason through complex problems—with better integration and performance. See our extended thinking documentation for implementation details. 
+- Extended thinking update - Dec 15, 2025 - Extended thinking capabilities have improved since its initial release, such that we recommend using that feature instead of a dedicated think tool in most cases. Extended thinking provides similar benefits—giving Claude space to reason through complex problems—with better integration and performance. See our extended thinking documentation for implementation details.
 
 As we continue to enhance Claude's complex problem-solving abilities, we've discovered a particularly effective approach: a "think" tool that creates dedicated space for structured thinking during complex tasks.
 
@@ -81,12 +81,12 @@ The results showed dramatic improvements when Claude 3.7 effectively used the "t
 
 Claude 3.7 Sonnet's performance on the "Airline" domain of the Tau-Bench eval
 
-| Configuration | k=1 | k=2 | k=3 | k=4 | k=5 | 
+| Configuration | k=1 | k=2 | k=3 | k=4 | k=5 |
 |---|---|---|---|---|---|
-| "Think" + Prompt | 0.584 | 0.444 | 0.384 | 0.356 | 0.340 | 
-| "Think" | 0.404 | 0.254 | 0.186 | 0.140 | 0.100 | 
-| Extended thinking | 0.412 | 0.290 | 0.232 | 0.192 | 0.160 | 
-| Baseline | 0.332 | 0.206 | 0.148 | 0.116 | 0.100 | 
+| "Think" + Prompt | 0.584 | 0.444 | 0.384 | 0.356 | 0.340 |
+| "Think" | 0.404 | 0.254 | 0.186 | 0.140 | 0.100 |
+| Extended thinking | 0.412 | 0.290 | 0.232 | 0.192 | 0.160 |
+| Baseline | 0.332 | 0.206 | 0.148 | 0.116 | 0.100 |
 
 The best performance in the airline domain was achieved by pairing the “think” tool with an optimized prompt that gives examples of the type of reasoning approaches to use when analyzing customer requests. Below is an example of the optimized prompt:
 
@@ -96,7 +96,7 @@ Before taking any action or responding to the user after receiving tool results,
 - List the specific rules that apply to the current request
 - Check if all required information is collected
 - Verify that the planned action complies with all policies
-- Iterate over tool results for correctness 
+- Iterate over tool results for correctness
 Here are some examples of what to iterate over inside the think tool:
 <think_tool_example_1>
 User wants to cancel flight ABC123
@@ -137,11 +137,11 @@ In the retail domain, we also tested various configurations to understand the sp
 
 Claude 3.7 Sonnet's performance on the "Retail" domain of the Tau-Bench eval
 
-| Configuration | k=1 | k=2 | k=3 | k=4 | k=5 | 
+| Configuration | k=1 | k=2 | k=3 | k=4 | k=5 |
 |---|---|---|---|---|---|
-| "Think" + no prompt | 0.812 | 0.735 | 0.685 | 0.650 | 0.626 | 
-| Extended thinking | 0.770 | 0.681 | 0.623 | 0.581 | 0.548 | 
-| Baseline | 0.783 | 0.695 | 0.643 | 0.607 | 0.583 | 
+| "Think" + no prompt | 0.812 | 0.735 | 0.685 | 0.650 | 0.626 |
+| Extended thinking | 0.770 | 0.681 | 0.623 | 0.581 | 0.548 |
+| Baseline | 0.783 | 0.695 | 0.643 | 0.607 | 0.583 |
 
 The "think" tool achieved the highest pass^1 score of 0.812 even without additional prompting. The [retail policy](https://github.com/sierra-research/tau-bench/blob/main/tau_bench/envs/retail/wiki.md) is noticeably easier to navigate compared to the airline domain, and Claude was able to improve just by having a space to think without further guidance.
 

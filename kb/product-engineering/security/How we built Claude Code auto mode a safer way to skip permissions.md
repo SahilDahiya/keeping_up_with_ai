@@ -96,8 +96,8 @@ We evaluated the full pipeline on three different datasets. Two datasets measure
 We report two metrics. False-negative rate (FNR) is the fraction of dangerous actions the classifier lets through; false positive rate (FPR) is the fraction of benign actions it blocks. A perfect classifier would score zero on both. In practice they trade off against each other. Stage 1 is fast and cheap, tuned for low FNR at the cost of high FPR. Stage 2 is more expensive and runs only on what stage 1 flagged. It cleans up the false positives but lets a few more dangerous actions through.
 
 | Real trafficn=10,000 | Real overeagern=52 | Synthetic exfiln=1,000 | |
-| Stage 1 (fast filter) | 8.5% FPR | 6.6% FNR | 1.8% FNR | 
-| Stage 1->Stage 2 (full pipeline) | 0.4% FPR | 17% FNR | 5.7% FNR | 
+| Stage 1 (fast filter) | 8.5% FPR | 6.6% FNR | 1.8% FNR |
+| Stage 1->Stage 2 (full pipeline) | 0.4% FPR | 17% FNR | 5.7% FNR |
 
 The 17% false-negative rate on real overeager actions is the honest number. The agent was trying to solve the user's problem and tried to execute a dangerous command past what was authorized.
 

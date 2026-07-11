@@ -92,10 +92,10 @@ Create a 2D retro game maker with features including a level editor, sprite edit
 
 The table below shows the harness type, length it ran for, and the total cost.
 
-| Harness | Duration | Cost | 
+| Harness | Duration | Cost |
 |---|---|---|
-| Solo | 20 min | $9 | 
-| Full harness | 6 hr | $200 | 
+| Solo | 20 min | $9 |
+| Full harness | 6 hr | $200 |
 
 The harness was over 20x more expensive, but the difference in output quality was immediately apparent.
 
@@ -116,11 +116,11 @@ The biggest difference was in play mode. I was actually able to move my entity a
 
 Reading through the logs, it was clear that the evaluator kept the implementation in line with the spec. Each sprint, it walked through the sprint contract's test criteria and exercised the running application through Playwright, filing bugs against anything that diverged from expected behavior. The contracts were granular—Sprint 3 alone had 27 criteria covering the level editor—and the evaluator's findings were specific enough to act on without extra investigation. The table below shows several examples of issues our evaluator identified:
 
-| Contract criterion | Evaluator finding | 
+| Contract criterion | Evaluator finding |
 |---|---|
-| Rectangle fill tool allows click-drag to fill a rectangular area with selected tile | FAIL— Tool only places tiles at drag start/end points instead of filling the region.`fillRectangle`function exists but isn't triggered properly on mouseUp. | 
-| User can select and delete placed entity spawn points | FAIL— Delete key handler at`LevelEditor.tsx:892`requires both`selection`and`selectedEntityId `to be set, but clicking an entity only sets`selectedEntityId`. Condition should be`selection || (selectedEntityId && activeLayer === 'entity')`. | 
-| User can reorder animation frames via API | FAIL—`PUT /frames/reorder`route defined after`/{frame_id}`routes. FastAPI matches 'r`eorder`' as a frame_id integer and returns 422: "unable to parse string as an integer." | 
+| Rectangle fill tool allows click-drag to fill a rectangular area with selected tile | FAIL— Tool only places tiles at drag start/end points instead of filling the region.`fillRectangle`function exists but isn't triggered properly on mouseUp. |
+| User can select and delete placed entity spawn points | FAIL— Delete key handler at`LevelEditor.tsx:892`requires both`selection`and`selectedEntityId `to be set, but clicking an entity only sets`selectedEntityId`. Condition should be`selection || (selectedEntityId && activeLayer === 'entity')`. |
+| User can reorder animation frames via API | FAIL—`PUT /frames/reorder`route defined after`/{frame_id}`routes. FastAPI matches 'r`eorder`' as a frame_id integer and returns 422: "unable to parse string as an integer." |
 
 Getting the evaluator to perform at this level took work. Out of the box, Claude is a poor QA agent. In early runs, I watched it identify legitimate issues, then talk itself into deciding they weren't a big deal and approve the work anyway. It also tended to test superficially, rather than probing edge cases, so more subtle bugs often slipped through. The tuning loop was to read the evaluator's logs, find examples where its judgment diverged from mine, and update the QAs prompt to solve for those issues. It took several rounds of this development loop before the evaluator was grading in a way that I found reasonable. Even then, the harness output showed the limits of the model’s QAing capabilities: small layout issues, interactions that felt unintuitive in places, and undiscovered bugs in more deeply nested features that the evaluator hadn't exercised thoroughly. There was clearly more verification headroom to capture with further tuning. But compared to the solo run, where the central feature of the application simply didn't work, the lift was obvious.
 
@@ -150,15 +150,15 @@ The run was still lengthy and expensive, at about 4 hours and $124 in token cost
 
 Most of the time went to the builder, which ran coherently for over two hours without the sprint decomposition that Opus 4.5 had needed.
 
-| Agent & Phase | Duration | Cost | 
-| Planner | 4.7 min | $0.46 | 
-| Build (Round 1) | 2 hr 7 min | $71.08 | 
-| QA (Round 1) | 8.8 min | $3.24 | 
-| Build (Round 2) | 1 hr 2 min | $36.89 | 
-| QA (Round 2) | 6.8 min | $3.09 | 
-| Build (Round 3) | 10.9 min | $5.88 | 
-| QA (Round 3) | 9.6 min | $4.06 | 
-| Total V2 Harness | 3 hr 50 min | $124.70 | 
+| Agent & Phase | Duration | Cost |
+| Planner | 4.7 min | $0.46 |
+| Build (Round 1) | 2 hr 7 min | $71.08 |
+| QA (Round 1) | 8.8 min | $3.24 |
+| Build (Round 2) | 1 hr 2 min | $36.89 |
+| QA (Round 2) | 6.8 min | $3.09 |
+| Build (Round 3) | 10.9 min | $5.88 |
+| QA (Round 3) | 9.6 min | $4.06 |
+| Total V2 Harness | 3 hr 50 min | $124.70 |
 
 As with the previous harness, the planner expanded the one-line prompt into a full spec. From the logs, I could see the generator model did a good job planning the app and the agent design, wiring the agent up, and testing it before handing off to QA.
 
@@ -219,7 +219,7 @@ Project Data Model: Each project contains:
 Project metadata (name, description, created/modified timestamps)
 Canvas settings (resolution: e.g., 256x224, 320x240, or 160x144)
 Tile size configuration (8x8, 16x16, or 32x32 pixels)
-Color palette selection 
+Color palette selection
 All associated sprites, tilesets, levels, and entity definitions
 ...
 ```

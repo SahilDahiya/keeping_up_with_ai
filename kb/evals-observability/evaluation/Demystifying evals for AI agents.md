@@ -68,27 +68,27 @@ Agent evaluations typically combine three types of graders: code-based, model-ba
 
 Code-based graders
 
-| Methods | Strengths | Weaknesses | 
+| Methods | Strengths | Weaknesses |
 |---|---|---|
-| •  String match checks (exact, regex, fuzzy, etc.) • Binary tests (fail-to-pass, pass-to-pass) • Static analysis (lint, type, security) • Outcome verification • Tool calls verification (tools used, parameters) • Transcript analysis (turns taken, token usage) | •  Fast • Cheap • Objective • Reproducible • Easy to debug • Verify specific conditions | •  Brittle to valid variations that don’t match expected patterns exactly • Lacking in nuance • Limited for evaluating some more subjective tasks | 
+| •  String match checks (exact, regex, fuzzy, etc.) • Binary tests (fail-to-pass, pass-to-pass) • Static analysis (lint, type, security) • Outcome verification • Tool calls verification (tools used, parameters) • Transcript analysis (turns taken, token usage) | •  Fast • Cheap • Objective • Reproducible • Easy to debug • Verify specific conditions | •  Brittle to valid variations that don’t match expected patterns exactly • Lacking in nuance • Limited for evaluating some more subjective tasks |
 
 Model-based graders
 
-| Methods | Strengths | Weaknesses | 
+| Methods | Strengths | Weaknesses |
 |---|---|---|
 | Rubric-based scoringNatural language assertionsPairwise comparisonReference-based evaluationMulti-judge consensus
  | FlexibleScalableCaptures nuanceHandles open-ended tasksHandles freeform output
  | Non-deterministicMore expensive than codeRequires calibration with human graders for accuracy
- | 
+ |
 
 Human graders
 
-| Methods | Strengths | Weaknesses | 
+| Methods | Strengths | Weaknesses |
 |---|---|---|
 | SME reviewCrowdsourced judgmentSpot-check samplingA/B testingInter-annotator agreement
  | Gold standard qualityMatches expert user judgmentUsed to calibrate model-based graders
  | ExpensiveSlowOften requires access to human experts at scale
- | 
+ |
 
 For each task, scoring can be weighted (combined grader scores must hit a threshold), binary (all graders must pass), or a hybrid.
 
@@ -198,9 +198,9 @@ Regardless of agent type, agent behavior varies between runs, which makes evalua
 
 Two metrics help capture this nuance:
 
-[ pass@k](https://proceedings.neurips.cc/paper/2019/file/7298332f04ac004a0ca44cc69ecf6f6b-Paper.pdf) measures the likelihood that an agent gets at least one correct solution in 
+[ pass@k](https://proceedings.neurips.cc/paper/2019/file/7298332f04ac004a0ca44cc69ecf6f6b-Paper.pdf) measures the likelihood that an agent gets at least one correct solution in
 
-[ pass^k](https://arxiv.org/abs/2406.12045) measures the probability that 
+[ pass^k](https://arxiv.org/abs/2406.12045) measures the probability that
 
 Both metrics are useful, and which to use depends on product requirements: pass@k for tools where one success matters, pass^k for agents where consistency is essential.
 
@@ -270,26 +270,26 @@ Automated evaluations can be run against an agent in thousands of tasks without 
 
 An overview of approaches for understanding AI agent performance
 
-| Method | Pros | Cons | 
+| Method | Pros | Cons |
 |---|---|---|
 | Automated evalsRunning tests programmatically without real users | Faster iterationFully reproducibleNo user impactCan run on every commitTests scenarios at scale without requiring a prod deployment
  | Requires more up-front investment to buildRequires ongoing maintenance as product and model evolves to avoid driftCan create false confidence if it doesn’t match real usage patterns
- | 
+ |
 | Production monitoringTracking metrics and errors in live systems | Reveals real user behavior at scaleCatches issues that synthetic evals missProvides ground truth on how agents actually perform
  | Reactive; problems reach users before you know about themSignals can be noisyRequires investment in instrumentationLacks ground truth for grading
- | 
+ |
 | A/B testingComparing variants with real user traffic | Measures actual user outcomes (retention, task completion)Controls for confoundsScalable and systematic
  | Slow; days or weeks to reach significance and requires sufficient trafficOnly tests changes you deployLess signal on the underlying “why” for changes in metrics without being able to thoroughly review the transcripts
- | 
+ |
 | User feedbackExplicit signals like thumbs-down or bug reports | Surfaces problems you didn't anticipateComes with real examples from actual human usersThe feedback often correlates with product goals
  | Sparse and self-selectedSkews toward severe issuesUsers rarely explain *why*something failedNot automatedRelying primarily on users to catch issues can have negative user impact
- | 
+ |
 | Manual transcript reviewHumans reading through agent conversations | Builds intuition for failure modesCatches subtle quality issues automated checks missHelps calibrate what "good" looks like and grasp details
  | Time-intensiveDoesn't scaleCoverage is inconsistentReviewer fatigue or different reviewers can affect the signal qualityTypically only gives qualitative signal rather than clear quantitative grading
- | 
+ |
 | Systematic human studiesStructured grading of agent outputs by trained raters | Gold-standard quality judgements from multiple human ratersHandles subjective or ambiguous tasksProvides signal for improving model-based graders
  | Relatively expensive and slow turnaroundHard to run frequentlyInter-rater disagreement requires reconciliationComplex domains (legal, finance, healthcare) require human experts to conduct studies
- | 
+ |
 
 These methods map to different stages of agent development. Automated evals are especially useful pre-launch and in CI/CD, running on each agent change and model upgrade as the first line of defense against quality problems. Production monitoring kicks in post-launch to detect distribution drift and unanticipated real-world failures. A/B testing validates significant changes once you have sufficient traffic. User feedback and transcript review are ongoing practices to fill the gaps: triage feedback constantly, sample transcripts to read weekly, and dig deeper as needed. Reserve systematic human studies for calibrating LLM graders or evaluating subjective outputs where human consensus serves as the reference standard.
 

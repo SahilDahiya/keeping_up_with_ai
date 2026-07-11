@@ -222,3 +222,4 @@ __marimo__/
 cache/
 state.db
 uv.lock
+kb/_inbox/

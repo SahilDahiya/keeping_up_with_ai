@@ -140,7 +140,7 @@ TOOL CALL: gdrive.getSheet(sheetId: 'abc123')
         → returns 10,000 rows in context to filter manually
 // With code execution - filter in the execution environment
 const allRows = await gdrive.getSheet({ sheetId: 'abc123' });
-const pendingOrders = allRows.filter(row => 
+const pendingOrders = allRows.filter(row =>
   row["Status"] === 'pending'
 );
 console.log(`Found ${pendingOrders.length} pending orders`);
@@ -173,7 +173,7 @@ for (const row of sheet.rows) {
   await salesforce.updateRecord({
     objectType: 'Lead',
     recordId: row.salesforceId,
-    data: { 
+    data: {
       Email: row.email,
       Phone: row.phone,
       Name: row.name
@@ -197,8 +197,8 @@ Then, when the data is shared in another MCP tool call, it is untokenized via a 
 Code execution with filesystem access allows agents to maintain state across operations. Agents can write intermediate results to files, enabling them to resume work and track progress:
 
 ```
-const leads = await salesforce.query({ 
-  query: 'SELECT Id, Email FROM Lead LIMIT 1000' 
+const leads = await salesforce.query({
+  query: 'SELECT Id, Email FROM Lead LIMIT 1000'
 });
 const csvData = leads.map(l => `${l.Id},${l.Email}`).join('\n');
 await fs.writeFile('./workspace/leads.csv', csvData);
