@@ -1,6 +1,6 @@
 # prompt-engineering
 
-10 articles.
+12 articles.
 
 - **2026-06-26** — [Prompt Caching with Deep Agents](<context-engineering/Prompt Caching with Deep Agents.md>) · `context-engineering` · langchain
   Explains prompt caching for Deep Agents and how cache-aware context design reduces latency and cost for repeated agent work.
@@ -18,15 +18,21 @@
   Strategies for managing agent context windows—compaction, structured note-taking, sub-agent architectures—and why context engineering supersedes prompt engineering.
 - **2025-08-20** — [Evidence-Based Prompting Strategies for LLM-as-a-Judge: Explanations and Chain-of-Thought](<techniques/Evidence-Based Prompting Strategies for LLM-as-a-Judge Explanations and Chain-of-Thought.md>) · `techniques` · arize
   Examines prompting strategies for LLM-as-judge evaluators, including explanations and chain-of-thought design choices.
+- **2025-02-01** — [From text to task: Constrained generation for structured extraction in R1](<structured-output/From text to task Constrained generation for structured extraction in R1.md>) · `structured-output` · fireworks
+  Explains constrained generation for structured extraction with reasoning models and schema-bound outputs.
 - **2024-11-13** — [Promptim: an experimental library for prompt optimization](<techniques/Promptim an experimental library for prompt optimization.md>) · `techniques` · langchain
   Introduces Promptim as an experimental prompt-optimization library that uses evaluation feedback to improve prompts.
 - **2024-07-24** — [DSPy Assertions: Computational Constraints for Self-Refining Language Model Pipelines](<techniques/DSPy Assertions Computational Constraints for Self-Refining Language Model Pipelines.md>) · `techniques` · arize
   Explains DSPy assertions as computational constraints for self-refining language-model pipelines.
+- **2024-02-20** — [Why do all LLMs need structured output modes?](<structured-output/Why do all LLMs need structured output modes.md>) · `structured-output` · fireworks
+  Explains why structured-output modes matter for reliable LLM applications and tool-calling systems.
 
 ## Also relevant (filed elsewhere)
 
 - **2026-05-28** — [Claude Code: Best practices for agentic coding](<../agents/tool-use/Claude Code Best practices for agentic coding.md>) · `tool-use` · anthropic-engineering
   Practical workflows for agentic coding with Claude Code: CLAUDE.md setup, explore-plan-code loops, test-driven iteration, headless automation, and multi-Claude patterns.
+- **2026-04-24** — [How we fixed prompt injection for all models on Fireworks](<../product-engineering/security/How we fixed prompt injection for all models on Fireworks.md>) · `security` · fireworks
+  Explains a tokenizer-level prompt-injection fix and the implications for securing model-serving systems.
 - **2026-04-14** — [Classifying User Intent with Categorical LLM-as-a-Judge](<../evals-observability/evaluation/Classifying User Intent with Categorical LLM-as-a-Judge.md>) · `evaluation` · langfuse
   Shows how to classify user intent with categorical LLM-as-judge evaluators, including rubric design and structured scoring for production analysis.
 - **2026-03-25** — [How Perplexity Brought Voice Search to Millions Using the Realtime API | OpenAI Developers](<../product-engineering/case-studies/How Perplexity Brought Voice Search to Millions Using the Realtime API OpenAI Developers.md>) · `case-studies` · openai-devs
@@ -35,6 +41,8 @@
   How OpenAI maintains the Agents SDK repos with repo-local Codex skills, AGENTS.md policy, and the Codex GitHub Action — turning verification, release prep, and PR review into repeatable progressive-disclosure workflows; merged PRs rose from 316 to 457 quarter-over-quarter.
 - **2026-02-04** — [15 lessons learned building ChatGPT Apps | OpenAI Developers](<../product-engineering/ux-patterns/15 lessons learned building ChatGPT Apps OpenAI Developers.md>) · `ux-patterns` · openai-devs
   Alpic distills 15 lessons from building two dozen ChatGPT Apps on the Apps SDK, centered on 'context asymmetry' between user, UI widget, and model — deciding which tool-output fields each party sees — and packaged into their open-source Skybridge framework.
+- **2025-12-04** — [Fine-tuning LLMs as classifiers](<../models/fine-tuning/Fine-tuning LLMs as classifiers.md>) · `fine-tuning` · fireworks
+  Shows how to adapt generative LLMs for classification tasks while preserving probability outputs and efficient serving.
 - **2025-11-04** — [Code execution with MCP: building more efficient AI agents](<../agents/tool-use/Code execution with MCP building more efficient AI agents.md>) · `tool-use` · anthropic-engineering
   Argues agents should write code that calls MCP tools rather than invoking tools directly, cutting token usage and enabling control flow over intermediate results.
 - **2025-10-27** — [Using Codex for education at Dagster Labs | OpenAI Developers](<../product-engineering/case-studies/Using Codex for education at Dagster Labs OpenAI Developers.md>) · `case-studies` · openai-devs
@@ -47,6 +55,8 @@
   Walks through building a multilingual Cypher query evaluation pipeline for testing whether LLMs generate correct database queries across languages.
 - **2025-09-03** — [AI Evals Maven Course Homework: the Recipe Bot Workflow](<../evals-observability/evaluation/AI Evals Maven Course Homework the Recipe Bot Workflow.md>) · `evaluation` · arize
   Walks through a recipe-bot homework workflow from an AI evals course, showing how to design tests and iterate on an LLM application.
+- **2025-07-11** — [Function calling for agentic AI systems](<../agents/tool-use/Function calling for agentic AI systems.md>) · `tool-use` · fireworks
+  Explains function calling as the bridge between LLM outputs, external tools, and agentic execution loops.
 - **2025-03-20** — [The "think" tool: Enabling Claude to stop and think](<../agents/tool-use/The think tool Enabling Claude to stop and think.md>) · `tool-use` · anthropic-engineering
   Adding a no-op 'think' tool gives Claude space for intermediate reasoning mid-task, significantly improving policy-heavy agentic benchmarks like tau-bench.
 - **2025-01-16** — [Common pitfalls when building generative AI applications](<../product-engineering/architecture/Common pitfalls when building generative AI applications.md>) · `architecture` · chip-huyen
@@ -55,7 +65,11 @@
   Introduces functions as flexible AI engineering primitives for tool calling, structured behavior, and reusable evaluation or workflow components.
 - **2024-09-11** — [Composable Interventions for Language Models](<../models/reasoning/Composable Interventions for Language Models.md>) · `reasoning` · arize
   Deep dive on composable interventions for language models, covering techniques for steering or modifying model behavior.
+- **2024-08-29** — [Build Your Own Flight Recommendation System using FastAPI, SerpAPI, and Firefunction](<../agents/tool-use/Build Your Own Flight Recommendation System using FastAPI, SerpAPI, and Firefunction.md>) · `tool-use` · fireworks
+  Tutorial for building a function-calling application with FastAPI, SerpAPI, and structured tool invocation.
 - **2024-06-26** — [Aligning LLM-as-a-Judge with Human Preferences](<../evals-observability/evaluation/Aligning LLM-as-a-Judge with Human Preferences.md>) · `evaluation` · langchain
   Covers aligning LLM-as-judge evaluators with human preferences through calibration, examples, and evaluation design.
+- **2024-06-20** — [FireAttention V2: 12x faster to make Long Contexts practical for Online Inference](<../inference/optimization/FireAttention V2 12x faster to make Long Contexts practical for Online Inference.md>) · `optimization` · fireworks
+  Explains FireAttention V2 and the serving optimizations that make long-context inference more practical.
 - **2023-12-05** — [Extraction Benchmarking](<../models/benchmarks/Extraction Benchmarking.md>) · `benchmarks` · langchain
   Benchmarking post for extraction tasks, comparing structured-output performance and evaluation approaches for information extraction.

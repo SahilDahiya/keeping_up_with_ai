@@ -1,6 +1,6 @@
 # product-engineering
 
-83 articles.
+85 articles.
 
 - **2026-07-10** — [AI-pilling our company: lessons learned](<case-studies/AI-pilling our company lessons learned.md>) · `case-studies` · sierra
   Internal adoption case study on spreading AI workflows through a company, including practical lessons for using agents and tools in day-to-day work.
@@ -58,6 +58,8 @@
   Explains voice-agent experience design, including brand voice selection, vocal cues, conversation design, and metrics for acceptance and satisfaction.
 - **2026-04-27** — [How LangSmith and LangChain OSS Help You Meet EU AI Act Requirements](<security/How LangSmith and LangChain OSS Help You Meet EU AI Act Requirements.md>) · `security` · langchain
   Connects LangSmith and LangChain OSS workflows to EU AI Act readiness, including observability, evaluation, governance, and auditability.
+- **2026-04-24** — [How we fixed prompt injection for all models on Fireworks](<security/How we fixed prompt injection for all models on Fireworks.md>) · `security` · fireworks
+  Explains a tokenizer-level prompt-injection fix and the implications for securing model-serving systems.
 - **2026-04-21** — [Moving past bots vs. humans](<security/Moving past bots vs. humans.md>) · `security` · cloudflare-ai
   Argues bot detection must move from 'bots vs. humans' to intent and behavior as AI agents fetch raw content without rendering pages: covers Web Bot Auth (HTTP message signatures) for crawler identification and private rate limiting for clients that no longer behave like browsers.
 - **2026-04-20** — [The AI engineering stack we built internally — on the platform we ship](<case-studies/The AI engineering stack we built internally — on the platform we ship.md>) · `case-studies` · cloudflare-ai
@@ -114,6 +116,8 @@
   Design guidance for ChatGPT Apps: instead of porting an existing app's screens and navigation, expose a few narrow 'specific powers' the model can invoke mid-conversation, design for conversational entry points and discovery, and measure whether the app actually improves conversations.
 - **2025-11-20** — [Agents need good developer experience too](<architecture/Agents need good developer experience too.md>) · `architecture` · modal
   Argues that agent systems need strong developer experience, covering observability, iteration loops, deployment ergonomics, and tool surfaces.
+- **2025-11-03** — [Vercel code fixing with open models, speculative decoding, and RFT](<case-studies/Vercel code fixing with open models speculative decoding and RFT.md>) · `case-studies` · fireworks
+  Case study of improving Vercel code-fixing outputs with open models, speculative decoding, and reinforcement fine-tuning.
 - **2025-10-27** — [Using Codex for education at Dagster Labs | OpenAI Developers](<case-studies/Using Codex for education at Dagster Labs OpenAI Developers.md>) · `case-studies` · openai-devs
   Dagster Labs describes using Codex to accelerate documentation work — writing docs, translating content across mediums, and measuring doc completeness — and finds a well-structured CONTRIBUTING.md doubles as high-leverage scaffolding for the agent.
 - **2025-10-20** — [Making Claude Code more secure and autonomous with sandboxing](<security/Making Claude Code more secure and autonomous with sandboxing.md>) · `security` · anthropic-engineering
@@ -263,6 +267,8 @@
   Guide to building serverless apps with the OpenAI Realtime API, focusing on real-time voice interaction architecture and deployment patterns.
 - **2024-09-23** — [Should you use an LLM Proxy to Build your Application?](<../infra-platform/deployment/Should you use an LLM Proxy to Build your Application.md>) · `deployment` · langfuse
   Explains the LLM proxy pattern for AI applications, including provider abstraction, centralized logging, key management, routing, and governance tradeoffs.
+- **2024-08-14** — [Building a RAG with Astro, FastAPI, SurrealDB and Llama 3.1](<../rag-retrieval/pipelines/Building a RAG with Astro, FastAPI, SurrealDB and Llama 3.1.md>) · `pipelines` · fireworks
+  End-to-end RAG application example using Astro, FastAPI, SurrealDB, and Llama 3.1.
 - **2024-05-01** — [Regression Testing with LangSmith](<../evals-observability/testing/Regression Testing with LangSmith.md>) · `testing` · langchain
   Explains regression testing with LangSmith for preventing LLM application quality regressions during prompt, model, or code changes.
 - **2024-04-17** — [Eval feedback loops](<../evals-observability/evaluation/Eval feedback loops.md>) · `evaluation` · braintrust

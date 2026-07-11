@@ -1,6 +1,6 @@
 # infra-platform
 
-44 articles.
+46 articles.
 
 - **2026-07-06** — [How to price serverless GPUs](<cost/How to price serverless GPUs.md>) · `cost` · modal
   Explains serverless GPU pricing from utilization, scheduling, and workload-shape constraints rather than simple hourly rates.
@@ -8,6 +8,8 @@
   Practical guide to reducing coding-agent spend through model choice, caching, harness tuning, and workflow design.
 - **2026-07-01** — [Model subsidies are ending. What do you do now?](<cost/Model subsidies are ending. What do you do now.md>) · `cost` · arize
   Analyzes the end of subsidized LLM pricing and what agentic task success rates imply for real inference cost per correct result.
+- **2026-06-24** — [Frontier-lab training infrastructure, now as a service](<gpu-clusters/Frontier-lab training infrastructure, now as a service.md>) · `gpu-clusters` · fireworks
+  Describes training infrastructure as a service for frontier-lab workloads, including scale, orchestration, and reliability needs.
 - **2026-06-19** — [Temporary Cloudflare Accounts for AI agents](<deployment/Temporary Cloudflare Accounts for AI agents.md>) · `deployment` · cloudflare-ai
   Temporary Cloudflare Accounts let agents run 'wrangler deploy --temporary' to ship a Worker with zero signup — a 60-minute claimable account with auto-provisioned API token — with Wrangler itself prompting agents about the flag, removing human-built OAuth/dashboard friction from the deploy loop.
 - **2026-06-19** — [Unpacking sandbox startup latency: why started is not ready](<deployment/Unpacking sandbox startup latency why started is not ready.md>) · `deployment` · modal
@@ -70,6 +72,8 @@
   Explains the LLM proxy pattern for AI applications, including provider abstraction, centralized logging, key management, routing, and governance tradeoffs.
 - **2024-06-20** — [Run GPU jobs from Airflow with Modal](<deployment/Run GPU jobs from Airflow with Modal.md>) · `deployment` · modal
   Shows how to run GPU jobs from Airflow, connecting existing orchestration systems to elastic AI compute.
+- **2024-06-03** — [GPUs on-demand: Not serverless, not reserved, but some third thing](<gpu-clusters/GPUs on-demand Not serverless, not reserved, but some third thing.md>) · `gpu-clusters` · fireworks
+  Explains on-demand GPU infrastructure as a middle ground between serverless and reserved capacity.
 - **2024-05-21** — [Arize AI Brings LLM Evaluation, Observability To Microsoft Azure AI Model Catalog](<deployment/Arize AI Brings LLM Evaluation, Observability To Microsoft Azure AI Model Catalog.md>) · `deployment` · arize
   Describes Arize integration with Microsoft Azure AI Model Catalog for LLM evaluation and observability in Azure-hosted development workflows.
 - **2024-03-14** — [Lambda on hard mode: Inside Modal's web infrastructure](<deployment/Lambda on hard mode Inside Modal's web infrastructure.md>) · `deployment` · modal
@@ -133,6 +137,8 @@
   Explains model neutrality and why avoiding AI vendor lock-in matters for provider routing, cost control, and long-term architecture.
 - **2026-05-28** — [Reinforcement learning is an infrastructure problem](<../models/fine-tuning/Reinforcement learning is an infrastructure problem.md>) · `fine-tuning` · modal
   Argues that reinforcement learning progress depends heavily on infrastructure for scheduling, iteration, and scalable experiments.
+- **2026-05-20** — [The Agent Execution Tax](<../evals-observability/evaluation/The Agent Execution Tax.md>) · `evaluation` · fireworks
+  Analyzes browser-agent runs to show how reliability, latency, and cost compound into task-level execution tax.
 - **2026-05-19** — [Scaling reinforcement learning at Applied Compute](<../models/fine-tuning/Scaling reinforcement learning at Applied Compute.md>) · `fine-tuning` · modal
   Case study on scaling reinforcement learning workloads with elastic GPU infrastructure and faster experiment iteration.
 - **2026-05-18** — [Introducing Claude Managed Agents with Modal Sandboxes](<../agents/computer-use/Introducing Claude Managed Agents with Modal Sandboxes.md>) · `computer-use` · modal
@@ -161,8 +167,14 @@
   Architecture of Claude Managed Agents: decoupling the agent loop (the brain) from sandboxed tool execution (the hands) to scale hosted long-running sessions.
 - **2026-04-06** — [How Brainstore works: architecture for AI observability at scale](<../evals-observability/monitoring/How Brainstore works architecture for AI observability at scale.md>) · `monitoring` · braintrust
   Deep dive into Brainstore's architecture for AI observability at scale, covering storage, indexing, query patterns, and trace/log workloads.
+- **2026-03-28** — [The Fine-Tuning Bottleneck Isn't the Algorithm](<../models/fine-tuning/The Fine-Tuning Bottleneck Isn't the Algorithm.md>) · `fine-tuning` · fireworks
+  Explains why fine-tuning bottlenecks often come from data, evaluation, orchestration, and serving rather than algorithms alone.
+- **2026-03-23** — [Frontier RL Is Cheaper Than You Think](<../models/fine-tuning/Frontier RL Is Cheaper Than You Think.md>) · `fine-tuning` · fireworks
+  Argues that frontier reinforcement learning can be cost-effective with the right infrastructure and training-loop design.
 - **2026-03-12** — [Supporting privacy and compliance for EU teams](<../product-engineering/security/Supporting privacy and compliance for EU teams.md>) · `security` · braintrust
   Covers privacy and compliance requirements for EU AI teams, including data residency, controls, and deployment choices for observability data.
+- **2026-03-06** — [Inference providers vs. API routers](<../inference/serving/Inference providers vs. API routers.md>) · `serving` · fireworks
+  Explains the operational difference between inference providers and API routers, including routing, control, and token provenance.
 - **2026-02-25** — [Accelerating AI research that accelerates AI research](<../product-engineering/case-studies/Accelerating AI research that accelerates AI research.md>) · `case-studies` · modal
   Case study on using elastic compute to accelerate AI research workflows, including experiment throughput and infrastructure offload.
 - **2026-02-18** — [How Ramp built a full context background coding agent on Modal](<../agents/computer-use/How Ramp built a full context background coding agent on Modal.md>) · `computer-use` · modal
@@ -173,6 +185,8 @@
   Explains data-control choices for AI observability, including where data lives, how security boundaries are enforced, and deployment implications.
 - **2025-12-18** — [Brainstore makes AI observability at scale possible](<../evals-observability/monitoring/Brainstore makes AI observability at scale possible.md>) · `monitoring` · braintrust
   Benchmark-oriented note on Brainstore performance and why purpose-built storage is needed for high-volume AI observability workloads.
+- **2025-11-19** — [50 Trillion Tokens Per Day: The State of Agent Environments](<../agents/computer-use/50 Trillion Tokens Per Day The State of Agent Environments.md>) · `computer-use` · fireworks
+  Surveys the state of agent environments, emphasizing execution scale, sandboxing, and environment design.
 - **2025-11-18** — [Host overhead is killing your inference efficiency](<../inference/optimization/Host overhead is killing your inference efficiency.md>) · `optimization` · modal
   Analyzes host overhead as an inference bottleneck and shows why CPU-side orchestration can dominate model-serving efficiency.
 - **2025-09-22** — [Build an AI coding platform that scales to millions of monthly sessions](<../agents/computer-use/Build an AI coding platform that scales to millions of monthly sessions.md>) · `computer-use` · modal
@@ -203,6 +217,8 @@
   Reference architecture for generative AI platforms covering context construction and RAG, guardrails, gateways and routers, caching, observability, orchestration, and tool/action layers.
 - **2024-06-06** — [How to catch crypto miners using syscall signatures](<../product-engineering/security/How to catch crypto miners using syscall signatures.md>) · `security` · modal
   Explains detecting abusive GPU workloads with syscall signatures, a useful pattern for securing shared AI infrastructure.
+- **2024-06-03** — [GPUs on-demand: Not serverless, not reserved, but some third thing](<gpu-clusters/GPUs on-demand Not serverless, not reserved, but some third thing.md>) · `gpu-clusters` · fireworks
+  Explains on-demand GPU infrastructure as a middle ground between serverless and reserved capacity.
 - **2024-03-14** — [What I learned from looking at 900 most popular open source AI tools](<../industry/trends/What I learned from looking at 900 most popular open source AI tools.md>) · `trends` · chip-huyen
   Maps 900 open-source AI tools into infrastructure, model-development, and application-development layers, highlighting growth in agents, prompt engineering, vector search, evaluation, and inference tooling.
 - **2024-02-28** — [Predictive Human Preference: From Model Ranking to Model Routing](<../evals-observability/evaluation/Predictive Human Preference From Model Ranking to Model Routing.md>) · `evaluation` · chip-huyen

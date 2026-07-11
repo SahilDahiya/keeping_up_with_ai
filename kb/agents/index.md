@@ -1,6 +1,6 @@
 # agents
 
-95 articles.
+104 articles.
 
 - **2026-07-10** — [OpenWiki Brains: Proactive Memory for AI Agents](<memory-context/OpenWiki Brains Proactive Memory for AI Agents.md>) · `memory-context` · langchain
   Introduces OpenWiki Brains as proactive wiki memory for agents, focused on persistent context and retrieval over project knowledge.
@@ -34,6 +34,8 @@
   Walkthrough for building an auditable VC research agent with Perplexity, LangGraph, and LangSmith, emphasizing traceability and review.
 - **2026-06-24** — [How to Build Memory into AI Agents](<memory-context/How to Build Memory into AI Agents.md>) · `memory-context` · langchain
   Explains how to build memory into AI agents through state, retrieval, persistence, and context injection patterns.
+- **2026-06-24** — [Frontier AI at a fraction of the cost: open-source worker agents with a closed-source advisor.](<multi-agent/Frontier AI at a fraction of the cost open-source worker agents with a closed-source advisor.md>) · `multi-agent` · fireworks
+  Explains a worker-advisor pattern that combines open-source worker agents with closed-source advisors for cost-quality tradeoffs.
 - **2026-06-24** — [Using Braintrust to eval agentic setups from large-scale Hugging Face data](<planning/Using Braintrust to eval agentic setups from large-scale Hugging Face data.md>) · `planning` · braintrust
   Uses large-scale Hugging Face agent traces to evaluate agentic setups, connecting trace analysis to agent behavior and reliability measurement.
 - **2026-06-16** — [The Art of Loop Engineering](<planning/The Art of Loop Engineering.md>) · `planning` · langchain
@@ -44,6 +46,8 @@
   Argues for giving agents isolated computers or sandboxes so they can run tools while preserving control, safety, and reproducibility.
 - **2026-06-04** — [Fault Tolerance in LangGraph: Retries, Timeouts and Error Handlers](<planning/Fault Tolerance in LangGraph Retries, Timeouts and Error Handlers.md>) · `planning` · langchain
   Explains fault tolerance in LangGraph with retries, timeouts, and error handlers for more reliable long-running agents.
+- **2026-06-03** — [How Harvey & Fireworks Beat Closed Source on Cost + Quality](<multi-agent/How Harvey & Fireworks Beat Closed Source on Cost + Quality.md>) · `multi-agent` · fireworks
+  Case study of using open-source agents with frontier advisors to improve cost and quality versus closed-source baselines.
 - **2026-06-03** — [How to Build a Custom Agent Harness](<planning/How to Build a Custom Agent Harness.md>) · `planning` · langchain
   Guide to building a custom agent harness, covering control loop design, state, tools, observability, and evaluation hooks.
 - **2026-05-29** — [Interpreter Skills: Building Workflows for Agents](<tool-use/Interpreter Skills Building Workflows for Agents.md>) · `tool-use` · langchain
@@ -124,6 +128,8 @@
   Shows how Temporal workflows can make AI agents observable, connecting durable execution with traces, evals, and debugging data.
 - **2025-12-23** — [Claude Code meets Braintrust](<tool-use/Claude Code meets Braintrust.md>) · `tool-use` · braintrust
   Shows how Claude Code workflows can connect to Braintrust so coding-agent traces, experiments, and eval data are captured for review.
+- **2025-12-17** — [Self-Improving Agents, Powered by Your Evals](<planning/Self-Improving Agents, Powered by Your Evals.md>) · `planning` · fireworks
+  Describes self-improving agents powered by eval loops, using evaluation feedback to improve behavior.
 - **2025-12-09** — [Agent Engineering: A New Discipline](<planning/Agent Engineering A New Discipline.md>) · `planning` · langchain
   Defines agent engineering as a discipline around designing, evaluating, observing, and iterating on production agents rather than treating them as prompt-only systems.
 - **2025-12-09** — [Building Langfuse's MCP Server: Code Reuse and Developer Experience](<tool-use/Building Langfuse's MCP Server Code Reuse and Developer Experience.md>) · `tool-use` · langfuse
@@ -132,6 +138,8 @@
   Harness patterns for agents that work over hours or days: initializer/coder agent split, checkpointing progress to files, and recovering from failure mid-run.
 - **2025-11-24** — [Introducing advanced tool use on the Claude Developer Platform](<tool-use/Introducing advanced tool use on the Claude Developer Platform.md>) · `tool-use` · anthropic-engineering
   Introduces tool search, programmatic tool calling, and tool-use examples on the Claude Developer Platform to scale agents past context-window limits on large tool sets.
+- **2025-11-19** — [50 Trillion Tokens Per Day: The State of Agent Environments](<computer-use/50 Trillion Tokens Per Day The State of Agent Environments.md>) · `computer-use` · fireworks
+  Surveys the state of agent environments, emphasizing execution scale, sandboxing, and environment design.
 - **2025-11-04** — [Code execution with MCP: building more efficient AI agents](<tool-use/Code execution with MCP building more efficient AI agents.md>) · `tool-use` · anthropic-engineering
   Argues agents should write code that calls MCP tools rather than invoking tools directly, cutting token usage and enabling control flow over intermediate results.
 - **2025-10-16** — [Equipping agents for the real world with Agent Skills](<tool-use/Equipping agents for the real world with Agent Skills.md>) · `tool-use` · anthropic-engineering
@@ -156,10 +164,16 @@
   Introduces Open SWE as an open-source asynchronous coding agent and discusses its architecture for long-running coding tasks.
 - **2025-07-24** — [What is an AI code sandbox?](<computer-use/What is an AI code sandbox.md>) · `computer-use` · modal
   Explains AI code sandboxes as isolated execution environments for coding agents, including safety and state considerations.
+- **2025-07-11** — [Function calling for agentic AI systems](<tool-use/Function calling for agentic AI systems.md>) · `tool-use` · fireworks
+  Explains function calling as the bridge between LLM outputs, external tools, and agentic execution loops.
 - **2025-06-16** — [How and when to build multi-agent systems](<multi-agent/How and when to build multi-agent systems.md>) · `multi-agent` · langchain
   Guidance on when multi-agent systems are warranted and how to design agent roles, coordination, and boundaries.
 - **2025-06-13** — [How we built our multi-agent research system](<multi-agent/How we built our multi-agent research system.md>) · `multi-agent` · anthropic-engineering
   How Anthropic built Claude's Research feature on an orchestrator-worker multi-agent architecture, with prompting lessons, token economics, and eval methodology.
+- **2025-05-21** — [Building an open-source Browser Agent on Fireworks AI](<computer-use/Building an open-source Browser Agent on Fireworks AI.md>) · `computer-use` · fireworks
+  Walkthrough of building an open-source browser agent, including model choice, tool execution, and environment control.
+- **2025-05-19** — [Agentic AI Systems](<planning/Agentic AI Systems.md>) · `planning` · fireworks
+  Overview of agentic AI systems, covering planning, tool use, control loops, and production architecture concerns.
 - **2025-04-20** — [How to think about agent frameworks](<planning/How to think about agent frameworks.md>) · `planning` · langchain
   Framework for evaluating agent frameworks by abstraction level, control, durability, observability, and fit to production workflows.
 - **2025-04-09** — [Embracing Google's Agent-To-Agent (A2A) Protocol](<multi-agent/Embracing Google's Agent-To-Agent (A2A) Protocol.md>) · `multi-agent` · arize
@@ -190,6 +204,10 @@
   Introduces functions as flexible AI engineering primitives for tool calling, structured behavior, and reusable evaluation or workflow components.
 - **2024-09-30** — [Arize AI + MongoDB: Leveraging Agent Evaluation and Memory to Build Robust Agentic Systems](<memory-context/Arize AI + MongoDB Leveraging Agent Evaluation and Memory to Build Robust Agentic Systems.md>) · `memory-context` · arize
   Explains how Arize and MongoDB combine agent evaluation and memory patterns for more robust agentic systems.
+- **2024-08-29** — [Build Your Own Flight Recommendation System using FastAPI, SerpAPI, and Firefunction](<tool-use/Build Your Own Flight Recommendation System using FastAPI, SerpAPI, and Firefunction.md>) · `tool-use` · fireworks
+  Tutorial for building a function-calling application with FastAPI, SerpAPI, and structured tool invocation.
+- **2024-05-08** — [Code Generation with Large Language Models - Fireworks AI Take](<tool-use/Code Generation with Large Language Models - Fireworks AI Take.md>) · `tool-use` · fireworks
+  Discusses code-generation copilots with LLMs, including model behavior, latency, and developer workflow considerations.
 - **2023-12-20** — [Benchmarking Agent Tool Use](<tool-use/Benchmarking Agent Tool Use.md>) · `tool-use` · langchain
   Benchmarking study for agent tool use, focused on measuring whether agents choose and invoke tools correctly across tasks.
 
@@ -263,6 +281,8 @@
   Lyft case study on building a self-serve AI agent platform for customer support with LangGraph and LangSmith.
 - **2026-05-25** — [How we contain Claude across products](<../product-engineering/security/How we contain Claude across products.md>) · `security` · anthropic-engineering
   Anthropic's layered containment architecture for Claude's code execution and browsing across products: sandboxes, egress control, and per-surface trust boundaries.
+- **2026-05-20** — [The Agent Execution Tax](<../evals-observability/evaluation/The Agent Execution Tax.md>) · `evaluation` · fireworks
+  Analyzes browser-agent runs to show how reliability, latency, and cost compound into task-level execution tax.
 - **2026-05-14** — [How to evaluate multi-turn conversations](<../evals-observability/evaluation/How to evaluate multi-turn conversations.md>) · `evaluation` · braintrust
   Guide to evaluating multi-turn conversations, including state, conversation-level criteria, turn-level scoring, and agent-like interaction failures.
 - **2026-05-13** — [How we use Alyx to build Alyx: How to build an AI agent feedback loop](<../evals-observability/monitoring/How we use Alyx to build Alyx How to build an AI agent feedback loop.md>) · `monitoring` · arize
@@ -361,6 +381,8 @@
   A practical framework for building agent evals: grader design, task suites, pass@k metrics, and evolving evals as agent capabilities improve.
 - **2026-01-01** — [How Graphite builds reliable AI code review at scale](<../product-engineering/case-studies/How Graphite builds reliable AI code review at scale.md>) · `case-studies` · braintrust
   Case study of Graphite building reliable AI code review at scale, with evaluation and workflow design for production developer tooling.
+- **2025-12-10** — [Best Practices for Multi-Turn RL](<../models/fine-tuning/Best Practices for Multi-Turn RL.md>) · `fine-tuning` · fireworks
+  Covers best practices for multi-turn reinforcement learning, including environment design and reward structure.
 - **2025-12-03** — [Evaluating Deep Agents: Our Learnings](<../evals-observability/evaluation/Evaluating Deep Agents Our Learnings.md>) · `evaluation` · langchain
   Shares lessons from evaluating Deep Agents, including task design, traces, scoring, and how agent architectures change eval needs.
 - **2025-12-01** — [AWS Bedrock AgentCore Observability with Arize AX: Operationalizing AI Agents At Scale](<../evals-observability/tracing/AWS Bedrock AgentCore Observability with Arize AX Operationalizing AI Agents At Scale.md>) · `tracing` · arize
@@ -369,14 +391,20 @@
   Harness patterns for agents that work over hours or days: initializer/coder agent split, checkpointing progress to files, and recovering from failure mid-run.
 - **2025-11-25** — [Vibe Coding a Custom Annotation UI](<../product-engineering/ux-patterns/Vibe Coding a Custom Annotation UI.md>) · `ux-patterns` · langfuse
   Case study of building a custom annotation UI for eval workflows with AI-assisted coding, highlighting review ergonomics and human feedback collection.
+- **2025-11-20** — [Eval Protocol: RL on your agents, in any environment](<../models/fine-tuning/Eval Protocol RL on your agents, in any environment.md>) · `fine-tuning` · fireworks
+  Describes using Eval Protocol to run reinforcement learning on agents in task environments.
 - **2025-11-20** — [CLAUDE.md: Best Practices Learned from Optimizing Claude Code with Prompt Learning](<../prompt-engineering/context-engineering/CLAUDE.md Best Practices Learned from Optimizing Claude Code with Prompt Learning.md>) · `context-engineering` · arize
   Extracts CLAUDE.md best practices from prompt-learning experiments that optimized Claude Code behavior through repository instructions.
 - **2025-11-20** — [Agents need good developer experience too](<../product-engineering/architecture/Agents need good developer experience too.md>) · `architecture` · modal
   Argues that agent systems need strong developer experience, covering observability, iteration loops, deployment ergonomics, and tool surfaces.
 - **2025-11-18** — [Evaluating and Improving AI Agents at Scale with Microsoft Foundry](<../evals-observability/evaluation/Evaluating and Improving AI Agents at Scale with Microsoft Foundry.md>) · `evaluation` · arize
   Guide to evaluating and improving production AI agents at scale with Microsoft Foundry and Arize workflows.
+- **2025-11-10** — [Fireworks RFT: Build AI agents with fine-tuned open models that outperform frontier closed models](<../models/fine-tuning/Fireworks RFT Build AI agents with fine-tuned open models that outperform frontier closed models.md>) · `fine-tuning` · fireworks
+  Explains reinforcement fine-tuning for building agent models that can outperform closed frontier models on target tasks.
 - **2025-11-06** — [Systematic Evaluation of AI Agents](<../evals-observability/evaluation/Systematic Evaluation of AI Agents.md>) · `evaluation` · langfuse
   Covers systematic evaluation of AI agents, focusing on experiment interpretation, failure analysis, and how to compare agent variants.
+- **2025-10-31** — [Genspark deep research agent with Fireworks RFT](<../models/fine-tuning/Genspark deep research agent with Fireworks RFT.md>) · `fine-tuning` · fireworks
+  Case study of reinforcement fine-tuning a deep research agent to improve quality, tool calls, and cost.
 - **2025-10-30** — [Building the Data Flywheel for Smarter AI Systems with Arize AX and NVIDIA NeMo](<../evals-observability/monitoring/Building the Data Flywheel for Smarter AI Systems with Arize AX and NVIDIA NeMo.md>) · `monitoring` · arize
   Explains a data-flywheel approach for improving AI systems with Arize AX and NVIDIA NeMo, using production feedback to drive model and agent improvements.
 - **2025-10-20** — [Making Claude Code more secure and autonomous with sandboxing](<../product-engineering/security/Making Claude Code more secure and autonomous with sandboxing.md>) · `security` · anthropic-engineering
@@ -389,14 +417,22 @@
   Strategies for managing agent context windows—compaction, structured note-taking, sub-agent architectures—and why context engineering supersedes prompt engineering.
 - **2025-09-11** — [Monte Carlo: Building Data + AI Observability Agents with LangGraph and LangSmith](<../product-engineering/case-studies/Monte Carlo Building Data + AI Observability Agents with LangGraph and LangSmith.md>) · `case-studies` · langchain
   Monte Carlo case study on building data and AI observability agents with LangGraph and LangSmith.
+- **2025-08-25** — [LLM Eval Driven Development with Claude Code](<../evals-observability/evaluation/LLM Eval Driven Development with Claude Code.md>) · `evaluation` · fireworks
+  Explains eval-driven development with Claude Code, using tests and feedback loops to improve coding-agent behavior.
 - **2025-08-19** — [The rise of async programming](<../product-engineering/architecture/The rise of async programming.md>) · `architecture` · braintrust
   Explains why asynchronous programming patterns matter for long-running AI workflows, background jobs, agent tasks, and responsive product experiences.
+- **2025-08-14** — [Test-driven agent development](<../evals-observability/testing/Test-driven agent development.md>) · `testing` · fireworks
+  Shows a TDD-style workflow for building agents with concrete acceptance tests, red teaming, and regression checks.
 - **2025-08-07** — [The canonical agent architecture: A while loop with tools](<planning/The canonical agent architecture A while loop with tools.md>) · `planning` · braintrust
   Frames the canonical agent architecture as a while loop around model calls, tool use, state updates, and termination criteria for controllable agent behavior.
 - **2025-06-26** — [Claude Desktop Extensions: One-click MCP server installation for Claude Desktop](<../product-engineering/ux-patterns/Claude Desktop Extensions One-click MCP server installation for Claude Desktop.md>) · `ux-patterns` · anthropic-engineering
   Introduces Desktop Extensions (.dxt): a packaging format for one-click installation of local MCP servers in Claude Desktop, with manifest spec and distribution details.
 - **2025-06-16** — [How and when to build multi-agent systems](<multi-agent/How and when to build multi-agent systems.md>) · `multi-agent` · langchain
   Guidance on when multi-agent systems are warranted and how to design agent roles, coordination, and boundaries.
+- **2025-05-21** — [Building an open-source Browser Agent on Fireworks AI](<computer-use/Building an open-source Browser Agent on Fireworks AI.md>) · `computer-use` · fireworks
+  Walkthrough of building an open-source browser agent, including model choice, tool execution, and environment control.
+- **2025-05-19** — [Agentic AI Systems](<planning/Agentic AI Systems.md>) · `planning` · fireworks
+  Overview of agentic AI systems, covering planning, tool use, control loops, and production architecture concerns.
 - **2025-04-24** — [How we use LLMs to build and scale Langfuse](<../product-engineering/case-studies/How we use LLMs to build and scale Langfuse.md>) · `case-studies` · langfuse
   Case study of how Langfuse uses LLMs internally to build and scale the product, including practical workflows for AI-assisted engineering and operations.
 - **2025-04-10** — [Building and Deploying Observable AI Agents with Google Agent Framework and Arize](<../evals-observability/tracing/Building and Deploying Observable AI Agents with Google Agent Framework and Arize.md>) · `tracing` · arize
@@ -429,8 +465,12 @@
   Arize Copilot case study covering lessons from building an AI assistant for data scientists and AI engineers.
 - **2024-07-02** — [Improving Memory Retrieval: How New Computer achieved 50% higher recall with LangSmith](<../rag-retrieval/search/Improving Memory Retrieval How New Computer achieved 50% higher recall with LangSmith.md>) · `search` · langchain
   New Computer case study on improving memory retrieval recall with LangSmith-backed evaluation and debugging.
+- **2024-06-23** — [How Cursor built Fast Apply using the Speculative Decoding API](<../inference/optimization/How Cursor built Fast Apply using the Speculative Decoding API.md>) · `optimization` · fireworks
+  Case study of Cursor Fast Apply using speculative decoding to reduce coding-assistant latency.
 - **2024-03-14** — [What I learned from looking at 900 most popular open source AI tools](<../industry/trends/What I learned from looking at 900 most popular open source AI tools.md>) · `trends` · chip-huyen
   Maps 900 open-source AI tools into infrastructure, model-development, and application-development layers, highlighting growth in agents, prompt engineering, vector search, evaluation, and inference tooling.
+- **2024-02-20** — [Why do all LLMs need structured output modes?](<../prompt-engineering/structured-output/Why do all LLMs need structured output modes.md>) · `structured-output` · fireworks
+  Explains why structured-output modes matter for reliable LLM applications and tool-calling systems.
 - **2024-02-18** — [The Shift from Models to Compound AI Systems](<../product-engineering/architecture/The Shift from Models to Compound AI Systems.md>) · `architecture` · arize
   Explains the shift from standalone models to compound AI systems that combine models, retrieval, tools, orchestration, and evaluation into production applications.
 - **2023-12-07** — [Calling All Functions: Benchmarking OpenAI Function Calling and Explanations](<../evals-observability/evaluation/Calling All Functions Benchmarking OpenAI Function Calling and Explanations.md>) · `evaluation` · arize

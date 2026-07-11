@@ -1,6 +1,6 @@
 # models
 
-47 articles.
+72 articles.
 
 - **2026-07-10** — [Evaluating the GPT-5.6 family](<benchmarks/Evaluating the GPT-5.6 family.md>) · `benchmarks` · braintrust
   Evaluates the GPT-5.6 model family and presents a decision map for choosing models based on quality, cost, and task requirements.
@@ -34,8 +34,28 @@
   Describes a constellation-of-models architecture for powering agents, combining multiple models and routing behavior around task needs.
 - **2026-04-20** — [Building an RL theorem-proving workflow on Modal](<reasoning/Building an RL theorem-proving workflow on Modal.md>) · `reasoning` · modal
   Walks through an RL theorem-proving workflow, connecting reasoning tasks, training loops, and scalable remote execution.
+- **2026-03-28** — [The Fine-Tuning Bottleneck Isn't the Algorithm](<fine-tuning/The Fine-Tuning Bottleneck Isn't the Algorithm.md>) · `fine-tuning` · fireworks
+  Explains why fine-tuning bottlenecks often come from data, evaluation, orchestration, and serving rather than algorithms alone.
+- **2026-03-23** — [Frontier RL Is Cheaper Than You Think](<fine-tuning/Frontier RL Is Cheaper Than You Think.md>) · `fine-tuning` · fireworks
+  Argues that frontier reinforcement learning can be cost-effective with the right infrastructure and training-loop design.
+- **2026-02-27** — [DeepSeek Models: V3.2, R1, Distills, and Production Caveats](<reasoning/DeepSeek Models V3.2, R1, Distills, and Production Caveats.md>) · `reasoning` · fireworks
+  Surveys DeepSeek model variants with production caveats around serving, reasoning behavior, and deployment tradeoffs.
+- **2025-12-31** — [DPO as reinforcement learning](<fine-tuning/DPO as reinforcement learning.md>) · `fine-tuning` · fireworks
+  Connects DPO and RL-style training loops, explaining preference optimization as part of continuous model improvement.
 - **2025-12-15** — [Updates for developers building with voice | OpenAI Developers](<releases/Updates for developers building with voice OpenAI Developers.md>) · `releases` · openai-devs
   Release notes for four December 2025 audio model snapshots (gpt-4o-mini-transcribe, gpt-4o-mini-tts, gpt-realtime-mini, gpt-audio-mini): lower word-error rates on noisy audio, fewer hallucinations during silence, better tool calling in the minis, and broader Custom Voices access at unchanged pricing.
+- **2025-12-10** — [Best Practices for Multi-Turn RL](<fine-tuning/Best Practices for Multi-Turn RL.md>) · `fine-tuning` · fireworks
+  Covers best practices for multi-turn reinforcement learning, including environment design and reward structure.
+- **2025-12-04** — [Fine-tuning LLMs as classifiers](<fine-tuning/Fine-tuning LLMs as classifiers.md>) · `fine-tuning` · fireworks
+  Shows how to adapt generative LLMs for classification tasks while preserving probability outputs and efficient serving.
+- **2025-11-20** — [Eval Protocol: RL on your agents, in any environment](<fine-tuning/Eval Protocol RL on your agents, in any environment.md>) · `fine-tuning` · fireworks
+  Describes using Eval Protocol to run reinforcement learning on agents in task environments.
+- **2025-11-10** — [Fireworks RFT: Build AI agents with fine-tuned open models that outperform frontier closed models](<fine-tuning/Fireworks RFT Build AI agents with fine-tuned open models that outperform frontier closed models.md>) · `fine-tuning` · fireworks
+  Explains reinforcement fine-tuning for building agent models that can outperform closed frontier models on target tasks.
+- **2025-10-31** — [Genspark deep research agent with Fireworks RFT](<fine-tuning/Genspark deep research agent with Fireworks RFT.md>) · `fine-tuning` · fireworks
+  Case study of reinforcement fine-tuning a deep research agent to improve quality, tool calls, and cost.
+- **2025-10-06** — [LLM Fine-Tuning: Deep Dive & Best Practices](<fine-tuning/LLM Fine-Tuning Deep Dive & Best Practices.md>) · `fine-tuning` · fireworks
+  Deep dive into LLM fine-tuning best practices, including data preparation, training strategy, and deployment concerns.
 - **2025-09-29** — [Claude Sonnet 4.5 analysis](<benchmarks/Claude Sonnet 4.5 analysis.md>) · `benchmarks` · braintrust
   Analyzes Claude Sonnet 4.5 with aspirational evals, focusing on how harder task suites reveal model strengths and gaps beyond standard benchmarks.
 - **2025-09-12** — [Developer notes on the Realtime API | OpenAI Developers](<releases/Developer notes on the Realtime API OpenAI Developers.md>) · `releases` · openai-devs
@@ -44,12 +64,36 @@
   Evaluates model performance across cloud providers, focusing on latency, cost, quality, and provider-selection tradeoffs for production inference.
 - **2025-08-08** — [GPT-5 vs. Claude Opus 4.1](<benchmarks/GPT-5 vs. Claude Opus 4.1.md>) · `benchmarks` · braintrust
   Compares GPT-5 and Claude Opus 4.1 with eval-driven analysis of strengths, weaknesses, and model-selection implications.
+- **2025-08-01** — [Kimi K2: Architecture, Capabilities & Benchmarks](<reasoning/Kimi K2 Architecture, Capabilities & Benchmarks.md>) · `reasoning` · fireworks
+  Explains Kimi K2 architecture, capabilities, and benchmark behavior for agent and reasoning workloads.
+- **2025-08-01** — [Qwen3 Instruct vs Thinking vs Coder: Model Selection Guide](<reasoning/Qwen3 Instruct vs Thinking vs Coder Model Selection Guide.md>) · `reasoning` · fireworks
+  Compares Qwen3 Instruct, Thinking, and Coder variants for model selection across reasoning and coding tasks.
 - **2025-07-23** — [Transcribe speech 100x faster and 100x cheaper with open models](<multimodal/Transcribe speech 100x faster and 100x cheaper with open models.md>) · `multimodal` · modal
   Shows how open speech models and batch execution can reduce transcription latency and cost at large scale.
+- **2025-07-22** — [Kimi QK-Clip and multi-head latent attention](<reasoning/Kimi QK-Clip and multi-head latent attention.md>) · `reasoning` · fireworks
+  Explains Kimi QK-Clip, multi-head latent attention, and why training-inference key construction affects stability.
+- **2025-07-15** — [MuonClip and Kimi K2 training stability](<reasoning/MuonClip and Kimi K2 training stability.md>) · `reasoning` · fireworks
+  Explains MuonClip as a stability technique for large-scale Kimi-style model training.
 - **2025-07-11** — [Building with Grok 4](<releases/Building with Grok 4.md>) · `releases` · braintrust
   Notes on building with Grok 4, including model behavior, practical integration considerations, and evaluation needs for new model adoption.
+- **2025-06-09** — [Reinforcement Fine Tuning: Train expert open models to surpass closed frontier models](<fine-tuning/Reinforcement Fine Tuning Train expert open models to surpass closed frontier models.md>) · `fine-tuning` · fireworks
+  Introduces reinforcement fine-tuning for training expert open models beyond supervised baselines.
+- **2025-06-04** — [Synthetic data pipeline for fine-tuning and evaluation](<fine-tuning/Synthetic data pipeline for fine-tuning and evaluation.md>) · `fine-tuning` · fireworks
+  Describes a synthetic-data pipeline that connects task definition, generation, SFT/RFT, evaluation, and cleanup.
+- **2025-05-12** — [Supervised Fine-Tuning (SFT) with LoRA on Fireworks AI: Tutorial](<fine-tuning/Supervised Fine-Tuning (SFT) with LoRA on Fireworks AI Tutorial.md>) · `fine-tuning` · fireworks
+  Tutorial for supervised fine-tuning with LoRA, including setup, training, and deployment workflow.
 - **2025-04-04** — [AI Benchmark Deep Dive: Gemini 2.5 and Humanity's Last Exam](<benchmarks/AI Benchmark Deep Dive Gemini 2.5 and Humanity's Last Exam.md>) · `benchmarks` · arize
   Paper-reading recap on Gemini 2.5 and Humanity's Last Exam, focusing on benchmark interpretation and what modern evaluation results do and do not show.
+- **2025-03-12** — [Fine-Tuning DeepSeek v3 & R1 to optimize quality, latency, & cost](<fine-tuning/Fine-Tuning DeepSeek v3 & R1 to optimize quality, latency, & cost.md>) · `fine-tuning` · fireworks
+  Guide to fine-tuning DeepSeek V3 and R1 models while balancing quality, latency, and cost.
+- **2025-02-07** — [DeepSeek v3 and R1 Model Architecture: Why it's powerful and economical](<reasoning/DeepSeek v3 and R1 Model Architecture Why it's powerful and economical.md>) · `reasoning` · fireworks
+  Explains DeepSeek V3 and R1 architecture choices, including why the models are efficient for reasoning workloads.
+- **2025-01-31** — [Distillation with Reasoning: Can DeepSeek R1 Teach Better Than Humans?](<fine-tuning/Distillation with Reasoning Can DeepSeek R1 Teach Better Than Humans.md>) · `fine-tuning` · fireworks
+  Discusses distilling reasoning behavior from DeepSeek R1 and the limits of teacher-model supervision.
+- **2025-01-27** — [Beyond Supervised Fine Tuning: How Reinforcement Learning Empowers AI with Minimal Labels](<fine-tuning/Beyond Supervised Fine Tuning How Reinforcement Learning Empowers AI with Minimal Labels.md>) · `fine-tuning` · fireworks
+  Explains reinforcement learning with verifiable rewards as a way to improve models with minimal labels.
+- **2025-01-24** — [DeepSeek-R1 Overview: Features, Capabilities, Parameters](<reasoning/DeepSeek-R1 Overview Features, Capabilities, Parameters.md>) · `reasoning` · fireworks
+  Deep dive into DeepSeek-R1 capabilities, parameters, and reasoning behavior for production model selection.
 - **2025-01-22** — [Building Audio Support with OpenAI: Insights from our Journey](<multimodal/Building Audio Support with OpenAI Insights from our Journey.md>) · `multimodal` · arize
   Case study on adding audio support with OpenAI models, covering product and engineering lessons from building multimodal support.
 - **2025-01-22** — [Evaluating and Monitoring Voice AI Agents](<multimodal/Evaluating and Monitoring Voice AI Agents.md>) · `multimodal` · langfuse
@@ -58,6 +102,8 @@
   How Anthropic scaffolded Claude 3.5 Sonnet to 49% on SWE-bench Verified with a minimal agent harness, detailing tool design and error analysis.
 - **2024-12-10** — [What is LLM fine-tuning?](<fine-tuning/What is LLM fine-tuning.md>) · `fine-tuning` · modal
   Overview of LLM fine-tuning concepts, when to fine-tune, and how training data and serving constraints affect the workflow.
+- **2024-12-09** — [20x faster Whisper than OpenAI - Fireworks audio transcribes 1 hour in 4 seconds](<multimodal/20x faster Whisper than OpenAI - Fireworks audio transcribes 1 hour in 4 seconds.md>) · `multimodal` · fireworks
+  Describes high-throughput Whisper transcription serving and the latency/cost tradeoffs in batch audio inference.
 - **2024-11-14** — [Evaluating Gemini models for vision](<multimodal/Evaluating Gemini models for vision.md>) · `multimodal` · braintrust
   Evaluates Gemini vision models and shows how multimodal evals can compare image-understanding behavior across model versions.
 - **2024-11-04** — [Building serverless apps with the OpenAI Realtime API](<multimodal/Building serverless apps with the OpenAI Realtime API.md>) · `multimodal` · braintrust
@@ -66,6 +112,8 @@
   Paper-reading style overview of Google NotebookLM and AI-generated audio as a multimodal product pattern.
 - **2024-09-19** — [Breaking Down Reflection Tuning: Enhancing LLM Performance with Self-Learning](<fine-tuning/Breaking Down Reflection Tuning Enhancing LLM Performance with Self-Learning.md>) · `fine-tuning` · arize
   Explains reflection tuning as a self-learning approach for improving LLM performance through critique and iterative refinement.
+- **2024-09-18** — [Multi-LoRA: Personalize AI at scale and deliver the best experience for each customer and use case, with 100x cost-efficiency](<fine-tuning/Multi-LoRA Personalize AI at scale and deliver the best experience for each customer and use case, with 100x cost-efficiency.md>) · `fine-tuning` · fireworks
+  Explains Multi-LoRA serving for personalized models at scale with better cost efficiency.
 - **2024-09-11** — [Composable Interventions for Language Models](<reasoning/Composable Interventions for Language Models.md>) · `reasoning` · arize
   Deep dive on composable interventions for language models, covering techniques for steering or modifying model behavior.
 - **2024-08-06** — [Breaking Down Meta's Llama 3 Herd of Models](<releases/Breaking Down Meta's Llama 3 Herd of Models.md>) · `releases` · arize
@@ -92,6 +140,8 @@
   Paper-reading deep dive on grokking and circuit efficiency as a way to understand model generalization.
 - **2023-08-16** — [Open challenges in LLM research](<reasoning/Open challenges in LLM research.md>) · `reasoning` · chip-huyen
   Surveys open LLM research problems around hallucination, context length, efficiency, multimodality, agents, evaluation, and post-training behavior that shape engineering constraints.
+- **2023-07-12** — [Multi-Query Attention is All You Need](<reasoning/Multi-Query Attention is All You Need.md>) · `reasoning` · fireworks
+  Explains multi-query attention and why attention variants matter for efficient LLM inference.
 - **2023-06-01** — [Drag Your GAN: Interactive Point-Based Manipulation on the Generative Image Manifold](<multimodal/Drag Your GAN Interactive Point-Based Manipulation on the Generative Image Manifold.md>) · `multimodal` · arize
   Paper-reading deep dive on DragGAN and interactive point-based image manipulation in generative model latent spaces.
 - **2023-05-02** — [RLHF: Reinforcement Learning from Human Feedback](<fine-tuning/RLHF Reinforcement Learning from Human Feedback.md>) · `fine-tuning` · chip-huyen
@@ -107,10 +157,16 @@
   Explains multi-token residual prediction as an inference acceleration technique for generating multiple tokens per step.
 - **2026-06-30** — [Benchmarking GLM-5.2 vs Opus 4.8 for real-world long-context retrieval](<../rag-retrieval/search/Benchmarking GLM-5.2 vs Opus 4.8 for real-world long-context retrieval.md>) · `search` · braintrust
   Benchmarks GLM-5.2 against Opus 4.8 on real-world long-context retrieval, focusing on retrieval quality under large-context conditions.
+- **2026-06-24** — [Frontier AI at a fraction of the cost: open-source worker agents with a closed-source advisor.](<../agents/multi-agent/Frontier AI at a fraction of the cost open-source worker agents with a closed-source advisor.md>) · `multi-agent` · fireworks
+  Explains a worker-advisor pattern that combines open-source worker agents with closed-source advisors for cost-quality tradeoffs.
+- **2026-06-24** — [Frontier-lab training infrastructure, now as a service](<../infra-platform/gpu-clusters/Frontier-lab training infrastructure, now as a service.md>) · `gpu-clusters` · fireworks
+  Describes training infrastructure as a service for frontier-lab workloads, including scale, orchestration, and reliability needs.
 - **2026-06-22** — [Achieve state-of-the-art inference latencies with speculative decoding](<../inference/optimization/Achieve state-of-the-art inference latencies with speculative decoding.md>) · `optimization` · modal
   Explains speculative decoding for lower inference latency, including draft-model tradeoffs and production serving considerations.
 - **2026-06-19** — [Speculation Is All You Need](<../inference/optimization/Speculation Is All You Need.md>) · `optimization` · modal
   Deep dive into speculative decoding and related techniques for improving LLM inference latency and throughput.
+- **2026-06-03** — [How Harvey & Fireworks Beat Closed Source on Cost + Quality](<../agents/multi-agent/How Harvey & Fireworks Beat Closed Source on Cost + Quality.md>) · `multi-agent` · fireworks
+  Case study of using open-source agents with frontier advisors to improve cost and quality versus closed-source baselines.
 - **2026-05-28** — [AI-native product localization](<../product-engineering/architecture/AI-native product localization.md>) · `architecture` · sierra
   Case study of AI-native product localization, covering workflows for translating and adapting product surfaces with model assistance.
 - **2026-05-18** — [Project Glasswing: what Mythos showed us](<../product-engineering/security/Project Glasswing what Mythos showed us.md>) · `security` · cloudflare-ai
@@ -135,6 +191,8 @@
   Explains voice simulations for testing agents under real-world speech conditions before production customer calls.
 - **2026-05-12** — [Meet the Voice Sommelier](<../product-engineering/ux-patterns/Meet the Voice Sommelier.md>) · `ux-patterns` · sierra
   Explains voice-agent experience design, including brand voice selection, vocal cues, conversation design, and metrics for acceptance and satisfaction.
+- **2026-04-27** — [DeepSeek V4 Pro: Validating Frontier Models for Production](<../evals-observability/evaluation/DeepSeek V4 Pro Validating Frontier Models for Production.md>) · `evaluation` · fireworks
+  Shows how to validate a frontier model for production using benchmark and workload-specific evaluation signals.
 - **2026-04-21** — [Boosting multimodal inference performance by >10% with a single Python dictionary](<../inference/optimization/Boosting multimodal inference performance by 10% with a single Python dictionary.md>) · `optimization` · modal
   Describes a small configuration change that improves multimodal inference performance, with attention to batching and serving settings.
 - **2026-04-20** — [Building an RL theorem-proving workflow on Modal](<reasoning/Building an RL theorem-proving workflow on Modal.md>) · `reasoning` · modal
@@ -143,6 +201,8 @@
   Perplexity's production lessons running Realtime-1.5 voice across Comet and Computer: feed context in 2,000-token chunks to avoid all-or-nothing truncation, get system/user/assistant role semantics right, standardize audio via a Rust SDK (48 kHz mono, WebRTC APM), and a 'voice lock' pattern for user pauses.
 - **2026-03-20** — [Designing delightful frontends with GPT-5.4 | OpenAI Developers](<../prompt-engineering/techniques/Designing delightful frontends with GPT-5.4 OpenAI Developers.md>) · `techniques` · openai-devs
   Prompting guide for steering GPT-5.4 toward non-generic frontend design: the model was trained for UI work, native image search/generation (e.g. prompt it to build mood boards first), and computer use for self-verification with tools like Playwright.
+- **2026-03-10** — [Training-Inference Parity in MoE Models: Where Numerics Drift](<../inference/optimization/Training-Inference Parity in MoE Models Where Numerics Drift.md>) · `optimization` · fireworks
+  Explains training-inference parity issues in MoE models and how numeric drift can affect production behavior.
 - **2026-03-06** — [Eval awareness in Claude Opus 4.6’s BrowseComp performance](<../evals-observability/evaluation/Eval awareness in Claude Opus 4.6’s BrowseComp performance.md>) · `evaluation` · anthropic-engineering
   Investigates how Claude Opus 4.6 recognizing it was being evaluated affected BrowseComp scores, and what eval-awareness implies for benchmark validity.
 - **2026-02-23** — [Run long horizon tasks with Codex | OpenAI Developers](<../agents/planning/Run long horizon tasks with Codex OpenAI Developers.md>) · `planning` · openai-devs
@@ -151,12 +211,18 @@
   Defines five pillars of AI model performance and how to measure quality beyond a single aggregate benchmark score.
 - **2026-02-11** — [CUGA Agent: From Benchmarks to Business Impact of IBM's Generalist Agent](<../agents/planning/CUGA Agent From Benchmarks to Business Impact of IBM's Generalist Agent.md>) · `planning` · arize
   Brief paper-reading note on IBM's CUGA generalist agent, connecting benchmark performance to business impact.
+- **2026-02-03** — [The Benchmark Gap: What It Takes to Ship Kimi K2.5](<../evals-observability/evaluation/The Benchmark Gap What It Takes to Ship Kimi K2.5.md>) · `evaluation` · fireworks
+  Explains the benchmark and quality gaps involved in shipping Kimi K2.5 for production workloads.
+- **2025-12-31** — [DPO as reinforcement learning](<fine-tuning/DPO as reinforcement learning.md>) · `fine-tuning` · fireworks
+  Connects DPO and RL-style training loops, explaining preference optimization as part of continuous model improvement.
 - **2025-12-30** — [OpenAI for Developers in 2025](<../industry/trends/OpenAI for Developers in 2025.md>) · `trends` · openai-devs
   Year-in-review of OpenAI's 2025 developer platform: reasoning converging from separate o1/o3/o4-mini lines into unified flagship models, multimodal I/O becoming default, agent building blocks (Responses API, Agents SDK, AgentKit), and GPT-5.2-Codex for long-horizon coding.
 - **2025-12-15** — [Updates for developers building with voice | OpenAI Developers](<releases/Updates for developers building with voice OpenAI Developers.md>) · `releases` · openai-devs
   Release notes for four December 2025 audio model snapshots (gpt-4o-mini-transcribe, gpt-4o-mini-tts, gpt-realtime-mini, gpt-audio-mini): lower word-error rates on noisy audio, fewer hallucinations during silence, better tool calling in the minis, and broader Custom Voices access at unchanged pricing.
 - **2025-11-04** — [One-second voice-to-voice latency with Modal, Pipecat, and open models](<../inference/optimization/One-second voice-to-voice latency with Modal, Pipecat, and open models.md>) · `optimization` · modal
   Builds a low-latency voice-to-voice system with open models, covering speech pipeline latency and serving architecture.
+- **2025-11-03** — [Vercel code fixing with open models, speculative decoding, and RFT](<../product-engineering/case-studies/Vercel code fixing with open models speculative decoding and RFT.md>) · `case-studies` · fireworks
+  Case study of improving Vercel code-fixing outputs with open models, speculative decoding, and reinforcement fine-tuning.
 - **2025-10-13** — [State of LLMs on the Application Layer](<../industry/trends/State of LLMs on the Application Layer.md>) · `trends` · langfuse
   Application-layer snapshot of LLM usage and model trends, useful for understanding production model adoption and quality/cost tradeoffs.
 - **2025-09-22** — [Why we built the Responses API | OpenAI Developers](<../agents/tool-use/Why we built the Responses API OpenAI Developers.md>) · `tool-use` · openai-devs
@@ -165,18 +231,38 @@
   Summarizes RWESummary, a healthcare-focused framework for choosing LLMs to summarize real-world evidence studies safely and reliably.
 - **2025-09-12** — [Developer notes on the Realtime API | OpenAI Developers](<releases/Developer notes on the Realtime API OpenAI Developers.md>) · `releases` · openai-devs
   Developer notes on the Realtime API GA and the gpt-realtime speech-to-speech model: beta-to-GA interface migration, new marin/cedar voices, and advice to rewrite prompts because instruction-following improved enough that literal instructions are now honored.
+- **2025-08-15** — [Your AI Benchmark is Lying to You. Here's How We Caught It](<../evals-observability/evaluation/Your AI Benchmark is Lying to You. Here's How We Caught It.md>) · `evaluation` · fireworks
+  Explains how benchmark methodology can mislead model selection and how to evaluate models against real workload constraints.
+- **2025-08-01** — [Kimi K2: Architecture, Capabilities & Benchmarks](<reasoning/Kimi K2 Architecture, Capabilities & Benchmarks.md>) · `reasoning` · fireworks
+  Explains Kimi K2 architecture, capabilities, and benchmark behavior for agent and reasoning workloads.
+- **2025-08-01** — [Qwen3 Instruct vs Thinking vs Coder: Model Selection Guide](<reasoning/Qwen3 Instruct vs Thinking vs Coder Model Selection Guide.md>) · `reasoning` · fireworks
+  Compares Qwen3 Instruct, Thinking, and Coder variants for model selection across reasoning and coding tasks.
 - **2025-07-30** — [A Watermark for Large Language Models](<../product-engineering/security/A Watermark for Large Language Models.md>) · `security` · arize
   Summary of a paper-reading session on watermarking generated text from large language models, including detection goals and implications for responsible deployment.
+- **2025-07-15** — [MuonClip and Kimi K2 training stability](<reasoning/MuonClip and Kimi K2 training stability.md>) · `reasoning` · fireworks
+  Explains MuonClip as a stability technique for large-scale Kimi-style model training.
 - **2025-07-11** — [Building with Grok 4](<releases/Building with Grok 4.md>) · `releases` · braintrust
   Notes on building with Grok 4, including model behavior, practical integration considerations, and evaluation needs for new model adoption.
+- **2025-07-10** — [Using Model-as-a-Judge for Reward in Reinforcement Finetuning](<../evals-observability/evaluation/Using Model-as-a-Judge for Reward in Reinforcement Finetuning.md>) · `evaluation` · fireworks
+  Explains using model-as-judge rewards for reinforcement fine-tuning and the evaluation risks involved.
 - **2025-07-02** — [How we used evals and inference-time compute scaling to generate beautiful QR codes that actually work](<../evals-observability/evaluation/How we used evals and inference-time compute scaling to generate beautiful QR codes that actually work.md>) · `evaluation` · modal
   Case study using evals and inference-time compute scaling to generate QR codes that satisfy visual and functional constraints.
 - **2025-06-18** — [Run FLUX.1-dev three times faster](<../inference/optimization/Run FLUX.1-dev three times faster.md>) · `optimization` · modal
   Explains optimizations for running FLUX.1-dev faster, including inference configuration and image-model serving tradeoffs.
+- **2025-06-09** — [Reinforcement Fine Tuning: Train expert open models to surpass closed frontier models](<fine-tuning/Reinforcement Fine Tuning Train expert open models to surpass closed frontier models.md>) · `fine-tuning` · fireworks
+  Introduces reinforcement fine-tuning for training expert open models beyond supervised baselines.
 - **2025-03-13** — [Hugging Face and Langfuse: 5 Ways to use them Together](<../infra-platform/deployment/Hugging Face and Langfuse 5 Ways to use them Together.md>) · `deployment` · langfuse
   Shows ways to combine Hugging Face workflows with Langfuse for model experimentation, tracing, evaluation, and deployment feedback loops.
+- **2025-03-12** — [Fine-Tuning DeepSeek v3 & R1 to optimize quality, latency, & cost](<fine-tuning/Fine-Tuning DeepSeek v3 & R1 to optimize quality, latency, & cost.md>) · `fine-tuning` · fireworks
+  Guide to fine-tuning DeepSeek V3 and R1 models while balancing quality, latency, and cost.
 - **2025-02-26** — [Evaluating Large Language Models With OpenEvals](<../evals-observability/evaluation/Evaluating Large Language Models With OpenEvals.md>) · `evaluation` · langchain
   Guide to evaluating large language models with OpenEvals, including reusable evaluators and model comparison workflows.
+- **2025-02-01** — [From text to task: Constrained generation for structured extraction in R1](<../prompt-engineering/structured-output/From text to task Constrained generation for structured extraction in R1.md>) · `structured-output` · fireworks
+  Explains constrained generation for structured extraction with reasoning models and schema-bound outputs.
+- **2025-01-31** — [Distillation with Reasoning: Can DeepSeek R1 Teach Better Than Humans?](<fine-tuning/Distillation with Reasoning Can DeepSeek R1 Teach Better Than Humans.md>) · `fine-tuning` · fireworks
+  Discusses distilling reasoning behavior from DeepSeek R1 and the limits of teacher-model supervision.
+- **2025-01-24** — [DeepSeek-R1 Overview: Features, Capabilities, Parameters](<reasoning/DeepSeek-R1 Overview Features, Capabilities, Parameters.md>) · `reasoning` · fireworks
+  Deep dive into DeepSeek-R1 capabilities, parameters, and reasoning behavior for production model selection.
 - **2024-12-04** — [What to do when a new AI model comes out](<../evals-observability/evaluation/What to do when a new AI model comes out.md>) · `evaluation` · braintrust
   Playbook for responding when a new AI model ships: run targeted evals, compare cost and quality, inspect regressions, and decide rollout strategy.
 - **2024-09-30** — [Best Practices for Selecting the Right Model for LLM-as-a-Judge Evaluations](<../evals-observability/evaluation/Best Practices for Selecting the Right Model for LLM-as-a-Judge Evaluations.md>) · `evaluation` · arize
@@ -195,6 +281,8 @@
   Practical example of fine-tuning Stable Diffusion for a custom image-generation domain using Modal infrastructure.
 - **2024-05-15** — [Pairwise Evaluations with LangSmith](<../evals-observability/evaluation/Pairwise Evaluations with LangSmith.md>) · `evaluation` · langchain
   Explains pairwise evaluations with LangSmith for comparing model or prompt outputs using preference-style scoring.
+- **2024-05-08** — [Code Generation with Large Language Models - Fireworks AI Take](<../agents/tool-use/Code Generation with Large Language Models - Fireworks AI Take.md>) · `tool-use` · fireworks
+  Discusses code-generation copilots with LLMs, including model behavior, latency, and developer workflow considerations.
 - **2024-04-04** — [Demystifying Amazon's Chronos: Learning the Language of Time Series](<releases/Demystifying Amazon's Chronos Learning the Language of Time Series.md>) · `releases` · arize
   Deep dive into Amazon Chronos for time-series modeling, including model behavior and evaluation context.
 - **2024-03-26** — [Anthropic Claude 3](<releases/Anthropic Claude 3.md>) · `releases` · arize
