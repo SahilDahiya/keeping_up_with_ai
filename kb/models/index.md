@@ -1,9 +1,11 @@
 # models
 
-164 articles.
+177 articles.
 
 - **2026-07-10** — [Evaluating the GPT-5.6 family](<benchmarks/Evaluating the GPT-5.6 family.md>) · `benchmarks` · braintrust
   Evaluates the GPT-5.6 model family and presents a decision map for choosing models based on quality, cost, and task requirements.
+- **2026-07-10** — [[AINews] OpenAI launches GPT 5.6 Sol/Terra/Luna, Codex becomes ChatGPT superapp](<releases/[AINews] OpenAI launches GPT 5.6 SolTerraLuna, Codex becomes ChatGPT superapp.md>) · `releases` · latent-space
+  Covers GPT-5.6 model releases and Codex becoming a ChatGPT superapp, relevant to coding-agent product direction.
 - **2026-07-09** — [Evaluating speech-to-text models](<multimodal/Evaluating speech-to-text models.md>) · `multimodal` · braintrust
   Evaluates speech-to-text models for voice AI workflows, covering datasets, scoring, and tradeoffs in transcription quality.
 - **2026-07-09** — [The new GPT-5.6 family: Luna, Terra, Sol](<releases/The new GPT-5.6 family Luna, Terra, Sol.md>) · `releases` · simon-willison
@@ -24,6 +26,8 @@
   Discusses open models, model labs versus agent labs, and what remains hard to train directly.
 - **2026-06-09** — [[AINews] FrontierCode: Benchmarking for Code Quality over Slop](<benchmarks/[AINews] FrontierCode Benchmarking for Code Quality over Slop.md>) · `benchmarks` · latent-space
   Covers FrontierCode and the need for code-quality benchmarks that resist superficial generated-code quality.
+- **2026-06-03** — [🔬Scaling Past Informal AI - Carina Hong, Axiom Math](<reasoning/🔬Scaling Past Informal AI - Carina Hong, Axiom Math.md>) · `reasoning` · latent-space
+  Covers informal-to-formal math AI and the scaling problems around proof, reasoning, and verification.
 - **2026-06-02** — [The end of fine-tuning: Why evals, context, and traces matter more](<fine-tuning/The end of fine-tuning Why evals, context, and traces matter more.md>) · `fine-tuning` · arize
   Argues that evals, context, and traces can reduce the need for fine-tuning in many production AI workflows.
 - **2026-05-29** — [How Together AI built a fast speech-to-text stack](<multimodal/How Together AI built a fast speech-to-text stack.md>) · `multimodal` · together
@@ -34,12 +38,16 @@
   Argues that reinforcement learning progress depends heavily on infrastructure for scheduling, iteration, and scalable experiments.
 - **2026-05-26** — [How to ship a local LLM that matches frontier LLMs with evals and prompt engineering](<fine-tuning/How to ship a local LLM that matches frontier LLMs with evals and prompt engineering.md>) · `fine-tuning` · arize
   Explains how evals and prompt engineering can make smaller local models viable substitutes for frontier models on constrained tasks.
+- **2026-05-21** — [[AINews] OpenAI GPT-next disproves 80 year old Erdős planar unit distance problem for under $1000](<reasoning/[AINews] OpenAI GPT-next disproves 80 year old Erdős planar unit distance problem for under $1000.md>) · `reasoning` · latent-space
+  Covers a GPT-next mathematical discovery claim and what it suggests about reasoning-model capability and verification.
 - **2026-05-19** — [Scaling reinforcement learning at Applied Compute](<fine-tuning/Scaling reinforcement learning at Applied Compute.md>) · `fine-tuning` · modal
   Case study on scaling reinforcement learning workloads with elastic GPU infrastructure and faster experiment iteration.
 - **2026-05-18** — [Voice AI is only as good as what it hears](<multimodal/Voice AI is only as good as what it hears.md>) · `multimodal` · sierra
   Explains why voice-agent quality depends on transcription accuracy and how hearing failures propagate into agent behavior.
 - **2026-05-14** — [Cost-efficient, high-performance TTS with Qwen3-TTS](<multimodal/Cost-efficient, high-performance TTS with Qwen3-TTS.md>) · `multimodal` · baseten
   Describes cost-efficient high-performance Qwen3-TTS serving for text-to-speech workloads.
+- **2026-05-13** — [[AINews] The End of Finetuning](<fine-tuning/[AINews] The End of Finetuning.md>) · `fine-tuning` · latent-space
+  Argues that context, tooling, and eval loops can displace fine-tuning for many applied AI use cases.
 - **2026-05-12** — [Models got an order of magnitude better at following instructions in one year](<benchmarks/Models got an order of magnitude better at following instructions in one year.md>) · `benchmarks` · arize
   Analyzes instruction-following benchmark changes and what they imply for tracking model quality over time.
 - **2026-05-12** — [Mu-Bench: an open multilingual transcription benchmark](<benchmarks/Mu-Bench an open multilingual transcription benchmark.md>) · `benchmarks` · sierra
@@ -54,10 +62,14 @@
   Launch writeup for Sierra voice agents with useful architecture details on interruptions, latency, call-center integration, escalation, and multi-channel agent reuse.
 - **2026-05-12** — [Visual Attachments: A new dimension for chat agents](<multimodal/Visual Attachments A new dimension for chat agents.md>) · `multimodal` · sierra
   Covers visual attachments in chat agents and how images expand support-agent context and user interaction patterns.
+- **2026-05-12** — [[AINews] Thinking Machines' Native Interaction Models - TML-Interaction-Small 276B-A12B - advances SOTA Realtime Voice and kills standard VAD](<multimodal/[AINews] Thinking Machines' Native Interaction Models - TML-Interaction-Small 276B-A12B - advances SOTA Realtime Voice and kills standard VAD.md>) · `multimodal` · latent-space
+  Covers native interaction models for realtime voice and why VAD-free designs matter for conversational latency.
 - **2026-05-12** — [Constellation of models: the architecture powering Sierra's agents](<reasoning/Constellation of models the architecture powering Sierra's agents.md>) · `reasoning` · sierra
   Describes a constellation-of-models architecture for powering agents, combining multiple models and routing behavior around task needs.
 - **2026-05-08** — [[AINews] GPT-Realtime-2, -Translate, and -Whisper: new SOTA realtime voice APIs](<multimodal/[AINews] GPT-Realtime-2, -Translate, and -Whisper new SOTA realtime voice APIs.md>) · `multimodal` · latent-space
   Covers realtime voice APIs, translation, and speech model improvements relevant to multimodal product engineering.
+- **2026-04-22** — [[AINews] OpenAI launches GPT-Image-2](<multimodal/[AINews] OpenAI launches GPT-Image-2.md>) · `multimodal` · latent-space
+  Covers GPT-Image-2 and image generation capability movement in multimodal model products.
 - **2026-04-20** — [Building an RL theorem-proving workflow on Modal](<reasoning/Building an RL theorem-proving workflow on Modal.md>) · `reasoning` · modal
   Walks through an RL theorem-proving workflow, connecting reasoning tasks, training loops, and scalable remote execution.
 - **2026-04-15** — [Parcae: Doing more with fewer parameters using stable looped models](<reasoning/Parcae Doing more with fewer parameters using stable looped models.md>) · `reasoning` · together
@@ -74,6 +86,8 @@
   Argues that frontier reinforcement learning can be cost-effective with the right infrastructure and training-loop design.
 - **2026-03-17** — [Mamba-3](<reasoning/Mamba-3.md>) · `reasoning` · together
   Describes Mamba-3 and its implications for efficient sequence modeling.
+- **2026-03-11** — [[AINews] Yann LeCun’s AMI Labs launches with a $1B seed @ $4.5B to build world models around JEPA](<reasoning/[AINews] Yann LeCun’s AMI Labs launches with a $1B seed @ $4.5B to build world models around JEPA.md>) · `reasoning` · latent-space
+  Covers AMI Labs and world-model approaches, relevant to model architectures for agents beyond pure text prediction.
 - **2026-03-06** — [[AINews] GPT 5.4: SOTA Knowledge Work -and- Coding -and- CUA Model, OpenAI is so very back](<benchmarks/[AINews] GPT 5.4 SOTA Knowledge Work -and- Coding -and- CUA Model, OpenAI is so very back.md>) · `benchmarks` · latent-space
   Covers GPT-5.4 capability claims across knowledge work, coding, and computer-use automation.
 - **2026-03-05** — [When the Call Runs Too Long: Modeling Outcomes for Long Conversations](<reasoning/When the Call Runs Too Long Modeling Outcomes for Long Conversations.md>) · `reasoning` · cresta
@@ -82,6 +96,10 @@
   Surveys DeepSeek model variants with production caveats around serving, reasoning behavior, and deployment tradeoffs.
 - **2026-02-23** — [How speech models fail where it matters the most and what to do about it](<multimodal/How speech models fail where it matters the most and what to do about it.md>) · `multimodal` · together
   Analyzes speech model failure modes that matter for production applications.
+- **2026-02-12** — [[AINews] Z.ai GLM-5: New SOTA Open Weights LLM](<releases/[AINews] Z.ai GLM-5 New SOTA Open Weights LLM.md>) · `releases` · latent-space
+  Covers GLM-5 as an open-weights model release and tracks benchmark/capability claims for open models.
+- **2026-02-11** — [[AINews] Qwen Image 2 and Seedance 2](<multimodal/[AINews] Qwen Image 2 and Seedance 2.md>) · `multimodal` · latent-space
+  Covers Qwen Image 2 and Seedance 2, useful for tracking image and video model capability trends.
 - **2026-02-07** — [Experts Have World Models. LLMs Have Word Models.](<reasoning/Experts Have World Models. LLMs Have Word Models.md>) · `reasoning` · latent-space
   Explores world models versus word models and why adversarial reasoning exposes limits in current LLM behavior.
 - **2026-02-06** — [[AINews] OpenAI and Anthropic go to war: Claude Opus 4.6 vs GPT 5.3 Codex](<benchmarks/[AINews] OpenAI and Anthropic go to war Claude Opus 4.6 vs GPT 5.3 Codex.md>) · `benchmarks` · latent-space
@@ -90,6 +108,8 @@
   Explains fine-tuning open LLM judges to outperform a frontier judge model.
 - **2026-01-28** — [[AINews] Moonshot Kimi K2.5 - Beats Sonnet 4.5 at half the cost, SOTA Open Model, first Native Image+Video, 100 parallel Agent Swarm manager](<releases/[AINews] Moonshot Kimi K2.5 - Beats Sonnet 4.5 at half the cost, SOTA Open Model, first Native Image+Video, 100 parallel Agent Swarm manager.md>) · `releases` · latent-space
   Covers Kimi K2.5 open-model capability claims, including native multimodal behavior and parallel agent-swarm management.
+- **2026-01-08** — [Artificial Analysis: Independent LLM Evals as a Service — with George Cameron and Micah-Hill Smith](<benchmarks/Artificial Analysis Independent LLM Evals as a Service — with George Cameron and Micah-Hill Smith.md>) · `benchmarks` · latent-space
+  Interview on Artificial Analysis and independent LLM evals as a service, covering benchmark methodology and provider comparison.
 - **2025-12-31** — [DPO as reinforcement learning](<fine-tuning/DPO as reinforcement learning.md>) · `fine-tuning` · fireworks
   Connects DPO and RL-style training loops, explaining preference optimization as part of continuous model improvement.
 - **2025-12-19** — [Evaluating AI Voices – What Does It Mean to Sound “Good”?](<multimodal/Evaluating AI Voices – What Does It Mean to Sound “Good”.md>) · `multimodal` · cresta
@@ -230,6 +250,8 @@
   Technical overview of Meta's Llama 3 model family, including architecture, capabilities, and benchmark interpretation.
 - **2024-07-25** — [Deploying custom ComfyUI workflows as APIs](<multimodal/Deploying custom ComfyUI workflows as APIs.md>) · `multimodal` · baseten
   Shows how to deploy custom ComfyUI image-generation workflows behind API endpoints.
+- **2024-07-12** — [Benchmarks 201: Why Leaderboards > Arenas >> LLM-as-Judge](<benchmarks/Benchmarks 201 Why Leaderboards Arenas LLM-as-Judge.md>) · `benchmarks` · latent-space
+  Advanced benchmark guide comparing leaderboards, arenas, and LLM-as-judge approaches.
 - **2024-07-12** — [Fine-tuning Llama-3 toward GPT-4 performance at lower cost](<fine-tuning/Fine-tuning Llama-3 toward GPT-4 performance at lower cost.md>) · `fine-tuning` · together
   Shows fine-tuning Llama 3 toward GPT-4-like task performance at lower cost.
 - **2024-06-14** — [Comparing few-step image generation models](<benchmarks/Comparing few-step image generation models.md>) · `benchmarks` · baseten
@@ -270,6 +292,8 @@
   Technical overview of Mistral and Mixtral model behavior, performance, and benchmark positioning.
 - **2023-12-13** — [Playground v2 vs Stable Diffusion XL 1.0 for text-to-image generation](<benchmarks/Playground v2 vs Stable Diffusion XL 1.0 for text-to-image generation.md>) · `benchmarks` · baseten
   Compares Playground v2 and Stable Diffusion XL for text-to-image generation quality and serving use cases.
+- **2023-12-08** — [The Busy Person's Intro to Finetuning & Open Source AI - Wing Lian, Axolotl](<fine-tuning/The Busy Person's Intro to Finetuning & Open Source AI - Wing Lian, Axolotl.md>) · `fine-tuning` · latent-space
+  Long-form introduction to fine-tuning and open-source AI using Axolotl, covering practical training workflows.
 - **2023-12-08** — [How to serve your ComfyUI model behind an API endpoint](<multimodal/How to serve your ComfyUI model behind an API endpoint.md>) · `multimodal` · baseten
   Shows how to serve a ComfyUI model behind an API endpoint for production image workflows.
 - **2023-12-08** — [StripedHyena-7B and efficient architectures beyond Transformers](<reasoning/StripedHyena-7B and efficient architectures beyond Transformers.md>) · `reasoning` · together
@@ -320,6 +344,8 @@
   Summarizes RLHF concepts from OpenAI and how human feedback changes model behavior during post-training.
 - **2023-05-02** — [RLHF: Reinforcement Learning from Human Feedback](<fine-tuning/RLHF Reinforcement Learning from Human Feedback.md>) · `fine-tuning` · chip-huyen
   Explains the RLHF pipeline from preference data through reward modeling and policy optimization, including why human feedback changes model behavior and where evaluation matters.
+- **2023-04-07** — [AI Fundamentals: Benchmarks 101](<benchmarks/AI Fundamentals Benchmarks 101.md>) · `benchmarks` · latent-space
+  Foundational guide to model benchmarks and how AI engineers should interpret benchmark results.
 - **2023-03-29** — [Hungry Hungry Hippos (H3) and Language Modeling with State Space Models](<reasoning/Hungry Hungry Hippos (H3) and Language Modeling with State Space Models.md>) · `reasoning` · arize
   Explains H3/state-space model ideas as alternatives to standard attention and why they matter for sequence modeling efficiency.
 - **2023-01-23** — [FlashConv: speeding up state space models](<reasoning/FlashConv speeding up state space models.md>) · `reasoning` · together
@@ -355,12 +381,18 @@
   Deep dive into speculative decoding and related techniques for improving LLM inference latency and throughput.
 - **2026-06-17** — [Two labs started dreaming, and they built two different architectures](<reasoning/Two labs started dreaming, and they built two different architectures.md>) · `reasoning` · arize
   Compares two different AI architecture directions from research labs, focusing on design choices and implications.
+- **2026-06-05** — [How to Stop Shipping Low-Quality RL Environments (with Examples)](<../evals-observability/testing/How to Stop Shipping Low-Quality RL Environments (with Examples).md>) · `testing` · latent-space
+  Explains how low-quality RL environments damage training and gives examples of better environment design.
+- **2026-06-04** — [Reality: The Final Eval — Lukas Petersson and Axel Backlund of Andon Labs](<../evals-observability/evaluation/Reality The Final Eval — Lukas Petersson and Axel Backlund of Andon Labs.md>) · `evaluation` · latent-space
+  Discusses reality as the final eval and how Andon Labs thinks about measuring AI systems against real-world tasks.
 - **2026-06-03** — [How Harvey & Fireworks Beat Closed Source on Cost + Quality](<../agents/multi-agent/How Harvey & Fireworks Beat Closed Source on Cost + Quality.md>) · `multi-agent` · fireworks
   Case study of using open-source agents with frontier advisors to improve cost and quality versus closed-source baselines.
 - **2026-06-02** — [MiniMax-M3 efficient 1M-token multimodal serving](<../inference/serving/MiniMax-M3 efficient 1M-token multimodal serving.md>) · `serving` · together
   Covers efficient MiniMax-M3 serving for million-token context and multimodal workloads.
 - **2026-05-28** — [AI-native product localization](<../product-engineering/architecture/AI-native product localization.md>) · `architecture` · sierra
   Case study of AI-native product localization, covering workflows for translating and adapting product surfaces with model assistance.
+- **2026-05-21** — [[AINews] OpenAI GPT-next disproves 80 year old Erdős planar unit distance problem for under $1000](<reasoning/[AINews] OpenAI GPT-next disproves 80 year old Erdős planar unit distance problem for under $1000.md>) · `reasoning` · latent-space
+  Covers a GPT-next mathematical discovery claim and what it suggests about reasoning-model capability and verification.
 - **2026-05-20** — [What we learned testing 7 models under the same agent harness](<../evals-observability/testing/What we learned testing 7 models under the same agent harness.md>) · `testing` · arize
   Compares seven models under a shared agent harness, showing how harness-controlled tests expose model behavior differences.
 - **2026-05-18** — [Sub-second image generation with Flux.2 and Qwen-Image](<../inference/optimization/Sub-second image generation with Flux.2 and Qwen-Image.md>) · `optimization` · baseten
@@ -417,10 +449,14 @@
   Stress test of long-horizon agentic coding: GPT-5.3-Codex at Extra High reasoning ran ~25 hours uninterrupted, consuming ~13M tokens and generating ~30k lines to build a design tool from a blank repo, framed by METR's ~7-month doubling time for agent task horizons.
 - **2026-02-19** — [Consistency diffusion language models: Up to 14x faster inference without sacrificing quality](<../inference/optimization/Consistency diffusion language models Up to 14x faster inference without sacrificing quality.md>) · `optimization` · together
   Explains consistency diffusion language models for faster inference without large quality loss.
+- **2026-02-12** — [[AINews] Z.ai GLM-5: New SOTA Open Weights LLM](<releases/[AINews] Z.ai GLM-5 New SOTA Open Weights LLM.md>) · `releases` · latent-space
+  Covers GLM-5 as an open-weights model release and tracks benchmark/capability claims for open models.
 - **2026-02-12** — [The 5 pillars of AI model performance](<../evals-observability/evaluation/The 5 pillars of AI model performance.md>) · `evaluation` · braintrust
   Defines five pillars of AI model performance and how to measure quality beyond a single aggregate benchmark score.
 - **2026-02-11** — [CUGA Agent: From Benchmarks to Business Impact of IBM's Generalist Agent](<../agents/planning/CUGA Agent From Benchmarks to Business Impact of IBM's Generalist Agent.md>) · `planning` · arize
   Brief paper-reading note on IBM's CUGA generalist agent, connecting benchmark performance to business impact.
+- **2026-02-11** — [[AINews] Qwen Image 2 and Seedance 2](<multimodal/[AINews] Qwen Image 2 and Seedance 2.md>) · `multimodal` · latent-space
+  Covers Qwen Image 2 and Seedance 2, useful for tracking image and video model capability trends.
 - **2026-02-11** — [How we built the fastest Kimi K2.5 on Artificial Analysis](<../inference/optimization/How we built the fastest Kimi K2.5 on Artificial Analysis.md>) · `optimization` · baseten
   Explains optimizations behind fast Kimi K2.5 serving on Artificial Analysis.
 - **2026-02-06** — [What do LLMs think when you don't tell them what to think about?](<../evals-observability/evaluation/What do LLMs think when you don't tell them what to think about.md>) · `evaluation` · together

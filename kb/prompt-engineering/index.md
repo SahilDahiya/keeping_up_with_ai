@@ -1,13 +1,17 @@
 # prompt-engineering
 
-21 articles.
+23 articles.
 
 - **2026-06-26** — [Prompt Caching with Deep Agents](<context-engineering/Prompt Caching with Deep Agents.md>) · `context-engineering` · langchain
   Explains prompt caching for Deep Agents and how cache-aware context design reduces latency and cost for repeated agent work.
+- **2026-06-18** — [The Professor of Outputmaxxing — Anjney Midha, AMP](<techniques/The Professor of Outputmaxxing — Anjney Midha, AMP.md>) · `techniques` · latent-space
+  Covers outputmaxxing and how prompt/product choices can systematically raise the quality of model outputs.
 - **2026-05-12** — [Context engineering: the key to great agents](<context-engineering/Context engineering the key to great agents.md>) · `context-engineering` · sierra
   Explains context engineering for agents, including how the right knowledge, state, and instructions shape agent quality.
 - **2026-04-30** — [Prompt templates as configs, not code](<context-engineering/Prompt templates as configs, not code.md>) · `context-engineering` · arize
   Argues for treating prompt templates as configuration, improving iteration, versioning, and deployment safety.
+- **2026-04-23** — [[AINews] Tasteful Tokenmaxxing](<context-engineering/[AINews] Tasteful Tokenmaxxing.md>) · `context-engineering` · latent-space
+  Explores tokenmaxxing as a context-engineering pattern and the tradeoff between more context and better taste.
 - **2026-03-20** — [Designing delightful frontends with GPT-5.4 | OpenAI Developers](<techniques/Designing delightful frontends with GPT-5.4 OpenAI Developers.md>) · `techniques` · openai-devs
   Prompting guide for steering GPT-5.4 toward non-generic frontend design: the model was trained for UI work, native image search/generation (e.g. prompt it to build mood boards first), and computer use for self-verification with tools like Playwright.
 - **2026-03-14** — [[AINews] Context Drought](<context-engineering/[AINews] Context Drought.md>) · `context-engineering` · latent-space
@@ -49,6 +53,8 @@
 
 - **2026-05-28** — [Claude Code: Best practices for agentic coding](<../agents/tool-use/Claude Code Best practices for agentic coding.md>) · `tool-use` · anthropic-engineering
   Practical workflows for agentic coding with Claude Code: CLAUDE.md setup, explore-plan-code loops, test-driven iteration, headless automation, and multi-Claude patterns.
+- **2026-05-13** — [[AINews] The End of Finetuning](<../models/fine-tuning/[AINews] The End of Finetuning.md>) · `fine-tuning` · latent-space
+  Argues that context, tooling, and eval loops can displace fine-tuning for many applied AI use cases.
 - **2026-05-11** — [Serving DeepSeek-V4: why million-token context is an inference systems problem](<../inference/serving/Serving DeepSeek-V4 why million-token context is an inference systems problem.md>) · `serving` · together
   Explains why million-token context serving is primarily an inference-systems problem.
 - **2026-04-24** — [How we fixed prompt injection for all models on Fireworks](<../product-engineering/security/How we fixed prompt injection for all models on Fireworks.md>) · `security` · fireworks

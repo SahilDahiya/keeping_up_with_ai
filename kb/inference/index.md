@@ -1,6 +1,6 @@
 # inference
 
-104 articles.
+107 articles.
 
 - **2026-07-10** — [Optimizing MiniMax M3 Sparse Attention on NVIDIA Blackwell](<optimization/Optimizing MiniMax M3 Sparse Attention on NVIDIA Blackwell.md>) · `optimization` · fireworks
   Deep dive into sparse-attention kernel optimization for MiniMax M3 on NVIDIA Blackwell hardware.
@@ -40,6 +40,8 @@
   Explains DFlash as an optimization for faster LLM inference.
 - **2026-05-04** — [Foundational research powering efficient inference at scale](<optimization/Foundational research powering efficient inference at scale.md>) · `optimization` · together
   Summarizes research lines behind efficient inference at production scale.
+- **2026-04-30** — [[AINews] The Inference Inflection](<serving/[AINews] The Inference Inflection.md>) · `serving` · latent-space
+  Covers an inference-market inflection and how serving economics shape model and product choices.
 - **2026-04-24** — [Accelerate RL rollouts by up to 50% with distribution-aware speculative decoding](<optimization/Accelerate RL rollouts by up to 50% with distribution-aware speculative decoding.md>) · `optimization` · together
   Explains distribution-aware speculative decoding for faster RL rollouts.
 - **2026-04-21** — [Boosting multimodal inference performance by >10% with a single Python dictionary](<optimization/Boosting multimodal inference performance by 10% with a single Python dictionary.md>) · `optimization` · modal
@@ -62,6 +64,8 @@
   Covers FlashAttention-4 algorithm and kernel co-design for asymmetric hardware scaling.
 - **2026-03-04** — [Cache-aware prefill-decode disaggregation for long-context LLM serving](<serving/Cache-aware prefill-decode disaggregation for long-context LLM serving.md>) · `serving` · together
   Explains cache-aware prefill/decode disaggregation for faster long-context LLM serving.
+- **2026-02-21** — [[AINews] The Custom ASIC Thesis](<hardware/[AINews] The Custom ASIC Thesis.md>) · `hardware` · latent-space
+  Summarizes the custom ASIC thesis for AI infrastructure and why specialized chips matter for inference economics.
 - **2026-02-19** — [Consistency diffusion language models: Up to 14x faster inference without sacrificing quality](<optimization/Consistency diffusion language models Up to 14x faster inference without sacrificing quality.md>) · `optimization` · together
   Explains consistency diffusion language models for faster inference without large quality loss.
 - **2026-02-18** — [4-Bit Quantization for Inference Optimization](<quantization/4-Bit Quantization for Inference Optimization.md>) · `quantization` · baseten
@@ -124,6 +128,8 @@
   Describes Blackwell BF16 training acceleration with the Together Kernel Collection.
 - **2025-02-13** — [How multi-node inference works for massive LLMs like DeepSeek-R1](<serving/How multi-node inference works for massive LLMs like DeepSeek-R1.md>) · `serving` · baseten
   Explains multi-node inference for very large LLMs such as DeepSeek-R1.
+- **2025-01-19** — [Everything you need to run Mission Critical Inference (ft. DeepSeek v3 + SGLang)](<serving/Everything you need to run Mission Critical Inference (ft. DeepSeek v3 + SGLang).md>) · `serving` · latent-space
+  Covers requirements for mission-critical inference, including serving stacks, reliability, and DeepSeek/SGLang deployment context.
 - **2025-01-09** — [Driving model performance optimization: 2024 highlights](<optimization/Driving model performance optimization 2024 highlights.md>) · `optimization` · baseten
   Summarizes concrete model-performance optimization work across inference serving, batching, and hardware.
 - **2024-12-19** — [A quick introduction to speculative decoding](<optimization/A quick introduction to speculative decoding.md>) · `optimization` · baseten
@@ -239,6 +245,8 @@
   Benchmarks inference at scale for coding-agent workloads.
 - **2026-05-14** — [Cost-efficient, high-performance TTS with Qwen3-TTS](<../models/multimodal/Cost-efficient, high-performance TTS with Qwen3-TTS.md>) · `multimodal` · baseten
   Describes cost-efficient high-performance Qwen3-TTS serving for text-to-speech workloads.
+- **2026-05-12** — [[AINews] Thinking Machines' Native Interaction Models - TML-Interaction-Small 276B-A12B - advances SOTA Realtime Voice and kills standard VAD](<../models/multimodal/[AINews] Thinking Machines' Native Interaction Models - TML-Interaction-Small 276B-A12B - advances SOTA Realtime Voice and kills standard VAD.md>) · `multimodal` · latent-space
+  Covers native interaction models for realtime voice and why VAD-free designs matter for conversational latency.
 - **2026-05-12** — [Constellation of models: the architecture powering Sierra's agents](<../models/reasoning/Constellation of models the architecture powering Sierra's agents.md>) · `reasoning` · sierra
   Describes a constellation-of-models architecture for powering agents, combining multiple models and routing behavior around task needs.
 - **2026-05-12** — [How we achieved truly serverless GPUs](<../infra-platform/gpu-clusters/How we achieved truly serverless GPUs.md>) · `gpu-clusters` · modal

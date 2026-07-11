@@ -1,6 +1,6 @@
 # evals-observability
 
-204 articles.
+209 articles.
 
 - **2026-07-07** — [Improving Agents is a Data Mining Problem](<monitoring/Improving Agents is a Data Mining Problem.md>) · `monitoring` · langchain
   Argues that improving agents is a data-mining problem over traces, failures, feedback, and recurring behavioral patterns.
@@ -32,6 +32,10 @@
   Explains how to bring production agent traces, evaluations, and annotations from Arize into Databricks Unity Catalog for queryable analysis.
 - **2026-06-09** — [The Data Comes First: Mining Real Conversations for Test Coverage](<testing/The Data Comes First Mining Real Conversations for Test Coverage.md>) · `testing` · cresta
   Explains how real conversation data can be mined to create better test coverage for AI agents.
+- **2026-06-05** — [How to Stop Shipping Low-Quality RL Environments (with Examples)](<testing/How to Stop Shipping Low-Quality RL Environments (with Examples).md>) · `testing` · latent-space
+  Explains how low-quality RL environments damage training and gives examples of better environment design.
+- **2026-06-04** — [Reality: The Final Eval — Lukas Petersson and Axel Backlund of Andon Labs](<evaluation/Reality The Final Eval — Lukas Petersson and Axel Backlund of Andon Labs.md>) · `evaluation` · latent-space
+  Discusses reality as the final eval and how Andon Labs thinks about measuring AI systems against real-world tasks.
 - **2026-06-04** — [Building the AI factory for self-improving agents: What’s new in Arize AX](<monitoring/Building the AI factory for self-improving agents What’s new in Arize AX.md>) · `monitoring` · arize
   Introduces Arize AX updates aimed at building an AI factory for self-improving agents through traces, evals, and feedback loops.
 - **2026-06-04** — [Introducing AI Agent Testing 2.0: Confidence at Launch, Confidence at Scale](<testing/Introducing AI Agent Testing 2.0 Confidence at Launch, Confidence at Scale.md>) · `testing` · cresta
@@ -274,6 +278,8 @@
   Case study using evals and inference-time compute scaling to generate QR codes that satisfy visual and functional constraints.
 - **2025-05-21** — [How we Built Scalable & Customizable Dashboards](<monitoring/How we Built Scalable & Customizable Dashboards.md>) · `monitoring` · langfuse
   Engineering writeup on building scalable customizable dashboards for observability data, covering query, rendering, and product architecture concerns.
+- **2025-04-21** — [AI Agents, meet Test Driven Development](<testing/AI Agents, meet Test Driven Development.md>) · `testing` · latent-space
+  Connects AI agents with test-driven development and argues for tests as scaffolding for reliable agentic coding.
 - **2025-04-10** — [Building and Deploying Observable AI Agents with Google Agent Framework and Arize](<tracing/Building and Deploying Observable AI Agents with Google Agent Framework and Arize.md>) · `tracing` · arize
   Guide to building and deploying observable agents with Google Agent Framework and Arize, emphasizing traces for multi-agent and agentic workflows.
 - **2025-04-03** — [Resilient observability by design](<monitoring/Resilient observability by design.md>) · `monitoring` · braintrust
@@ -308,6 +314,8 @@
   Covers tracing and evaluation patterns for LangGraph agents, linking graph-based control flow with observability.
 - **2024-10-14** — [OpenTelemetry (OTel) for LLM Observability](<tracing/OpenTelemetry (OTel) for LLM Observability.md>) · `tracing` · langfuse
   Introduces OpenTelemetry for LLM observability and how OTel-style traces can standardize spans, metadata, and interoperability across AI systems.
+- **2024-10-11** — [Production AI Engineering starts with Evals — with Ankur Goyal of Braintrust](<evaluation/Production AI Engineering starts with Evals — with Ankur Goyal of Braintrust.md>) · `evaluation` · latent-space
+  Interview with Braintrust on why production AI engineering starts with evals and how eval infrastructure fits into product loops.
 - **2024-10-08** — [The Role of OpenTelemetry (OTEL) in LLM Observability](<tracing/The Role of OpenTelemetry (OTEL) in LLM Observability.md>) · `tracing` · arize
   Explains OpenTelemetry’s role in LLM observability and why standard traces matter for production systems.
 - **2024-10-07** — [Observability in Multi-Step LLM Systems](<tracing/Observability in Multi-Step LLM Systems.md>) · `tracing` · langfuse
@@ -370,6 +378,8 @@
   Explains LLM tracing and observability concepts using Phoenix as the concrete implementation context.
 - **2023-09-12** — [It's time to build reliable AI](<evaluation/It's time to build reliable AI.md>) · `evaluation` · braintrust
   Early argument for reliable AI systems built around evals, logging, feedback loops, and engineering practices rather than ad hoc demos.
+- **2023-06-08** — [From RLHF to RLHB: The Case for Learning from Human Behavior - with Jeffrey Wang and Joe Reeve of Amplitude](<evaluation/From RLHF to RLHB The Case for Learning from Human Behavior - with Jeffrey Wang and Joe Reeve of Amplitude.md>) · `evaluation` · latent-space
+  Explores RLHF to learning from human behavior, connecting product analytics signals with AI system optimization.
 - **2023-05-25** — [Cross Validation: What You Need To Know, From the Basics To LLMs](<evaluation/Cross Validation What You Need To Know, From the Basics To LLMs.md>) · `evaluation` · arize
   Overview of cross-validation from classic ML through LLM applications, focused on evaluation methodology.
 - **2023-05-17** — [Evaluating Model Fairness](<evaluation/Evaluating Model Fairness.md>) · `evaluation` · arize
@@ -445,6 +455,8 @@
   Conference dispatch on autoresearch and human agency, useful for understanding agent loops and human-in-the-loop boundaries.
 - **2026-07-02** — [From World Cup matchups to research maps: evaluating Parallel's web research agents](<../agents/tool-use/From World Cup matchups to research maps evaluating Parallel's web research agents.md>) · `tool-use` · braintrust
   Evaluates Parallel web research agents using World Cup matchups and research-map tasks, connecting tool use, knowledge graphs, and answer quality.
+- **2026-07-01** — [Autoresearch: The feedback loop behind self-improving agents](<../agents/planning/Autoresearch The feedback loop behind self-improving agents.md>) · `planning` · latent-space
+  Explains autoresearch as a feedback loop for self-improving agents and research workflows.
 - **2026-07-01** — [How Pendo uses LangSmith to trace Novus from user behavior to code fixes](<../product-engineering/case-studies/How Pendo uses LangSmith to trace Novus from user behavior to code fixes.md>) · `case-studies` · langchain
   Pendo case study tracing Novus from user behavior to code fixes, showing how traces connect product signals to agent improvements.
 - **2026-06-29** — [How Candidly Built State-Aware Agent Harnesses with LangSmith](<../product-engineering/case-studies/How Candidly Built State-Aware Agent Harnesses with LangSmith.md>) · `case-studies` · langchain
@@ -467,6 +479,8 @@
   Argues that AI is reshaping the AI engineering loop itself, with agents increasingly participating in prompt, eval, observability, and product iteration workflows.
 - **2026-06-05** — [Your AI bill is out of control. Cloudflare can fix it now.](<../infra-platform/cost/Your AI bill is out of control. Cloudflare can fix it now.md>) · `cost` · cloudflare-ai
   AI Gateway adds dollar-denominated spend limits plus a closed beta of identity-driven budgets and model routing via Cloudflare Access, so enterprises can attribute LLM spend per person/team (e.g. $5,000/month frontier models for engineering, $200 for interns) instead of one opaque shared API key.
+- **2026-06-03** — [🔬Scaling Past Informal AI - Carina Hong, Axiom Math](<../models/reasoning/🔬Scaling Past Informal AI - Carina Hong, Axiom Math.md>) · `reasoning` · latent-space
+  Covers informal-to-formal math AI and the scaling problems around proof, reasoning, and verification.
 - **2026-06-03** — [How Harmonic Rebuilt Scout on Deep Agents and 4x'd Retention with LangSmith](<../product-engineering/case-studies/How Harmonic Rebuilt Scout on Deep Agents and 4x'd Retention with LangSmith.md>) · `case-studies` · langchain
   Harmonic case study on rebuilding Scout with Deep Agents and LangSmith, linking agent architecture to retention and evaluation.
 - **2026-06-02** — [The end of fine-tuning: Why evals, context, and traces matter more](<../models/fine-tuning/The end of fine-tuning Why evals, context, and traces matter more.md>) · `fine-tuning` · arize
@@ -565,6 +579,8 @@
   Discusses modeling outcomes for long conversations, including challenges around sequence length and delayed success signals.
 - **2026-03-04** — [From UI to Terminal: Bringing Alyx's Superpowers Into Your Coding Agent](<../agents/tool-use/From UI to Terminal Bringing Alyx's Superpowers Into Your Coding Agent.md>) · `tool-use` · arize
   Introduces an AX CLI preview that brings Alyx-style trace and eval workflows into terminal-based coding-agent loops.
+- **2026-02-25** — [[AINews] The Unreasonable Effectiveness of Closing the Loop](<../agents/planning/[AINews] The Unreasonable Effectiveness of Closing the Loop.md>) · `planning` · latent-space
+  Explains why closing the loop is powerful in AI systems, linking feedback, evaluation, and iterative improvement.
 - **2026-02-25** — [Automatically discover what matters in your production traces with Topics](<tracing/Automatically discover what matters in your production traces with Topics.md>) · `tracing` · braintrust
   Introduces automatic topic discovery over production traces as a way to find recurring behavior patterns and quality issues.
 - **2026-02-23** — [How Cresta Scales Data Annotation With a Human-Supervised Multi-Agent System (MAS)](<../agents/multi-agent/How Cresta Scales Data Annotation With a Human-Supervised Multi-Agent System (MAS).md>) · `multi-agent` · cresta
@@ -599,6 +615,8 @@
   Debugging walkthrough using Braintrust logs to inspect AI application behavior, identify failure causes, and close the loop with improvements.
 - **2026-01-08** — [How Context Graphs Turn Agent Traces Into Durable Business Assets](<../agents/memory-context/How Context Graphs Turn Agent Traces Into Durable Business Assets.md>) · `memory-context` · arize
   Describes context graphs as a way to transform agent traces into durable memory and operational knowledge assets.
+- **2026-01-08** — [Artificial Analysis: Independent LLM Evals as a Service — with George Cameron and Micah-Hill Smith](<../models/benchmarks/Artificial Analysis Independent LLM Evals as a Service — with George Cameron and Micah-Hill Smith.md>) · `benchmarks` · latent-space
+  Interview on Artificial Analysis and independent LLM evals as a service, covering benchmark methodology and provider comparison.
 - **2026-01-01** — [How Dropbox built an evaluation pipeline for AI search](<../rag-retrieval/search/How Dropbox built an evaluation pipeline for AI search.md>) · `search` · braintrust
   Case study of Dropbox's evaluation pipeline for AI search, focused on measuring retrieval and answer quality for production search experiences.
 - **2026-01-01** — [How Coursera builds next-generation learning tools](<../product-engineering/case-studies/How Coursera builds next-generation learning tools.md>) · `case-studies` · braintrust
@@ -747,6 +765,8 @@
   Details precise and interpretable quantization evaluation for understanding quality and performance tradeoffs.
 - **2024-07-24** — [DSPy Assertions: Computational Constraints for Self-Refining Language Model Pipelines](<../prompt-engineering/techniques/DSPy Assertions Computational Constraints for Self-Refining Language Model Pipelines.md>) · `techniques` · arize
   Explains DSPy assertions as computational constraints for self-refining language-model pipelines.
+- **2024-07-12** — [Benchmarks 201: Why Leaderboards > Arenas >> LLM-as-Judge](<../models/benchmarks/Benchmarks 201 Why Leaderboards Arenas LLM-as-Judge.md>) · `benchmarks` · latent-space
+  Advanced benchmark guide comparing leaderboards, arenas, and LLM-as-judge approaches.
 - **2024-07-02** — [Improving Memory Retrieval: How New Computer achieved 50% higher recall with LangSmith](<../rag-retrieval/search/Improving Memory Retrieval How New Computer achieved 50% higher recall with LangSmith.md>) · `search` · langchain
   New Computer case study on improving memory retrieval recall with LangSmith-backed evaluation and debugging.
 - **2024-06-20** — [How to improve your evaluations](<evaluation/How to improve your evaluations.md>) · `evaluation` · braintrust
@@ -795,6 +815,8 @@
   Explains the RLHF pipeline from preference data through reward modeling and policy optimization, including why human feedback changes model behavior and where evaluation matters.
 - **2023-04-11** — [Building LLM applications for production](<../product-engineering/architecture/Building LLM applications for production.md>) · `architecture` · chip-huyen
   Practical guide to production LLM applications covering task decomposition, retrieval, prompt construction, evaluation, monitoring, and latency/cost tradeoffs.
+- **2023-04-07** — [AI Fundamentals: Benchmarks 101](<../models/benchmarks/AI Fundamentals Benchmarks 101.md>) · `benchmarks` · latent-space
+  Foundational guide to model benchmarks and how AI engineers should interpret benchmark results.
 - **2022-12-31** — [Measuring Embedding Drift](<../rag-retrieval/embeddings/Measuring Embedding Drift.md>) · `embeddings` · arize
   Explains embedding drift and how teams can measure changes in embedding distributions over time.
 - **2022-11-17** — [HELM: benchmarking large language models on the Together Research Computer](<../models/benchmarks/HELM benchmarking large language models on the Together Research Computer.md>) · `benchmarks` · together

@@ -1,6 +1,6 @@
 # product-engineering
 
-105 articles.
+108 articles.
 
 - **2026-07-10** — [AI-pilling our company: lessons learned](<case-studies/AI-pilling our company lessons learned.md>) · `case-studies` · sierra
   Internal adoption case study on spreading AI workflows through a company, including practical lessons for using agents and tools in day-to-day work.
@@ -70,6 +70,8 @@
   Argues bot detection must move from 'bots vs. humans' to intent and behavior as AI agents fetch raw content without rendering pages: covers Web Bot Auth (HTTP message signatures) for crawler identification and private rate limiting for clients that no longer behave like browsers.
 - **2026-04-20** — [The AI engineering stack we built internally — on the platform we ship](<case-studies/The AI engineering stack we built internally — on the platform we ship.md>) · `case-studies` · cloudflare-ai
   Eleven-month buildout of Cloudflare's internal AI engineering stack on its own products: 3,683 users (93% of R&D), 47.95M AI requests and 241B tokens/month through AI Gateway, an MCP Server Portal with single OAuth, and merge requests nearly doubling from ~5,600 to 10,952/week.
+- **2026-04-16** — [[AINews] RIP Pull Requests (2005-2026)](<architecture/[AINews] RIP Pull Requests (2005-2026).md>) · `architecture` · latent-space
+  Argues that agentic development changes the pull-request workflow and software delivery loop.
 - **2026-04-15** — [Automation Discovery: Designing Systems to Extract Blueprints from Conversation Data](<architecture/Automation Discovery Designing Systems to Extract Blueprints from Conversation Data.md>) · `architecture` · cresta
   Describes systems that mine conversation data to discover automation opportunities and generate process blueprints.
 - **2026-04-13** — [How to prepare for AI compliance and governance](<security/How to prepare for AI compliance and governance.md>) · `security` · braintrust
@@ -88,6 +90,8 @@
   Argues that enterprises adopting large populations of AI agents need governance for permissions, ownership, auditability, and lifecycle management before agent scale outpaces human oversight.
 - **2026-03-17** — [Evals for PMs: A practical guide to AI product quality](<ux-patterns/Evals for PMs A practical guide to AI product quality.md>) · `ux-patterns` · braintrust
   Practical guide for product managers defining AI product quality with evals, user-centered criteria, examples, and iteration loops.
+- **2026-03-13** — [[AINews] The high-return activity of raising your aspirations for LLMs](<architecture/[AINews] The high-return activity of raising your aspirations for LLMs.md>) · `architecture` · latent-space
+  Discusses raising expectations for LLM-powered workflows and designing systems that use more model capability.
 - **2026-03-12** — [Supporting privacy and compliance for EU teams](<security/Supporting privacy and compliance for EU teams.md>) · `security` · braintrust
   Covers privacy and compliance requirements for EU AI teams, including data residency, controls, and deployment choices for observability data.
 - **2026-03-11** — [From prompts to products: One year of Responses | OpenAI Developers](<case-studies/From prompts to products One year of Responses OpenAI Developers.md>) · `case-studies` · openai-devs
@@ -168,6 +172,8 @@
   Product-management guide for LLM applications, connecting user workflows, quality criteria, feedback, and evals to AI product development decisions.
 - **2024-09-26** — [Pushing LangSmith to new limits with Replit Agent's complex workflows](<case-studies/Pushing LangSmith to new limits with Replit Agent's complex workflows.md>) · `case-studies` · langchain
   Replit Agent case study on tracing and managing complex agent workflows with LangSmith.
+- **2024-08-16** — [AI Magic: Shipping 1000s of successful products with no managers and a team of 12 — Jeremy Howard of Answer.ai](<case-studies/AI Magic Shipping 1000s of successful products with no managers and a team of 12 — Jeremy Howard of Answer.ai.md>) · `case-studies` · latent-space
+  Case study on Answer.ai shipping many AI products with a small team, highlighting lightweight operating and product loops.
 - **2024-08-06** — [Compound AI systems explained](<architecture/Compound AI systems explained.md>) · `architecture` · baseten
   Explains compound AI systems and how multiple models, tools, and control logic combine into applications.
 - **2024-07-30** — [Developing Copilot: What AI Engineers Can Learn from Our Experience Building An AI Assistant](<case-studies/Developing Copilot What AI Engineers Can Learn from Our Experience Building An AI Assistant.md>) · `case-studies` · arize
@@ -229,8 +235,12 @@
   Explains experimentation loops for agent improvement, using customer behavior, A/B tests, and statistical confidence to shape agent changes.
 - **2026-06-18** — [What is an agent harness? Why harnesses are replacing agent frameworks](<../agents/planning/What is an agent harness Why harnesses are replacing agent frameworks.md>) · `planning` · arize
   Explains why agent harnesses are replacing simple framework use as the unit of production agent engineering.
+- **2026-06-18** — [The Professor of Outputmaxxing — Anjney Midha, AMP](<../prompt-engineering/techniques/The Professor of Outputmaxxing — Anjney Midha, AMP.md>) · `techniques` · latent-space
+  Covers outputmaxxing and how prompt/product choices can systematically raise the quality of model outputs.
 - **2026-06-16** — [The Art of Loop Engineering](<../agents/planning/The Art of Loop Engineering.md>) · `planning` · langchain
   Discusses loop engineering for agents, focusing on the control loops that govern planning, action, observation, and refinement.
+- **2026-06-16** — [[AINews] Satya on Loopcraft: Building Frontier Ecosystems](<../agents/planning/[AINews] Satya on Loopcraft Building Frontier Ecosystems.md>) · `planning` · latent-space
+  Covers loopcraft as an ecosystem-building pattern for frontier AI products and agent workflows.
 - **2026-06-12** — [How to Choose the Right Sandbox for AI Agents](<../agents/computer-use/How to Choose the Right Sandbox for AI Agents.md>) · `computer-use` · langchain
   Guide to choosing an agent sandbox based on isolation, tool access, persistence, security, and operational constraints.
 - **2026-06-12** — [Agent Assist: What It Is, How It Works & How to Choose](<../agents/tool-use/Agent Assist What It Is, How It Works & How to Choose.md>) · `tool-use` · cresta
@@ -267,6 +277,8 @@
   Covers best practices for AI-to-human handoffs, including when agents should escalate and how handoff context should be preserved.
 - **2026-04-20** — [Orchestrating AI Code Review at scale](<../agents/multi-agent/Orchestrating AI Code Review at scale.md>) · `multi-agent` · cloudflare-ai
   Deep dive into Cloudflare's CI-native AI code review built on OpenCode: up to seven specialized reviewer agents (security, performance, quality, docs, compliance) plus a coordinator that deduplicates findings and posts one structured review, run across tens of thousands of GitLab merge requests via a plugin architecture.
+- **2026-04-18** — [[AINews] The Two Sides of OpenClaw](<../agents/computer-use/[AINews] The Two Sides of OpenClaw.md>) · `computer-use` · latent-space
+  Covers OpenClaw as a computer-use agent direction and the tension between open agent tooling and productization.
 - **2026-04-01** — [The Rage Clicks of LLM apps: High-Signal Production Monitoring for AI Customer Support Agents](<../evals-observability/monitoring/The Rage Clicks of LLM apps High-Signal Production Monitoring for AI Customer Support Agents.md>) · `monitoring` · langfuse
   Detailed production-monitoring pattern for AI customer-support agents using high-signal LLM-as-judge classifiers to detect rage-click-like failure modes.
 - **2026-03-24** — [Harness design for long-running application development](<../agents/planning/Harness design for long-running application development.md>) · `planning` · anthropic-engineering
@@ -281,6 +293,8 @@
   Case study from shipping Arize Alyx that distills debugging lessons around traces, failure analysis, context inspection, and production agent iteration.
 - **2026-02-24** — [Alyx 2.0: The AI Agent That Actually Plans](<../agents/planning/Alyx 2.0 The AI Agent That Actually Plans.md>) · `planning` · arize
   Introduces Alyx 2.0 as an agent that plans over observability workflows, covering product design lessons from building a more capable AI analyst.
+- **2026-02-14** — [[AINews] Why OpenAI Should Build Slack](<../agents/multi-agent/[AINews] Why OpenAI Should Build Slack.md>) · `multi-agent` · latent-space
+  Argues that collaborative agent products need Slack-like shared context, coordination, and persistent workspaces.
 - **2026-02-05** — [Building a C compiler with a team of parallel Claudes](<../agents/multi-agent/Building a C compiler with a team of parallel Claudes.md>) · `multi-agent` · anthropic-engineering
   Case study orchestrating a team of parallel Claude instances to build a working C compiler, covering task decomposition, shared state, and verification loops.
 - **2026-02-03** — [[AINews] OpenAI Codex App: death of the VSCode fork, multitasking worktrees, Skills Automations](<../agents/computer-use/[AINews] OpenAI Codex App death of the VSCode fork, multitasking worktrees, Skills Automations.md>) · `computer-use` · latent-space
@@ -319,6 +333,8 @@
   Framework for evaluating agent frameworks by abstraction level, control, durability, observability, and fit to production workflows.
 - **2025-03-07** — [Prompt Management from First Principles](<../prompt-engineering/techniques/Prompt Management from First Principles.md>) · `techniques` · arize
   Frames prompt management from first principles, including versioning, ownership, and production workflow concerns.
+- **2025-02-13** — [Bee AI: The Wearable Ambient Agent](<../agents/memory-context/Bee AI The Wearable Ambient Agent.md>) · `memory-context` · latent-space
+  Covers Bee AI as a wearable ambient agent, with implications for persistent memory and always-on agent UX.
 - **2025-01-22** — [Building Audio Support with OpenAI: Insights from our Journey](<../models/multimodal/Building Audio Support with OpenAI Insights from our Journey.md>) · `multimodal` · arize
   Case study on adding audio support with OpenAI models, covering product and engineering lessons from building multimodal support.
 - **2025-01-08** — [Our approach to hybrid deployment](<../infra-platform/deployment/Our approach to hybrid deployment.md>) · `deployment` · braintrust
@@ -327,12 +343,16 @@
   Anthropic's canonical guide to agent design patterns: when to use workflows (prompt chaining, routing, orchestrator-workers) versus autonomous agents, and why simple composable patterns beat frameworks.
 - **2024-12-04** — [AI Agent Workflows and Architectures Masterclass](<../agents/planning/AI Agent Workflows and Architectures Masterclass.md>) · `planning` · arize
   Introduces practical agent workflow and architecture patterns, emphasizing simple tool-calling loops and design choices over vague autonomy claims.
+- **2024-12-02** — [Bolt.new, Flow Engineering for Code Agents, and >$8m ARR in 2 months as a Claude Wrapper](<../agents/computer-use/Bolt.new, Flow Engineering for Code Agents, and $8m ARR in 2 months as a Claude Wrapper.md>) · `computer-use` · latent-space
+  Covers Bolt.new and flow engineering for code agents, including product lessons from rapid agentic coding growth.
 - **2024-12-02** — [WireGuard at Modal: Static IPs for serverless containers](<../infra-platform/deployment/WireGuard at Modal Static IPs for serverless containers.md>) · `deployment` · modal
   Explains static IP support for serverless containers using WireGuard, relevant to secure networked AI deployments.
 - **2024-11-11** — [How to Improve LLM Safety and Reliability](<../evals-observability/testing/How to Improve LLM Safety and Reliability.md>) · `testing` · arize
   Covers testing and monitoring practices for improving LLM application safety and reliability in production.
 - **2024-11-04** — [Building serverless apps with the OpenAI Realtime API](<../models/multimodal/Building serverless apps with the OpenAI Realtime API.md>) · `multimodal` · braintrust
   Guide to building serverless apps with the OpenAI Realtime API, focusing on real-time voice interaction architecture and deployment patterns.
+- **2024-10-11** — [Production AI Engineering starts with Evals — with Ankur Goyal of Braintrust](<../evals-observability/evaluation/Production AI Engineering starts with Evals — with Ankur Goyal of Braintrust.md>) · `evaluation` · latent-space
+  Interview with Braintrust on why production AI engineering starts with evals and how eval infrastructure fits into product loops.
 - **2024-09-23** — [Should you use an LLM Proxy to Build your Application?](<../infra-platform/deployment/Should you use an LLM Proxy to Build your Application.md>) · `deployment` · langfuse
   Explains the LLM proxy pattern for AI applications, including provider abstraction, centralized logging, key management, routing, and governance tradeoffs.
 - **2024-09-17** — [Building high-performance compound AI applications with MongoDB Atlas and Baseten](<../rag-retrieval/pipelines/Building high-performance compound AI applications with MongoDB Atlas and Baseten.md>) · `pipelines` · baseten
@@ -363,6 +383,8 @@
   Early argument for reliable AI systems built around evals, logging, feedback loops, and engineering practices rather than ad hoc demos.
 - **2023-06-30** — [The Rise of the AI Engineer](<../industry/trends/The Rise of the AI Engineer.md>) · `trends` · latent-space
   Foundational essay on the rise of the AI engineer role and the shift from model research to applied AI system building.
+- **2023-06-08** — [From RLHF to RLHB: The Case for Learning from Human Behavior - with Jeffrey Wang and Joe Reeve of Amplitude](<../evals-observability/evaluation/From RLHF to RLHB The Case for Learning from Human Behavior - with Jeffrey Wang and Joe Reeve of Amplitude.md>) · `evaluation` · latent-space
+  Explores RLHF to learning from human behavior, connecting product analytics signals with AI system optimization.
 - **2023-05-17** — [Evaluating Model Fairness](<../evals-observability/evaluation/Evaluating Model Fairness.md>) · `evaluation` · arize
   Explains model fairness evaluation and how to assess bias and fairness risks in production systems.
 - **2023-02-17** — [Technical deep dive: Truss live reload](<../infra-platform/deployment/Technical deep dive Truss live reload.md>) · `deployment` · baseten

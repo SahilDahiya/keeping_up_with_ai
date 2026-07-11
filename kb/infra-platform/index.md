@@ -195,6 +195,8 @@
   Explains Sierra's inference-layer reliability strategy for foundation models, including routing, redundancy, and serving behavior preservation under provider failures.
 - **2026-04-30** — [Agents can now create Cloudflare accounts, buy domains, and deploy](<../agents/tool-use/Agents can now create Cloudflare accounts, buy domains, and deploy.md>) · `tool-use` · cloudflare-ai
   Via a protocol co-designed with Stripe for Stripe Projects, coding agents can now provision a Cloudflare account, start a paid subscription, register a domain, and receive an API token to deploy — end-to-end with humans only approving payment and terms of service.
+- **2026-04-30** — [[AINews] The Inference Inflection](<../inference/serving/[AINews] The Inference Inflection.md>) · `serving` · latent-space
+  Covers an inference-market inflection and how serving economics shape model and product choices.
 - **2026-04-30** — [Prompt templates as configs, not code](<../prompt-engineering/context-engineering/Prompt templates as configs, not code.md>) · `context-engineering` · arize
   Argues for treating prompt templates as configuration, improving iteration, versioning, and deployment safety.
 - **2026-04-23** — [How we built RBAC that scales for the enterprise](<../product-engineering/security/How we built RBAC that scales for the enterprise.md>) · `security` · baseten
@@ -229,8 +231,12 @@
   Covers privacy and compliance requirements for EU AI teams, including data residency, controls, and deployment choices for observability data.
 - **2026-03-06** — [Inference providers vs. API routers](<../inference/serving/Inference providers vs. API routers.md>) · `serving` · fireworks
   Explains the operational difference between inference providers and API routers, including routing, control, and token provenance.
+- **2026-03-05** — [Every Agent Needs a Box — Aaron Levie, Box](<../agents/computer-use/Every Agent Needs a Box — Aaron Levie, Box.md>) · `computer-use` · latent-space
+  Argues every agent needs a sandbox or box, connecting computer-use agents with execution environments and governance.
 - **2026-02-25** — [Accelerating AI research that accelerates AI research](<../product-engineering/case-studies/Accelerating AI research that accelerates AI research.md>) · `case-studies` · modal
   Case study on using elastic compute to accelerate AI research workflows, including experiment throughput and infrastructure offload.
+- **2026-02-21** — [[AINews] The Custom ASIC Thesis](<../inference/hardware/[AINews] The Custom ASIC Thesis.md>) · `hardware` · latent-space
+  Summarizes the custom ASIC thesis for AI infrastructure and why specialized chips matter for inference economics.
 - **2026-02-18** — [How Ramp built a full context background coding agent on Modal](<../agents/computer-use/How Ramp built a full context background coding agent on Modal.md>) · `computer-use` · modal
   Case study of a background coding agent architecture that gives agents full project context through remote sandboxes.
 - **2026-02-05** — [Quantifying infrastructure noise in agentic coding evals](<../evals-observability/evaluation/Quantifying infrastructure noise in agentic coding evals.md>) · `evaluation` · anthropic-engineering
@@ -281,6 +287,8 @@
   Guide to GPU utilization for AI workloads, covering bottlenecks, throughput, batching, and cost-aware usage.
 - **2025-02-13** — [How multi-node inference works for massive LLMs like DeepSeek-R1](<../inference/serving/How multi-node inference works for massive LLMs like DeepSeek-R1.md>) · `serving` · baseten
   Explains multi-node inference for very large LLMs such as DeepSeek-R1.
+- **2025-01-19** — [Everything you need to run Mission Critical Inference (ft. DeepSeek v3 + SGLang)](<../inference/serving/Everything you need to run Mission Critical Inference (ft. DeepSeek v3 + SGLang).md>) · `serving` · latent-space
+  Covers requirements for mission-critical inference, including serving stacks, reliability, and DeepSeek/SGLang deployment context.
 - **2024-11-19** — [Instrumenting Your LLM Application: Arize Phoenix and Vercel AI SDK](<../evals-observability/tracing/Instrumenting Your LLM Application Arize Phoenix and Vercel AI SDK.md>) · `tracing` · arize
   Shows how to instrument an LLM application with Phoenix and Vercel AI SDK so traces are available for debugging and evaluation.
 - **2024-11-01** — [Arize, Vertex AI API: Evaluation Workflows to Accelerate Generative App Development and AI ROI](<../evals-observability/evaluation/Arize, Vertex AI API Evaluation Workflows to Accelerate Generative App Development and AI ROI.md>) · `evaluation` · arize

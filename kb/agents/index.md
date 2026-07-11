@@ -1,6 +1,6 @@
 # agents
 
-170 articles.
+179 articles.
 
 - **2026-07-10** — [OpenWiki Brains: Proactive Memory for AI Agents](<memory-context/OpenWiki Brains Proactive Memory for AI Agents.md>) · `memory-context` · langchain
   Introduces OpenWiki Brains as proactive wiki memory for agents, focused on persistent context and retrieval over project knowledge.
@@ -34,6 +34,8 @@
   Explains how to use retrieval language models in Deep Agents to improve context selection and long-running agent performance.
 - **2026-07-01** — [AIEWF Daily Dispatch: Loops, Software Factories & Forward Deployed Engineers](<planning/AIEWF Daily Dispatch Loops, Software Factories & Forward Deployed Engineers.md>) · `planning` · latent-space
   Covers loops, software factories, and forward-deployed engineering as recurring patterns in AI engineering practice.
+- **2026-07-01** — [Autoresearch: The feedback loop behind self-improving agents](<planning/Autoresearch The feedback loop behind self-improving agents.md>) · `planning` · latent-space
+  Explains autoresearch as a feedback loop for self-improving agents and research workflows.
 - **2026-07-01** — [OpenWiki: Open Source Repo Documentation for Coding Agents](<tool-use/OpenWiki Open Source Repo Documentation for Coding Agents.md>) · `tool-use` · langchain
   Introduces OpenWiki as an agent for repository documentation, combining code understanding, retrieval, and generated docs.
 - **2026-06-30** — [Wiki Memory](<memory-context/Wiki Memory.md>) · `memory-context` · langchain
@@ -58,6 +60,8 @@
   Discusses loop engineering for agents, focusing on the control loops that govern planning, action, observation, and refinement.
 - **2026-06-16** — [What is agent orchestration? Frameworks, runtimes, and observability explained](<planning/What is agent orchestration Frameworks, runtimes, and observability explained.md>) · `planning` · arize
   Explains agent orchestration across frameworks, runtimes, and observability concerns.
+- **2026-06-16** — [[AINews] Satya on Loopcraft: Building Frontier Ecosystems](<planning/[AINews] Satya on Loopcraft Building Frontier Ecosystems.md>) · `planning` · latent-space
+  Covers loopcraft as an ecosystem-building pattern for frontier AI products and agent workflows.
 - **2026-06-12** — [How to Choose the Right Sandbox for AI Agents](<computer-use/How to Choose the Right Sandbox for AI Agents.md>) · `computer-use` · langchain
   Guide to choosing an agent sandbox based on isolation, tool access, persistence, security, and operational constraints.
 - **2026-06-12** — [Memory is still a missing primitive: Cataloguing what the field is actually shipping](<memory-context/Memory is still a missing primitive Cataloguing what the field is actually shipping.md>) · `memory-context` · arize
@@ -134,6 +138,8 @@
   Covers best practices for AI-to-human handoffs, including when agents should escalate and how handoff context should be preserved.
 - **2026-04-20** — [Orchestrating AI Code Review at scale](<multi-agent/Orchestrating AI Code Review at scale.md>) · `multi-agent` · cloudflare-ai
   Deep dive into Cloudflare's CI-native AI code review built on OpenCode: up to seven specialized reviewer agents (security, performance, quality, docs, compliance) plus a coordinator that deduplicates findings and posts one structured review, run across tens of thousands of GitLab merge requests via a plugin architecture.
+- **2026-04-18** — [[AINews] The Two Sides of OpenClaw](<computer-use/[AINews] The Two Sides of OpenClaw.md>) · `computer-use` · latent-space
+  Covers OpenClaw as a computer-use agent direction and the tension between open agent tooling and productization.
 - **2026-04-17** — [Agentic Engineering: How Swarms of AI Agents Are Redefining Software Engineering](<multi-agent/Agentic Engineering How Swarms of AI Agents Are Redefining Software Engineering.md>) · `multi-agent` · langchain
   Discusses how swarms of agents change software engineering workflows, including orchestration, delegation, review, and human oversight.
 - **2026-04-16** — [Harnesses are everything. Here's how to optimize yours.](<planning/Harnesses are everything. Here's how to optimize yours.md>) · `planning` · baseten
@@ -158,12 +164,16 @@
   Discusses Claude cowork-style agents and how long-running workplace agents change collaboration and task ownership.
 - **2026-03-13** — [How We Built an Agent Skill to Synthesize what Langfuse Users want](<tool-use/How We Built an Agent Skill to Synthesize what Langfuse Users want.md>) · `tool-use` · langfuse
   Case study of building an agent skill to synthesize user feedback and product needs, showing how agents can support operational product workflows.
+- **2026-03-12** — [[AINews] Replit Agent 4: The Knowledge Work Agent](<computer-use/[AINews] Replit Agent 4 The Knowledge Work Agent.md>) · `computer-use` · latent-space
+  Covers Replit Agent 4 as a knowledge-work agent and what that implies for coding-agent workflows.
 - **2026-03-10** — [[AINews] Autoresearch: Sparks of Recursive Self Improvement](<planning/[AINews] Autoresearch Sparks of Recursive Self Improvement.md>) · `planning` · latent-space
   Covers autoresearch and recursive self-improvement as agent-loop patterns for research workflows.
 - **2026-03-10** — [Arize Skills: Coding Agent Workflows for Traces, Evals, and Instrumentation](<tool-use/Arize Skills Coding Agent Workflows for Traces, Evals, and Instrumentation.md>) · `tool-use` · arize
   Introduces Arize Skills for coding agents, enabling workflows around trace extraction, evals, and instrumentation from agentic development environments.
 - **2026-03-09** — [Using skills to accelerate OSS maintenance | OpenAI Developers](<tool-use/Using skills to accelerate OSS maintenance OpenAI Developers.md>) · `tool-use` · openai-devs
   How OpenAI maintains the Agents SDK repos with repo-local Codex skills, AGENTS.md policy, and the Codex GitHub Action — turning verification, release prep, and PR review into repeatable progressive-disclosure workflows; merged PRs rose from 316 to 457 quarter-over-quarter.
+- **2026-03-05** — [Every Agent Needs a Box — Aaron Levie, Box](<computer-use/Every Agent Needs a Box — Aaron Levie, Box.md>) · `computer-use` · latent-space
+  Argues every agent needs a sandbox or box, connecting computer-use agents with execution environments and governance.
 - **2026-03-05** — [How to Build Planning Into Your Agent (The Architecture That Actually Works)](<planning/How to Build Planning Into Your Agent (The Architecture That Actually Works).md>) · `planning` · arize
   Explains planning architectures for agents and how explicit planning changes control flow, reliability, and debugging.
 - **2026-03-05** — [[AINews] Is Harness Engineering real?](<planning/[AINews] Is Harness Engineering real.md>) · `planning` · latent-space
@@ -172,6 +182,8 @@
   Introduces an AX CLI preview that brings Alyx-style trace and eval workflows into terminal-based coding-agent loops.
 - **2026-02-26** — [Building frontend UIs with Codex and Figma | OpenAI Developers](<tool-use/Building frontend UIs with Codex and Figma OpenAI Developers.md>) · `tool-use` · openai-devs
   Announces bidirectional Codex-Figma integration via the Figma MCP server: get_design_context extracts layouts/styles/components from Figma frames for code generation, and generate_figma_design turns a running UI back into editable Figma frames.
+- **2026-02-25** — [[AINews] The Unreasonable Effectiveness of Closing the Loop](<planning/[AINews] The Unreasonable Effectiveness of Closing the Loop.md>) · `planning` · latent-space
+  Explains why closing the loop is powerful in AI systems, linking feedback, evaluation, and iterative improvement.
 - **2026-02-24** — [Alyx 2.0: The AI Agent That Actually Plans](<planning/Alyx 2.0 The AI Agent That Actually Plans.md>) · `planning` · arize
   Introduces Alyx 2.0 as an agent that plans over observability workflows, covering product design lessons from building a more capable AI analyst.
 - **2026-02-23** — [How Cresta Scales Data Annotation With a Human-Supervised Multi-Agent System (MAS)](<multi-agent/How Cresta Scales Data Annotation With a Human-Supervised Multi-Agent System (MAS).md>) · `multi-agent` · cresta
@@ -182,6 +194,8 @@
   Summarizes Anthropic research on agent autonomy and the measurement questions around increasingly independent agents.
 - **2026-02-18** — [How Ramp built a full context background coding agent on Modal](<computer-use/How Ramp built a full context background coding agent on Modal.md>) · `computer-use` · modal
   Case study of a background coding agent architecture that gives agents full project context through remote sandboxes.
+- **2026-02-14** — [[AINews] Why OpenAI Should Build Slack](<multi-agent/[AINews] Why OpenAI Should Build Slack.md>) · `multi-agent` · latent-space
+  Argues that collaborative agent products need Slack-like shared context, coordination, and persistent workspaces.
 - **2026-02-13** — [On Agent Frameworks and Agent Observability](<planning/On Agent Frameworks and Agent Observability.md>) · `planning` · langchain
   Connects agent-framework design with observability requirements, arguing that runtime structure determines what teams can debug and evaluate.
 - **2026-02-11** — [CUGA Agent: From Benchmarks to Business Impact of IBM's Generalist Agent](<planning/CUGA Agent From Benchmarks to Business Impact of IBM's Generalist Agent.md>) · `planning` · arize
@@ -298,6 +312,8 @@
   Deep dive on Open Deep Research as an agentic system, covering planning, tool use, research workflows, and trace-based inspection.
 - **2025-02-18** — [How to Build An AI Agent](<planning/How to Build An AI Agent.md>) · `planning` · arize
   Practical guide to building an AI agent, covering planning, tools, state, and reliability considerations.
+- **2025-02-13** — [Bee AI: The Wearable Ambient Agent](<memory-context/Bee AI The Wearable Ambient Agent.md>) · `memory-context` · latent-space
+  Covers Bee AI as a wearable ambient agent, with implications for persistent memory and always-on agent UX.
 - **2025-02-10** — [Benchmarking Single Agent Performance](<planning/Benchmarking Single Agent Performance.md>) · `planning` · langchain
   Benchmarks single-agent ReAct-style performance and discusses evaluation methodology for agent reasoning/tool-use loops.
 - **2025-01-31** — [Best Practices for Building an Agent Router](<planning/Best Practices for Building an Agent Router.md>) · `planning` · arize
@@ -316,6 +332,8 @@
   Introduces practical agent workflow and architecture patterns, emphasizing simple tool-calling loops and design choices over vague autonomy claims.
 - **2024-12-03** — [Building an AI Agent that Thrives in the Real World](<planning/Building an AI Agent that Thrives in the Real World.md>) · `planning` · arize
   Practical guidance for building production AI agents that survive real-world failures through monitoring, iteration, and reliability practices.
+- **2024-12-02** — [Bolt.new, Flow Engineering for Code Agents, and >$8m ARR in 2 months as a Claude Wrapper](<computer-use/Bolt.new, Flow Engineering for Code Agents, and $8m ARR in 2 months as a Claude Wrapper.md>) · `computer-use` · latent-space
+  Covers Bolt.new and flow engineering for code agents, including product lessons from rapid agentic coding growth.
 - **2024-10-16** — [Comparing OpenAI Swarm with other Multi Agent Frameworks](<multi-agent/Comparing OpenAI Swarm with other Multi Agent Frameworks.md>) · `multi-agent` · arize
   Compares OpenAI Swarm with other multi-agent frameworks, highlighting orchestration patterns and framework tradeoffs.
 - **2024-10-08** — [Functions: flexible AI engineering primitives](<tool-use/Functions flexible AI engineering primitives.md>) · `tool-use` · braintrust
@@ -345,6 +363,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-07-10** — [[AINews] OpenAI launches GPT 5.6 Sol/Terra/Luna, Codex becomes ChatGPT superapp](<../models/releases/[AINews] OpenAI launches GPT 5.6 SolTerraLuna, Codex becomes ChatGPT superapp.md>) · `releases` · latent-space
+  Covers GPT-5.6 model releases and Codex becoming a ChatGPT superapp, relevant to coding-agent product direction.
 - **2026-07-10** — [AI-pilling our company: lessons learned](<../product-engineering/case-studies/AI-pilling our company lessons learned.md>) · `case-studies` · sierra
   Internal adoption case study on spreading AI workflows through a company, including practical lessons for using agents and tools in day-to-day work.
 - **2026-07-09** — [The new GPT-5.6 family: Luna, Terra, Sol](<../models/releases/The new GPT-5.6 family Luna, Terra, Sol.md>) · `releases` · simon-willison
@@ -501,10 +521,14 @@
   Discusses UX and workflow design for supervising AI agents, including human oversight and intervention surfaces.
 - **2026-04-28** — [Context management in agent harnesses: memory, files, and subagents](<memory-context/Context management in agent harnesses memory, files, and subagents.md>) · `memory-context` · arize
   Detailed guide to context management in agent harnesses, including memory, files, subagents, and strategies for working within context limits.
+- **2026-04-23** — [[AINews] Tasteful Tokenmaxxing](<../prompt-engineering/context-engineering/[AINews] Tasteful Tokenmaxxing.md>) · `context-engineering` · latent-space
+  Explores tokenmaxxing as a context-engineering pattern and the tradeoff between more context and better taste.
 - **2026-04-23** — [Beyond models: How context and evals make agents work in production](<../evals-observability/evaluation/Beyond models How context and evals make agents work in production.md>) · `evaluation` · arize
   Explains why production agents depend on context quality and eval loops, not just model choice, and outlines how to evaluate behavior on real workflows.
 - **2026-04-22** — [How to add an evaluation harness to your Gemini CLI coding agent](<../evals-observability/testing/How to add an evaluation harness to your Gemini CLI coding agent.md>) · `testing` · arize
   Walks through adding an evaluation harness to a Gemini CLI coding agent, including how to measure and compare agent behavior.
+- **2026-04-16** — [[AINews] RIP Pull Requests (2005-2026)](<../product-engineering/architecture/[AINews] RIP Pull Requests (2005-2026).md>) · `architecture` · latent-space
+  Argues that agentic development changes the pull-request workflow and software delivery loop.
 - **2026-04-09** — [Human judgment in the agent improvement loop](<../evals-observability/evaluation/Human judgment in the agent improvement loop.md>) · `evaluation` · langchain
   Explains where human judgment fits into the agent improvement loop, including review, labeling, feedback, and evaluator calibration.
 - **2026-04-08** — [Agentic eval development with the Braintrust CLI](<../evals-observability/testing/Agentic eval development with the Braintrust CLI.md>) · `testing` · braintrust
@@ -533,6 +557,12 @@
   Discusses Claude cowork-style agents and how long-running workplace agents change collaboration and task ownership.
 - **2026-03-14** — [[AINews] Context Drought](<../prompt-engineering/context-engineering/[AINews] Context Drought.md>) · `context-engineering` · latent-space
   Explains context scarcity as a bottleneck for AI systems and why better context pipelines matter.
+- **2026-03-13** — [[AINews] The high-return activity of raising your aspirations for LLMs](<../product-engineering/architecture/[AINews] The high-return activity of raising your aspirations for LLMs.md>) · `architecture` · latent-space
+  Discusses raising expectations for LLM-powered workflows and designing systems that use more model capability.
+- **2026-03-12** — [[AINews] Replit Agent 4: The Knowledge Work Agent](<computer-use/[AINews] Replit Agent 4 The Knowledge Work Agent.md>) · `computer-use` · latent-space
+  Covers Replit Agent 4 as a knowledge-work agent and what that implies for coding-agent workflows.
+- **2026-03-11** — [[AINews] Yann LeCun’s AMI Labs launches with a $1B seed @ $4.5B to build world models around JEPA](<../models/reasoning/[AINews] Yann LeCun’s AMI Labs launches with a $1B seed @ $4.5B to build world models around JEPA.md>) · `reasoning` · latent-space
+  Covers AMI Labs and world-model approaches, relevant to model architectures for agents beyond pure text prediction.
 - **2026-03-11** — [From prompts to products: One year of Responses | OpenAI Developers](<../product-engineering/case-studies/From prompts to products One year of Responses OpenAI Developers.md>) · `case-studies` · openai-devs
   One-year retrospective on the Responses API told through five developer stories, including Raindrop AI's production agent-monitoring platform (failure detection and debugging on GPT-5.2 via the Vercel AI SDK) built on its hosted-tool and background-analysis primitives.
 - **2026-03-10** — [How We Used Evals (and an AI Agent) to Iteratively Improve an AI Newsletter Generator](<../evals-observability/evaluation/How We Used Evals (and an AI Agent) to Iteratively Improve an AI Newsletter Generator.md>) · `evaluation` · arize
@@ -665,6 +695,8 @@
   Overview of agentic AI systems, covering planning, tool use, control loops, and production architecture concerns.
 - **2025-04-24** — [How we use LLMs to build and scale Langfuse](<../product-engineering/case-studies/How we use LLMs to build and scale Langfuse.md>) · `case-studies` · langfuse
   Case study of how Langfuse uses LLMs internally to build and scale the product, including practical workflows for AI-assisted engineering and operations.
+- **2025-04-21** — [AI Agents, meet Test Driven Development](<../evals-observability/testing/AI Agents, meet Test Driven Development.md>) · `testing` · latent-space
+  Connects AI agents with test-driven development and argues for tests as scaffolding for reliable agentic coding.
 - **2025-04-10** — [Building and Deploying Observable AI Agents with Google Agent Framework and Arize](<../evals-observability/tracing/Building and Deploying Observable AI Agents with Google Agent Framework and Arize.md>) · `tracing` · arize
   Guide to building and deploying observable agents with Google Agent Framework and Arize, emphasizing traces for multi-agent and agentic workflows.
 - **2025-04-09** — [Embracing Google's Agent-To-Agent (A2A) Protocol](<multi-agent/Embracing Google's Agent-To-Agent (A2A) Protocol.md>) · `multi-agent` · arize
@@ -709,6 +741,8 @@
   Replit Agent case study on tracing and managing complex agent workflows with LangSmith.
 - **2024-09-12** — [How to build function calling and JSON mode for open-source and fine-tuned LLMs](<../prompt-engineering/structured-output/How to build function calling and JSON mode for open-source and fine-tuned LLMs.md>) · `structured-output` · baseten
   Shows how to build function calling and JSON mode for open-source and fine-tuned LLMs.
+- **2024-08-16** — [AI Magic: Shipping 1000s of successful products with no managers and a team of 12 — Jeremy Howard of Answer.ai](<../product-engineering/case-studies/AI Magic Shipping 1000s of successful products with no managers and a team of 12 — Jeremy Howard of Answer.ai.md>) · `case-studies` · latent-space
+  Case study on Answer.ai shipping many AI products with a small team, highlighting lightweight operating and product loops.
 - **2024-08-08** — [LlamaIndex Workflows: Navigating a New Way To Build Cyclical Agents](<planning/LlamaIndex Workflows Navigating a New Way To Build Cyclical Agents.md>) · `planning` · arize
   Explains LlamaIndex Workflows as a pattern for building cyclical agents with explicit control flow.
 - **2024-08-06** — [Compound AI systems explained](<../product-engineering/architecture/Compound AI systems explained.md>) · `architecture` · baseten
