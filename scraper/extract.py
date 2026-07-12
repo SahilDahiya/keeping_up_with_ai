@@ -21,7 +21,15 @@ class Article:
 
 
 class ExtractionError(Exception):
-    pass
+    """Extraction genuinely failed — worth retrying on a later run."""
+
+
+class TooShallow(ExtractionError):
+    """Article is real but below the source's `min_words` floor.
+
+    This is a deliberate config filter, not a failure: the page will never grow.
+    Callers record it as an intentional skip so it is not re-fetched every run.
+    """
 
 
 def extract_article(html: str, url: str, *, title_hint: str | None = None,
@@ -46,7 +54,7 @@ def extract_article(html: str, url: str, *, title_hint: str | None = None,
 
     words = len(body.split())
     if min_words and words < min_words:
-        raise ExtractionError(f"below min_words ({words} < {min_words})")
+        raise TooShallow(f"below min_words ({words} < {min_words})")
 
     published = (meta.date if meta else None) or (date_hint[:10] if date_hint else None)
     return Article(

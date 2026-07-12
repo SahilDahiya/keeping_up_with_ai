@@ -9,7 +9,7 @@ import typer
 
 from .config import INBOX_DIR, load_sources, get_source, load_taxonomy, SourceConfig
 from .discover import Discovered, discover_feed, discover_sitemap
-from .extract import ExtractionError, extract_article
+from .extract import ExtractionError, TooShallow, extract_article
 from .fetch import Fetcher, FetchError
 from .index import rebuild_indexes
 from .state import State
@@ -98,6 +98,12 @@ def _process(source: SourceConfig, discovered: list[Discovered], fetcher: Fetche
             resp = fetcher.get(d.url, interval=source.rate_limit_seconds)
             article = extract_article(resp.text, d.url, title_hint=d.title_hint,
                                       date_hint=d.date_hint, min_words=source.min_words)
+        except TooShallow as e:
+            # Deliberate config filter, not a failure — record so we never re-fetch it.
+            typer.echo(f"  too-shallow: {d.url} ({e})")
+            state.mark(d.url, source.slug, "skipped", skip_reason="too-shallow")
+            stats["skipped"] += 1
+            continue
         except (FetchError, ExtractionError) as e:
             typer.echo(f"  FAIL {d.url}: {e}")
             state.mark(d.url, source.slug, "failed")
