@@ -42,7 +42,7 @@
   Explains consistency diffusion language models for faster inference without large quality loss.
 - **2026-02-06** — [What do LLMs think when you don't tell them what to think about?](<../evals-observability/evaluation/What do LLMs think when you don't tell them what to think about.md>) · `evaluation` · together
   Investigates what LLMs do under underspecified prompting and how that affects evaluation.
-- **2026-02-02** — [Fine-tuning open LLM judges to outperform GPT-5.2](<../models/fine-tuning/Fine-tuning open LLM judges to outperform GPT-5.2.md>) · `fine-tuning` · together
+- **2026-02-02** — [Fine-tuning open LLM judges to outperform GPT-5.2](<../models/reinforcement-learning/Fine-tuning open LLM judges to outperform GPT-5.2.md>) · `reinforcement-learning` · together
   Explains fine-tuning open LLM judges to outperform a frontier judge model.
 - **2026-01-26** — [DSGym: A holistic framework for evaluating and training data science agents](<../evals-observability/evaluation/DSGym A holistic framework for evaluating and training data science agents.md>) · `evaluation` · together
   Introduces DSGym for evaluating and training data science agents.
@@ -78,7 +78,7 @@
   Describes Chipmunk, a training-free acceleration method for diffusion transformers.
 - **2025-04-17** — [Continued Fine-tuning of LLMs: A Technical Deep Dive](<../models/fine-tuning/Continued Fine-tuning of LLMs A Technical Deep Dive.md>) · `fine-tuning` · together
   Technical deep dive into continued fine-tuning of LLMs.
-- **2025-04-17** — [Direct Preference Optimization: A Technical Deep Dive](<../models/fine-tuning/Direct Preference Optimization A Technical Deep Dive.md>) · `fine-tuning` · together
+- **2025-04-17** — [Direct Preference Optimization: A Technical Deep Dive](<../models/reinforcement-learning/Direct Preference Optimization A Technical Deep Dive.md>) · `reinforcement-learning` · together
   Technical deep dive into Direct Preference Optimization for aligning language models.
 - **2025-04-16** — [Open Deep Research](<../agents/tool-use/Open Deep Research.md>) · `tool-use` · together
   Describes an open deep research system combining retrieval, planning, and tool use.

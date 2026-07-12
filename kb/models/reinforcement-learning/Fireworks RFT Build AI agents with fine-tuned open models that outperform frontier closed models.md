@@ -2,7 +2,7 @@
 title: 'Fireworks RFT: Build AI agents with fine-tuned open models that outperform
   frontier closed models'
 topic: models
-subtopic: fine-tuning
+subtopic: reinforcement-learning
 secondary_topics:
 - agents/planning
 summary: Explains reinforcement fine-tuning for building agent models that can outperform

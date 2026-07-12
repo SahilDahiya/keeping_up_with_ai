@@ -1,7 +1,7 @@
 ---
 title: Frontier RL Is Cheaper Than You Think
 topic: models
-subtopic: fine-tuning
+subtopic: reinforcement-learning
 secondary_topics:
 - infra-platform/cost
 summary: Argues that frontier reinforcement learning can be cost-effective with the

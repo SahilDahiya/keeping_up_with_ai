@@ -1,7 +1,7 @@
 ---
 title: 'Direct Preference Optimization: A Technical Deep Dive'
 topic: models
-subtopic: fine-tuning
+subtopic: reinforcement-learning
 secondary_topics:
 - models/reasoning
 summary: Technical deep dive into Direct Preference Optimization for aligning language

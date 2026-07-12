@@ -1,7 +1,7 @@
 ---
 title: 'Eval Protocol: RL on your agents, in any environment'
 topic: models
-subtopic: fine-tuning
+subtopic: reinforcement-learning
 secondary_topics:
 - evals-observability/evaluation
 - agents/planning

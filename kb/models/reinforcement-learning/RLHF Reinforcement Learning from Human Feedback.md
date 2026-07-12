@@ -1,7 +1,7 @@
 ---
 title: 'RLHF: Reinforcement Learning from Human Feedback'
 topic: models
-subtopic: fine-tuning
+subtopic: reinforcement-learning
 secondary_topics:
 - evals-observability/evaluation
 summary: Explains the RLHF pipeline from preference data through reward modeling and

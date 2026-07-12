@@ -2,7 +2,7 @@
 title: 'Reinforcement Fine Tuning: Train expert open models to surpass closed frontier
   models'
 topic: models
-subtopic: fine-tuning
+subtopic: reinforcement-learning
 secondary_topics:
 - models/reasoning
 summary: Introduces reinforcement fine-tuning for training expert open models beyond

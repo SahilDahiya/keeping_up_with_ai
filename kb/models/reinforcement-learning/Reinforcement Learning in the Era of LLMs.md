@@ -1,7 +1,7 @@
 ---
 title: Reinforcement Learning in the Era of LLMs
 topic: models
-subtopic: fine-tuning
+subtopic: reinforcement-learning
 secondary_topics:
 - models/reasoning
 summary: Explains reinforcement learning concepts in the LLM era and how RL fits into

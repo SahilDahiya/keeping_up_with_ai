@@ -310,7 +310,7 @@
   Deep dive into Amazon Chronos for time-series modeling, including model behavior and evaluation context.
 - **2024-03-26** — [Anthropic Claude 3](<../models/releases/Anthropic Claude 3.md>) · `releases` · arize
   Overview of Anthropic Claude 3 model releases and capabilities, including model comparisons and implications for LLM application builders.
-- **2024-03-15** — [Reinforcement Learning in the Era of LLMs](<../models/fine-tuning/Reinforcement Learning in the Era of LLMs.md>) · `fine-tuning` · arize
+- **2024-03-15** — [Reinforcement Learning in the Era of LLMs](<../models/reinforcement-learning/Reinforcement Learning in the Era of LLMs.md>) · `reinforcement-learning` · arize
   Explains reinforcement learning concepts in the LLM era and how RL fits into model improvement workflows.
 - **2024-03-06** — [Evaluate RAG with LLM Evals and Benchmarks](<../rag-retrieval/pipelines/Evaluate RAG with LLM Evals and Benchmarks.md>) · `pipelines` · arize
   Workshop recap on evaluating RAG systems with LLM evals and benchmarks.
@@ -380,7 +380,7 @@
   Overview of cross-validation from classic ML through LLM applications, focused on evaluation methodology.
 - **2023-05-17** — [Evaluating Model Fairness](<../evals-observability/evaluation/Evaluating Model Fairness.md>) · `evaluation` · arize
   Explains model fairness evaluation and how to assess bias and fairness risks in production systems.
-- **2023-05-05** — [OpenAI on Reinforcement Learning With Human Feedback (RLHF)](<../models/fine-tuning/OpenAI on Reinforcement Learning With Human Feedback (RLHF).md>) · `fine-tuning` · arize
+- **2023-05-05** — [OpenAI on Reinforcement Learning With Human Feedback (RLHF)](<../models/reinforcement-learning/OpenAI on Reinforcement Learning With Human Feedback (RLHF).md>) · `reinforcement-learning` · arize
   Summarizes RLHF concepts from OpenAI and how human feedback changes model behavior during post-training.
 - **2023-04-28** — [Lessons From Building an Early ChatGPT Plugin In Under 24 Hours](<../product-engineering/case-studies/Lessons From Building an Early ChatGPT Plugin In Under 24 Hours.md>) · `case-studies` · arize
   Retrospective on building an early ChatGPT plugin quickly, including product workflow lessons and integration constraints from the plugin ecosystem.

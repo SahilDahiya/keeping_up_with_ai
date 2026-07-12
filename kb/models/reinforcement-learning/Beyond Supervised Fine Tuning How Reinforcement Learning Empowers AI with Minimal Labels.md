@@ -2,7 +2,7 @@
 title: 'Beyond Supervised Fine Tuning: How Reinforcement Learning Empowers AI with
   Minimal Labels'
 topic: models
-subtopic: fine-tuning
+subtopic: reinforcement-learning
 secondary_topics:
 - evals-observability/evaluation
 summary: Explains reinforcement learning with verifiable rewards as a way to improve

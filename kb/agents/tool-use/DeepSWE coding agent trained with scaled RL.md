@@ -3,7 +3,7 @@ title: DeepSWE coding agent trained with scaled RL
 topic: agents
 subtopic: tool-use
 secondary_topics:
-- models/fine-tuning
+- models/reinforcement-learning
 summary: Explains DeepSWE, an open-source coding agent trained by scaling reinforcement
   learning.
 source: together

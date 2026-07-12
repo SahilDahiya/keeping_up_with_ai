@@ -3,7 +3,7 @@ title: Accelerate RL rollouts by up to 50% with distribution-aware speculative d
 topic: inference
 subtopic: optimization
 secondary_topics:
-- models/fine-tuning
+- models/reinforcement-learning
 summary: Explains distribution-aware speculative decoding for faster RL rollouts.
 source: together
 url: https://www.together.ai/blog/distribution-aware-speculative-decoding

@@ -3,7 +3,7 @@ title: Vercel code fixing with open models, speculative decoding, and RFT
 topic: product-engineering
 subtopic: case-studies
 secondary_topics:
-- models/fine-tuning
+- models/reinforcement-learning
 - inference/optimization
 summary: Case study of improving Vercel code-fixing outputs with open models, speculative
   decoding, and reinforcement fine-tuning.

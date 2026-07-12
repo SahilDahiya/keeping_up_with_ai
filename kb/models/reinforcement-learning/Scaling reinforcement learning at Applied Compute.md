@@ -1,7 +1,7 @@
 ---
 title: Scaling reinforcement learning at Applied Compute
 topic: models
-subtopic: fine-tuning
+subtopic: reinforcement-learning
 secondary_topics:
 - infra-platform/gpu-clusters
 summary: Case study on scaling reinforcement learning workloads with elastic GPU infrastructure

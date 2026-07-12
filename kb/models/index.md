@@ -24,11 +24,11 @@
   Engineering writeup on building a fast speech-to-text stack.
 - **2026-05-29** — [Timestep distillation: 2.5x faster FLUX.2 image generation](<multimodal/Timestep distillation 2.5x faster FLUX.2 image generation.md>) · `multimodal` · baseten
   Explains timestep distillation for faster FLUX.2 image generation.
-- **2026-05-28** — [Reinforcement learning is an infrastructure problem](<fine-tuning/Reinforcement learning is an infrastructure problem.md>) · `fine-tuning` · modal
+- **2026-05-28** — [Reinforcement learning is an infrastructure problem](<reinforcement-learning/Reinforcement learning is an infrastructure problem.md>) · `reinforcement-learning` · modal
   Argues that reinforcement learning progress depends heavily on infrastructure for scheduling, iteration, and scalable experiments.
 - **2026-05-26** — [How to ship a local LLM that matches frontier LLMs with evals and prompt engineering](<fine-tuning/How to ship a local LLM that matches frontier LLMs with evals and prompt engineering.md>) · `fine-tuning` · arize
   Explains how evals and prompt engineering can make smaller local models viable substitutes for frontier models on constrained tasks.
-- **2026-05-19** — [Scaling reinforcement learning at Applied Compute](<fine-tuning/Scaling reinforcement learning at Applied Compute.md>) · `fine-tuning` · modal
+- **2026-05-19** — [Scaling reinforcement learning at Applied Compute](<reinforcement-learning/Scaling reinforcement learning at Applied Compute.md>) · `reinforcement-learning` · modal
   Case study on scaling reinforcement learning workloads with elastic GPU infrastructure and faster experiment iteration.
 - **2026-05-18** — [Voice AI is only as good as what it hears](<multimodal/Voice AI is only as good as what it hears.md>) · `multimodal` · sierra
   Explains why voice-agent quality depends on transcription accuracy and how hearing failures propagate into agent behavior.
@@ -62,7 +62,7 @@
   Explains the moving pieces of open-source LLM training, including data, trainers, infrastructure, and evaluation.
 - **2026-03-28** — [The Fine-Tuning Bottleneck Isn't the Algorithm](<fine-tuning/The Fine-Tuning Bottleneck Isn't the Algorithm.md>) · `fine-tuning` · fireworks
   Explains why fine-tuning bottlenecks often come from data, evaluation, orchestration, and serving rather than algorithms alone.
-- **2026-03-23** — [Frontier RL Is Cheaper Than You Think](<fine-tuning/Frontier RL Is Cheaper Than You Think.md>) · `fine-tuning` · fireworks
+- **2026-03-23** — [Frontier RL Is Cheaper Than You Think](<reinforcement-learning/Frontier RL Is Cheaper Than You Think.md>) · `reinforcement-learning` · fireworks
   Argues that frontier reinforcement learning can be cost-effective with the right infrastructure and training-loop design.
 - **2026-03-17** — [Mamba-3](<reasoning/Mamba-3.md>) · `reasoning` · together
   Describes Mamba-3 and its implications for efficient sequence modeling.
@@ -72,9 +72,9 @@
   Surveys DeepSeek model variants with production caveats around serving, reasoning behavior, and deployment tradeoffs.
 - **2026-02-23** — [How speech models fail where it matters the most and what to do about it](<multimodal/How speech models fail where it matters the most and what to do about it.md>) · `multimodal` · together
   Analyzes speech model failure modes that matter for production applications.
-- **2026-02-02** — [Fine-tuning open LLM judges to outperform GPT-5.2](<fine-tuning/Fine-tuning open LLM judges to outperform GPT-5.2.md>) · `fine-tuning` · together
+- **2026-02-02** — [Fine-tuning open LLM judges to outperform GPT-5.2](<reinforcement-learning/Fine-tuning open LLM judges to outperform GPT-5.2.md>) · `reinforcement-learning` · together
   Explains fine-tuning open LLM judges to outperform a frontier judge model.
-- **2025-12-31** — [DPO as reinforcement learning](<fine-tuning/DPO as reinforcement learning.md>) · `fine-tuning` · fireworks
+- **2025-12-31** — [DPO as reinforcement learning](<reinforcement-learning/DPO as reinforcement learning.md>) · `reinforcement-learning` · fireworks
   Connects DPO and RL-style training loops, explaining preference optimization as part of continuous model improvement.
 - **2025-12-19** — [Evaluating AI Voices – What Does It Mean to Sound “Good”?](<multimodal/Evaluating AI Voices – What Does It Mean to Sound “Good”.md>) · `multimodal` · cresta
   Explores how to evaluate AI voice quality beyond subjective preference, including production criteria for speech experiences.
@@ -82,17 +82,17 @@
   Engineering guide to real-time multilingual intelligence for conversations, focusing on latency and speech-language quality.
 - **2025-12-15** — [Updates for developers building with voice | OpenAI Developers](<releases/Updates for developers building with voice OpenAI Developers.md>) · `releases` · openai-devs
   Release notes for four December 2025 audio model snapshots (gpt-4o-mini-transcribe, gpt-4o-mini-tts, gpt-realtime-mini, gpt-audio-mini): lower word-error rates on noisy audio, fewer hallucinations during silence, better tool calling in the minis, and broader Custom Voices access at unchanged pricing.
-- **2025-12-10** — [Best Practices for Multi-Turn RL](<fine-tuning/Best Practices for Multi-Turn RL.md>) · `fine-tuning` · fireworks
+- **2025-12-10** — [Best Practices for Multi-Turn RL](<reinforcement-learning/Best Practices for Multi-Turn RL.md>) · `reinforcement-learning` · fireworks
   Covers best practices for multi-turn reinforcement learning, including environment design and reward structure.
 - **2025-12-05** — [DeepSeek V3.2's path to GPT-5-level performance: sparse attention, RL at scale, and context reuse](<reasoning/DeepSeek V3.2's path to GPT-5-level performance sparse attention, RL at scale, and context reuse.md>) · `reasoning` · baseten
   Explains DeepSeek V3.2 architecture and training choices including sparse attention, RL, and context reuse.
 - **2025-12-04** — [Fine-tuning LLMs as classifiers](<fine-tuning/Fine-tuning LLMs as classifiers.md>) · `fine-tuning` · fireworks
   Shows how to adapt generative LLMs for classification tasks while preserving probability outputs and efficient serving.
-- **2025-11-20** — [Eval Protocol: RL on your agents, in any environment](<fine-tuning/Eval Protocol RL on your agents, in any environment.md>) · `fine-tuning` · fireworks
+- **2025-11-20** — [Eval Protocol: RL on your agents, in any environment](<reinforcement-learning/Eval Protocol RL on your agents, in any environment.md>) · `reinforcement-learning` · fireworks
   Describes using Eval Protocol to run reinforcement learning on agents in task environments.
-- **2025-11-10** — [Fireworks RFT: Build AI agents with fine-tuned open models that outperform frontier closed models](<fine-tuning/Fireworks RFT Build AI agents with fine-tuned open models that outperform frontier closed models.md>) · `fine-tuning` · fireworks
+- **2025-11-10** — [Fireworks RFT: Build AI agents with fine-tuned open models that outperform frontier closed models](<reinforcement-learning/Fireworks RFT Build AI agents with fine-tuned open models that outperform frontier closed models.md>) · `reinforcement-learning` · fireworks
   Explains reinforcement fine-tuning for building agent models that can outperform closed frontier models on target tasks.
-- **2025-10-31** — [Genspark deep research agent with Fireworks RFT](<fine-tuning/Genspark deep research agent with Fireworks RFT.md>) · `fine-tuning` · fireworks
+- **2025-10-31** — [Genspark deep research agent with Fireworks RFT](<reinforcement-learning/Genspark deep research agent with Fireworks RFT.md>) · `reinforcement-learning` · fireworks
   Case study of reinforcement fine-tuning a deep research agent to improve quality, tool calls, and cost.
 - **2025-10-23** — [DeepSeek-OCR and the Unreasonable Usefulness of Compression](<multimodal/DeepSeek-OCR and the Unreasonable Usefulness of Compression.md>) · `multimodal` · baseten
   Explains DeepSeek-OCR and why compression can be useful for multimodal model workflows.
@@ -130,7 +130,7 @@
   Notes on building with Grok 4, including model behavior, practical integration considerations, and evaluation needs for new model adoption.
 - **2025-06-20** — [The Illusion of Thinking: What the Apple AI Paper Says About LLM Reasoning](<reasoning/The Illusion of Thinking What the Apple AI Paper Says About LLM Reasoning.md>) · `reasoning` · arize
   Analyzes the Apple reasoning paper and what it suggests about evaluating LLM reasoning limits.
-- **2025-06-09** — [Reinforcement Fine Tuning: Train expert open models to surpass closed frontier models](<fine-tuning/Reinforcement Fine Tuning Train expert open models to surpass closed frontier models.md>) · `fine-tuning` · fireworks
+- **2025-06-09** — [Reinforcement Fine Tuning: Train expert open models to surpass closed frontier models](<reinforcement-learning/Reinforcement Fine Tuning Train expert open models to surpass closed frontier models.md>) · `reinforcement-learning` · fireworks
   Introduces reinforcement fine-tuning for training expert open models beyond supervised baselines.
 - **2025-06-04** — [Synthetic data pipeline for fine-tuning and evaluation](<fine-tuning/Synthetic data pipeline for fine-tuning and evaluation.md>) · `fine-tuning` · fireworks
   Describes a synthetic-data pipeline that connects task definition, generation, SFT/RFT, evaluation, and cleanup.
@@ -148,7 +148,7 @@
   Connects transcription performance to broader AI application quality, especially for voice-first systems.
 - **2025-04-17** — [Continued Fine-tuning of LLMs: A Technical Deep Dive](<fine-tuning/Continued Fine-tuning of LLMs A Technical Deep Dive.md>) · `fine-tuning` · together
   Technical deep dive into continued fine-tuning of LLMs.
-- **2025-04-17** — [Direct Preference Optimization: A Technical Deep Dive](<fine-tuning/Direct Preference Optimization A Technical Deep Dive.md>) · `fine-tuning` · together
+- **2025-04-17** — [Direct Preference Optimization: A Technical Deep Dive](<reinforcement-learning/Direct Preference Optimization A Technical Deep Dive.md>) · `reinforcement-learning` · together
   Technical deep dive into Direct Preference Optimization for aligning language models.
 - **2025-04-11** — [40 Large Language Model Benchmarks and The Future of Model Evaluation](<benchmarks/40 Large Language Model Benchmarks and The Future of Model Evaluation.md>) · `benchmarks` · arize
   Surveys major LLM benchmarks and explains what different benchmark families measure for model evaluation.
@@ -166,7 +166,7 @@
   Explains DeepSeek V3 and R1 architecture choices, including why the models are efficient for reasoning workloads.
 - **2025-01-31** — [Distillation with Reasoning: Can DeepSeek R1 Teach Better Than Humans?](<fine-tuning/Distillation with Reasoning Can DeepSeek R1 Teach Better Than Humans.md>) · `fine-tuning` · fireworks
   Discusses distilling reasoning behavior from DeepSeek R1 and the limits of teacher-model supervision.
-- **2025-01-27** — [Beyond Supervised Fine Tuning: How Reinforcement Learning Empowers AI with Minimal Labels](<fine-tuning/Beyond Supervised Fine Tuning How Reinforcement Learning Empowers AI with Minimal Labels.md>) · `fine-tuning` · fireworks
+- **2025-01-27** — [Beyond Supervised Fine Tuning: How Reinforcement Learning Empowers AI with Minimal Labels](<reinforcement-learning/Beyond Supervised Fine Tuning How Reinforcement Learning Empowers AI with Minimal Labels.md>) · `reinforcement-learning` · fireworks
   Explains reinforcement learning with verifiable rewards as a way to improve models with minimal labels.
 - **2025-01-24** — [DeepSeek-R1 Overview: Features, Capabilities, Parameters](<reasoning/DeepSeek-R1 Overview Features, Capabilities, Parameters.md>) · `reasoning` · fireworks
   Deep dive into DeepSeek-R1 capabilities, parameters, and reasoning behavior for production model selection.
@@ -230,7 +230,7 @@
   Deep dive into Amazon Chronos for time-series modeling, including model behavior and evaluation context.
 - **2024-03-26** — [Anthropic Claude 3](<releases/Anthropic Claude 3.md>) · `releases` · arize
   Overview of Anthropic Claude 3 model releases and capabilities, including model comparisons and implications for LLM application builders.
-- **2024-03-15** — [Reinforcement Learning in the Era of LLMs](<fine-tuning/Reinforcement Learning in the Era of LLMs.md>) · `fine-tuning` · arize
+- **2024-03-15** — [Reinforcement Learning in the Era of LLMs](<reinforcement-learning/Reinforcement Learning in the Era of LLMs.md>) · `reinforcement-learning` · arize
   Explains reinforcement learning concepts in the LLM era and how RL fits into model improvement workflows.
 - **2024-03-04** — [BASED: Simple linear attention language models balance the recall-throughput tradeoff](<reasoning/BASED Simple linear attention language models balance the recall-throughput tradeoff.md>) · `reasoning` · together
   Explains BASED linear-attention language models and the recall-throughput tradeoff.
@@ -292,9 +292,9 @@
   Summarizes LIMA and the idea that small high-quality instruction data can have outsized impact on alignment tuning.
 - **2023-06-01** — [Drag Your GAN: Interactive Point-Based Manipulation on the Generative Image Manifold](<multimodal/Drag Your GAN Interactive Point-Based Manipulation on the Generative Image Manifold.md>) · `multimodal` · arize
   Paper-reading deep dive on DragGAN and interactive point-based image manipulation in generative model latent spaces.
-- **2023-05-05** — [OpenAI on Reinforcement Learning With Human Feedback (RLHF)](<fine-tuning/OpenAI on Reinforcement Learning With Human Feedback (RLHF).md>) · `fine-tuning` · arize
+- **2023-05-05** — [OpenAI on Reinforcement Learning With Human Feedback (RLHF)](<reinforcement-learning/OpenAI on Reinforcement Learning With Human Feedback (RLHF).md>) · `reinforcement-learning` · arize
   Summarizes RLHF concepts from OpenAI and how human feedback changes model behavior during post-training.
-- **2023-05-02** — [RLHF: Reinforcement Learning from Human Feedback](<fine-tuning/RLHF Reinforcement Learning from Human Feedback.md>) · `fine-tuning` · chip-huyen
+- **2023-05-02** — [RLHF: Reinforcement Learning from Human Feedback](<reinforcement-learning/RLHF Reinforcement Learning from Human Feedback.md>) · `reinforcement-learning` · chip-huyen
   Explains the RLHF pipeline from preference data through reward modeling and policy optimization, including why human feedback changes model behavior and where evaluation matters.
 - **2023-03-29** — [Hungry Hungry Hippos (H3) and Language Modeling with State Space Models](<reasoning/Hungry Hungry Hippos (H3) and Language Modeling with State Space Models.md>) · `reasoning` · arize
   Explains H3/state-space model ideas as alternatives to standard attention and why they matter for sequence modeling efficiency.
@@ -405,7 +405,7 @@
   Explains multi-node model training across GPU clusters and the coordination issues that appear at scale.
 - **2026-01-08** — [How to choose the right open model for production](<../product-engineering/architecture/How to choose the right open model for production.md>) · `architecture` · together
   Guide to choosing open models for production based on workload, quality, and serving constraints.
-- **2025-12-31** — [DPO as reinforcement learning](<fine-tuning/DPO as reinforcement learning.md>) · `fine-tuning` · fireworks
+- **2025-12-31** — [DPO as reinforcement learning](<reinforcement-learning/DPO as reinforcement learning.md>) · `reinforcement-learning` · fireworks
   Connects DPO and RL-style training loops, explaining preference optimization as part of continuous model improvement.
 - **2025-12-30** — [OpenAI for Developers in 2025](<../industry/trends/OpenAI for Developers in 2025.md>) · `trends` · openai-devs
   Year-in-review of OpenAI's 2025 developer platform: reasoning converging from separate o1/o3/o4-mini lines into unified flagship models, multimodal I/O becoming default, agent building blocks (Responses API, Agents SDK, AgentKit), and GPT-5.2-Codex for long-horizon coding.
@@ -465,7 +465,7 @@
   Analyzes the Apple reasoning paper and what it suggests about evaluating LLM reasoning limits.
 - **2025-06-18** — [Run FLUX.1-dev three times faster](<../inference/optimization/Run FLUX.1-dev three times faster.md>) · `optimization` · modal
   Explains optimizations for running FLUX.1-dev faster, including inference configuration and image-model serving tradeoffs.
-- **2025-06-09** — [Reinforcement Fine Tuning: Train expert open models to surpass closed frontier models](<fine-tuning/Reinforcement Fine Tuning Train expert open models to surpass closed frontier models.md>) · `fine-tuning` · fireworks
+- **2025-06-09** — [Reinforcement Fine Tuning: Train expert open models to surpass closed frontier models](<reinforcement-learning/Reinforcement Fine Tuning Train expert open models to surpass closed frontier models.md>) · `reinforcement-learning` · fireworks
   Introduces reinforcement fine-tuning for training expert open models beyond supervised baselines.
 - **2025-06-05** — [Model-Preserving Adaptive Rounding with YAQA](<../inference/quantization/Model-Preserving Adaptive Rounding with YAQA.md>) · `quantization` · together
   Explains YAQA, a model-preserving adaptive rounding approach for quantization.
@@ -473,7 +473,7 @@
   Shows customized speculative decoding for accelerating DeepSeek-R1 serving.
 - **2025-04-21** — [Chipmunk: Training-Free Acceleration of Diffusion Transformers with Dynamic Column-Sparse Deltas](<../inference/optimization/Chipmunk Training-Free Acceleration of Diffusion Transformers with Dynamic Column-Sparse Deltas.md>) · `optimization` · together
   Describes Chipmunk, a training-free acceleration method for diffusion transformers.
-- **2025-04-17** — [Direct Preference Optimization: A Technical Deep Dive](<fine-tuning/Direct Preference Optimization A Technical Deep Dive.md>) · `fine-tuning` · together
+- **2025-04-17** — [Direct Preference Optimization: A Technical Deep Dive](<reinforcement-learning/Direct Preference Optimization A Technical Deep Dive.md>) · `reinforcement-learning` · together
   Technical deep dive into Direct Preference Optimization for aligning language models.
 - **2025-04-08** — [DeepCoder: A Fully Open-Source 14B Coder at O3-mini Level](<../agents/tool-use/DeepCoder A Fully Open-Source 14B Coder at O3-mini Level.md>) · `tool-use` · together
   Describes DeepCoder, an open-source coding model trained for O3-mini-level coding performance.
@@ -559,7 +559,7 @@
   Deep dive into Amazon Chronos for time-series modeling, including model behavior and evaluation context.
 - **2024-03-26** — [Anthropic Claude 3](<releases/Anthropic Claude 3.md>) · `releases` · arize
   Overview of Anthropic Claude 3 model releases and capabilities, including model comparisons and implications for LLM application builders.
-- **2024-03-15** — [Reinforcement Learning in the Era of LLMs](<fine-tuning/Reinforcement Learning in the Era of LLMs.md>) · `fine-tuning` · arize
+- **2024-03-15** — [Reinforcement Learning in the Era of LLMs](<reinforcement-learning/Reinforcement Learning in the Era of LLMs.md>) · `reinforcement-learning` · arize
   Explains reinforcement learning concepts in the LLM era and how RL fits into model improvement workflows.
 - **2024-02-28** — [Predictive Human Preference: From Model Ranking to Model Routing](<../evals-observability/evaluation/Predictive Human Preference From Model Ranking to Model Routing.md>) · `evaluation` · chip-huyen
   Describes predictive human preference for model ranking and model routing, using preference models and evaluations to choose among LLMs by quality, cost, and latency.

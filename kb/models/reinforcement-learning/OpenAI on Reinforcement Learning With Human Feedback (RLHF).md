@@ -1,7 +1,7 @@
 ---
 title: OpenAI on Reinforcement Learning With Human Feedback (RLHF)
 topic: models
-subtopic: fine-tuning
+subtopic: reinforcement-learning
 secondary_topics: []
 summary: Summarizes RLHF concepts from OpenAI and how human feedback changes model
   behavior during post-training.

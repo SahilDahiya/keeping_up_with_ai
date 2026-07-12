@@ -1,7 +1,7 @@
 ---
 title: DPO as reinforcement learning
 topic: models
-subtopic: fine-tuning
+subtopic: reinforcement-learning
 secondary_topics:
 - models/reasoning
 summary: Connects DPO and RL-style training loops, explaining preference optimization

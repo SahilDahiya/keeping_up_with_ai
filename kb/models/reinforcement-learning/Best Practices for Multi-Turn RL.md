@@ -1,7 +1,7 @@
 ---
 title: Best Practices for Multi-Turn RL
 topic: models
-subtopic: fine-tuning
+subtopic: reinforcement-learning
 secondary_topics:
 - agents/planning
 summary: Covers best practices for multi-turn reinforcement learning, including environment

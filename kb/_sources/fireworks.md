@@ -18,7 +18,7 @@
   Explains a tokenizer-level prompt-injection fix and the implications for securing model-serving systems.
 - **2026-03-28** — [The Fine-Tuning Bottleneck Isn't the Algorithm](<../models/fine-tuning/The Fine-Tuning Bottleneck Isn't the Algorithm.md>) · `fine-tuning` · fireworks
   Explains why fine-tuning bottlenecks often come from data, evaluation, orchestration, and serving rather than algorithms alone.
-- **2026-03-23** — [Frontier RL Is Cheaper Than You Think](<../models/fine-tuning/Frontier RL Is Cheaper Than You Think.md>) · `fine-tuning` · fireworks
+- **2026-03-23** — [Frontier RL Is Cheaper Than You Think](<../models/reinforcement-learning/Frontier RL Is Cheaper Than You Think.md>) · `reinforcement-learning` · fireworks
   Argues that frontier reinforcement learning can be cost-effective with the right infrastructure and training-loop design.
 - **2026-03-10** — [Training-Inference Parity in MoE Models: Where Numerics Drift](<../inference/optimization/Training-Inference Parity in MoE Models Where Numerics Drift.md>) · `optimization` · fireworks
   Explains training-inference parity issues in MoE models and how numeric drift can affect production behavior.
@@ -30,23 +30,23 @@
   Explains the benchmark and quality gaps involved in shipping Kimi K2.5 for production workloads.
 - **2026-01-23** — [Turning production logs into evaluation datasets](<../evals-observability/evaluation/Turning production logs into evaluation datasets.md>) · `evaluation` · fireworks
   Describes converting production traces into compact evaluation datasets using embeddings, clustering, and representative sampling.
-- **2025-12-31** — [DPO as reinforcement learning](<../models/fine-tuning/DPO as reinforcement learning.md>) · `fine-tuning` · fireworks
+- **2025-12-31** — [DPO as reinforcement learning](<../models/reinforcement-learning/DPO as reinforcement learning.md>) · `reinforcement-learning` · fireworks
   Connects DPO and RL-style training loops, explaining preference optimization as part of continuous model improvement.
 - **2025-12-17** — [Self-Improving Agents, Powered by Your Evals](<../agents/planning/Self-Improving Agents, Powered by Your Evals.md>) · `planning` · fireworks
   Describes self-improving agents powered by eval loops, using evaluation feedback to improve behavior.
-- **2025-12-10** — [Best Practices for Multi-Turn RL](<../models/fine-tuning/Best Practices for Multi-Turn RL.md>) · `fine-tuning` · fireworks
+- **2025-12-10** — [Best Practices for Multi-Turn RL](<../models/reinforcement-learning/Best Practices for Multi-Turn RL.md>) · `reinforcement-learning` · fireworks
   Covers best practices for multi-turn reinforcement learning, including environment design and reward structure.
 - **2025-12-04** — [Fine-tuning LLMs as classifiers](<../models/fine-tuning/Fine-tuning LLMs as classifiers.md>) · `fine-tuning` · fireworks
   Shows how to adapt generative LLMs for classification tasks while preserving probability outputs and efficient serving.
-- **2025-11-20** — [Eval Protocol: RL on your agents, in any environment](<../models/fine-tuning/Eval Protocol RL on your agents, in any environment.md>) · `fine-tuning` · fireworks
+- **2025-11-20** — [Eval Protocol: RL on your agents, in any environment](<../models/reinforcement-learning/Eval Protocol RL on your agents, in any environment.md>) · `reinforcement-learning` · fireworks
   Describes using Eval Protocol to run reinforcement learning on agents in task environments.
 - **2025-11-19** — [50 Trillion Tokens Per Day: The State of Agent Environments](<../agents/computer-use/50 Trillion Tokens Per Day The State of Agent Environments.md>) · `computer-use` · fireworks
   Surveys the state of agent environments, emphasizing execution scale, sandboxing, and environment design.
-- **2025-11-10** — [Fireworks RFT: Build AI agents with fine-tuned open models that outperform frontier closed models](<../models/fine-tuning/Fireworks RFT Build AI agents with fine-tuned open models that outperform frontier closed models.md>) · `fine-tuning` · fireworks
+- **2025-11-10** — [Fireworks RFT: Build AI agents with fine-tuned open models that outperform frontier closed models](<../models/reinforcement-learning/Fireworks RFT Build AI agents with fine-tuned open models that outperform frontier closed models.md>) · `reinforcement-learning` · fireworks
   Explains reinforcement fine-tuning for building agent models that can outperform closed frontier models on target tasks.
 - **2025-11-03** — [Vercel code fixing with open models, speculative decoding, and RFT](<../product-engineering/case-studies/Vercel code fixing with open models speculative decoding and RFT.md>) · `case-studies` · fireworks
   Case study of improving Vercel code-fixing outputs with open models, speculative decoding, and reinforcement fine-tuning.
-- **2025-10-31** — [Genspark deep research agent with Fireworks RFT](<../models/fine-tuning/Genspark deep research agent with Fireworks RFT.md>) · `fine-tuning` · fireworks
+- **2025-10-31** — [Genspark deep research agent with Fireworks RFT](<../models/reinforcement-learning/Genspark deep research agent with Fireworks RFT.md>) · `reinforcement-learning` · fireworks
   Case study of reinforcement fine-tuning a deep research agent to improve quality, tool calls, and cost.
 - **2025-10-06** — [LLM Fine-Tuning: Deep Dive & Best Practices](<../models/fine-tuning/LLM Fine-Tuning Deep Dive & Best Practices.md>) · `fine-tuning` · fireworks
   Deep dive into LLM fine-tuning best practices, including data preparation, training strategy, and deployment concerns.
@@ -74,7 +74,7 @@
   Explains using model-as-judge rewards for reinforcement fine-tuning and the evaluation risks involved.
 - **2025-06-14** — [3D FireOptimizer: Automating the Multi-Dimensional Tradeoffs in LLM Serving](<../inference/serving/3D FireOptimizer Automating the Multi-Dimensional Tradeoffs in LLM Serving.md>) · `serving` · fireworks
   Explains multi-dimensional optimization for LLM serving, balancing latency, cost, throughput, and quality tradeoffs.
-- **2025-06-09** — [Reinforcement Fine Tuning: Train expert open models to surpass closed frontier models](<../models/fine-tuning/Reinforcement Fine Tuning Train expert open models to surpass closed frontier models.md>) · `fine-tuning` · fireworks
+- **2025-06-09** — [Reinforcement Fine Tuning: Train expert open models to surpass closed frontier models](<../models/reinforcement-learning/Reinforcement Fine Tuning Train expert open models to surpass closed frontier models.md>) · `reinforcement-learning` · fireworks
   Introduces reinforcement fine-tuning for training expert open models beyond supervised baselines.
 - **2025-06-04** — [Synthetic data pipeline for fine-tuning and evaluation](<../models/fine-tuning/Synthetic data pipeline for fine-tuning and evaluation.md>) · `fine-tuning` · fireworks
   Describes a synthetic-data pipeline that connects task definition, generation, SFT/RFT, evaluation, and cleanup.
@@ -96,7 +96,7 @@
   Explains constrained generation for structured extraction with reasoning models and schema-bound outputs.
 - **2025-01-31** — [Distillation with Reasoning: Can DeepSeek R1 Teach Better Than Humans?](<../models/fine-tuning/Distillation with Reasoning Can DeepSeek R1 Teach Better Than Humans.md>) · `fine-tuning` · fireworks
   Discusses distilling reasoning behavior from DeepSeek R1 and the limits of teacher-model supervision.
-- **2025-01-27** — [Beyond Supervised Fine Tuning: How Reinforcement Learning Empowers AI with Minimal Labels](<../models/fine-tuning/Beyond Supervised Fine Tuning How Reinforcement Learning Empowers AI with Minimal Labels.md>) · `fine-tuning` · fireworks
+- **2025-01-27** — [Beyond Supervised Fine Tuning: How Reinforcement Learning Empowers AI with Minimal Labels](<../models/reinforcement-learning/Beyond Supervised Fine Tuning How Reinforcement Learning Empowers AI with Minimal Labels.md>) · `reinforcement-learning` · fireworks
   Explains reinforcement learning with verifiable rewards as a way to improve models with minimal labels.
 - **2025-01-24** — [DeepSeek-R1 Overview: Features, Capabilities, Parameters](<../models/reasoning/DeepSeek-R1 Overview Features, Capabilities, Parameters.md>) · `reasoning` · fireworks
   Deep dive into DeepSeek-R1 capabilities, parameters, and reasoning behavior for production model selection.

@@ -1,7 +1,7 @@
 ---
 title: Genspark deep research agent with Fireworks RFT
 topic: models
-subtopic: fine-tuning
+subtopic: reinforcement-learning
 secondary_topics:
 - agents/tool-use
 - evals-observability/evaluation

@@ -3,7 +3,7 @@ title: Using Model-as-a-Judge for Reward in Reinforcement Finetuning
 topic: evals-observability
 subtopic: evaluation
 secondary_topics:
-- models/fine-tuning
+- models/reinforcement-learning
 summary: Explains using model-as-judge rewards for reinforcement fine-tuning and the
   evaluation risks involved.
 source: fireworks

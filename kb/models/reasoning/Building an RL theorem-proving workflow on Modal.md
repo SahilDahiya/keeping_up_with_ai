@@ -3,7 +3,7 @@ title: Building an RL theorem-proving workflow on Modal
 topic: models
 subtopic: reasoning
 secondary_topics:
-- models/fine-tuning
+- models/reinforcement-learning
 - infra-platform/deployment
 summary: Walks through an RL theorem-proving workflow, connecting reasoning tasks,
   training loops, and scalable remote execution.

@@ -1,7 +1,7 @@
 ---
 title: Fine-tuning open LLM judges to outperform GPT-5.2
 topic: models
-subtopic: fine-tuning
+subtopic: reinforcement-learning
 secondary_topics:
 - evals-observability/evaluation
 summary: Explains fine-tuning open LLM judges to outperform a frontier judge model.

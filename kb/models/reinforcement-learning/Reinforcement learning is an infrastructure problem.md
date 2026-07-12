@@ -1,7 +1,7 @@
 ---
 title: Reinforcement learning is an infrastructure problem
 topic: models
-subtopic: fine-tuning
+subtopic: reinforcement-learning
 secondary_topics:
 - infra-platform/gpu-clusters
 summary: Argues that reinforcement learning progress depends heavily on infrastructure
