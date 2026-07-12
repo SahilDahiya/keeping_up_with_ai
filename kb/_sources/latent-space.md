@@ -1,6 +1,6 @@
 # latent-space
 
-238 articles.
+237 articles.
 
 - **2026-07-10** — [[AINews] OpenAI launches GPT 5.6 Sol/Terra/Luna, Codex becomes ChatGPT superapp](<../models/releases/[AINews] OpenAI launches GPT 5.6 SolTerraLuna, Codex becomes ChatGPT superapp.md>) · `releases` · latent-space
   Covers GPT-5.6 model releases and Codex becoming a ChatGPT superapp, relevant to coding-agent product direction.
@@ -108,8 +108,6 @@
   Argues for CLI interfaces as durable tool boundaries for agents and coding workflows.
 - **2026-03-20** — [Dreamer: the Personal Agent OS — David Singleton](<../agents/memory-context/Dreamer the Personal Agent OS — David Singleton.md>) · `memory-context` · latent-space
   Dreamer interview on a personal agent OS, persistent memory, and user-facing agent product design.
-- **2026-03-18** — [[AINews] Claude Cowork Dispatch: Anthropic's Answer to OpenClaw](<../agents/computer-use/[AINews] Claude Cowork Dispatch Anthropic's Answer to OpenClaw.md>) · `computer-use` · latent-space
-  Discusses Claude cowork-style agents and how long-running workplace agents change collaboration and task ownership.
 - **2026-03-17** — [Why Anthropic Thinks AI Should Have Its Own Computer — Felix Rieseberg of Claude Cowork & Claude Code Desktop](<../agents/computer-use/Why Anthropic Thinks AI Should Have Its Own Computer — Felix Rieseberg of Claude Cowork & Claude Code Desktop.md>) · `computer-use` · latent-space
   Anthropic interview on why AI should have its own computer, covering desktop agents, sandboxing, and runtime UX.
 - **2026-03-14** — [[AINews] Context Drought](<../prompt-engineering/context-engineering/[AINews] Context Drought.md>) · `context-engineering` · latent-space

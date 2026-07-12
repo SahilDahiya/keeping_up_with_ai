@@ -1,6 +1,6 @@
 # agents
 
-223 articles.
+222 articles.
 
 - **2026-07-10** — [OpenWiki Brains: Proactive Memory for AI Agents](<memory-context/OpenWiki Brains Proactive Memory for AI Agents.md>) · `memory-context` · langchain
   Introduces OpenWiki Brains as proactive wiki memory for agents, focused on persistent context and retrieval over project knowledge.
@@ -178,8 +178,6 @@
   Dreamer interview on a personal agent OS, persistent memory, and user-facing agent product design.
 - **2026-03-19** — [Managing Memory in AI Agents: Beyond the Context Window](<memory-context/Managing Memory in AI Agents Beyond the Context Window.md>) · `memory-context` · arize
   Covers memory and context-window management patterns for agents that need to preserve useful state over long tasks.
-- **2026-03-18** — [[AINews] Claude Cowork Dispatch: Anthropic's Answer to OpenClaw](<computer-use/[AINews] Claude Cowork Dispatch Anthropic's Answer to OpenClaw.md>) · `computer-use` · latent-space
-  Discusses Claude cowork-style agents and how long-running workplace agents change collaboration and task ownership.
 - **2026-03-17** — [Why Anthropic Thinks AI Should Have Its Own Computer — Felix Rieseberg of Claude Cowork & Claude Code Desktop](<computer-use/Why Anthropic Thinks AI Should Have Its Own Computer — Felix Rieseberg of Claude Cowork & Claude Code Desktop.md>) · `computer-use` · latent-space
   Anthropic interview on why AI should have its own computer, covering desktop agents, sandboxing, and runtime UX.
 - **2026-03-13** — [How We Built an Agent Skill to Synthesize what Langfuse Users want](<tool-use/How We Built an Agent Skill to Synthesize what Langfuse Users want.md>) · `tool-use` · langfuse
@@ -659,8 +657,6 @@
   Case study of using Autoresearch to improve an AI skill, with emphasis on writing better tests and using research-agent output to harden behavior.
 - **2026-03-22** — [100 AI Agents Per Employee: The Enterprise Governance Gap](<../product-engineering/security/100 AI Agents Per Employee The Enterprise Governance Gap.md>) · `security` · arize
   Argues that enterprises adopting large populations of AI agents need governance for permissions, ownership, auditability, and lifecycle management before agent scale outpaces human oversight.
-- **2026-03-18** — [[AINews] Claude Cowork Dispatch: Anthropic's Answer to OpenClaw](<computer-use/[AINews] Claude Cowork Dispatch Anthropic's Answer to OpenClaw.md>) · `computer-use` · latent-space
-  Discusses Claude cowork-style agents and how long-running workplace agents change collaboration and task ownership.
 - **2026-03-14** — [[AINews] Context Drought](<../prompt-engineering/context-engineering/[AINews] Context Drought.md>) · `context-engineering` · latent-space
   Explains context scarcity as a bottleneck for AI systems and why better context pipelines matter.
 - **2026-03-13** — [[AINews] The high-return activity of raising your aspirations for LLMs](<../product-engineering/architecture/[AINews] The high-return activity of raising your aspirations for LLMs.md>) · `architecture` · latent-space
