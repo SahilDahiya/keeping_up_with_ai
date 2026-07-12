@@ -1,11 +1,9 @@
 # infra-platform
 
-73 articles.
+66 articles.
 
 - **2026-07-09** — [Trace before you migrate: Measuring Kubernetes bottlenecks in AI agent sandboxes](<deployment/Trace before you migrate Measuring Kubernetes bottlenecks in AI agent sandboxes.md>) · `deployment` · arize
   Shows how tracing can diagnose Kubernetes bottlenecks in AI agent sandboxes before migration decisions.
-- **2026-07-08** — [Why AI Infrastructure must evolve for Agent Experience — Akshat Bubna, Modal CTO](<deployment/Why AI Infrastructure must evolve for Agent Experience — Akshat Bubna, Modal CTO.md>) · `deployment` · latent-space
-  Modal CTO interview on evolving AI infrastructure for agent experience and execution-heavy workloads.
 - **2026-07-06** — [How to price serverless GPUs](<cost/How to price serverless GPUs.md>) · `cost` · modal
   Explains serverless GPU pricing from utilization, scheduling, and workload-shape constraints rather than simple hourly rates.
 - **2026-07-02** — [Your coding agent bill doubled. Here’s how to fix it.](<cost/Your coding agent bill doubled. Here’s how to fix it.md>) · `cost` · langchain
@@ -34,8 +32,6 @@
   Explains model neutrality and why avoiding AI vendor lock-in matters for provider routing, cost control, and long-term architecture.
 - **2026-05-26** — [Mission Control for Self-Hosted LangSmith on Kubernetes](<deployment/Mission Control for Self-Hosted LangSmith on Kubernetes.md>) · `deployment` · langchain
   Guide to operating self-hosted LangSmith on Kubernetes, covering deployment, operations, and control-plane concerns.
-- **2026-05-20** — [Railway: The Agent-Native Cloud — Jake Cooper](<deployment/Railway The Agent-Native Cloud — Jake Cooper.md>) · `deployment` · latent-space
-  Railway interview on agent-native cloud infrastructure and deployment ergonomics for AI builders.
 - **2026-05-19** — [Announcing Claude Managed Agents on Cloudflare](<deployment/Announcing Claude Managed Agents on Cloudflare.md>) · `deployment` · cloudflare-ai
   Cloudflare-Anthropic integration running Claude Managed Agents against Cloudflare Sandboxes: the agent loop stays on the Claude Platform while Cloudflare provides microVM or isolate sandboxes, credential-injecting proxies, private service connectivity, browser session audit trails, and per-agent email.
 - **2026-05-14** — [The Three Pillars of Voice Integration: Building Hybrid AI Contact Centers That Work With Your Existing Infrastructure](<deployment/The Three Pillars of Voice Integration Building Hybrid AI Contact Centers That Work With Your Existing Infrastructure.md>) · `deployment` · cresta
@@ -82,16 +78,12 @@
   Announcement of Arize and NVIDIA collaboration for on-prem enterprise AI deployment and observability infrastructure.
 - **2025-05-07** — [Linear programming for fun and profit](<cost/Linear programming for fun and profit.md>) · `cost` · modal
   Shows how linear programming can allocate compute resources under constraints, useful for GPU scheduling and cost control.
-- **2025-04-11** — [SF Compute: Commoditizing Compute to solve the GPU Bubble forever](<gpu-clusters/SF Compute Commoditizing Compute to solve the GPU Bubble forever.md>) · `gpu-clusters` · latent-space
-  SF Compute interview on commoditizing GPU compute, cluster supply, and cost structure for AI workloads.
 - **2025-03-13** — [Hugging Face and Langfuse: 5 Ways to use them Together](<deployment/Hugging Face and Langfuse 5 Ways to use them Together.md>) · `deployment` · langfuse
   Shows ways to combine Hugging Face workflows with Langfuse for model experimentation, tracing, evaluation, and deployment feedback loops.
 - **2025-03-03** — [Brainstore: the database designed for the AI engineering era](<deployment/Brainstore the database designed for the AI engineering era.md>) · `deployment` · braintrust
   Introduces Brainstore as a database for AI engineering workloads, optimized for traces, evals, logs, and large-scale observability queries.
 - **2025-02-25** — [Understanding Cresta’s Voice Platform - Handling Incoming Traffic with Customer-Specific Subdomains](<deployment/Understanding Cresta’s Voice Platform - Handling Incoming Traffic with Customer-Specific Subdomains.md>) · `deployment` · cresta
   Architecture note on routing incoming voice traffic with customer-specific subdomains in a production voice platform.
-- **2025-02-06** — [LLM Gateway: The One Decision That Removes 100 AI Engineering Decisions](<deployment/LLM Gateway The One Decision That Removes 100 AI Engineering Decisions.md>) · `deployment` · latent-space
-  Explains LLM gateways as a central abstraction for routing, policy, observability, and provider management.
 - **2025-01-28** — [How Cresta Scales Real-Time Insights with ClickHouse](<deployment/How Cresta Scales Real-Time Insights with ClickHouse.md>) · `deployment` · cresta
   Architecture case study on scaling real-time AI insights with ClickHouse for high-volume conversation analytics.
 - **2025-01-28** — [Memory snapshots: Checkpoint and restore for sub-second startup](<deployment/Memory snapshots Checkpoint and restore for sub-second startup.md>) · `deployment` · modal
@@ -102,8 +94,6 @@
   Explains static IP support for serverless containers using WireGuard, relevant to secure networked AI deployments.
 - **2024-11-17** — [From Zero to Scale: Langfuse's Infrastructure Evolution](<deployment/From Zero to Scale Langfuse's Infrastructure Evolution.md>) · `deployment` · langfuse
   Case study of Langfuse infrastructure evolution from early product to scale, including data architecture, observability workloads, and operational tradeoffs.
-- **2024-10-11** — [$2 H100s: How the GPU Bubble Burst](<cost/$2 H100s How the GPU Bubble Burst.md>) · `cost` · latent-space
-  Explains the GPU bubble burst and what lower H100 prices imply for AI infrastructure economics.
 - **2024-09-23** — [Should you use an LLM Proxy to Build your Application?](<deployment/Should you use an LLM Proxy to Build your Application.md>) · `deployment` · langfuse
   Explains the LLM proxy pattern for AI applications, including provider abstraction, centralized logging, key management, routing, and governance tradeoffs.
 - **2024-08-13** — [A practitioner's guide to testing and running large GPU clusters for training generative AI models](<gpu-clusters/A practitioner's guide to testing and running large GPU clusters for training generative AI models.md>) · `gpu-clusters` · together
@@ -120,14 +110,10 @@
   Covers CI/CD practices for AI model deployments, including versioning, release flow, and operational safety.
 - **2024-03-14** — [Lambda on hard mode: Inside Modal's web infrastructure](<deployment/Lambda on hard mode Inside Modal's web infrastructure.md>) · `deployment` · modal
   Deep dive into Modal web infrastructure, including serverless HTTP routing, isolation, and platform architecture.
-- **2024-02-16** — [Truly Serverless Infra for AI Engineers - with Erik Bernhardsson of Modal](<deployment/Truly Serverless Infra for AI Engineers - with Erik Bernhardsson of Modal.md>) · `deployment` · latent-space
-  Modal interview on serverless infrastructure for AI engineers and deployment ergonomics.
 - **2023-11-27** — [Open sourcing the AI proxy](<deployment/Open sourcing the AI proxy.md>) · `deployment` · braintrust
   Open-source AI proxy notes focused on provider routing, logging, credentials, access control, and observability for model calls.
 - **2023-11-20** — [AI proxy: fostering a more open ecosystem](<deployment/AI proxy fostering a more open ecosystem.md>) · `deployment` · braintrust
   Introduces an AI proxy pattern for routing model calls across providers while centralizing logging, credentials, access control, and production visibility.
-- **2023-11-17** — [The State of Silicon and the GPU Poors - with Dylan Patel of SemiAnalysis](<gpu-clusters/The State of Silicon and the GPU Poors - with Dylan Patel of SemiAnalysis.md>) · `gpu-clusters` · latent-space
-  SemiAnalysis interview on GPU scarcity, silicon constraints, and the infrastructure economics behind frontier AI systems.
 - **2023-09-19** — [Arize AI Debuts Integration with Anyscale Endpoints](<deployment/Arize AI Debuts Integration with Anyscale Endpoints.md>) · `deployment` · arize
   Announcement and integration walkthrough for using Arize with Anyscale Endpoints to monitor hosted open-model inference.
 - **2023-02-17** — [Technical deep dive: Truss live reload](<deployment/Technical deep dive Truss live reload.md>) · `deployment` · baseten
@@ -195,8 +181,6 @@
   Explains model neutrality and why avoiding AI vendor lock-in matters for provider routing, cost control, and long-term architecture.
 - **2026-05-28** — [Reinforcement learning is an infrastructure problem](<../models/fine-tuning/Reinforcement learning is an infrastructure problem.md>) · `fine-tuning` · modal
   Argues that reinforcement learning progress depends heavily on infrastructure for scheduling, iteration, and scalable experiments.
-- **2026-05-21** — [Giving Agents Computers — Ivan Burazin, Daytona](<../agents/computer-use/Giving Agents Computers — Ivan Burazin, Daytona.md>) · `computer-use` · latent-space
-  Daytona interview on giving agents computers, covering sandboxing, execution environments, and agent runtime infrastructure.
 - **2026-05-20** — [The Agent Execution Tax](<../evals-observability/evaluation/The Agent Execution Tax.md>) · `evaluation` · fireworks
   Analyzes browser-agent runs to show how reliability, latency, and cost compound into task-level execution tax.
 - **2026-05-19** — [Scaling reinforcement learning at Applied Compute](<../models/fine-tuning/Scaling reinforcement learning at Applied Compute.md>) · `fine-tuning` · modal
@@ -211,8 +195,6 @@
   Explains Sierra's inference-layer reliability strategy for foundation models, including routing, redundancy, and serving behavior preservation under provider failures.
 - **2026-04-30** — [Agents can now create Cloudflare accounts, buy domains, and deploy](<../agents/tool-use/Agents can now create Cloudflare accounts, buy domains, and deploy.md>) · `tool-use` · cloudflare-ai
   Via a protocol co-designed with Stripe for Stripe Projects, coding agents can now provision a Cloudflare account, start a paid subscription, register a domain, and receive an API token to deploy — end-to-end with humans only approving payment and terms of service.
-- **2026-04-30** — [[AINews] The Inference Inflection](<../inference/serving/[AINews] The Inference Inflection.md>) · `serving` · latent-space
-  Covers an inference-market inflection and how serving economics shape model and product choices.
 - **2026-04-30** — [Prompt templates as configs, not code](<../prompt-engineering/context-engineering/Prompt templates as configs, not code.md>) · `context-engineering` · arize
   Argues for treating prompt templates as configuration, improving iteration, versioning, and deployment safety.
 - **2026-04-23** — [How we built RBAC that scales for the enterprise](<../product-engineering/security/How we built RBAC that scales for the enterprise.md>) · `security` · baseten
@@ -243,24 +225,12 @@
   Explains why fine-tuning bottlenecks often come from data, evaluation, orchestration, and serving rather than algorithms alone.
 - **2026-03-23** — [Frontier RL Is Cheaper Than You Think](<../models/fine-tuning/Frontier RL Is Cheaper Than You Think.md>) · `fine-tuning` · fireworks
   Argues that frontier reinforcement learning can be cost-effective with the right infrastructure and training-loop design.
-- **2026-03-17** — [Why Anthropic Thinks AI Should Have Its Own Computer — Felix Rieseberg of Claude Cowork & Claude Code Desktop](<../agents/computer-use/Why Anthropic Thinks AI Should Have Its Own Computer — Felix Rieseberg of Claude Cowork & Claude Code Desktop.md>) · `computer-use` · latent-space
-  Anthropic interview on why AI should have its own computer, covering desktop agents, sandboxing, and runtime UX.
 - **2026-03-12** — [Supporting privacy and compliance for EU teams](<../product-engineering/security/Supporting privacy and compliance for EU teams.md>) · `security` · braintrust
   Covers privacy and compliance requirements for EU AI teams, including data residency, controls, and deployment choices for observability data.
-- **2026-03-10** — [NVIDIA's AI Engineers: Agent Inference at Planetary Scale and "Speed of Light" — Nader Khalil (Brev), Kyle Kranen (Dynamo)](<../inference/serving/NVIDIA's AI Engineers Agent Inference at Planetary Scale and Speed of Light — Nader Khalil (Brev), Kyle Kranen (Dynamo).md>) · `serving` · latent-space
-  NVIDIA interview on agent inference at planetary scale, Brev, Dynamo, and serving-speed constraints.
-- **2026-03-06** — [Cursor's Third Era: Cloud Agents](<../agents/computer-use/Cursor's Third Era Cloud Agents.md>) · `computer-use` · latent-space
-  Covers Cursor’s cloud-agent era and how coding agents move from local IDE assistance to async cloud work.
 - **2026-03-06** — [Inference providers vs. API routers](<../inference/serving/Inference providers vs. API routers.md>) · `serving` · fireworks
   Explains the operational difference between inference providers and API routers, including routing, control, and token provenance.
-- **2026-03-05** — [Every Agent Needs a Box — Aaron Levie, Box](<../agents/computer-use/Every Agent Needs a Box — Aaron Levie, Box.md>) · `computer-use` · latent-space
-  Argues every agent needs a sandbox or box, connecting computer-use agents with execution environments and governance.
-- **2026-02-28** — [Dylan Patel of SemiAnalysis on the $200B AI CapEx, Chip Wars, and Why Google Might Have No Profits in 2027 — In-Context Cooking](<../inference/hardware/Dylan Patel of SemiAnalysis on the $200B AI CapEx, Chip Wars, and Why Google Might Have No Profits in 2027 — In-Context Cooking.md>) · `hardware` · latent-space
-  Dylan Patel discussion of AI capex, chip constraints, and infrastructure economics shaping model deployment.
 - **2026-02-25** — [Accelerating AI research that accelerates AI research](<../product-engineering/case-studies/Accelerating AI research that accelerates AI research.md>) · `case-studies` · modal
   Case study on using elastic compute to accelerate AI research workflows, including experiment throughput and infrastructure offload.
-- **2026-02-21** — [[AINews] The Custom ASIC Thesis](<../inference/hardware/[AINews] The Custom ASIC Thesis.md>) · `hardware` · latent-space
-  Summarizes the custom ASIC thesis for AI infrastructure and why specialized chips matter for inference economics.
 - **2026-02-18** — [How Ramp built a full context background coding agent on Modal](<../agents/computer-use/How Ramp built a full context background coding agent on Modal.md>) · `computer-use` · modal
   Case study of a background coding agent architecture that gives agents full project context through remote sandboxes.
 - **2026-02-05** — [Quantifying infrastructure noise in agentic coding evals](<../evals-observability/evaluation/Quantifying infrastructure noise in agentic coding evals.md>) · `evaluation` · anthropic-engineering
@@ -295,10 +265,6 @@
   Engineering writeup on building scalable customizable dashboards for observability data, covering query, rendering, and product architecture concerns.
 - **2025-05-07** — [Linear programming for fun and profit](<cost/Linear programming for fun and profit.md>) · `cost` · modal
   Shows how linear programming can allocate compute resources under constraints, useful for GPU scheduling and cost control.
-- **2025-04-24** — [Why Every Agent needs Open Source Cloud Sandboxes](<../agents/computer-use/Why Every Agent needs Open Source Cloud Sandboxes.md>) · `computer-use` · latent-space
-  E2B interview on open-source cloud sandboxes and why code-executing agents need isolated runtime environments.
-- **2025-04-11** — [SF Compute: Commoditizing Compute to solve the GPU Bubble forever](<gpu-clusters/SF Compute Commoditizing Compute to solve the GPU Bubble forever.md>) · `gpu-clusters` · latent-space
-  SF Compute interview on commoditizing GPU compute, cluster supply, and cost structure for AI workloads.
 - **2025-04-03** — [Resilient observability by design](<../evals-observability/monitoring/Resilient observability by design.md>) · `monitoring` · braintrust
   Describes resilient observability design for AI systems, including reliability considerations for storing, querying, and using production traces.
 - **2025-03-27** — [Introducing End-to-End OpenTelemetry Support in LangSmith](<../evals-observability/tracing/Introducing End-to-End OpenTelemetry Support in LangSmith.md>) · `tracing` · langchain
@@ -309,16 +275,12 @@
   Shows how Arize Phoenix, Langflow, and NVIDIA can support fast experimentation loops for improving AI application accuracy.
 - **2025-03-04** — [Understanding Cresta’s Voice Platform - The Voice Stack](<../models/multimodal/Understanding Cresta’s Voice Platform - The Voice Stack.md>) · `multimodal` · cresta
   Breaks down the components of a production voice AI stack, including telephony, speech, model, and orchestration layers.
-- **2025-02-28** — [Open Operator, Serverless Browsers and the Future of Computer-Using Agents](<../agents/computer-use/Open Operator, Serverless Browsers and the Future of Computer-Using Agents.md>) · `computer-use` · latent-space
-  Covers serverless browsers and open operator patterns for computer-using agents that need reliable browser execution.
 - **2025-02-25** — [Minions: embracing small LMs, shifting compute on-device, and cutting cloud costs in the process](<../models/reasoning/Minions embracing small LMs, shifting compute on-device, and cutting cloud costs in the process.md>) · `reasoning` · together
   Explores using small language models and on-device compute to reduce cloud inference costs.
 - **2025-02-24** — ['I paid for the whole GPU, I am going to use the whole GPU': A high-level guide to GPU utilization](<../inference/hardware/'I paid for the whole GPU, I am going to use the whole GPU' A high-level guide to GPU utilization.md>) · `hardware` · modal
   Guide to GPU utilization for AI workloads, covering bottlenecks, throughput, batching, and cost-aware usage.
 - **2025-02-13** — [How multi-node inference works for massive LLMs like DeepSeek-R1](<../inference/serving/How multi-node inference works for massive LLMs like DeepSeek-R1.md>) · `serving` · baseten
   Explains multi-node inference for very large LLMs such as DeepSeek-R1.
-- **2025-01-19** — [Everything you need to run Mission Critical Inference (ft. DeepSeek v3 + SGLang)](<../inference/serving/Everything you need to run Mission Critical Inference (ft. DeepSeek v3 + SGLang).md>) · `serving` · latent-space
-  Covers requirements for mission-critical inference, including serving stacks, reliability, and DeepSeek/SGLang deployment context.
 - **2024-11-19** — [Instrumenting Your LLM Application: Arize Phoenix and Vercel AI SDK](<../evals-observability/tracing/Instrumenting Your LLM Application Arize Phoenix and Vercel AI SDK.md>) · `tracing` · arize
   Shows how to instrument an LLM application with Phoenix and Vercel AI SDK so traces are available for debugging and evaluation.
 - **2024-11-01** — [Arize, Vertex AI API: Evaluation Workflows to Accelerate Generative App Development and AI ROI](<../evals-observability/evaluation/Arize, Vertex AI API Evaluation Workflows to Accelerate Generative App Development and AI ROI.md>) · `evaluation` · arize
@@ -335,8 +297,6 @@
   Reference architecture for generative AI platforms covering context construction and RAG, guardrails, gateways and routers, caching, observability, orchestration, and tool/action layers.
 - **2024-07-11** — [Using asynchronous inference in production](<../inference/serving/Using asynchronous inference in production.md>) · `serving` · baseten
   Explains asynchronous inference patterns for production model-serving workloads.
-- **2024-06-25** — [State of the Art: Training >70B LLMs on 10,000 H100 clusters](<../models/fine-tuning/State of the Art Training 70B LLMs on 10,000 H100 clusters.md>) · `fine-tuning` · latent-space
-  State-of-the-art overview of training >70B LLMs on 10,000-H100 clusters.
 - **2024-06-20** — [Managing and Monitoring Your Open Source LLM Applications](<../evals-observability/monitoring/Managing and Monitoring Your Open Source LLM Applications.md>) · `monitoring` · arize
   Covers practical monitoring needs for open-source LLM applications, including operational metrics and deployment feedback.
 - **2024-06-06** — [How to catch crypto miners using syscall signatures](<../product-engineering/security/How to catch crypto miners using syscall signatures.md>) · `security` · modal
@@ -347,8 +307,6 @@
   Explains fractional H100 usage for efficient model serving and better GPU utilization.
 - **2024-03-14** — [What I learned from looking at 900 most popular open source AI tools](<../industry/trends/What I learned from looking at 900 most popular open source AI tools.md>) · `trends` · chip-huyen
   Maps 900 open-source AI tools into infrastructure, model-development, and application-development layers, highlighting growth in agents, prompt engineering, vector search, evaluation, and inference tooling.
-- **2024-02-28** — [One standard to deploy them all - with Ben Firshman of Replicate](<../inference/serving/One standard to deploy them all - with Ben Firshman of Replicate.md>) · `serving` · latent-space
-  Replicate interview on standardizing model deployment and serving generative models.
 - **2024-02-28** — [Predictive Human Preference: From Model Ranking to Model Routing](<../evals-observability/evaluation/Predictive Human Preference From Model Ranking to Model Routing.md>) · `evaluation` · chip-huyen
   Describes predictive human preference for model ranking and model routing, using preference models and evaluations to choose among LLMs by quality, cost, and latency.
 - **2024-02-20** — [Why GPU utilization matters for model inference](<../inference/hardware/Why GPU utilization matters for model inference.md>) · `hardware` · baseten
@@ -363,12 +321,6 @@
   Frames AI observability value through ROI statistics, linking monitoring and model performance visibility to business outcomes.
 - **2023-09-15** — [NVIDIA A10 vs A100 GPUs for LLM and Stable Diffusion inference](<../inference/hardware/NVIDIA A10 vs A100 GPUs for LLM and Stable Diffusion inference.md>) · `hardware` · baseten
   Compares NVIDIA A10 and A100 GPUs for LLM and Stable Diffusion inference workloads.
-- **2023-09-14** — [Doing it the Hard Way: Making the AI engine and language 🔥 of the future — with Chris Lattner of Modular](<../inference/optimization/Doing it the Hard Way Making the AI engine and language 🔥 of the future — with Chris Lattner of Modular.md>) · `optimization` · latent-space
-  Modular interview on building AI engines and languages for high-performance AI systems.
-- **2023-08-16** — [The Mathematics of Training LLMs — with Quentin Anthony of Eleuther AI](<../models/fine-tuning/The Mathematics of Training LLMs — with Quentin Anthony of Eleuther AI.md>) · `fine-tuning` · latent-space
-  EleutherAI deep dive on the mathematics and systems constraints of training LLMs at scale.
-- **2023-06-20** — [Commoditizing the Petaflop — with George Hotz of the tiny corp](<../inference/hardware/Commoditizing the Petaflop — with George Hotz of the tiny corp.md>) · `hardware` · latent-space
-  George Hotz interview on commoditizing petaflop-scale compute and what low-cost AI hardware means for builders.
 - **2023-04-27** — [Comparing NVIDIA GPUs for AI: T4 vs A10](<../inference/hardware/Comparing NVIDIA GPUs for AI T4 vs A10.md>) · `hardware` · baseten
   Compares NVIDIA T4 and A10 GPUs for AI inference workloads and cost-performance tradeoffs.
 - **2022-12-22** — [Hugging Face + Arize: Partnership and Code Example](<../evals-observability/monitoring/Hugging Face + Arize Partnership and Code Example.md>) · `monitoring` · arize

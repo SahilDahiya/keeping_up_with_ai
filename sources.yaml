@@ -126,11 +126,3 @@ sources:
     sitemap: https://huyenchip.com/sitemap.xml
     include_regex: "^/\\d{4}/"
     tags: [independent, ml-systems]
-
-  - slug: latent-space
-    name: Latent Space
-    home: https://www.latent.space/
-    feed: https://www.latent.space/feed
-    sitemap: https://www.latent.space/sitemap.xml
-    include_prefixes: ["/p/"]
-    tags: [newsletter, podcast]

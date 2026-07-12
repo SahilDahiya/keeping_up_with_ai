@@ -1,6 +1,6 @@
 # inference
 
-117 articles.
+103 articles.
 
 - **2026-07-10** — [Optimizing MiniMax M3 Sparse Attention on NVIDIA Blackwell](<optimization/Optimizing MiniMax M3 Sparse Attention on NVIDIA Blackwell.md>) · `optimization` · fireworks
   Deep dive into sparse-attention kernel optimization for MiniMax M3 on NVIDIA Blackwell hardware.
@@ -8,8 +8,6 @@
   Compares H100, H200, and B200 GPUs for choosing hardware for inference workloads.
 - **2026-06-30** — [Multi-token Residual Prediction](<optimization/Multi-token Residual Prediction.md>) · `optimization` · modal
   Explains multi-token residual prediction as an inference acceleration technique for generating multiple tokens per step.
-- **2026-06-30** — [Ahmad Osman on why local AI is catching up](<serving/Ahmad Osman on why local AI is catching up.md>) · `serving` · latent-space
-  Discusses local AI progress and the deployment implications of increasingly capable local models.
 - **2026-06-30** — [Using OSS models to save on inference costs without cutting quality](<serving/Using OSS models to save on inference costs without cutting quality.md>) · `serving` · braintrust
   Explains using open-source models to reduce inference cost without sacrificing quality, emphasizing eval-driven model selection and serving tradeoffs.
 - **2026-06-25** — [Proxying inference requests in 6ms with Pingora, Envoy, and Spanner](<serving/Proxying inference requests in 6ms with Pingora, Envoy, and Spanner.md>) · `serving` · modal
@@ -40,8 +38,6 @@
   Explains DFlash as an optimization for faster LLM inference.
 - **2026-05-04** — [Foundational research powering efficient inference at scale](<optimization/Foundational research powering efficient inference at scale.md>) · `optimization` · together
   Summarizes research lines behind efficient inference at production scale.
-- **2026-04-30** — [[AINews] The Inference Inflection](<serving/[AINews] The Inference Inflection.md>) · `serving` · latent-space
-  Covers an inference-market inflection and how serving economics shape model and product choices.
 - **2026-04-24** — [Accelerate RL rollouts by up to 50% with distribution-aware speculative decoding](<optimization/Accelerate RL rollouts by up to 50% with distribution-aware speculative decoding.md>) · `optimization` · together
   Explains distribution-aware speculative decoding for faster RL rollouts.
 - **2026-04-21** — [Boosting multimodal inference performance by >10% with a single Python dictionary](<optimization/Boosting multimodal inference performance by 10% with a single Python dictionary.md>) · `optimization` · modal
@@ -56,8 +52,6 @@
   Mathematical deep dive into TurboQuant and its quantization behavior for LLM inference.
 - **2026-03-10** — [Training-Inference Parity in MoE Models: Where Numerics Drift](<optimization/Training-Inference Parity in MoE Models Where Numerics Drift.md>) · `optimization` · fireworks
   Explains training-inference parity issues in MoE models and how numeric drift can affect production behavior.
-- **2026-03-10** — [NVIDIA's AI Engineers: Agent Inference at Planetary Scale and "Speed of Light" — Nader Khalil (Brev), Kyle Kranen (Dynamo)](<serving/NVIDIA's AI Engineers Agent Inference at Planetary Scale and Speed of Light — Nader Khalil (Brev), Kyle Kranen (Dynamo).md>) · `serving` · latent-space
-  NVIDIA interview on agent inference at planetary scale, Brev, Dynamo, and serving-speed constraints.
 - **2026-03-06** — [How we built the fastest GLM 5 API](<optimization/How we built the fastest GLM 5 API.md>) · `optimization` · baseten
   Explains serving optimizations used to build a fast GLM 5 API.
 - **2026-03-06** — [Inference providers vs. API routers](<serving/Inference providers vs. API routers.md>) · `serving` · fireworks
@@ -66,10 +60,6 @@
   Covers FlashAttention-4 algorithm and kernel co-design for asymmetric hardware scaling.
 - **2026-03-04** — [Cache-aware prefill-decode disaggregation for long-context LLM serving](<serving/Cache-aware prefill-decode disaggregation for long-context LLM serving.md>) · `serving` · together
   Explains cache-aware prefill/decode disaggregation for faster long-context LLM serving.
-- **2026-02-28** — [Dylan Patel of SemiAnalysis on the $200B AI CapEx, Chip Wars, and Why Google Might Have No Profits in 2027 — In-Context Cooking](<hardware/Dylan Patel of SemiAnalysis on the $200B AI CapEx, Chip Wars, and Why Google Might Have No Profits in 2027 — In-Context Cooking.md>) · `hardware` · latent-space
-  Dylan Patel discussion of AI capex, chip constraints, and infrastructure economics shaping model deployment.
-- **2026-02-21** — [[AINews] The Custom ASIC Thesis](<hardware/[AINews] The Custom ASIC Thesis.md>) · `hardware` · latent-space
-  Summarizes the custom ASIC thesis for AI infrastructure and why specialized chips matter for inference economics.
 - **2026-02-19** — [Consistency diffusion language models: Up to 14x faster inference without sacrificing quality](<optimization/Consistency diffusion language models Up to 14x faster inference without sacrificing quality.md>) · `optimization` · together
   Explains consistency diffusion language models for faster inference without large quality loss.
 - **2026-02-18** — [4-Bit Quantization for Inference Optimization](<quantization/4-Bit Quantization for Inference Optimization.md>) · `quantization` · baseten
@@ -110,8 +100,6 @@
   Explains optimizations for running FLUX.1-dev faster, including inference configuration and image-model serving tradeoffs.
 - **2025-06-14** — [3D FireOptimizer: Automating the Multi-Dimensional Tradeoffs in LLM Serving](<serving/3D FireOptimizer Automating the Multi-Dimensional Tradeoffs in LLM Serving.md>) · `serving` · fireworks
   Explains multi-dimensional optimization for LLM serving, balancing latency, cost, throughput, and quality tradeoffs.
-- **2025-06-13** — [The Shape of Compute — with Chris Lattner for Modular](<hardware/The Shape of Compute — with Chris Lattner for Modular.md>) · `hardware` · latent-space
-  Chris Lattner interview on the shape of compute and how AI systems should map to future hardware/software stacks.
 - **2025-06-05** — [Accurate KV Cache Quantization with Outlier Tokens Tracing](<quantization/Accurate KV Cache Quantization with Outlier Tokens Tracing.md>) · `quantization` · arize
   Summarizes research on KV-cache quantization with outlier token tracing to reduce LLM inference memory cost while preserving output quality.
 - **2025-06-05** — [Model-Preserving Adaptive Rounding with YAQA](<quantization/Model-Preserving Adaptive Rounding with YAQA.md>) · `quantization` · together
@@ -134,8 +122,6 @@
   Describes Blackwell BF16 training acceleration with the Together Kernel Collection.
 - **2025-02-13** — [How multi-node inference works for massive LLMs like DeepSeek-R1](<serving/How multi-node inference works for massive LLMs like DeepSeek-R1.md>) · `serving` · baseten
   Explains multi-node inference for very large LLMs such as DeepSeek-R1.
-- **2025-01-19** — [Everything you need to run Mission Critical Inference (ft. DeepSeek v3 + SGLang)](<serving/Everything you need to run Mission Critical Inference (ft. DeepSeek v3 + SGLang).md>) · `serving` · latent-space
-  Covers requirements for mission-critical inference, including serving stacks, reliability, and DeepSeek/SGLang deployment context.
 - **2025-01-09** — [Driving model performance optimization: 2024 highlights](<optimization/Driving model performance optimization 2024 highlights.md>) · `optimization` · baseten
   Summarizes concrete model-performance optimization work across inference serving, batching, and hardware.
 - **2024-12-19** — [A quick introduction to speculative decoding](<optimization/A quick introduction to speculative decoding.md>) · `optimization` · baseten
@@ -154,8 +140,6 @@
   Shows how kernel work improves H200 and H100 GPU cluster performance.
 - **2024-09-05** — [Speculative decoding for high-throughput long-context inference](<optimization/Speculative decoding for high-throughput long-context inference.md>) · `optimization` · together
   Explains speculative decoding for high-throughput long-context inference.
-- **2024-09-03** — [Efficiency is Coming: 3000x Faster, Cheaper, Better AI Inference from Hardware Improvements, Quantization, and Synthetic Data Distillation](<optimization/Efficiency is Coming 3000x Faster, Cheaper, Better AI Inference from Hardware Improvements, Quantization, and Synthetic Data Distillation.md>) · `optimization` · latent-space
-  Nyla interview on faster and cheaper inference through hardware, quantization, and synthetic-data distillation.
 - **2024-08-30** — [FireOptimizer: Customizing latency and quality for your production inference workload](<serving/FireOptimizer Customizing latency and quality for your production inference workload.md>) · `serving` · fireworks
   Explains FireOptimizer for tuning production inference workloads across latency, quality, and cost objectives.
 - **2024-08-28** — [TEAL: Training-Free Activation Sparsity in Large Language Models](<optimization/TEAL Training-Free Activation Sparsity in Large Language Models.md>) · `optimization` · together
@@ -188,14 +172,10 @@
   Explains high-performance model inference with NVIDIA TensorRT and related deployment considerations.
 - **2024-03-07** — [FP8: Efficient model inference with 8-bit floating point numbers](<quantization/FP8 Efficient model inference with 8-bit floating point numbers.md>) · `quantization` · baseten
   Explains FP8 numeric formats and why 8-bit floating point can improve efficient model inference.
-- **2024-02-28** — [One standard to deploy them all - with Ben Firshman of Replicate](<serving/One standard to deploy them all - with Ben Firshman of Replicate.md>) · `serving` · latent-space
-  Replicate interview on standardizing model deployment and serving generative models.
 - **2024-02-22** — [40% faster Stable Diffusion XL inference with NVIDIA TensorRT](<optimization/40% faster Stable Diffusion XL inference with NVIDIA TensorRT.md>) · `optimization` · baseten
   Explains TensorRT optimization for Stable Diffusion XL inference, including latency and throughput gains.
 - **2024-02-20** — [Why GPU utilization matters for model inference](<hardware/Why GPU utilization matters for model inference.md>) · `hardware` · baseten
   Explains why GPU utilization is central to inference cost and performance.
-- **2024-02-08** — [Cloud Intelligence at the speed of 5000 tok/s - with Ce Zhang and Vipul Ved Prakash of Together AI](<serving/Cloud Intelligence at the speed of 5000 toks - with Ce Zhang and Vipul Ved Prakash of Together AI.md>) · `serving` · latent-space
-  Together AI interview on high-throughput cloud inference, serving architecture, and the economics of fast token generation.
 - **2024-02-06** — [Unlocking the full power of NVIDIA H100 GPUs for ML inference with TensorRT](<optimization/Unlocking the full power of NVIDIA H100 GPUs for ML inference with TensorRT.md>) · `optimization` · baseten
   Shows how TensorRT unlocks H100 performance for model inference.
 - **2024-01-31** — [Introduction to quantizing ML models](<quantization/Introduction to quantizing ML models.md>) · `quantization` · baseten
@@ -216,22 +196,14 @@
   Introduces Flash-Decoding for efficient long-context inference.
 - **2023-09-15** — [NVIDIA A10 vs A100 GPUs for LLM and Stable Diffusion inference](<hardware/NVIDIA A10 vs A100 GPUs for LLM and Stable Diffusion inference.md>) · `hardware` · baseten
   Compares NVIDIA A10 and A100 GPUs for LLM and Stable Diffusion inference workloads.
-- **2023-09-14** — [Doing it the Hard Way: Making the AI engine and language 🔥 of the future — with Chris Lattner of Modular](<optimization/Doing it the Hard Way Making the AI engine and language 🔥 of the future — with Chris Lattner of Modular.md>) · `optimization` · latent-space
-  Modular interview on building AI engines and languages for high-performance AI systems.
 - **2023-09-11** — [Medusa: Simple framework for accelerating LLM generation with multiple decoding heads](<optimization/Medusa Simple framework for accelerating LLM generation with multiple decoding heads.md>) · `optimization` · together
   Introduces Medusa, a multi-decoding-head framework for accelerating LLM generation.
 - **2023-08-30** — [SDXL inference in under 2 seconds](<optimization/SDXL inference in under 2 seconds.md>) · `optimization` · baseten
   Guide to Stable Diffusion XL inference optimization for sub-2-second image generation.
 - **2023-08-29** — [Speed, Python: Pick Two. How CUDA Graphs Enable Fast Python Code for Deep Learning](<optimization/Speed, Python Pick Two. How CUDA Graphs Enable Fast Python Code for Deep Learning.md>) · `optimization` · fireworks
   Explains how CUDA Graphs reduce Python overhead for fast deep-learning execution.
-- **2023-08-10** — [LLMs Everywhere: Running 70B models in browsers and iPhones using MLC — with Tianqi Chen of CMU / OctoML](<optimization/LLMs Everywhere Running 70B models in browsers and iPhones using MLC — with Tianqi Chen of CMU OctoML.md>) · `optimization` · latent-space
-  MLC interview on running 70B models in browsers and phones, covering local inference and deployment.
-- **2023-07-26** — [FlashAttention 2: making Transformers 800% faster w/o approximation - with Tri Dao of Together AI](<optimization/FlashAttention 2 making Transformers 800% faster wo approximation - with Tri Dao of Together AI.md>) · `optimization` · latent-space
-  Tri Dao interview on FlashAttention 2 and efficient Transformer attention without approximation.
 - **2023-07-17** — [FlashAttention-2 for faster training and inference](<optimization/FlashAttention-2 for faster training and inference.md>) · `optimization` · together
   Introduces FlashAttention-2 and its impact on training and inference speed.
-- **2023-06-20** — [Commoditizing the Petaflop — with George Hotz of the tiny corp](<hardware/Commoditizing the Petaflop — with George Hotz of the tiny corp.md>) · `hardware` · latent-space
-  George Hotz interview on commoditizing petaflop-scale compute and what low-cost AI hardware means for builders.
 - **2023-04-27** — [Comparing NVIDIA GPUs for AI: T4 vs A10](<hardware/Comparing NVIDIA GPUs for AI T4 vs A10.md>) · `hardware` · baseten
   Compares NVIDIA T4 and A10 GPUs for AI inference workloads and cost-performance tradeoffs.
 - **2021-09-07** — [A friendly introduction to machine learning compilers and optimizers](<optimization/A friendly introduction to machine learning compilers and optimizers.md>) · `optimization` · chip-huyen
@@ -265,14 +237,10 @@
   Benchmarks inference at scale for coding-agent workloads.
 - **2026-05-14** — [Cost-efficient, high-performance TTS with Qwen3-TTS](<../models/multimodal/Cost-efficient, high-performance TTS with Qwen3-TTS.md>) · `multimodal` · baseten
   Describes cost-efficient high-performance Qwen3-TTS serving for text-to-speech workloads.
-- **2026-05-12** — [[AINews] Thinking Machines' Native Interaction Models - TML-Interaction-Small 276B-A12B - advances SOTA Realtime Voice and kills standard VAD](<../models/multimodal/[AINews] Thinking Machines' Native Interaction Models - TML-Interaction-Small 276B-A12B - advances SOTA Realtime Voice and kills standard VAD.md>) · `multimodal` · latent-space
-  Covers native interaction models for realtime voice and why VAD-free designs matter for conversational latency.
 - **2026-05-12** — [Constellation of models: the architecture powering Sierra's agents](<../models/reasoning/Constellation of models the architecture powering Sierra's agents.md>) · `reasoning` · sierra
   Describes a constellation-of-models architecture for powering agents, combining multiple models and routing behavior around task needs.
 - **2026-05-12** — [How we achieved truly serverless GPUs](<../infra-platform/gpu-clusters/How we achieved truly serverless GPUs.md>) · `gpu-clusters` · modal
   Explains Modal’s serverless GPU architecture, including scheduling, cold starts, isolation, and utilization constraints.
-- **2026-05-08** — [[AINews] GPT-Realtime-2, -Translate, and -Whisper: new SOTA realtime voice APIs](<../models/multimodal/[AINews] GPT-Realtime-2, -Translate, and -Whisper new SOTA realtime voice APIs.md>) · `multimodal` · latent-space
-  Covers realtime voice APIs, translation, and speech model improvements relevant to multimodal product engineering.
 - **2026-05-04** — [Foundational research powering efficient inference at scale](<optimization/Foundational research powering efficient inference at scale.md>) · `optimization` · together
   Summarizes research lines behind efficient inference at production scale.
 - **2026-04-17** — [Making FlashAttention-4 faster for inference](<optimization/Making FlashAttention-4 faster for inference.md>) · `optimization` · modal
@@ -301,8 +269,6 @@
   Surveys DeepSeek model variants with production caveats around serving, reasoning behavior, and deployment tradeoffs.
 - **2026-02-18** — [4-Bit Quantization for Inference Optimization](<quantization/4-Bit Quantization for Inference Optimization.md>) · `quantization` · baseten
   Deep dive into 4-bit quantization for inference, covering math, tradeoffs, and production optimization.
-- **2026-02-12** — [Owning the AI Pareto Frontier — Jeff Dean](<../models/reasoning/Owning the AI Pareto Frontier — Jeff Dean.md>) · `reasoning` · latent-space
-  Jeff Dean interview on owning the AI Pareto frontier across models, systems, and efficient scaling.
 - **2026-02-09** — [AI Model Performance Metrics Explained](<../evals-observability/monitoring/AI Model Performance Metrics Explained.md>) · `monitoring` · baseten
   Explains model performance metrics used in production inference, including latency, throughput, and quality signals.
 - **2026-02-05** — [How to run LLM performance benchmarks (and why you should)](<../evals-observability/evaluation/How to run LLM performance benchmarks (and why you should).md>) · `evaluation` · baseten
@@ -321,16 +287,12 @@
   Describes 2x faster inference through KV-cache-aware routing with NVIDIA Dynamo.
 - **2025-09-26** — [We reverse-engineered Flash Attention 4](<optimization/We reverse-engineered Flash Attention 4.md>) · `optimization` · modal
   Reverse-engineering writeup for FlashAttention-4, explaining how kernel design choices affect attention performance.
-- **2025-09-05** — [A Technical History of Generative Media — with Gorkem and Batuhan from Fal.ai](<../models/multimodal/A Technical History of Generative Media — with Gorkem and Batuhan from Fal.ai.md>) · `multimodal` · latent-space
-  Technical history of generative media with Fal.ai, covering model serving and media-generation infrastructure.
 - **2025-09-05** — [NVIDIA's Peter Belcak Distills Why Small Language Models are the Future of Agentic AI](<../models/reasoning/NVIDIA's Peter Belcak Distills Why Small Language Models are the Future of Agentic AI.md>) · `reasoning` · arize
   Summarizes the argument for small language models in agentic AI and where they can replace larger models.
 - **2025-08-21** — [AI agents for efficient LLM inference engineering](<../agents/tool-use/AI agents for efficient LLM inference engineering.md>) · `tool-use` · together
   Case study of using AI agents to automate engineering tasks while developing efficient inference systems.
 - **2025-08-13** — [Evaluating Model Performance Across Clouds](<../models/benchmarks/Evaluating Model Performance Across Clouds.md>) · `benchmarks` · langfuse
   Evaluates model performance across cloud providers, focusing on latency, cost, quality, and provider-selection tradeoffs for production inference.
-- **2025-08-07** — [GPT-5's Router: how it works and why Frontier Labs are now targeting the Pareto Frontier](<../models/reasoning/GPT-5's Router how it works and why Frontier Labs are now targeting the Pareto Frontier.md>) · `reasoning` · latent-space
-  Explains GPT-5 routing and why frontier labs optimize along a Pareto frontier of model capabilities and latency.
 - **2025-08-07** — [How we run GPT OSS 120B at 500+ tokens per second on NVIDIA GPUs](<optimization/How we run GPT OSS 120B at 500+ tokens per second on NVIDIA GPUs.md>) · `optimization` · baseten
   Explains how to run GPT-OSS 120B at high token throughput on NVIDIA GPUs.
 - **2025-07-28** — [Building Voice AI That Actually Works: Balancing Realistic Voices vs. Production-Ready Performance](<../models/multimodal/Building Voice AI That Actually Works Balancing Realistic Voices vs. Production-Ready Performance.md>) · `multimodal` · cresta
@@ -345,8 +307,6 @@
   Case study using evals and inference-time compute scaling to generate QR codes that satisfy visual and functional constraints.
 - **2025-06-14** — [3D FireOptimizer: Automating the Multi-Dimensional Tradeoffs in LLM Serving](<serving/3D FireOptimizer Automating the Multi-Dimensional Tradeoffs in LLM Serving.md>) · `serving` · fireworks
   Explains multi-dimensional optimization for LLM serving, balancing latency, cost, throughput, and quality tradeoffs.
-- **2025-06-13** — [The Shape of Compute — with Chris Lattner for Modular](<hardware/The Shape of Compute — with Chris Lattner for Modular.md>) · `hardware` · latent-space
-  Chris Lattner interview on the shape of compute and how AI systems should map to future hardware/software stacks.
 - **2025-06-12** — [Your client code matters: 12x higher embedding throughput with Python and Rust](<../rag-retrieval/embeddings/Your client code matters 12x higher embedding throughput with Python and Rust.md>) · `embeddings` · baseten
   Shows how client implementation choices in Python and Rust affect embedding throughput.
 - **2025-06-05** — [Accurate KV Cache Quantization with Outlier Tokens Tracing](<quantization/Accurate KV Cache Quantization with Outlier Tokens Tracing.md>) · `quantization` · arize
@@ -365,34 +325,22 @@
   Explains DeepSeek V3 and R1 architecture choices, including why the models are efficient for reasoning workloads.
 - **2025-02-07** — [Testing Llama 3.3 70B inference performance on NVIDIA GH200 in Lambda Cloud](<../evals-observability/evaluation/Testing Llama 3.3 70B inference performance on NVIDIA GH200 in Lambda Cloud.md>) · `evaluation` · baseten
   Tests Llama 3.3 70B inference performance on NVIDIA GH200 and discusses benchmark results.
-- **2025-02-06** — [LLM Gateway: The One Decision That Removes 100 AI Engineering Decisions](<../infra-platform/deployment/LLM Gateway The One Decision That Removes 100 AI Engineering Decisions.md>) · `deployment` · latent-space
-  Explains LLM gateways as a central abstraction for routing, policy, observability, and provider management.
 - **2025-01-28** — [Memory snapshots: Checkpoint and restore for sub-second startup](<../infra-platform/deployment/Memory snapshots Checkpoint and restore for sub-second startup.md>) · `deployment` · modal
   Explains memory snapshots as checkpoint/restore infrastructure for faster startup in serverless AI workloads.
 - **2025-01-09** — [Driving model performance optimization: 2024 highlights](<optimization/Driving model performance optimization 2024 highlights.md>) · `optimization` · baseten
   Summarizes concrete model-performance optimization work across inference serving, batching, and hardware.
-- **2024-12-24** — [2024 in Post-Transformers Architectures (State Space Models, RWKV) [LS Live @ NeurIPS]](<../models/reasoning/2024 in Post-Transformers Architectures (State Space Models, RWKV) [LS Live @ NeurIPS].md>) · `reasoning` · latent-space
-  Surveys post-Transformer architectures such as state space models and RWKV, focusing on sequence-modeling tradeoffs.
 - **2024-12-19** — [How we built production-ready speculative decoding with TensorRT-LLM](<optimization/How we built production-ready speculative decoding with TensorRT-LLM.md>) · `optimization` · baseten
   Deep dive into production-ready speculative decoding with TensorRT-LLM.
 - **2024-12-09** — [20x faster Whisper than OpenAI - Fireworks audio transcribes 1 hour in 4 seconds](<../models/multimodal/20x faster Whisper than OpenAI - Fireworks audio transcribes 1 hour in 4 seconds.md>) · `multimodal` · fireworks
   Describes high-throughput Whisper transcription serving and the latency/cost tradeoffs in batch audio inference.
-- **2024-11-25** — [Why Compound AI + Open Source will beat Closed AI](<../models/releases/Why Compound AI + Open Source will beat Closed AI.md>) · `releases` · latent-space
-  Fireworks interview arguing compound AI and open source can compete with closed AI through serving and system composition.
-- **2024-11-21** — [OpenAI Realtime API: The Missing Manual](<../models/multimodal/OpenAI Realtime API The Missing Manual.md>) · `multimodal` · latent-space
-  OpenAI Realtime API missing manual covering realtime voice interaction and deployment patterns.
 - **2024-10-30** — [Even Better, Even Faster Quantized LLMs with QTIP](<quantization/Even Better, Even Faster Quantized LLMs with QTIP.md>) · `quantization` · together
   Explains QTIP quantization for faster LLM inference with improved quality preservation.
 - **2024-10-15** — [FireAttention V3: Enabling AMD as a viable alternative for GPU inference](<hardware/FireAttention V3 Enabling AMD as a viable alternative for GPU inference.md>) · `hardware` · fireworks
   Describes FireAttention V3 and optimizations that make AMD GPUs more viable for inference workloads.
 - **2024-10-14** — [Linearizing LLMs with LoLCATs](<../models/reasoning/Linearizing LLMs with LoLCATs.md>) · `reasoning` · together
   Explains LoLCATs for linearizing LLM attention while preserving useful behavior.
-- **2024-10-11** — [$2 H100s: How the GPU Bubble Burst](<../infra-platform/cost/$2 H100s How the GPU Bubble Burst.md>) · `cost` · latent-space
-  Explains the GPU bubble burst and what lower H100 prices imply for AI infrastructure economics.
 - **2024-09-18** — [Multi-LoRA: Personalize AI at scale and deliver the best experience for each customer and use case, with 100x cost-efficiency](<../models/fine-tuning/Multi-LoRA Personalize AI at scale and deliver the best experience for each customer and use case, with 100x cost-efficiency.md>) · `fine-tuning` · fireworks
   Explains Multi-LoRA serving for personalized models at scale with better cost efficiency.
-- **2024-09-03** — [Efficiency is Coming: 3000x Faster, Cheaper, Better AI Inference from Hardware Improvements, Quantization, and Synthetic Data Distillation](<optimization/Efficiency is Coming 3000x Faster, Cheaper, Better AI Inference from Hardware Improvements, Quantization, and Synthetic Data Distillation.md>) · `optimization` · latent-space
-  Nyla interview on faster and cheaper inference through hardware, quantization, and synthetic-data distillation.
 - **2024-08-30** — [FireOptimizer: Customizing latency and quality for your production inference workload](<serving/FireOptimizer Customizing latency and quality for your production inference workload.md>) · `serving` · fireworks
   Explains FireOptimizer for tuning production inference workloads across latency, quality, and cost objectives.
 - **2024-08-01** — [Introducing automatic LLM optimization with TensorRT-LLM Engine Builder](<optimization/Introducing automatic LLM optimization with TensorRT-LLM Engine Builder.md>) · `optimization` · baseten
@@ -419,10 +367,6 @@
   Explains BASED linear-attention language models and the recall-throughput tradeoff.
 - **2024-02-20** — [BitDelta: Your Fine-Tune May Only Be Worth One Bit](<../models/fine-tuning/BitDelta Your Fine-Tune May Only Be Worth One Bit.md>) · `fine-tuning` · together
   Explains BitDelta and how small weight deltas can represent fine-tuned model changes.
-- **2024-02-16** — [Truly Serverless Infra for AI Engineers - with Erik Bernhardsson of Modal](<../infra-platform/deployment/Truly Serverless Infra for AI Engineers - with Erik Bernhardsson of Modal.md>) · `deployment` · latent-space
-  Modal interview on serverless infrastructure for AI engineers and deployment ergonomics.
-- **2024-02-08** — [Cloud Intelligence at the speed of 5000 tok/s - with Ce Zhang and Vipul Ved Prakash of Together AI](<serving/Cloud Intelligence at the speed of 5000 toks - with Ce Zhang and Vipul Ved Prakash of Together AI.md>) · `serving` · latent-space
-  Together AI interview on high-throughput cloud inference, serving architecture, and the economics of fast token generation.
 - **2024-02-06** — [Unlocking the full power of NVIDIA H100 GPUs for ML inference with TensorRT](<optimization/Unlocking the full power of NVIDIA H100 GPUs for ML inference with TensorRT.md>) · `optimization` · baseten
   Shows how TensorRT unlocks H100 performance for model inference.
 - **2024-01-16** — [Generation configurations: temperature, top-k, top-p, and test time compute](<../models/reasoning/Generation configurations temperature, top-k, top-p, and test time compute.md>) · `reasoning` · chip-huyen
@@ -437,20 +381,14 @@
   Introduces StripedHyena-7B and efficient architectures beyond Transformers.
 - **2023-11-17** — [A guide to LLM inference and performance](<serving/A guide to LLM inference and performance.md>) · `serving` · baseten
   Comprehensive guide to LLM inference, transformer serving, latency, and throughput performance.
-- **2023-11-17** — [The State of Silicon and the GPU Poors - with Dylan Patel of SemiAnalysis](<../infra-platform/gpu-clusters/The State of Silicon and the GPU Poors - with Dylan Patel of SemiAnalysis.md>) · `gpu-clusters` · latent-space
-  SemiAnalysis interview on GPU scarcity, silicon constraints, and the infrastructure economics behind frontier AI systems.
 - **2023-11-02** — [Deployment and inference for open source text embedding models](<../rag-retrieval/embeddings/Deployment and inference for open source text embedding models.md>) · `embeddings` · baseten
   Covers deployment and inference patterns for open-source text embedding models.
 - **2023-09-19** — [Arize AI Debuts Integration with Anyscale Endpoints](<../infra-platform/deployment/Arize AI Debuts Integration with Anyscale Endpoints.md>) · `deployment` · arize
   Announcement and integration walkthrough for using Arize with Anyscale Endpoints to monitor hosted open-model inference.
-- **2023-08-30** — [RWKV: Reinventing RNNs for the Transformer Era — with Eugene Cheah of UIlicious](<../models/reasoning/RWKV Reinventing RNNs for the Transformer Era — with Eugene Cheah of UIlicious.md>) · `reasoning` · latent-space
-  RWKV interview on reinventing RNNs for the Transformer era and efficient sequence modeling.
 - **2023-08-29** — [Speed, Python: Pick Two. How CUDA Graphs Enable Fast Python Code for Deep Learning](<optimization/Speed, Python Pick Two. How CUDA Graphs Enable Fast Python Code for Deep Learning.md>) · `optimization` · fireworks
   Explains how CUDA Graphs reduce Python overhead for fast deep-learning execution.
 - **2023-08-24** — [Skeleton of Thought: LLMs Can Do Parallel Decoding Paper Reading](<../models/reasoning/Skeleton of Thought LLMs Can Do Parallel Decoding Paper Reading.md>) · `reasoning` · arize
   Summarizes Skeleton of Thought and how parallel decoding can speed structured reasoning.
-- **2023-08-10** — [LLMs Everywhere: Running 70B models in browsers and iPhones using MLC — with Tianqi Chen of CMU / OctoML](<optimization/LLMs Everywhere Running 70B models in browsers and iPhones using MLC — with Tianqi Chen of CMU OctoML.md>) · `optimization` · latent-space
-  MLC interview on running 70B models in browsers and phones, covering local inference and deployment.
 - **2023-07-25** — [Monarch Mixer: A new model architecture for increased efficiency](<../models/reasoning/Monarch Mixer A new model architecture for increased efficiency.md>) · `reasoning` · together
   Introduces Monarch Mixer as an efficient model architecture.
 - **2023-07-17** — [FlashAttention-2 for faster training and inference](<optimization/FlashAttention-2 for faster training and inference.md>) · `optimization` · together

@@ -1,23 +1,15 @@
 # prompt-engineering
 
-30 articles.
+20 articles.
 
-- **2026-07-02** — [Skill engineering and the case against one-shot AI design](<context-engineering/Skill engineering and the case against one-shot AI design.md>) · `context-engineering` · latent-space
-  Argues for skill engineering over one-shot design, focusing on reusable instructions and context for AI-assisted creation.
 - **2026-06-26** — [Prompt Caching with Deep Agents](<context-engineering/Prompt Caching with Deep Agents.md>) · `context-engineering` · langchain
   Explains prompt caching for Deep Agents and how cache-aware context design reduces latency and cost for repeated agent work.
-- **2026-06-18** — [The Professor of Outputmaxxing — Anjney Midha, AMP](<techniques/The Professor of Outputmaxxing — Anjney Midha, AMP.md>) · `techniques` · latent-space
-  Covers outputmaxxing and how prompt/product choices can systematically raise the quality of model outputs.
 - **2026-05-12** — [Context engineering: the key to great agents](<context-engineering/Context engineering the key to great agents.md>) · `context-engineering` · sierra
   Explains context engineering for agents, including how the right knowledge, state, and instructions shape agent quality.
 - **2026-04-30** — [Prompt templates as configs, not code](<context-engineering/Prompt templates as configs, not code.md>) · `context-engineering` · arize
   Argues for treating prompt templates as configuration, improving iteration, versioning, and deployment safety.
-- **2026-04-23** — [[AINews] Tasteful Tokenmaxxing](<context-engineering/[AINews] Tasteful Tokenmaxxing.md>) · `context-engineering` · latent-space
-  Explores tokenmaxxing as a context-engineering pattern and the tradeoff between more context and better taste.
 - **2026-03-20** — [Designing delightful frontends with GPT-5.4 | OpenAI Developers](<techniques/Designing delightful frontends with GPT-5.4 OpenAI Developers.md>) · `techniques` · openai-devs
   Prompting guide for steering GPT-5.4 toward non-generic frontend design: the model was trained for UI work, native image search/generation (e.g. prompt it to build mood boards first), and computer use for self-verification with tools like Playwright.
-- **2026-03-14** — [[AINews] Context Drought](<context-engineering/[AINews] Context Drought.md>) · `context-engineering` · latent-space
-  Explains context scarcity as a bottleneck for AI systems and why better context pipelines matter.
 - **2026-02-16** — [Using Agent Skills to Automatically Improve your Prompts](<techniques/Using Agent Skills to Automatically Improve your Prompts.md>) · `techniques` · langfuse
   Shows how agent skills can automatically improve prompts, using evaluation feedback and reusable agent workflows to iterate on prompt quality.
 - **2025-11-20** — [CLAUDE.md: Best Practices Learned from Optimizing Claude Code with Prompt Learning](<context-engineering/CLAUDE.md Best Practices Learned from Optimizing Claude Code with Prompt Learning.md>) · `context-engineering` · arize
@@ -32,8 +24,6 @@
   Examines prompting strategies for LLM-as-judge evaluators, including explanations and chain-of-thought design choices.
 - **2025-07-18** — [Prompt Learning: Using English Feedback to Optimize LLM Systems](<techniques/Prompt Learning Using English Feedback to Optimize LLM Systems.md>) · `techniques` · arize
   Explains prompt learning driven by natural-language feedback as an optimization loop for LLM systems.
-- **2025-06-10** — [God is hungry for Context: First thoughts on o3 pro](<context-engineering/God is hungry for Context First thoughts on o3 pro.md>) · `context-engineering` · latent-space
-  First thoughts on o3 pro framed around context hunger and reasoning-model workflows.
 - **2025-03-17** — [Prompt Optimization Techniques](<techniques/Prompt Optimization Techniques.md>) · `techniques` · arize
   Covers few-shot prompting and prompt optimization techniques with an emphasis on measurable improvement.
 - **2025-03-07** — [Prompt Management from First Principles](<techniques/Prompt Management from First Principles.md>) · `techniques` · arize
@@ -42,33 +32,21 @@
   Explains constrained generation for structured extraction with reasoning models and schema-bound outputs.
 - **2024-11-13** — [Promptim: an experimental library for prompt optimization](<techniques/Promptim an experimental library for prompt optimization.md>) · `techniques` · langchain
   Introduces Promptim as an experimental prompt-optimization library that uses evaluation feedback to improve prompts.
-- **2024-09-20** — [The Ultimate Guide to Prompting](<techniques/The Ultimate Guide to Prompting.md>) · `techniques` · latent-space
-  Comprehensive guide to prompting techniques for applied AI systems.
 - **2024-09-12** — [How to build function calling and JSON mode for open-source and fine-tuned LLMs](<structured-output/How to build function calling and JSON mode for open-source and fine-tuned LLMs.md>) · `structured-output` · baseten
   Shows how to build function calling and JSON mode for open-source and fine-tuned LLMs.
 - **2024-07-24** — [DSPy Assertions: Computational Constraints for Self-Refining Language Model Pipelines](<techniques/DSPy Assertions Computational Constraints for Self-Refining Language Model Pipelines.md>) · `techniques` · arize
   Explains DSPy assertions as computational constraints for self-refining language-model pipelines.
-- **2024-04-19** — [High Agency Pydantic > VC Backed Frameworks — with Jason Liu of Instructor](<structured-output/High Agency Pydantic VC Backed Frameworks — with Jason Liu of Instructor.md>) · `structured-output` · latent-space
-  Jason Liu interview on Instructor, Pydantic-first structured output, and pragmatic framework design.
 - **2024-02-20** — [Why do all LLMs need structured output modes?](<structured-output/Why do all LLMs need structured output modes.md>) · `structured-output` · fireworks
   Explains why structured-output modes matter for reliable LLM applications and tool-calling systems.
 - **2024-01-31** — [Function calling and JSON mode](<structured-output/Function calling and JSON mode.md>) · `structured-output` · together
   Explains function calling and JSON mode for structured LLM application outputs.
 - **2023-12-18** — [How to Prompt LLMs for Text-to-SQL](<structured-output/How to Prompt LLMs for Text-to-SQL.md>) · `structured-output` · arize
   Practical guide to Text-to-SQL prompting, including schema context, output constraints, and evaluation considerations.
-- **2023-05-16** — [Guaranteed quality and structure in LLM outputs - with Shreya Rajpal of Guardrails AI](<structured-output/Guaranteed quality and structure in LLM outputs - with Shreya Rajpal of Guardrails AI.md>) · `structured-output` · latent-space
-  Guardrails AI interview on guaranteeing quality and structure in LLM outputs through constraints, validation, and evals.
-- **2022-12-28** — [Reverse Prompt Engineering for Fun and (no) Profit](<techniques/Reverse Prompt Engineering for Fun and (no) Profit.md>) · `techniques` · latent-space
-  Explains reverse prompt engineering as a practical technique for understanding and recreating LLM product behavior.
-- **2022-11-25** — [Why "Prompt Engineering" and "Generative AI" are overhyped](<techniques/Why Prompt Engineering and Generative AI are overhyped.md>) · `techniques` · latent-space
-  Early essay on why prompt engineering and generative AI were overhyped, useful as historical context for prompt technique limits.
 
 ## Also relevant (filed elsewhere)
 
 - **2026-05-28** — [Claude Code: Best practices for agentic coding](<../agents/tool-use/Claude Code Best practices for agentic coding.md>) · `tool-use` · anthropic-engineering
   Practical workflows for agentic coding with Claude Code: CLAUDE.md setup, explore-plan-code loops, test-driven iteration, headless automation, and multi-Claude patterns.
-- **2026-05-13** — [[AINews] The End of Finetuning](<../models/fine-tuning/[AINews] The End of Finetuning.md>) · `fine-tuning` · latent-space
-  Argues that context, tooling, and eval loops can displace fine-tuning for many applied AI use cases.
 - **2026-05-11** — [Serving DeepSeek-V4: why million-token context is an inference systems problem](<../inference/serving/Serving DeepSeek-V4 why million-token context is an inference systems problem.md>) · `serving` · together
   Explains why million-token context serving is primarily an inference-systems problem.
 - **2026-04-24** — [How we fixed prompt injection for all models on Fireworks](<../product-engineering/security/How we fixed prompt injection for all models on Fireworks.md>) · `security` · fireworks
@@ -101,26 +79,18 @@
   Walks through building a multilingual Cypher query evaluation pipeline for testing whether LLMs generate correct database queries across languages.
 - **2025-09-03** — [AI Evals Maven Course Homework: the Recipe Bot Workflow](<../evals-observability/evaluation/AI Evals Maven Course Homework the Recipe Bot Workflow.md>) · `evaluation` · arize
   Walks through a recipe-bot homework workflow from an AI evals course, showing how to design tests and iterate on an LLM application.
-- **2025-08-19** — ["RAG is Dead, Context Engineering is King" — with Jeff Huber of Chroma](<../rag-retrieval/pipelines/RAG is Dead, Context Engineering is King — with Jeff Huber of Chroma.md>) · `pipelines` · latent-space
-  Chroma interview arguing that context engineering changes how teams should think about RAG and retrieval systems.
 - **2025-07-11** — [Function calling for agentic AI systems](<../agents/tool-use/Function calling for agentic AI systems.md>) · `tool-use` · fireworks
   Explains function calling as the bridge between LLM outputs, external tools, and agentic execution loops.
 - **2025-03-20** — [The "think" tool: Enabling Claude to stop and think](<../agents/tool-use/The think tool Enabling Claude to stop and think.md>) · `tool-use` · anthropic-engineering
   Adding a no-op 'think' tool gives Claude space for intermediate reasoning mid-task, significantly improving policy-heavy agentic benchmarks like tau-bench.
 - **2025-02-26** — [Memory and State in LLM Applications](<../agents/memory-context/Memory and State in LLM Applications.md>) · `memory-context` · arize
   Explains memory and state patterns in LLM applications and how they affect reliability across interactions.
-- **2025-02-06** — [Agent Engineering with Pydantic + Graphs — with Samuel Colvin](<../agents/planning/Agent Engineering with Pydantic + Graphs — with Samuel Colvin.md>) · `planning` · latent-space
-  Samuel Colvin interview on agent engineering with Pydantic and graphs for structured agent systems.
 - **2025-01-16** — [Common pitfalls when building generative AI applications](<../product-engineering/architecture/Common pitfalls when building generative AI applications.md>) · `architecture` · chip-huyen
   Covers common generative-AI application pitfalls, including overusing LLMs, confusing product problems with model failures, premature framework complexity, and weak evaluation/product iteration.
-- **2025-01-12** — [o1 isn’t a chat model (and that’s the point)](<../models/reasoning/o1 isn’t a chat model (and that’s the point).md>) · `reasoning` · latent-space
-  Explains why o1 is not a chat model and how reasoning models require different interaction patterns.
 - **2024-11-25** — [Long Context Fine-Tuning: A Technical Deep Dive](<../models/fine-tuning/Long Context Fine-Tuning A Technical Deep Dive.md>) · `fine-tuning` · together
   Technical deep dive into long-context fine-tuning.
 - **2024-10-08** — [Functions: flexible AI engineering primitives](<../agents/tool-use/Functions flexible AI engineering primitives.md>) · `tool-use` · braintrust
   Introduces functions as flexible AI engineering primitives for tool calling, structured behavior, and reusable evaluation or workflow components.
-- **2024-09-13** — [From API to AGI: Structured Outputs, OpenAI API platform and O1 Q&A — with Michelle Pokrass & OpenAI Devrel + Strawberry team](<../models/reasoning/From API to AGI Structured Outputs, OpenAI API platform and O1 Q&A — with Michelle Pokrass & OpenAI Devrel + Strawberry team.md>) · `reasoning` · latent-space
-  OpenAI API and o1 Q&A covering structured outputs, platform direction, and reasoning-model use.
 - **2024-09-11** — [Composable Interventions for Language Models](<../models/reasoning/Composable Interventions for Language Models.md>) · `reasoning` · arize
   Deep dive on composable interventions for language models, covering techniques for steering or modifying model behavior.
 - **2024-09-05** — [Speculative decoding for high-throughput long-context inference](<../inference/optimization/Speculative decoding for high-throughput long-context inference.md>) · `optimization` · together
@@ -131,16 +101,12 @@
   Covers aligning LLM-as-judge evaluators with human preferences through calibration, examples, and evaluation design.
 - **2024-06-20** — [FireAttention V2: 12x faster to make Long Contexts practical for Online Inference](<../inference/optimization/FireAttention V2 12x faster to make Long Contexts practical for Online Inference.md>) · `optimization` · fireworks
   Explains FireAttention V2 and the serving optimizations that make long-context inference more practical.
-- **2024-05-30** — [How to train a Million Context LLM — with Mark Huang of Gradient.ai](<../models/reasoning/How to train a Million Context LLM — with Mark Huang of Gradient.ai.md>) · `reasoning` · latent-space
-  Gradient.ai interview on training a million-context LLM and the engineering tradeoffs of long-context models.
 - **2024-02-27** — [Evo: Long-context modeling from molecular to genome scale](<../models/reasoning/Evo Long-context modeling from molecular to genome scale.md>) · `reasoning` · together
   Explains Evo and long-context modeling from molecular to genome-scale sequences.
 - **2024-01-11** — [Long context retrieval models with Monarch Mixer](<../rag-retrieval/search/Long context retrieval models with Monarch Mixer.md>) · `search` · together
   Explains long-context retrieval models using Monarch Mixer.
 - **2023-12-05** — [Extraction Benchmarking](<../models/benchmarks/Extraction Benchmarking.md>) · `benchmarks` · langchain
   Benchmarking post for extraction tasks, comparing structured-output performance and evaluation approaches for information extraction.
-- **2023-10-19** — [The End of Finetuning — with Jeremy Howard of Fast.ai](<../models/fine-tuning/The End of Finetuning — with Jeremy Howard of Fast.ai.md>) · `fine-tuning` · latent-space
-  Jeremy Howard interview on the end of fine-tuning, open-source AI, and when adaptation should move into context or product loops.
 - **2023-10-12** — [Flash-Decoding for long-context inference](<../inference/optimization/Flash-Decoding for long-context inference.md>) · `optimization` · together
   Introduces Flash-Decoding for efficient long-context inference.
 - **2023-08-07** — [Extending the Context Window of LLaMA Models Paper Reading](<../models/reasoning/Extending the Context Window of LLaMA Models Paper Reading.md>) · `reasoning` · arize
@@ -149,9 +115,3 @@
   Summarizes the Lost in the Middle findings on long-context model behavior and retrieval sensitivity.
 - **2023-06-15** — [Three techniques to adapt LLMs for any use case](<../models/fine-tuning/Three techniques to adapt LLMs for any use case.md>) · `fine-tuning` · baseten
   Explains prompt engineering, fine-tuning, and related techniques for adapting LLMs to use cases.
-- **2023-05-20** — [MPT-7B and The Beginning of Context=Infinity — with Jonathan Frankle and Abhinav Venigalla of MosaicML](<../models/releases/MPT-7B and The Beginning of Context=Infinity — with Jonathan Frankle and Abhinav Venigalla of MosaicML.md>) · `releases` · latent-space
-  MosaicML interview on MPT-7B and the beginning of long-context open models.
-- **2023-02-23** — [ChatGPT, GPT4 hype, and Building LLM-native products — with Logan Kilpatrick of OpenAI](<../product-engineering/architecture/ChatGPT, GPT4 hype, and Building LLM-native products — with Logan Kilpatrick of OpenAI.md>) · `architecture` · latent-space
-  OpenAI interview on building LLM-native products after ChatGPT and GPT-4, with lessons for applied AI product design.
-- **2022-12-19** — [What Building "Copilot for X" Really Takes](<../product-engineering/architecture/What Building Copilot for X Really Takes.md>) · `architecture` · latent-space
-  Explains what it takes to build a Copilot-for-X product, including UX, context, workflow integration, and reliability.
