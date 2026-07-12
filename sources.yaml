@@ -1,0 +1,128 @@
+# Source registry — feed/sitemap URLs verified live 2026-07-10 (see DESIGN.md §3).
+defaults:
+  rate_limit_seconds: 2
+
+sources:
+  - slug: sierra
+    name: Sierra Blog
+    home: https://sierra.ai/blog/engineering
+    feed: https://sierra.ai/rss.xml            # site-wide; filtered to /blog/
+    sitemap: https://sierra.ai/sitemap.xml
+    include_prefixes: ["/blog/"]
+    tags: [agents, customer-experience]
+
+  - slug: cresta
+    name: Cresta Blog
+    home: https://cresta.com/blog
+    sitemap: https://cresta.com/sitemap.xml    # multilingual; /blog/ prefix keeps EN only
+    discovery: [sitemap]
+    include_prefixes: ["/blog/"]
+    tags: [agents, contact-center]
+
+  - slug: baseten
+    name: Baseten Blog
+    home: https://www.baseten.co/blog/
+    sitemap: https://www.baseten.co/sitemap.xml
+    discovery: [sitemap]
+    include_prefixes: ["/blog/"]
+    exclude_regex: "^/blog/category/"         # category listing pages, not articles
+    tags: [inference, infra]
+
+  - slug: anthropic-engineering
+    name: Anthropic Engineering
+    home: https://www.anthropic.com/engineering
+    sitemap: https://www.anthropic.com/sitemap.xml
+    discovery: [sitemap]
+    include_prefixes: ["/engineering/"]
+    tags: [agents, llm-vendors]
+
+  - slug: openai-devs
+    name: OpenAI Developers Blog
+    home: https://developers.openai.com/blog
+    feed: https://developers.openai.com/rss.xml
+    sitemap: https://developers.openai.com/sitemap-index.xml
+    include_prefixes: ["/blog/"]
+    exclude_regex: "^/blog/topic/"   # tag-index listing pages, not articles
+    tags: [llm-vendors]
+
+  - slug: cloudflare-ai
+    name: Cloudflare Blog (AI tag)
+    home: https://blog.cloudflare.com/tag/ai/
+    feed: https://blog.cloudflare.com/tag/ai/rss
+    discovery: [feed]                          # site sitemap is the whole blog, not just AI
+    tags: [infra, edge]
+
+  - slug: fireworks
+    name: Fireworks AI Blog
+    home: https://fireworks.ai/blog
+    sitemap: https://fireworks.ai/sitemap.xml
+    discovery: [sitemap]
+    include_prefixes: ["/blog/"]
+    tags: [inference]
+
+  - slug: together
+    name: Together AI Blog
+    home: https://www.together.ai/blog
+    feed: https://www.together.ai/blog/rss.xml
+    sitemap: https://www.together.ai/sitemap.xml
+    include_prefixes: ["/blog/"]
+    tags: [inference, training]
+
+  - slug: modal
+    name: Modal Blog
+    home: https://modal.com/blog
+    feed: https://modal.com/blog/atom.xml      # no sitemap exists; feed-only (shallow history)
+    discovery: [feed]
+    include_prefixes: ["/blog/"]
+    tags: [infra, serverless]
+
+  - slug: braintrust
+    name: Braintrust Blog
+    home: https://www.braintrust.dev/blog
+    sitemap: https://www.braintrust.dev/sitemap.xml
+    discovery: [sitemap]
+    include_prefixes: ["/blog/"]
+    tags: [evals]
+
+  - slug: langfuse
+    name: Langfuse Blog
+    home: https://langfuse.com/blog
+    sitemap: https://langfuse.com/sitemap.xml
+    discovery: [sitemap]
+    include_prefixes: ["/blog/"]
+    tags: [observability]
+
+  - slug: langchain
+    name: LangChain Blog
+    home: https://blog.langchain.com/
+    feed: https://blog.langchain.com/rss.xml
+    sitemap: https://blog.langchain.com/sitemap.xml
+    exclude_regex: "^/(tag|author|page)/"
+    tags: [frameworks, agents]
+
+  - slug: arize
+    name: Arize AI Blog
+    home: https://arize.com/blog/
+    feed: https://arize.com/feed/
+    sitemap: https://arize.com/sitemap_index.xml
+    include_prefixes: ["/blog/"]
+    exclude_regex: "^/blog/(category|tag|resource-type|press-type)/"  # archive/listing pages, not articles
+    tags: [observability, evals]
+
+  - slug: simon-willison
+    name: Simon Willison's Weblog
+    home: https://simonwillison.net/
+    feed: https://simonwillison.net/atom/everything/
+    sitemap: https://simonwillison.net/sitemap.xml
+    include_regex: "^/\\d{4}/"
+    min_words: 300                             # skip link-blog one-liners and quotations
+    since: "2023-01-01"                        # backfill floor; 16.7k URLs otherwise
+    tags: [independent, llm-reviews]
+
+  - slug: chip-huyen
+    name: Chip Huyen's Blog
+    home: https://huyenchip.com/blog/
+    feed: https://huyenchip.com/feed.xml
+    sitemap: https://huyenchip.com/sitemap.xml
+    include_regex: "^/\\d{4}/"
+    tags: [independent, ml-systems]
