@@ -6,10 +6,10 @@
   Introduces OpenWiki Brains as proactive wiki memory for agents, focused on persistent context and retrieval over project knowledge.
 - **2026-07-10** — [3 production patterns for AI agents and how to evaluate each one](<planning/3 production patterns for AI agents and how to evaluate each one.md>) · `planning` · arize
   Breaks production agents into local coding agents, in-app assistants, and operational agents, then maps each pattern to different harness, rollout, and evaluation needs.
-- **2026-07-10** — 📄 [Failure as a Process: An Anatomy of CLI Coding Agent Trajectories](<planning/Failure as a Process An Anatomy of CLI Coding Agent Trajectories.md>) · `planning` · arxiv
-  Empirical study of how CLI coding agents fail as a *process* rather than an outcome: 3,843 trajectories from 7 frontier models across 3 scaffolds (OpenHands, MiniSWE, Terminus2) on Terminal-Bench, with 1,794 valid ones hand-annotated over 63,000 execution steps. Finds failures are driven mainly by epistemic errors, begin within the first few steps, and stay hidden until recovery is impossible — arguing for early validation and intervention instead of final-outcome evaluation.
 - **2026-07-10** — [What is a loop in AI engineering, anyway?](<planning/What is a loop in AI engineering, anyway.md>) · `planning` · arize
   Defines feedback loops in AI engineering and why loops are central to agent and eval system design.
+- **2026-07-10** — **[Paper]** [Failure as a Process: An Anatomy of CLI Coding Agent Trajectories](<planning/[Paper] Failure as a Process An Anatomy of CLI Coding Agent Trajectories.md>) · `planning` · arxiv
+  Empirical study of how CLI coding agents fail as a *process* rather than an outcome: 3,843 trajectories from 7 frontier models across 3 scaffolds (OpenHands, MiniSWE, Terminus2) on Terminal-Bench, with 1,794 valid ones hand-annotated over 63,000 execution steps. Finds failures are driven mainly by epistemic errors, begin within the first few steps, and stay hidden until recovery is impossible — arguing for early validation and intervention instead of final-outcome evaluation.
 - **2026-07-08** — [Tuning the harness, not the model: a Nemotron 3 Ultra playbook](<planning/Tuning the harness, not the model a Nemotron 3 Ultra playbook.md>) · `planning` · langchain
   Nemotron 3 Ultra playbook arguing for harness tuning over model tuning, with practical agent-system design and eval implications.
 - **2026-07-08** — [Deep Agents Code on NVIDIA NemoClaw](<tool-use/Deep Agents Code on NVIDIA NemoClaw.md>) · `tool-use` · langchain
@@ -665,5 +665,5 @@
   Retrospective on building an early ChatGPT plugin quickly, including product workflow lessons and integration constraints from the plugin ecosystem.
 - **2021-01-13** — [Action Directed GPT-2](<../models/reasoning/Action Directed GPT-2.md>) · `reasoning` · cresta
   Explains Action Directed GPT-2 as an early pattern for steering language model behavior toward actions, relevant to tool-using and task-oriented agents.
-- **2017-06-12** — 📄 [Attention Is All You Need](<../models/architectures/Attention Is All You Need.md>) · `architectures` · arxiv
+- **2017-06-12** — **[Paper]** [Attention Is All You Need](<../models/architectures/[Paper] Attention Is All You Need.md>) · `architectures` · arxiv
   Introduces the Transformer: a sequence model built purely on multi-head self-attention with no recurrence or convolution, hitting 28.4 BLEU on WMT14 EN-DE while training in 3.5 days on 8 GPUs. The architecture every modern LLM descends from.

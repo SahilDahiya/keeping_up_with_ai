@@ -35,7 +35,7 @@ def _sort_key(rec: dict) -> str:
 def _entry(rec: dict, *, from_dir: Path) -> str:
     rel = Path(KB_ROOT, rec["_path"]).relative_to(from_dir, walk_up=True).as_posix()
     date = rec.get("published") or "undated"
-    marker = "📄 " if rec.get("kind") == "paper" else ""
+    marker = "**[Paper]** " if rec.get("kind") == "paper" else ""
     line = (f"- **{date}** — {marker}[{rec['title']}](<{rel}>) · "
             f"`{rec.get('subtopic') or '—'}` · {rec['source']}")
     if rec.get("summary"):

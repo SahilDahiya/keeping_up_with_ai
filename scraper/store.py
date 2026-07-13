@@ -89,10 +89,23 @@ def update_filed_body(kb_path: Path, article: Article) -> None:
 
 # -------------------------------------------------------------------- filing
 
+PAPER_PREFIX = "[Paper] "
+
+
 def sanitize_title(title: str) -> str:
     stem = _ILLEGAL.sub("", title)
     stem = re.sub(r"\s+", " ", stem).strip().rstrip(". ")
     return stem[:_MAX_STEM].rstrip(". ") or "untitled"
+
+
+def filename_stem(fm: dict) -> str:
+    """Filename stem for an article: its title, prefixed '[Paper] ' for arXiv papers.
+
+    The prefix makes papers obvious in the file tree and greppable/globbable
+    ('kb/**/[Paper] *.md') without opening frontmatter.
+    """
+    stem = sanitize_title(fm["title"])
+    return f"{PAPER_PREFIX}{stem}" if fm.get("kind") == "paper" else stem
 
 
 class FilingError(Exception):
@@ -122,7 +135,7 @@ def file_article(inbox_path: Path, taxonomy: dict[str, list[str]]) -> Path:
         raise FilingError(f"{inbox_path.name}: summary is required")
 
     dest_dir.mkdir(parents=True, exist_ok=True)
-    stem = sanitize_title(fm["title"])
+    stem = filename_stem(fm)
     dest = dest_dir / f"{stem}.md"
     if dest.exists() and parse_frontmatter(dest.read_text())[0].get("url") != fm.get("url"):
         dest = dest_dir / f"{stem} ({fm['source']}).md"

@@ -88,7 +88,7 @@
   Paper-reading summary of retrieval-augmented generation and the architecture behind combining retrieval with generation.
 - **2022-12-31** — [Measuring Embedding Drift](<embeddings/Measuring Embedding Drift.md>) · `embeddings` · arize
   Explains embedding drift and how teams can measure changes in embedding distributions over time.
-- **2020-05-22** — 📄 [Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks](<pipelines/Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks.md>) · `pipelines` · arxiv
+- **2020-05-22** — **[Paper]** [Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks](<pipelines/[Paper] Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks.md>) · `pipelines` · arxiv
   Introduces Retrieval-Augmented Generation: a seq2seq model coupled to a dense-vector Wikipedia index via DPR, with the retriever and generator fine-tuned end-to-end. Sets SOTA on three open-domain QA tasks and yields more factual, specific generations than a parametric-only BART baseline.
 
 ## Also relevant (filed elsewhere)

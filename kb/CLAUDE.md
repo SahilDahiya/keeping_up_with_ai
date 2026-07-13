@@ -27,10 +27,12 @@ papers side by side.
 
 - `kind: blog` — scraped from the ~15 blogs in `sources.yaml`. A firehose, heavily
   triaged (~60% of scraped URLs are rejected as junk).
-- `kind: paper` — an arXiv paper, marked 📄 in the indexes. These are **gated**: a
-  paper is in the KB only because a human put its link in `papers.txt`. There is no
-  paper discovery, by design. Extra frontmatter: `arxiv_id`, `categories`,
-  `fulltext` (`html` | `pdf` | `none` — how the body text was obtained).
+- `kind: paper` — an arXiv paper. Its **filename is prefixed `[Paper] `** and its index
+  entry is labelled **[Paper]**, so papers are obvious in the tree and globbable
+  (`kb/**/'[Paper] '*.md`). These are **gated**: a paper is in the KB only because a
+  human put its link in `papers.txt`. There is no paper discovery, by design. Extra
+  frontmatter: `arxiv_id`, `categories`, `fulltext` (`html` | `pdf` | `none` — how the
+  body text was obtained).
 
 To add a paper: put the link in `papers.txt` (or `scraper paper <url>`) and commit.
 
