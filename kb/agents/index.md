@@ -1,11 +1,13 @@
 # agents
 
-148 articles.
+149 articles.
 
 - **2026-07-10** — [OpenWiki Brains: Proactive Memory for AI Agents](<memory-context/OpenWiki Brains Proactive Memory for AI Agents.md>) · `memory-context` · langchain
   Introduces OpenWiki Brains as proactive wiki memory for agents, focused on persistent context and retrieval over project knowledge.
 - **2026-07-10** — [3 production patterns for AI agents and how to evaluate each one](<planning/3 production patterns for AI agents and how to evaluate each one.md>) · `planning` · arize
   Breaks production agents into local coding agents, in-app assistants, and operational agents, then maps each pattern to different harness, rollout, and evaluation needs.
+- **2026-07-10** — 📄 [Failure as a Process: An Anatomy of CLI Coding Agent Trajectories](<planning/Failure as a Process An Anatomy of CLI Coding Agent Trajectories.md>) · `planning` · arxiv
+  Empirical study of how CLI coding agents fail as a *process* rather than an outcome: 3,843 trajectories from 7 frontier models across 3 scaffolds (OpenHands, MiniSWE, Terminus2) on Terminal-Bench, with 1,794 valid ones hand-annotated over 63,000 execution steps. Finds failures are driven mainly by epistemic errors, begin within the first few steps, and stay hidden until recovery is impossible — arguing for early validation and intervention instead of final-outcome evaluation.
 - **2026-07-10** — [What is a loop in AI engineering, anyway?](<planning/What is a loop in AI engineering, anyway.md>) · `planning` · arize
   Defines feedback loops in AI engineering and why loops are central to agent and eval system design.
 - **2026-07-08** — [Tuning the harness, not the model: a Nemotron 3 Ultra playbook](<planning/Tuning the harness, not the model a Nemotron 3 Ultra playbook.md>) · `planning` · langchain
