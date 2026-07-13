@@ -1,9 +1,11 @@
 # arxiv
 
-4 articles.
+5 articles.
 
 - **2026-07-10** — **[Paper]** [Failure as a Process: An Anatomy of CLI Coding Agent Trajectories](<../agents/planning/[Paper] Failure as a Process An Anatomy of CLI Coding Agent Trajectories.md>) · `planning` · arxiv
   Empirical study of how CLI coding agents fail as a *process* rather than an outcome: 3,843 trajectories from 7 frontier models across 3 scaffolds (OpenHands, MiniSWE, Terminus2) on Terminal-Bench, with 1,794 valid ones hand-annotated over 63,000 execution steps. Finds failures are driven mainly by epistemic errors, begin within the first few steps, and stay hidden until recovery is impossible — arguing for early validation and intervention instead of final-outcome evaluation.
+- **2026-07-07** — **[Paper]** [Beyond the Leaderboard: A Synthesis of Tool-Use, Planning, and Reasoning Failures in Large Language Model Agents](<../agents/planning/[Paper] Beyond the Leaderboard A Synthesis of Tool-Use, Planning, and Reasoning Failures in Large Language Model Agents.md>) · `planning` · arxiv
+  Synthesizes 27 benchmark, taxonomy, and audit papers (2023-2026) across 19 benchmarks into a unified taxonomy of LLM-agent failure, with six clusters: tool-invocation/parameter errors, planning and constraint-satisfaction failures, long-horizon degradation from context accumulation, multi-agent coordination breakdown, safety failures under adversarial or underspecified conditions, and measurement-validity problems. Finds failures compound nonlinearly with task length, strong sub-task scores do not predict end-to-end success, and extra scaffolding does not reliably improve reliability.
 - **2020-05-22** — **[Paper]** [Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks](<../rag-retrieval/pipelines/[Paper] Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks.md>) · `pipelines` · arxiv
   Introduces Retrieval-Augmented Generation: a seq2seq model coupled to a dense-vector Wikipedia index via DPR, with the retriever and generator fine-tuned end-to-end. Sets SOTA on three open-domain QA tasks and yields more factual, specific generations than a parametric-only BART baseline.
 - **2017-06-12** — **[Paper]** [Attention Is All You Need](<../models/architectures/[Paper] Attention Is All You Need.md>) · `architectures` · arxiv
