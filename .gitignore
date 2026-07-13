@@ -222,4 +222,7 @@ __marimo__/
 cache/
 state.db
 uv.lock
-kb/_inbox/
+# kb/_inbox/ is intentionally TRACKED: it is the handoff medium between the
+# daily scrape job (GitHub Actions, stages articles here) and the classify
+# routine (scheduled cloud agent, fresh checkout — it can only see what is
+# committed). It empties again as soon as articles are filed.
