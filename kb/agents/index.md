@@ -301,6 +301,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-07-13** — [Introducing Precursor: detecting agentic behavior with continuous client-side signals](<../product-engineering/security/Introducing Precursor detecting agentic behavior with continuous client-side signals.md>) · `security` · cloudflare-ai
+  Cloudflare's Precursor injects client-side JS to continuously collect session-level behavioral signals (mouse-movement physics, keystroke rhythm, focus changes) and feeds them into an edge-side evaluator/dispatcher to distinguish human from agentic/bot traffic in real time, feeding Cloudflare's bot score without exposing raw signals to customers.
 - **2026-07-10** — [AI-pilling our company: lessons learned](<../product-engineering/case-studies/AI-pilling our company lessons learned.md>) · `case-studies` · sierra
   Internal adoption case study on spreading AI workflows through a company, including practical lessons for using agents and tools in day-to-day work.
 - **2026-07-09** — [The new GPT-5.6 family: Luna, Terra, Sol](<../models/releases/The new GPT-5.6 family Luna, Terra, Sol.md>) · `releases` · simon-willison
@@ -311,6 +313,8 @@
   Interview-driven discussion of agents as users, covering identity, permissions, memory, evals, and feedback loops as core production-agent infrastructure.
 - **2026-07-07** — [Improving Agents is a Data Mining Problem](<../evals-observability/monitoring/Improving Agents is a Data Mining Problem.md>) · `monitoring` · langchain
   Argues that improving agents is a data-mining problem over traces, failures, feedback, and recurring behavioral patterns.
+- **2026-07-07** — [How I shipped a month of engineering work in four days with GLM 5.2 Fast](<../product-engineering/case-studies/How I shipped a month of engineering work in four days with GLM 5.2 Fast.md>) · `case-studies` · fireworks
+  A senior engineer used GLM 5.2 Fast (via Fireworks' FireConnect with Claude Code) to design, spec, and implement a GPU-scheduler 'reclaim' feature in four days for $218 in inference cost — 4 PRs, ~3,000 LOC, 34 passing tests — crediting the model's ~400 tok/s speed for sustaining a real-time design/test/implement loop instead of async, tab-switching workflows.
 - **2026-07-02** — [How to evaluate AI agents, avoid reward hacking, and build better specs](<../evals-observability/evaluation/How to evaluate AI agents, avoid reward hacking, and build better specs.md>) · `evaluation` · arize
   Connects agent evaluation with specification quality, including reward hacking risks and tighter behavioral contracts.
 - **2026-07-02** — [Your coding agent bill doubled. Here’s how to fix it.](<../infra-platform/cost/Your coding agent bill doubled. Here’s how to fix it.md>) · `cost` · langchain

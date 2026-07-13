@@ -413,6 +413,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-07-13** — [How do you make an LLM, anyway? Microsoft just published a textbook.](<../models/reinforcement-learning/How do you make an LLM, anyway Microsoft just published a textbook.md>) · `reinforcement-learning` · arize
+  Breaks down Microsoft's 109-page MAI-Thinking-1 technical report: 30-trillion-token pretraining on 8,192 GPUs with a 54.6%-code data mix, mid-training context extension from 16K to 262K tokens, and RL post-training with reward-hacking countermeasures like network-isolated coding environments and time-traveled repo snapshots with future commits scrubbed.
 - **2026-07-10** — [3 production patterns for AI agents and how to evaluate each one](<../agents/planning/3 production patterns for AI agents and how to evaluate each one.md>) · `planning` · arize
   Breaks production agents into local coding agents, in-app assistants, and operational agents, then maps each pattern to different harness, rollout, and evaluation needs.
 - **2026-07-10** — [What is a loop in AI engineering, anyway?](<../agents/planning/What is a loop in AI engineering, anyway.md>) · `planning` · arize
