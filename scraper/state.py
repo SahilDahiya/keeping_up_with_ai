@@ -1,15 +1,27 @@
-"""SQLite bookkeeping: which URLs we've seen, fetched, and filed.
+"""Bookkeeping: which URLs we've seen, fetched, filed, or deliberately skipped.
 
-Scraper-internal only — the knowledge base never depends on this file.
+Two representations of the same table:
+
+- `state.jsonl` — the **committed source of truth**. One JSON object per URL, sorted
+  by URL, so git can diff and merge it line-by-line. Survives fresh checkouts (CI,
+  scheduled cloud runs), which a gitignored SQLite file cannot.
+- `state.db` — a local SQLite cache, rebuilt from the JSONL on first use. Gives us
+  indexed lookups during a run. Disposable; never committed.
+
+Scraper-internal only — the knowledge base never depends on either file.
 """
 
 from __future__ import annotations
 
+import json
 import sqlite3
 from datetime import datetime, timezone
 from pathlib import Path
 
-from .config import STATE_PATH
+from .config import STATE_JSONL_PATH, STATE_PATH
+
+_COLUMNS = ("url", "source", "first_seen", "last_fetched", "etag", "last_modified",
+            "content_sha256", "kb_path", "status", "skip_reason")
 
 _SCHEMA = """
 CREATE TABLE IF NOT EXISTS articles (
@@ -33,17 +45,60 @@ def _now() -> str:
 
 
 class State:
-    def __init__(self, path: Path = STATE_PATH):
+    def __init__(self, path: Path = STATE_PATH, jsonl: Path = STATE_JSONL_PATH):
+        self.jsonl_path = jsonl
         self.conn = sqlite3.connect(path)
         self.conn.row_factory = sqlite3.Row
         self.conn.executescript(_SCHEMA)
         self._migrate()
+        if self._is_empty() and jsonl.exists():
+            self.import_jsonl()  # fresh checkout (CI / cloud run): hydrate the cache
 
     def _migrate(self) -> None:
         cols = {row["name"] for row in self.conn.execute("PRAGMA table_info(articles)")}
         if "skip_reason" not in cols:
             self.conn.execute("ALTER TABLE articles ADD COLUMN skip_reason TEXT")
             self.conn.commit()
+
+    def _is_empty(self) -> bool:
+        return self.conn.execute("SELECT 1 FROM articles LIMIT 1").fetchone() is None
+
+    # ------------------------------------------------------------ persistence
+
+    def import_jsonl(self) -> int:
+        """Load the committed JSONL into the SQLite cache (upsert; JSONL wins)."""
+        rows = 0
+        with self.jsonl_path.open() as f:
+            for line in f:
+                line = line.strip()
+                if not line:
+                    continue
+                rec = json.loads(line)
+                self.conn.execute(
+                    f"""INSERT INTO articles ({','.join(_COLUMNS)})
+                        VALUES ({','.join('?' * len(_COLUMNS))})
+                        ON CONFLICT(url) DO UPDATE SET
+                          {','.join(f'{c}=excluded.{c}' for c in _COLUMNS if c != 'url')}""",
+                    tuple(rec.get(c) for c in _COLUMNS),
+                )
+                rows += 1
+        self.conn.commit()
+        return rows
+
+    def export_jsonl(self) -> int:
+        """Write the SQLite cache back out to the committed JSONL, sorted by URL.
+
+        Sorting keeps diffs minimal and makes git merges of concurrent runs tractable.
+        """
+        rows = self.conn.execute(
+            f"SELECT {','.join(_COLUMNS)} FROM articles ORDER BY url"
+        ).fetchall()
+        tmp = self.jsonl_path.with_suffix(".jsonl.tmp")
+        with tmp.open("w") as f:
+            for row in rows:
+                f.write(json.dumps({c: row[c] for c in _COLUMNS}, ensure_ascii=False) + "\n")
+        tmp.replace(self.jsonl_path)  # atomic: never leave a half-written state file
+        return len(rows)
 
     def get(self, url: str) -> sqlite3.Row | None:
         return self.conn.execute("SELECT * FROM articles WHERE url = ?", (url,)).fetchone()

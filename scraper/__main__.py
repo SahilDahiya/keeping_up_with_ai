@@ -163,6 +163,7 @@ def update(source: Optional[str] = typer.Option(None, "--source"),
                 break
         stats = _process(src, _dedupe(discovered), fetcher, state, limit=limit, since=None)
         typer.echo(f"  {stats}")
+    typer.echo(f"state: {state.export_jsonl()} urls -> state.jsonl")
 
 
 @app.command()
@@ -182,6 +183,7 @@ def backfill(source: Optional[str] = typer.Option(None, "--source"),
         stats = _process(src, _dedupe(discovered), fetcher, state,
                          limit=limit, since=since or src.since)
         typer.echo(f"  {stats}")
+    typer.echo(f"state: {state.export_jsonl()} urls -> state.jsonl")
 
 
 @app.command()
@@ -211,6 +213,7 @@ def file(path: Optional[Path] = typer.Argument(None),
     if filed:
         stats = rebuild_indexes()
         typer.echo(f"reindexed: {stats}")
+    state.export_jsonl()
 
 
 @app.command()
@@ -252,12 +255,30 @@ def skip(path: Optional[Path] = typer.Argument(None),
     if filed_removed:
         stats = rebuild_indexes()
         typer.echo(f"reindexed: {stats}")
+    state.export_jsonl()
 
 
 @app.command()
 def reindex():
     """Rebuild per-topic index.md files, _sources/ views, and catalog.jsonl."""
     typer.echo(f"reindexed: {rebuild_indexes()}")
+
+
+@app.command("state")
+def state_cmd(action: str = typer.Argument(..., help="export | import")):
+    """Sync the SQLite cache with the committed state.jsonl.
+
+    `state.jsonl` is the source of truth in git; `state.db` is a disposable local
+    cache. A fresh checkout hydrates automatically, so this is only needed to force
+    a re-sync or to repair a corrupted cache.
+    """
+    st = State()
+    if action == "export":
+        typer.echo(f"exported {st.export_jsonl()} urls -> state.jsonl")
+    elif action == "import":
+        typer.echo(f"imported {st.import_jsonl()} urls <- state.jsonl")
+    else:
+        raise typer.BadParameter("action must be 'export' or 'import'")
 
 
 @app.command()

@@ -15,7 +15,8 @@ SOURCES_PATH = REPO_ROOT / "sources.yaml"
 KB_ROOT = REPO_ROOT / "kb"
 TAXONOMY_PATH = KB_ROOT / "taxonomy.yaml"
 INBOX_DIR = KB_ROOT / "_inbox"
-STATE_PATH = REPO_ROOT / "state.db"
+STATE_PATH = REPO_ROOT / "state.db"       # local cache; rebuildable from STATE_JSONL_PATH
+STATE_JSONL_PATH = REPO_ROOT / "state.jsonl"  # committed source of truth (git-friendly)
 CACHE_DIR = REPO_ROOT / "cache" / "raw"
 
 # Tracking params stripped during URL normalization.
