@@ -1,6 +1,6 @@
 # models
 
-153 articles.
+155 articles.
 
 - **2026-07-13** — [How do you make an LLM, anyway? Microsoft just published a textbook.](<reinforcement-learning/How do you make an LLM, anyway Microsoft just published a textbook.md>) · `reinforcement-learning` · arize
   Breaks down Microsoft's 109-page MAI-Thinking-1 technical report: 30-trillion-token pretraining on 8,192 GPUs with a 54.6%-code data mix, mid-training context extension from 16K to 262K tokens, and RL post-training with reward-hacking countermeasures like network-isolated coding environments and time-traveled repo snapshots with future commits scrubbed.
@@ -308,6 +308,10 @@
   Explains why transcription quality is a core dependency for downstream AI systems that operate on spoken conversations.
 - **2021-01-13** — [Action Directed GPT-2](<reasoning/Action Directed GPT-2.md>) · `reasoning` · cresta
   Explains Action Directed GPT-2 as an early pattern for steering language model behavior toward actions, relevant to tool-using and task-oriented agents.
+- **2017-06-12** — 📄 [Attention Is All You Need](<architectures/Attention Is All You Need.md>) · `architectures` · arxiv
+  Introduces the Transformer: a sequence model built purely on multi-head self-attention with no recurrence or convolution, hitting 28.4 BLEU on WMT14 EN-DE while training in 3.5 days on 8 GPUs. The architecture every modern LLM descends from.
+- **2014-12-22** — 📄 [Adam: A Method for Stochastic Optimization](<training/Adam A Method for Stochastic Optimization.md>) · `training` · arxiv
+  Introduces Adam, a first-order optimizer combining momentum with per-parameter adaptive learning rates from first and second gradient-moment estimates, with bias correction. Little memory overhead, robust to sparse gradients and non-stationary objectives; the default optimizer for training neural nets since.
 
 ## Also relevant (filed elsewhere)
 
@@ -605,5 +609,7 @@
   Explains communication bottlenecks in decentralized foundation-model training.
 - **2022-09-30** — [Arize AI + OpenAI](<../evals-observability/monitoring/Arize AI + OpenAI.md>) · `monitoring` · arize
   Introduces Arize support for monitoring OpenAI-powered applications, connecting hosted LLM usage with observability and performance analysis.
+- **2020-05-22** — 📄 [Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks](<../rag-retrieval/pipelines/Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks.md>) · `pipelines` · arxiv
+  Introduces Retrieval-Augmented Generation: a seq2seq model coupled to a dense-vector Wikipedia index via DPR, with the retriever and generator fine-tuned end-to-end. Sets SOTA on three open-domain QA tasks and yields more factual, specific generations than a parametric-only BART baseline.
 - **1997-08-15** — [Evaluating Speech-to-Text Quality: Beyond Word Error Rate](<../evals-observability/evaluation/Evaluating Speech-to-Text Quality Beyond Word Error Rate.md>) · `evaluation` · cresta
   Explains why word error rate is insufficient for speech-to-text evaluation and what production teams should measure instead.

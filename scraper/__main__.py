@@ -12,6 +12,16 @@ from .discover import Discovered, discover_feed, discover_sitemap
 from .extract import ExtractionError, TooShallow, extract_article
 from .fetch import Fetcher, FetchError
 from .index import rebuild_indexes
+from .papers import (
+    PAPERS_LIST,
+    NotAnArxivLink,
+    bad_lines,
+    canonical_url,
+    fetch_paper,
+    parse_arxiv_id,
+    read_list,
+    to_article,
+)
 from .state import State
 from .store import (
     FilingError,
@@ -255,6 +265,82 @@ def skip(path: Optional[Path] = typer.Argument(None),
     if filed_removed:
         stats = rebuild_indexes()
         typer.echo(f"reindexed: {stats}")
+    state.export_jsonl()
+
+
+@app.command("paper")
+def paper_add(links: list[str] = typer.Argument(..., help="arXiv URLs or bare IDs")):
+    """Queue arXiv paper(s) in papers.txt. Ingested on the next `scraper papers` run."""
+    existing = set(read_list())
+    added, skipped, bad = [], [], []
+    with PAPERS_LIST.open("a") as f:
+        for link in links:
+            try:
+                aid = parse_arxiv_id(link)
+            except NotAnArxivLink as e:
+                bad.append(str(e))
+                continue
+            if aid in existing:
+                skipped.append(aid)
+                continue
+            f.write(f"{canonical_url(aid)}\n")
+            existing.add(aid)
+            added.append(aid)
+    for b in bad:
+        typer.echo(f"  {b}")
+    for s in skipped:
+        typer.echo(f"  already queued: {s}")
+    for a in added:
+        typer.echo(f"  queued: {a}")
+    if added:
+        typer.echo(f"\n{len(added)} queued — run `scraper papers` to ingest")
+    if bad:
+        raise typer.Exit(1)
+
+
+@app.command("papers")
+def papers_ingest(limit: Optional[int] = typer.Option(None, "--limit"),
+                  check: bool = typer.Option(False, "--check",
+                                             help="validate papers.txt without fetching")):
+    """Ingest queued arXiv papers from papers.txt into kb/_inbox/.
+
+    Gated by design: this reads ONLY papers.txt. It never discovers, searches, or
+    recommends papers — a paper enters the KB only because a human put its link there.
+    """
+    for line in bad_lines():
+        typer.echo(f"  NOT AN ARXIV LINK (ignored): {line}")
+    ids = read_list()
+    if check:
+        typer.echo(f"papers.txt: {len(ids)} valid arXiv id(s)")
+        raise typer.Exit(0)
+    if not ids:
+        typer.echo("papers.txt is empty — add links with `scraper paper <url>`")
+        raise typer.Exit(0)
+
+    fetcher, state = Fetcher(), State()
+    todo = [i for i in ids if state.needs_fetch(canonical_url(i), None)]
+    if limit:
+        todo = todo[:limit]
+    typer.echo(f"{len(ids)} queued, {len(ids) - len(todo)} already ingested, {len(todo)} to fetch")
+
+    new = failed = 0
+    for aid in todo:
+        url = canonical_url(aid)
+        try:
+            paper = fetch_paper(fetcher, aid)
+            article, extra, body = to_article(paper)
+        except (FetchError, ExtractionError) as e:
+            typer.echo(f"  FAIL {aid}: {e}")
+            state.mark(url, "arxiv", "failed")
+            failed += 1
+            continue
+        path = write_inbox("arxiv", article, kind="paper", extra=extra, body_md=body)
+        state.record_fetched(url, "arxiv", sha256=content_hash(body),
+                             etag=None, last_modified=paper.updated, status="inbox")
+        ft = f"{paper.fulltext_source} full text" if paper.fulltext_md else "abstract only"
+        typer.echo(f"  inbox: {aid} — {article.title[:60]} ({ft})")
+        new += 1
+    typer.echo(f"\n{new} staged, {failed} failed")
     state.export_jsonl()
 
 

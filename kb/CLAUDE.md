@@ -19,6 +19,21 @@ is plain markdown with YAML frontmatter — research it with grep/glob/read.
   cleared by Codex using `AGENTS.md` or by Claude Code's `/organize-kb` skill.
 - `unclassified/` — articles the classifier wasn't confident about.
 
+## Two kinds of content
+
+Every article has a `kind` in its frontmatter, and both kinds live **together** in the
+same topic tree — a researcher on `agents/tool-use` should see the blog posts and the
+papers side by side.
+
+- `kind: blog` — scraped from the ~15 blogs in `sources.yaml`. A firehose, heavily
+  triaged (~60% of scraped URLs are rejected as junk).
+- `kind: paper` — an arXiv paper, marked 📄 in the indexes. These are **gated**: a
+  paper is in the KB only because a human put its link in `papers.txt`. There is no
+  paper discovery, by design. Extra frontmatter: `arxiv_id`, `categories`,
+  `fulltext` (`html` | `pdf` | `none` — how the body text was obtained).
+
+To add a paper: put the link in `papers.txt` (or `scraper paper <url>`) and commit.
+
 ## Frontmatter schema
 
 `title, topic, subtopic, secondary_topics (list of "topic/subtopic"), summary, source,

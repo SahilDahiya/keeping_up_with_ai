@@ -12,8 +12,10 @@ topics:
     - computer-use
   models:
     - releases
+    - architectures      # model design itself (transformers, SSMs, MoE, attention variants)
+    - training           # pretraining, optimizers, scaling laws, data curation
     - benchmarks
-    - fine-tuning
+    - fine-tuning        # adapting an existing model (LoRA, SFT, distillation)
     - reinforcement-learning
     - reasoning
     - multimodal

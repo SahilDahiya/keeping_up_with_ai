@@ -35,7 +35,9 @@ def _sort_key(rec: dict) -> str:
 def _entry(rec: dict, *, from_dir: Path) -> str:
     rel = Path(KB_ROOT, rec["_path"]).relative_to(from_dir, walk_up=True).as_posix()
     date = rec.get("published") or "undated"
-    line = f"- **{date}** — [{rec['title']}](<{rel}>) · `{rec.get('subtopic') or '—'}` · {rec['source']}"
+    marker = "📄 " if rec.get("kind") == "paper" else ""
+    line = (f"- **{date}** — {marker}[{rec['title']}](<{rel}>) · "
+            f"`{rec.get('subtopic') or '—'}` · {rec['source']}")
     if rec.get("summary"):
         line += f"\n  {rec['summary']}"
     return line
@@ -91,6 +93,7 @@ def rebuild_indexes() -> dict[str, int]:
                 "topic": rec.get("topic"),
                 "subtopic": rec.get("subtopic"),
                 "secondary_topics": rec.get("secondary_topics") or [],
+                "kind": rec.get("kind", "blog"),
                 "source": rec["source"],
                 "url": rec.get("url"),
                 "date": rec.get("published"),
@@ -98,6 +101,7 @@ def rebuild_indexes() -> dict[str, int]:
                 "path": rec["_path"],
                 "summary": rec.get("summary"),
                 "words": rec.get("words"),
+                **({"arxiv_id": rec["arxiv_id"]} if rec.get("arxiv_id") else {}),
             }, ensure_ascii=False) + "\n")
 
     return stats

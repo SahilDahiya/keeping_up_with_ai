@@ -1,6 +1,6 @@
 # rag-retrieval
 
-43 articles.
+44 articles.
 
 - **2026-07-07** — [Faster phrase search with shingled bloom filters in Brainstore](<search/Faster phrase search with shingled bloom filters in Brainstore.md>) · `search` · braintrust
   Explains faster phrase search over Brainstore data using shingled bloom filters, aimed at efficient trace and log search for AI observability.
@@ -88,6 +88,8 @@
   Paper-reading summary of retrieval-augmented generation and the architecture behind combining retrieval with generation.
 - **2022-12-31** — [Measuring Embedding Drift](<embeddings/Measuring Embedding Drift.md>) · `embeddings` · arize
   Explains embedding drift and how teams can measure changes in embedding distributions over time.
+- **2020-05-22** — 📄 [Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks](<pipelines/Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks.md>) · `pipelines` · arxiv
+  Introduces Retrieval-Augmented Generation: a seq2seq model coupled to a dense-vector Wikipedia index via DPR, with the retriever and generator fine-tuned end-to-end. Sets SOTA on three open-domain QA tasks and yields more factual, specific generations than a parametric-only BART baseline.
 
 ## Also relevant (filed elsewhere)
 

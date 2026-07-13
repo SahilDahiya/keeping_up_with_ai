@@ -663,3 +663,5 @@
   Retrospective on building an early ChatGPT plugin quickly, including product workflow lessons and integration constraints from the plugin ecosystem.
 - **2021-01-13** — [Action Directed GPT-2](<../models/reasoning/Action Directed GPT-2.md>) · `reasoning` · cresta
   Explains Action Directed GPT-2 as an early pattern for steering language model behavior toward actions, relevant to tool-using and task-oriented agents.
+- **2017-06-12** — 📄 [Attention Is All You Need](<../models/architectures/Attention Is All You Need.md>) · `architectures` · arxiv
+  Introduces the Transformer: a sequence model built purely on multi-head self-attention with no recurrence or convolution, hitting 28.4 BLEU on WMT14 EN-DE while training in 3.5 days on 8 GPUs. The architecture every modern LLM descends from.

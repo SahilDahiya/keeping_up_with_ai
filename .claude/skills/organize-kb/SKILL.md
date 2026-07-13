@@ -15,6 +15,11 @@ articles worth keeping, then let the CLI do the mechanical filing.
 1. Read `kb/taxonomy.yaml`. You may ONLY use topics/subtopics defined there.
 2. List `kb/_inbox/*.md`. If empty, report that and stop.
 3. For each file (batch your reads — title + first ~40 lines is usually enough):
+   - **Check `kind` first.** `kind: paper` items are arXiv papers a human explicitly
+     put on the reading list (`papers.txt`) — they are wanted **by definition**.
+     NEVER skip a paper, and never treat one as promotion/company-news. Classify it by
+     its *contribution* (a new attention variant is `models/architectures`, not
+     `models/releases`). The triage rules below apply to `kind: blog` only.
    - Triage before classification. Keep only durable AI engineering content: agents,
      evals, observability, inference, model behavior, RAG, prompt/context engineering,
      production architecture, deployment, security, cost, reliability, or concrete

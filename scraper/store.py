@@ -43,11 +43,19 @@ def content_hash(body_md: str) -> str:
     return hashlib.sha256(body_md.encode()).hexdigest()
 
 
-def write_inbox(source_slug: str, article: Article) -> Path:
-    """Stage an extracted article; classification fields are left for the agent."""
+def write_inbox(source_slug: str, article: Article, *, kind: str = "blog",
+                extra: dict | None = None, body_md: str | None = None) -> Path:
+    """Stage an extracted item; classification fields are left for the agent.
+
+    `kind` is "blog" (scraped from a source in sources.yaml) or "paper" (an arXiv link
+    the user explicitly queued). `extra` carries kind-specific frontmatter, e.g. a
+    paper's arxiv_id / authors / categories.
+    """
     INBOX_DIR.mkdir(parents=True, exist_ok=True)
+    body = body_md if body_md is not None else article.body_md
     fm = {
         "title": article.title,
+        "kind": kind,
         "topic": None,
         "subtopic": None,
         "secondary_topics": [],
@@ -62,10 +70,11 @@ def write_inbox(source_slug: str, article: Article) -> Path:
         "classifier": None,
         "taxonomy_rev": taxonomy_rev(),
         "words": article.words,
-        "content_sha256": content_hash(article.body_md),
+        "content_sha256": content_hash(body),
+        **(extra or {}),
     }
     path = INBOX_DIR / _inbox_name(source_slug, article.url)
-    path.write_text(dump_frontmatter(fm, f"# {article.title}\n\n{article.body_md}"))
+    path.write_text(dump_frontmatter(fm, f"# {article.title}\n\n{body}"))
     return path
 
 

@@ -1,0 +1,22 @@
+# Reading list — arXiv papers to ingest into the knowledge base.
+#
+# THIS FILE IS THE GATE. A paper enters the KB only if its link is here, and only a
+# human puts links here. The scraper has no paper discovery: it never queries arXiv
+# listings, RSS, "recent", "trending", or any recommendation feed. Blogs are a
+# firehose we filter; papers are a shelf you curate.
+#
+# To add a paper, paste its link below (or run `scraper paper <url>`), then commit.
+# The daily job ingests it and the classify routine files it into the topic tree
+# alongside the blog posts on that topic.
+#
+# Any arXiv form works — all normalize to the same canonical, version-less ID:
+#   https://arxiv.org/abs/2501.12345
+#   https://arxiv.org/pdf/2501.12345v2
+#   arxiv.org/html/2501.12345
+#   2501.12345
+#
+# One link per line. `#` starts a comment.
+
+https://arxiv.org/abs/1706.03762
+https://arxiv.org/abs/2005.11401
+https://arxiv.org/abs/1412.6980
