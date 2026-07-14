@@ -3,8 +3,7 @@ title: 'Reinforcement Fine Tuning: Train expert open models to surpass closed fr
   models'
 topic: models
 subtopic: reinforcement-learning
-secondary_topics:
-- models/reasoning
+secondary_topics: []
 summary: Introduces reinforcement fine-tuning for training expert open models beyond
   supervised baselines.
 source: fireworks

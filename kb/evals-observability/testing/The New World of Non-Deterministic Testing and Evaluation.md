@@ -2,8 +2,7 @@
 title: The New World of Non-Deterministic Testing and Evaluation
 topic: evals-observability
 subtopic: testing
-secondary_topics:
-- evals-observability/evaluation
+secondary_topics: []
 summary: Explains why non-deterministic AI systems require different testing and evaluation
   methods than traditional software.
 source: cresta

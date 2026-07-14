@@ -2,8 +2,7 @@
 title: Developer notes on the Realtime API | OpenAI Developers
 topic: models
 subtopic: releases
-secondary_topics:
-- models/multimodal
+secondary_topics: []
 summary: 'Developer notes on the Realtime API GA and the gpt-realtime speech-to-speech
   model: beta-to-GA interface migration, new marin/cedar voices, and advice to rewrite
   prompts because instruction-following improved enough that literal instructions

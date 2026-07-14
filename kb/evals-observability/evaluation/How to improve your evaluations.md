@@ -2,8 +2,7 @@
 title: How to improve your evaluations
 topic: evals-observability
 subtopic: evaluation
-secondary_topics:
-- evals-observability/testing
+secondary_topics: []
 summary: Practical guide to improving evals through better examples, rubrics, scorers,
   slices, and investigation of failure cases.
 source: braintrust

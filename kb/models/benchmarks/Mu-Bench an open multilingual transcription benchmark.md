@@ -2,8 +2,7 @@
 title: 'Mu-Bench: an open multilingual transcription benchmark'
 topic: models
 subtopic: benchmarks
-secondary_topics:
-- models/multimodal
+secondary_topics: []
 summary: Introduces mu-Bench, an open multilingual transcription benchmark for evaluating
   speech recognition quality across languages.
 source: sierra

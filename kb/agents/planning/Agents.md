@@ -3,7 +3,6 @@ title: Agents
 topic: agents
 subtopic: planning
 secondary_topics:
-- agents/tool-use
 - evals-observability/evaluation
 summary: Framework for foundation-model agents covering environments, tools, planning,
   action selection, failure modes, and evaluation for multi-step agentic applications.

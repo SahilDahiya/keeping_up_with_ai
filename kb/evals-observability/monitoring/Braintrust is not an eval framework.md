@@ -2,8 +2,7 @@
 title: Braintrust is not an eval framework
 topic: evals-observability
 subtopic: monitoring
-secondary_topics:
-- evals-observability/evaluation
+secondary_topics: []
 summary: Argues that production AI quality needs a full observability and iteration
   system around evals, not only an isolated evaluation framework.
 source: braintrust

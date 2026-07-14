@@ -2,8 +2,7 @@
 title: Building an open-source Browser Agent on Fireworks AI
 topic: agents
 subtopic: computer-use
-secondary_topics:
-- agents/tool-use
+secondary_topics: []
 summary: Walkthrough of building an open-source browser agent, including model choice,
   tool execution, and environment control.
 source: fireworks

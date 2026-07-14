@@ -2,7 +2,7 @@
 
 78 articles.
 
-- **2026-06-23** — [ParallelKernelBench: Frontier LLMs can't write fast multi-GPU kernels (yet)](<../evals-observability/evaluation/ParallelKernelBench Frontier LLMs can't write fast multi-GPU kernels (yet).md>) · `evaluation` · together
+- **2026-06-23** — [ParallelKernelBench: Frontier LLMs can't write fast multi-GPU kernels (yet)](<../evals-observability/benchmark-design/ParallelKernelBench Frontier LLMs can't write fast multi-GPU kernels (yet).md>) · `benchmark-design` · together
   Introduces ParallelKernelBench for measuring whether frontier LLMs can write fast multi-GPU kernels.
 - **2026-06-22** — [Best practices to accelerate inference for large-scale production workloads](<../inference/optimization/Best practices to accelerate inference for large-scale production workloads.md>) · `optimization` · together
   Best practices for accelerating inference in large-scale production workloads.
@@ -10,13 +10,13 @@
   Covers efficient MiniMax-M3 serving for million-token context and multimodal workloads.
 - **2026-05-29** — [How Together AI built a fast speech-to-text stack](<../models/multimodal/How Together AI built a fast speech-to-text stack.md>) · `multimodal` · together
   Engineering writeup on building a fast speech-to-text stack.
-- **2026-05-19** — [Benchmarking inference at scale: coding agents](<../evals-observability/evaluation/Benchmarking inference at scale coding agents.md>) · `evaluation` · together
+- **2026-05-19** — [Benchmarking inference at scale: coding agents](<../evals-observability/benchmark-design/Benchmarking inference at scale coding agents.md>) · `benchmark-design` · together
   Benchmarks inference at scale for coding-agent workloads.
 - **2026-05-11** — [Serving DeepSeek-V4: why million-token context is an inference systems problem](<../inference/serving/Serving DeepSeek-V4 why million-token context is an inference systems problem.md>) · `serving` · together
   Explains why million-token context serving is primarily an inference-systems problem.
 - **2026-05-04** — [Foundational research powering efficient inference at scale](<../inference/optimization/Foundational research powering efficient inference at scale.md>) · `optimization` · together
   Summarizes research lines behind efficient inference at production scale.
-- **2026-04-24** — [Accelerate RL rollouts by up to 50% with distribution-aware speculative decoding](<../inference/optimization/Accelerate RL rollouts by up to 50% with distribution-aware speculative decoding.md>) · `optimization` · together
+- **2026-04-24** — [Accelerate RL rollouts by up to 50% with distribution-aware speculative decoding](<../inference/speculative-decoding/Accelerate RL rollouts by up to 50% with distribution-aware speculative decoding.md>) · `speculative-decoding` · together
   Explains distribution-aware speculative decoding for faster RL rollouts.
 - **2026-04-21** — [Capacity without conflict: A guide to multi-tenant GPU cluster design for AI-native teams](<../infra-platform/gpu-clusters/Capacity without conflict A guide to multi-tenant GPU cluster design for AI-native teams.md>) · `gpu-clusters` · together
   Guide to multi-tenant GPU cluster design for avoiding capacity conflicts in AI-native teams.
@@ -30,7 +30,7 @@
   Looks inside a kernel team’s workflow for optimizing AI inference and training performance.
 - **2026-03-17** — [Mamba-3](<../models/reasoning/Mamba-3.md>) · `reasoning` · together
   Describes Mamba-3 and its implications for efficient sequence modeling.
-- **2026-03-05** — [FlashAttention-4: Algorithm and Kernel Pipelining Co-Design for Asymmetric Hardware Scaling](<../inference/optimization/FlashAttention-4 Algorithm and Kernel Pipelining Co-Design for Asymmetric Hardware Scaling.md>) · `optimization` · together
+- **2026-03-05** — [FlashAttention-4: Algorithm and Kernel Pipelining Co-Design for Asymmetric Hardware Scaling](<../inference/kernels/FlashAttention-4 Algorithm and Kernel Pipelining Co-Design for Asymmetric Hardware Scaling.md>) · `kernels` · together
   Covers FlashAttention-4 algorithm and kernel co-design for asymmetric hardware scaling.
 - **2026-03-04** — [Cache-aware prefill-decode disaggregation for long-context LLM serving](<../inference/serving/Cache-aware prefill-decode disaggregation for long-context LLM serving.md>) · `serving` · together
   Explains cache-aware prefill/decode disaggregation for faster long-context LLM serving.
@@ -44,7 +44,7 @@
   Investigates what LLMs do under underspecified prompting and how that affects evaluation.
 - **2026-02-02** — [Fine-tuning open LLM judges to outperform GPT-5.2](<../models/reinforcement-learning/Fine-tuning open LLM judges to outperform GPT-5.2.md>) · `reinforcement-learning` · together
   Explains fine-tuning open LLM judges to outperform a frontier judge model.
-- **2026-01-26** — [DSGym: A holistic framework for evaluating and training data science agents](<../evals-observability/evaluation/DSGym A holistic framework for evaluating and training data science agents.md>) · `evaluation` · together
+- **2026-01-26** — [DSGym: A holistic framework for evaluating and training data science agents](<../evals-observability/benchmark-design/DSGym A holistic framework for evaluating and training data science agents.md>) · `benchmark-design` · together
   Introduces DSGym for evaluating and training data science agents.
 - **2026-01-22** — [Optimizing inference speed and costs: Lessons learned from large-scale deployments](<../inference/optimization/Optimizing inference speed and costs Lessons learned from large-scale deployments.md>) · `optimization` · together
   Lessons from optimizing inference speed and cost in large-scale deployments.
@@ -52,17 +52,17 @@
   Explains multi-node model training across GPU clusters and the coordination issues that appear at scale.
 - **2026-01-08** — [How to choose the right open model for production](<../product-engineering/architecture/How to choose the right open model for production.md>) · `architecture` · together
   Guide to choosing open models for production based on workload, quality, and serving constraints.
-- **2025-11-04** — [How to evaluate and benchmark Large Language Models (LLMs)](<../evals-observability/evaluation/How to evaluate and benchmark Large Language Models (LLMs).md>) · `evaluation` · together
+- **2025-11-04** — [How to evaluate and benchmark Large Language Models (LLMs)](<../evals-observability/benchmark-design/How to evaluate and benchmark Large Language Models (LLMs).md>) · `benchmark-design` · together
   Guide to evaluating and benchmarking LLMs for production model selection.
-- **2025-10-22** — [Large Reasoning Models Fail to Follow Instructions During Reasoning: A Benchmark Study](<../evals-observability/evaluation/Large Reasoning Models Fail to Follow Instructions During Reasoning A Benchmark Study.md>) · `evaluation` · together
+- **2025-10-22** — [Large Reasoning Models Fail to Follow Instructions During Reasoning: A Benchmark Study](<../evals-observability/benchmark-design/Large Reasoning Models Fail to Follow Instructions During Reasoning A Benchmark Study.md>) · `benchmark-design` · together
   Benchmark study showing instruction-following failures during reasoning.
-- **2025-10-10** — [ATLAS runtime-learning accelerators for LLM inference](<../inference/optimization/ATLAS runtime-learning accelerators for LLM inference.md>) · `optimization` · together
+- **2025-10-10** — [ATLAS runtime-learning accelerators for LLM inference](<../inference/speculative-decoding/ATLAS runtime-learning accelerators for LLM inference.md>) · `speculative-decoding` · together
   Introduces ATLAS, a runtime-learning accelerator for improving LLM inference.
 - **2025-08-21** — [AI agents for efficient LLM inference engineering](<../agents/tool-use/AI agents for efficient LLM inference engineering.md>) · `tool-use` · together
   Case study of using AI agents to automate engineering tasks while developing efficient inference systems.
 - **2025-08-15** — [Fine-tuning small open-source LLMs for specialized tasks](<../models/fine-tuning/Fine-tuning small open-source LLMs for specialized tasks.md>) · `fine-tuning` · together
   Case study fine-tuning small open-source LLMs to beat larger closed models on specialized tasks.
-- **2025-07-17** — [Back to The Future: Evaluating AI Agents on Predicting Future Events](<../evals-observability/evaluation/Back to The Future Evaluating AI Agents on Predicting Future Events.md>) · `evaluation` · together
+- **2025-07-17** — [Back to The Future: Evaluating AI Agents on Predicting Future Events](<../evals-observability/benchmark-design/Back to The Future Evaluating AI Agents on Predicting Future Events (together).md>) · `benchmark-design` · together
   Introduces FutureBench for evaluating agents on predicting future events.
 - **2025-07-02** — [DeepSWE coding agent trained with scaled RL](<../agents/tool-use/DeepSWE coding agent trained with scaled RL.md>) · `tool-use` · together
   Explains DeepSWE, an open-source coding agent trained by scaling reinforcement learning.
@@ -72,9 +72,9 @@
   Explains YAQA, a model-preserving adaptive rounding approach for quantization.
 - **2025-05-28** — [Mixture-of-Agents Alignment for post-training](<../models/fine-tuning/Mixture-of-Agents Alignment for post-training.md>) · `fine-tuning` · together
   Explains Mixture-of-Agents Alignment for improving post-training with collective model intelligence.
-- **2025-05-12** — [Boosting DeepSeek-R1 speed with customized speculative decoding](<../inference/optimization/Boosting DeepSeek-R1 speed with customized speculative decoding.md>) · `optimization` · together
+- **2025-05-12** — [Boosting DeepSeek-R1 speed with customized speculative decoding](<../inference/speculative-decoding/Boosting DeepSeek-R1 speed with customized speculative decoding.md>) · `speculative-decoding` · together
   Shows customized speculative decoding for accelerating DeepSeek-R1 serving.
-- **2025-04-21** — [Chipmunk: Training-Free Acceleration of Diffusion Transformers with Dynamic Column-Sparse Deltas](<../inference/optimization/Chipmunk Training-Free Acceleration of Diffusion Transformers with Dynamic Column-Sparse Deltas.md>) · `optimization` · together
+- **2025-04-21** — [Chipmunk: Training-Free Acceleration of Diffusion Transformers with Dynamic Column-Sparse Deltas](<../inference/kernels/Chipmunk Training-Free Acceleration of Diffusion Transformers with Dynamic Column-Sparse Deltas.md>) · `kernels` · together
   Describes Chipmunk, a training-free acceleration method for diffusion transformers.
 - **2025-04-17** — [Continued Fine-tuning of LLMs: A Technical Deep Dive](<../models/fine-tuning/Continued Fine-tuning of LLMs A Technical Deep Dive.md>) · `fine-tuning` · together
   Technical deep dive into continued fine-tuning of LLMs.
@@ -104,21 +104,21 @@
   Explains distilling and accelerating hybrid Mamba/Transformer models.
 - **2024-09-05** — [Supercharging NVIDIA H200 and H100 GPU Cluster Performance With Together Kernel Collection](<../inference/hardware/Supercharging NVIDIA H200 and H100 GPU Cluster Performance With Together Kernel Collection.md>) · `hardware` · together
   Shows how kernel work improves H200 and H100 GPU cluster performance.
-- **2024-09-05** — [Speculative decoding for high-throughput long-context inference](<../inference/optimization/Speculative decoding for high-throughput long-context inference.md>) · `optimization` · together
+- **2024-09-05** — [Speculative decoding for high-throughput long-context inference](<../inference/speculative-decoding/Speculative decoding for high-throughput long-context inference.md>) · `speculative-decoding` · together
   Explains speculative decoding for high-throughput long-context inference.
 - **2024-08-28** — [TEAL: Training-Free Activation Sparsity in Large Language Models](<../inference/optimization/TEAL Training-Free Activation Sparsity in Large Language Models.md>) · `optimization` · together
   Explains TEAL, a training-free activation sparsity method for large language models.
 - **2024-08-13** — [A practitioner's guide to testing and running large GPU clusters for training generative AI models](<../infra-platform/gpu-clusters/A practitioner's guide to testing and running large GPU clusters for training generative AI models.md>) · `gpu-clusters` · together
   Practical guide to testing and operating large GPU clusters for generative model training.
-- **2024-07-31** — [Llama 3.1: Same model, different results. The impact of a percentage point.](<../evals-observability/evaluation/Llama 3.1 Same model, different results. The impact of a percentage point.md>) · `evaluation` · together
+- **2024-07-31** — [Llama 3.1: Same model, different results. The impact of a percentage point.](<../evals-observability/benchmark-design/Llama 3.1 Same model, different results. The impact of a percentage point.md>) · `benchmark-design` · together
   Explains how small quality differences and deployment choices affect Llama 3.1 results.
 - **2024-07-12** — [Fine-tuning Llama-3 toward GPT-4 performance at lower cost](<../models/fine-tuning/Fine-tuning Llama-3 toward GPT-4 performance at lower cost.md>) · `fine-tuning` · together
   Shows fine-tuning Llama 3 toward GPT-4-like task performance at lower cost.
-- **2024-07-11** — [FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-precision](<../inference/optimization/FlashAttention-3 Fast and Accurate Attention with Asynchrony and Low-precision.md>) · `optimization` · together
+- **2024-07-11** — [FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-precision](<../inference/kernels/FlashAttention-3 Fast and Accurate Attention with Asynchrony and Low-precision.md>) · `kernels` · together
   Explains FlashAttention-3 and its asynchronous low-precision attention optimizations.
 - **2024-06-24** — [Building a personalized code assistant with open-source LLMs using RAG Fine-tuning](<../rag-retrieval/pipelines/Building a personalized code assistant with open-source LLMs using RAG Fine-tuning.md>) · `pipelines` · together
   Builds a personalized code assistant using RAG fine-tuning with open-source LLMs.
-- **2024-06-18** — [SpecExec: Massively Parallel Speculative Decoding for Interactive LLM Inference on Consumer Devices](<../inference/optimization/SpecExec Massively Parallel Speculative Decoding for Interactive LLM Inference on Consumer Devices.md>) · `optimization` · together
+- **2024-06-18** — [SpecExec: Massively Parallel Speculative Decoding for Interactive LLM Inference on Consumer Devices](<../inference/speculative-decoding/SpecExec Massively Parallel Speculative Decoding for Interactive LLM Inference on Consumer Devices.md>) · `speculative-decoding` · together
   Introduces SpecExec for massively parallel speculative decoding on consumer devices.
 - **2024-06-11** — [Together MoA collective intelligence of open-source models](<../agents/multi-agent/Together MoA collective intelligence of open-source models.md>) · `multi-agent` · together
   Explains Mixture-of-Agents for improving model outputs through collective open-source model reasoning.
@@ -138,17 +138,17 @@
   Explains long-context retrieval models using Monarch Mixer.
 - **2023-12-08** — [StripedHyena-7B and efficient architectures beyond Transformers](<../models/reasoning/StripedHyena-7B and efficient architectures beyond Transformers.md>) · `reasoning` · together
   Introduces StripedHyena-7B and efficient architectures beyond Transformers.
-- **2023-11-13** — [FlashFFTConv: Efficient Convolutions for Long Sequences with Tensor Cores](<../inference/optimization/FlashFFTConv Efficient Convolutions for Long Sequences with Tensor Cores.md>) · `optimization` · together
+- **2023-11-13** — [FlashFFTConv: Efficient Convolutions for Long Sequences with Tensor Cores](<../inference/kernels/FlashFFTConv Efficient Convolutions for Long Sequences with Tensor Cores.md>) · `kernels` · together
   Explains FlashFFTConv for efficient long-sequence convolutions on tensor cores.
 - **2023-10-30** — [RedPajama-Data-v2: An open dataset with 30 trillion tokens for training large language models](<../models/fine-tuning/RedPajama-Data-v2 An open dataset with 30 trillion tokens for training large language models.md>) · `fine-tuning` · together
   Introduces RedPajama-Data-v2, a large web dataset for training language models.
-- **2023-10-12** — [Flash-Decoding for long-context inference](<../inference/optimization/Flash-Decoding for long-context inference.md>) · `optimization` · together
+- **2023-10-12** — [Flash-Decoding for long-context inference](<../inference/kernels/Flash-Decoding for long-context inference.md>) · `kernels` · together
   Introduces Flash-Decoding for efficient long-context inference.
-- **2023-09-11** — [Medusa: Simple framework for accelerating LLM generation with multiple decoding heads](<../inference/optimization/Medusa Simple framework for accelerating LLM generation with multiple decoding heads.md>) · `optimization` · together
+- **2023-09-11** — [Medusa: Simple framework for accelerating LLM generation with multiple decoding heads](<../inference/speculative-decoding/Medusa Simple framework for accelerating LLM generation with multiple decoding heads.md>) · `speculative-decoding` · together
   Introduces Medusa, a multi-decoding-head framework for accelerating LLM generation.
 - **2023-07-25** — [Monarch Mixer: A new model architecture for increased efficiency](<../models/reasoning/Monarch Mixer A new model architecture for increased efficiency.md>) · `reasoning` · together
   Introduces Monarch Mixer as an efficient model architecture.
-- **2023-07-17** — [FlashAttention-2 for faster training and inference](<../inference/optimization/FlashAttention-2 for faster training and inference.md>) · `optimization` · together
+- **2023-07-17** — [FlashAttention-2 for faster training and inference](<../inference/kernels/FlashAttention-2 for faster training and inference.md>) · `kernels` · together
   Introduces FlashAttention-2 and its impact on training and inference speed.
 - **2023-01-23** — [FlashConv: speeding up state space models](<../models/reasoning/FlashConv speeding up state space models.md>) · `reasoning` · together
   Explains FlashConv and efficient state-space model execution.

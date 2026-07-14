@@ -2,8 +2,7 @@
 title: Best practices to accelerate inference for large-scale production workloads
 topic: inference
 subtopic: optimization
-secondary_topics:
-- inference/serving
+secondary_topics: []
 summary: Best practices for accelerating inference in large-scale production workloads.
 source: together
 url: https://www.together.ai/blog/accelerate-inference-large-scale-workloads

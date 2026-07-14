@@ -2,8 +2,7 @@
 title: Introducing Dynamic Subagents in Deep Agents
 topic: agents
 subtopic: multi-agent
-secondary_topics:
-- agents/planning
+secondary_topics: []
 summary: Introduces dynamic subagents in Deep Agents, covering delegation, specialized
   worker agents, and runtime coordination.
 source: langchain

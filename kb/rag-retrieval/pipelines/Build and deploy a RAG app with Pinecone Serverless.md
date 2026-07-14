@@ -2,8 +2,7 @@
 title: Build and deploy a RAG app with Pinecone Serverless
 topic: rag-retrieval
 subtopic: pipelines
-secondary_topics:
-- rag-retrieval/search
+secondary_topics: []
 summary: Walkthrough for building and deploying a RAG application with Pinecone Serverless
   and LangChain components.
 source: langchain

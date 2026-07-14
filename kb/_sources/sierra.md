@@ -10,7 +10,7 @@
   Case study of AI-native product localization, covering workflows for translating and adapting product surfaces with model assistance.
 - **2026-05-18** — [Voice AI is only as good as what it hears](<../models/multimodal/Voice AI is only as good as what it hears.md>) · `multimodal` · sierra
   Explains why voice-agent quality depends on transcription accuracy and how hearing failures propagate into agent behavior.
-- **2026-05-13** — [Tau-Knowledge: benchmarking agents on realistic knowledge](<../evals-observability/evaluation/Tau-Knowledge benchmarking agents on realistic knowledge.md>) · `evaluation` · sierra
+- **2026-05-13** — [Tau-Knowledge: benchmarking agents on realistic knowledge](<../evals-observability/benchmark-design/Tau-Knowledge benchmarking agents on realistic knowledge.md>) · `benchmark-design` · sierra
   Introduces tau-knowledge for benchmarking agents on realistic knowledge tasks that require grounded retrieval and use of external information.
 - **2026-05-12** — [Sierra Agent OS 2.0: from answers to memory and action](<../agents/memory-context/Sierra Agent OS 2.0 from answers to memory and action.md>) · `memory-context` · sierra
   Describes Agent OS 2.0 moving agents from answers to memory and action, covering persistent context, tool use, and stateful behavior.
@@ -48,17 +48,17 @@
   Covers golden-article evaluation for search quality and how retrieval systems can be measured and improved for support agents.
 - **2026-05-12** — [Meet Linnaeus and Darwin: Search models that drive higher resolution rates](<../rag-retrieval/search/Meet Linnaeus and Darwin Search models that drive higher resolution rates.md>) · `search` · sierra
   Introduces Sierra search models for improving support-agent resolution rates through better knowledge retrieval and answer grounding.
-- **2026-05-12** — [Tau-Bench: Benchmarking AI agents for the real-world](<../evals-observability/evaluation/Tau-Bench Benchmarking AI agents for the real-world.md>) · `evaluation` · sierra
+- **2026-05-12** — [Tau-Bench: Benchmarking AI agents for the real-world](<../evals-observability/benchmark-design/Tau-Bench Benchmarking AI agents for the real-world.md>) · `benchmark-design` · sierra
   Introduces tau-Bench as a benchmark for real-world AI agents, focusing on task completion, tool use, and operational realism.
-- **2026-05-12** — [Tau-Bench leaderboard: compare, explore, and understand agent performance](<../evals-observability/evaluation/Tau-Bench leaderboard compare, explore, and understand agent performance.md>) · `evaluation` · sierra
+- **2026-05-12** — [Tau-Bench leaderboard: compare, explore, and understand agent performance](<../evals-observability/benchmark-design/Tau-Bench leaderboard compare, explore, and understand agent performance.md>) · `benchmark-design` · sierra
   Introduces a tau-Bench leaderboard for comparing and analyzing agent performance across benchmark tasks.
-- **2026-05-12** — [Tau-Bench shaping development and evaluation agents](<../evals-observability/evaluation/Tau-Bench shaping development and evaluation agents.md>) · `evaluation` · sierra
+- **2026-05-12** — [Tau-Bench shaping development and evaluation agents](<../evals-observability/benchmark-design/Tau-Bench shaping development and evaluation agents.md>) · `benchmark-design` · sierra
   Explains how tau-bench shapes agent development and evaluation by providing realistic tasks and measurable behavior.
-- **2026-05-12** — [Tau-Voice: benchmarking real-time voice agents](<../evals-observability/evaluation/Tau-Voice benchmarking real-time voice agents.md>) · `evaluation` · sierra
+- **2026-05-12** — [Tau-Voice: benchmarking real-time voice agents](<../evals-observability/benchmark-design/Tau-Voice benchmarking real-time voice agents.md>) · `benchmark-design` · sierra
   Introduces tau-voice for benchmarking real-time voice agents on realistic tasks, including speech interaction and task-completion quality.
-- **2026-05-12** — [Tau2-Bench](<../evals-observability/evaluation/Tau2-Bench.md>) · `evaluation` · sierra
+- **2026-05-12** — [Tau2-Bench](<../evals-observability/benchmark-design/Tau2-Bench.md>) · `benchmark-design` · sierra
   Introduces tau2-bench for evaluating agents in collaborative real-world scenarios where task success depends on interaction dynamics.
-- **2026-05-12** — [Tau3-Bench: Advancing agent evaluation to knowledge and voice](<../evals-observability/evaluation/Tau3-Bench Advancing agent evaluation to knowledge and voice.md>) · `evaluation` · sierra
+- **2026-05-12** — [Tau3-Bench: Advancing agent evaluation to knowledge and voice](<../evals-observability/benchmark-design/Tau3-Bench Advancing agent evaluation to knowledge and voice.md>) · `benchmark-design` · sierra
   Introduces tau3-Bench for extending agent evaluation to knowledge and voice tasks, expanding beyond text-only transactional benchmarks.
 - **2026-05-12** — [Insights 2.0: AI that improves your AI](<../evals-observability/monitoring/Insights 2.0 AI that improves your AI.md>) · `monitoring` · sierra
   Describes using AI-generated insights from production conversations to improve deployed agents and surface recurring issues.

@@ -2,8 +2,7 @@
 title: Why AI Agent Evaluations Fail — and How the Swiss-Cheese Model Prevails
 topic: evals-observability
 subtopic: evaluation
-secondary_topics:
-- evals-observability/testing
+secondary_topics: []
 summary: Explains common AI agent evaluation failure modes and uses a layered Swiss-cheese
   model for more robust coverage.
 source: cresta

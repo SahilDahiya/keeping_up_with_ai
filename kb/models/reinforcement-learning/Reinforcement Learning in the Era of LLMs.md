@@ -2,8 +2,7 @@
 title: Reinforcement Learning in the Era of LLMs
 topic: models
 subtopic: reinforcement-learning
-secondary_topics:
-- models/reasoning
+secondary_topics: []
 summary: Explains reinforcement learning concepts in the LLM era and how RL fits into
   model improvement workflows.
 source: arize

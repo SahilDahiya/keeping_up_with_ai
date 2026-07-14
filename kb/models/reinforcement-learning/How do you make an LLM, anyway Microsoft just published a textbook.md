@@ -3,7 +3,6 @@ title: How do you make an LLM, anyway? Microsoft just published a textbook.
 topic: models
 subtopic: reinforcement-learning
 secondary_topics:
-- models/reasoning
 - evals-observability/evaluation
 summary: 'Breaks down Microsoft''s 109-page MAI-Thinking-1 technical report: 30-trillion-token
   pretraining on 8,192 GPUs with a 54.6%-code data mix, mid-training context extension

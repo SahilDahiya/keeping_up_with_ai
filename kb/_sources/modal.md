@@ -4,15 +4,15 @@
 
 - **2026-07-06** — [How to price serverless GPUs](<../infra-platform/cost/How to price serverless GPUs.md>) · `cost` · modal
   Explains serverless GPU pricing from utilization, scheduling, and workload-shape constraints rather than simple hourly rates.
-- **2026-06-30** — [Multi-token Residual Prediction](<../inference/optimization/Multi-token Residual Prediction.md>) · `optimization` · modal
+- **2026-06-30** — [Multi-token Residual Prediction](<../inference/speculative-decoding/Multi-token Residual Prediction.md>) · `speculative-decoding` · modal
   Explains multi-token residual prediction as an inference acceleration technique for generating multiple tokens per step.
 - **2026-06-25** — [Proxying inference requests in 6ms with Pingora, Envoy, and Spanner](<../inference/serving/Proxying inference requests in 6ms with Pingora, Envoy, and Spanner.md>) · `serving` · modal
   Explains low-latency inference proxying with Pingora, Envoy, and Spanner, including request-routing architecture.
-- **2026-06-22** — [Achieve state-of-the-art inference latencies with speculative decoding](<../inference/optimization/Achieve state-of-the-art inference latencies with speculative decoding.md>) · `optimization` · modal
-  Explains speculative decoding for lower inference latency, including draft-model tradeoffs and production serving considerations.
 - **2026-06-22** — [Introducing Modal Auto Endpoints: Optimized inference you actually own](<../inference/serving/Introducing Modal Auto Endpoints Optimized inference you actually own.md>) · `serving` · modal
   Describes auto endpoints for owned inference deployments, including optimized serving configuration and operational control.
-- **2026-06-19** — [Speculation Is All You Need](<../inference/optimization/Speculation Is All You Need.md>) · `optimization` · modal
+- **2026-06-22** — [Achieve state-of-the-art inference latencies with speculative decoding](<../inference/speculative-decoding/Achieve state-of-the-art inference latencies with speculative decoding.md>) · `speculative-decoding` · modal
+  Explains speculative decoding for lower inference latency, including draft-model tradeoffs and production serving considerations.
+- **2026-06-19** — [Speculation Is All You Need](<../inference/speculative-decoding/Speculation Is All You Need.md>) · `speculative-decoding` · modal
   Deep dive into speculative decoding and related techniques for improving LLM inference latency and throughput.
 - **2026-06-19** — [Unpacking sandbox startup latency: why started is not ready](<../infra-platform/deployment/Unpacking sandbox startup latency why started is not ready.md>) · `deployment` · modal
   Breaks down sandbox startup latency and why ready-state semantics matter for agent and remote-execution workflows.
@@ -28,7 +28,7 @@
   Describes a small configuration change that improves multimodal inference performance, with attention to batching and serving settings.
 - **2026-04-20** — [Building an RL theorem-proving workflow on Modal](<../models/reasoning/Building an RL theorem-proving workflow on Modal.md>) · `reasoning` · modal
   Walks through an RL theorem-proving workflow, connecting reasoning tasks, training loops, and scalable remote execution.
-- **2026-04-17** — [Making FlashAttention-4 faster for inference](<../inference/optimization/Making FlashAttention-4 faster for inference.md>) · `optimization` · modal
+- **2026-04-17** — [Making FlashAttention-4 faster for inference](<../inference/kernels/Making FlashAttention-4 faster for inference.md>) · `kernels` · modal
   Deep dive on making FlashAttention-4 faster for inference, including kernel-level and serving-performance considerations.
 - **2026-04-14** — [Autoscaling Autoresearch: Give your agents elastic GPUs on Modal](<../agents/tool-use/Autoscaling Autoresearch Give your agents elastic GPUs on Modal.md>) · `tool-use` · modal
   Shows how autoresearch agents can use elastic GPU compute for parallel experiments, background jobs, and scalable tool execution.
@@ -48,7 +48,7 @@
   Analyzes host overhead as an inference bottleneck and shows why CPU-side orchestration can dominate model-serving efficiency.
 - **2025-11-04** — [One-second voice-to-voice latency with Modal, Pipecat, and open models](<../inference/optimization/One-second voice-to-voice latency with Modal, Pipecat, and open models.md>) · `optimization` · modal
   Builds a low-latency voice-to-voice system with open models, covering speech pipeline latency and serving architecture.
-- **2025-09-26** — [We reverse-engineered Flash Attention 4](<../inference/optimization/We reverse-engineered Flash Attention 4.md>) · `optimization` · modal
+- **2025-09-26** — [We reverse-engineered Flash Attention 4](<../inference/kernels/We reverse-engineered Flash Attention 4.md>) · `kernels` · modal
   Reverse-engineering writeup for FlashAttention-4, explaining how kernel design choices affect attention performance.
 - **2025-09-22** — [Build an AI coding platform that scales to millions of monthly sessions](<../agents/computer-use/Build an AI coding platform that scales to millions of monthly sessions.md>) · `computer-use` · modal
   Describes architecture concerns for AI coding platforms that need to scale sandboxed coding sessions to large user volumes.

@@ -2,8 +2,7 @@
 title: 'FireAttention: serving open models faster with quantization'
 topic: inference
 subtopic: quantization
-secondary_topics:
-- inference/optimization
+secondary_topics: []
 summary: Introduces FireAttention for serving open models faster through quantization
   with minimal quality tradeoff.
 source: fireworks

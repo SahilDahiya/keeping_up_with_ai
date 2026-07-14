@@ -2,8 +2,7 @@
 title: Playground v2 vs Stable Diffusion XL 1.0 for text-to-image generation
 topic: models
 subtopic: benchmarks
-secondary_topics:
-- models/multimodal
+secondary_topics: []
 summary: Compares Playground v2 and Stable Diffusion XL for text-to-image generation
   quality and serving use cases.
 source: baseten

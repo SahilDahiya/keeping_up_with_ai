@@ -2,8 +2,7 @@
 title: Breaking Down Meta's Llama 3 Herd of Models
 topic: models
 subtopic: releases
-secondary_topics:
-- models/benchmarks
+secondary_topics: []
 summary: Technical overview of Meta's Llama 3 model family, including architecture,
   capabilities, and benchmark interpretation.
 source: arize

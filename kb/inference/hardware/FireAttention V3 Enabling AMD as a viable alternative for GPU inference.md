@@ -2,8 +2,7 @@
 title: 'FireAttention V3: Enabling AMD as a viable alternative for GPU inference'
 topic: inference
 subtopic: hardware
-secondary_topics:
-- inference/optimization
+secondary_topics: []
 summary: Describes FireAttention V3 and optimizations that make AMD GPUs more viable
   for inference workloads.
 source: fireworks

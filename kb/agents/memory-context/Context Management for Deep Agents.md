@@ -2,8 +2,7 @@
 title: Context Management for Deep Agents
 topic: agents
 subtopic: memory-context
-secondary_topics:
-- agents/planning
+secondary_topics: []
 summary: Explains context management for Deep Agents, including what information to
   retain, retrieve, summarize, or isolate during long-running tasks.
 source: langchain

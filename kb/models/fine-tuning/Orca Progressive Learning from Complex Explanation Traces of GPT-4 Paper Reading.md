@@ -3,8 +3,7 @@ title: 'Orca: Progressive Learning from Complex Explanation Traces of GPT-4 Pape
   Reading'
 topic: models
 subtopic: fine-tuning
-secondary_topics:
-- models/reasoning
+secondary_topics: []
 summary: Summarizes Orca and progressive learning from GPT-4 explanation traces as
   a post-training strategy.
 source: arize

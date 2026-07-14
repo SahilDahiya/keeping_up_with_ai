@@ -2,8 +2,7 @@
 title: Best Practices for Building an Agent Router
 topic: agents
 subtopic: planning
-secondary_topics:
-- agents/tool-use
+secondary_topics: []
 summary: Explains agent-router design as a decision layer that routes user requests
   to the right tools, services, or actions in larger agent systems.
 source: arize

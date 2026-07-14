@@ -2,8 +2,7 @@
 title: I ran an eval. Now what?
 topic: evals-observability
 subtopic: evaluation
-secondary_topics:
-- evals-observability/testing
+secondary_topics: []
 summary: 'Walks through what to do after an eval run: inspect failures, slice results,
   improve datasets and scorers, and turn findings into product or prompt changes.'
 source: braintrust

@@ -2,8 +2,7 @@
 title: Anthropic Claude 3
 topic: models
 subtopic: releases
-secondary_topics:
-- models/benchmarks
+secondary_topics: []
 summary: Overview of Anthropic Claude 3 model releases and capabilities, including
   model comparisons and implications for LLM application builders.
 source: arize

@@ -3,8 +3,7 @@ title: 'FireOptimizer: Customizing latency and quality for your production infer
   workload'
 topic: inference
 subtopic: serving
-secondary_topics:
-- inference/optimization
+secondary_topics: []
 summary: Explains FireOptimizer for tuning production inference workloads across latency,
   quality, and cost objectives.
 source: fireworks

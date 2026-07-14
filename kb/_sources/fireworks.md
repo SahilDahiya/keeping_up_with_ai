@@ -2,7 +2,7 @@
 
 67 articles.
 
-- **2026-07-10** — [Optimizing MiniMax M3 Sparse Attention on NVIDIA Blackwell](<../inference/optimization/Optimizing MiniMax M3 Sparse Attention on NVIDIA Blackwell.md>) · `optimization` · fireworks
+- **2026-07-10** — [Optimizing MiniMax M3 Sparse Attention on NVIDIA Blackwell](<../inference/kernels/Optimizing MiniMax M3 Sparse Attention on NVIDIA Blackwell.md>) · `kernels` · fireworks
   Deep dive into sparse-attention kernel optimization for MiniMax M3 on NVIDIA Blackwell hardware.
 - **2026-07-07** — [How I shipped a month of engineering work in four days with GLM 5.2 Fast](<../product-engineering/case-studies/How I shipped a month of engineering work in four days with GLM 5.2 Fast.md>) · `case-studies` · fireworks
   A senior engineer used GLM 5.2 Fast (via Fireworks' FireConnect with Claude Code) to design, spec, and implement a GPU-scheduler 'reclaim' feature in four days for $218 in inference cost — 4 PRs, ~3,000 LOC, 34 passing tests — crediting the model's ~400 tok/s speed for sustaining a real-time design/test/implement loop instead of async, tab-switching workflows.
@@ -12,7 +12,7 @@
   Describes training infrastructure as a service for frontier-lab workloads, including scale, orchestration, and reliability needs.
 - **2026-06-03** — [How Harvey & Fireworks Beat Closed Source on Cost + Quality](<../agents/multi-agent/How Harvey & Fireworks Beat Closed Source on Cost + Quality.md>) · `multi-agent` · fireworks
   Case study of using open-source agents with frontier advisors to improve cost and quality versus closed-source baselines.
-- **2026-05-20** — [The Agent Execution Tax](<../evals-observability/evaluation/The Agent Execution Tax.md>) · `evaluation` · fireworks
+- **2026-05-20** — [The Agent Execution Tax](<../evals-observability/benchmark-design/The Agent Execution Tax.md>) · `benchmark-design` · fireworks
   Analyzes browser-agent runs to show how reliability, latency, and cost compound into task-level execution tax.
 - **2026-04-27** — [DeepSeek V4 Pro: Validating Frontier Models for Production](<../evals-observability/evaluation/DeepSeek V4 Pro Validating Frontier Models for Production.md>) · `evaluation` · fireworks
   Shows how to validate a frontier model for production using benchmark and workload-specific evaluation signals.
@@ -22,7 +22,7 @@
   Explains why fine-tuning bottlenecks often come from data, evaluation, orchestration, and serving rather than algorithms alone.
 - **2026-03-23** — [Frontier RL Is Cheaper Than You Think](<../models/reinforcement-learning/Frontier RL Is Cheaper Than You Think.md>) · `reinforcement-learning` · fireworks
   Argues that frontier reinforcement learning can be cost-effective with the right infrastructure and training-loop design.
-- **2026-03-10** — [Training-Inference Parity in MoE Models: Where Numerics Drift](<../inference/optimization/Training-Inference Parity in MoE Models Where Numerics Drift.md>) · `optimization` · fireworks
+- **2026-03-10** — [Training-Inference Parity in MoE Models: Where Numerics Drift](<../inference/kernels/Training-Inference Parity in MoE Models Where Numerics Drift.md>) · `kernels` · fireworks
   Explains training-inference parity issues in MoE models and how numeric drift can affect production behavior.
 - **2026-03-06** — [Inference providers vs. API routers](<../inference/serving/Inference providers vs. API routers.md>) · `serving` · fireworks
   Explains the operational difference between inference providers and API routers, including routing, control, and token provenance.
@@ -46,7 +46,7 @@
   Surveys the state of agent environments, emphasizing execution scale, sandboxing, and environment design.
 - **2025-11-10** — [Fireworks RFT: Build AI agents with fine-tuned open models that outperform frontier closed models](<../models/reinforcement-learning/Fireworks RFT Build AI agents with fine-tuned open models that outperform frontier closed models.md>) · `reinforcement-learning` · fireworks
   Explains reinforcement fine-tuning for building agent models that can outperform closed frontier models on target tasks.
-- **2025-11-03** — [Vercel code fixing with open models, speculative decoding, and RFT](<../product-engineering/case-studies/Vercel code fixing with open models speculative decoding and RFT.md>) · `case-studies` · fireworks
+- **2025-11-03** — [Vercel code fixing with open models, speculative decoding, and RFT](<../product-engineering/case-studies/Vercel code fixing with open models, speculative decoding, and RFT.md>) · `case-studies` · fireworks
   Case study of improving Vercel code-fixing outputs with open models, speculative decoding, and reinforcement fine-tuning.
 - **2025-10-31** — [Genspark deep research agent with Fireworks RFT](<../models/reinforcement-learning/Genspark deep research agent with Fireworks RFT.md>) · `reinforcement-learning` · fireworks
   Case study of reinforcement fine-tuning a deep research agent to improve quality, tool calls, and cost.
@@ -58,7 +58,7 @@
   Explains embeddings, reranking, and retrieval architecture patterns for production RAG systems.
 - **2025-08-25** — [LLM Eval Driven Development with Claude Code](<../evals-observability/evaluation/LLM Eval Driven Development with Claude Code.md>) · `evaluation` · fireworks
   Explains eval-driven development with Claude Code, using tests and feedback loops to improve coding-agent behavior.
-- **2025-08-15** — [Your AI Benchmark is Lying to You. Here's How We Caught It](<../evals-observability/evaluation/Your AI Benchmark is Lying to You. Here's How We Caught It.md>) · `evaluation` · fireworks
+- **2025-08-15** — [Your AI Benchmark is Lying to You. Here's How We Caught It](<../evals-observability/benchmark-design/Your AI Benchmark is Lying to You. Here's How We Caught It.md>) · `benchmark-design` · fireworks
   Explains how benchmark methodology can mislead model selection and how to evaluate models against real workload constraints.
 - **2025-08-14** — [Test-driven agent development](<../evals-observability/testing/Test-driven agent development.md>) · `testing` · fireworks
   Shows a TDD-style workflow for building agents with concrete acceptance tests, red teaming, and regression checks.
@@ -72,7 +72,7 @@
   Explains MuonClip as a stability technique for large-scale Kimi-style model training.
 - **2025-07-11** — [Function calling for agentic AI systems](<../agents/tool-use/Function calling for agentic AI systems.md>) · `tool-use` · fireworks
   Explains function calling as the bridge between LLM outputs, external tools, and agentic execution loops.
-- **2025-07-10** — [Using Model-as-a-Judge for Reward in Reinforcement Finetuning](<../evals-observability/evaluation/Using Model-as-a-Judge for Reward in Reinforcement Finetuning.md>) · `evaluation` · fireworks
+- **2025-07-10** — [Using Model-as-a-Judge for Reward in Reinforcement Finetuning](<../evals-observability/llm-as-judge/Using Model-as-a-Judge for Reward in Reinforcement Finetuning.md>) · `llm-as-judge` · fireworks
   Explains using model-as-judge rewards for reinforcement fine-tuning and the evaluation risks involved.
 - **2025-06-14** — [3D FireOptimizer: Automating the Multi-Dimensional Tradeoffs in LLM Serving](<../inference/serving/3D FireOptimizer Automating the Multi-Dimensional Tradeoffs in LLM Serving.md>) · `serving` · fireworks
   Explains multi-dimensional optimization for LLM serving, balancing latency, cost, throughput, and quality tradeoffs.
@@ -116,9 +116,9 @@
   End-to-end RAG application example using Astro, FastAPI, SurrealDB, and Llama 3.1.
 - **2024-08-01** — [How Fireworks evaluates quantization precisely and interpretably](<../inference/quantization/How Fireworks evaluates quantization precisely and interpretably.md>) · `quantization` · fireworks
   Details precise and interpretable quantization evaluation for understanding quality and performance tradeoffs.
-- **2024-06-23** — [How Cursor built Fast Apply using the Speculative Decoding API](<../inference/optimization/How Cursor built Fast Apply using the Speculative Decoding API.md>) · `optimization` · fireworks
+- **2024-06-23** — [How Cursor built Fast Apply using the Speculative Decoding API](<../inference/speculative-decoding/How Cursor built Fast Apply using the Speculative Decoding API.md>) · `speculative-decoding` · fireworks
   Case study of Cursor Fast Apply using speculative decoding to reduce coding-assistant latency.
-- **2024-06-20** — [FireAttention V2: 12x faster to make Long Contexts practical for Online Inference](<../inference/optimization/FireAttention V2 12x faster to make Long Contexts practical for Online Inference.md>) · `optimization` · fireworks
+- **2024-06-20** — [FireAttention V2: 12x faster to make Long Contexts practical for Online Inference](<../inference/kernels/FireAttention V2 12x faster to make Long Contexts practical for Online Inference.md>) · `kernels` · fireworks
   Explains FireAttention V2 and the serving optimizations that make long-context inference more practical.
 - **2024-06-03** — [GPUs on-demand: Not serverless, not reserved, but some third thing](<../infra-platform/gpu-clusters/GPUs on-demand Not serverless, not reserved, but some third thing.md>) · `gpu-clusters` · fireworks
   Explains on-demand GPU infrastructure as a middle ground between serverless and reserved capacity.
@@ -132,7 +132,7 @@
   Introduces FireAttention for serving open models faster through quantization with minimal quality tradeoff.
 - **2023-11-03** — [LLM Inference Performance Benchmarking (Part 1)](<../inference/serving/LLM Inference Performance Benchmarking (Part 1).md>) · `serving` · fireworks
   Introduces LLM inference performance benchmarking and the metrics needed to compare serving systems.
-- **2023-08-29** — [Speed, Python: Pick Two. How CUDA Graphs Enable Fast Python Code for Deep Learning](<../inference/optimization/Speed, Python Pick Two. How CUDA Graphs Enable Fast Python Code for Deep Learning.md>) · `optimization` · fireworks
+- **2023-08-29** — [Speed, Python: Pick Two. How CUDA Graphs Enable Fast Python Code for Deep Learning](<../inference/kernels/Speed, Python Pick Two. How CUDA Graphs Enable Fast Python Code for Deep Learning.md>) · `kernels` · fireworks
   Explains how CUDA Graphs reduce Python overhead for fast deep-learning execution.
 - **2023-07-12** — [Multi-Query Attention is All You Need](<../models/reasoning/Multi-Query Attention is All You Need.md>) · `reasoning` · fireworks
   Explains multi-query attention and why attention variants matter for efficient LLM inference.

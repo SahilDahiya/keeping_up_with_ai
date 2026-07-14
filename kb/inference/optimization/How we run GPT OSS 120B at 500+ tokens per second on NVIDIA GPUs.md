@@ -2,8 +2,7 @@
 title: How we run GPT OSS 120B at 500+ tokens per second on NVIDIA GPUs
 topic: inference
 subtopic: optimization
-secondary_topics:
-- inference/hardware
+secondary_topics: []
 summary: Explains how to run GPT-OSS 120B at high token throughput on NVIDIA GPUs.
 source: baseten
 url: https://www.baseten.co/blog/sota-performance-for-gpt-oss-120b-on-nvidia-gpus/

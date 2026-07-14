@@ -2,8 +2,7 @@
 title: How we built the fastest GLM 5 API
 topic: inference
 subtopic: optimization
-secondary_topics:
-- inference/serving
+secondary_topics: []
 summary: Explains serving optimizations used to build a fast GLM 5 API.
 source: baseten
 url: https://www.baseten.co/blog/how-we-built-the-fastest-glm-5-api/

@@ -2,8 +2,7 @@
 title: Agentic AI Systems
 topic: agents
 subtopic: planning
-secondary_topics:
-- agents/tool-use
+secondary_topics: []
 summary: Overview of agentic AI systems, covering planning, tool use, control loops,
   and production architecture concerns.
 source: fireworks

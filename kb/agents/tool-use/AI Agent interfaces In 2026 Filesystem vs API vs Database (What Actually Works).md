@@ -3,8 +3,7 @@ title: 'AI Agent interfaces In 2026: Filesystem vs API vs Database (What Actuall
   Works)'
 topic: agents
 subtopic: tool-use
-secondary_topics:
-- agents/memory-context
+secondary_topics: []
 summary: Compares filesystem, API, and database interfaces for agents, using memory
   benchmarks and practical interface tradeoffs to evaluate what works in production.
 source: arize

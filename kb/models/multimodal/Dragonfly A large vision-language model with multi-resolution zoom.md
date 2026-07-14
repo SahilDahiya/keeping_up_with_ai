@@ -2,8 +2,7 @@
 title: 'Dragonfly: A large vision-language model with multi-resolution zoom'
 topic: models
 subtopic: multimodal
-secondary_topics:
-- models/reasoning
+secondary_topics: []
 summary: Introduces Dragonfly, a vision-language model with multi-resolution zoom.
 source: together
 url: https://www.together.ai/blog/dragonfly-v1

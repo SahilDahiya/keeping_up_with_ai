@@ -2,8 +2,7 @@
 title: Create an infinite icon library by fine-tuning Stable Diffusion
 topic: models
 subtopic: fine-tuning
-secondary_topics:
-- models/multimodal
+secondary_topics: []
 summary: Practical example of fine-tuning Stable Diffusion for a custom image-generation
   domain using Modal infrastructure.
 source: modal

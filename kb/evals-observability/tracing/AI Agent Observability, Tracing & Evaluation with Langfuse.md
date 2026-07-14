@@ -4,7 +4,6 @@ topic: evals-observability
 subtopic: tracing
 secondary_topics:
 - agents/planning
-- evals-observability/evaluation
 summary: Guide to observability for AI agents, covering traces, spans, tool calls,
   evaluations, and debugging workflows for agentic systems.
 source: langfuse

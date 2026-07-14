@@ -2,8 +2,7 @@
 title: How to build your first offline eval
 topic: evals-observability
 subtopic: testing
-secondary_topics:
-- evals-observability/evaluation
+secondary_topics: []
 summary: Step-by-step guide to building a first offline eval, including dataset setup,
   task definition, scorers, experiment runs, and failure review.
 source: braintrust

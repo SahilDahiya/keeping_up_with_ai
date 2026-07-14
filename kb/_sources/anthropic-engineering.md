@@ -12,19 +12,19 @@
   Architecture of Claude Managed Agents: decoupling the agent loop (the brain) from sandboxed tool execution (the hands) to scale hosted long-running sessions.
 - **2026-03-25** — [How we built Claude Code auto mode: a safer way to skip permissions](<../product-engineering/security/How we built Claude Code auto mode a safer way to skip permissions.md>) · `security` · anthropic-engineering
   Design of Claude Code auto mode: sandboxing plus permission heuristics that let the agent act without per-action approval while bounding blast radius.
-- **2026-03-24** — [Harness design for long-running application development](<../agents/planning/Harness design for long-running application development.md>) · `planning` · anthropic-engineering
+- **2026-03-24** — [Harness design for long-running application development](<../agents/harness/Harness design for long-running application development.md>) · `harness` · anthropic-engineering
   Deep dive on harness design for multi-day application builds: state management, verification loops, task queues, and recovery when the agent goes off track.
-- **2026-03-06** — [Eval awareness in Claude Opus 4.6’s BrowseComp performance](<../evals-observability/evaluation/Eval awareness in Claude Opus 4.6’s BrowseComp performance.md>) · `evaluation` · anthropic-engineering
+- **2026-03-06** — [Eval awareness in Claude Opus 4.6’s BrowseComp performance](<../evals-observability/benchmark-design/Eval awareness in Claude Opus 4.6’s BrowseComp performance.md>) · `benchmark-design` · anthropic-engineering
   Investigates how Claude Opus 4.6 recognizing it was being evaluated affected BrowseComp scores, and what eval-awareness implies for benchmark validity.
 - **2026-02-05** — [Building a C compiler with a team of parallel Claudes](<../agents/multi-agent/Building a C compiler with a team of parallel Claudes.md>) · `multi-agent` · anthropic-engineering
   Case study orchestrating a team of parallel Claude instances to build a working C compiler, covering task decomposition, shared state, and verification loops.
-- **2026-02-05** — [Quantifying infrastructure noise in agentic coding evals](<../evals-observability/evaluation/Quantifying infrastructure noise in agentic coding evals.md>) · `evaluation` · anthropic-engineering
+- **2026-02-05** — [Quantifying infrastructure noise in agentic coding evals](<../evals-observability/benchmark-design/Quantifying infrastructure noise in agentic coding evals.md>) · `benchmark-design` · anthropic-engineering
   Quantifies how infrastructure flakiness (timeouts, container variance) injects noise into agentic coding evals, and methods to measure and control for it.
 - **2026-01-21** — [Designing AI resistant technical evaluations](<../evals-observability/testing/Designing AI resistant technical evaluations.md>) · `testing` · anthropic-engineering
   How Anthropic designs technical hiring evaluations that stay meaningful when candidates have AI assistance, favoring debugging and judgment over greenfield coding.
 - **2026-01-09** — [Demystifying evals for AI agents](<../evals-observability/evaluation/Demystifying evals for AI agents.md>) · `evaluation` · anthropic-engineering
   A practical framework for building agent evals: grader design, task suites, pass@k metrics, and evolving evals as agent capabilities improve.
-- **2025-11-26** — [Effective harnesses for long-running agents](<../agents/planning/Effective harnesses for long-running agents.md>) · `planning` · anthropic-engineering
+- **2025-11-26** — [Effective harnesses for long-running agents](<../agents/harness/Effective harnesses for long-running agents.md>) · `harness` · anthropic-engineering
   Harness patterns for agents that work over hours or days: initializer/coder agent split, checkpointing progress to files, and recovering from failure mid-run.
 - **2025-11-24** — [Introducing advanced tool use on the Claude Developer Platform](<../agents/tool-use/Introducing advanced tool use on the Claude Developer Platform.md>) · `tool-use` · anthropic-engineering
   Introduces tool search, programmatic tool calling, and tool-use examples on the Claude Developer Platform to scale agents past context-window limits on large tool sets.

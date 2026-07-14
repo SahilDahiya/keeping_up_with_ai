@@ -2,8 +2,7 @@
 title: 'PostgresFS vs. SQL skills: should AI agents fake a filesystem?'
 topic: agents
 subtopic: tool-use
-secondary_topics:
-- agents/memory-context
+secondary_topics: []
 summary: Compares filesystem-like and SQL-backed skill interfaces for AI agents, focusing
   on state access and tool ergonomics.
 source: arize

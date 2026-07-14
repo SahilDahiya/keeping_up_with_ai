@@ -2,8 +2,7 @@
 title: Hybrid search over California embeddings with Modal, MongoDB, and Clay
 topic: rag-retrieval
 subtopic: search
-secondary_topics:
-- rag-retrieval/embeddings
+secondary_topics: []
 summary: Example of hybrid search over embeddings, combining vector retrieval with
   MongoDB and a geospatial dataset.
 source: modal

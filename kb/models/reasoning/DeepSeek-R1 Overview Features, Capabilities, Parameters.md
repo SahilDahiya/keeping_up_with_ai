@@ -2,8 +2,7 @@
 title: 'DeepSeek-R1 Overview: Features, Capabilities, Parameters'
 topic: models
 subtopic: reasoning
-secondary_topics:
-- models/benchmarks
+secondary_topics: []
 summary: Deep dive into DeepSeek-R1 capabilities, parameters, and reasoning behavior
   for production model selection.
 source: fireworks

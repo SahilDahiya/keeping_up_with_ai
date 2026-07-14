@@ -2,8 +2,7 @@
 title: 2x faster inference with KV cache-aware routing
 topic: inference
 subtopic: optimization
-secondary_topics:
-- inference/serving
+secondary_topics: []
 summary: Describes 2x faster inference through KV-cache-aware routing with NVIDIA
   Dynamo.
 source: baseten

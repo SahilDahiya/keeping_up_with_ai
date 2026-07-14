@@ -2,8 +2,7 @@
 title: How and when to build multi-agent systems
 topic: agents
 subtopic: multi-agent
-secondary_topics:
-- agents/planning
+secondary_topics: []
 summary: Guidance on when multi-agent systems are warranted and how to design agent
   roles, coordination, and boundaries.
 source: langchain

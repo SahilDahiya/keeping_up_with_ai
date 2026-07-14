@@ -2,8 +2,7 @@
 title: 'Interpreter Skills: Building Workflows for Agents'
 topic: agents
 subtopic: tool-use
-secondary_topics:
-- agents/computer-use
+secondary_topics: []
 summary: Introduces interpreter skills as reusable workflows for agents that need
   to execute code, inspect outputs, and compose tools.
 source: langchain

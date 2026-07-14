@@ -130,19 +130,45 @@ def file_article(inbox_path: Path, taxonomy: dict[str, list[str]]) -> Path:
         sec_topic, _, sec_sub = str(sec).partition("/")
         if sec_topic not in taxonomy or (sec_sub and sec_sub not in taxonomy[sec_topic]):
             raise FilingError(f"{inbox_path.name}: bad secondary topic {sec!r}")
+        # A secondary in the article's OWN topic double-lists it in that topic index
+        # (once natively, once under "Also relevant"). Never useful.
+        if sec_topic == topic:
+            raise FilingError(
+                f"{inbox_path.name}: secondary {sec!r} is in the primary topic {topic!r}"
+            )
 
     if not fm.get("summary"):
         raise FilingError(f"{inbox_path.name}: summary is required")
 
     dest_dir.mkdir(parents=True, exist_ok=True)
-    stem = filename_stem(fm)
-    dest = dest_dir / f"{stem}.md"
-    if dest.exists() and parse_frontmatter(dest.read_text())[0].get("url") != fm.get("url"):
-        dest = dest_dir / f"{stem} ({fm['source']}).md"
-    if dest.exists() and parse_frontmatter(dest.read_text())[0].get("url") != fm.get("url"):
-        year = str(fm.get("published") or "undated")[:4]
-        dest = dest_dir / f"{stem} ({fm['source']}, {year}).md"
-
+    dest = resolve_destination(dest_dir, fm)
     dest.write_text(dump_frontmatter(fm, body))
     inbox_path.unlink()
+    return dest
+
+
+def _occupied_by_other(path: Path, fm: dict) -> bool:
+    """Does `path` already hold a DIFFERENT article? (Same URL = it's this one.)"""
+    if not path.exists():
+        return False
+    try:
+        return parse_frontmatter(path.read_text())[0].get("url") != fm.get("url")
+    except ValueError:
+        return True
+
+
+def resolve_destination(dest_dir: Path, fm: dict) -> Path:
+    """Where this article's file belongs, disambiguating title collisions.
+
+    Two posts can share a title (every vendor writes "Introducing our new model"),
+    so fall back to appending the source, then the year. Shared by `file` and
+    `migrate` — a rename during migration must never clobber a different article.
+    """
+    stem = filename_stem(fm)
+    dest = dest_dir / f"{stem}.md"
+    if _occupied_by_other(dest, fm):
+        dest = dest_dir / f"{stem} ({fm['source']}).md"
+    if _occupied_by_other(dest, fm):
+        year = str(fm.get("published") or "undated")[:4]
+        dest = dest_dir / f"{stem} ({fm['source']}, {year}).md"
     return dest

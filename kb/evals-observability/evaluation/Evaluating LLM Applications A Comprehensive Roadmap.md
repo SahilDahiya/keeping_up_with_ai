@@ -2,8 +2,7 @@
 title: 'Evaluating LLM Applications: A Comprehensive Roadmap'
 topic: evals-observability
 subtopic: evaluation
-secondary_topics:
-- evals-observability/testing
+secondary_topics: []
 summary: Roadmap for evaluating LLM applications, from defining quality criteria and
   datasets to running automated and human-assisted eval workflows.
 source: langfuse

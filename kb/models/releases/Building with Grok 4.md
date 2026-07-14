@@ -2,8 +2,7 @@
 title: Building with Grok 4
 topic: models
 subtopic: releases
-secondary_topics:
-- models/reasoning
+secondary_topics: []
 summary: Notes on building with Grok 4, including model behavior, practical integration
   considerations, and evaluation needs for new model adoption.
 source: braintrust

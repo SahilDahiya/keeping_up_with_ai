@@ -2,8 +2,7 @@
 title: How we built the world’s fastest API for GLM-5.2
 topic: inference
 subtopic: optimization
-secondary_topics:
-- inference/serving
+secondary_topics: []
 summary: Engineering writeup on building a high-speed GLM-5.2 API.
 source: baseten
 url: https://www.baseten.co/blog/how-we-built-the-worlds-fastest-api-for-glm-52/

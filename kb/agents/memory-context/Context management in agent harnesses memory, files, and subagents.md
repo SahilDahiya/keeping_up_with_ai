@@ -2,8 +2,7 @@
 title: 'Context management in agent harnesses: memory, files, and subagents'
 topic: agents
 subtopic: memory-context
-secondary_topics:
-- agents/planning
+secondary_topics: []
 summary: Detailed guide to context management in agent harnesses, including memory,
   files, subagents, and strategies for working within context limits.
 source: arize

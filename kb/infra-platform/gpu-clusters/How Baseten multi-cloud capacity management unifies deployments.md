@@ -2,8 +2,7 @@
 title: How Baseten multi-cloud capacity management unifies deployments
 topic: infra-platform
 subtopic: gpu-clusters
-secondary_topics:
-- infra-platform/deployment
+secondary_topics: []
 summary: Explains multi-cloud capacity management for unifying cloud, self-hosted,
   and hybrid inference deployments.
 source: baseten

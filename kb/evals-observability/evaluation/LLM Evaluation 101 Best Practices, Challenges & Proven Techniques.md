@@ -2,8 +2,7 @@
 title: 'LLM Evaluation 101: Best Practices, Challenges & Proven Techniques'
 topic: evals-observability
 subtopic: evaluation
-secondary_topics:
-- evals-observability/testing
+secondary_topics: []
 summary: Practical overview of LLM evaluation best practices, common challenges, scorer
   choices, datasets, and proven techniques for measuring application quality.
 source: langfuse

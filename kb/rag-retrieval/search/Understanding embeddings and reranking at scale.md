@@ -2,8 +2,7 @@
 title: Understanding embeddings and reranking at scale
 topic: rag-retrieval
 subtopic: search
-secondary_topics:
-- rag-retrieval/embeddings
+secondary_topics: []
 summary: Explains embeddings, reranking, and retrieval architecture patterns for production
   RAG systems.
 source: fireworks

@@ -2,8 +2,7 @@
 title: Inside the Together AI kernels team
 topic: inference
 subtopic: hardware
-secondary_topics:
-- inference/optimization
+secondary_topics: []
 summary: Looks inside a kernel team’s workflow for optimizing AI inference and training
   performance.
 source: together

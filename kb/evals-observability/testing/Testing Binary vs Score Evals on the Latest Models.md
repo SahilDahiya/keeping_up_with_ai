@@ -2,8 +2,7 @@
 title: Testing Binary vs Score Evals on the Latest Models
 topic: evals-observability
 subtopic: testing
-secondary_topics:
-- evals-observability/evaluation
+secondary_topics: []
 summary: Compares binary and score-based LLM evals across models to clarify tradeoffs
   in evaluator design.
 source: arize

@@ -2,8 +2,7 @@
 title: 'FP8: Efficient model inference with 8-bit floating point numbers'
 topic: inference
 subtopic: quantization
-secondary_topics:
-- inference/hardware
+secondary_topics: []
 summary: Explains FP8 numeric formats and why 8-bit floating point can improve efficient
   model inference.
 source: baseten

@@ -2,8 +2,7 @@
 title: A guide to LLM inference and performance
 topic: inference
 subtopic: serving
-secondary_topics:
-- inference/optimization
+secondary_topics: []
 summary: Comprehensive guide to LLM inference, transformer serving, latency, and throughput
   performance.
 source: baseten

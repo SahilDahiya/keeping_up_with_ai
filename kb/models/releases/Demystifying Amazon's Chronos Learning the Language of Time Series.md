@@ -2,8 +2,7 @@
 title: 'Demystifying Amazon''s Chronos: Learning the Language of Time Series'
 topic: models
 subtopic: releases
-secondary_topics:
-- models/benchmarks
+secondary_topics: []
 summary: Deep dive into Amazon Chronos for time-series modeling, including model behavior
   and evaluation context.
 source: arize

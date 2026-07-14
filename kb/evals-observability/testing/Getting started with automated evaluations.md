@@ -2,8 +2,7 @@
 title: Getting started with automated evaluations
 topic: evals-observability
 subtopic: testing
-secondary_topics:
-- evals-observability/evaluation
+secondary_topics: []
 summary: Introductory guide to automated evaluations, covering datasets, scorers,
   experiments, and how to start measuring AI application quality.
 source: braintrust

@@ -2,8 +2,7 @@
 title: Automatically discover what matters in your production traces with Topics
 topic: evals-observability
 subtopic: tracing
-secondary_topics:
-- evals-observability/monitoring
+secondary_topics: []
 summary: Introduces automatic topic discovery over production traces as a way to find
   recurring behavior patterns and quality issues.
 source: braintrust

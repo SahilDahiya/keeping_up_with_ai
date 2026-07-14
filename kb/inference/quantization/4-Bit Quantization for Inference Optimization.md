@@ -2,8 +2,7 @@
 title: 4-Bit Quantization for Inference Optimization
 topic: inference
 subtopic: quantization
-secondary_topics:
-- inference/optimization
+secondary_topics: []
 summary: Deep dive into 4-bit quantization for inference, covering math, tradeoffs,
   and production optimization.
 source: baseten

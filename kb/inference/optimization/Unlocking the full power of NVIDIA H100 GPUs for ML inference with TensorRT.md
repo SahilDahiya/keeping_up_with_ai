@@ -2,8 +2,7 @@
 title: Unlocking the full power of NVIDIA H100 GPUs for ML inference with TensorRT
 topic: inference
 subtopic: optimization
-secondary_topics:
-- inference/hardware
+secondary_topics: []
 summary: Shows how TensorRT unlocks H100 performance for model inference.
 source: baseten
 url: https://www.baseten.co/blog/unlocking-the-full-power-of-nvidia-h100-gpus-for-ml-inference-with-tensorrt/

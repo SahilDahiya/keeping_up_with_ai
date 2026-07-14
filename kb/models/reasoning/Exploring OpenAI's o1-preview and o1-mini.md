@@ -2,8 +2,7 @@
 title: Exploring OpenAI's o1-preview and o1-mini
 topic: models
 subtopic: reasoning
-secondary_topics:
-- models/benchmarks
+secondary_topics: []
 summary: Analyzes OpenAI o1-preview and o1-mini from a reasoning-model perspective,
   including expected strengths, limits, and evaluation implications for production
   teams.

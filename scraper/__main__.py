@@ -353,6 +353,72 @@ def reindex():
 
 
 @app.command()
+def migrate(dry_run: bool = typer.Option(False, "--dry-run")):
+    """Move filed articles whose frontmatter no longer matches their directory.
+
+    The workflow for a taxonomy change is: edit kb/taxonomy.yaml, re-assign the
+    affected articles' topic/subtopic frontmatter, then run this. It does the
+    mechanical part — git mv into the right folder, fix kb_path in state, reindex —
+    so a re-classification pass never has to touch the filesystem or race on it.
+    """
+    import subprocess
+
+    from .store import resolve_destination
+
+    taxonomy = load_taxonomy()
+    state = State()
+    repo_root = _repo_root()
+    moved = bad = 0
+
+    for path in sorted(KB_ROOT.rglob("*.md")):
+        if path.name in ("index.md", "CLAUDE.md") or {"_inbox", "_sources"} & set(path.parts):
+            continue
+        try:
+            fm, _ = parse_frontmatter(path.read_text())
+        except ValueError:
+            continue
+        topic, subtopic = fm.get("topic"), fm.get("subtopic")
+        if topic == "unclassified":
+            want_dir = KB_ROOT / "unclassified"
+        elif topic in taxonomy and subtopic in taxonomy[topic]:
+            want_dir = KB_ROOT / topic / subtopic
+        else:
+            typer.echo(f"  INVALID {topic}/{subtopic}: {path.relative_to(KB_ROOT)}")
+            bad += 1
+            continue
+
+        # resolve_destination applies collision suffixes, so a rename can never
+        # clobber a different article that already owns the target name.
+        want_dir.mkdir(parents=True, exist_ok=True)
+        want = resolve_destination(want_dir, fm)
+        if want == path:
+            continue
+        if dry_run:
+            typer.echo(f"  would move: {path.relative_to(KB_ROOT)}\n           -> {want.relative_to(KB_ROOT)}")
+            moved += 1
+            continue
+        want_dir.mkdir(parents=True, exist_ok=True)
+        subprocess.run(["git", "mv", str(path), str(want)], check=True)  # keep git history
+        state.mark(fm["url"], fm["source"], "filed",
+                   kb_path=want.relative_to(repo_root).as_posix())
+        typer.echo(f"  moved: {path.relative_to(KB_ROOT)} -> {want.relative_to(KB_ROOT)}")
+        moved += 1
+
+    if bad:
+        typer.echo(f"\n{bad} article(s) have a topic/subtopic not in taxonomy.yaml — fix those first")
+    if dry_run:
+        typer.echo(f"\n{moved} would move (dry run)")
+        return
+    if moved:
+        state.export_jsonl()
+        typer.echo(f"\n{moved} moved; reindexed: {rebuild_indexes()}")
+    else:
+        typer.echo("nothing to move")
+    if bad:
+        raise typer.Exit(1)
+
+
+@app.command()
 def lint():
     """Check filed articles for integrity problems (implausible dates, missing fields).
 
@@ -384,6 +450,9 @@ def lint():
             problems.append(f"  NO SUMMARY    {rel}")
         if not fm.get("topic"):
             problems.append(f"  NO TOPIC      {rel}")
+        for sec in fm.get("secondary_topics") or []:
+            if str(sec).split("/")[0] == fm.get("topic"):
+                problems.append(f"  SELF-SECONDARY {sec}  {rel}")
 
     for p in problems:
         typer.echo(p)

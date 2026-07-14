@@ -2,8 +2,7 @@
 title: 33% faster LLM inference with FP8 quantization
 topic: inference
 subtopic: quantization
-secondary_topics:
-- inference/optimization
+secondary_topics: []
 summary: Shows how FP8 quantization improves LLM inference throughput while managing
   accuracy and hardware constraints.
 source: baseten

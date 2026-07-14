@@ -4,7 +4,6 @@ title: 'The Rage Clicks of LLM apps: High-Signal Production Monitoring for AI Cu
 topic: evals-observability
 subtopic: monitoring
 secondary_topics:
-- evals-observability/evaluation
 - product-engineering/case-studies
 summary: Detailed production-monitoring pattern for AI customer-support agents using
   high-signal LLM-as-judge classifiers to detect rage-click-like failure modes.

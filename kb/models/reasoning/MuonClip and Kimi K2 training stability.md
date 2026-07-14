@@ -2,8 +2,7 @@
 title: MuonClip and Kimi K2 training stability
 topic: models
 subtopic: reasoning
-secondary_topics:
-- models/fine-tuning
+secondary_topics: []
 summary: Explains MuonClip as a stability technique for large-scale Kimi-style model
   training.
 source: fireworks

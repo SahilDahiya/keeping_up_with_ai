@@ -2,8 +2,7 @@
 title: 'FireAttention V4: Industry-Leading Latency and Cost Efficiency with FP4'
 topic: inference
 subtopic: quantization
-secondary_topics:
-- inference/hardware
+secondary_topics: []
 summary: Covers FP4 and B200-focused FireAttention V4 optimizations for latency and
   cost-efficient serving.
 source: fireworks

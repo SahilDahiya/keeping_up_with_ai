@@ -2,8 +2,7 @@
 title: How to Build An AI Agent
 topic: agents
 subtopic: planning
-secondary_topics:
-- agents/tool-use
+secondary_topics: []
 summary: Practical guide to building an AI agent, covering planning, tools, state,
   and reliability considerations.
 source: arize

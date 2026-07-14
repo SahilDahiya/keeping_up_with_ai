@@ -2,8 +2,7 @@
 title: Accelerating inference with NVIDIA B200 GPUs
 topic: inference
 subtopic: hardware
-secondary_topics:
-- inference/optimization
+secondary_topics: []
 summary: Covers inference acceleration on NVIDIA B200 GPUs and the hardware features
   relevant to model serving.
 source: baseten

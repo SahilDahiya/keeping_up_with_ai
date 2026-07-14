@@ -2,8 +2,7 @@
 title: Hierarchical Memory Management In Agent Harnesses
 topic: agents
 subtopic: memory-context
-secondary_topics:
-- agents/planning
+secondary_topics: []
 summary: Explains hierarchical memory management patterns for agent harnesses, including
   how state is organized across short and long horizons.
 source: arize

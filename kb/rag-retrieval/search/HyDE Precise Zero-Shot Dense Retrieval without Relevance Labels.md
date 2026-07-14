@@ -2,8 +2,7 @@
 title: 'HyDE: Precise Zero-Shot Dense Retrieval without Relevance Labels'
 topic: rag-retrieval
 subtopic: search
-secondary_topics:
-- rag-retrieval/embeddings
+secondary_topics: []
 summary: Summarizes HyDE for zero-shot dense retrieval and how hypothetical document
   generation can improve semantic search.
 source: arize

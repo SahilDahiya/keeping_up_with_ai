@@ -56,7 +56,7 @@
   Step-by-step guide to building a first offline eval, including dataset setup, task definition, scorers, experiment runs, and failure review.
 - **2026-02-25** — [Automatically discover what matters in your production traces with Topics](<../evals-observability/tracing/Automatically discover what matters in your production traces with Topics.md>) · `tracing` · braintrust
   Introduces automatic topic discovery over production traces as a way to find recurring behavior patterns and quality issues.
-- **2026-02-12** — [The 5 pillars of AI model performance](<../evals-observability/evaluation/The 5 pillars of AI model performance.md>) · `evaluation` · braintrust
+- **2026-02-12** — [The 5 pillars of AI model performance](<../evals-observability/benchmark-design/The 5 pillars of AI model performance.md>) · `benchmark-design` · braintrust
   Defines five pillars of AI model performance and how to measure quality beyond a single aggregate benchmark score.
 - **2026-01-22** — [Testing if "bash is all you need"](<../agents/tool-use/Testing if bash is all you need.md>) · `tool-use` · braintrust
   Tests whether bash-oriented agents can solve realistic tasks, using evals to measure command-line tool use and agent reliability.
@@ -98,7 +98,7 @@
   Explains why asynchronous programming patterns matter for long-running AI workflows, background jobs, agent tasks, and responsive product experiences.
 - **2025-08-08** — [GPT-5 vs. Claude Opus 4.1](<../models/benchmarks/GPT-5 vs. Claude Opus 4.1.md>) · `benchmarks` · braintrust
   Compares GPT-5 and Claude Opus 4.1 with eval-driven analysis of strengths, weaknesses, and model-selection implications.
-- **2025-08-07** — [The canonical agent architecture: A while loop with tools](<../agents/planning/The canonical agent architecture A while loop with tools.md>) · `planning` · braintrust
+- **2025-08-07** — [The canonical agent architecture: A while loop with tools](<../agents/harness/The canonical agent architecture A while loop with tools.md>) · `harness` · braintrust
   Frames the canonical agent architecture as a while loop around model calls, tool use, state updates, and termination criteria for controllable agent behavior.
 - **2025-07-17** — [Five hard-learned lessons about AI evals](<../evals-observability/evaluation/Five hard-learned lessons about AI evals.md>) · `evaluation` · braintrust
   Five practical lessons for building AI evals, emphasizing dataset quality, scorer design, failure analysis, and iteration over dashboard theater.
@@ -124,7 +124,7 @@
   Walks through what to do after an eval run: inspect failures, slice results, improve datasets and scorers, and turn findings into product or prompt changes.
 - **2024-10-08** — [Functions: flexible AI engineering primitives](<../agents/tool-use/Functions flexible AI engineering primitives.md>) · `tool-use` · braintrust
   Introduces functions as flexible AI engineering primitives for tool calling, structured behavior, and reusable evaluation or workflow components.
-- **2024-09-16** — [Custom scoring functions in the Braintrust Playground](<../evals-observability/evaluation/Custom scoring functions in the Braintrust Playground.md>) · `evaluation` · braintrust
+- **2024-09-16** — [Custom scoring functions in the Braintrust Playground](<../evals-observability/llm-as-judge/Custom scoring functions in the Braintrust Playground.md>) · `llm-as-judge` · braintrust
   Explains custom scoring functions for evaluating AI outputs, including how domain-specific metrics can be added to an eval workflow.
 - **2024-06-20** — [How to improve your evaluations](<../evals-observability/evaluation/How to improve your evaluations.md>) · `evaluation` · braintrust
   Practical guide to improving evals through better examples, rubrics, scorers, slices, and investigation of failure cases.

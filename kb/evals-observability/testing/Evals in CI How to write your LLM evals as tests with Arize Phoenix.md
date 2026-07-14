@@ -2,8 +2,7 @@
 title: 'Evals in CI: How to write your LLM evals as tests with Arize Phoenix'
 topic: evals-observability
 subtopic: testing
-secondary_topics:
-- evals-observability/evaluation
+secondary_topics: []
 summary: Practical guide to writing LLM evals as CI tests with Arize Phoenix, including
   how to start with executable checks.
 source: arize

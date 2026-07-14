@@ -2,8 +2,7 @@
 title: LLM Observability for AI Agents and Applications
 topic: evals-observability
 subtopic: monitoring
-secondary_topics:
-- evals-observability/tracing
+secondary_topics: []
 summary: Introduces observability practices for LLM applications and agents, including
   monitoring signals beyond traditional metrics.
 source: arize

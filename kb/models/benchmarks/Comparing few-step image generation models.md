@@ -2,8 +2,7 @@
 title: Comparing few-step image generation models
 topic: models
 subtopic: benchmarks
-secondary_topics:
-- models/multimodal
+secondary_topics: []
 summary: Compares few-step image generation models and the tradeoffs between speed
   and output quality.
 source: baseten

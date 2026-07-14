@@ -2,8 +2,7 @@
 title: Cache-aware prefill-decode disaggregation for long-context LLM serving
 topic: inference
 subtopic: serving
-secondary_topics:
-- inference/optimization
+secondary_topics: []
 summary: Explains cache-aware prefill/decode disaggregation for faster long-context
   LLM serving.
 source: together

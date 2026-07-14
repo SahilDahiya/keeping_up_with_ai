@@ -2,8 +2,7 @@
 title: Why your traces and evals belong in the same place
 topic: evals-observability
 subtopic: tracing
-secondary_topics:
-- evals-observability/evaluation
+secondary_topics: []
 summary: Argues that traces and evals should live together so teams can connect production
   behavior, offline experiments, and failure analysis.
 source: braintrust

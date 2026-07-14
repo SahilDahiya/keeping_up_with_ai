@@ -133,28 +133,20 @@
   Technical report comparing GLM-5.2 and Opus 4.8, including benchmark methodology, long-context retrieval behavior, and model-performance tradeoffs.
 - **2026-06-24** — [How to Build Memory into AI Agents](<../agents/memory-context/How to Build Memory into AI Agents.md>) · `memory-context` · langchain
   Explains how to build memory into AI agents through state, retrieval, persistence, and context injection patterns.
-- **2026-05-13** — [Tau-Knowledge: benchmarking agents on realistic knowledge](<../evals-observability/evaluation/Tau-Knowledge benchmarking agents on realistic knowledge.md>) · `evaluation` · sierra
+- **2026-05-13** — [Tau-Knowledge: benchmarking agents on realistic knowledge](<../evals-observability/benchmark-design/Tau-Knowledge benchmarking agents on realistic knowledge.md>) · `benchmark-design` · sierra
   Introduces tau-knowledge for benchmarking agents on realistic knowledge tasks that require grounded retrieval and use of external information.
 - **2026-04-29** — [Using context graphs: build a data moat like Google's using your enterprise data](<../agents/memory-context/Using context graphs build a data moat like Google's using your enterprise data.md>) · `memory-context` · arize
   Explains context graphs as an enterprise memory layer for agents and retrieval-heavy AI systems.
-- **2025-09-12** — [Understanding embeddings and reranking at scale](<search/Understanding embeddings and reranking at scale.md>) · `search` · fireworks
-  Explains embeddings, reranking, and retrieval architecture patterns for production RAG systems.
 - **2025-09-09** — [mmBERT: ModernBERT goes Multilingual](<../models/training/mmBERT ModernBERT goes Multilingual.md>) · `training` · huggingface
   mmBERT is a ModernBERT-style multilingual encoder trained on 3T+ tokens across 1,800+ languages using a three-phase schedule with an inverse masking-ratio decay and 'annealed language learning' that progressively adds low-resource languages late in training. Beats XLM-R and mGTE on multilingual retrieval and classification while running significantly faster.
 - **2025-07-16** — [Ettin Suite: SoTA Paired Encoders and Decoders](<../models/training/Ettin Suite SoTA Paired Encoders and Decoders.md>) · `training` · huggingface
   Ettin is the first suite of paired encoder-only and decoder-only models (17M-1B params) trained on identical data (2T tokens), architecture and recipe, giving a true apples-to-apples MLM vs causal-LM comparison. The open ModernBERT-style recipe beats ModernBERT on encoder tasks and beats Llama 3.2 1B and SmolLM2 on decoder tasks; also tests cross-objective continued training.
 - **2025-04-16** — [Open Deep Research](<../agents/tool-use/Open Deep Research.md>) · `tool-use` · together
   Describes an open deep research system combining retrieval, planning, and tool use.
-- **2025-04-09** — [Building Enterprise-Scale RAG Systems with Fireworks AI and MongoDB Atlas](<pipelines/Building Enterprise-Scale RAG Systems with Fireworks AI and MongoDB Atlas.md>) · `pipelines` · fireworks
-  Builds an enterprise-scale RAG system with MongoDB Atlas and Fireworks, covering retrieval and serving pieces.
 - **2024-12-19** — [Finally, a Replacement for BERT: Introducing ModernBERT](<../models/architectures/Finally, a Replacement for BERT Introducing ModernBERT.md>) · `architectures` · huggingface
   ModernBERT (149M base / 395M large) modernizes the BERT encoder with 8192-token context, rotary embeddings, alternating global/local attention, GeGLU, unpadding and Flash Attention 2, trained on 2T tokens of web+code — a Pareto improvement over BERT/DeBERTa on both speed and accuracy and a slot-in replacement for retrieval and classification encoders.
-- **2024-11-18** — [Building a RAG app with MongoDB Atlas](<pipelines/Building a RAG app with MongoDB Atlas.md>) · `pipelines` · braintrust
-  Walkthrough of building a RAG app with MongoDB Atlas, covering retrieval setup, model calls, and evaluation of the generated answers.
-- **2024-10-28** — [Expert Support case study: Bolstering a RAG app with LLM-as-a-Judge](<../evals-observability/evaluation/Expert Support case study Bolstering a RAG app with LLM-as-a-Judge.md>) · `evaluation` · huggingface
+- **2024-10-28** — [Expert Support case study: Bolstering a RAG app with LLM-as-a-Judge](<../evals-observability/llm-as-judge/Expert Support case study Bolstering a RAG app with LLM-as-a-Judge.md>) · `llm-as-judge` · huggingface
   Digital Green's agricultural advisory RAG chatbot for smallholder farmers adds an LLM-as-a-Judge evaluation loop, with judge prompt/criteria design and human-alignment checks used to iterate on retrieval and answer quality.
-- **2024-09-24** — [Hybrid search over California embeddings with Modal, MongoDB, and Clay](<search/Hybrid search over California embeddings with Modal, MongoDB, and Clay.md>) · `search` · modal
-  Example of hybrid search over embeddings, combining vector retrieval with MongoDB and a geospatial dataset.
 - **2024-07-25** — [Building A Generative AI Platform](<../product-engineering/architecture/Building A Generative AI Platform.md>) · `architecture` · chip-huyen
   Reference architecture for generative AI platforms covering context construction and RAG, guardrails, gateways and routers, caching, observability, orchestration, and tool/action layers.
 - **2024-07-09** — [Banque des Territoires (CDC Group) x Polyconseil x Hugging Face: Enhancing a Major French Environmental Program with a Sovereign Data Solution](<../product-engineering/case-studies/Banque des Territoires (CDC Group) x Polyconseil x Hugging Face Enhancing a Major French Environmental Program with a Sovereign Data Solution.md>) · `case-studies` · huggingface
@@ -167,15 +159,7 @@
   Explains fine-tuning embedding models to beat proprietary baselines for a retrieval task with a compact training loop.
 - **2024-04-04** — [Text2SQL using Hugging Face Dataset Viewer API and Motherduck DuckDB-NSQL-7B](<../prompt-engineering/structured-output/Text2SQL using Hugging Face Dataset Viewer API and Motherduck DuckDB-NSQL-7B.md>) · `structured-output` · huggingface
   Text-to-SQL walkthrough using MotherDuck's DuckDB-NSQL-7B (Llama-2-7B fine-tuned on DuckDB SQL pairs) with the HF Dataset Viewer parquet API: schema-in-prompt templating, generation, and executing the SQL against DuckDB.
-- **2024-03-21** — [Optimizing Retrieval Augmented Generation (RAG) with MongoDB Atlas and Fireworks AI](<pipelines/Optimizing Retrieval Augmented Generation (RAG) with MongoDB Atlas and Fireworks AI.md>) · `pipelines` · fireworks
-  Shows how to optimize a RAG pipeline with MongoDB Atlas and Fireworks models.
 - **2024-02-20** — [Evaluating and Analyzing Your RAG Pipeline with Ragas](<../evals-observability/evaluation/Evaluating and Analyzing Your RAG Pipeline with Ragas.md>) · `evaluation` · arize
   Explains how to evaluate RAG pipelines with Ragas and Phoenix, including retrieval and generation quality dimensions.
-- **2024-01-16** — [Build and deploy a RAG app with Pinecone Serverless](<pipelines/Build and deploy a RAG app with Pinecone Serverless.md>) · `pipelines` · langchain
-  Walkthrough for building and deploying a RAG application with Pinecone Serverless and LangChain components.
-- **2023-11-08** — [Ingesting Data for Semantic Searches in a Production-Ready Way](<pipelines/Ingesting Data for Semantic Searches in a Production-Ready Way.md>) · `pipelines` · arize
-  Explains production ingestion concerns for semantic search, including data preparation and retrieval pipeline reliability.
-- **2023-06-27** — [HyDE: Precise Zero-Shot Dense Retrieval without Relevance Labels](<search/HyDE Precise Zero-Shot Dense Retrieval without Relevance Labels.md>) · `search` · arize
-  Summarizes HyDE for zero-shot dense retrieval and how hypothetical document generation can improve semantic search.
 - **2023-04-11** — [Building LLM applications for production](<../product-engineering/architecture/Building LLM applications for production.md>) · `architecture` · chip-huyen
   Practical guide to production LLM applications covering task decomposition, retrieval, prompt construction, evaluation, monitoring, and latency/cost tradeoffs.

@@ -2,8 +2,7 @@
 title: How we built Multi-cloud Capacity Management (MCM)
 topic: infra-platform
 subtopic: gpu-clusters
-secondary_topics:
-- infra-platform/deployment
+secondary_topics: []
 summary: Engineering writeup on building multi-cloud capacity management for inference
   infrastructure.
 source: baseten

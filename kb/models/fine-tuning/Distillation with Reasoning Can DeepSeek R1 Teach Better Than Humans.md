@@ -2,8 +2,7 @@
 title: 'Distillation with Reasoning: Can DeepSeek R1 Teach Better Than Humans?'
 topic: models
 subtopic: fine-tuning
-secondary_topics:
-- models/reasoning
+secondary_topics: []
 summary: Discusses distilling reasoning behavior from DeepSeek R1 and the limits of
   teacher-model supervision.
 source: fireworks

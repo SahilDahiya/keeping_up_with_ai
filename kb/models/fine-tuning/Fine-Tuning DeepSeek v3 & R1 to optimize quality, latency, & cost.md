@@ -2,8 +2,7 @@
 title: Fine-Tuning DeepSeek v3 & R1 to optimize quality, latency, & cost
 topic: models
 subtopic: fine-tuning
-secondary_topics:
-- models/reasoning
+secondary_topics: []
 summary: Guide to fine-tuning DeepSeek V3 and R1 models while balancing quality, latency,
   and cost.
 source: fireworks

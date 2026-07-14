@@ -138,7 +138,7 @@
   Argues that agent systems need strong developer experience, covering observability, iteration loops, deployment ergonomics, and tool surfaces.
 - **2025-11-19** — [How To Improve AI Agent Security with Microsoft’s AI Red Teaming Agent in Microsoft Foundry](<security/How To Improve AI Agent Security with Microsoft’s AI Red Teaming Agent in Microsoft Foundry.md>) · `security` · arize
   Explains how red-team agents can be used to find and test security weaknesses in agentic applications.
-- **2025-11-03** — [Vercel code fixing with open models, speculative decoding, and RFT](<case-studies/Vercel code fixing with open models speculative decoding and RFT.md>) · `case-studies` · fireworks
+- **2025-11-03** — [Vercel code fixing with open models, speculative decoding, and RFT](<case-studies/Vercel code fixing with open models, speculative decoding, and RFT.md>) · `case-studies` · fireworks
   Case study of improving Vercel code-fixing outputs with open models, speculative decoding, and reinforcement fine-tuning.
 - **2025-10-28** — [Voice Cloning with Consent](<security/Voice Cloning with Consent.md>) · `security` · huggingface
   Proposes a 'voice consent gate': before any voice cloning runs, the speaker must record a spoken consent phrase, which is verified with ASR (and speaker verification) against the same audio used for cloning — a concrete, implementable design pattern (with a demo Space and code) for making consent a hard gate rather than a checkbox.
@@ -231,9 +231,9 @@
   Announces the Attribution Business Insights dashboard for Bot Management customers: per-operator crawl-to-referral ratios (observed from 118:1 to ~50,000:1 for AI crawlers), bot-vs-human traffic breakdowns, and crawler classification into Training, Search, and Agent purposes.
 - **2026-06-30** — [Let your customers shape your agents](<../evals-observability/evaluation/Let your customers shape your agents.md>) · `evaluation` · sierra
   Explains experimentation loops for agent improvement, using customer behavior, A/B tests, and statistical confidence to shape agent changes.
-- **2026-06-18** — [What is an agent harness? Why harnesses are replacing agent frameworks](<../agents/planning/What is an agent harness Why harnesses are replacing agent frameworks.md>) · `planning` · arize
+- **2026-06-18** — [What is an agent harness? Why harnesses are replacing agent frameworks](<../agents/harness/What is an agent harness Why harnesses are replacing agent frameworks.md>) · `harness` · arize
   Explains why agent harnesses are replacing simple framework use as the unit of production agent engineering.
-- **2026-06-16** — [The Art of Loop Engineering](<../agents/planning/The Art of Loop Engineering.md>) · `planning` · langchain
+- **2026-06-16** — [The Art of Loop Engineering](<../agents/harness/The Art of Loop Engineering.md>) · `harness` · langchain
   Discusses loop engineering for agents, focusing on the control loops that govern planning, action, observation, and refinement.
 - **2026-06-12** — [How to Choose the Right Sandbox for AI Agents](<../agents/computer-use/How to Choose the Right Sandbox for AI Agents.md>) · `computer-use` · langchain
   Guide to choosing an agent sandbox based on isolation, tool access, persistence, security, and operational constraints.
@@ -241,9 +241,9 @@
   Explains real-time agent assist as a tool-augmented workflow that surfaces guidance during live interactions.
 - **2026-06-05** — [Give your agent its own computer](<../agents/computer-use/Give your agent its own computer.md>) · `computer-use` · langchain
   Argues for giving agents isolated computers or sandboxes so they can run tools while preserving control, safety, and reproducibility.
-- **2026-06-03** — [How to Build a Custom Agent Harness](<../agents/planning/How to Build a Custom Agent Harness.md>) · `planning` · langchain
+- **2026-06-03** — [How to Build a Custom Agent Harness](<../agents/harness/How to Build a Custom Agent Harness.md>) · `harness` · langchain
   Guide to building a custom agent harness, covering control loop design, state, tools, observability, and evaluation hooks.
-- **2026-06-01** — [How Hermes implements an open source agent harness architecture](<../agents/planning/How Hermes implements an open source agent harness architecture.md>) · `planning` · arize
+- **2026-06-01** — [How Hermes implements an open source agent harness architecture](<../agents/harness/How Hermes implements an open source agent harness architecture.md>) · `harness` · arize
   Breaks down Hermes as an open-source agent harness architecture, focusing on components, control flow, and implementation boundaries.
 - **2026-05-20** — [EU macroeconomic analysis with Deep Agents, LangSmith, and the You.com Finance Research API](<../agents/tool-use/EU macroeconomic analysis with Deep Agents, LangSmith, and the You.com Finance Research API.md>) · `tool-use` · langchain
   Case study building a financial research agent for EU macroeconomic analysis with Deep Agents, LangSmith, and the You.com Finance Research API.
@@ -259,8 +259,6 @@
   Launch writeup for Sierra voice agents with useful architecture details on interruptions, latency, call-center integration, escalation, and multi-channel agent reuse.
 - **2026-05-12** — [Visual Attachments: A new dimension for chat agents](<../models/multimodal/Visual Attachments A new dimension for chat agents.md>) · `multimodal` · sierra
   Covers visual attachments in chat agents and how images expand support-agent context and user interaction patterns.
-- **2026-05-12** — [From LLMs to enterprise-grade agents](<architecture/From LLMs to enterprise-grade agents.md>) · `architecture` · sierra
-  Explains what distinguishes enterprise-grade agents from raw LLMs, including integrations, policy controls, reliability, and operational lifecycle.
 - **2026-04-28** — [How to earn stakeholder trust with evals and observability](<../evals-observability/monitoring/How to earn stakeholder trust with evals and observability.md>) · `monitoring` · braintrust
   Explains how evals and observability help build stakeholder trust by making AI product quality measurable, reviewable, and improvable.
 - **2026-04-23** — [An update on recent Claude Code quality reports](<../evals-observability/monitoring/An update on recent Claude Code quality reports.md>) · `monitoring` · anthropic-engineering
@@ -273,7 +271,7 @@
   Deep dive into Cloudflare's CI-native AI code review built on OpenCode: up to seven specialized reviewer agents (security, performance, quality, docs, compliance) plus a coordinator that deduplicates findings and posts one structured review, run across tens of thousands of GitLab merge requests via a plugin architecture.
 - **2026-04-01** — [The Rage Clicks of LLM apps: High-Signal Production Monitoring for AI Customer Support Agents](<../evals-observability/monitoring/The Rage Clicks of LLM apps High-Signal Production Monitoring for AI Customer Support Agents.md>) · `monitoring` · langfuse
   Detailed production-monitoring pattern for AI customer-support agents using high-signal LLM-as-judge classifiers to detect rage-click-like failure modes.
-- **2026-03-24** — [Harness design for long-running application development](<../agents/planning/Harness design for long-running application development.md>) · `planning` · anthropic-engineering
+- **2026-03-24** — [Harness design for long-running application development](<../agents/harness/Harness design for long-running application development.md>) · `harness` · anthropic-engineering
   Deep dive on harness design for multi-day application builds: state management, verification loops, task queues, and recovery when the agent goes off track.
 - **2026-03-13** — [How We Built an Agent Skill to Synthesize what Langfuse Users want](<../agents/tool-use/How We Built an Agent Skill to Synthesize what Langfuse Users want.md>) · `tool-use` · langfuse
   Case study of building an agent skill to synthesize user feedback and product needs, showing how agents can support operational product workflows.
@@ -313,7 +311,7 @@
   Introduces Open SWE as an open-source asynchronous coding agent and discusses its architecture for long-running coding tasks.
 - **2025-07-24** — [What is an AI code sandbox?](<../agents/computer-use/What is an AI code sandbox.md>) · `computer-use` · modal
   Explains AI code sandboxes as isolated execution environments for coding agents, including safety and state considerations.
-- **2025-04-20** — [How to think about agent frameworks](<../agents/planning/How to think about agent frameworks.md>) · `planning` · langchain
+- **2025-04-20** — [How to think about agent frameworks](<../agents/harness/How to think about agent frameworks.md>) · `harness` · langchain
   Framework for evaluating agent frameworks by abstraction level, control, durability, observability, and fit to production workflows.
 - **2025-03-07** — [Prompt Management from First Principles](<../prompt-engineering/techniques/Prompt Management from First Principles.md>) · `techniques` · arize
   Frames prompt management from first principles, including versioning, ownership, and production workflow concerns.
@@ -321,7 +319,7 @@
   Case study on adding audio support with OpenAI models, covering product and engineering lessons from building multimodal support.
 - **2024-12-19** — [Building Effective AI Agents](<../agents/planning/Building Effective AI Agents.md>) · `planning` · anthropic-engineering
   Anthropic's canonical guide to agent design patterns: when to use workflows (prompt chaining, routing, orchestrator-workers) versus autonomous agents, and why simple composable patterns beat frameworks.
-- **2024-12-04** — [AI Agent Workflows and Architectures Masterclass](<../agents/planning/AI Agent Workflows and Architectures Masterclass.md>) · `planning` · arize
+- **2024-12-04** — [AI Agent Workflows and Architectures Masterclass](<../agents/harness/AI Agent Workflows and Architectures Masterclass.md>) · `harness` · arize
   Introduces practical agent workflow and architecture patterns, emphasizing simple tool-calling loops and design choices over vague autonomy claims.
 - **2024-12-02** — [WireGuard at Modal: Static IPs for serverless containers](<../infra-platform/deployment/WireGuard at Modal Static IPs for serverless containers.md>) · `deployment` · modal
   Explains static IP support for serverless containers using WireGuard, relevant to secure networked AI deployments.
@@ -333,13 +331,13 @@
   Explains the LLM proxy pattern for AI applications, including provider abstraction, centralized logging, key management, routing, and governance tradeoffs.
 - **2024-09-17** — [Building high-performance compound AI applications with MongoDB Atlas and Baseten](<../rag-retrieval/pipelines/Building high-performance compound AI applications with MongoDB Atlas and Baseten.md>) · `pipelines` · baseten
   Shows how to build high-performance compound AI applications with retrieval, orchestration, and model serving.
-- **2024-08-16** — [Judging the Judges: Evaluating Alignment and Vulnerabilities in LLMs-as-Judges](<../evals-observability/evaluation/Judging the Judges Evaluating Alignment and Vulnerabilities in LLMs-as-Judges.md>) · `evaluation` · arize
+- **2024-08-16** — [Judging the Judges: Evaluating Alignment and Vulnerabilities in LLMs-as-Judges](<../evals-observability/llm-as-judge/Judging the Judges Evaluating Alignment and Vulnerabilities in LLMs-as-Judges.md>) · `llm-as-judge` · arize
   Analyzes vulnerabilities and alignment issues in LLM-as-judge systems, with implications for production evaluator design.
 - **2024-08-14** — [Building a RAG with Astro, FastAPI, SurrealDB and Llama 3.1](<../rag-retrieval/pipelines/Building a RAG with Astro, FastAPI, SurrealDB and Llama 3.1.md>) · `pipelines` · fireworks
   End-to-end RAG application example using Astro, FastAPI, SurrealDB, and Llama 3.1.
 - **2024-07-31** — [Google releases Gemma 2 2B, ShieldGemma and Gemma Scope](<../models/releases/Google releases Gemma 2 2B, ShieldGemma and Gemma Scope.md>) · `releases` · huggingface
   Google's July 2024 Gemma drop: Gemma 2 2B distilled from larger models for on-device use, ShieldGemma safety classifiers for filtering app inputs/outputs, and Gemma Scope sparse autoencoders for interpretability.
-- **2024-05-24** — [CyberSecEval 2 - A Comprehensive Evaluation Framework for Cybersecurity Risks and Capabilities of Large Language Models](<../evals-observability/evaluation/CyberSecEval 2 - A Comprehensive Evaluation Framework for Cybersecurity Risks and Capabilities of Large Language Models.md>) · `evaluation` · huggingface
+- **2024-05-24** — [CyberSecEval 2 - A Comprehensive Evaluation Framework for Cybersecurity Risks and Capabilities of Large Language Models](<../evals-observability/benchmark-design/CyberSecEval 2 - A Comprehensive Evaluation Framework for Cybersecurity Risks and Capabilities of Large Language Models.md>) · `benchmark-design` · huggingface
   CyberSecEval 2 evaluates LLM cybersecurity risk: prompt injection, code interpreter abuse, offensive-security capability and insecure-code generation, plus a false-refusal-rate metric that quantifies the safety/helpfulness tradeoff.
 - **2024-05-01** — [Regression Testing with LangSmith](<../evals-observability/testing/Regression Testing with LangSmith.md>) · `testing` · langchain
   Explains regression testing with LangSmith for preventing LLM application quality regressions during prompt, model, or code changes.
@@ -353,11 +351,11 @@
   Deep dive into Modal web infrastructure, including serverless HTTP routing, isolation, and platform architecture.
 - **2024-03-11** — [Iterating Towards LLM Reliability with Evaluation Driven Development](<../evals-observability/testing/Iterating Towards LLM Reliability with Evaluation Driven Development.md>) · `testing` · langchain
   Explains evaluation-driven development for LLM reliability using regression tests, examples, and iterative quality gates.
-- **2024-02-23** — [Introducing the Red-Teaming Resistance Leaderboard](<../evals-observability/evaluation/Introducing the Red-Teaming Resistance Leaderboard.md>) · `evaluation` · huggingface
+- **2024-02-23** — [Introducing the Red-Teaming Resistance Leaderboard](<../evals-observability/benchmark-design/Introducing the Red-Teaming Resistance Leaderboard.md>) · `benchmark-design` · huggingface
   The Red-Teaming Resistance Leaderboard scores frontier LLMs on robustness against adversarial prompts drawn from real red-teaming datasets (AdvBench, AART, HarmBench, Beavertails, plus Haize's own attacks), reporting attack success rates per harm category rather than a single safety number.
 - **2024-02-08** — [From OpenAI to Open LLMs with Messages API on Hugging Face](<../inference/serving/From OpenAI to Open LLMs with Messages API on Hugging Face.md>) · `serving` · huggingface
   TGI 1.4 adds an OpenAI Chat Completions-compatible Messages API, so open models on Inference Endpoints become a drop-in swap for GPT-4 by only changing base_url and api_key — shown with the OpenAI Python/JS clients, LangChain and LlamaIndex, and a Nous-Hermes-2-Mixtral migration.
-- **2024-01-26** — [An Introduction to AI Secure LLM Safety Leaderboard](<../evals-observability/evaluation/An Introduction to AI Secure LLM Safety Leaderboard.md>) · `evaluation` · huggingface
+- **2024-01-26** — [An Introduction to AI Secure LLM Safety Leaderboard](<../evals-observability/benchmark-design/An Introduction to AI Secure LLM Safety Leaderboard.md>) · `benchmark-design` · huggingface
   The AI Secure LLM Safety Leaderboard runs the DecodingTrust benchmark, scoring models across eight trustworthiness axes (toxicity, stereotype bias, adversarial and out-of-distribution robustness, privacy leakage, machine ethics, fairness) rather than capability alone.
 - **2023-11-27** — [Open sourcing the AI proxy](<../infra-platform/deployment/Open sourcing the AI proxy.md>) · `deployment` · braintrust
   Open-source AI proxy notes focused on provider routing, logging, credentials, access control, and observability for model calls.

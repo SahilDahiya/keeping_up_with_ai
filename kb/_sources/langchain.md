@@ -4,7 +4,7 @@
 
 - **2026-07-10** — [OpenWiki Brains: Proactive Memory for AI Agents](<../agents/memory-context/OpenWiki Brains Proactive Memory for AI Agents.md>) · `memory-context` · langchain
   Introduces OpenWiki Brains as proactive wiki memory for agents, focused on persistent context and retrieval over project knowledge.
-- **2026-07-08** — [Tuning the harness, not the model: a Nemotron 3 Ultra playbook](<../agents/planning/Tuning the harness, not the model a Nemotron 3 Ultra playbook.md>) · `planning` · langchain
+- **2026-07-08** — [Tuning the harness, not the model: a Nemotron 3 Ultra playbook](<../agents/harness/Tuning the harness, not the model a Nemotron 3 Ultra playbook.md>) · `harness` · langchain
   Nemotron 3 Ultra playbook arguing for harness tuning over model tuning, with practical agent-system design and eval implications.
 - **2026-07-08** — [Deep Agents Code on NVIDIA NemoClaw](<../agents/tool-use/Deep Agents Code on NVIDIA NemoClaw.md>) · `tool-use` · langchain
   Covers a governed Deep Agents code blueprint on NVIDIA NemoClaw for sensitive code workflows, emphasizing controls around agentic coding.
@@ -38,11 +38,11 @@
   Deep dive on constructing and querying SmithDB's inverted index for full-text search over observability data.
 - **2026-06-24** — [How to Build Memory into AI Agents](<../agents/memory-context/How to Build Memory into AI Agents.md>) · `memory-context` · langchain
   Explains how to build memory into AI agents through state, retrieval, persistence, and context injection patterns.
-- **2026-06-16** — [The Art of Loop Engineering](<../agents/planning/The Art of Loop Engineering.md>) · `planning` · langchain
+- **2026-06-16** — [The Art of Loop Engineering](<../agents/harness/The Art of Loop Engineering.md>) · `harness` · langchain
   Discusses loop engineering for agents, focusing on the control loops that govern planning, action, observation, and refinement.
 - **2026-06-16** — [Why Fleet Has General Purpose Chat and Specialized Agents](<../product-engineering/architecture/Why Fleet Has General Purpose Chat and Specialized Agents.md>) · `architecture` · langchain
   Fleet case study explaining why a product needs both general-purpose chat and specialized agents for different user workflows.
-- **2026-06-15** — [Building a 100x Cheaper Trace Judge with Fireworks](<../evals-observability/evaluation/Building a 100x Cheaper Trace Judge with Fireworks.md>) · `evaluation` · langchain
+- **2026-06-15** — [Building a 100x Cheaper Trace Judge with Fireworks](<../evals-observability/llm-as-judge/Building a 100x Cheaper Trace Judge with Fireworks.md>) · `llm-as-judge` · langchain
   Shows how to build a lower-cost trace judge with Fireworks, focusing on evaluator cost reduction while preserving useful scoring quality.
 - **2026-06-15** — [How LangChain Made Coding Agent Spend Predictable](<../infra-platform/cost/How LangChain Made Coding Agent Spend Predictable.md>) · `cost` · langchain
   Explains how LangChain made coding-agent spend more predictable using constraints, monitoring, and workflow-level cost controls.
@@ -58,17 +58,17 @@
   Explains the missing application-layer pieces around agents, connecting agent runtimes to product interfaces, state, and deployment workflows.
 - **2026-06-05** — [Give your agent its own computer](<../agents/computer-use/Give your agent its own computer.md>) · `computer-use` · langchain
   Argues for giving agents isolated computers or sandboxes so they can run tools while preserving control, safety, and reproducibility.
-- **2026-06-04** — [Fault Tolerance in LangGraph: Retries, Timeouts and Error Handlers](<../agents/planning/Fault Tolerance in LangGraph Retries, Timeouts and Error Handlers.md>) · `planning` · langchain
+- **2026-06-04** — [Fault Tolerance in LangGraph: Retries, Timeouts and Error Handlers](<../agents/harness/Fault Tolerance in LangGraph Retries, Timeouts and Error Handlers.md>) · `harness` · langchain
   Explains fault tolerance in LangGraph with retries, timeouts, and error handlers for more reliable long-running agents.
 - **2026-06-04** — [Model Neutrality: Why Avoiding AI Vendor Lock-In Matters](<../infra-platform/deployment/Model Neutrality Why Avoiding AI Vendor Lock-In Matters.md>) · `deployment` · langchain
   Explains model neutrality and why avoiding AI vendor lock-in matters for provider routing, cost control, and long-term architecture.
-- **2026-06-03** — [How to Build a Custom Agent Harness](<../agents/planning/How to Build a Custom Agent Harness.md>) · `planning` · langchain
+- **2026-06-03** — [How to Build a Custom Agent Harness](<../agents/harness/How to Build a Custom Agent Harness.md>) · `harness` · langchain
   Guide to building a custom agent harness, covering control loop design, state, tools, observability, and evaluation hooks.
 - **2026-06-03** — [How Harmonic Rebuilt Scout on Deep Agents and 4x'd Retention with LangSmith](<../product-engineering/case-studies/How Harmonic Rebuilt Scout on Deep Agents and 4x'd Retention with LangSmith.md>) · `case-studies` · langchain
   Harmonic case study on rebuilding Scout with Deep Agents and LangSmith, linking agent architecture to retention and evaluation.
-- **2026-06-02** — [Designing Efficient Verifiers for Legal Agents](<../evals-observability/evaluation/Designing Efficient Verifiers for Legal Agents.md>) · `evaluation` · langchain
+- **2026-06-02** — [Designing Efficient Verifiers for Legal Agents](<../evals-observability/llm-as-judge/Designing Efficient Verifiers for Legal Agents.md>) · `llm-as-judge` · langchain
   Explains how to design efficient verifiers for legal agents so domain-specific correctness can be checked without excessive cost.
-- **2026-06-02** — [Introducing Rubrics: Build Agents that Evaluate and Correct Their Work](<../evals-observability/evaluation/Introducing Rubrics Build Agents that Evaluate and Correct Their Work.md>) · `evaluation` · langchain
+- **2026-06-02** — [Introducing Rubrics: Build Agents that Evaluate and Correct Their Work](<../evals-observability/llm-as-judge/Introducing Rubrics Build Agents that Evaluate and Correct Their Work.md>) · `llm-as-judge` · langchain
   Introduces rubrics for Deep Agents so agents can evaluate and correct their own work against explicit criteria.
 - **2026-06-01** — [How Rippling built production AI in 6 months with Deep Agents and LangSmith](<../product-engineering/case-studies/How Rippling built production AI in 6 months with Deep Agents and LangSmith.md>) · `case-studies` · langchain
   Rippling case study on rolling production AI across products with Deep Agents and LangSmith in a six-month buildout.
@@ -86,7 +86,7 @@
   Covers LangSmith Sandboxes for safely running agent code and tools in isolated execution environments.
 - **2026-05-13** — [We built SmithDB, the data layer for agent observability](<../infra-platform/deployment/We built SmithDB, the data layer for agent observability.md>) · `deployment` · langchain
   Introduces SmithDB as a data layer for agent observability, optimized for storing and querying trace-heavy workloads.
-- **2026-05-12** — [Delta Channels: How We’re Evolving our Runtime for Long-Running Agents](<../agents/planning/Delta Channels How We’re Evolving our Runtime for Long-Running Agents.md>) · `planning` · langchain
+- **2026-05-12** — [Delta Channels: How We’re Evolving our Runtime for Long-Running Agents](<../agents/harness/Delta Channels How We’re Evolving our Runtime for Long-Running Agents.md>) · `harness` · langchain
   Describes Delta Channels as an evolution of the LangGraph runtime for long-running agents, focused on durable state and runtime communication.
 - **2026-05-09** — [The Agent Development Lifecycle: Build, Test, Deploy & Monitor AI Agents](<../agents/planning/The Agent Development Lifecycle Build, Test, Deploy & Monitor AI Agents.md>) · `planning` · langchain
   Defines the agent development lifecycle from build and test through deployment, monitoring, and iterative improvement.
@@ -96,7 +96,7 @@
   Connects LangSmith and LangChain OSS workflows to EU AI Act readiness, including observability, evaluation, governance, and auditability.
 - **2026-04-17** — [Agentic Engineering: How Swarms of AI Agents Are Redefining Software Engineering](<../agents/multi-agent/Agentic Engineering How Swarms of AI Agents Are Redefining Software Engineering.md>) · `multi-agent` · langchain
   Discusses how swarms of agents change software engineering workflows, including orchestration, delegation, review, and human oversight.
-- **2026-04-16** — [Reusable Evaluators and Evaluator Templates in LangSmith](<../evals-observability/evaluation/Reusable Evaluators and Evaluator Templates in LangSmith.md>) · `evaluation` · langchain
+- **2026-04-16** — [Reusable Evaluators and Evaluator Templates in LangSmith](<../evals-observability/llm-as-judge/Reusable Evaluators and Evaluator Templates in LangSmith.md>) · `llm-as-judge` · langchain
   Covers reusable evaluator templates in LangSmith for standardizing scoring logic across teams and experiments.
 - **2026-04-09** — [Human judgment in the agent improvement loop](<../evals-observability/evaluation/Human judgment in the agent improvement loop.md>) · `evaluation` · langchain
   Explains where human judgment fits into the agent improvement loop, including review, labeling, feedback, and evaluator calibration.
@@ -112,7 +112,7 @@
   Guide to monitoring and evaluating LLM agents in production, including traces, feedback, evals, and alerting signals.
 - **2026-02-18** — [monday Service + LangSmith: Building a Code-First Evaluation Strategy from Day 1](<../product-engineering/case-studies/monday Service + LangSmith Building a Code-First Evaluation Strategy from Day 1.md>) · `case-studies` · langchain
   monday Service case study on building a code-first evaluation strategy for AI product quality from day one.
-- **2026-02-13** — [On Agent Frameworks and Agent Observability](<../agents/planning/On Agent Frameworks and Agent Observability.md>) · `planning` · langchain
+- **2026-02-13** — [On Agent Frameworks and Agent Observability](<../agents/harness/On Agent Frameworks and Agent Observability.md>) · `harness` · langchain
   Connects agent-framework design with observability requirements, arguing that runtime structure determines what teams can debug and evaluate.
 - **2026-01-28** — [Context Management for Deep Agents](<../agents/memory-context/Context Management for Deep Agents.md>) · `memory-context` · langchain
   Explains context management for Deep Agents, including what information to retain, retrieve, summarize, or isolate during long-running tasks.
@@ -126,17 +126,17 @@
   Shows how to turn Claude Code into a domain-specific coding agent using instructions, tools, context, and workflow constraints.
 - **2025-09-11** — [Monte Carlo: Building Data + AI Observability Agents with LangGraph and LangSmith](<../product-engineering/case-studies/Monte Carlo Building Data + AI Observability Agents with LangGraph and LangSmith.md>) · `case-studies` · langchain
   Monte Carlo case study on building data and AI observability agents with LangGraph and LangSmith.
-- **2025-09-04** — [Building LangGraph: Designing an Agent Runtime from first principles](<../agents/planning/Building LangGraph Designing an Agent Runtime from first principles.md>) · `planning` · langchain
+- **2025-09-04** — [Building LangGraph: Designing an Agent Runtime from first principles](<../agents/harness/Building LangGraph Designing an Agent Runtime from first principles.md>) · `harness` · langchain
   Design history of LangGraph as an agent runtime from first principles, covering control flow, state, durability, and production requirements.
 - **2025-08-06** — [Introducing Open SWE: An Open-Source Asynchronous Coding Agent](<../agents/tool-use/Introducing Open SWE An Open-Source Asynchronous Coding Agent.md>) · `tool-use` · langchain
   Introduces Open SWE as an open-source asynchronous coding agent and discusses its architecture for long-running coding tasks.
 - **2025-06-16** — [How and when to build multi-agent systems](<../agents/multi-agent/How and when to build multi-agent systems.md>) · `multi-agent` · langchain
   Guidance on when multi-agent systems are warranted and how to design agent roles, coordination, and boundaries.
-- **2025-04-20** — [How to think about agent frameworks](<../agents/planning/How to think about agent frameworks.md>) · `planning` · langchain
+- **2025-04-20** — [How to think about agent frameworks](<../agents/harness/How to think about agent frameworks.md>) · `harness` · langchain
   Framework for evaluating agent frameworks by abstraction level, control, durability, observability, and fit to production workflows.
 - **2025-03-27** — [Introducing End-to-End OpenTelemetry Support in LangSmith](<../evals-observability/tracing/Introducing End-to-End OpenTelemetry Support in LangSmith.md>) · `tracing` · langchain
   Introduces end-to-end OpenTelemetry support in LangSmith for standardizing traces across AI application components.
-- **2025-02-26** — [Evaluating Large Language Models With OpenEvals](<../evals-observability/evaluation/Evaluating Large Language Models With OpenEvals.md>) · `evaluation` · langchain
+- **2025-02-26** — [Evaluating Large Language Models With OpenEvals](<../evals-observability/llm-as-judge/Evaluating Large Language Models With OpenEvals.md>) · `llm-as-judge` · langchain
   Guide to evaluating large language models with OpenEvals, including reusable evaluators and model comparison workflows.
 - **2025-02-10** — [Benchmarking Single Agent Performance](<../agents/planning/Benchmarking Single Agent Performance.md>) · `planning` · langchain
   Benchmarks single-agent ReAct-style performance and discusses evaluation methodology for agent reasoning/tool-use loops.
@@ -146,11 +146,11 @@
   Replit Agent case study on tracing and managing complex agent workflows with LangSmith.
 - **2024-07-02** — [Improving Memory Retrieval: How New Computer achieved 50% higher recall with LangSmith](<../rag-retrieval/search/Improving Memory Retrieval How New Computer achieved 50% higher recall with LangSmith.md>) · `search` · langchain
   New Computer case study on improving memory retrieval recall with LangSmith-backed evaluation and debugging.
-- **2024-06-26** — [Aligning LLM-as-a-Judge with Human Preferences](<../evals-observability/evaluation/Aligning LLM-as-a-Judge with Human Preferences.md>) · `evaluation` · langchain
+- **2024-06-26** — [Aligning LLM-as-a-Judge with Human Preferences](<../evals-observability/llm-as-judge/Aligning LLM-as-a-Judge with Human Preferences.md>) · `llm-as-judge` · langchain
   Covers aligning LLM-as-judge evaluators with human preferences through calibration, examples, and evaluation design.
 - **2024-06-19** — [How Factory used LangSmith to automate their feedback loop and improve iteration speed by 2x](<../product-engineering/case-studies/How Factory used LangSmith to automate their feedback loop and improve iteration speed by 2x.md>) · `case-studies` · langchain
   Factory case study on automating feedback loops with LangSmith to improve iteration speed and production agent quality.
-- **2024-05-15** — [Pairwise Evaluations with LangSmith](<../evals-observability/evaluation/Pairwise Evaluations with LangSmith.md>) · `evaluation` · langchain
+- **2024-05-15** — [Pairwise Evaluations with LangSmith](<../evals-observability/llm-as-judge/Pairwise Evaluations with LangSmith.md>) · `llm-as-judge` · langchain
   Explains pairwise evaluations with LangSmith for comparing model or prompt outputs using preference-style scoring.
 - **2024-05-01** — [Regression Testing with LangSmith](<../evals-observability/testing/Regression Testing with LangSmith.md>) · `testing` · langchain
   Explains regression testing with LangSmith for preventing LLM application quality regressions during prompt, model, or code changes.

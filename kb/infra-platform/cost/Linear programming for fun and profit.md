@@ -2,8 +2,7 @@
 title: Linear programming for fun and profit
 topic: infra-platform
 subtopic: cost
-secondary_topics:
-- infra-platform/gpu-clusters
+secondary_topics: []
 summary: Shows how linear programming can allocate compute resources under constraints,
   useful for GPU scheduling and cost control.
 source: modal

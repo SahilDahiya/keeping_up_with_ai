@@ -2,8 +2,7 @@
 title: 'Sierra Agent OS 2.0: from answers to memory and action'
 topic: agents
 subtopic: memory-context
-secondary_topics:
-- agents/tool-use
+secondary_topics: []
 summary: Describes Agent OS 2.0 moving agents from answers to memory and action, covering
   persistent context, tool use, and stateful behavior.
 source: sierra

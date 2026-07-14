@@ -2,8 +2,7 @@
 title: The Baseten Inference Stack at NVIDIA Dynamo Day
 topic: inference
 subtopic: serving
-secondary_topics:
-- inference/optimization
+secondary_topics: []
 summary: Describes Baseten inference-stack ideas presented around NVIDIA Dynamo and
   production serving.
 source: baseten

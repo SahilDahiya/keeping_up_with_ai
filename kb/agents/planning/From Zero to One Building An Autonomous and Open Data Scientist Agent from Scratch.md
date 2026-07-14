@@ -3,8 +3,7 @@ title: 'From Zero to One: Building An Autonomous and Open Data Scientist Agent f
   Scratch'
 topic: agents
 subtopic: planning
-secondary_topics:
-- agents/tool-use
+secondary_topics: []
 summary: Walkthrough of building an autonomous open data-scientist agent from scratch.
 source: together
 url: https://www.together.ai/blog/building-an-autonomous-and-open-data-scientist-agent-from-scratch

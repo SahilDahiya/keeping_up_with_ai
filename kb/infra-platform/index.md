@@ -167,7 +167,7 @@
   Design deep dive on the runtime for Langfuse code evaluators, covering execution isolation, evaluator lifecycle, and safe scalable scoring infrastructure.
 - **2026-06-16** — [How to use Braintrust with any framework or provider](<../evals-observability/tracing/How to use Braintrust with any framework or provider.md>) · `tracing` · braintrust
   Integration guide for capturing Braintrust traces and evals across different AI frameworks and model providers without locking the application stack to one SDK.
-- **2026-06-15** — [Building a 100x Cheaper Trace Judge with Fireworks](<../evals-observability/evaluation/Building a 100x Cheaper Trace Judge with Fireworks.md>) · `evaluation` · langchain
+- **2026-06-15** — [Building a 100x Cheaper Trace Judge with Fireworks](<../evals-observability/llm-as-judge/Building a 100x Cheaper Trace Judge with Fireworks.md>) · `llm-as-judge` · langchain
   Shows how to build a lower-cost trace judge with Fireworks, focusing on evaluator cost reduction while preserving useful scoring quality.
 - **2026-06-15** — [One agent, two trace destinations: Arize AX + Databricks Unity Catalog](<../evals-observability/tracing/One agent, two trace destinations Arize AX + Databricks Unity Catalog.md>) · `tracing` · arize
   Shows how a single agent can emit traces to multiple destinations, highlighting interoperability concerns for observability stacks.
@@ -177,23 +177,21 @@
   Architecture writeup on designing an inverted index for object storage in SmithDB, motivated by full-text search over agent traces.
 - **2026-06-05** — [How we use agents to review production infrastructure](<../product-engineering/case-studies/How we use agents to review production infrastructure.md>) · `case-studies` · langfuse
   Case study of using agents to review production infrastructure, including operational workflows, review boundaries, and human oversight.
-- **2026-06-04** — [Fault Tolerance in LangGraph: Retries, Timeouts and Error Handlers](<../agents/planning/Fault Tolerance in LangGraph Retries, Timeouts and Error Handlers.md>) · `planning` · langchain
+- **2026-06-04** — [Fault Tolerance in LangGraph: Retries, Timeouts and Error Handlers](<../agents/harness/Fault Tolerance in LangGraph Retries, Timeouts and Error Handlers.md>) · `harness` · langchain
   Explains fault tolerance in LangGraph with retries, timeouts, and error handlers for more reliable long-running agents.
 - **2026-06-04** — [How we made continuous trace intelligence possible at scale](<../evals-observability/tracing/How we made continuous trace intelligence possible at scale.md>) · `tracing` · braintrust
   Architecture deep dive on continuous trace intelligence at scale, including how production traces are clustered and surfaced for analysis.
-- **2026-06-04** — [Model Neutrality: Why Avoiding AI Vendor Lock-In Matters](<deployment/Model Neutrality Why Avoiding AI Vendor Lock-In Matters.md>) · `deployment` · langchain
-  Explains model neutrality and why avoiding AI vendor lock-in matters for provider routing, cost control, and long-term architecture.
 - **2026-05-28** — [Reinforcement learning is an infrastructure problem](<../models/reinforcement-learning/Reinforcement learning is an infrastructure problem.md>) · `reinforcement-learning` · modal
   Argues that reinforcement learning progress depends heavily on infrastructure for scheduling, iteration, and scalable experiments.
 - **2026-05-27** — [Shipping a Trillion Parameters With a Hub Bucket: Delta Weight Sync in TRL](<../models/reinforcement-learning/Shipping a Trillion Parameters With a Hub Bucket Delta Weight Sync in TRL.md>) · `reinforcement-learning` · huggingface
   In async RL the trainer must ship the full model to the inference engine every step (14 GB for a 7B, ~1 TB for a frontier model); TRL exploits the fact that ~99% of bf16 weights are bit-identical between consecutive optimizer steps and syncs only a sparse safetensors delta via a Hub bucket, cutting Qwen3-0.6B's per-step payload from 1.2 GB to 20-35 MB and enabling fully disaggregated training with no shared cluster or RDMA.
-- **2026-05-20** — [The Agent Execution Tax](<../evals-observability/evaluation/The Agent Execution Tax.md>) · `evaluation` · fireworks
+- **2026-05-20** — [The Agent Execution Tax](<../evals-observability/benchmark-design/The Agent Execution Tax.md>) · `benchmark-design` · fireworks
   Analyzes browser-agent runs to show how reliability, latency, and cost compound into task-level execution tax.
 - **2026-05-19** — [Scaling reinforcement learning at Applied Compute](<../models/reinforcement-learning/Scaling reinforcement learning at Applied Compute.md>) · `reinforcement-learning` · modal
   Case study on scaling reinforcement learning workloads with elastic GPU infrastructure and faster experiment iteration.
 - **2026-05-18** — [Introducing Claude Managed Agents with Modal Sandboxes](<../agents/computer-use/Introducing Claude Managed Agents with Modal Sandboxes.md>) · `computer-use` · modal
   Shows how Claude managed agents can use Modal sandboxes for isolated execution, filesystem state, and scalable agent workloads.
-- **2026-05-12** — [Delta Channels: How We’re Evolving our Runtime for Long-Running Agents](<../agents/planning/Delta Channels How We’re Evolving our Runtime for Long-Running Agents.md>) · `planning` · langchain
+- **2026-05-12** — [Delta Channels: How We’re Evolving our Runtime for Long-Running Agents](<../agents/harness/Delta Channels How We’re Evolving our Runtime for Long-Running Agents.md>) · `harness` · langchain
   Describes Delta Channels as an evolution of the LangGraph runtime for long-running agents, focused on durable state and runtime communication.
 - **2026-05-12** — [Shipping and scaling AI agents](<../agents/planning/Shipping and scaling AI agents.md>) · `planning` · sierra
   Practical guide to shipping and scaling AI agents, including lifecycle, reliability, deployment, and continuous improvement concerns.
@@ -205,8 +203,6 @@
   Argues for treating prompt templates as configuration, improving iteration, versioning, and deployment safety.
 - **2026-04-23** — [How we built RBAC that scales for the enterprise](<../product-engineering/security/How we built RBAC that scales for the enterprise.md>) · `security` · baseten
   Engineering writeup on building RBAC for enterprise AI infrastructure and balancing autonomy with control.
-- **2026-04-21** — [Capacity without conflict: A guide to multi-tenant GPU cluster design for AI-native teams](<gpu-clusters/Capacity without conflict A guide to multi-tenant GPU cluster design for AI-native teams.md>) · `gpu-clusters` · together
-  Guide to multi-tenant GPU cluster design for avoiding capacity conflicts in AI-native teams.
 - **2026-04-20** — [Building an RL theorem-proving workflow on Modal](<../models/reasoning/Building an RL theorem-proving workflow on Modal.md>) · `reasoning` · modal
   Walks through an RL theorem-proving workflow, connecting reasoning tasks, training loops, and scalable remote execution.
 - **2026-04-20** — [The AI engineering stack we built internally — on the platform we ship](<../product-engineering/case-studies/The AI engineering stack we built internally — on the platform we ship.md>) · `case-studies` · cloudflare-ai
@@ -245,7 +241,7 @@
   Case study on using elastic compute to accelerate AI research workflows, including experiment throughput and infrastructure offload.
 - **2026-02-18** — [How Ramp built a full context background coding agent on Modal](<../agents/computer-use/How Ramp built a full context background coding agent on Modal.md>) · `computer-use` · modal
   Case study of a background coding agent architecture that gives agents full project context through remote sandboxes.
-- **2026-02-05** — [Quantifying infrastructure noise in agentic coding evals](<../evals-observability/evaluation/Quantifying infrastructure noise in agentic coding evals.md>) · `evaluation` · anthropic-engineering
+- **2026-02-05** — [Quantifying infrastructure noise in agentic coding evals](<../evals-observability/benchmark-design/Quantifying infrastructure noise in agentic coding evals.md>) · `benchmark-design` · anthropic-engineering
   Quantifies how infrastructure flakiness (timeouts, container variance) injects noise into agentic coding evals, and methods to measure and control for it.
 - **2026-01-22** — [Optimizing inference speed and costs: Lessons learned from large-scale deployments](<../inference/optimization/Optimizing inference speed and costs Lessons learned from large-scale deployments.md>) · `optimization` · together
   Lessons from optimizing inference speed and cost in large-scale deployments.
@@ -257,15 +253,15 @@
   Surveys the state of agent environments, emphasizing execution scale, sandboxing, and environment design.
 - **2025-11-18** — [Host overhead is killing your inference efficiency](<../inference/optimization/Host overhead is killing your inference efficiency.md>) · `optimization` · modal
   Analyzes host overhead as an inference bottleneck and shows why CPU-side orchestration can dominate model-serving efficiency.
-- **2025-09-29** — [Accelerating Qwen3-8B Agent on Intel® Core™ Ultra with Depth-Pruned Draft Models](<../inference/optimization/Accelerating Qwen3-8B Agent on Intel® Core™ Ultra with Depth-Pruned Draft Models.md>) · `optimization` · huggingface
+- **2025-09-29** — [Accelerating Qwen3-8B Agent on Intel® Core™ Ultra with Depth-Pruned Draft Models](<../inference/speculative-decoding/Accelerating Qwen3-8B Agent on Intel® Core™ Ultra with Depth-Pruned Draft Models.md>) · `speculative-decoding` · huggingface
   Accelerates a Qwen3-8B agent on Intel Core Ultra by ~1.3x using speculative decoding with a depth-pruned Qwen3-0.6B int8 draft model in OpenVINO GenAI, showing how draft-model depth pruning raises acceptance rate per unit of draft cost on client hardware.
 - **2025-09-22** — [Build an AI coding platform that scales to millions of monthly sessions](<../agents/computer-use/Build an AI coding platform that scales to millions of monthly sessions.md>) · `computer-use` · modal
   Describes architecture concerns for AI coding platforms that need to scale sandboxed coding sessions to large user volumes.
-- **2025-09-04** — [Building LangGraph: Designing an Agent Runtime from first principles](<../agents/planning/Building LangGraph Designing an Agent Runtime from first principles.md>) · `planning` · langchain
+- **2025-09-04** — [Building LangGraph: Designing an Agent Runtime from first principles](<../agents/harness/Building LangGraph Designing an Agent Runtime from first principles.md>) · `harness` · langchain
   Design history of LangGraph as an agent runtime from first principles, covering control flow, state, durability, and production requirements.
 - **2025-09-04** — [Welcome EmbeddingGemma, Google's new efficient embedding model](<../rag-retrieval/embeddings/Welcome EmbeddingGemma, Google's new efficient embedding model.md>) · `embeddings` · huggingface
   EmbeddingGemma is a 308M-param multilingual embedding model: a Gemma3 backbone converted to bidirectional attention plus mean pooling and two dense layers, trained on ~320B tokens with Matryoshka Representation Learning so its 768-dim output can be truncated to 512/256/128; runs under 200 MB RAM quantized, tops MTEB under 500M, and the post shows a domain fine-tune on MIRIAD that beats models twice its size.
-- **2025-09-02** — [Make your ZeroGPU Spaces go brrr with ahead-of-time compilation](<../inference/optimization/Make your ZeroGPU Spaces go brrr with ahead-of-time compilation.md>) · `optimization` · huggingface
+- **2025-09-02** — [Make your ZeroGPU Spaces go brrr with ahead-of-time compilation](<../inference/kernels/Make your ZeroGPU Spaces go brrr with ahead-of-time compilation.md>) · `kernels` · huggingface
   Uses PyTorch ahead-of-time compilation (torch.export + AOTInductor) instead of just-in-time torch.compile so short-lived ZeroGPU processes keep the compiled artifact, giving 1.3x-1.8x speedups on Flux, Wan and LTX; also covers FP8 quantization, dynamic shapes and multi-compile for varying resolutions.
 - **2025-08-19** — [How to fine-tune gpt-oss-120b with Baseten and Axolotl](<../models/fine-tuning/How to fine-tune gpt-oss-120b with Baseten and Axolotl.md>) · `fine-tuning` · baseten
   Guide to fine-tuning GPT-OSS 120B with Axolotl and scalable training infrastructure.
@@ -279,18 +275,12 @@
   Explains GPU memory snapshots for reducing cold-start latency and preserving loaded model state across invocations.
 - **2025-06-26** — [Gemma 3n fully available in the open-source ecosystem!](<../models/releases/Gemma 3n fully available in the open-source ecosystem!.md>) · `releases` · huggingface
   Gemma 3n E2B/E4B: models with 5B and 8B actual parameters that need only 2B/4B worth of VRAM (2-3 GB) thanks to per-layer embeddings and MatFormer nesting, paired with a MobileNet-V5-300 vision encoder (60 FPS on Pixel, beating ViT-Giant with 3x fewer params) and a USM-based audio encoder processing 160ms chunks.
-- **2025-06-23** — [How we built Multi-cloud Capacity Management (MCM)](<gpu-clusters/How we built Multi-cloud Capacity Management (MCM).md>) · `gpu-clusters` · baseten
-  Engineering writeup on building multi-cloud capacity management for inference infrastructure.
-- **2025-06-09** — [How Baseten multi-cloud capacity management unifies deployments](<gpu-clusters/How Baseten multi-cloud capacity management unifies deployments.md>) · `gpu-clusters` · baseten
-  Explains multi-cloud capacity management for unifying cloud, self-hosted, and hybrid inference deployments.
 - **2025-06-03** — [No GPU left behind: Unlocking Efficiency with Co-located vLLM in TRL](<../models/reinforcement-learning/No GPU left behind Unlocking Efficiency with Co-located vLLM in TRL.md>) · `reinforcement-learning` · huggingface
   In TRL's GRPO setup, running vLLM in server mode leaves generation and training GPUs idling in turn; co-locating vLLM in the same process/GPUs as the trainer (sharing memory via a gpu_memory_utilization split and sleep/wake between phases) removes the idle gap, with throughput and GPU-utilization numbers across model sizes and TP configs.
 - **2025-05-21** — [How we Built Scalable & Customizable Dashboards](<../evals-observability/monitoring/How we Built Scalable & Customizable Dashboards.md>) · `monitoring` · langfuse
   Engineering writeup on building scalable customizable dashboards for observability data, covering query, rendering, and product architecture concerns.
 - **2025-05-13** — [Blazingly fast whisper transcriptions with Inference Endpoints](<../inference/optimization/Blazingly fast whisper transcriptions with Inference Endpoints.md>) · `optimization` · huggingface
   An optimized Whisper deployment on Inference Endpoints built on vLLM, targeting Ada Lovelace GPUs (L4/L40s) to unlock torch.compile JIT kernels, CUDA graphs and a float8 KV cache — with the resulting latency/throughput gains for transcription workloads.
-- **2025-05-07** — [Linear programming for fun and profit](<cost/Linear programming for fun and profit.md>) · `cost` · modal
-  Shows how linear programming can allocate compute resources under constraints, useful for GPU scheduling and cost control.
 - **2025-04-03** — [Resilient observability by design](<../evals-observability/monitoring/Resilient observability by design.md>) · `monitoring` · braintrust
   Describes resilient observability design for AI systems, including reliability considerations for storing, querying, and using production traces.
 - **2025-03-27** — [Introducing End-to-End OpenTelemetry Support in LangSmith](<../evals-observability/tracing/Introducing End-to-End OpenTelemetry Support in LangSmith.md>) · `tracing` · langchain
@@ -325,7 +315,7 @@
   Llama 3.2 adds 11B/90B vision models (cross-attention adapter over a frozen text backbone, via the new MllamaForConditionalGeneration) and 1B/3B on-device text models, plus a vision-capable Llama Guard 3 and a 1B Llama Guard for input/output safety classification.
 - **2024-09-05** — [Supercharging NVIDIA H200 and H100 GPU Cluster Performance With Together Kernel Collection](<../inference/hardware/Supercharging NVIDIA H200 and H100 GPU Cluster Performance With Together Kernel Collection.md>) · `hardware` · together
   Shows how kernel work improves H200 and H100 GPU cluster performance.
-- **2024-08-13** — [Introduction to ggml](<../inference/optimization/Introduction to ggml.md>) · `optimization` · huggingface
+- **2024-08-13** — [Introduction to ggml](<../inference/kernels/Introduction to ggml.md>) · `kernels` · huggingface
   A hands-on introduction to ggml — the C/C++ tensor library behind llama.cpp, whisper.cpp, ollama and LM Studio — covering its context/graph memory model, GGUF file format, quantized tensor types, and backend dispatch (CPU/CUDA/Metal) via a worked matrix-multiplication example.
 - **2024-07-25** — [Deploying custom ComfyUI workflows as APIs](<../models/multimodal/Deploying custom ComfyUI workflows as APIs.md>) · `multimodal` · baseten
   Shows how to deploy custom ComfyUI image-generation workflows behind API endpoints.
@@ -339,15 +329,13 @@
   Debugs why Mistral-7B bf16 training converged under DeepSpeed but not FSDP: DeepSpeed silently upcasts master weights to fp32 while FSDP flattens in the model dtype; explains the mixed-precision differences and how Accelerate now aligns them.
 - **2024-06-06** — [How to catch crypto miners using syscall signatures](<../product-engineering/security/How to catch crypto miners using syscall signatures.md>) · `security` · modal
   Explains detecting abusive GPU workloads with syscall signatures, a useful pattern for securing shared AI infrastructure.
-- **2024-06-03** — [GPUs on-demand: Not serverless, not reserved, but some third thing](<gpu-clusters/GPUs on-demand Not serverless, not reserved, but some third thing.md>) · `gpu-clusters` · fireworks
-  Explains on-demand GPU infrastructure as a middle ground between serverless and reserved capacity.
 - **2024-05-01** — [Powerful ASR + diarization + speculative decoding with Hugging Face Inference Endpoints](<../inference/serving/Powerful ASR + diarization + speculative decoding with Hugging Face Inference Endpoints.md>) · `serving` · huggingface
   Walks through a custom Inference Endpoints handler that chains Whisper-large-v3 ASR, Pyannote diarization and speculative decoding (with a distil-whisper assistant model and SDPA/Flash Attention 2) into one deployable pipeline, including the pre/post-processing needed to align transcript timestamps with speaker turns.
 - **2024-03-28** — [Using fractional H100 GPUs for efficient model serving](<../inference/serving/Using fractional H100 GPUs for efficient model serving.md>) · `serving` · baseten
   Explains fractional H100 usage for efficient model serving and better GPU utilization.
 - **2024-03-14** — [What I learned from looking at 900 most popular open source AI tools](<../industry/trends/What I learned from looking at 900 most popular open source AI tools.md>) · `trends` · chip-huyen
   Maps 900 open-source AI tools into infrastructure, model-development, and application-development layers, highlighting growth in agents, prompt engineering, vector search, evaluation, and inference tooling.
-- **2024-02-28** — [Predictive Human Preference: From Model Ranking to Model Routing](<../evals-observability/evaluation/Predictive Human Preference From Model Ranking to Model Routing.md>) · `evaluation` · chip-huyen
+- **2024-02-28** — [Predictive Human Preference: From Model Ranking to Model Routing](<../evals-observability/benchmark-design/Predictive Human Preference From Model Ranking to Model Routing.md>) · `benchmark-design` · chip-huyen
   Describes predictive human preference for model ranking and model routing, using preference models and evaluations to choose among LLMs by quality, cost, and latency.
 - **2024-02-20** — [Why GPU utilization matters for model inference](<../inference/hardware/Why GPU utilization matters for model inference.md>) · `hardware` · baseten
   Explains why GPU utilization is central to inference cost and performance.

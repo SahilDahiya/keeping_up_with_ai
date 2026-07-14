@@ -2,8 +2,7 @@
 title: 'Measuring what matters: An intro to AI evals'
 topic: evals-observability
 subtopic: evaluation
-secondary_topics:
-- evals-observability/testing
+secondary_topics: []
 summary: Intro to AI evals focused on choosing metrics that reflect product quality,
   building datasets, and measuring what matters for users.
 source: braintrust

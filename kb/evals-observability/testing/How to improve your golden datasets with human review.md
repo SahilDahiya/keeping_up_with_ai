@@ -2,8 +2,7 @@
 title: How to improve your golden datasets with human review
 topic: evals-observability
 subtopic: testing
-secondary_topics:
-- evals-observability/evaluation
+secondary_topics: []
 summary: Explains how human review improves golden datasets for evals by correcting
   labels, surfacing ambiguity, and tightening quality standards.
 source: braintrust

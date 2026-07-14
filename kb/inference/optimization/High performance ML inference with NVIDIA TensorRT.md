@@ -2,8 +2,7 @@
 title: High performance ML inference with NVIDIA TensorRT
 topic: inference
 subtopic: optimization
-secondary_topics:
-- inference/hardware
+secondary_topics: []
 summary: Explains high-performance model inference with NVIDIA TensorRT and related
   deployment considerations.
 source: baseten

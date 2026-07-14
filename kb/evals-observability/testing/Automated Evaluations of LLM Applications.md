@@ -2,8 +2,7 @@
 title: Automated Evaluations of LLM Applications
 topic: evals-observability
 subtopic: testing
-secondary_topics:
-- evals-observability/evaluation
+secondary_topics: []
 summary: Guide to automated evaluations for LLM applications, including datasets,
   scorers, experiment runs, and continuous quality checks.
 source: langfuse

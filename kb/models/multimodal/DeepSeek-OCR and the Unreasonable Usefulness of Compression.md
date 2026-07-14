@@ -2,8 +2,7 @@
 title: DeepSeek-OCR and the Unreasonable Usefulness of Compression
 topic: models
 subtopic: multimodal
-secondary_topics:
-- models/reasoning
+secondary_topics: []
 summary: Explains DeepSeek-OCR and why compression can be useful for multimodal model
   workflows.
 source: baseten

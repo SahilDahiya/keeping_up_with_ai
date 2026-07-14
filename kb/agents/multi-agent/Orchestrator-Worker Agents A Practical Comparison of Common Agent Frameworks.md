@@ -2,8 +2,7 @@
 title: 'Orchestrator-Worker Agents: A Practical Comparison of Common Agent Frameworks'
 topic: agents
 subtopic: multi-agent
-secondary_topics:
-- agents/planning
+secondary_topics: []
 summary: Compares orchestrator-worker agent frameworks and clarifies when this multi-agent
   pattern is useful.
 source: arize

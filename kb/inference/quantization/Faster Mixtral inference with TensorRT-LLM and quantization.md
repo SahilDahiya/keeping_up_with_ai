@@ -2,8 +2,7 @@
 title: Faster Mixtral inference with TensorRT-LLM and quantization
 topic: inference
 subtopic: quantization
-secondary_topics:
-- inference/optimization
+secondary_topics: []
 summary: Shows how TensorRT-LLM and quantization improve Mixtral inference performance.
 source: baseten
 url: https://www.baseten.co/blog/faster-mixtral-inference-with-tensorrt-llm-and-quantization/

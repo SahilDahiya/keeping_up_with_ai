@@ -3,7 +3,6 @@ title: 'The Agent Deep Dive: David Zhang’s Open Deep Research'
 topic: agents
 subtopic: planning
 secondary_topics:
-- agents/tool-use
 - evals-observability/tracing
 summary: Deep dive on Open Deep Research as an agentic system, covering planning,
   tool use, research workflows, and trace-based inspection.

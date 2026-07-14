@@ -2,8 +2,7 @@
 title: 'Driving model performance optimization: 2024 highlights'
 topic: inference
 subtopic: optimization
-secondary_topics:
-- inference/serving
+secondary_topics: []
 summary: Summarizes concrete model-performance optimization work across inference
   serving, batching, and hardware.
 source: baseten

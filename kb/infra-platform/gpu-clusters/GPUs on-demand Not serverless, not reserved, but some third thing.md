@@ -2,8 +2,7 @@
 title: 'GPUs on-demand: Not serverless, not reserved, but some third thing'
 topic: infra-platform
 subtopic: gpu-clusters
-secondary_topics:
-- infra-platform/cost
+secondary_topics: []
 summary: Explains on-demand GPU infrastructure as a middle ground between serverless
   and reserved capacity.
 source: fireworks

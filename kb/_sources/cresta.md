@@ -38,7 +38,7 @@
   Detailed build story for a research agent over conversation analytics, covering agent design and domain-specific workflow constraints.
 - **2025-11-25** — [Building and Deploying Production‑Grade AI Agents: Cresta’s End‑to‑End Approach](<../agents/planning/Building and Deploying Production‑Grade AI Agents Cresta’s End‑to‑End Approach.md>) · `planning` · cresta
   End-to-end guide to production AI agent deployment, including design, launch, monitoring, and operational controls.
-- **2025-10-27** — [Why You Can’t Trust Out-of-the-Box Evaluators](<../evals-observability/evaluation/Why You Can’t Trust Out-of-the-Box Evaluators.md>) · `evaluation` · cresta
+- **2025-10-27** — [Why You Can’t Trust Out-of-the-Box Evaluators](<../evals-observability/llm-as-judge/Why You Can’t Trust Out-of-the-Box Evaluators.md>) · `llm-as-judge` · cresta
   Explains why generic evaluators often fail in production and why domain-specific calibration is needed.
 - **2025-10-21** — [Engineering for Real-Time Voice Agent Latency](<../inference/serving/Engineering for Real-Time Voice Agent Latency.md>) · `serving` · cresta
   Technical discussion of latency in real-time voice agents and the engineering constraints behind responsive spoken interaction.

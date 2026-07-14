@@ -4,7 +4,6 @@ topic: product-engineering
 subtopic: architecture
 secondary_topics:
 - agents/planning
-- product-engineering/security
 summary: Explains what distinguishes enterprise-grade agents from raw LLMs, including
   integrations, policy controls, reliability, and operational lifecycle.
 source: sierra

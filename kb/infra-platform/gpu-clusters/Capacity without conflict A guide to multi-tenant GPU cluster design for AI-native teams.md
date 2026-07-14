@@ -3,8 +3,7 @@ title: 'Capacity without conflict: A guide to multi-tenant GPU cluster design fo
   AI-native teams'
 topic: infra-platform
 subtopic: gpu-clusters
-secondary_topics:
-- infra-platform/deployment
+secondary_topics: []
 summary: Guide to multi-tenant GPU cluster design for avoiding capacity conflicts
   in AI-native teams.
 source: together

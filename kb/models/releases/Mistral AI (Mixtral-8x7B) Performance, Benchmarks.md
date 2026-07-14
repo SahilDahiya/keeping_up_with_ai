@@ -2,8 +2,7 @@
 title: 'Mistral AI (Mixtral-8x7B): Performance, Benchmarks'
 topic: models
 subtopic: releases
-secondary_topics:
-- models/benchmarks
+secondary_topics: []
 summary: Technical overview of Mistral and Mixtral model behavior, performance, and
   benchmark positioning.
 source: arize

@@ -2,8 +2,7 @@
 title: How we made the fastest GPT-OSS on NVIDIA GPUs 60% faster
 topic: inference
 subtopic: optimization
-secondary_topics:
-- inference/hardware
+secondary_topics: []
 summary: Explains optimization work that made GPT-OSS inference faster on NVIDIA GPUs.
 source: baseten
 url: https://www.baseten.co/blog/how-we-made-the-fastest-gpt-oss-on-nvidia-gpus-60-percent-faster/

@@ -2,8 +2,7 @@
 title: 'FAQ: Building LLMs with RedPajama-v2, a 30 trillion token web dataset'
 topic: models
 subtopic: fine-tuning
-secondary_topics:
-- models/benchmarks
+secondary_topics: []
 summary: FAQ-style technical explanation of building LLMs with the RedPajama-v2 dataset.
 source: together
 url: https://www.together.ai/blog/redpajama-v2-faq

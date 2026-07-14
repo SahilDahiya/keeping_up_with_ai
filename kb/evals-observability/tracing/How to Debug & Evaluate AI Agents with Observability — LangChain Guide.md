@@ -3,7 +3,6 @@ title: How to Debug & Evaluate AI Agents with Observability — LangChain Guide
 topic: evals-observability
 subtopic: tracing
 secondary_topics:
-- evals-observability/evaluation
 - agents/planning
 summary: Guide to debugging and evaluating AI agents with observability, using traces
   to inspect tool calls, intermediate steps, and failure modes.

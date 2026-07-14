@@ -2,8 +2,7 @@
 title: 'The Mamba in the Llama: Distilling and Accelerating Hybrid Models'
 topic: models
 subtopic: fine-tuning
-secondary_topics:
-- models/reasoning
+secondary_topics: []
 summary: Explains distilling and accelerating hybrid Mamba/Transformer models.
 source: together
 url: https://www.together.ai/blog/the-mamba-in-the-llama-distilling-and-accelerating-hybrid-models

@@ -2,8 +2,7 @@
 title: Comparing OpenAI Swarm with other Multi Agent Frameworks
 topic: agents
 subtopic: multi-agent
-secondary_topics:
-- agents/tool-use
+secondary_topics: []
 summary: Compares OpenAI Swarm with other multi-agent frameworks, highlighting orchestration
   patterns and framework tradeoffs.
 source: arize

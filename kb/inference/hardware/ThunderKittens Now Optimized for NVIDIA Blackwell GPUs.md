@@ -2,8 +2,7 @@
 title: ThunderKittens Now Optimized for NVIDIA Blackwell GPUs
 topic: inference
 subtopic: hardware
-secondary_topics:
-- inference/optimization
+secondary_topics: []
 summary: Describes ThunderKittens optimizations for NVIDIA Blackwell GPUs.
 source: together
 url: https://www.together.ai/blog/thunderkittens-nvidia-blackwell-gpus

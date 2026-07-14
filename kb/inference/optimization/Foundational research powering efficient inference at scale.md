@@ -2,8 +2,7 @@
 title: Foundational research powering efficient inference at scale
 topic: inference
 subtopic: optimization
-secondary_topics:
-- inference/serving
+secondary_topics: []
 summary: Summarizes research lines behind efficient inference at production scale.
 source: together
 url: https://www.together.ai/blog/foundational-research-powering-efficient-inference-at-scale

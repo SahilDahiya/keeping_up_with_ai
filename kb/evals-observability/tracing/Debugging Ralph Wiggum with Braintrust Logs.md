@@ -2,8 +2,7 @@
 title: Debugging Ralph Wiggum with Braintrust Logs
 topic: evals-observability
 subtopic: tracing
-secondary_topics:
-- evals-observability/monitoring
+secondary_topics: []
 summary: Debugging walkthrough using Braintrust logs to inspect AI application behavior,
   identify failure causes, and close the loop with improvements.
 source: braintrust

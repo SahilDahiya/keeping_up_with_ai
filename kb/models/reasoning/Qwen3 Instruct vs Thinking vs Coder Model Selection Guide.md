@@ -2,8 +2,7 @@
 title: 'Qwen3 Instruct vs Thinking vs Coder: Model Selection Guide'
 topic: models
 subtopic: reasoning
-secondary_topics:
-- models/benchmarks
+secondary_topics: []
 summary: Compares Qwen3 Instruct, Thinking, and Coder variants for model selection
   across reasoning and coding tasks.
 source: fireworks

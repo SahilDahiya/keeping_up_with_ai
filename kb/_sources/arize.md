@@ -4,17 +4,17 @@
 
 - **2026-07-13** — [How do you make an LLM, anyway? Microsoft just published a textbook.](<../models/reinforcement-learning/How do you make an LLM, anyway Microsoft just published a textbook.md>) · `reinforcement-learning` · arize
   Breaks down Microsoft's 109-page MAI-Thinking-1 technical report: 30-trillion-token pretraining on 8,192 GPUs with a 54.6%-code data mix, mid-training context extension from 16K to 262K tokens, and RL post-training with reward-hacking countermeasures like network-isolated coding environments and time-traveled repo snapshots with future commits scrubbed.
+- **2026-07-10** — [What is a loop in AI engineering, anyway?](<../agents/harness/What is a loop in AI engineering, anyway.md>) · `harness` · arize
+  Defines feedback loops in AI engineering and why loops are central to agent and eval system design.
 - **2026-07-10** — [3 production patterns for AI agents and how to evaluate each one](<../agents/planning/3 production patterns for AI agents and how to evaluate each one.md>) · `planning` · arize
   Breaks production agents into local coding agents, in-app assistants, and operational agents, then maps each pattern to different harness, rollout, and evaluation needs.
-- **2026-07-10** — [What is a loop in AI engineering, anyway?](<../agents/planning/What is a loop in AI engineering, anyway.md>) · `planning` · arize
-  Defines feedback loops in AI engineering and why loops are central to agent and eval system design.
 - **2026-07-09** — [Trace before you migrate: Measuring Kubernetes bottlenecks in AI agent sandboxes](<../infra-platform/deployment/Trace before you migrate Measuring Kubernetes bottlenecks in AI agent sandboxes.md>) · `deployment` · arize
   Shows how tracing can diagnose Kubernetes bottlenecks in AI agent sandboxes before migration decisions.
 - **2026-07-08** — [The agent is the user now: lessons from the founder of WorkOS](<../product-engineering/security/The agent is the user now lessons from the founder of WorkOS.md>) · `security` · arize
   Interview-driven discussion of agents as users, covering identity, permissions, memory, evals, and feedback loops as core production-agent infrastructure.
 - **2026-07-07** — [Evals in CI: How to write your LLM evals as tests with Arize Phoenix](<../evals-observability/testing/Evals in CI How to write your LLM evals as tests with Arize Phoenix.md>) · `testing` · arize
   Practical guide to writing LLM evals as CI tests with Arize Phoenix, including how to start with executable checks.
-- **2026-07-06** — [Own the loop: A field guide to agent harnesses](<../agents/planning/Own the loop A field guide to agent harnesses.md>) · `planning` · arize
+- **2026-07-06** — [Own the loop: A field guide to agent harnesses](<../agents/harness/Own the loop A field guide to agent harnesses.md>) · `harness` · arize
   Field guide to owning the agent harness loop, from task control to measurement and iteration.
 - **2026-07-02** — [How to evaluate AI agents, avoid reward hacking, and build better specs](<../evals-observability/evaluation/How to evaluate AI agents, avoid reward hacking, and build better specs.md>) · `evaluation` · arize
   Connects agent evaluation with specification quality, including reward hacking risks and tighter behavioral contracts.
@@ -28,11 +28,11 @@
   Describes a reference implementation for instrumenting agents across frameworks, useful for standardizing trace capture.
 - **2026-06-19** — [Why AI token costs don't tell you if your AI is working](<../infra-platform/cost/Why AI token costs don't tell you if your AI is working.md>) · `cost` · arize
   Explains why token cost alone is an incomplete production metric and how quality, latency, and outcomes must be measured together.
-- **2026-06-18** — [What is an agent harness? Why harnesses are replacing agent frameworks](<../agents/planning/What is an agent harness Why harnesses are replacing agent frameworks.md>) · `planning` · arize
+- **2026-06-18** — [What is an agent harness? Why harnesses are replacing agent frameworks](<../agents/harness/What is an agent harness Why harnesses are replacing agent frameworks.md>) · `harness` · arize
   Explains why agent harnesses are replacing simple framework use as the unit of production agent engineering.
 - **2026-06-17** — [Two labs started dreaming, and they built two different architectures](<../models/reasoning/Two labs started dreaming, and they built two different architectures.md>) · `reasoning` · arize
   Compares two different AI architecture directions from research labs, focusing on design choices and implications.
-- **2026-06-16** — [What is agent orchestration? Frameworks, runtimes, and observability explained](<../agents/planning/What is agent orchestration Frameworks, runtimes, and observability explained.md>) · `planning` · arize
+- **2026-06-16** — [What is agent orchestration? Frameworks, runtimes, and observability explained](<../agents/harness/What is agent orchestration Frameworks, runtimes, and observability explained.md>) · `harness` · arize
   Explains agent orchestration across frameworks, runtimes, and observability concerns.
 - **2026-06-15** — [One agent, two trace destinations: Arize AX + Databricks Unity Catalog](<../evals-observability/tracing/One agent, two trace destinations Arize AX + Databricks Unity Catalog.md>) · `tracing` · arize
   Shows how a single agent can emit traces to multiple destinations, highlighting interoperability concerns for observability stacks.
@@ -48,9 +48,9 @@
   Introduces Arize AX updates aimed at building an AI factory for self-improving agents through traces, evals, and feedback loops.
 - **2026-06-02** — [The end of fine-tuning: Why evals, context, and traces matter more](<../models/fine-tuning/The end of fine-tuning Why evals, context, and traces matter more.md>) · `fine-tuning` · arize
   Argues that evals, context, and traces can reduce the need for fine-tuning in many production AI workflows.
-- **2026-06-02** — [AI benchmarks are breaking. Trace analysis is what comes next.](<../evals-observability/evaluation/AI benchmarks are breaking. Trace analysis is what comes next.md>) · `evaluation` · arize
+- **2026-06-02** — [AI benchmarks are breaking. Trace analysis is what comes next.](<../evals-observability/benchmark-design/AI benchmarks are breaking. Trace analysis is what comes next.md>) · `benchmark-design` · arize
   Explains why outcome-only agent benchmarks are losing resolution as agents exploit tests, and argues for trace analysis to distinguish real solving from benchmark gaming.
-- **2026-06-01** — [How Hermes implements an open source agent harness architecture](<../agents/planning/How Hermes implements an open source agent harness architecture.md>) · `planning` · arize
+- **2026-06-01** — [How Hermes implements an open source agent harness architecture](<../agents/harness/How Hermes implements an open source agent harness architecture.md>) · `harness` · arize
   Breaks down Hermes as an open-source agent harness architecture, focusing on components, control flow, and implementation boundaries.
 - **2026-06-01** — [The best eval harness for production AI and agents: A comparison](<../evals-observability/testing/The best eval harness for production AI and agents A comparison.md>) · `testing` · arize
   Compares production AI eval harnesses and highlights the design dimensions that matter for agents and applications.
@@ -60,7 +60,7 @@
   Shows how production traces can feed evaluation and improvement loops for AI agents rather than remaining passive monitoring data.
 - **2026-05-26** — [How to ship a local LLM that matches frontier LLMs with evals and prompt engineering](<../models/fine-tuning/How to ship a local LLM that matches frontier LLMs with evals and prompt engineering.md>) · `fine-tuning` · arize
   Explains how evals and prompt engineering can make smaller local models viable substitutes for frontier models on constrained tasks.
-- **2026-05-21** — [How to build LLM-as-a-Judge evaluators that hold up in production](<../evals-observability/evaluation/How to build LLM-as-a-Judge evaluators that hold up in production.md>) · `evaluation` · arize
+- **2026-05-21** — [How to build LLM-as-a-Judge evaluators that hold up in production](<../evals-observability/llm-as-judge/How to build LLM-as-a-Judge evaluators that hold up in production.md>) · `llm-as-judge` · arize
   Details how to design LLM-as-judge evaluators that remain useful in production, including calibration and failure modes.
 - **2026-05-20** — [What we learned testing 7 models under the same agent harness](<../evals-observability/testing/What we learned testing 7 models under the same agent harness.md>) · `testing` · arize
   Compares seven models under a shared agent harness, showing how harness-controlled tests expose model behavior differences.
@@ -74,7 +74,7 @@
   Analyzes instruction-following benchmark changes and what they imply for tracking model quality over time.
 - **2026-05-11** — [From observability to context: What’s next for Arize Phoenix](<../evals-observability/tracing/From observability to context What’s next for Arize Phoenix.md>) · `tracing` · arize
   Connects LLM observability with context management, showing how traces and application state can become reusable context for better agents.
-- **2026-05-07** — [Agent harnesses have an expiration date](<../agents/planning/Agent harnesses have an expiration date.md>) · `planning` · arize
+- **2026-05-07** — [Agent harnesses have an expiration date](<../agents/harness/Agent harnesses have an expiration date.md>) · `harness` · arize
   Argues that agent harnesses need lifecycle management as tools, models, and objectives drift, with implications for ongoing evaluation.
 - **2026-05-05** — [AI agent evaluation: How to test, debug, and improve agents in production](<../evals-observability/testing/AI agent evaluation How to test, debug, and improve agents in production.md>) · `testing` · arize
   Explains how to test, debug, and improve AI agents in production with structured evaluation and observability.
@@ -92,7 +92,7 @@
   Explains context graphs as an enterprise memory layer for agents and retrieval-heavy AI systems.
 - **2026-04-28** — [Context management in agent harnesses: memory, files, and subagents](<../agents/memory-context/Context management in agent harnesses memory, files, and subagents.md>) · `memory-context` · arize
   Detailed guide to context management in agent harnesses, including memory, files, subagents, and strategies for working within context limits.
-- **2026-04-24** — [What is an agent harness?](<../agents/planning/What is an agent harness.md>) · `planning` · arize
+- **2026-04-24** — [What is an agent harness?](<../agents/harness/What is an agent harness.md>) · `harness` · arize
   Defines an agent harness and the responsibilities it carries for control flow, state, tools, and testing.
 - **2026-04-23** — [Beyond models: How context and evals make agents work in production](<../evals-observability/evaluation/Beyond models How context and evals make agents work in production.md>) · `evaluation` · arize
   Explains why production agents depend on context quality and eval loops, not just model choice, and outlines how to evaluate behavior on real workflows.
@@ -164,7 +164,7 @@
   Survey of prompt testing and optimization tools for LLM and multi-agent systems, focused on iteration workflows, evaluation support, and production prompt quality.
 - **2025-10-14** — [Optimizing Coding Agent Rules (./clinerules) for Improved Accuracy](<../agents/computer-use/Optimizing Coding Agent Rules (.clinerules) for Improved Accuracy.md>) · `computer-use` · arize
   Explains how coding-agent rule files affect accuracy and how to optimize them for better agent behavior.
-- **2025-10-08** — [Should I Use the Same LLM for My Eval as My Agent? Testing Self-Evaluation Bias](<../evals-observability/evaluation/Should I Use the Same LLM for My Eval as My Agent Testing Self-Evaluation Bias.md>) · `evaluation` · arize
+- **2025-10-08** — [Should I Use the Same LLM for My Eval as My Agent? Testing Self-Evaluation Bias](<../evals-observability/llm-as-judge/Should I Use the Same LLM for My Eval as My Agent Testing Self-Evaluation Bias.md>) · `llm-as-judge` · arize
   Tests self-evaluation bias when using the same model for agent behavior and evaluation, with guidance for eval design.
 - **2025-09-24** — [Testing Binary vs Score Evals on the Latest Models](<../evals-observability/testing/Testing Binary vs Score Evals on the Latest Models.md>) · `testing` · arize
   Compares binary and score-based LLM evals across models to clarify tradeoffs in evaluator design.
@@ -228,11 +228,11 @@
   Case study on adding audio support with OpenAI models, covering product and engineering lessons from building multimodal support.
 - **2024-12-10** — [Merge, Ensemble, and Cooperate! A Survey on Collaborative LLM Strategies](<../agents/multi-agent/Merge, Ensemble, and Cooperate! A Survey on Collaborative LLM Strategies.md>) · `multi-agent` · arize
   Summarizes collaborative LLM strategies such as merging, ensembling, and cooperation for multi-model or multi-agent systems.
-- **2024-12-04** — [AI Agent Workflows and Architectures Masterclass](<../agents/planning/AI Agent Workflows and Architectures Masterclass.md>) · `planning` · arize
+- **2024-12-04** — [AI Agent Workflows and Architectures Masterclass](<../agents/harness/AI Agent Workflows and Architectures Masterclass.md>) · `harness` · arize
   Introduces practical agent workflow and architecture patterns, emphasizing simple tool-calling loops and design choices over vague autonomy claims.
 - **2024-12-03** — [Building an AI Agent that Thrives in the Real World](<../agents/planning/Building an AI Agent that Thrives in the Real World.md>) · `planning` · arize
   Practical guidance for building production AI agents that survive real-world failures through monitoring, iteration, and reliability practices.
-- **2024-11-22** — [Agent-as-a-Judge: Evaluate Agents with Agents](<../evals-observability/evaluation/Agent-as-a-Judge Evaluate Agents with Agents.md>) · `evaluation` · arize
+- **2024-11-22** — [Agent-as-a-Judge: Evaluate Agents with Agents](<../evals-observability/llm-as-judge/Agent-as-a-Judge Evaluate Agents with Agents.md>) · `llm-as-judge` · arize
   Summarizes Agent-as-a-Judge, an evaluation pattern where agent systems critique other agent systems instead of relying only on final outcomes or manual review.
 - **2024-11-19** — [Instrumenting Your LLM Application: Arize Phoenix and Vercel AI SDK](<../evals-observability/tracing/Instrumenting Your LLM Application Arize Phoenix and Vercel AI SDK.md>) · `tracing` · arize
   Shows how to instrument an LLM application with Phoenix and Vercel AI SDK so traces are available for debugging and evaluation.
@@ -240,7 +240,7 @@
   Covers testing and monitoring practices for improving LLM application safety and reliability in production.
 - **2024-11-01** — [Arize, Vertex AI API: Evaluation Workflows to Accelerate Generative App Development and AI ROI](<../evals-observability/evaluation/Arize, Vertex AI API Evaluation Workflows to Accelerate Generative App Development and AI ROI.md>) · `evaluation` · arize
   Describes Arize and Vertex AI API evaluation workflows for accelerating generative application development and measuring AI ROI.
-- **2024-10-23** — [Techniques for Self-Improving LLM Evals](<../evals-observability/evaluation/Techniques for Self-Improving LLM Evals.md>) · `evaluation` · arize
+- **2024-10-23** — [Techniques for Self-Improving LLM Evals](<../evals-observability/llm-as-judge/Techniques for Self-Improving LLM Evals.md>) · `llm-as-judge` · arize
   Covers techniques for making LLM evals self-improving through feedback, iteration, and evaluator refinement.
 - **2024-10-16** — [Comparing OpenAI Swarm with other Multi Agent Frameworks](<../agents/multi-agent/Comparing OpenAI Swarm with other Multi Agent Frameworks.md>) · `multi-agent` · arize
   Compares OpenAI Swarm with other multi-agent frameworks, highlighting orchestration patterns and framework tradeoffs.
@@ -254,7 +254,7 @@
   Shows how to build AI assistants with Vectara-agentic and Arize, tying retrieval, agent tools, and observability together.
 - **2024-09-30** — [Arize AI + MongoDB: Leveraging Agent Evaluation and Memory to Build Robust Agentic Systems](<../agents/memory-context/Arize AI + MongoDB Leveraging Agent Evaluation and Memory to Build Robust Agentic Systems.md>) · `memory-context` · arize
   Explains how Arize and MongoDB combine agent evaluation and memory patterns for more robust agentic systems.
-- **2024-09-30** — [Best Practices for Selecting the Right Model for LLM-as-a-Judge Evaluations](<../evals-observability/evaluation/Best Practices for Selecting the Right Model for LLM-as-a-Judge Evaluations.md>) · `evaluation` · arize
+- **2024-09-30** — [Best Practices for Selecting the Right Model for LLM-as-a-Judge Evaluations](<../evals-observability/llm-as-judge/Best Practices for Selecting the Right Model for LLM-as-a-Judge Evaluations.md>) · `llm-as-judge` · arize
   Best practices for choosing an LLM-as-judge evaluation model, including tradeoffs in evaluator quality and fit for task.
 - **2024-09-27** — [Exploring OpenAI's o1-preview and o1-mini](<../models/reasoning/Exploring OpenAI's o1-preview and o1-mini.md>) · `reasoning` · arize
   Analyzes OpenAI o1-preview and o1-mini from a reasoning-model perspective, including expected strengths, limits, and evaluation implications for production teams.
@@ -266,9 +266,9 @@
   Explains how to create and validate synthetic datasets for LLM evaluation and experimentation workflows.
 - **2024-08-30** — [Evaluating an Image Classifier](<../evals-observability/evaluation/Evaluating an Image Classifier.md>) · `evaluation` · arize
   Tutorial on evaluating an image classifier with Phoenix, using multimodal experiment and tracing workflows.
-- **2024-08-16** — [Judging the Judges: Evaluating Alignment and Vulnerabilities in LLMs-as-Judges](<../evals-observability/evaluation/Judging the Judges Evaluating Alignment and Vulnerabilities in LLMs-as-Judges.md>) · `evaluation` · arize
+- **2024-08-16** — [Judging the Judges: Evaluating Alignment and Vulnerabilities in LLMs-as-Judges](<../evals-observability/llm-as-judge/Judging the Judges Evaluating Alignment and Vulnerabilities in LLMs-as-Judges.md>) · `llm-as-judge` · arize
   Analyzes vulnerabilities and alignment issues in LLM-as-judge systems, with implications for production evaluator design.
-- **2024-08-08** — [LlamaIndex Workflows: Navigating a New Way To Build Cyclical Agents](<../agents/planning/LlamaIndex Workflows Navigating a New Way To Build Cyclical Agents.md>) · `planning` · arize
+- **2024-08-08** — [LlamaIndex Workflows: Navigating a New Way To Build Cyclical Agents](<../agents/harness/LlamaIndex Workflows Navigating a New Way To Build Cyclical Agents.md>) · `harness` · arize
   Explains LlamaIndex Workflows as a pattern for building cyclical agents with explicit control flow.
 - **2024-08-06** — [Breaking Down Meta's Llama 3 Herd of Models](<../models/releases/Breaking Down Meta's Llama 3 Herd of Models.md>) · `releases` · arize
   Technical overview of Meta's Llama 3 model family, including architecture, capabilities, and benchmark interpretation.
@@ -286,9 +286,9 @@
   Explains sparse autoencoders and interpretability research from OpenAI and Anthropic as tools for understanding model internals.
 - **2024-05-30** — [LLM Summarization: Getting To Production](<../product-engineering/architecture/LLM Summarization Getting To Production.md>) · `architecture` · arize
   Covers production considerations for LLM summarization systems, including quality controls and deployment pitfalls.
-- **2024-05-29** — [Trustworthy LLMs: A Survey and Guideline for Evaluating Large Language Models' Alignment](<../evals-observability/evaluation/Trustworthy LLMs A Survey and Guideline for Evaluating Large Language Models' Alignment.md>) · `evaluation` · arize
+- **2024-05-29** — [Trustworthy LLMs: A Survey and Guideline for Evaluating Large Language Models' Alignment](<../evals-observability/benchmark-design/Trustworthy LLMs A Survey and Guideline for Evaluating Large Language Models' Alignment.md>) · `benchmark-design` · arize
   Survey-style guide to evaluating trustworthy and aligned LLM behavior across reliability, safety, and quality dimensions.
-- **2024-05-13** — [Breaking Down EvalGen: Who Validates the Validators?](<../evals-observability/evaluation/Breaking Down EvalGen Who Validates the Validators.md>) · `evaluation` · arize
+- **2024-05-13** — [Breaking Down EvalGen: Who Validates the Validators?](<../evals-observability/llm-as-judge/Breaking Down EvalGen Who Validates the Validators.md>) · `llm-as-judge` · arize
   Deep dive on EvalGen and the problem of validating LLM-generated evaluators, including human review limitations and evaluator reliability.
 - **2024-04-26** — [Keys To Understanding ReAct: Synergizing Reasoning and Acting in Language Models](<../agents/tool-use/Keys To Understanding ReAct Synergizing Reasoning and Acting in Language Models.md>) · `tool-use` · arize
   Explains ReAct as a reasoning-plus-acting pattern for agents and how it structures tool use.
@@ -316,7 +316,7 @@
   Technical overview of Mistral and Mixtral model behavior, performance, and benchmark positioning.
 - **2023-12-18** — [How to Prompt LLMs for Text-to-SQL](<../prompt-engineering/structured-output/How to Prompt LLMs for Text-to-SQL.md>) · `structured-output` · arize
   Practical guide to Text-to-SQL prompting, including schema context, output constraints, and evaluation considerations.
-- **2023-12-07** — [Calling All Functions: Benchmarking OpenAI Function Calling and Explanations](<../evals-observability/evaluation/Calling All Functions Benchmarking OpenAI Function Calling and Explanations.md>) · `evaluation` · arize
+- **2023-12-07** — [Calling All Functions: Benchmarking OpenAI Function Calling and Explanations](<../evals-observability/benchmark-design/Calling All Functions Benchmarking OpenAI Function Calling and Explanations.md>) · `benchmark-design` · arize
   Benchmarks OpenAI function calling and explanation quality, using evaluations to understand third-party LLM tool behavior.
 - **2023-11-14** — [The Geometry of Truth: Emergent Linear Structure in LLM Representation of True/False Datasets](<../models/reasoning/The Geometry of Truth Emergent Linear Structure in LLM Representation of TrueFalse Datasets.md>) · `reasoning` · arize
   Summarizes research on linear structure in LLM representations of truth and falsehood, relevant to interpretability.

@@ -2,8 +2,7 @@
 title: 'Voyager: An Open-Ended Embodied Agent with LLMs Paper Reading and Discussion'
 topic: agents
 subtopic: planning
-secondary_topics:
-- agents/tool-use
+secondary_topics: []
 summary: Paper-reading summary of Voyager as an open-ended embodied agent using LLM-driven
   skills and exploration.
 source: arize

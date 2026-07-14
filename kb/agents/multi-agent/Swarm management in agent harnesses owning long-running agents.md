@@ -2,8 +2,7 @@
 title: 'Swarm management in agent harnesses: owning long-running agents'
 topic: agents
 subtopic: multi-agent
-secondary_topics:
-- agents/planning
+secondary_topics: []
 summary: Explains swarm management patterns for long-running agent harnesses and how
   ownership/control should be structured.
 source: arize

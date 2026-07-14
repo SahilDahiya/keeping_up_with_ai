@@ -2,8 +2,7 @@
 title: Introducing automatic LLM optimization with TensorRT-LLM Engine Builder
 topic: inference
 subtopic: optimization
-secondary_topics:
-- inference/serving
+secondary_topics: []
 summary: Describes automatic LLM optimization with TensorRT-LLM Engine Builder for
   production serving.
 source: baseten

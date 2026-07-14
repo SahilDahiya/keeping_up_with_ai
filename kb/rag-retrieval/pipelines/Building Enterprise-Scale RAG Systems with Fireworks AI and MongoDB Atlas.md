@@ -2,8 +2,7 @@
 title: Building Enterprise-Scale RAG Systems with Fireworks AI and MongoDB Atlas
 topic: rag-retrieval
 subtopic: pipelines
-secondary_topics:
-- rag-retrieval/search
+secondary_topics: []
 summary: Builds an enterprise-scale RAG system with MongoDB Atlas and Fireworks, covering
   retrieval and serving pieces.
 source: fireworks

@@ -2,8 +2,7 @@
 title: Continuous vs dynamic batching for AI inference
 topic: inference
 subtopic: optimization
-secondary_topics:
-- inference/serving
+secondary_topics: []
 summary: Compares continuous and dynamic batching for inference serving and their
   latency-throughput tradeoffs.
 source: baseten

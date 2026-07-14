@@ -2,8 +2,7 @@
 title: Updates for developers building with voice | OpenAI Developers
 topic: models
 subtopic: releases
-secondary_topics:
-- models/multimodal
+secondary_topics: []
 summary: 'Release notes for four December 2025 audio model snapshots (gpt-4o-mini-transcribe,
   gpt-4o-mini-tts, gpt-realtime-mini, gpt-audio-mini): lower word-error rates on noisy
   audio, fewer hallucinations during silence, better tool calling in the minis, and

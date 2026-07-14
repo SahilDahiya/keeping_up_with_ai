@@ -2,8 +2,7 @@
 title: 'Llama 2: Open Foundation and Fine-Tuned Chat Models Paper Reading'
 topic: models
 subtopic: releases
-secondary_topics:
-- models/fine-tuning
+secondary_topics: []
 summary: Technical paper-reading summary of Llama 2, including foundation and chat-tuned
   model behavior.
 source: arize

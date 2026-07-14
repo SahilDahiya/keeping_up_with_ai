@@ -2,8 +2,7 @@
 title: Improving voice performance with post-training
 topic: models
 subtopic: fine-tuning
-secondary_topics:
-- models/multimodal
+secondary_topics: []
 summary: Describes post-training techniques for improving voice model performance
   and agent interaction quality.
 source: sierra

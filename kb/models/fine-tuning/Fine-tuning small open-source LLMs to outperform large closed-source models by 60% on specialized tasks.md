@@ -3,8 +3,7 @@ title: Fine-tuning small open-source LLMs to outperform large closed-source mode
   by 60% on specialized tasks
 topic: models
 subtopic: fine-tuning
-secondary_topics:
-- models/benchmarks
+secondary_topics: []
 summary: Case study on fine-tuning small open-source LLMs to beat larger closed models
   on specialized tasks.
 source: baseten

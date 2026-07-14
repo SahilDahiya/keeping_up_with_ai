@@ -3,8 +3,7 @@ title: 'Shell + Skills + Compaction: Tips for long-running agents that do real w
   | OpenAI Developers'
 topic: agents
 subtopic: tool-use
-secondary_topics:
-- agents/memory-context
+secondary_topics: []
 summary: Nonobvious patterns for three new Responses API primitives for long-running
   agents — skills (on-demand SKILL.md playbooks), the hosted/local shell tool, and
   server-side compaction that auto-compresses conversation history — drawn from Codex

@@ -2,8 +2,7 @@
 title: Traces are all you need
 topic: evals-observability
 subtopic: evaluation
-secondary_topics:
-- evals-observability/tracing
+secondary_topics: []
 summary: Shows how to turn production traces into an internal model leaderboard with
   rollout processors and judge comparisons.
 source: fireworks

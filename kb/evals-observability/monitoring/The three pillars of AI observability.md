@@ -2,8 +2,7 @@
 title: The three pillars of AI observability
 topic: evals-observability
 subtopic: monitoring
-secondary_topics:
-- evals-observability/tracing
+secondary_topics: []
 summary: Defines three pillars of AI observability and how traces, evals, and production
   feedback combine to improve AI systems.
 source: braintrust

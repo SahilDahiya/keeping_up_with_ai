@@ -2,8 +2,7 @@
 title: What is AI observability?
 topic: evals-observability
 subtopic: monitoring
-secondary_topics:
-- evals-observability/tracing
+secondary_topics: []
 summary: Explains AI observability concepts for production systems, including traces,
   evals, logs, monitoring, and feedback loops.
 source: braintrust

@@ -63,7 +63,7 @@
   Explains why million-token context serving is primarily an inference-systems problem.
 - **2026-04-24** — [How we fixed prompt injection for all models on Fireworks](<../product-engineering/security/How we fixed prompt injection for all models on Fireworks.md>) · `security` · fireworks
   Explains a tokenizer-level prompt-injection fix and the implications for securing model-serving systems.
-- **2026-04-14** — [Classifying User Intent with Categorical LLM-as-a-Judge](<../evals-observability/evaluation/Classifying User Intent with Categorical LLM-as-a-Judge.md>) · `evaluation` · langfuse
+- **2026-04-14** — [Classifying User Intent with Categorical LLM-as-a-Judge](<../evals-observability/llm-as-judge/Classifying User Intent with Categorical LLM-as-a-Judge.md>) · `llm-as-judge` · langfuse
   Shows how to classify user intent with categorical LLM-as-judge evaluators, including rubric design and structured scoring for production analysis.
 - **2026-03-25** — [How Perplexity Brought Voice Search to Millions Using the Realtime API | OpenAI Developers](<../product-engineering/case-studies/How Perplexity Brought Voice Search to Millions Using the Realtime API OpenAI Developers.md>) · `case-studies` · openai-devs
   Perplexity's production lessons running Realtime-1.5 voice across Comet and Computer: feed context in 2,000-token chunks to avoid all-or-nothing truncation, get system/user/assistant role semantics right, standardize audio via a Rust SDK (48 kHz mono, WebRTC APM), and a 'voice lock' pattern for user pauses.
@@ -107,15 +107,15 @@
   Introduces functions as flexible AI engineering primitives for tool calling, structured behavior, and reusable evaluation or workflow components.
 - **2024-09-11** — [Composable Interventions for Language Models](<../models/reasoning/Composable Interventions for Language Models.md>) · `reasoning` · arize
   Deep dive on composable interventions for language models, covering techniques for steering or modifying model behavior.
-- **2024-09-05** — [Speculative decoding for high-throughput long-context inference](<../inference/optimization/Speculative decoding for high-throughput long-context inference.md>) · `optimization` · together
+- **2024-09-05** — [Speculative decoding for high-throughput long-context inference](<../inference/speculative-decoding/Speculative decoding for high-throughput long-context inference.md>) · `speculative-decoding` · together
   Explains speculative decoding for high-throughput long-context inference.
 - **2024-08-29** — [Build Your Own Flight Recommendation System using FastAPI, SerpAPI, and Firefunction](<../agents/tool-use/Build Your Own Flight Recommendation System using FastAPI, SerpAPI, and Firefunction.md>) · `tool-use` · fireworks
   Tutorial for building a function-calling application with FastAPI, SerpAPI, and structured tool invocation.
 - **2024-08-12** — [Tool Use, Unified](<../agents/tool-use/Tool Use, Unified.md>) · `tool-use` · huggingface
   Explains the unified tool-use API in Transformers chat templates: pass plain Python functions with typed signatures and docstrings and they are auto-converted to JSON schema, then rendered per-model by the model's Jinja chat template — plus the conventions chosen for tool-call and tool-result messages so tool-calling chats are portable across models that disagree on formats.
-- **2024-06-26** — [Aligning LLM-as-a-Judge with Human Preferences](<../evals-observability/evaluation/Aligning LLM-as-a-Judge with Human Preferences.md>) · `evaluation` · langchain
+- **2024-06-26** — [Aligning LLM-as-a-Judge with Human Preferences](<../evals-observability/llm-as-judge/Aligning LLM-as-a-Judge with Human Preferences.md>) · `llm-as-judge` · langchain
   Covers aligning LLM-as-judge evaluators with human preferences through calibration, examples, and evaluation design.
-- **2024-06-20** — [FireAttention V2: 12x faster to make Long Contexts practical for Online Inference](<../inference/optimization/FireAttention V2 12x faster to make Long Contexts practical for Online Inference.md>) · `optimization` · fireworks
+- **2024-06-20** — [FireAttention V2: 12x faster to make Long Contexts practical for Online Inference](<../inference/kernels/FireAttention V2 12x faster to make Long Contexts practical for Online Inference.md>) · `kernels` · fireworks
   Explains FireAttention V2 and the serving optimizations that make long-context inference more practical.
 - **2024-05-13** — [License to Call: Introducing Transformers Agents 2.0](<../agents/tool-use/License to Call Introducing Transformers Agents 2.0.md>) · `tool-use` · huggingface
   Transformers Agents 2.0 introduces ReAct-style CodeAgent and JsonAgent that iterate on past observations, with a code-writing action format, tool definitions and system prompts, benchmarked against LangChain agents.
@@ -127,7 +127,7 @@
   Explains long-context retrieval models using Monarch Mixer.
 - **2023-12-05** — [Extraction Benchmarking](<../models/benchmarks/Extraction Benchmarking.md>) · `benchmarks` · langchain
   Benchmarking post for extraction tasks, comparing structured-output performance and evaluation approaches for information extraction.
-- **2023-10-12** — [Flash-Decoding for long-context inference](<../inference/optimization/Flash-Decoding for long-context inference.md>) · `optimization` · together
+- **2023-10-12** — [Flash-Decoding for long-context inference](<../inference/kernels/Flash-Decoding for long-context inference.md>) · `kernels` · together
   Introduces Flash-Decoding for efficient long-context inference.
 - **2023-08-07** — [Extending the Context Window of LLaMA Models Paper Reading](<../models/reasoning/Extending the Context Window of LLaMA Models Paper Reading.md>) · `reasoning` · arize
   Explains techniques for extending LLaMA context windows and the tradeoffs involved in long-context model behavior.

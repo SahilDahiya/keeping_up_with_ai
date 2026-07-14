@@ -2,8 +2,7 @@
 title: 'Kimi K2: Architecture, Capabilities & Benchmarks'
 topic: models
 subtopic: reasoning
-secondary_topics:
-- models/benchmarks
+secondary_topics: []
 summary: Explains Kimi K2 architecture, capabilities, and benchmark behavior for agent
   and reasoning workloads.
 source: fireworks

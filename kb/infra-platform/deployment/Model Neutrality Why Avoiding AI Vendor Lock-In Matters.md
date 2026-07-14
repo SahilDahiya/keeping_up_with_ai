@@ -2,8 +2,7 @@
 title: 'Model Neutrality: Why Avoiding AI Vendor Lock-In Matters'
 topic: infra-platform
 subtopic: deployment
-secondary_topics:
-- infra-platform/cost
+secondary_topics: []
 summary: Explains model neutrality and why avoiding AI vendor lock-in matters for
   provider routing, cost control, and long-term architecture.
 source: langchain

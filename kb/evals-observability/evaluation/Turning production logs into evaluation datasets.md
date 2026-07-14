@@ -2,8 +2,7 @@
 title: Turning production logs into evaluation datasets
 topic: evals-observability
 subtopic: evaluation
-secondary_topics:
-- evals-observability/tracing
+secondary_topics: []
 summary: Describes converting production traces into compact evaluation datasets using
   embeddings, clustering, and representative sampling.
 source: fireworks

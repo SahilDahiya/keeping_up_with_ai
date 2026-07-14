@@ -2,8 +2,7 @@
 title: Fine-tuning Llama-3 toward GPT-4 performance at lower cost
 topic: models
 subtopic: fine-tuning
-secondary_topics:
-- models/benchmarks
+secondary_topics: []
 summary: Shows fine-tuning Llama 3 toward GPT-4-like task performance at lower cost.
 source: together
 url: https://www.together.ai/blog/finetuning

@@ -2,8 +2,7 @@
 title: Five hard-learned lessons about AI evals
 topic: evals-observability
 subtopic: evaluation
-secondary_topics:
-- evals-observability/testing
+secondary_topics: []
 summary: Five practical lessons for building AI evals, emphasizing dataset quality,
   scorer design, failure analysis, and iteration over dashboard theater.
 source: braintrust

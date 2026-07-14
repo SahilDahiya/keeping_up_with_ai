@@ -3,8 +3,7 @@ title: Content Independence Day, one year on- building the business model for th
   agentic Internet
 topic: industry
 subtopic: trends
-secondary_topics:
-- industry/business
+secondary_topics: []
 summary: 'Data report one year after Content Independence Day: over 50% of Internet
   traffic is now non-human, AI-training crawling grew from 22% to 52% of crawler requests
   (June 2026), heavily crawled categories lost up to 40% of human traffic, and publishers

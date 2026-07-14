@@ -16,11 +16,11 @@
   Explains sub-second image generation with FLUX.2 and Qwen-Image serving optimizations.
 - **2026-05-14** — [Cost-efficient, high-performance TTS with Qwen3-TTS](<../models/multimodal/Cost-efficient, high-performance TTS with Qwen3-TTS.md>) · `multimodal` · baseten
   Describes cost-efficient high-performance Qwen3-TTS serving for text-to-speech workloads.
-- **2026-05-08** — [DFlash: 3x faster LLM inference](<../inference/optimization/DFlash 3x faster LLM inference.md>) · `optimization` · baseten
+- **2026-05-08** — [DFlash: 3x faster LLM inference](<../inference/speculative-decoding/DFlash 3x faster LLM inference.md>) · `speculative-decoding` · baseten
   Explains DFlash as an optimization for faster LLM inference.
 - **2026-04-23** — [How we built RBAC that scales for the enterprise](<../product-engineering/security/How we built RBAC that scales for the enterprise.md>) · `security` · baseten
   Engineering writeup on building RBAC for enterprise AI infrastructure and balancing autonomy with control.
-- **2026-04-16** — [Harnesses are everything. Here's how to optimize yours.](<../agents/planning/Harnesses are everything. Here's how to optimize yours.md>) · `planning` · baseten
+- **2026-04-16** — [Harnesses are everything. Here's how to optimize yours.](<../agents/harness/Harnesses are everything. Here's how to optimize yours.md>) · `harness` · baseten
   Explains why agent harness design matters and how to optimize harnesses for reliable agent behavior.
 - **2026-04-13** — [How to train custom EAGLE-3 heads for speculative decoding](<../models/fine-tuning/How to train custom EAGLE-3 heads for speculative decoding.md>) · `fine-tuning` · baseten
   Explains training custom EAGLE-3 heads for speculative decoding acceleration.
@@ -44,11 +44,11 @@
   Explains optimizations behind fast Kimi K2.5 serving on Artificial Analysis.
 - **2026-02-09** — [AI Model Performance Metrics Explained](<../evals-observability/monitoring/AI Model Performance Metrics Explained.md>) · `monitoring` · baseten
   Explains model performance metrics used in production inference, including latency, throughput, and quality signals.
-- **2026-02-05** — [How to run LLM performance benchmarks (and why you should)](<../evals-observability/evaluation/How to run LLM performance benchmarks (and why you should).md>) · `evaluation` · baseten
+- **2026-02-05** — [How to run LLM performance benchmarks (and why you should)](<../evals-observability/benchmark-design/How to run LLM performance benchmarks (and why you should).md>) · `benchmark-design` · baseten
   Explains how to run LLM performance benchmarks and which serving metrics matter.
 - **2026-02-03** — [The Baseten Inference Stack at NVIDIA Dynamo Day](<../inference/serving/The Baseten Inference Stack at NVIDIA Dynamo Day.md>) · `serving` · baseten
   Describes Baseten inference-stack ideas presented around NVIDIA Dynamo and production serving.
-- **2026-01-23** — [Open-sourcing Baseten’s suffix automaton MTP accelerator](<../inference/optimization/Open-sourcing Baseten’s suffix automaton MTP accelerator.md>) · `optimization` · baseten
+- **2026-01-23** — [Open-sourcing Baseten’s suffix automaton MTP accelerator](<../inference/speculative-decoding/Open-sourcing Baseten’s suffix automaton MTP accelerator.md>) · `speculative-decoding` · baseten
   Explains a suffix-automaton MTP accelerator for improving speculative decoding acceptance rates.
 - **2025-12-05** — [DeepSeek V3.2's path to GPT-5-level performance: sparse attention, RL at scale, and context reuse](<../models/reasoning/DeepSeek V3.2's path to GPT-5-level performance sparse attention, RL at scale, and context reuse.md>) · `reasoning` · baseten
   Explains DeepSeek V3.2 architecture and training choices including sparse attention, RL, and context reuse.
@@ -84,13 +84,13 @@
   Deep dive into BEI, a high-throughput embedding, reranker, and classifier inference system.
 - **2025-02-13** — [How multi-node inference works for massive LLMs like DeepSeek-R1](<../inference/serving/How multi-node inference works for massive LLMs like DeepSeek-R1.md>) · `serving` · baseten
   Explains multi-node inference for very large LLMs such as DeepSeek-R1.
-- **2025-02-07** — [Testing Llama 3.3 70B inference performance on NVIDIA GH200 in Lambda Cloud](<../evals-observability/evaluation/Testing Llama 3.3 70B inference performance on NVIDIA GH200 in Lambda Cloud.md>) · `evaluation` · baseten
+- **2025-02-07** — [Testing Llama 3.3 70B inference performance on NVIDIA GH200 in Lambda Cloud](<../evals-observability/benchmark-design/Testing Llama 3.3 70B inference performance on NVIDIA GH200 in Lambda Cloud.md>) · `benchmark-design` · baseten
   Tests Llama 3.3 70B inference performance on NVIDIA GH200 and discusses benchmark results.
 - **2025-01-09** — [Driving model performance optimization: 2024 highlights](<../inference/optimization/Driving model performance optimization 2024 highlights.md>) · `optimization` · baseten
   Summarizes concrete model-performance optimization work across inference serving, batching, and hardware.
-- **2024-12-19** — [A quick introduction to speculative decoding](<../inference/optimization/A quick introduction to speculative decoding.md>) · `optimization` · baseten
+- **2024-12-19** — [A quick introduction to speculative decoding](<../inference/speculative-decoding/A quick introduction to speculative decoding.md>) · `speculative-decoding` · baseten
   Introduces speculative decoding and the draft-target model pattern for lower LLM inference latency.
-- **2024-12-19** — [How we built production-ready speculative decoding with TensorRT-LLM](<../inference/optimization/How we built production-ready speculative decoding with TensorRT-LLM.md>) · `optimization` · baseten
+- **2024-12-19** — [How we built production-ready speculative decoding with TensorRT-LLM](<../inference/speculative-decoding/How we built production-ready speculative decoding with TensorRT-LLM.md>) · `speculative-decoding` · baseten
   Deep dive into production-ready speculative decoding with TensorRT-LLM.
 - **2024-10-22** — [Evaluating NVIDIA H200 Tensor Core GPUs for LLM inference](<../inference/hardware/Evaluating NVIDIA H200 Tensor Core GPUs for LLM inference.md>) · `hardware` · baseten
   Evaluates NVIDIA H200 GPUs for LLM inference and compares their serving performance characteristics.
@@ -98,7 +98,7 @@
   Shows how to build high-performance compound AI applications with retrieval, orchestration, and model serving.
 - **2024-09-12** — [How to build function calling and JSON mode for open-source and fine-tuned LLMs](<../prompt-engineering/structured-output/How to build function calling and JSON mode for open-source and fine-tuned LLMs.md>) · `structured-output` · baseten
   Shows how to build function calling and JSON mode for open-source and fine-tuned LLMs.
-- **2024-08-20** — [How to double tokens per second for Llama 3 with Medusa](<../inference/optimization/How to double tokens per second for Llama 3 with Medusa.md>) · `optimization` · baseten
+- **2024-08-20** — [How to double tokens per second for Llama 3 with Medusa](<../inference/speculative-decoding/How to double tokens per second for Llama 3 with Medusa.md>) · `speculative-decoding` · baseten
   Explains Medusa-style speculative heads for increasing Llama 3 tokens per second.
 - **2024-08-06** — [Compound AI systems explained](<../product-engineering/architecture/Compound AI systems explained.md>) · `architecture` · baseten
   Explains compound AI systems and how multiple models, tools, and control logic combine into applications.
@@ -128,7 +128,7 @@
   Explains fractional H100 usage for efficient model serving and better GPU utilization.
 - **2024-03-14** — [33% faster LLM inference with FP8 quantization](<../inference/quantization/33% faster LLM inference with FP8 quantization.md>) · `quantization` · baseten
   Shows how FP8 quantization improves LLM inference throughput while managing accuracy and hardware constraints.
-- **2024-03-14** — [Benchmarking fast Mistral 7B inference](<../evals-observability/evaluation/Benchmarking fast Mistral 7B inference.md>) · `evaluation` · baseten
+- **2024-03-14** — [Benchmarking fast Mistral 7B inference](<../evals-observability/benchmark-design/Benchmarking fast Mistral 7B inference.md>) · `benchmark-design` · baseten
   Benchmarks Mistral 7B inference performance and the serving choices that affect throughput and latency.
 - **2024-03-12** — [High performance ML inference with NVIDIA TensorRT](<../inference/optimization/High performance ML inference with NVIDIA TensorRT.md>) · `optimization` · baseten
   Explains high-performance model inference with NVIDIA TensorRT and related deployment considerations.
@@ -142,9 +142,9 @@
   Shows how TensorRT unlocks H100 performance for model inference.
 - **2024-01-31** — [Introduction to quantizing ML models](<../inference/quantization/Introduction to quantizing ML models.md>) · `quantization` · baseten
   Introduces model quantization concepts and how they affect inference efficiency and model quality.
-- **2024-01-31** — [How to benchmark image generation models like Stable Diffusion XL](<../evals-observability/evaluation/How to benchmark image generation models like Stable Diffusion XL.md>) · `evaluation` · baseten
+- **2024-01-31** — [How to benchmark image generation models like Stable Diffusion XL](<../evals-observability/benchmark-design/How to benchmark image generation models like Stable Diffusion XL.md>) · `benchmark-design` · baseten
   Explains how to benchmark image-generation models with attention to quality, latency, and reproducibility.
-- **2024-01-12** — [Understanding performance benchmarks for LLM inference](<../evals-observability/evaluation/Understanding performance benchmarks for LLM inference.md>) · `evaluation` · baseten
+- **2024-01-12** — [Understanding performance benchmarks for LLM inference](<../evals-observability/benchmark-design/Understanding performance benchmarks for LLM inference.md>) · `benchmark-design` · baseten
   Explains LLM inference performance benchmarks and how to interpret serving metrics.
 - **2023-12-22** — [Faster Mixtral inference with TensorRT-LLM and quantization](<../inference/quantization/Faster Mixtral inference with TensorRT-LLM and quantization.md>) · `quantization` · baseten
   Shows how TensorRT-LLM and quantization improve Mixtral inference performance.

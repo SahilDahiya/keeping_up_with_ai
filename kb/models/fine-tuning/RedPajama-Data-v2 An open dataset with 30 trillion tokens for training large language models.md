@@ -3,8 +3,7 @@ title: 'RedPajama-Data-v2: An open dataset with 30 trillion tokens for training 
   language models'
 topic: models
 subtopic: fine-tuning
-secondary_topics:
-- models/benchmarks
+secondary_topics: []
 summary: Introduces RedPajama-Data-v2, a large web dataset for training language models.
 source: together
 url: https://www.together.ai/blog/redpajama-data-v2

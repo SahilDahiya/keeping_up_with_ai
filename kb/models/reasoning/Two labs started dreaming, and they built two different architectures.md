@@ -2,8 +2,7 @@
 title: Two labs started dreaming, and they built two different architectures
 topic: models
 subtopic: reasoning
-secondary_topics:
-- models/multimodal
+secondary_topics: []
 summary: Compares two different AI architecture directions from research labs, focusing
   on design choices and implications.
 source: arize

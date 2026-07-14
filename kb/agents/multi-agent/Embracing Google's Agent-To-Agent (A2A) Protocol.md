@@ -2,8 +2,7 @@
 title: Embracing Google's Agent-To-Agent (A2A) Protocol
 topic: agents
 subtopic: multi-agent
-secondary_topics:
-- agents/tool-use
+secondary_topics: []
 summary: Discusses Google's Agent-to-Agent protocol and why interoperability standards
   matter for multi-agent systems and production agent ecosystems.
 source: arize

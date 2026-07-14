@@ -2,8 +2,7 @@
 title: Accurate KV Cache Quantization with Outlier Tokens Tracing
 topic: inference
 subtopic: quantization
-secondary_topics:
-- inference/optimization
+secondary_topics: []
 summary: Summarizes research on KV-cache quantization with outlier token tracing to
   reduce LLM inference memory cost while preserving output quality.
 source: arize

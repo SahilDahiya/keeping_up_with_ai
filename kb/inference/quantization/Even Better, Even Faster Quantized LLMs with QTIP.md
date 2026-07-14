@@ -2,8 +2,7 @@
 title: Even Better, Even Faster Quantized LLMs with QTIP
 topic: inference
 subtopic: quantization
-secondary_topics:
-- inference/optimization
+secondary_topics: []
 summary: Explains QTIP quantization for faster LLM inference with improved quality
   preservation.
 source: together

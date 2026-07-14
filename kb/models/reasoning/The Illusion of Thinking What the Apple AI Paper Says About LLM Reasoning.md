@@ -2,8 +2,7 @@
 title: 'The Illusion of Thinking: What the Apple AI Paper Says About LLM Reasoning'
 topic: models
 subtopic: reasoning
-secondary_topics:
-- models/benchmarks
+secondary_topics: []
 summary: Analyzes the Apple reasoning paper and what it suggests about evaluating
   LLM reasoning limits.
 source: arize

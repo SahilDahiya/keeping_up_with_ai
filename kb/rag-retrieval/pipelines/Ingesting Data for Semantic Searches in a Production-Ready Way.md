@@ -2,8 +2,7 @@
 title: Ingesting Data for Semantic Searches in a Production-Ready Way
 topic: rag-retrieval
 subtopic: pipelines
-secondary_topics:
-- rag-retrieval/embeddings
+secondary_topics: []
 summary: Explains production ingestion concerns for semantic search, including data
   preparation and retrieval pipeline reliability.
 source: arize

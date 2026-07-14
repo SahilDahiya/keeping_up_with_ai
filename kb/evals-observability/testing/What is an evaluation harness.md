@@ -2,8 +2,7 @@
 title: What is an evaluation harness?
 topic: evals-observability
 subtopic: testing
-secondary_topics:
-- evals-observability/evaluation
+secondary_topics: []
 summary: Defines evaluation harnesses and how they structure repeatable measurement
   for AI applications and agents.
 source: arize

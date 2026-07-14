@@ -2,8 +2,7 @@
 title: Fine-tuning small open-source LLMs for specialized tasks
 topic: models
 subtopic: fine-tuning
-secondary_topics:
-- models/benchmarks
+secondary_topics: []
 summary: Case study fine-tuning small open-source LLMs to beat larger closed models
   on specialized tasks.
 source: together

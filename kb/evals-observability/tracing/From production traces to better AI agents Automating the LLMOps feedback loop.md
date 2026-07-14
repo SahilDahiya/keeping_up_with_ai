@@ -3,8 +3,7 @@ title: 'From production traces to better AI agents: Automating the LLMOps feedba
   loop'
 topic: evals-observability
 subtopic: tracing
-secondary_topics:
-- evals-observability/evaluation
+secondary_topics: []
 summary: Shows how production traces can feed evaluation and improvement loops for
   AI agents rather than remaining passive monitoring data.
 source: arize

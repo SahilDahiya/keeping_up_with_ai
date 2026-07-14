@@ -1,11 +1,15 @@
 # Controlled topic tree for the knowledge base.
 # The classifier (Claude via /organize-kb) must pick from this — no invented labels.
-# Adding a subtopic is cheap. Renames/merges go through `scraper reclassify` (Phase 2).
-rev: 1
+# Adding a subtopic is cheap. To restructure: edit here, re-assign the affected
+# articles' frontmatter, then run `scraper migrate` (moves files, fixes state, reindexes).
+rev: 2
 
 topics:
   agents:
     - tool-use
+    - harness            # how an agent system is ASSEMBLED: scaffolds, loops, action
+                         # representation (code-actions vs JSON), sub-agent orchestration.
+                         # Distinct from `planning`, which is how the agent decides.
     - multi-agent
     - memory-context
     - planning
@@ -14,13 +18,18 @@ topics:
     - releases
     - architectures      # model design itself (transformers, SSMs, MoE, attention variants)
     - training           # pretraining, optimizers, scaling laws, data curation
-    - benchmarks
+    - benchmarks         # RESULTS about a model. Benchmark *construction* lives in
+                         # evals-observability/benchmark-design.
     - fine-tuning        # adapting an existing model (LoRA, SFT, distillation)
     - reinforcement-learning
     - reasoning
     - multimodal
   inference:
-    - optimization
+    - optimization       # general latency/throughput work: batching, cold starts,
+                         # routing, end-to-end serving performance
+    - kernels            # the compute layer: FlashAttention, Triton, torch.compile,
+                         # AOT compilation, fused/sparse attention kernels
+    - speculative-decoding  # draft models, MTP, EAGLE/Medusa-style acceleration
     - serving
     - hardware
     - quantization
@@ -31,10 +40,14 @@ topics:
   rag-retrieval:
     - pipelines
     - embeddings
-    - chunking
     - search
   evals-observability:
-    - evaluation
+    - evaluation         # evaluating YOUR system: app/agent evals, production logs ->
+                         # eval datasets, regression suites, eval maturity
+    - benchmark-design   # building the benchmark itself: leaderboards, contamination
+                         # resistance, held-out splits, scoring metrics
+    - llm-as-judge       # judge/scorer design: rubrics, evaluator templates, judge
+                         # reliability and cost
     - tracing
     - monitoring
     - testing
@@ -51,5 +64,4 @@ topics:
   industry:
     - trends
     - business
-    - opinion
     - announcements

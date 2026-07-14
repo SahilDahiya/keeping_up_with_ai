@@ -3,8 +3,7 @@ title: 'DeepSeek V3.2''s path to GPT-5-level performance: sparse attention, RL a
   scale, and context reuse'
 topic: models
 subtopic: reasoning
-secondary_topics:
-- models/reinforcement-learning
+secondary_topics: []
 summary: Explains DeepSeek V3.2 architecture and training choices including sparse
   attention, RL, and context reuse.
 source: baseten

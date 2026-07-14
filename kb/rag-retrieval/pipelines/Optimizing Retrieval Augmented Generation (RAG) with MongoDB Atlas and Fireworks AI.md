@@ -3,8 +3,7 @@ title: Optimizing Retrieval Augmented Generation (RAG) with MongoDB Atlas and Fi
   AI
 topic: rag-retrieval
 subtopic: pipelines
-secondary_topics:
-- rag-retrieval/search
+secondary_topics: []
 summary: Shows how to optimize a RAG pipeline with MongoDB Atlas and Fireworks models.
 source: fireworks
 url: https://fireworks.ai/blog/optimize-rag-with-mongodb-atlas-and-fireworks

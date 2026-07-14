@@ -33,8 +33,6 @@
 
 - **2026-07-01** — [Your site, your rules: new AI traffic options for all customers](<../product-engineering/security/Your site, your rules new AI traffic options for all customers.md>) · `security` · cloudflare-ai
   Cloudflare replaces the binary 'Block AI Bots' toggle with per-use-case controls — Search, Agent, and Training crawlers — for all customers including Free tier, and pushes bot operators to split multi-purpose crawlers so site owners can allow discovery without donating training data.
-- **2026-07-01** — [Content Independence Day, one year on- building the business model for the agentic Internet](<trends/Content Independence Day, one year on- building the business model for the agentic Internet.md>) · `trends` · cloudflare-ai
-  Data report one year after Content Independence Day: over 50% of Internet traffic is now non-human, AI-training crawling grew from 22% to 52% of crawler requests (June 2026), heavily crawled categories lost up to 40% of human traffic, and publishers brace for 'Google Zero'.
 - **2026-04-21** — [Moving past bots vs. humans](<../product-engineering/security/Moving past bots vs. humans.md>) · `security` · cloudflare-ai
   Argues bot detection must move from 'bots vs. humans' to intent and behavior as AI agents fetch raw content without rendering pages: covers Web Bot Auth (HTTP message signatures) for crawler identification and private rate limiting for clients that no longer behave like browsers.
 - **2026-04-17** — [Agentic Engineering: How Swarms of AI Agents Are Redefining Software Engineering](<../agents/multi-agent/Agentic Engineering How Swarms of AI Agents Are Redefining Software Engineering.md>) · `multi-agent` · langchain

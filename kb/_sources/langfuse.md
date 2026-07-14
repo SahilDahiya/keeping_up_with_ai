@@ -8,7 +8,7 @@
   Argues that AI is reshaping the AI engineering loop itself, with agents increasingly participating in prompt, eval, observability, and product iteration workflows.
 - **2026-06-05** — [How we use agents to review production infrastructure](<../product-engineering/case-studies/How we use agents to review production infrastructure.md>) · `case-studies` · langfuse
   Case study of using agents to review production infrastructure, including operational workflows, review boundaries, and human oversight.
-- **2026-04-14** — [Classifying User Intent with Categorical LLM-as-a-Judge](<../evals-observability/evaluation/Classifying User Intent with Categorical LLM-as-a-Judge.md>) · `evaluation` · langfuse
+- **2026-04-14** — [Classifying User Intent with Categorical LLM-as-a-Judge](<../evals-observability/llm-as-judge/Classifying User Intent with Categorical LLM-as-a-Judge.md>) · `llm-as-judge` · langfuse
   Shows how to classify user intent with categorical LLM-as-judge evaluators, including rubric design and structured scoring for production analysis.
 - **2026-04-01** — [The Rage Clicks of LLM apps: High-Signal Production Monitoring for AI Customer Support Agents](<../evals-observability/monitoring/The Rage Clicks of LLM apps High-Signal Production Monitoring for AI Customer Support Agents.md>) · `monitoring` · langfuse
   Detailed production-monitoring pattern for AI customer-support agents using high-signal LLM-as-judge classifiers to detect rage-click-like failure modes.
@@ -50,7 +50,7 @@
   Engineering writeup on building scalable customizable dashboards for observability data, covering query, rendering, and product architecture concerns.
 - **2025-04-24** — [How we use LLMs to build and scale Langfuse](<../product-engineering/case-studies/How we use LLMs to build and scale Langfuse.md>) · `case-studies` · langfuse
   Case study of how Langfuse uses LLMs internally to build and scale the product, including practical workflows for AI-assisted engineering and operations.
-- **2025-03-19** — [Comparing Open-Source AI Agent Frameworks](<../agents/planning/Comparing Open-Source AI Agent Frameworks.md>) · `planning` · langfuse
+- **2025-03-19** — [Comparing Open-Source AI Agent Frameworks](<../agents/harness/Comparing Open-Source AI Agent Frameworks.md>) · `harness` · langfuse
   Compares open-source AI agent frameworks and their architecture tradeoffs around orchestration, tools, memory, extensibility, and production readiness.
 - **2025-03-13** — [Hugging Face and Langfuse: 5 Ways to use them Together](<../infra-platform/deployment/Hugging Face and Langfuse 5 Ways to use them Together.md>) · `deployment` · langfuse
   Shows ways to combine Hugging Face workflows with Langfuse for model experimentation, tracing, evaluation, and deployment feedback loops.

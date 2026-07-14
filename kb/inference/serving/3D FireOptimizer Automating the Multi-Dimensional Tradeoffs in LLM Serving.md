@@ -2,8 +2,7 @@
 title: '3D FireOptimizer: Automating the Multi-Dimensional Tradeoffs in LLM Serving'
 topic: inference
 subtopic: serving
-secondary_topics:
-- inference/optimization
+secondary_topics: []
 summary: Explains multi-dimensional optimization for LLM serving, balancing latency,
   cost, throughput, and quality tradeoffs.
 source: fireworks

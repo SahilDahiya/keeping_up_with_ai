@@ -2,8 +2,7 @@
 title: Phi-2 Model
 topic: models
 subtopic: releases
-secondary_topics:
-- models/benchmarks
+secondary_topics: []
 summary: Technical overview of Phi-2, including model characteristics, benchmark behavior,
   and small-model implications.
 source: arize

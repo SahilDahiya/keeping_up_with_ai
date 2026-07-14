@@ -2,8 +2,7 @@
 title: DPO as reinforcement learning
 topic: models
 subtopic: reinforcement-learning
-secondary_topics:
-- models/reasoning
+secondary_topics: []
 summary: Connects DPO and RL-style training loops, explaining preference optimization
   as part of continuous model improvement.
 source: fireworks

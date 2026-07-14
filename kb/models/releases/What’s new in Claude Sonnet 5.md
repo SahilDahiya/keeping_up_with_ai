@@ -4,7 +4,6 @@ topic: models
 subtopic: releases
 secondary_topics:
 - infra-platform/cost
-- models/reasoning
 summary: Developer-focused notes on Claude Sonnet 5 covering adaptive thinking defaults,
   removed sampling parameters, million-token context, pricing/tokenizer changes, and
   comparative tokenization cost across document types.
