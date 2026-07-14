@@ -1,6 +1,6 @@
 # braintrust
 
-76 articles.
+75 articles.
 
 - **2026-07-10** — [Evaluating the GPT-5.6 family](<../models/benchmarks/Evaluating the GPT-5.6 family.md>) · `benchmarks` · braintrust
   Evaluates the GPT-5.6 model family and presents a decision map for choosing models based on quality, cost, and task requirements.
@@ -46,8 +46,6 @@
   Shows how to use the Braintrust CLI for agentic eval development, turning local experiments into repeatable tests for agent behavior.
 - **2026-04-06** — [How Brainstore works: architecture for AI observability at scale](<../evals-observability/monitoring/How Brainstore works architecture for AI observability at scale.md>) · `monitoring` · braintrust
   Deep dive into Brainstore's architecture for AI observability at scale, covering storage, indexing, query patterns, and trace/log workloads.
-- **2026-04-03** — [Braintrust CLI and MCP](<../agents/tool-use/Braintrust CLI and MCP.md>) · `tool-use` · braintrust
-  Covers Braintrust CLI and MCP support for connecting agent tools, local workflows, and observability/eval data into AI development loops.
 - **2026-03-27** — [Evals are the new PRD](<../product-engineering/architecture/Evals are the new PRD.md>) · `architecture` · braintrust
   Argues that evals can act as executable product requirements for AI systems, aligning teams around expected behavior and measurable quality.
 - **2026-03-19** — [What is AI observability?](<../evals-observability/monitoring/What is AI observability.md>) · `monitoring` · braintrust

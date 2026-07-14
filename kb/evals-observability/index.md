@@ -545,8 +545,6 @@
   Connects AI compliance and governance to engineering controls such as observability, audit trails, data boundaries, review workflows, and policy enforcement.
 - **2026-04-04** — [How Arize Skills Improved RAG Recall from 39% to 75% in 8 Hours](<../rag-retrieval/pipelines/How Arize Skills Improved RAG Recall from 39% to 75% in 8 Hours.md>) · `pipelines` · arize
   Uses an eval-guided RAG improvement loop to show how retrieval recall can be diagnosed and improved quickly.
-- **2026-04-03** — [Braintrust CLI and MCP](<../agents/tool-use/Braintrust CLI and MCP.md>) · `tool-use` · braintrust
-  Covers Braintrust CLI and MCP support for connecting agent tools, local workflows, and observability/eval data into AI development loops.
 - **2026-04-01** — [The Rage Clicks of LLM apps: High-Signal Production Monitoring for AI Customer Support Agents](<monitoring/The Rage Clicks of LLM apps High-Signal Production Monitoring for AI Customer Support Agents.md>) · `monitoring` · langfuse
   Detailed production-monitoring pattern for AI customer-support agents using high-signal LLM-as-judge classifiers to detect rage-click-like failure modes.
 - **2026-03-27** — [Evals are the new PRD](<../product-engineering/architecture/Evals are the new PRD.md>) · `architecture` · braintrust

@@ -1,6 +1,6 @@
 # agents
 
-150 articles.
+149 articles.
 
 - **2026-07-10** — [OpenWiki Brains: Proactive Memory for AI Agents](<memory-context/OpenWiki Brains Proactive Memory for AI Agents.md>) · `memory-context` · langchain
   Introduces OpenWiki Brains as proactive wiki memory for agents, focused on persistent context and retrieval over project knowledge.
@@ -132,8 +132,6 @@
   Guide to running OpenAI Agents SDK workflows on Modal, including tool execution, deployment, and scalable background compute.
 - **2026-04-13** — [EinsteinArena: Harnessing the collective intelligence of agents in the wild to advance science](<multi-agent/EinsteinArena Harnessing the collective intelligence of agents in the wild to advance science.md>) · `multi-agent` · together
   Explains EinsteinArena for using collective agent intelligence to advance scientific tasks.
-- **2026-04-03** — [Braintrust CLI and MCP](<tool-use/Braintrust CLI and MCP.md>) · `tool-use` · braintrust
-  Covers Braintrust CLI and MCP support for connecting agent tools, local workflows, and observability/eval data into AI development loops.
 - **2026-03-24** — [Harness design for long-running application development](<planning/Harness design for long-running application development.md>) · `planning` · anthropic-engineering
   Deep dive on harness design for multi-day application builds: state management, verification loops, task queues, and recovery when the agent goes off track.
 - **2026-03-19** — [Managing Memory in AI Agents: Beyond the Context Window](<memory-context/Managing Memory in AI Agents Beyond the Context Window.md>) · `memory-context` · arize
