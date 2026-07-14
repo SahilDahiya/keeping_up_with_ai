@@ -29,7 +29,9 @@ class SourceConfig(BaseModel):
     home: str
     feed: str | None = None
     sitemap: str | None = None
-    discovery: list[Literal["feed", "sitemap"]] = Field(default_factory=lambda: ["feed", "sitemap"])
+    discovery: list[Literal["feed", "sitemap", "hf"]] = Field(default_factory=lambda: ["feed", "sitemap"])
+    # Hugging Face only: the approved tag allowlist. Empty => ingest nothing.
+    hf_tags: list[str] = Field(default_factory=list)
     include_prefixes: list[str] = Field(default_factory=list)
     include_regex: str | None = None
     exclude_regex: str | None = None

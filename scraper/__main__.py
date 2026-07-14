@@ -8,7 +8,7 @@ from typing import Optional
 import typer
 
 from .config import INBOX_DIR, KB_ROOT, load_sources, get_source, load_taxonomy, SourceConfig
-from .discover import Discovered, discover_feed, discover_sitemap
+from .discover import Discovered, discover_feed, discover_hf, discover_sitemap
 from .extract import ExtractionError, TooShallow, extract_article
 from .fetch import Fetcher, FetchError
 from .index import rebuild_indexes
@@ -34,7 +34,7 @@ from .store import (
 
 app = typer.Typer(no_args_is_help=True, add_completion=False)
 
-_TIERS = {"feed": discover_feed, "sitemap": discover_sitemap}
+_TIERS = {"feed": discover_feed, "sitemap": discover_sitemap, "hf": discover_hf}
 _SKIP_REASONS = {
     "archive-page",
     "promotion",
@@ -171,7 +171,9 @@ def update(source: Optional[str] = typer.Option(None, "--source"),
                 discovered = []
             if discovered:
                 break
-        stats = _process(src, _dedupe(discovered), fetcher, state, limit=limit, since=None)
+        # A source's `since` is a hard floor, not a backfill-only knob: without this,
+        # the daily update would happily ingest posts older than the cutoff.
+        stats = _process(src, _dedupe(discovered), fetcher, state, limit=limit, since=src.since)
         typer.echo(f"  {stats}")
     typer.echo(f"state: {state.export_jsonl()} urls -> state.jsonl")
 

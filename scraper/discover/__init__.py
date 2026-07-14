@@ -13,6 +13,7 @@ class Discovered:
 
 
 from .feed import discover_feed  # noqa: E402
+from .hf import discover_hf  # noqa: E402
 from .sitemap import discover_sitemap  # noqa: E402
 
-__all__ = ["Discovered", "discover_feed", "discover_sitemap"]
+__all__ = ["Discovered", "discover_feed", "discover_hf", "discover_sitemap"]

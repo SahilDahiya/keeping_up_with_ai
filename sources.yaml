@@ -114,6 +114,29 @@ sources:
     since: "2023-01-01"
     tags: [observability, evals]
 
+  - slug: huggingface
+    name: Hugging Face Blog
+    home: https://huggingface.co/blog
+    discovery: [hf]        # no per-tag RSS; listing JSON is embedded in the page
+    include_prefixes: ["/blog/"]
+    # GATED: only these tags are ingested. Everything else HF publishes
+    # (community submissions, partnerships, leaderboard, open-source-collab, cv,
+    # lerobot) is never fetched. Adding a tag here is a deliberate act.
+    hf_tags:
+      - guide
+      - nlp
+      - research
+      - rl
+      - audio
+      - diffusion
+      - ethics
+      - case-studies
+      - game-dev
+      - rlhf
+      - inference-providers
+    since: "2024-01-01"    # hard floor: nothing older is ingested, on update or backfill
+    tags: [open-source, models]
+
   - slug: simon-willison
     name: Simon Willison's Weblog
     home: https://simonwillison.net/
