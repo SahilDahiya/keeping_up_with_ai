@@ -339,6 +339,8 @@
   Case study of using open-source agents with frontier advisors to improve cost and quality versus closed-source baselines.
 - **2026-06-02** — [MiniMax-M3 efficient 1M-token multimodal serving](<../inference/serving/MiniMax-M3 efficient 1M-token multimodal serving.md>) · `serving` · together
   Covers efficient MiniMax-M3 serving for million-token context and multimodal workloads.
+- **2026-05-29** — [Evaluating Speech-to-Text Quality: Beyond Word Error Rate](<../evals-observability/evaluation/Evaluating Speech-to-Text Quality Beyond Word Error Rate.md>) · `evaluation` · cresta
+  Explains why word error rate is insufficient for speech-to-text evaluation and what production teams should measure instead.
 - **2026-05-28** — [AI-native product localization](<../product-engineering/architecture/AI-native product localization.md>) · `architecture` · sierra
   Case study of AI-native product localization, covering workflows for translating and adapting product surfaces with model assistance.
 - **2026-05-20** — [What we learned testing 7 models under the same agent harness](<../evals-observability/testing/What we learned testing 7 models under the same agent harness.md>) · `testing` · arize
@@ -605,5 +607,3 @@
   Explains communication bottlenecks in decentralized foundation-model training.
 - **2020-05-22** — **[Paper]** [Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks](<../rag-retrieval/pipelines/[Paper] Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks.md>) · `pipelines` · arxiv
   Introduces Retrieval-Augmented Generation: a seq2seq model coupled to a dense-vector Wikipedia index via DPR, with the retriever and generator fine-tuned end-to-end. Sets SOTA on three open-domain QA tasks and yields more factual, specific generations than a parametric-only BART baseline.
-- **1997-08-15** — [Evaluating Speech-to-Text Quality: Beyond Word Error Rate](<../evals-observability/evaluation/Evaluating Speech-to-Text Quality Beyond Word Error Rate.md>) · `evaluation` · cresta
-  Explains why word error rate is insufficient for speech-to-text evaluation and what production teams should measure instead.

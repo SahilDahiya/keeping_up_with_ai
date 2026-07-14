@@ -1,6 +1,6 @@
 # arize
 
-200 articles.
+183 articles.
 
 - **2026-07-13** — [How do you make an LLM, anyway? Microsoft just published a textbook.](<../models/reinforcement-learning/How do you make an LLM, anyway Microsoft just published a textbook.md>) · `reinforcement-learning` · arize
   Breaks down Microsoft's 109-page MAI-Thinking-1 technical report: 30-trillion-token pretraining on 8,192 GPUs with a 54.6%-code data mix, mid-training context extension from 16K to 262K tokens, and RL post-training with reward-hacking countermeasures like network-isolated coding environments and time-traveled repo snapshots with future commits scrubbed.
@@ -368,37 +368,3 @@
   Explains H3/state-space model ideas as alternatives to standard attention and why they matter for sequence modeling efficiency.
 - **2023-03-21** — [Toolformer: Training LLMs To Use Tools](<../agents/tool-use/Toolformer Training LLMs To Use Tools.md>) · `tool-use` · arize
   Summarizes Toolformer and how language models can learn to use external tools.
-- **2022-12-31** — [Measuring Embedding Drift](<../rag-retrieval/embeddings/Measuring Embedding Drift.md>) · `embeddings` · arize
-  Explains embedding drift and how teams can measure changes in embedding distributions over time.
-- **2022-12-22** — [Hugging Face + Arize: Partnership and Code Example](<../evals-observability/monitoring/Hugging Face + Arize Partnership and Code Example.md>) · `monitoring` · arize
-  Partnership and code example showing how to monitor Hugging Face model workflows with Arize observability.
-- **2022-12-16** — [Calculate Real-Time AI ROI With Custom Metrics](<../evals-observability/monitoring/Calculate Real-Time AI ROI With Custom Metrics.md>) · `monitoring` · arize
-  Shows how custom metrics can connect AI observability data to real-time ROI analysis and business impact.
-- **2022-12-01** — [Why You Need To Monitor Recommender Systems](<../evals-observability/monitoring/Why You Need To Monitor Recommender Systems.md>) · `monitoring` · arize
-  Explains why recommender systems need monitoring and what signals matter for production ranking quality.
-- **2022-11-09** — [How to Monitor Ranking Models](<../evals-observability/monitoring/How to Monitor Ranking Models.md>) · `monitoring` · arize
-  Explains monitoring patterns for ranking models, including drift and performance signals relevant to search and recommendations.
-- **2022-09-22** — [The Death of Central ML Is Greatly Exaggerated](<../industry/trends/The Death of Central ML Is Greatly Exaggerated.md>) · `trends` · arize
-  Argues that centralized ML teams remain important as organizations mature, covering organizational patterns for production ML work.
-- **2022-09-15** — [Shipping NLP Sentiment Classification Models With Confidence](<../evals-observability/monitoring/Shipping NLP Sentiment Classification Models With Confidence.md>) · `monitoring` · arize
-  Shows how to monitor NLP sentiment classification models in production, with attention to data and prediction drift.
-- **2022-06-22** — [Deploying Models In An Evolving Housing Market](<../product-engineering/case-studies/Deploying Models In An Evolving Housing Market.md>) · `case-studies` · arize
-  Case discussion on deploying models in a changing housing market and monitoring model behavior under shifting real-world conditions.
-- **2022-06-08** — [Monitor Unstructured Data with Arize](<../evals-observability/monitoring/Monitor Unstructured Data with Arize.md>) · `monitoring` · arize
-  Covers monitoring techniques for unstructured data and embeddings in production AI systems.
-- **2022-01-05** — [Best Practices In ML Observability for Customer Lifetime Value (LTV) Models](<../evals-observability/monitoring/Best Practices In ML Observability for Customer Lifetime Value (LTV) Models.md>) · `monitoring` · arize
-  Best practices for monitoring customer lifetime value models in production using ML observability techniques.
-- **2021-12-18** — [Best Practices In ML Observability for Click-Through Rate Models](<../evals-observability/monitoring/Best Practices In ML Observability for Click-Through Rate Models.md>) · `monitoring` · arize
-  Best practices for monitoring click-through-rate models, with attention to production metrics, drift, and model performance debugging.
-- **2021-11-22** — [Best Practices for ML Monitoring and Observability of Demand Forecasting Models](<../evals-observability/monitoring/Best Practices for ML Monitoring and Observability of Demand Forecasting Models.md>) · `monitoring` · arize
-  Best practices for monitoring demand forecasting models, including drift, performance slices, and production observability needs.
-- **2021-10-27** — [Best Practices In ML Observability for Monitoring, Mitigating and Preventing Fraud](<../evals-observability/monitoring/Best Practices In ML Observability for Monitoring, Mitigating and Preventing Fraud.md>) · `monitoring` · arize
-  Best practices for fraud-model observability, covering monitoring, mitigation, and prevention workflows for production risk systems.
-- **2021-10-21** — [Rise of the ML Engineer: Chick-fil-A's Korri Jones](<../product-engineering/case-studies/Rise of the ML Engineer Chick-fil-A's Korri Jones.md>) · `case-studies` · arize
-  Interview with Chick-fil-A ML engineer Korri Jones on production ML work and applied model operations in a large business.
-- **2021-09-11** — [Overcoming AI's Transparency Paradox](<../evals-observability/monitoring/Overcoming AI's Transparency Paradox.md>) · `monitoring` · arize
-  Discusses AI transparency and explainability challenges, positioning observability as a way to understand opaque model behavior in production.
-- **2021-08-06** — [Why Best-Of-Breed ML Monitoring and Observability Solutions Are The Way Forward](<../evals-observability/monitoring/Why Best-Of-Breed ML Monitoring and Observability Solutions Are The Way Forward.md>) · `monitoring` · arize
-  Argues for specialized ML monitoring and observability tools over broad platform bundles for production model operations.
-- **2021-05-19** — [Beyond Monitoring: The Rise of Observability](<../evals-observability/monitoring/Beyond Monitoring The Rise of Observability.md>) · `monitoring` · arize
-  Explains the distinction between basic monitoring and deeper observability for diagnosing production ML model behavior.

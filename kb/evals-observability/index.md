@@ -1,6 +1,6 @@
 # evals-observability
 
-199 articles.
+186 articles.
 
 - **2026-07-07** — [Improving Agents is a Data Mining Problem](<monitoring/Improving Agents is a Data Mining Problem.md>) · `monitoring` · langchain
   Argues that improving agents is a data-mining problem over traces, failures, feedback, and recurring behavioral patterns.
@@ -46,6 +46,8 @@
   Introduces rubrics for Deep Agents so agents can evaluate and correct their own work against explicit criteria.
 - **2026-06-01** — [The best eval harness for production AI and agents: A comparison](<testing/The best eval harness for production AI and agents A comparison.md>) · `testing` · arize
   Compares production AI eval harnesses and highlights the design dimensions that matter for agents and applications.
+- **2026-05-29** — [Evaluating Speech-to-Text Quality: Beyond Word Error Rate](<evaluation/Evaluating Speech-to-Text Quality Beyond Word Error Rate.md>) · `evaluation` · cresta
+  Explains why word error rate is insufficient for speech-to-text evaluation and what production teams should measure instead.
 - **2026-05-28** — [Introducing Synthetic Customers: A Living Model of Your Customer Base, Derived From Real Conversations](<testing/Introducing Synthetic Customers A Living Model of Your Customer Base, Derived From Real Conversations.md>) · `testing` · cresta
   Introduces synthetic customers as test fixtures for agent behavior, useful for scenario coverage and launch readiness.
 - **2026-05-27** — [From production traces to better AI agents: Automating the LLMOps feedback loop](<tracing/From production traces to better AI agents Automating the LLMOps feedback loop.md>) · `tracing` · arize
@@ -368,38 +370,10 @@
   Overview of cross-validation from classic ML through LLM applications, focused on evaluation methodology.
 - **2023-05-17** — [Evaluating Model Fairness](<evaluation/Evaluating Model Fairness.md>) · `evaluation` · arize
   Explains model fairness evaluation and how to assess bias and fairness risks in production systems.
-- **2022-12-22** — [Hugging Face + Arize: Partnership and Code Example](<monitoring/Hugging Face + Arize Partnership and Code Example.md>) · `monitoring` · arize
-  Partnership and code example showing how to monitor Hugging Face model workflows with Arize observability.
-- **2022-12-16** — [Calculate Real-Time AI ROI With Custom Metrics](<monitoring/Calculate Real-Time AI ROI With Custom Metrics.md>) · `monitoring` · arize
-  Shows how custom metrics can connect AI observability data to real-time ROI analysis and business impact.
-- **2022-12-01** — [Why You Need To Monitor Recommender Systems](<monitoring/Why You Need To Monitor Recommender Systems.md>) · `monitoring` · arize
-  Explains why recommender systems need monitoring and what signals matter for production ranking quality.
-- **2022-11-09** — [How to Monitor Ranking Models](<monitoring/How to Monitor Ranking Models.md>) · `monitoring` · arize
-  Explains monitoring patterns for ranking models, including drift and performance signals relevant to search and recommendations.
-- **2022-09-15** — [Shipping NLP Sentiment Classification Models With Confidence](<monitoring/Shipping NLP Sentiment Classification Models With Confidence.md>) · `monitoring` · arize
-  Shows how to monitor NLP sentiment classification models in production, with attention to data and prediction drift.
-- **2022-06-08** — [Monitor Unstructured Data with Arize](<monitoring/Monitor Unstructured Data with Arize.md>) · `monitoring` · arize
-  Covers monitoring techniques for unstructured data and embeddings in production AI systems.
 - **2022-02-07** — [Data Distribution Shifts and Monitoring](<monitoring/Data Distribution Shifts and Monitoring.md>) · `monitoring` · chip-huyen
   Taxonomy of covariate, label, and concept shifts with production monitoring strategies, data-quality checks, slice analysis, alerting tradeoffs, and examples of real-world ML failure modes.
-- **2022-01-05** — [Best Practices In ML Observability for Customer Lifetime Value (LTV) Models](<monitoring/Best Practices In ML Observability for Customer Lifetime Value (LTV) Models.md>) · `monitoring` · arize
-  Best practices for monitoring customer lifetime value models in production using ML observability techniques.
-- **2021-12-18** — [Best Practices In ML Observability for Click-Through Rate Models](<monitoring/Best Practices In ML Observability for Click-Through Rate Models.md>) · `monitoring` · arize
-  Best practices for monitoring click-through-rate models, with attention to production metrics, drift, and model performance debugging.
-- **2021-11-22** — [Best Practices for ML Monitoring and Observability of Demand Forecasting Models](<monitoring/Best Practices for ML Monitoring and Observability of Demand Forecasting Models.md>) · `monitoring` · arize
-  Best practices for monitoring demand forecasting models, including drift, performance slices, and production observability needs.
-- **2021-10-27** — [Best Practices In ML Observability for Monitoring, Mitigating and Preventing Fraud](<monitoring/Best Practices In ML Observability for Monitoring, Mitigating and Preventing Fraud.md>) · `monitoring` · arize
-  Best practices for fraud-model observability, covering monitoring, mitigation, and prevention workflows for production risk systems.
-- **2021-09-11** — [Overcoming AI's Transparency Paradox](<monitoring/Overcoming AI's Transparency Paradox.md>) · `monitoring` · arize
-  Discusses AI transparency and explainability challenges, positioning observability as a way to understand opaque model behavior in production.
-- **2021-08-06** — [Why Best-Of-Breed ML Monitoring and Observability Solutions Are The Way Forward](<monitoring/Why Best-Of-Breed ML Monitoring and Observability Solutions Are The Way Forward.md>) · `monitoring` · arize
-  Argues for specialized ML monitoring and observability tools over broad platform bundles for production model operations.
-- **2021-05-19** — [Beyond Monitoring: The Rise of Observability](<monitoring/Beyond Monitoring The Rise of Observability.md>) · `monitoring` · arize
-  Explains the distinction between basic monitoring and deeper observability for diagnosing production ML model behavior.
 - **2021-01-29** — [How We Reduced Our Labeling Cost by 10x](<evaluation/How We Reduced Our Labeling Cost by 10x.md>) · `evaluation` · cresta
   Explains how labeling costs were reduced through process and model-assisted annotation changes, relevant to eval dataset operations.
-- **1997-08-15** — [Evaluating Speech-to-Text Quality: Beyond Word Error Rate](<evaluation/Evaluating Speech-to-Text Quality Beyond Word Error Rate.md>) · `evaluation` · cresta
-  Explains why word error rate is insufficient for speech-to-text evaluation and what production teams should measure instead.
 
 ## Also relevant (filed elsewhere)
 
@@ -763,12 +737,8 @@
   Explains the RLHF pipeline from preference data through reward modeling and policy optimization, including why human feedback changes model behavior and where evaluation matters.
 - **2023-04-11** — [Building LLM applications for production](<../product-engineering/architecture/Building LLM applications for production.md>) · `architecture` · chip-huyen
   Practical guide to production LLM applications covering task decomposition, retrieval, prompt construction, evaluation, monitoring, and latency/cost tradeoffs.
-- **2022-12-31** — [Measuring Embedding Drift](<../rag-retrieval/embeddings/Measuring Embedding Drift.md>) · `embeddings` · arize
-  Explains embedding drift and how teams can measure changes in embedding distributions over time.
 - **2022-11-17** — [HELM: benchmarking large language models on the Together Research Computer](<../models/benchmarks/HELM benchmarking large language models on the Together Research Computer.md>) · `benchmarks` · together
   Describes HELM benchmarking on the Together Research Computer.
-- **2022-06-22** — [Deploying Models In An Evolving Housing Market](<../product-engineering/case-studies/Deploying Models In An Evolving Housing Market.md>) · `case-studies` · arize
-  Case discussion on deploying models in a changing housing market and monitoring model behavior under shifting real-world conditions.
 - **2022-02-10** — [Why Transcription is Vital to Contact Center AI](<../models/multimodal/Why Transcription is Vital to Contact Center AI.md>) · `multimodal` · cresta
   Explains why transcription quality is a core dependency for downstream AI systems that operate on spoken conversations.
 - **2022-01-02** — [Real-time machine learning: challenges and solutions](<../product-engineering/architecture/Real-time machine learning challenges and solutions.md>) · `architecture` · chip-huyen

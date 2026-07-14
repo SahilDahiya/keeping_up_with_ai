@@ -107,6 +107,11 @@ sources:
     sitemap: https://arize.com/sitemap_index.xml
     include_prefixes: ["/blog/"]
     exclude_regex: "^/blog/(category|tag|resource-type|press-type)/"  # archive/listing pages, not articles
+    # Everything Arize published before 2023 is pre-LLM tabular-ML monitoring
+    # (CTR / LTV / demand-forecasting / recommender models) — off-topic for this KB.
+    # Deliberately per-source, not a global floor: other sources' older posts are
+    # worth keeping (Chip Huyen's systems writing is timeless).
+    since: "2023-01-01"
     tags: [observability, evals]
 
   - slug: simon-willison

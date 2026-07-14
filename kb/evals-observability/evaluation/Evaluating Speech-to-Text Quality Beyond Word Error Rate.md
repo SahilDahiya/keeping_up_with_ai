@@ -9,7 +9,7 @@ summary: Explains why word error rate is insufficient for speech-to-text evaluat
 source: cresta
 url: https://cresta.com/blog/evaluating-speech-to-text-quality-beyond-word-error-rate
 author: Binoy Robin Dalal
-published: '1997-08-15'
+published: '2026-05-29'
 fetched: '2026-07-11T03:58:04Z'
 classifier: codex
 taxonomy_rev: 1
