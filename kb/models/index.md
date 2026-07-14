@@ -399,8 +399,6 @@
   Explains consistency diffusion language models for faster inference without large quality loss.
 - **2026-02-12** — [The 5 pillars of AI model performance](<../evals-observability/evaluation/The 5 pillars of AI model performance.md>) · `evaluation` · braintrust
   Defines five pillars of AI model performance and how to measure quality beyond a single aggregate benchmark score.
-- **2026-02-11** — [CUGA Agent: From Benchmarks to Business Impact of IBM's Generalist Agent](<../agents/planning/CUGA Agent From Benchmarks to Business Impact of IBM's Generalist Agent.md>) · `planning` · arize
-  Brief paper-reading note on IBM's CUGA generalist agent, connecting benchmark performance to business impact.
 - **2026-02-11** — [How we built the fastest Kimi K2.5 on Artificial Analysis](<../inference/optimization/How we built the fastest Kimi K2.5 on Artificial Analysis.md>) · `optimization` · baseten
   Explains optimizations behind fast Kimi K2.5 serving on Artificial Analysis.
 - **2026-02-06** — [What do LLMs think when you don't tell them what to think about?](<../evals-observability/evaluation/What do LLMs think when you don't tell them what to think about.md>) · `evaluation` · together
@@ -441,8 +439,6 @@
   Introduces ATLAS, a runtime-learning accelerator for improving LLM inference.
 - **2025-09-22** — [Why we built the Responses API | OpenAI Developers](<../agents/tool-use/Why we built the Responses API OpenAI Developers.md>) · `tool-use` · openai-devs
   OpenAI's design rationale for the Responses API as an agentic loop unifying Chat Completions and Assistants: it preserves reasoning state across turns (+5% on TAUBench, better cache utilization) and emits multiple output items — tool calls, structured outputs, intermediate steps — not just the final message.
-- **2025-09-19** — [Atropos Health’s Arjun Mukerji, PhD, Explains RWESummary: A Framework and Test for Choosing LLMs to Summarize Real-World Evidence (RWE) Studies](<../evals-observability/evaluation/Atropos Health’s Arjun Mukerji, PhD, Explains RWESummary A Framework and Test for Choosing LLMs to Summarize Real-World Evidence (RWE) Studies.md>) · `evaluation` · arize
-  Summarizes RWESummary, a healthcare-focused framework for choosing LLMs to summarize real-world evidence studies safely and reliably.
 - **2025-09-12** — [Developer notes on the Realtime API | OpenAI Developers](<releases/Developer notes on the Realtime API OpenAI Developers.md>) · `releases` · openai-devs
   Developer notes on the Realtime API GA and the gpt-realtime speech-to-speech model: beta-to-GA interface migration, new marin/cedar voices, and advice to rewrite prompts because instruction-following improved enough that literal instructions are now honored.
 - **2025-08-21** — [Voice AI Agents for Customer Experience: Why Decentralized Agent Architectures Can Outperform Central Orchestrators](<../agents/multi-agent/Voice AI Agents for Customer Experience Why Decentralized Agent Architectures Can Outperform Central Orchestrators.md>) · `multi-agent` · cresta

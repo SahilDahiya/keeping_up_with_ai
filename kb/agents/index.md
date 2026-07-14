@@ -1,6 +1,6 @@
 # agents
 
-147 articles.
+144 articles.
 
 - **2026-07-10** — [OpenWiki Brains: Proactive Memory for AI Agents](<memory-context/OpenWiki Brains Proactive Memory for AI Agents.md>) · `memory-context` · langchain
   Introduces OpenWiki Brains as proactive wiki memory for agents, focused on persistent context and retrieval over project knowledge.
@@ -142,8 +142,6 @@
   How OpenAI maintains the Agents SDK repos with repo-local Codex skills, AGENTS.md policy, and the Codex GitHub Action — turning verification, release prep, and PR review into repeatable progressive-disclosure workflows; merged PRs rose from 316 to 457 quarter-over-quarter.
 - **2026-03-05** — [How to Build Planning Into Your Agent (The Architecture That Actually Works)](<planning/How to Build Planning Into Your Agent (The Architecture That Actually Works).md>) · `planning` · arize
   Explains planning architectures for agents and how explicit planning changes control flow, reliability, and debugging.
-- **2026-03-04** — [From UI to Terminal: Bringing Alyx's Superpowers Into Your Coding Agent](<tool-use/From UI to Terminal Bringing Alyx's Superpowers Into Your Coding Agent.md>) · `tool-use` · arize
-  Introduces an AX CLI preview that brings Alyx-style trace and eval workflows into terminal-based coding-agent loops.
 - **2026-02-26** — [Building frontend UIs with Codex and Figma | OpenAI Developers](<tool-use/Building frontend UIs with Codex and Figma OpenAI Developers.md>) · `tool-use` · openai-devs
   Announces bidirectional Codex-Figma integration via the Figma MCP server: get_design_context extracts layouts/styles/components from Figma frames for code generation, and generate_figma_design turns a running UI back into editable Figma frames.
 - **2026-02-24** — [Alyx 2.0: The AI Agent That Actually Plans](<planning/Alyx 2.0 The AI Agent That Actually Plans.md>) · `planning` · arize
@@ -156,8 +154,6 @@
   Case study of a background coding agent architecture that gives agents full project context through remote sandboxes.
 - **2026-02-13** — [On Agent Frameworks and Agent Observability](<planning/On Agent Frameworks and Agent Observability.md>) · `planning` · langchain
   Connects agent-framework design with observability requirements, arguing that runtime structure determines what teams can debug and evaluate.
-- **2026-02-11** — [CUGA Agent: From Benchmarks to Business Impact of IBM's Generalist Agent](<planning/CUGA Agent From Benchmarks to Business Impact of IBM's Generalist Agent.md>) · `planning` · arize
-  Brief paper-reading note on IBM's CUGA generalist agent, connecting benchmark performance to business impact.
 - **2026-02-11** — [Shell + Skills + Compaction: Tips for long-running agents that do real work | OpenAI Developers](<tool-use/Shell + Skills + Compaction Tips for long-running agents that do real work OpenAI Developers.md>) · `tool-use` · openai-devs
   Nonobvious patterns for three new Responses API primitives for long-running agents — skills (on-demand SKILL.md playbooks), the hosted/local shell tool, and server-side compaction that auto-compresses conversation history — drawn from Codex internals and Glean's production use.
 - **2026-02-05** — [Building a C compiler with a team of parallel Claudes](<multi-agent/Building a C compiler with a team of parallel Claudes.md>) · `multi-agent` · anthropic-engineering
@@ -208,8 +204,6 @@
   Guidance on designing tool interfaces agents use reliably—consolidating workflows, namespacing, returning meaningful context—and using Claude to optimize its own tools.
 - **2025-09-09** — [Orchestrator-Worker Agents: A Practical Comparison of Common Agent Frameworks](<multi-agent/Orchestrator-Worker Agents A Practical Comparison of Common Agent Frameworks.md>) · `multi-agent` · arize
   Compares orchestrator-worker agent frameworks and clarifies when this multi-agent pattern is useful.
-- **2025-09-09** — [AI that knows your data](<tool-use/AI that knows your data.md>) · `tool-use` · braintrust
-  Discusses MCP-style access to data and tools so AI systems can retrieve context and act against application-specific resources.
 - **2025-09-04** — [Building LangGraph: Designing an Agent Runtime from first principles](<planning/Building LangGraph Designing an Agent Runtime from first principles.md>) · `planning` · langchain
   Design history of LangGraph as an agent runtime from first principles, covering control flow, state, durability, and production requirements.
 - **2025-08-28** — [Claude Code vs Cursor: A Power-User’s Playbook](<tool-use/Claude Code vs Cursor A Power-User’s Playbook.md>) · `tool-use` · arize

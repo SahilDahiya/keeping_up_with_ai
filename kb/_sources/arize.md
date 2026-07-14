@@ -1,6 +1,6 @@
 # arize
 
-205 articles.
+200 articles.
 
 - **2026-07-13** — [How do you make an LLM, anyway? Microsoft just published a textbook.](<../models/reinforcement-learning/How do you make an LLM, anyway Microsoft just published a textbook.md>) · `reinforcement-learning` · arize
   Breaks down Microsoft's 109-page MAI-Thinking-1 technical report: 30-trillion-token pretraining on 8,192 GPUs with a 54.6%-code data mix, mid-training context extension from 16K to 262K tokens, and RL post-training with reward-hacking countermeasures like network-isolated coding environments and time-traveled repo snapshots with future commits scrubbed.
@@ -116,8 +116,6 @@
   Case study on using evals plus an agentic workflow to iteratively improve a newsletter-generation system.
 - **2026-03-05** — [How to Build Planning Into Your Agent (The Architecture That Actually Works)](<../agents/planning/How to Build Planning Into Your Agent (The Architecture That Actually Works).md>) · `planning` · arize
   Explains planning architectures for agents and how explicit planning changes control flow, reliability, and debugging.
-- **2026-03-04** — [From UI to Terminal: Bringing Alyx's Superpowers Into Your Coding Agent](<../agents/tool-use/From UI to Terminal Bringing Alyx's Superpowers Into Your Coding Agent.md>) · `tool-use` · arize
-  Introduces an AX CLI preview that brings Alyx-style trace and eval workflows into terminal-based coding-agent loops.
 - **2026-03-02** — [How to Evaluate Tool-Calling Agents](<../evals-observability/evaluation/How to Evaluate Tool-Calling Agents.md>) · `evaluation` · arize
   Covers evaluation methods for tool-calling agents, including how to assess action selection and tool-use correctness.
 - **2026-02-27** — [Best AI Observability Tools for Autonomous Agents in 2026](<../evals-observability/monitoring/Best AI Observability Tools for Autonomous Agents in 2026.md>) · `monitoring` · arize
@@ -134,8 +132,6 @@
   Argues that coding-agent telemetry can close the loop toward self-improving software by capturing agent behavior, failures, and feedback.
 - **2026-02-17** — [Inside Typeform’s AI Agent Stack](<../product-engineering/case-studies/Inside Typeform’s AI Agent Stack.md>) · `case-studies` · arize
   Case study of Typeform’s AI agent stack, useful for understanding production architecture choices in agent applications.
-- **2026-02-11** — [CUGA Agent: From Benchmarks to Business Impact of IBM's Generalist Agent](<../agents/planning/CUGA Agent From Benchmarks to Business Impact of IBM's Generalist Agent.md>) · `planning` · arize
-  Brief paper-reading note on IBM's CUGA generalist agent, connecting benchmark performance to business impact.
 - **2026-01-29** — [Hierarchical Memory Management In Agent Harnesses](<../agents/memory-context/Hierarchical Memory Management In Agent Harnesses.md>) · `memory-context` · arize
   Explains hierarchical memory management patterns for agent harnesses, including how state is organized across short and long horizons.
 - **2026-01-29** — [Why AI Agents Break: A Field Analysis of Production Failures](<../evals-observability/monitoring/Why AI Agents Break A Field Analysis of Production Failures.md>) · `monitoring` · arize
@@ -172,8 +168,6 @@
   Tests self-evaluation bias when using the same model for agent behavior and evaluation, with guidance for eval design.
 - **2025-09-24** — [Testing Binary vs Score Evals on the Latest Models](<../evals-observability/testing/Testing Binary vs Score Evals on the Latest Models.md>) · `testing` · arize
   Compares binary and score-based LLM evals across models to clarify tradeoffs in evaluator design.
-- **2025-09-19** — [Atropos Health’s Arjun Mukerji, PhD, Explains RWESummary: A Framework and Test for Choosing LLMs to Summarize Real-World Evidence (RWE) Studies](<../evals-observability/evaluation/Atropos Health’s Arjun Mukerji, PhD, Explains RWESummary A Framework and Test for Choosing LLMs to Summarize Real-World Evidence (RWE) Studies.md>) · `evaluation` · arize
-  Summarizes RWESummary, a healthcare-focused framework for choosing LLMs to summarize real-world evidence studies safely and reliably.
 - **2025-09-17** — [adb Benchmarks](<../infra-platform/deployment/adb Benchmarks.md>) · `deployment` · arize
   Benchmarks Arize database performance at the storage and application level for AI observability workloads powered by high-volume traces and model data.
 - **2025-09-09** — [Orchestrator-Worker Agents: A Practical Comparison of Common Agent Frameworks](<../agents/multi-agent/Orchestrator-Worker Agents A Practical Comparison of Common Agent Frameworks.md>) · `multi-agent` · arize
@@ -202,8 +196,6 @@
   Analyzes the Apple reasoning paper and what it suggests about evaluating LLM reasoning limits.
 - **2025-06-05** — [Accurate KV Cache Quantization with Outlier Tokens Tracing](<../inference/quantization/Accurate KV Cache Quantization with Outlier Tokens Tracing.md>) · `quantization` · arize
   Summarizes research on KV-cache quantization with outlier token tracing to reduce LLM inference memory cost while preserving output quality.
-- **2025-05-19** — [Arize AI Accelerates Enterprise AI Adoption On-Premises With NVIDIA](<../infra-platform/deployment/Arize AI Accelerates Enterprise AI Adoption On-Premises With NVIDIA.md>) · `deployment` · arize
-  Announcement of Arize and NVIDIA collaboration for on-prem enterprise AI deployment and observability infrastructure.
 - **2025-05-16** — [Scalable Chain of Thoughts via Elastic Reasoning](<../models/reasoning/Scalable Chain of Thoughts via Elastic Reasoning.md>) · `reasoning` · arize
   Summarizes elastic reasoning and scalable chain-of-thought ideas for allocating reasoning compute more flexibly.
 - **2025-04-11** — [40 Large Language Model Benchmarks and The Future of Model Evaluation](<../models/benchmarks/40 Large Language Model Benchmarks and The Future of Model Evaluation.md>) · `benchmarks` · arize
@@ -408,7 +400,5 @@
   Discusses AI transparency and explainability challenges, positioning observability as a way to understand opaque model behavior in production.
 - **2021-08-06** — [Why Best-Of-Breed ML Monitoring and Observability Solutions Are The Way Forward](<../evals-observability/monitoring/Why Best-Of-Breed ML Monitoring and Observability Solutions Are The Way Forward.md>) · `monitoring` · arize
   Argues for specialized ML monitoring and observability tools over broad platform bundles for production model operations.
-- **2021-08-02** — [A Quick Start To Data Quality Monitoring For Machine Learning](<../evals-observability/monitoring/A Quick Start To Data Quality Monitoring For Machine Learning.md>) · `monitoring` · arize
-  Quick-start guide to data quality monitoring for machine learning systems.
 - **2021-05-19** — [Beyond Monitoring: The Rise of Observability](<../evals-observability/monitoring/Beyond Monitoring The Rise of Observability.md>) · `monitoring` · arize
   Explains the distinction between basic monitoring and deeper observability for diagnosing production ML model behavior.

@@ -1,6 +1,6 @@
 # evals-observability
 
-202 articles.
+199 articles.
 
 - **2026-07-07** — [Improving Agents is a Data Mining Problem](<monitoring/Improving Agents is a Data Mining Problem.md>) · `monitoring` · langchain
   Argues that improving agents is a data-mining problem over traces, failures, feedback, and recurring behavioral patterns.
@@ -44,8 +44,6 @@
   Explains how to design efficient verifiers for legal agents so domain-specific correctness can be checked without excessive cost.
 - **2026-06-02** — [Introducing Rubrics: Build Agents that Evaluate and Correct Their Work](<evaluation/Introducing Rubrics Build Agents that Evaluate and Correct Their Work.md>) · `evaluation` · langchain
   Introduces rubrics for Deep Agents so agents can evaluate and correct their own work against explicit criteria.
-- **2026-06-01** — [AI observability is active observability](<monitoring/AI observability is active observability.md>) · `monitoring` · braintrust
-  Defines active AI observability as systems that analyze traces, surface patterns, and drive improvements rather than passively storing production logs.
 - **2026-06-01** — [The best eval harness for production AI and agents: A comparison](<testing/The best eval harness for production AI and agents A comparison.md>) · `testing` · arize
   Compares production AI eval harnesses and highlights the design dimensions that matter for agents and applications.
 - **2026-05-28** — [Introducing Synthetic Customers: A Living Model of Your Customer Base, Derived From Real Conversations](<testing/Introducing Synthetic Customers A Living Model of Your Customer Base, Derived From Real Conversations.md>) · `testing` · cresta
@@ -242,8 +240,6 @@
   Compares binary and score-based LLM evals across models to clarify tradeoffs in evaluator design.
 - **2025-09-22** — [Traces are all you need](<evaluation/Traces are all you need.md>) · `evaluation` · fireworks
   Shows how to turn production traces into an internal model leaderboard with rollout processors and judge comparisons.
-- **2025-09-19** — [Atropos Health’s Arjun Mukerji, PhD, Explains RWESummary: A Framework and Test for Choosing LLMs to Summarize Real-World Evidence (RWE) Studies](<evaluation/Atropos Health’s Arjun Mukerji, PhD, Explains RWESummary A Framework and Test for Choosing LLMs to Summarize Real-World Evidence (RWE) Studies.md>) · `evaluation` · arize
-  Summarizes RWESummary, a healthcare-focused framework for choosing LLMs to summarize real-world evidence studies safely and reliably.
 - **2025-09-09** — [Building a Multilingual Cypher Query Evaluation Pipeline](<evaluation/Building a Multilingual Cypher Query Evaluation Pipeline.md>) · `evaluation` · arize
   Walks through building a multilingual Cypher query evaluation pipeline for testing whether LLMs generate correct database queries across languages.
 - **2025-09-05** — [Automated Evaluations of LLM Applications](<testing/Automated Evaluations of LLM Applications.md>) · `testing` · langfuse
@@ -398,8 +394,6 @@
   Discusses AI transparency and explainability challenges, positioning observability as a way to understand opaque model behavior in production.
 - **2021-08-06** — [Why Best-Of-Breed ML Monitoring and Observability Solutions Are The Way Forward](<monitoring/Why Best-Of-Breed ML Monitoring and Observability Solutions Are The Way Forward.md>) · `monitoring` · arize
   Argues for specialized ML monitoring and observability tools over broad platform bundles for production model operations.
-- **2021-08-02** — [A Quick Start To Data Quality Monitoring For Machine Learning](<monitoring/A Quick Start To Data Quality Monitoring For Machine Learning.md>) · `monitoring` · arize
-  Quick-start guide to data quality monitoring for machine learning systems.
 - **2021-05-19** — [Beyond Monitoring: The Rise of Observability](<monitoring/Beyond Monitoring The Rise of Observability.md>) · `monitoring` · arize
   Explains the distinction between basic monitoring and deeper observability for diagnosing production ML model behavior.
 - **2021-01-29** — [How We Reduced Our Labeling Cost by 10x](<evaluation/How We Reduced Our Labeling Cost by 10x.md>) · `evaluation` · cresta
@@ -473,8 +467,6 @@
   Argues that evals, context, and traces can reduce the need for fine-tuning in many production AI workflows.
 - **2026-06-02** — [AI benchmarks are breaking. Trace analysis is what comes next.](<evaluation/AI benchmarks are breaking. Trace analysis is what comes next.md>) · `evaluation` · arize
   Explains why outcome-only agent benchmarks are losing resolution as agents exploit tests, and argues for trace analysis to distinguish real solving from benchmark gaming.
-- **2026-06-01** — [AI observability is active observability](<monitoring/AI observability is active observability.md>) · `monitoring` · braintrust
-  Defines active AI observability as systems that analyze traces, surface patterns, and drive improvements rather than passively storing production logs.
 - **2026-05-29** — [How to build a better agent harness with traces and evals](<../agents/planning/How to build a better agent harness with traces and evals.md>) · `planning` · arize
   Shows how traces and evals combine inside an agent harness to make agent behavior easier to test and improve.
 - **2026-05-27** — [From production traces to better AI agents: Automating the LLMOps feedback loop](<tracing/From production traces to better AI agents Automating the LLMOps feedback loop.md>) · `tracing` · arize
@@ -555,8 +547,6 @@
   Architecture case study on simplifying Langfuse for scale, covering operational complexity, storage and compute boundaries, and reliability improvements.
 - **2026-03-05** — [When the Call Runs Too Long: Modeling Outcomes for Long Conversations](<../models/reasoning/When the Call Runs Too Long Modeling Outcomes for Long Conversations.md>) · `reasoning` · cresta
   Discusses modeling outcomes for long conversations, including challenges around sequence length and delayed success signals.
-- **2026-03-04** — [From UI to Terminal: Bringing Alyx's Superpowers Into Your Coding Agent](<../agents/tool-use/From UI to Terminal Bringing Alyx's Superpowers Into Your Coding Agent.md>) · `tool-use` · arize
-  Introduces an AX CLI preview that brings Alyx-style trace and eval workflows into terminal-based coding-agent loops.
 - **2026-02-25** — [Automatically discover what matters in your production traces with Topics](<tracing/Automatically discover what matters in your production traces with Topics.md>) · `tracing` · braintrust
   Introduces automatic topic discovery over production traces as a way to find recurring behavior patterns and quality issues.
 - **2026-02-23** — [How Cresta Scales Data Annotation With a Human-Supervised Multi-Agent System (MAS)](<../agents/multi-agent/How Cresta Scales Data Annotation With a Human-Supervised Multi-Agent System (MAS).md>) · `multi-agent` · cresta

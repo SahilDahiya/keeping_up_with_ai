@@ -113,8 +113,6 @@
   Explains context graphs as an enterprise memory layer for agents and retrieval-heavy AI systems.
 - **2025-09-12** — [Understanding embeddings and reranking at scale](<search/Understanding embeddings and reranking at scale.md>) · `search` · fireworks
   Explains embeddings, reranking, and retrieval architecture patterns for production RAG systems.
-- **2025-09-09** — [AI that knows your data](<../agents/tool-use/AI that knows your data.md>) · `tool-use` · braintrust
-  Discusses MCP-style access to data and tools so AI systems can retrieve context and act against application-specific resources.
 - **2025-04-16** — [Open Deep Research](<../agents/tool-use/Open Deep Research.md>) · `tool-use` · together
   Describes an open deep research system combining retrieval, planning, and tool use.
 - **2025-04-09** — [Building Enterprise-Scale RAG Systems with Fireworks AI and MongoDB Atlas](<pipelines/Building Enterprise-Scale RAG Systems with Fireworks AI and MongoDB Atlas.md>) · `pipelines` · fireworks

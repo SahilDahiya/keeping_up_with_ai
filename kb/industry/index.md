@@ -41,8 +41,6 @@
   Discusses how swarms of agents change software engineering workflows, including orchestration, delegation, review, and human oversight.
 - **2025-12-09** — [Agent Engineering: A New Discipline](<../agents/planning/Agent Engineering A New Discipline.md>) · `planning` · langchain
   Defines agent engineering as a discipline around designing, evaluating, observing, and iterating on production agents rather than treating them as prompt-only systems.
-- **2025-05-19** — [Arize AI Accelerates Enterprise AI Adoption On-Premises With NVIDIA](<../infra-platform/deployment/Arize AI Accelerates Enterprise AI Adoption On-Premises With NVIDIA.md>) · `deployment` · arize
-  Announcement of Arize and NVIDIA collaboration for on-prem enterprise AI deployment and observability infrastructure.
 - **2024-10-15** — [Google's NotebookLM and the Future of AI-Generated Audio](<../models/multimodal/Google's NotebookLM and the Future of AI-Generated Audio.md>) · `multimodal` · arize
   Paper-reading style overview of Google NotebookLM and AI-generated audio as a multimodal product pattern.
 - **2021-10-21** — [Rise of the ML Engineer: Chick-fil-A's Korri Jones](<../product-engineering/case-studies/Rise of the ML Engineer Chick-fil-A's Korri Jones.md>) · `case-studies` · arize

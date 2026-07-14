@@ -1,6 +1,6 @@
 # braintrust
 
-73 articles.
+70 articles.
 
 - **2026-07-10** — [Evaluating the GPT-5.6 family](<../models/benchmarks/Evaluating the GPT-5.6 family.md>) · `benchmarks` · braintrust
   Evaluates the GPT-5.6 model family and presents a decision map for choosing models based on quality, cost, and task requirements.
@@ -28,8 +28,6 @@
   Integration guide for capturing Braintrust traces and evals across different AI frameworks and model providers without locking the application stack to one SDK.
 - **2026-06-04** — [How we made continuous trace intelligence possible at scale](<../evals-observability/tracing/How we made continuous trace intelligence possible at scale.md>) · `tracing` · braintrust
   Architecture deep dive on continuous trace intelligence at scale, including how production traces are clustered and surfaced for analysis.
-- **2026-06-01** — [AI observability is active observability](<../evals-observability/monitoring/AI observability is active observability.md>) · `monitoring` · braintrust
-  Defines active AI observability as systems that analyze traces, surface patterns, and drive improvements rather than passively storing production logs.
 - **2026-05-21** — [The six generations of AI agents and how to eval them](<../agents/planning/The six generations of AI agents and how to eval them.md>) · `planning` · braintrust
   Taxonomy of six generations of AI agents and guidance for evaluating each generation's capabilities, failure modes, and production readiness.
 - **2026-05-21** — [How to improve your golden datasets with human review](<../evals-observability/testing/How to improve your golden datasets with human review.md>) · `testing` · braintrust
@@ -94,8 +92,6 @@
   Intro to AI evals focused on choosing metrics that reflect product quality, building datasets, and measuring what matters for users.
 - **2025-09-29** — [Claude Sonnet 4.5 analysis](<../models/benchmarks/Claude Sonnet 4.5 analysis.md>) · `benchmarks` · braintrust
   Analyzes Claude Sonnet 4.5 with aspirational evals, focusing on how harder task suites reveal model strengths and gaps beyond standard benchmarks.
-- **2025-09-09** — [AI that knows your data](<../agents/tool-use/AI that knows your data.md>) · `tool-use` · braintrust
-  Discusses MCP-style access to data and tools so AI systems can retrieve context and act against application-specific resources.
 - **2025-09-03** — [A/B testing can't keep up with AI](<../evals-observability/evaluation/AB testing can't keep up with AI.md>) · `evaluation` · braintrust
   Explains why traditional A/B testing is too slow for AI products and argues for eval-driven experimentation loops that compare model, prompt, and product changes before rollout.
 - **2025-08-19** — [The rise of async programming](<../product-engineering/architecture/The rise of async programming.md>) · `architecture` · braintrust
@@ -116,8 +112,6 @@
   Introduces Brainstore as a database for AI engineering workloads, optimized for traces, evals, logs, and large-scale observability queries.
 - **2025-01-22** — [Evaluating agents](<../agents/planning/Evaluating agents.md>) · `planning` · braintrust
   Detailed guide to evaluating agents, including task design, tool-use traces, intermediate-step analysis, and failure modes unique to multi-step systems.
-- **2025-01-08** — [Our approach to hybrid deployment](<../infra-platform/deployment/Our approach to hybrid deployment.md>) · `deployment` · braintrust
-  Describes a hybrid deployment approach for AI observability, balancing managed services with customer-controlled data and infrastructure boundaries.
 - **2024-12-04** — [What to do when a new AI model comes out](<../evals-observability/evaluation/What to do when a new AI model comes out.md>) · `evaluation` · braintrust
   Playbook for responding when a new AI model ships: run targeted evals, compare cost and quality, inspect regressions, and decide rollout strategy.
 - **2024-11-18** — [Building a RAG app with MongoDB Atlas](<../rag-retrieval/pipelines/Building a RAG app with MongoDB Atlas.md>) · `pipelines` · braintrust

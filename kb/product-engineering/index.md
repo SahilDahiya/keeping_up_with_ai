@@ -305,8 +305,6 @@
   Frames prompt management from first principles, including versioning, ownership, and production workflow concerns.
 - **2025-01-22** — [Building Audio Support with OpenAI: Insights from our Journey](<../models/multimodal/Building Audio Support with OpenAI Insights from our Journey.md>) · `multimodal` · arize
   Case study on adding audio support with OpenAI models, covering product and engineering lessons from building multimodal support.
-- **2025-01-08** — [Our approach to hybrid deployment](<../infra-platform/deployment/Our approach to hybrid deployment.md>) · `deployment` · braintrust
-  Describes a hybrid deployment approach for AI observability, balancing managed services with customer-controlled data and infrastructure boundaries.
 - **2024-12-19** — [Building Effective AI Agents](<../agents/planning/Building Effective AI Agents.md>) · `planning` · anthropic-engineering
   Anthropic's canonical guide to agent design patterns: when to use workflows (prompt chaining, routing, orchestrator-workers) versus autonomous agents, and why simple composable patterns beat frameworks.
 - **2024-12-04** — [AI Agent Workflows and Architectures Masterclass](<../agents/planning/AI Agent Workflows and Architectures Masterclass.md>) · `planning` · arize

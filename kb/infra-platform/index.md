@@ -1,6 +1,6 @@
 # infra-platform
 
-62 articles.
+60 articles.
 
 - **2026-07-09** — [Trace before you migrate: Measuring Kubernetes bottlenecks in AI agent sandboxes](<deployment/Trace before you migrate Measuring Kubernetes bottlenecks in AI agent sandboxes.md>) · `deployment` · arize
   Shows how tracing can diagnose Kubernetes bottlenecks in AI agent sandboxes before migration decisions.
@@ -72,8 +72,6 @@
   Engineering writeup on building multi-cloud capacity management for inference infrastructure.
 - **2025-06-09** — [How Baseten multi-cloud capacity management unifies deployments](<gpu-clusters/How Baseten multi-cloud capacity management unifies deployments.md>) · `gpu-clusters` · baseten
   Explains multi-cloud capacity management for unifying cloud, self-hosted, and hybrid inference deployments.
-- **2025-05-19** — [Arize AI Accelerates Enterprise AI Adoption On-Premises With NVIDIA](<deployment/Arize AI Accelerates Enterprise AI Adoption On-Premises With NVIDIA.md>) · `deployment` · arize
-  Announcement of Arize and NVIDIA collaboration for on-prem enterprise AI deployment and observability infrastructure.
 - **2025-05-07** — [Linear programming for fun and profit](<cost/Linear programming for fun and profit.md>) · `cost` · modal
   Shows how linear programming can allocate compute resources under constraints, useful for GPU scheduling and cost control.
 - **2025-03-13** — [Hugging Face and Langfuse: 5 Ways to use them Together](<deployment/Hugging Face and Langfuse 5 Ways to use them Together.md>) · `deployment` · langfuse
@@ -86,8 +84,6 @@
   Architecture case study on scaling real-time AI insights with ClickHouse for high-volume conversation analytics.
 - **2025-01-28** — [Memory snapshots: Checkpoint and restore for sub-second startup](<deployment/Memory snapshots Checkpoint and restore for sub-second startup.md>) · `deployment` · modal
   Explains memory snapshots as checkpoint/restore infrastructure for faster startup in serverless AI workloads.
-- **2025-01-08** — [Our approach to hybrid deployment](<deployment/Our approach to hybrid deployment.md>) · `deployment` · braintrust
-  Describes a hybrid deployment approach for AI observability, balancing managed services with customer-controlled data and infrastructure boundaries.
 - **2024-12-02** — [WireGuard at Modal: Static IPs for serverless containers](<deployment/WireGuard at Modal Static IPs for serverless containers.md>) · `deployment` · modal
   Explains static IP support for serverless containers using WireGuard, relevant to secure networked AI deployments.
 - **2024-11-17** — [From Zero to Scale: Langfuse's Infrastructure Evolution](<deployment/From Zero to Scale Langfuse's Infrastructure Evolution.md>) · `deployment` · langfuse
