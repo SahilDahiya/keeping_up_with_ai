@@ -1,6 +1,6 @@
 # product-engineering
 
-105 articles.
+103 articles.
 
 - **2026-07-13** — [Introducing Precursor: detecting agentic behavior with continuous client-side signals](<security/Introducing Precursor detecting agentic behavior with continuous client-side signals.md>) · `security` · cloudflare-ai
   Cloudflare's Precursor injects client-side JS to continuously collect session-level behavioral signals (mouse-movement physics, keystroke rhythm, focus changes) and feeds them into an edge-side evaluator/dispatcher to distinguish human from agentic/bot traffic in real time, feeding Cloudflare's bot score without exposing raw signals to customers.
@@ -110,8 +110,6 @@
   Maps OWASP risks to agentic applications and explains compliance-oriented controls for agent systems.
 - **2026-01-22** — [How Observability-Driven Sandboxing Secures AI Agents](<security/How Observability-Driven Sandboxing Secures AI Agents.md>) · `security` · arize
   Explains how sandbox telemetry and observability can harden AI agents that execute code or use external tools.
-- **2026-01-21** — [Security is a choice: how Braintrust lets you decide where your AI data lives](<security/Security is a choice how Braintrust lets you decide where your AI data lives.md>) · `security` · braintrust
-  Explains data-control choices for AI observability, including where data lives, how security boundaries are enforced, and deployment implications.
 - **2026-01-11** — [Supercharging Codex with JetBrains MCP at Skyscanner | OpenAI Developers](<case-studies/Supercharging Codex with JetBrains MCP at Skyscanner OpenAI Developers.md>) · `case-studies` · openai-devs
   Skyscanner wires Codex CLI to the JetBrains MCP server so the agent gets IDE feedback loops: get_file_problems surfaced a non-compiling Databricks SDK NotFound constructor immediately instead of after a test run, cutting iteration time.
 - **2026-01-08** — [How to choose the right open model for production](<architecture/How to choose the right open model for production.md>) · `architecture` · together
@@ -196,8 +194,6 @@
   Explains the shift from standalone models to compound AI systems that combine models, retrieval, tools, orchestration, and evaluation into production applications.
 - **2023-11-13** — [The AI product development journey](<architecture/The AI product development journey.md>) · `architecture` · braintrust
   Frames the AI product development journey around iterative prototyping, evaluation, logging, feedback, and production-quality improvement loops.
-- **2023-07-19** — [Streamline and Centralize AI Analytics With Snowflake and Arize AI](<case-studies/Streamline and Centralize AI Analytics With Snowflake and Arize AI.md>) · `case-studies` · arize
-  Describes using Snowflake with Arize to centralize AI analytics and observability data for model performance analysis.
 - **2023-04-28** — [Lessons From Building an Early ChatGPT Plugin In Under 24 Hours](<case-studies/Lessons From Building an Early ChatGPT Plugin In Under 24 Hours.md>) · `case-studies` · arize
   Retrospective on building an early ChatGPT plugin quickly, including product workflow lessons and integration constraints from the plugin ecosystem.
 - **2023-04-11** — [Building LLM applications for production](<architecture/Building LLM applications for production.md>) · `architecture` · chip-huyen
@@ -249,8 +245,6 @@
   Explains design and engineering considerations for more human voice-agent experiences, including timing, emotion, and conversational flow.
 - **2026-05-12** — [Multilingual voice: building agents that speak to everyone](<../models/multimodal/Multilingual voice building agents that speak to everyone.md>) · `multimodal` · sierra
   Describes building multilingual voice agents, including speech recognition, language coverage, and user-experience considerations.
-- **2026-05-12** — [Sierra speaks](<../models/multimodal/Sierra speaks.md>) · `multimodal` · sierra
-  Launch writeup for Sierra voice agents with useful architecture details on interruptions, latency, call-center integration, escalation, and multi-channel agent reuse.
 - **2026-05-12** — [Visual Attachments: A new dimension for chat agents](<../models/multimodal/Visual Attachments A new dimension for chat agents.md>) · `multimodal` · sierra
   Covers visual attachments in chat agents and how images expand support-agent context and user interaction patterns.
 - **2026-05-12** — [From LLMs to enterprise-grade agents](<architecture/From LLMs to enterprise-grade agents.md>) · `architecture` · sierra

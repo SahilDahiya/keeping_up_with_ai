@@ -47,5 +47,3 @@
   Paper-reading style overview of Google NotebookLM and AI-generated audio as a multimodal product pattern.
 - **2021-10-21** — [Rise of the ML Engineer: Chick-fil-A's Korri Jones](<../product-engineering/case-studies/Rise of the ML Engineer Chick-fil-A's Korri Jones.md>) · `case-studies` · arize
   Interview with Chick-fil-A ML engineer Korri Jones on production ML work and applied model operations in a large business.
-- **2021-06-07** — [Arize Partners with UbiOps to Accelerate Model Building & Deployment](<../infra-platform/deployment/Arize Partners with UbiOps to Accelerate Model Building & Deployment.md>) · `deployment` · arize
-  Partnership announcement with UbiOps focused on connecting model building, deployment, and observability workflows.

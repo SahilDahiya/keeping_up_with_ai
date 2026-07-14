@@ -1,6 +1,6 @@
 # braintrust
 
-75 articles.
+73 articles.
 
 - **2026-07-10** — [Evaluating the GPT-5.6 family](<../models/benchmarks/Evaluating the GPT-5.6 family.md>) · `benchmarks` · braintrust
   Evaluates the GPT-5.6 model family and presents a decision map for choosing models based on quality, cost, and task requirements.
@@ -62,8 +62,6 @@
   Defines five pillars of AI model performance and how to measure quality beyond a single aggregate benchmark score.
 - **2026-01-22** — [Testing if "bash is all you need"](<../agents/tool-use/Testing if bash is all you need.md>) · `tool-use` · braintrust
   Tests whether bash-oriented agents can solve realistic tasks, using evals to measure command-line tool use and agent reliability.
-- **2026-01-21** — [Security is a choice: how Braintrust lets you decide where your AI data lives](<../product-engineering/security/Security is a choice how Braintrust lets you decide where your AI data lives.md>) · `security` · braintrust
-  Explains data-control choices for AI observability, including where data lives, how security boundaries are enforced, and deployment implications.
 - **2026-01-20** — [Building observable AI agents with Temporal](<../agents/tool-use/Building observable AI agents with Temporal.md>) · `tool-use` · braintrust
   Shows how Temporal workflows can make AI agents observable, connecting durable execution with traces, evals, and debugging data.
 - **2026-01-13** — [Debugging Ralph Wiggum with Braintrust Logs](<../evals-observability/tracing/Debugging Ralph Wiggum with Braintrust Logs.md>) · `tracing` · braintrust
@@ -84,8 +82,6 @@
   Case study of Retool using production logs and Loop-style review to turn AI usage data into roadmap and quality decisions.
 - **2026-01-01** — [How Zapier builds production-ready AI products](<../product-engineering/case-studies/How Zapier builds production-ready AI products.md>) · `case-studies` · braintrust
   Case study of Zapier building production-ready AI products with observability, evals, and feedback loops across real customer workflows.
-- **2025-12-23** — [Claude Code meets Braintrust](<../agents/tool-use/Claude Code meets Braintrust.md>) · `tool-use` · braintrust
-  Shows how Claude Code workflows can connect to Braintrust so coding-agent traces, experiments, and eval data are captured for review.
 - **2025-12-18** — [Brainstore makes AI observability at scale possible](<../evals-observability/monitoring/Brainstore makes AI observability at scale possible.md>) · `monitoring` · braintrust
   Benchmark-oriented note on Brainstore performance and why purpose-built storage is needed for high-volume AI observability workloads.
 - **2025-11-25** — [Evals are a team sport: How we built Loop](<../evals-observability/testing/Evals are a team sport How we built Loop.md>) · `testing` · braintrust

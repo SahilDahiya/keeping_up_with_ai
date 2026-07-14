@@ -1,6 +1,6 @@
 # rag-retrieval
 
-44 articles.
+43 articles.
 
 - **2026-07-07** — [Faster phrase search with shingled bloom filters in Brainstore](<search/Faster phrase search with shingled bloom filters in Brainstore.md>) · `search` · braintrust
   Explains faster phrase search over Brainstore data using shingled bloom filters, aimed at efficient trace and log search for AI observability.
@@ -74,8 +74,6 @@
   Walkthrough for building and deploying a RAG application with Pinecone Serverless and LangChain components.
 - **2024-01-11** — [Long context retrieval models with Monarch Mixer](<search/Long context retrieval models with Monarch Mixer.md>) · `search` · together
   Explains long-context retrieval models using Monarch Mixer.
-- **2024-01-01** — [Evaluate RAG with LLM Evals and Benchmarking](<pipelines/Evaluate RAG with LLM Evals and Benchmarking.md>) · `pipelines` · arize
-  Workshop recap on evaluating RAG systems with LLM evals and benchmarking.
 - **2023-11-08** — [Ingesting Data for Semantic Searches in a Production-Ready Way](<pipelines/Ingesting Data for Semantic Searches in a Production-Ready Way.md>) · `pipelines` · arize
   Explains production ingestion concerns for semantic search, including data preparation and retrieval pipeline reliability.
 - **2023-11-02** — [Deployment and inference for open source text embedding models](<embeddings/Deployment and inference for open source text embedding models.md>) · `embeddings` · baseten

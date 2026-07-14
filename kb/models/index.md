@@ -1,6 +1,6 @@
 # models
 
-155 articles.
+154 articles.
 
 - **2026-07-13** — [How do you make an LLM, anyway? Microsoft just published a textbook.](<reinforcement-learning/How do you make an LLM, anyway Microsoft just published a textbook.md>) · `reinforcement-learning` · arize
   Breaks down Microsoft's 109-page MAI-Thinking-1 technical report: 30-trillion-token pretraining on 8,192 GPUs with a 54.6%-code data mix, mid-training context extension from 16K to 262K tokens, and RL post-training with reward-hacking countermeasures like network-isolated coding environments and time-traveled repo snapshots with future commits scrubbed.
@@ -46,8 +46,6 @@
   Explains design and engineering considerations for more human voice-agent experiences, including timing, emotion, and conversational flow.
 - **2026-05-12** — [Multilingual voice: building agents that speak to everyone](<multimodal/Multilingual voice building agents that speak to everyone.md>) · `multimodal` · sierra
   Describes building multilingual voice agents, including speech recognition, language coverage, and user-experience considerations.
-- **2026-05-12** — [Sierra speaks](<multimodal/Sierra speaks.md>) · `multimodal` · sierra
-  Launch writeup for Sierra voice agents with useful architecture details on interruptions, latency, call-center integration, escalation, and multi-channel agent reuse.
 - **2026-05-12** — [Visual Attachments: A new dimension for chat agents](<multimodal/Visual Attachments A new dimension for chat agents.md>) · `multimodal` · sierra
   Covers visual attachments in chat agents and how images expand support-agent context and user interaction patterns.
 - **2026-05-12** — [Constellation of models: the architecture powering Sierra's agents](<reasoning/Constellation of models the architecture powering Sierra's agents.md>) · `reasoning` · sierra
@@ -607,8 +605,6 @@
   Continues the decentralized training discussion with techniques for communication-efficient optimization.
 - **2022-11-30** — [Overcoming communication bottlenecks for decentralized training, part 1](<../infra-platform/gpu-clusters/Overcoming communication bottlenecks for decentralized training, part 1.md>) · `gpu-clusters` · together
   Explains communication bottlenecks in decentralized foundation-model training.
-- **2022-09-30** — [Arize AI + OpenAI](<../evals-observability/monitoring/Arize AI + OpenAI.md>) · `monitoring` · arize
-  Introduces Arize support for monitoring OpenAI-powered applications, connecting hosted LLM usage with observability and performance analysis.
 - **2020-05-22** — **[Paper]** [Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks](<../rag-retrieval/pipelines/[Paper] Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks.md>) · `pipelines` · arxiv
   Introduces Retrieval-Augmented Generation: a seq2seq model coupled to a dense-vector Wikipedia index via DPR, with the retriever and generator fine-tuned end-to-end. Sets SOTA on three open-domain QA tasks and yields more factual, specific generations than a parametric-only BART baseline.
 - **1997-08-15** — [Evaluating Speech-to-Text Quality: Beyond Word Error Rate](<../evals-observability/evaluation/Evaluating Speech-to-Text Quality Beyond Word Error Rate.md>) · `evaluation` · cresta
