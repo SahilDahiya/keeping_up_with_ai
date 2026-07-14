@@ -1,6 +1,6 @@
 # industry
 
-12 articles.
+13 articles.
 
 - **2026-07-01** — [Announcing the Monetization Gateway: charge for any resource behind Cloudflare via x402](<business/Announcing the Monetization Gateway charge for any resource behind Cloudflare via x402.md>) · `business` · cloudflare-ai
   Announces the Monetization Gateway: charge agents for any Cloudflare-protected resource (pages, datasets, APIs, MCP tools) with payment verification enforced at the edge, settling sub-cent stablecoin micropayments over the x402 protocol now stewarded by a 25+ member Linux Foundation x402 Foundation.
@@ -22,6 +22,8 @@
   Year-in-review of OpenAI's 2025 developer platform: reasoning converging from separate o1/o3/o4-mini lines into unified flagship models, multimodal I/O becoming default, agent building blocks (Responses API, Agents SDK, AgentKit), and GPT-5.2-Codex for long-horizon coding.
 - **2025-10-13** — [State of LLMs on the Application Layer](<trends/State of LLMs on the Application Layer.md>) · `trends` · langfuse
   Application-layer snapshot of LLM usage and model trends, useful for understanding production model adoption and quality/cost tradeoffs.
+- **2024-12-02** — [Open Source Developers Guide to the EU AI Act](<trends/Open Source Developers Guide to the EU AI Act.md>) · `trends` · huggingface
+  Practical guide to EU AI Act obligations for open-source model and system developers: the GPAI vs system distinction, the 10^25 FLOP systemic-risk threshold, and the documentation, transparency, watermarking and opt-out steps that satisfy limited-risk duties.
 - **2024-03-14** — [What I learned from looking at 900 most popular open source AI tools](<trends/What I learned from looking at 900 most popular open source AI tools.md>) · `trends` · chip-huyen
   Maps 900 open-source AI tools into infrastructure, model-development, and application-development layers, highlighting growth in agents, prompt engineering, vector search, evaluation, and inference tooling.
 - **2020-12-30** — [Machine Learning Tools Landscape v2 (+84 new tools)](<trends/Machine Learning Tools Landscape v2 (+84 new tools).md>) · `trends` · chip-huyen
@@ -39,5 +41,7 @@
   Discusses how swarms of agents change software engineering workflows, including orchestration, delegation, review, and human oversight.
 - **2025-12-09** — [Agent Engineering: A New Discipline](<../agents/planning/Agent Engineering A New Discipline.md>) · `planning` · langchain
   Defines agent engineering as a discipline around designing, evaluating, observing, and iterating on production agents rather than treating them as prompt-only systems.
+- **2025-05-12** — [Vision Language Models (Better, faster, stronger)](<../models/multimodal/Vision Language Models (Better, faster, stronger).md>) · `multimodal` · huggingface
+  A year-in-review of vision language models covering new model classes (any-to-any, reasoning VLMs, small on-device VLMs, MoE VLMs), multimodal RAG with ColPali-style late-interaction retrievers, VLM agents for GUI/computer use, video understanding, and how alignment/benchmarks for VLMs have evolved. Names the specific models and techniques behind each shift.
 - **2024-10-15** — [Google's NotebookLM and the Future of AI-Generated Audio](<../models/multimodal/Google's NotebookLM and the Future of AI-Generated Audio.md>) · `multimodal` · arize
   Paper-reading style overview of Google NotebookLM and AI-generated audio as a multimodal product pattern.

@@ -1,6 +1,6 @@
 # product-engineering
 
-101 articles.
+108 articles.
 
 - **2026-07-13** — [Introducing Precursor: detecting agentic behavior with continuous client-side signals](<security/Introducing Precursor detecting agentic behavior with continuous client-side signals.md>) · `security` · cloudflare-ai
   Cloudflare's Precursor injects client-side JS to continuously collect session-level behavioral signals (mouse-movement physics, keystroke rhythm, focus changes) and feeds them into an edge-side evaluator/dispatcher to distinguish human from agentic/bot traffic in real time, feeding Cloudflare's bot score without exposing raw signals to customers.
@@ -140,6 +140,8 @@
   Explains how red-team agents can be used to find and test security weaknesses in agentic applications.
 - **2025-11-03** — [Vercel code fixing with open models, speculative decoding, and RFT](<case-studies/Vercel code fixing with open models speculative decoding and RFT.md>) · `case-studies` · fireworks
   Case study of improving Vercel code-fixing outputs with open models, speculative decoding, and reinforcement fine-tuning.
+- **2025-10-28** — [Voice Cloning with Consent](<security/Voice Cloning with Consent.md>) · `security` · huggingface
+  Proposes a 'voice consent gate': before any voice cloning runs, the speaker must record a spoken consent phrase, which is verified with ASR (and speaker verification) against the same audio used for cloning — a concrete, implementable design pattern (with a demo Space and code) for making consent a hard gate rather than a checkbox.
 - **2025-10-27** — [Using Codex for education at Dagster Labs | OpenAI Developers](<case-studies/Using Codex for education at Dagster Labs OpenAI Developers.md>) · `case-studies` · openai-devs
   Dagster Labs describes using Codex to accelerate documentation work — writing docs, translating content across mediums, and measuring doc completeness — and finds a well-structured CONTRIBUTING.md doubles as high-leverage scaffolding for the agent.
 - **2025-10-20** — [Making Claude Code more secure and autonomous with sandboxing](<security/Making Claude Code more secure and autonomous with sandboxing.md>) · `security` · anthropic-engineering
@@ -162,10 +164,14 @@
   Engineering case study on building a customer data access layer, useful for understanding integration tradeoffs in enterprise AI products.
 - **2025-03-18** — [Our Own Zero to One: Lessons Learned in Building The Brinks Home AI Agent](<case-studies/Our Own Zero to One Lessons Learned in Building The Brinks Home AI Agent.md>) · `case-studies` · cresta
   Production case study on building an AI agent from zero to one, with lessons about scope, rollout, and operational constraints.
+- **2025-02-25** — [FastRTC: The Real-Time Communication Library for Python](<architecture/FastRTC The Real-Time Communication Library for Python.md>) · `architecture` · huggingface
+  FastRTC builds real-time voice/video AI apps in Python over WebRTC or WebSockets: built-in voice activity detection and turn-taking (ReplyOnPause), automatic Gradio UI, phone-call ingress, and mounting streams onto FastAPI.
 - **2025-02-12** — [How 100X AI Uses Phoenix to Supercharge AI-Driven Troubleshooting](<case-studies/How 100X AI Uses Phoenix to Supercharge AI-Driven Troubleshooting.md>) · `case-studies` · arize
   Case study on using Phoenix traces and observability to improve AI-driven troubleshooting workflows in production.
 - **2025-01-16** — [Common pitfalls when building generative AI applications](<architecture/Common pitfalls when building generative AI applications.md>) · `architecture` · chip-huyen
   Covers common generative-AI application pitfalls, including overusing LLMs, confusing product problems with model failures, premature framework complexity, and weak evaluation/product iteration.
+- **2024-12-03** — [Investing in Performance: Fine-tune small models with LLM insights - a CFM case study](<case-studies/Investing in Performance Fine-tune small models with LLM insights - a CFM case study.md>) · `case-studies` · huggingface
+  CFM (quant hedge fund) case study: use an LLM to label financial NER data, distill that into a compact fine-tuned model, and deploy it on Inference Endpoints — with an F1 and $/hour table showing the fine-tuned small model beating zero-shot LLM accuracy at a fraction of the inference cost.
 - **2024-11-13** — [LLM Product Development for Product Managers](<ux-patterns/LLM Product Development for Product Managers.md>) · `ux-patterns` · langfuse
   Product-management guide for LLM applications, connecting user workflows, quality criteria, feedback, and evals to AI product development decisions.
 - **2024-09-26** — [Pushing LangSmith to new limits with Replit Agent's complex workflows](<case-studies/Pushing LangSmith to new limits with Replit Agent's complex workflows.md>) · `case-studies` · langchain
@@ -176,8 +182,12 @@
   Arize Copilot case study covering lessons from building an AI assistant for data scientists and AI engineers.
 - **2024-07-25** — [Building A Generative AI Platform](<architecture/Building A Generative AI Platform.md>) · `architecture` · chip-huyen
   Reference architecture for generative AI platforms covering context construction and RAG, guardrails, gateways and routers, caching, observability, orchestration, and tool/action layers.
+- **2024-07-09** — [Banque des Territoires (CDC Group) x Polyconseil x Hugging Face: Enhancing a Major French Environmental Program with a Sovereign Data Solution](<case-studies/Banque des Territoires (CDC Group) x Polyconseil x Hugging Face Enhancing a Major French Environmental Program with a Sovereign Data Solution.md>) · `case-studies` · huggingface
+  Banque des Territoires (CDC) x Polyconseil build a sovereign, on-prem RAG assistant for the EduRénov program using open models (Mistral-7B-Instruct, Sentence Transformers, TGI): retriever/reader architecture, data-sovereignty constraints, and production lessons.
 - **2024-07-02** — [Building multi-component AI workflows at scale with Chains](<architecture/Building multi-component AI workflows at scale with Chains.md>) · `architecture` · baseten
   Explains multi-component AI workflows with Chains, including orchestration across model and application steps.
+- **2024-06-25** — [XLSCOUT Unveils ParaEmbed 2.0: a Powerful Embedding Model Tailored for Patents and IP with Expert Support from Hugging Face](<case-studies/XLSCOUT Unveils ParaEmbed 2.0 a Powerful Embedding Model Tailored for Patents and IP with Expert Support from Hugging Face.md>) · `case-studies` · huggingface
+  XLSCOUT fine-tunes BGE-base into ParaEmbed 2.0 on expert-curated patent data, gaining 23% accuracy over its predecessor and beating GPT-4/text-embedding-ada-002 on patent prior-art retrieval — a case for domain-specific open embeddings over closed APIs.
 - **2024-06-19** — [How Factory used LangSmith to automate their feedback loop and improve iteration speed by 2x](<case-studies/How Factory used LangSmith to automate their feedback loop and improve iteration speed by 2x.md>) · `case-studies` · langchain
   Factory case study on automating feedback loops with LangSmith to improve iteration speed and production agent quality.
 - **2024-06-06** — [How to catch crypto miners using syscall signatures](<security/How to catch crypto miners using syscall signatures.md>) · `security` · modal
@@ -188,6 +198,10 @@
   Covers monitoring patterns for LLM security risks such as prompt injection, data leakage, and unsafe outputs, with observability as part of the mitigation loop.
 - **2024-05-06** — [AI development loops](<architecture/AI development loops.md>) · `architecture` · braintrust
   Describes AI development loops where logs, evals, human review, and product iteration form the core workflow for improving AI applications.
+- **2024-04-16** — [Running Privacy-Preserving Inferences on Hugging Face Endpoints](<security/Running Privacy-Preserving Inferences on Hugging Face Endpoints.md>) · `security` · huggingface
+  Shows how to serve Zama Concrete ML models under Fully Homomorphic Encryption on HF Inference Endpoints via custom inference handlers, so a spam classifier runs on ciphertext without ever seeing the plaintext message; also covers compiling your own FHE-friendly model.
+- **2024-02-26** — [AI Watermarking 101: Tools and Techniques](<security/AI Watermarking 101 Tools and Techniques.md>) · `security` · huggingface
+  Surveys watermarking for AI-generated content: for images, in-generation methods (Stable Signature) vs post-hoc (Truepic/Imatag, C2PA metadata); for LLM text, logit-biasing green/red token lists at sampling time and the detection statistics behind them, plus SynthID-Text in transformers. Discusses robustness to editing and the short-text detection confidence limit.
 - **2024-02-21** — [What Does It Take To Pioneer Successful LLM Applications In Healthcare and the Life Sciences?](<case-studies/What Does It Take To Pioneer Successful LLM Applications In Healthcare and the Life Sciences.md>) · `case-studies` · arize
   Healthcare and life-sciences case discussion on what it takes to build successful LLM applications, including domain constraints and evaluation needs.
 - **2024-02-18** — [The Shift from Models to Compound AI Systems](<architecture/The Shift from Models to Compound AI Systems.md>) · `architecture` · arize
@@ -251,6 +265,8 @@
   Explains how evals and observability help build stakeholder trust by making AI product quality measurable, reviewable, and improvable.
 - **2026-04-23** — [An update on recent Claude Code quality reports](<../evals-observability/monitoring/An update on recent Claude Code quality reports.md>) · `monitoring` · anthropic-engineering
   Follow-up on Claude Code quality regression reports: how the issues were traced, what infrastructure changes caused them, and monitoring added to catch recurrence.
+- **2026-04-23** — [How to Use Transformers.js in a Chrome Extension](<../infra-platform/edge/How to Use Transformers.js in a Chrome Extension.md>) · `edge` · huggingface
+  Practical guide to running Transformers.js models inside a Chrome Manifest V3 extension: a background service worker hosts the model, a side panel provides the chat UI, and a content script handles page-level actions, with message passing between them. Covers the MV3 gotchas — service-worker lifecycle/termination, model loading and caching, and streaming tokens across the messaging boundary.
 - **2026-04-21** — [AI to Human Agent Handoff Best Practices](<../agents/planning/AI to Human Agent Handoff Best Practices.md>) · `planning` · cresta
   Covers best practices for AI-to-human handoffs, including when agents should escalate and how handoff context should be preserved.
 - **2026-04-20** — [Orchestrating AI Code Review at scale](<../agents/multi-agent/Orchestrating AI Code Review at scale.md>) · `multi-agent` · cloudflare-ai
@@ -281,6 +297,8 @@
   Explains Loop as a way to turn production data into AI improvements through review, labeling, datasets, and feedback-driven iteration.
 - **2025-10-21** — [LLM Testing: A Practical Guide to Automated Testing for LLM Applications](<../evals-observability/testing/LLM Testing A Practical Guide to Automated Testing for LLM Applications.md>) · `testing` · langfuse
   Practical guide to automated testing for LLM applications, covering test cases, regression checks, CI-style workflows, and quality gates.
+- **2025-09-29** — [VibeGame: Exploring Vibe Coding Games](<../prompt-engineering/context-engineering/VibeGame Exploring Vibe Coding Games.md>) · `context-engineering` · huggingface
+  Case study on why vibe-coded games fall apart as they grow: the context window fills and model performance degrades. Compares Roblox MCP, Unity MCP and web stacks for LLM-friendliness, and introduces Shallot, a lightweight /peel + /nourish context-management system for Claude Code, arguing for high-level abstractions (ECS/declarative) that keep the codebase small enough to fit in context.
 - **2025-09-22** — [Why we built the Responses API | OpenAI Developers](<../agents/tool-use/Why we built the Responses API OpenAI Developers.md>) · `tool-use` · openai-devs
   OpenAI's design rationale for the Responses API as an agentic loop unifying Chat Completions and Assistants: it preserves reasoning state across turns (+5% on TAUBench, better cache utilization) and emits multiple output items — tool calls, structured outputs, intermediate steps — not just the final message.
 - **2025-09-16** — [Inside Modal Notebooks: How we built a cloud GPU notebook that boots in seconds](<../infra-platform/deployment/Inside Modal Notebooks How we built a cloud GPU notebook that boots in seconds.md>) · `deployment` · modal
@@ -319,6 +337,10 @@
   Analyzes vulnerabilities and alignment issues in LLM-as-judge systems, with implications for production evaluator design.
 - **2024-08-14** — [Building a RAG with Astro, FastAPI, SurrealDB and Llama 3.1](<../rag-retrieval/pipelines/Building a RAG with Astro, FastAPI, SurrealDB and Llama 3.1.md>) · `pipelines` · fireworks
   End-to-end RAG application example using Astro, FastAPI, SurrealDB, and Llama 3.1.
+- **2024-07-31** — [Google releases Gemma 2 2B, ShieldGemma and Gemma Scope](<../models/releases/Google releases Gemma 2 2B, ShieldGemma and Gemma Scope.md>) · `releases` · huggingface
+  Google's July 2024 Gemma drop: Gemma 2 2B distilled from larger models for on-device use, ShieldGemma safety classifiers for filtering app inputs/outputs, and Gemma Scope sparse autoencoders for interpretability.
+- **2024-05-24** — [CyberSecEval 2 - A Comprehensive Evaluation Framework for Cybersecurity Risks and Capabilities of Large Language Models](<../evals-observability/evaluation/CyberSecEval 2 - A Comprehensive Evaluation Framework for Cybersecurity Risks and Capabilities of Large Language Models.md>) · `evaluation` · huggingface
+  CyberSecEval 2 evaluates LLM cybersecurity risk: prompt injection, code interpreter abuse, offensive-security capability and insecure-code generation, plus a false-refusal-rate metric that quantifies the safety/helpfulness tradeoff.
 - **2024-05-01** — [Regression Testing with LangSmith](<../evals-observability/testing/Regression Testing with LangSmith.md>) · `testing` · langchain
   Explains regression testing with LangSmith for preventing LLM application quality regressions during prompt, model, or code changes.
 - **2024-04-30** — [CI-CD for AI model deployments](<../infra-platform/deployment/CI-CD for AI model deployments.md>) · `deployment` · baseten
@@ -331,6 +353,12 @@
   Deep dive into Modal web infrastructure, including serverless HTTP routing, isolation, and platform architecture.
 - **2024-03-11** — [Iterating Towards LLM Reliability with Evaluation Driven Development](<../evals-observability/testing/Iterating Towards LLM Reliability with Evaluation Driven Development.md>) · `testing` · langchain
   Explains evaluation-driven development for LLM reliability using regression tests, examples, and iterative quality gates.
+- **2024-02-23** — [Introducing the Red-Teaming Resistance Leaderboard](<../evals-observability/evaluation/Introducing the Red-Teaming Resistance Leaderboard.md>) · `evaluation` · huggingface
+  The Red-Teaming Resistance Leaderboard scores frontier LLMs on robustness against adversarial prompts drawn from real red-teaming datasets (AdvBench, AART, HarmBench, Beavertails, plus Haize's own attacks), reporting attack success rates per harm category rather than a single safety number.
+- **2024-02-08** — [From OpenAI to Open LLMs with Messages API on Hugging Face](<../inference/serving/From OpenAI to Open LLMs with Messages API on Hugging Face.md>) · `serving` · huggingface
+  TGI 1.4 adds an OpenAI Chat Completions-compatible Messages API, so open models on Inference Endpoints become a drop-in swap for GPT-4 by only changing base_url and api_key — shown with the OpenAI Python/JS clients, LangChain and LlamaIndex, and a Nous-Hermes-2-Mixtral migration.
+- **2024-01-26** — [An Introduction to AI Secure LLM Safety Leaderboard](<../evals-observability/evaluation/An Introduction to AI Secure LLM Safety Leaderboard.md>) · `evaluation` · huggingface
+  The AI Secure LLM Safety Leaderboard runs the DecodingTrust benchmark, scoring models across eight trustworthiness axes (toxicity, stereotype bias, adversarial and out-of-distribution robustness, privacy leakage, machine ethics, fairness) rather than capability alone.
 - **2023-11-27** — [Open sourcing the AI proxy](<../infra-platform/deployment/Open sourcing the AI proxy.md>) · `deployment` · braintrust
   Open-source AI proxy notes focused on provider routing, logging, credentials, access control, and observability for model calls.
 - **2023-11-20** — [AI proxy: fostering a more open ecosystem](<../infra-platform/deployment/AI proxy fostering a more open ecosystem.md>) · `deployment` · braintrust

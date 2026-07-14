@@ -1,6 +1,6 @@
 # prompt-engineering
 
-20 articles.
+24 articles.
 
 - **2026-06-26** — [Prompt Caching with Deep Agents](<context-engineering/Prompt Caching with Deep Agents.md>) · `context-engineering` · langchain
   Explains prompt caching for Deep Agents and how cache-aware context design reduces latency and cost for repeated agent work.
@@ -20,6 +20,8 @@
   Survey of prompt testing and optimization tools for LLM and multi-agent systems, focused on iteration workflows, evaluation support, and production prompt quality.
 - **2025-09-29** — [Effective context engineering for AI agents](<context-engineering/Effective context engineering for AI agents.md>) · `context-engineering` · anthropic-engineering
   Strategies for managing agent context windows—compaction, structured note-taking, sub-agent architectures—and why context engineering supersedes prompt engineering.
+- **2025-09-29** — [VibeGame: Exploring Vibe Coding Games](<context-engineering/VibeGame Exploring Vibe Coding Games.md>) · `context-engineering` · huggingface
+  Case study on why vibe-coded games fall apart as they grow: the context window fills and model performance degrades. Compares Roblox MCP, Unity MCP and web stacks for LLM-friendliness, and introduces Shallot, a lightweight /peel + /nourish context-management system for Claude Code, arguing for high-level abstractions (ECS/declarative) that keep the codebase small enough to fit in context.
 - **2025-08-20** — [Evidence-Based Prompting Strategies for LLM-as-a-Judge: Explanations and Chain-of-Thought](<techniques/Evidence-Based Prompting Strategies for LLM-as-a-Judge Explanations and Chain-of-Thought.md>) · `techniques` · arize
   Examines prompting strategies for LLM-as-judge evaluators, including explanations and chain-of-thought design choices.
 - **2025-07-18** — [Prompt Learning: Using English Feedback to Optimize LLM Systems](<techniques/Prompt Learning Using English Feedback to Optimize LLM Systems.md>) · `techniques` · arize
@@ -30,12 +32,18 @@
   Frames prompt management from first principles, including versioning, ownership, and production workflow concerns.
 - **2025-02-01** — [From text to task: Constrained generation for structured extraction in R1](<structured-output/From text to task Constrained generation for structured extraction in R1.md>) · `structured-output` · fireworks
   Explains constrained generation for structured extraction with reasoning models and schema-bound outputs.
+- **2024-12-23** — [Controlling Language Model Generation with NVIDIA's LogitsProcessorZoo](<structured-output/Controlling Language Model Generation with NVIDIA's LogitsProcessorZoo.md>) · `structured-output` · huggingface
+  Uses NVIDIA's LogitsProcessorZoo to steer generation by editing the logit distribution directly: GenLengthLogitsProcessor to control answer length, CiteFromPromptLogitsProcessor to bias tokens toward the source passage (useful for RAG), ForceLastPhraseLogitsProcessor and MultipleChoiceLogitsProcessor for constrained answers.
 - **2024-11-13** — [Promptim: an experimental library for prompt optimization](<techniques/Promptim an experimental library for prompt optimization.md>) · `techniques` · langchain
   Introduces Promptim as an experimental prompt-optimization library that uses evaluation feedback to improve prompts.
 - **2024-09-12** — [How to build function calling and JSON mode for open-source and fine-tuned LLMs](<structured-output/How to build function calling and JSON mode for open-source and fine-tuned LLMs.md>) · `structured-output` · baseten
   Shows how to build function calling and JSON mode for open-source and fine-tuned LLMs.
 - **2024-07-24** — [DSPy Assertions: Computational Constraints for Self-Refining Language Model Pipelines](<techniques/DSPy Assertions Computational Constraints for Self-Refining Language Model Pipelines.md>) · `techniques` · arize
   Explains DSPy assertions as computational constraints for self-refining language-model pipelines.
+- **2024-04-30** — [Improving Prompt Consistency with Structured Generations](<structured-output/Improving Prompt Consistency with Structured Generations.md>) · `structured-output` · huggingface
+  HF's leaderboards team and dottxt show that eval scores swing wildly with tiny prompt-format changes, and that forcing structured generation (Outlines' regex/JSON-constrained decoding) sharply reduces that variance across prompt formats on GSM8K-style tasks.
+- **2024-04-04** — [Text2SQL using Hugging Face Dataset Viewer API and Motherduck DuckDB-NSQL-7B](<structured-output/Text2SQL using Hugging Face Dataset Viewer API and Motherduck DuckDB-NSQL-7B.md>) · `structured-output` · huggingface
+  Text-to-SQL walkthrough using MotherDuck's DuckDB-NSQL-7B (Llama-2-7B fine-tuned on DuckDB SQL pairs) with the HF Dataset Viewer parquet API: schema-in-prompt templating, generation, and executing the SQL against DuckDB.
 - **2024-02-20** — [Why do all LLMs need structured output modes?](<structured-output/Why do all LLMs need structured output modes.md>) · `structured-output` · fireworks
   Explains why structured-output modes matter for reliable LLM applications and tool-calling systems.
 - **2024-01-31** — [Function calling and JSON mode](<structured-output/Function calling and JSON mode.md>) · `structured-output` · together
@@ -45,8 +53,12 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-06-22** — [We got local models to triage the OpenClaw repo for FREE!*](<../agents/tool-use/We got local models to triage the OpenClaw repo for FREE!.md>) · `tool-use` · huggingface
+  Uses local Gemma/Qwen models inside an agent harness with structured outputs to triage hundreds of daily OpenClaw issues/PRs on a 128GB NVIDIA GB10, replacing a quota-limited GPT-5/Opus workflow; covers label schema design, prompt iteration and accuracy vs closed models.
 - **2026-05-28** — [Claude Code: Best practices for agentic coding](<../agents/tool-use/Claude Code Best practices for agentic coding.md>) · `tool-use` · anthropic-engineering
   Practical workflows for agentic coding with Claude Code: CLAUDE.md setup, explore-plan-code loops, test-driven iteration, headless automation, and multi-Claude patterns.
+- **2026-05-25** — [Harness, Scaffold, and the AI Agent Terms Worth Getting Right](<../agents/tool-use/Harness, Scaffold, and the AI Agent Terms Worth Getting Right.md>) · `tool-use` · huggingface
+  A working glossary that disentangles the overloaded agent vocabulary — model vs scaffolding vs harness vs agent, plus context engineering, policy, tool use, skills, sub-agents and orchestrators — using Claude Code, Codex and RL-environment framing as reference points. Defines 'harness engineering' (stop conditions, error handling, guardrails) and the eval-harness variant.
 - **2026-05-11** — [Serving DeepSeek-V4: why million-token context is an inference systems problem](<../inference/serving/Serving DeepSeek-V4 why million-token context is an inference systems problem.md>) · `serving` · together
   Explains why million-token context serving is primarily an inference-systems problem.
 - **2026-04-24** — [How we fixed prompt injection for all models on Fireworks](<../product-engineering/security/How we fixed prompt injection for all models on Fireworks.md>) · `security` · fireworks
@@ -81,6 +93,8 @@
   Walks through a recipe-bot homework workflow from an AI evals course, showing how to design tests and iterate on an LLM application.
 - **2025-07-11** — [Function calling for agentic AI systems](<../agents/tool-use/Function calling for agentic AI systems.md>) · `tool-use` · fireworks
   Explains function calling as the bridge between LLM outputs, external tools, and agentic execution loops.
+- **2025-05-28** — [CodeAgents + Structure: A Better Way to Execute Actions](<../agents/tool-use/CodeAgents + Structure A Better Way to Execute Actions.md>) · `tool-use` · huggingface
+  Shows that making a CodeAgent emit its thoughts and code as structured JSON (rather than free-form markdown code blocks) beats both plain CodeAgents and JSON ToolCallingAgents on SmolBench (GAIA, MATH, SimpleQA, Frames), with the gain concentrated in larger models; smaller models can be hurt by the added format constraint.
 - **2025-03-20** — [The "think" tool: Enabling Claude to stop and think](<../agents/tool-use/The think tool Enabling Claude to stop and think.md>) · `tool-use` · anthropic-engineering
   Adding a no-op 'think' tool gives Claude space for intermediate reasoning mid-task, significantly improving policy-heavy agentic benchmarks like tau-bench.
 - **2025-02-26** — [Memory and State in LLM Applications](<../agents/memory-context/Memory and State in LLM Applications.md>) · `memory-context` · arize
@@ -97,10 +111,16 @@
   Explains speculative decoding for high-throughput long-context inference.
 - **2024-08-29** — [Build Your Own Flight Recommendation System using FastAPI, SerpAPI, and Firefunction](<../agents/tool-use/Build Your Own Flight Recommendation System using FastAPI, SerpAPI, and Firefunction.md>) · `tool-use` · fireworks
   Tutorial for building a function-calling application with FastAPI, SerpAPI, and structured tool invocation.
+- **2024-08-12** — [Tool Use, Unified](<../agents/tool-use/Tool Use, Unified.md>) · `tool-use` · huggingface
+  Explains the unified tool-use API in Transformers chat templates: pass plain Python functions with typed signatures and docstrings and they are auto-converted to JSON schema, then rendered per-model by the model's Jinja chat template — plus the conventions chosen for tool-call and tool-result messages so tool-calling chats are portable across models that disagree on formats.
 - **2024-06-26** — [Aligning LLM-as-a-Judge with Human Preferences](<../evals-observability/evaluation/Aligning LLM-as-a-Judge with Human Preferences.md>) · `evaluation` · langchain
   Covers aligning LLM-as-judge evaluators with human preferences through calibration, examples, and evaluation design.
 - **2024-06-20** — [FireAttention V2: 12x faster to make Long Contexts practical for Online Inference](<../inference/optimization/FireAttention V2 12x faster to make Long Contexts practical for Online Inference.md>) · `optimization` · fireworks
   Explains FireAttention V2 and the serving optimizations that make long-context inference more practical.
+- **2024-05-13** — [License to Call: Introducing Transformers Agents 2.0](<../agents/tool-use/License to Call Introducing Transformers Agents 2.0.md>) · `tool-use` · huggingface
+  Transformers Agents 2.0 introduces ReAct-style CodeAgent and JsonAgent that iterate on past observations, with a code-writing action format, tool definitions and system prompts, benchmarked against LangChain agents.
+- **2024-03-20** — [Cosmopedia: how to create large-scale synthetic data for pre-training Large Language Models](<../models/training/Cosmopedia how to create large-scale synthetic data for pre-training Large Language Models.md>) · `training` · huggingface
+  How Cosmopedia was built: 30M synthetic textbooks/blogs/stories (25B tokens) generated with Mixtral-8x7B-Instruct to reproduce Phi-1.5's pretraining data, with most of the effort going into prompt curation for topic diversity — reaching <1% duplicate content — plus the clustering and generation stack used at scale.
 - **2024-02-27** — [Evo: Long-context modeling from molecular to genome scale](<../models/reasoning/Evo Long-context modeling from molecular to genome scale.md>) · `reasoning` · together
   Explains Evo and long-context modeling from molecular to genome-scale sequences.
 - **2024-01-11** — [Long context retrieval models with Monarch Mixer](<../rag-retrieval/search/Long context retrieval models with Monarch Mixer.md>) · `search` · together

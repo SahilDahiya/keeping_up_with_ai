@@ -1,6 +1,6 @@
 # evals-observability
 
-186 articles.
+212 articles.
 
 - **2026-07-07** — [Improving Agents is a Data Mining Problem](<monitoring/Improving Agents is a Data Mining Problem.md>) · `monitoring` · langchain
   Argues that improving agents is a data-mining problem over traces, failures, feedback, and recurring behavioral patterns.
@@ -16,6 +16,8 @@
   Explains experimentation loops for agent improvement, using customer behavior, A/B tests, and statistical confidence to shape agent changes.
 - **2026-06-26** — [How to eval stateful agents](<evaluation/How to eval stateful agents.md>) · `evaluation` · braintrust
   Guide to evaluating stateful agents, including memory, conversation state, trace review, and tests for behavior that depends on previous interactions.
+- **2026-06-24** — [Introducing the FFASR Leaderboard: Benchmarking ASR in the Real World](<evaluation/Introducing the FFASR Leaderboard Benchmarking ASR in the Real World.md>) · `evaluation` · huggingface
+  The FFASR leaderboard benchmarks far-field ASR (clean/noisy/reverberant) using hybrid wave-based room simulation with sim-to-real validation, held-out audio and standardized eval hardware; it plots a WER-vs-RTFx Pareto front and finds far-field WER at low SNR is several times worse than near-field on the same speech.
 - **2026-06-23** — [ParallelKernelBench: Frontier LLMs can't write fast multi-GPU kernels (yet)](<evaluation/ParallelKernelBench Frontier LLMs can't write fast multi-GPU kernels (yet).md>) · `evaluation` · together
   Introduces ParallelKernelBench for measuring whether frontier LLMs can write fast multi-GPU kernels.
 - **2026-06-22** — [Designing the runtime for Langfuse code evaluators](<testing/Designing the runtime for Langfuse code evaluators.md>) · `testing` · langfuse
@@ -98,6 +100,8 @@
   Connects LLM observability with context management, showing how traces and application state can become reusable context for better agents.
 - **2026-05-11** — [Why your traces and evals belong in the same place](<tracing/Why your traces and evals belong in the same place.md>) · `tracing` · braintrust
   Argues that traces and evals should live together so teams can connect production behavior, offline experiments, and failure analysis.
+- **2026-05-06** — [Adding Benchmaxxer Repellant to the Open ASR Leaderboard](<evaluation/Adding Benchmaxxer Repellant to the Open ASR Leaderboard.md>) · `evaluation` · huggingface
+  Adds private held-out Appen/DataoceanAI accent and conversational splits to the Open ASR Leaderboard to blunt benchmaxxing and test-set contamination, keeping the public average WER separate behind a toggle, and discusses the text normalizer needed to standardize model outputs.
 - **2026-05-05** — [Agent observability needs feedback to power learning](<monitoring/Agent observability needs feedback to power learning.md>) · `monitoring` · langchain
   Explains why agent observability needs feedback loops from users, evaluators, and production traces to power ongoing agent learning and improvement.
 - **2026-05-05** — [AI agent evaluation: How to test, debug, and improve agents in production](<testing/AI agent evaluation How to test, debug, and improve agents in production.md>) · `testing` · arize
@@ -258,8 +262,12 @@
   Explains how benchmark methodology can mislead model selection and how to evaluate models against real workload constraints.
 - **2025-08-14** — [Test-driven agent development](<testing/Test-driven agent development.md>) · `testing` · fireworks
   Shows a TDD-style workflow for building agents with concrete acceptance tests, red teaming, and regression checks.
+- **2025-08-12** — [TextQuests: How Good are LLMs at Text-Based Video Games?](<evaluation/TextQuests How Good are LLMs at Text-Based Video Games.md>) · `evaluation` · huggingface
+  TextQuests evaluates LLM agents on 25 classic Infocom interactive-fiction games that need hundreds of precise actions over 30+ hours of play, testing long-horizon planning and long-context reasoning with no external tools. Scores both game progress and 'harm' (irreversible mistakes), and finds frontier models still struggle with sustained exploratory reasoning.
 - **2025-07-18** — [LLM Observability for AI Agents and Applications](<monitoring/LLM Observability for AI Agents and Applications.md>) · `monitoring` · arize
   Introduces observability practices for LLM applications and agents, including monitoring signals beyond traditional metrics.
+- **2025-07-17** — [Back to The Future: Evaluating AI Agents on Predicting Future Events](<evaluation/Back to The Future Evaluating AI Agents on Predicting Future Events (huggingface).md>) · `evaluation` · huggingface
+  FutureBench evaluates agents on predicting events that have not happened yet (news outcomes, prediction-market style questions), which makes benchmark contamination impossible by construction and makes results objectively verifiable once the future arrives. Describes the automated question-generation pipeline and rolling scoring of agents with web search.
 - **2025-07-17** — [Back to The Future: Evaluating AI Agents on Predicting Future Events](<evaluation/Back to The Future Evaluating AI Agents on Predicting Future Events.md>) · `evaluation` · together
   Introduces FutureBench for evaluating agents on predicting future events.
 - **2025-07-17** — [Five hard-learned lessons about AI evals](<evaluation/Five hard-learned lessons about AI evals.md>) · `evaluation` · braintrust
@@ -272,6 +280,8 @@
   Case study using evals and inference-time compute scaling to generate QR codes that satisfy visual and functional constraints.
 - **2025-05-21** — [How we Built Scalable & Customizable Dashboards](<monitoring/How we Built Scalable & Customizable Dashboards.md>) · `monitoring` · langfuse
   Engineering writeup on building scalable customizable dashboards for observability data, covering query, rendering, and product architecture concerns.
+- **2025-04-16** — [Introducing HELMET: Holistically Evaluating Long-context Language Models](<evaluation/Introducing HELMET Holistically Evaluating Long-context Language Models.md>) · `evaluation` · huggingface
+  HELMET is a long-context benchmark spanning 7 application-centric categories (RAG, passage re-ranking, many-shot ICL, long-doc QA, summarization, cite/attribution) up to 128K tokens, built because synthetic probes like needle-in-a-haystack correlate poorly with real downstream long-context ability. Reports rankings that shift by category and shows open models lag closed ones most on tasks requiring full-context reasoning.
 - **2025-04-10** — [Building and Deploying Observable AI Agents with Google Agent Framework and Arize](<tracing/Building and Deploying Observable AI Agents with Google Agent Framework and Arize.md>) · `tracing` · arize
   Guide to building and deploying observable agents with Google Agent Framework and Arize, emphasizing traces for multi-agent and agentic workflows.
 - **2025-04-03** — [Resilient observability by design](<monitoring/Resilient observability by design.md>) · `monitoring` · braintrust
@@ -284,18 +294,34 @@
   Practical overview of LLM evaluation best practices, common challenges, scorer choices, datasets, and proven techniques for measuring application quality.
 - **2025-02-26** — [Evaluating Large Language Models With OpenEvals](<evaluation/Evaluating Large Language Models With OpenEvals.md>) · `evaluation` · langchain
   Guide to evaluating large language models with OpenEvals, including reusable evaluators and model comparison workflows.
+- **2025-02-10** — [The Open Arabic LLM Leaderboard 2](<evaluation/The Open Arabic LLM Leaderboard 2.md>) · `evaluation` · huggingface
+  The Open Arabic LLM Leaderboard 2 rebuilds Arabic LLM evaluation around native (not machine-translated) datasets and centralized, reproducible evaluation to fix the integrity problem of self-reported scores. Describes the new benchmark mix (including the Balsam Index and native Arabic tasks) and the leaderboard's verification pipeline.
 - **2025-02-07** — [Testing Llama 3.3 70B inference performance on NVIDIA GH200 in Lambda Cloud](<evaluation/Testing Llama 3.3 70B inference performance on NVIDIA GH200 in Lambda Cloud.md>) · `evaluation` · baseten
   Tests Llama 3.3 70B inference performance on NVIDIA GH200 and discusses benchmark results.
+- **2025-02-04** — [DABStep: Data Agent Benchmark for Multi-step Reasoning](<evaluation/DABStep Data Agent Benchmark for Multi-step Reasoning.md>) · `evaluation` · huggingface
+  DABStep, built by Adyen and Hugging Face, is a benchmark of 450+ real multi-step data-analysis tasks over messy payments data that requires agents to write and execute code across heterogeneous files. Reports that frontier models solve only a small fraction of the hard split, and describes the easy/hard split and leak-resistant submission design.
+- **2024-12-20** — [Evaluating Audio Reasoning with Big Bench Audio](<evaluation/Evaluating Audio Reasoning with Big Bench Audio.md>) · `evaluation` · huggingface
+  Introduces Big Bench Audio, 1,000 audio questions adapted from Big Bench Hard, and measures a 'speech reasoning gap': GPT-4o scores 92% text-to-text but only 66% speech-to-speech, with Gemini 1.5 compared across S2S/S2T/T2S/T2T pipelines.
+- **2024-12-04** — [Rethinking LLM Evaluation with 3C3H: AraGen Benchmark and Leaderboard](<evaluation/Rethinking LLM Evaluation with 3C3H AraGen Benchmark and Leaderboard.md>) · `evaluation` · huggingface
+  AraGen's 3C3H measure scores an LLM response on Correctness, Completeness, Conciseness, Helpfulness, Honesty and Harmlessness via LLM-as-judge, combining them into one metric; the leaderboard also rotates a private Arabic eval set to resist contamination.
 - **2024-12-04** — [What to do when a new AI model comes out](<evaluation/What to do when a new AI model comes out.md>) · `evaluation` · braintrust
   Playbook for responding when a new AI model ships: run targeted evals, compare cost and quality, inspect regressions, and decide rollout strategy.
 - **2024-11-22** — [Agent-as-a-Judge: Evaluate Agents with Agents](<evaluation/Agent-as-a-Judge Evaluate Agents with Agents.md>) · `evaluation` · arize
   Summarizes Agent-as-a-Judge, an evaluation pattern where agent systems critique other agent systems instead of relying only on final outcomes or manual review.
+- **2024-11-20** — [Introducing the Open Leaderboard for Japanese LLMs!](<evaluation/Introducing the Open Leaderboard for Japanese LLMs!.md>) · `evaluation` · huggingface
+  The Open Japanese LLM Leaderboard evaluates models on 16+ llm-jp-eval tasks (NLI, translation, summarization, QA, code generation), motivated by Japanese-specific challenges like the three-script writing system and the absence of word boundaries for tokenization.
+- **2024-11-20** — [Letting Large Models Debate: The First Multilingual LLM Debate Competition](<evaluation/Letting Large Models Debate The First Multilingual LLM Debate Competition.md>) · `evaluation` · huggingface
+  BAAI's FlagEval Debate makes LLMs argue against each other as a dynamic eval, arguing that Chatbot-Arena-style setups lack discriminative power, never let models actually interact, and let style bias votes; uses a dual expert-plus-user scoring system across Chinese, English, Korean and Arabic.
+- **2024-11-19** — [Judge Arena: Benchmarking LLMs as Evaluators](<evaluation/Judge Arena Benchmarking LLMs as Evaluators.md>) · `evaluation` · huggingface
+  Launches Judge Arena, a crowdsourced side-by-side arena where humans vote between two LLM judges' scores and critiques, producing an ELO leaderboard of 18 open and proprietary LLM-as-a-judge models. Describes the judge-selection criteria and the prompt/scoring setup used for each battle.
 - **2024-11-19** — [Instrumenting Your LLM Application: Arize Phoenix and Vercel AI SDK](<tracing/Instrumenting Your LLM Application Arize Phoenix and Vercel AI SDK.md>) · `tracing` · arize
   Shows how to instrument an LLM application with Phoenix and Vercel AI SDK so traces are available for debugging and evaluation.
 - **2024-11-11** — [How to Improve LLM Safety and Reliability](<testing/How to Improve LLM Safety and Reliability.md>) · `testing` · arize
   Covers testing and monitoring practices for improving LLM application safety and reliability in production.
 - **2024-11-01** — [Arize, Vertex AI API: Evaluation Workflows to Accelerate Generative App Development and AI ROI](<evaluation/Arize, Vertex AI API Evaluation Workflows to Accelerate Generative App Development and AI ROI.md>) · `evaluation` · arize
   Describes Arize and Vertex AI API evaluation workflows for accelerating generative application development and measuring AI ROI.
+- **2024-10-28** — [Expert Support case study: Bolstering a RAG app with LLM-as-a-Judge](<evaluation/Expert Support case study Bolstering a RAG app with LLM-as-a-Judge.md>) · `evaluation` · huggingface
+  Digital Green's agricultural advisory RAG chatbot for smallholder farmers adds an LLM-as-a-Judge evaluation loop, with judge prompt/criteria design and human-alignment checks used to iterate on retrieval and answer quality.
 - **2024-10-23** — [Techniques for Self-Improving LLM Evals](<evaluation/Techniques for Self-Improving LLM Evals.md>) · `evaluation` · arize
   Covers techniques for making LLM evals self-improving through feedback, iteration, and evaluator refinement.
 - **2024-10-17** — [I ran an eval. Now what?](<evaluation/I ran an eval. Now what.md>) · `evaluation` · braintrust
@@ -322,6 +348,8 @@
   Explores using many small Llama runs and search to improve Python benchmark performance against GPT-4o baselines.
 - **2024-07-31** — [Llama 3.1: Same model, different results. The impact of a percentage point.](<evaluation/Llama 3.1 Same model, different results. The impact of a percentage point.md>) · `evaluation` · together
   Explains how small quality differences and deployment choices affect Llama 3.1 results.
+- **2024-07-25** — [LAVE: Zero-shot VQA Evaluation on Docmatix with LLMs - Do We Still Need Fine-Tuning?](<evaluation/LAVE Zero-shot VQA Evaluation on Docmatix with LLMs - Do We Still Need Fine-Tuning.md>) · `evaluation` · huggingface
+  Shows that exact-match VQA metrics (VQA Accuracy, ANLS, CIDEr, BLEU) unfairly punish correct out-of-distribution answers, and applies LAVE — an LLM-as-judge metric where Llama-2-7B-chat rates answers 1-3 with a rationale from in-context demonstrations — to evaluate MPLUGDocOwl1.5 zero-shot on Docmatix, where its ANLS collapses despite 84% on DocVQA.
 - **2024-07-25** — [Different Ways to Instrument Your LLM Application](<tracing/Different Ways to Instrument Your LLM Application.md>) · `tracing` · arize
   Survey of instrumentation approaches for LLM applications, focused on tracing and observability setup choices.
 - **2024-06-26** — [Aligning LLM-as-a-Judge with Human Preferences](<evaluation/Aligning LLM-as-a-Judge with Human Preferences.md>) · `evaluation` · langchain
@@ -330,10 +358,16 @@
   Practical guide to improving evals through better examples, rubrics, scorers, slices, and investigation of failure cases.
 - **2024-06-20** — [Managing and Monitoring Your Open Source LLM Applications](<monitoring/Managing and Monitoring Your Open Source LLM Applications.md>) · `monitoring` · arize
   Covers practical monitoring needs for open-source LLM applications, including operational metrics and deployment feedback.
+- **2024-06-18** — [BigCodeBench: The Next Generation of HumanEval](<evaluation/BigCodeBench The Next Generation of HumanEval.md>) · `evaluation` · huggingface
+  BigCodeBench replaces HumanEval with 1,140 function-level tasks that force LLMs to compose calls across 139 libraries, with rich test harnesses (average 5.6 test cases, 99% branch coverage) and both Complete and Instruct splits. Reports that instruction-tuned models drop sharply on the Instruct split and that even top models are ~20 points behind human performance.
 - **2024-05-29** — [Trustworthy LLMs: A Survey and Guideline for Evaluating Large Language Models' Alignment](<evaluation/Trustworthy LLMs A Survey and Guideline for Evaluating Large Language Models' Alignment.md>) · `evaluation` · arize
   Survey-style guide to evaluating trustworthy and aligned LLM behavior across reliability, safety, and quality dimensions.
+- **2024-05-24** — [CyberSecEval 2 - A Comprehensive Evaluation Framework for Cybersecurity Risks and Capabilities of Large Language Models](<evaluation/CyberSecEval 2 - A Comprehensive Evaluation Framework for Cybersecurity Risks and Capabilities of Large Language Models.md>) · `evaluation` · huggingface
+  CyberSecEval 2 evaluates LLM cybersecurity risk: prompt injection, code interpreter abuse, offensive-security capability and insecure-code generation, plus a false-refusal-rate metric that quantifies the safety/helpfulness tradeoff.
 - **2024-05-15** — [Pairwise Evaluations with LangSmith](<evaluation/Pairwise Evaluations with LangSmith.md>) · `evaluation` · langchain
   Explains pairwise evaluations with LangSmith for comparing model or prompt outputs using preference-style scoring.
+- **2024-05-14** — [Introducing the Open Arabic LLM Leaderboard](<evaluation/Introducing the Open Arabic LLM Leaderboard.md>) · `evaluation` · huggingface
+  The Open Arabic LLM Leaderboard evaluates models on native and human-verified translated Arabic benchmarks (AlGhafa, Arabic MMLU/EXAMS/ARC/HellaSwag), covering translation quality control and the dialect/culture gaps English benchmarks miss.
 - **2024-05-13** — [Breaking Down EvalGen: Who Validates the Validators?](<evaluation/Breaking Down EvalGen Who Validates the Validators.md>) · `evaluation` · arize
   Deep dive on EvalGen and the problem of validating LLM-generated evaluators, including human review limitations and evaluator reliability.
 - **2024-05-01** — [Regression Testing with LangSmith](<testing/Regression Testing with LangSmith.md>) · `testing` · langchain
@@ -342,18 +376,36 @@
   Introductory guide to automated evaluations, covering datasets, scorers, experiments, and how to start measuring AI application quality.
 - **2024-04-17** — [Eval feedback loops](<evaluation/Eval feedback loops.md>) · `evaluation` · braintrust
   Explains eval feedback loops where production observations and human review continuously improve prompts, datasets, and model behavior.
+- **2024-04-16** — [Introducing the LiveCodeBench Leaderboard - Holistic and Contamination-Free Evaluation of Code LLMs](<evaluation/Introducing the LiveCodeBench Leaderboard - Holistic and Contamination-Free Evaluation of Code LLMs.md>) · `evaluation` · huggingface
+  LiveCodeBench continuously scrapes date-stamped problems from LeetCode, AtCoder and Codeforces so models can be evaluated only on problems released after their training cutoff, making contamination detectable. Evaluates four scenarios — code generation, self-repair from error feedback, code execution (output prediction) and test-output prediction.
 - **2024-03-24** — [Trace complex LLM applications with the Langfuse decorator (Python)](<tracing/Trace complex LLM applications with the Langfuse decorator (Python).md>) · `tracing` · langfuse
   Shows how to trace complex Python LLM applications with the Langfuse decorator, including nested calls, metadata, and observability patterns for multi-step workflows.
 - **2024-03-14** — [Benchmarking fast Mistral 7B inference](<evaluation/Benchmarking fast Mistral 7B inference.md>) · `evaluation` · baseten
   Benchmarks Mistral 7B inference performance and the serving choices that affect throughput and latency.
 - **2024-03-11** — [Iterating Towards LLM Reliability with Evaluation Driven Development](<testing/Iterating Towards LLM Reliability with Evaluation Driven Development.md>) · `testing` · langchain
   Explains evaluation-driven development for LLM reliability using regression tests, examples, and iterative quality gates.
+- **2024-03-05** — [Introducing ConTextual: How well can your Multimodal model jointly reason over text and image in text-rich scenes?](<evaluation/Introducing ConTextual How well can your Multimodal model jointly reason over text and image in text-rich scenes.md>) · `evaluation` · huggingface
+  ConTextual is a benchmark and leaderboard for context-sensitive text-rich visual reasoning (reading text in images to answer instructions); uses GPT-4 as judge plus human evaluation, showing a large gap between GPT-4V and open LMMs.
 - **2024-02-28** — [Predictive Human Preference: From Model Ranking to Model Routing](<evaluation/Predictive Human Preference From Model Ranking to Model Routing.md>) · `evaluation` · chip-huyen
   Describes predictive human preference for model ranking and model routing, using preference models and evaluations to choose among LLMs by quality, cost, and latency.
+- **2024-02-23** — [Introducing the Red-Teaming Resistance Leaderboard](<evaluation/Introducing the Red-Teaming Resistance Leaderboard.md>) · `evaluation` · huggingface
+  The Red-Teaming Resistance Leaderboard scores frontier LLMs on robustness against adversarial prompts drawn from real red-teaming datasets (AdvBench, AART, HarmBench, Beavertails, plus Haize's own attacks), reporting attack success rates per harm category rather than a single safety number.
 - **2024-02-20** — [Evaluating and Analyzing Your RAG Pipeline with Ragas](<evaluation/Evaluating and Analyzing Your RAG Pipeline with Ragas.md>) · `evaluation` · arize
   Explains how to evaluate RAG pipelines with Ragas and Phoenix, including retrieval and generation quality dimensions.
+- **2024-02-20** — [Introducing the Open Ko-LLM Leaderboard: Leading the Korean LLM Evaluation Ecosystem](<evaluation/Introducing the Open Ko-LLM Leaderboard Leading the Korean LLM Evaluation Ecosystem.md>) · `evaluation` · huggingface
+  Upstage's Open Ko-LLM Leaderboard evaluates Korean LLMs on Ko-ARC/HellaSwag/MMLU/TruthfulQA plus a Korean commonsense benchmark, deliberately keeping test sets private to prevent contamination — a design lesson for any leaderboard.
+- **2024-02-02** — [NPHardEval Leaderboard: Unveiling the Reasoning Abilities of Large Language Models through Complexity Classes and Dynamic Updates](<evaluation/NPHardEval Leaderboard Unveiling the Reasoning Abilities of Large Language Models through Complexity Classes and Dynamic Updates.md>) · `evaluation` · huggingface
+  NPHardEval grounds LLM reasoning evaluation in computational complexity classes: 900 auto-generated algorithmic questions (3 P, 3 NP-complete, 3 NP-hard tasks x 10 difficulty levels), refreshed monthly to defeat overfitting, scored by weighted accuracy and failure rate.
 - **2024-01-31** — [How to benchmark image generation models like Stable Diffusion XL](<evaluation/How to benchmark image generation models like Stable Diffusion XL.md>) · `evaluation` · baseten
   Explains how to benchmark image-generation models with attention to quality, latency, and reproducibility.
+- **2024-01-31** — [Introducing the Enterprise Scenarios Leaderboard: a Leaderboard for Real World Use Cases](<evaluation/Introducing the Enterprise Scenarios Leaderboard a Leaderboard for Real World Use Cases.md>) · `evaluation` · huggingface
+  Patronus AI's Enterprise Scenarios Leaderboard evaluates LLMs on six real-world enterprise tasks — FinanceBench, Legal Confidentiality, Creative Writing, Customer Support Dialogue, Toxicity and Enterprise PII — with metrics like accuracy, engagingness, toxicity and PII leakage, arguing academic benchmarks miss enterprise failure modes.
+- **2024-01-29** — [The Hallucinations Leaderboard, an Open Effort to Measure Hallucinations in Large Language Models](<evaluation/The Hallucinations Leaderboard, an Open Effort to Measure Hallucinations in Large Language Models.md>) · `evaluation` · huggingface
+  The Hallucinations Leaderboard scores LLMs across in-context-learning tasks split into factuality (contradicting real-world facts) and faithfulness (contradicting the given context/instruction) hallucinations, spanning QA, summarization, fact-checking and self-consistency tasks.
+- **2024-01-26** — [An Introduction to AI Secure LLM Safety Leaderboard](<evaluation/An Introduction to AI Secure LLM Safety Leaderboard.md>) · `evaluation` · huggingface
+  The AI Secure LLM Safety Leaderboard runs the DecodingTrust benchmark, scoring models across eight trustworthiness axes (toxicity, stereotype bias, adversarial and out-of-distribution robustness, privacy leakage, machine ethics, fairness) rather than capability alone.
+- **2024-01-12** — [A guide to setting up your own Hugging Face leaderboard: an end-to-end example with Vectara's hallucination leaderboard](<evaluation/A guide to setting up your own Hugging Face leaderboard an end-to-end example with Vectara's hallucination leaderboard.md>) · `evaluation` · huggingface
+  End-to-end walkthrough of building a custom leaderboard on the HF leaderboard template (front-end Space + backend eval Space), using Vectara's HHEM hallucination-detection model to rank GPT-4/Gemini/Llama-2/Mistral by how often their summaries are unfaithful to the source document.
 - **2024-01-12** — [Understanding performance benchmarks for LLM inference](<evaluation/Understanding performance benchmarks for LLM inference.md>) · `evaluation` · baseten
   Explains LLM inference performance benchmarks and how to interpret serving metrics.
 - **2023-12-07** — [Calling All Functions: Benchmarking OpenAI Function Calling and Explanations](<evaluation/Calling All Functions Benchmarking OpenAI Function Calling and Explanations.md>) · `evaluation` · arize
@@ -535,6 +587,8 @@
   Shows how agent skills can automatically improve prompts, using evaluation feedback and reusable agent workflows to iterate on prompt quality.
 - **2026-02-13** — [On Agent Frameworks and Agent Observability](<../agents/planning/On Agent Frameworks and Agent Observability.md>) · `planning` · langchain
   Connects agent-framework design with observability requirements, arguing that runtime structure determines what teams can debug and evaluate.
+- **2026-02-12** — [OpenEnv in Practice: Evaluating Tool-Using Agents in Real-World Environments](<../agents/tool-use/OpenEnv in Practice Evaluating Tool-Using Agents in Real-World Environments.md>) · `tool-use` · huggingface
+  Turing's Calendar Gym on Meta/HF's OpenEnv: a gym-style (reset/step/action/observation) environment exposing real calendar tools over MCP, with ACL-based access control, partial visibility and multi-step dependencies, used to evaluate tool-using agents against real systems rather than simulations — and reporting where current agents fail (permission errors, wrong action ordering).
 - **2026-02-02** — [Fine-tuning open LLM judges to outperform GPT-5.2](<../models/reinforcement-learning/Fine-tuning open LLM judges to outperform GPT-5.2.md>) · `reinforcement-learning` · together
   Explains fine-tuning open LLM judges to outperform a frontier judge model.
 - **2026-01-28** — [How to Debug & Evaluate AI Agents with Observability — LangChain Guide](<tracing/How to Debug & Evaluate AI Agents with Observability — LangChain Guide.md>) · `tracing` · langchain
@@ -597,6 +651,8 @@
   Explains why non-deterministic AI systems require different testing and evaluation methods than traditional software.
 - **2025-10-08** — [Should I Use the Same LLM for My Eval as My Agent? Testing Self-Evaluation Bias](<evaluation/Should I Use the Same LLM for My Eval as My Agent Testing Self-Evaluation Bias.md>) · `evaluation` · arize
   Tests self-evaluation bias when using the same model for agent behavior and evaluation, with guidance for eval design.
+- **2025-10-01** — [Introducing RTEB: A New Standard for Retrieval Evaluation](<../rag-retrieval/embeddings/Introducing RTEB A New Standard for Retrieval Evaluation.md>) · `embeddings` · huggingface
+  RTEB is a retrieval benchmark that mixes open and permanently-private held-out datasets, so a model's gap between public and private scores exposes overfitting to MTEB-style public leaderboards. Covers the dataset selection across domains/languages, the private-eval protocol, and evidence that several leaderboard-topping embedding models generalize worse than their public scores suggest.
 - **2025-09-29** — [Claude Sonnet 4.5 analysis](<../models/benchmarks/Claude Sonnet 4.5 analysis.md>) · `benchmarks` · braintrust
   Analyzes Claude Sonnet 4.5 with aspirational evals, focusing on how harder task suites reveal model strengths and gaps beyond standard benchmarks.
 - **2025-09-24** — [Testing Binary vs Score Evals on the Latest Models](<testing/Testing Binary vs Score Evals on the Latest Models.md>) · `testing` · arize
@@ -641,6 +697,8 @@
   Connects transcription performance to broader AI application quality, especially for voice-first systems.
 - **2025-04-11** — [40 Large Language Model Benchmarks and The Future of Model Evaluation](<../models/benchmarks/40 Large Language Model Benchmarks and The Future of Model Evaluation.md>) · `benchmarks` · arize
   Surveys major LLM benchmarks and explains what different benchmark families measure for model evaluation.
+- **2025-04-08** — [Arabic Leaderboards: Introducing Arabic Instruction Following, Updating AraGen, and More](<../models/benchmarks/Arabic Leaderboards Introducing Arabic Instruction Following, Updating AraGen, and More.md>) · `benchmarks` · huggingface
+  Updates the Arabic LLM evaluation stack: the 3C3H generative scoring metric (correctness, completeness, conciseness + helpfulness, honesty, harmlessness) behind AraGen-03-25, plus Arabic IFEval, the first public instruction-following benchmark for Arabic, consolidated in one Arabic-Leaderboards Space with MBZUAI.
 - **2025-04-08** — [Tracing and Evaluating Gemini Audio with Arize](<../models/multimodal/Tracing and Evaluating Gemini Audio with Arize.md>) · `multimodal` · arize
   Covers tracing and evaluation for Gemini audio applications, focusing on observability for multimodal systems.
 - **2025-04-04** — [AI Benchmark Deep Dive: Gemini 2.5 and Humanity's Last Exam](<../models/benchmarks/AI Benchmark Deep Dive Gemini 2.5 and Humanity's Last Exam.md>) · `benchmarks` · arize
@@ -659,6 +717,8 @@
   Case study on using Phoenix traces and observability to improve AI-driven troubleshooting workflows in production.
 - **2025-02-10** — [Benchmarking Single Agent Performance](<../agents/planning/Benchmarking Single Agent Performance.md>) · `planning` · langchain
   Benchmarks single-agent ReAct-style performance and discusses evaluation methodology for agent reasoning/tool-use loops.
+- **2025-02-04** — [Open-source DeepResearch – Freeing our search agents](<../agents/tool-use/Open-source DeepResearch – Freeing our search agents.md>) · `tool-use` · huggingface
+  Open reproduction of OpenAI's Deep Research: a smolagents CodeAgent (Python-action instead of JSON tool calls) with a text web browser and file inspector reaches 55% on GAIA validation vs OpenAI's ~67%, with analysis of where browser interaction is the bottleneck.
 - **2025-01-28** — [How Cresta Scales Real-Time Insights with ClickHouse](<../infra-platform/deployment/How Cresta Scales Real-Time Insights with ClickHouse.md>) · `deployment` · cresta
   Architecture case study on scaling real-time AI insights with ClickHouse for high-volume conversation analytics.
 - **2025-01-27** — [Beyond Supervised Fine Tuning: How Reinforcement Learning Empowers AI with Minimal Labels](<../models/reinforcement-learning/Beyond Supervised Fine Tuning How Reinforcement Learning Empowers AI with Minimal Labels.md>) · `reinforcement-learning` · fireworks
@@ -685,6 +745,8 @@
   Evaluates NVIDIA H200 GPUs for LLM inference and compares their serving performance characteristics.
 - **2024-10-17** — [I ran an eval. Now what?](<evaluation/I ran an eval. Now what.md>) · `evaluation` · braintrust
   Walks through what to do after an eval run: inspect failures, slice results, improve datasets and scorers, and turn findings into product or prompt changes.
+- **2024-10-01** — [🇨🇿 BenCzechMark - Can your LLM Understand Czech?](<../models/benchmarks/🇨🇿 BenCzechMark - Can your LLM Understand Czech.md>) · `benchmarks` · huggingface
+  Introduces BenCzechMark, a Czech LLM evaluation suite of 50 tasks across 9 categories (90% natively Czech, not translated) with a leaderboard covering 25+ open models, plus its statistical duel-based ranking methodology.
 - **2024-09-30** — [Arize AI + MongoDB: Leveraging Agent Evaluation and Memory to Build Robust Agentic Systems](<../agents/memory-context/Arize AI + MongoDB Leveraging Agent Evaluation and Memory to Build Robust Agentic Systems.md>) · `memory-context` · arize
   Explains how Arize and MongoDB combine agent evaluation and memory patterns for more robust agentic systems.
 - **2024-09-26** — [Pushing LangSmith to new limits with Replit Agent's complex workflows](<../product-engineering/case-studies/Pushing LangSmith to new limits with Replit Agent's complex workflows.md>) · `case-studies` · langchain
@@ -697,18 +759,32 @@
   Explains DSPy assertions as computational constraints for self-refining language-model pipelines.
 - **2024-07-02** — [Improving Memory Retrieval: How New Computer achieved 50% higher recall with LangSmith](<../rag-retrieval/search/Improving Memory Retrieval How New Computer achieved 50% higher recall with LangSmith.md>) · `search` · langchain
   New Computer case study on improving memory retrieval recall with LangSmith-backed evaluation and debugging.
+- **2024-07-01** — [Our Transformers Code Agent beats the GAIA benchmark 🏅](<../agents/tool-use/Our Transformers Code Agent beats the GAIA benchmark 🏅.md>) · `tool-use` · huggingface
+  How a Transformers CodeAgent (LLM writes Python actions rather than JSON) topped the GAIA agent benchmark: multi-agent web-browser delegation, tool design, and error analysis of GAIA failure modes.
 - **2024-06-20** — [How to improve your evaluations](<evaluation/How to improve your evaluations.md>) · `evaluation` · braintrust
   Practical guide to improving evals through better examples, rubrics, scorers, slices, and investigation of failure cases.
 - **2024-06-19** — [How Factory used LangSmith to automate their feedback loop and improve iteration speed by 2x](<../product-engineering/case-studies/How Factory used LangSmith to automate their feedback loop and improve iteration speed by 2x.md>) · `case-studies` · langchain
   Factory case study on automating feedback loops with LangSmith to improve iteration speed and production agent quality.
 - **2024-05-30** — [LLM Summarization: Getting To Production](<../product-engineering/architecture/LLM Summarization Getting To Production.md>) · `architecture` · arize
   Covers production considerations for LLM summarization systems, including quality controls and deployment pitfalls.
+- **2024-05-29** — [Benchmarking Text Generation Inference](<../inference/serving/Benchmarking Text Generation Inference.md>) · `serving` · huggingface
+  How to use the TGI benchmarking tool to profile LLM serving: separating prefill from decode, reading latency vs throughput curves under different batch sizes, and choosing the batch size that meets your latency SLO.
 - **2024-05-14** — [Monitoring LLM Security & Reducing LLM Risks](<../product-engineering/security/Monitoring LLM Security & Reducing LLM Risks.md>) · `security` · langfuse
   Covers monitoring patterns for LLM security risks such as prompt injection, data leakage, and unsafe outputs, with observability as part of the mitigation loop.
 - **2024-05-06** — [AI development loops](<../product-engineering/architecture/AI development loops.md>) · `architecture` · braintrust
   Describes AI development loops where logs, evals, human review, and product iteration form the core workflow for improving AI applications.
+- **2024-05-05** — [Introducing the Open Leaderboard for Hebrew LLMs!](<../models/benchmarks/Introducing the Open Leaderboard for Hebrew LLMs!.md>) · `benchmarks` · huggingface
+  An open leaderboard for Hebrew LLMs, motivated by Hebrew's root-and-pattern morphology breaking tokenization strategies designed for simpler languages; it evaluates on Hebrew-native tasks (Q&A, sentiment, winograd, translation) rather than translated English benchmarks.
+- **2024-05-03** — [Bringing the Artificial Analysis LLM Performance Leaderboard to Hugging Face](<../inference/serving/Bringing the Artificial Analysis LLM Performance Leaderboard to Hugging Face.md>) · `serving` · huggingface
+  The Artificial Analysis LLM Performance Leaderboard benchmarks hosted inference endpoints (not model quality) on throughput tokens/s, time-to-first-token, and price per token across providers, arguing latency is the limiting factor for agentic/tool-use systems where sequential LLM calls compound.
+- **2024-04-30** — [Improving Prompt Consistency with Structured Generations](<../prompt-engineering/structured-output/Improving Prompt Consistency with Structured Generations.md>) · `structured-output` · huggingface
+  HF's leaderboards team and dottxt show that eval scores swing wildly with tiny prompt-format changes, and that forcing structured generation (Outlines' regex/JSON-constrained decoding) sharply reduces that variance across prompt formats on GSM8K-style tasks.
 - **2024-04-24** — [Getting started with automated evaluations](<testing/Getting started with automated evaluations.md>) · `testing` · braintrust
   Introductory guide to automated evaluations, covering datasets, scorers, experiments, and how to start measuring AI application quality.
+- **2024-04-23** — [Introducing the Open Chain of Thought Leaderboard](<../models/reasoning/Introducing the Open Chain of Thought Leaderboard.md>) · `reasoning` · huggingface
+  The Open CoT Leaderboard measures the *accuracy gain* a model gets from generating a chain-of-thought trace rather than raw accuracy, scoring several CoT prompting regimes across reasoning benchmarks to see which models actually benefit from thinking step by step.
+- **2024-04-19** — [The Open Medical-LLM Leaderboard: Benchmarking Large Language Models in Healthcare](<../models/benchmarks/The Open Medical-LLM Leaderboard Benchmarking Large Language Models in Healthcare.md>) · `benchmarks` · huggingface
+  The Open Medical-LLM Leaderboard aggregates MedQA (USMLE), MedMCQA, PubMedQA and MMLU medical subsets into a standardized accuracy benchmark for clinical LLMs, motivated by failure cases like GPT-3 recommending tetracycline to a pregnant patient while correctly explaining its contraindication.
 - **2024-03-15** — [Benchmarking Query Analysis in High Cardinality Situations](<../rag-retrieval/search/Benchmarking Query Analysis in High Cardinality Situations.md>) · `search` · langchain
   Benchmarks query analysis in high-cardinality situations, relevant to retrieval, search, and observability filtering workloads.
 - **2024-03-06** — [Evaluate RAG with LLM Evals and Benchmarks](<../rag-retrieval/pipelines/Evaluate RAG with LLM Evals and Benchmarks.md>) · `pipelines` · arize
@@ -717,6 +793,10 @@
   Healthcare and life-sciences case discussion on what it takes to build successful LLM applications, including domain constraints and evaluation needs.
 - **2024-02-16** — [Evaluating the Generation Stage in RAG](<../rag-retrieval/pipelines/Evaluating the Generation Stage in RAG.md>) · `pipelines` · arize
   Focuses on evaluating the generation stage in RAG pipelines, complementing retrieval-focused evaluation.
+- **2024-01-24** — [Open-source LLMs as LangChain Agents](<../agents/tool-use/Open-source LLMs as LangChain Agents.md>) · `tool-use` · huggingface
+  Explains the ReAct loop mechanics (thought/action/observation, stopping, error handling) and builds such agents with LangChain's ChatHuggingFace, then benchmarks open LLMs on a custom agent evaluation set against GPT-3.5/GPT-4. Mixtral-8x7B comes out ahead of GPT-3.5 on the agentic tasks; also covers the JSON-parsing failure modes that dominate agent errors.
+- **2024-01-18** — [Preference Tuning LLMs with Direct Preference Optimization Methods](<../models/fine-tuning/Preference Tuning LLMs with Direct Preference Optimization Methods.md>) · `fine-tuning` · huggingface
+  Empirical head-to-head of DPO vs IPO vs KTO in TRL on two SFT'd 7B models (Zephyr and OpenHermes), sweeping the beta hyperparameter and scoring on MT-Bench; finds DPO/IPO roughly on par and beating KTO in the paired-preference setting, with beta mattering more than algorithm choice. Includes an errata where a summed-vs-averaged log-likelihood bug in TRL's IPO loss changed the results.
 - **2023-12-20** — [Benchmarking Agent Tool Use](<../agents/tool-use/Benchmarking Agent Tool Use.md>) · `tool-use` · langchain
   Benchmarking study for agent tool use, focused on measuring whether agents choose and invoke tools correctly across tasks.
 - **2023-12-18** — [How to Prompt LLMs for Text-to-SQL](<../prompt-engineering/structured-output/How to Prompt LLMs for Text-to-SQL.md>) · `structured-output` · arize

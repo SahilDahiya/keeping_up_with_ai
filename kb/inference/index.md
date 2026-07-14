@@ -1,6 +1,6 @@
 # inference
 
-103 articles.
+130 articles.
 
 - **2026-07-10** — [Optimizing MiniMax M3 Sparse Attention on NVIDIA Blackwell](<optimization/Optimizing MiniMax M3 Sparse Attention on NVIDIA Blackwell.md>) · `optimization` · fireworks
   Deep dive into sparse-attention kernel optimization for MiniMax M3 on NVIDIA Blackwell hardware.
@@ -72,6 +72,8 @@
   Explains a suffix-automaton MTP accelerator for improving speculative decoding acceptance rates.
 - **2026-01-22** — [Optimizing inference speed and costs: Lessons learned from large-scale deployments](<optimization/Optimizing inference speed and costs Lessons learned from large-scale deployments.md>) · `optimization` · together
   Lessons from optimizing inference speed and cost in large-scale deployments.
+- **2026-01-15** — [Open Responses: What you need to know](<serving/Open Responses What you need to know.md>) · `serving` · huggingface
+  Argues Chat Completions is a poor fit for agentic workloads and proposes Open Responses, an open version of OpenAI's Responses API: stateless by default with encrypted reasoning, standardized model params, and provider-side agentic loops that execute tool calls before returning.
 - **2025-11-18** — [Host overhead is killing your inference efficiency](<optimization/Host overhead is killing your inference efficiency.md>) · `optimization` · modal
   Analyzes host overhead as an inference bottleneck and shows why CPU-side orchestration can dominate model-serving efficiency.
 - **2025-11-12** — [Kimi K2 Thinking at 140+ TPS on NVIDIA Blackwell](<optimization/Kimi K2 Thinking at 140+ TPS on NVIDIA Blackwell.md>) · `optimization` · baseten
@@ -86,26 +88,44 @@
   Describes 2x faster inference through KV-cache-aware routing with NVIDIA Dynamo.
 - **2025-10-10** — [ATLAS runtime-learning accelerators for LLM inference](<optimization/ATLAS runtime-learning accelerators for LLM inference.md>) · `optimization` · together
   Introduces ATLAS, a runtime-learning accelerator for improving LLM inference.
+- **2025-09-29** — [Accelerating Qwen3-8B Agent on Intel® Core™ Ultra with Depth-Pruned Draft Models](<optimization/Accelerating Qwen3-8B Agent on Intel® Core™ Ultra with Depth-Pruned Draft Models.md>) · `optimization` · huggingface
+  Accelerates a Qwen3-8B agent on Intel Core Ultra by ~1.3x using speculative decoding with a depth-pruned Qwen3-0.6B int8 draft model in OpenVINO GenAI, showing how draft-model depth pruning raises acceptance rate per unit of draft cost on client hardware.
 - **2025-09-26** — [We reverse-engineered Flash Attention 4](<optimization/We reverse-engineered Flash Attention 4.md>) · `optimization` · modal
   Reverse-engineering writeup for FlashAttention-4, explaining how kernel design choices affect attention performance.
 - **2025-09-17** — [A postmortem of three recent issues](<serving/A postmortem of three recent issues.md>) · `serving` · anthropic-engineering
   Postmortem of three overlapping serving-stack bugs that silently degraded Claude's output quality, and the detection and rollout changes made in response.
+- **2025-09-11** — [Tricks from OpenAI gpt-oss YOU 🫵 can use with transformers](<optimization/Tricks from OpenAI gpt-oss YOU 🫵 can use with transformers.md>) · `optimization` · huggingface
+  Unpacks the optimizations shipped in transformers for OpenAI's gpt-oss and reusable by any model: zero-build kernels pulled from the Hub, MXFP4 quantization, tensor parallelism, expert parallelism, continuous batching and dynamic sliding-window caches.
+- **2025-09-02** — [Make your ZeroGPU Spaces go brrr with ahead-of-time compilation](<optimization/Make your ZeroGPU Spaces go brrr with ahead-of-time compilation.md>) · `optimization` · huggingface
+  Uses PyTorch ahead-of-time compilation (torch.export + AOTInductor) instead of just-in-time torch.compile so short-lived ZeroGPU processes keep the compiled artifact, giving 1.3x-1.8x speedups on Flux, Wan and LTX; also covers FP8 quantization, dynamic shapes and multi-compile for varying resolutions.
+- **2025-08-18** — [From Zero to GPU: A Guide to Building and Scaling Production-Ready CUDA Kernels](<hardware/From Zero to GPU A Guide to Building and Scaling Production-Ready CUDA Kernels.md>) · `hardware` · huggingface
+  End-to-end guide to writing a custom CUDA kernel and shipping it with HF's kernel-builder: Nix-based reproducible builds across multiple GPU architectures and torch ABIs, PyTorch op registration and torch.compile compatibility, and distribution via `get_kernel()` from the Hub instead of compiling at install time.
 - **2025-08-14** — [More than Just a Model: How Cresta Delivers Precise, Adaptable Summaries with Ultra-Low Latency](<serving/More than Just a Model How Cresta Delivers Precise, Adaptable Summaries with Ultra-Low Latency.md>) · `serving` · cresta
   Explains production summarization architecture focused on low latency, adaptability, and precision rather than model choice alone.
 - **2025-08-07** — [How we run GPT OSS 120B at 500+ tokens per second on NVIDIA GPUs](<optimization/How we run GPT OSS 120B at 500+ tokens per second on NVIDIA GPUs.md>) · `optimization` · baseten
   Explains how to run GPT-OSS 120B at high token throughput on NVIDIA GPUs.
 - **2025-07-30** — [GPU Memory Snapshots: Supercharging sub-second startup](<optimization/GPU Memory Snapshots Supercharging sub-second startup.md>) · `optimization` · modal
   Explains GPU memory snapshots for reducing cold-start latency and preserving loaded model state across invocations.
+- **2025-07-23** — [Fast LoRA inference for Flux with Diffusers and PEFT](<optimization/Fast LoRA inference for Flux with Diffusers and PEFT.md>) · `optimization` · huggingface
+  Gets ~2.3x faster LoRA inference for Flux.1-Dev by combining LoRA hotswapping with torch.compile without recompilation — using peft's hotswap_adapter, max-rank padding so shapes stay static, and flags to avoid recompiles when adapters have different ranks and target layers. Also covers fusing/unfusing and FP8 quantization on top.
 - **2025-06-18** — [Run FLUX.1-dev three times faster](<optimization/Run FLUX.1-dev three times faster.md>) · `optimization` · modal
   Explains optimizations for running FLUX.1-dev faster, including inference configuration and image-model serving tradeoffs.
 - **2025-06-14** — [3D FireOptimizer: Automating the Multi-Dimensional Tradeoffs in LLM Serving](<serving/3D FireOptimizer Automating the Multi-Dimensional Tradeoffs in LLM Serving.md>) · `serving` · fireworks
   Explains multi-dimensional optimization for LLM serving, balancing latency, cost, throughput, and quality tradeoffs.
+- **2025-06-12** — [Learn the Hugging Face Kernel Hub in 5 Minutes](<optimization/Learn the Hugging Face Kernel Hub in 5 Minutes.md>) · `optimization` · huggingface
+  Introduces the Kernel Hub: `get_kernel("kernels-community/activation")` downloads precompiled optimized CUDA kernels at runtime with no local build system, and the post benchmarks the drop-in kernels (activation, RMSNorm, Flash Attention) against native PyTorch.
 - **2025-06-05** — [Accurate KV Cache Quantization with Outlier Tokens Tracing](<quantization/Accurate KV Cache Quantization with Outlier Tokens Tracing.md>) · `quantization` · arize
   Summarizes research on KV-cache quantization with outlier token tracing to reduce LLM inference memory cost while preserving output quality.
 - **2025-06-05** — [Model-Preserving Adaptive Rounding with YAQA](<quantization/Model-Preserving Adaptive Rounding with YAQA.md>) · `quantization` · together
   Explains YAQA, a model-preserving adaptive rounding approach for quantization.
+- **2025-06-04** — [KV Cache from scratch in nanoVLM](<optimization/KV Cache from scratch in nanoVLM.md>) · `optimization` · huggingface
+  Implements KV caching from scratch in nanoVLM, explaining prefill vs decode, how cached keys/values remove redundant attention recomputation, and the code changes to the attention block and generation loop; yields a 38% generation speedup.
 - **2025-05-28** — [FireAttention V4: Industry-Leading Latency and Cost Efficiency with FP4](<quantization/FireAttention V4 Industry-Leading Latency and Cost Efficiency with FP4.md>) · `quantization` · fireworks
   Covers FP4 and B200-focused FireAttention V4 optimizations for latency and cost-efficient serving.
+- **2025-05-21** — [Exploring Quantization Backends in Diffusers](<quantization/Exploring Quantization Backends in Diffusers.md>) · `quantization` · huggingface
+  Compares the quantization backends integrated in Diffusers — bitsandbytes (4-bit/8-bit/NF4), GGUF, torchao, Quanto and native FP8 — on Flux.1-dev, with memory-savings and quality trade-offs plus a blind test showing 8-bit differences are usually imperceptible. Includes code for combining quantization with torch.compile and CPU offloading.
+- **2025-05-13** — [Blazingly fast whisper transcriptions with Inference Endpoints](<optimization/Blazingly fast whisper transcriptions with Inference Endpoints.md>) · `optimization` · huggingface
+  An optimized Whisper deployment on Inference Endpoints built on vLLM, targeting Ada Lovelace GPUs (L4/L40s) to unlock torch.compile JIT kernels, CUDA graphs and a float8 KV cache — with the resulting latency/throughput gains for transcription workloads.
 - **2025-05-12** — [Boosting DeepSeek-R1 speed with customized speculative decoding](<optimization/Boosting DeepSeek-R1 speed with customized speculative decoding.md>) · `optimization` · together
   Shows customized speculative decoding for accelerating DeepSeek-R1 serving.
 - **2025-04-21** — [Chipmunk: Training-Free Acceleration of Diffusion Transformers with Dynamic Column-Sparse Deltas](<optimization/Chipmunk Training-Free Acceleration of Diffusion Transformers with Dynamic Column-Sparse Deltas.md>) · `optimization` · together
@@ -128,12 +148,20 @@
   Introduces speculative decoding and the draft-target model pattern for lower LLM inference latency.
 - **2024-12-19** — [How we built production-ready speculative decoding with TensorRT-LLM](<optimization/How we built production-ready speculative decoding with TensorRT-LLM.md>) · `optimization` · baseten
   Deep dive into production-ready speculative decoding with TensorRT-LLM.
+- **2024-11-20** — [Faster Text Generation with Self-Speculative Decoding](<optimization/Faster Text Generation with Self-Speculative Decoding.md>) · `optimization` · huggingface
+  LayerSkip self-speculative decoding: the same model drafts with early-exit at an intermediate layer and verifies with the remaining layers, reusing the KV cache so no separate draft model or extra memory is needed; includes speedups on Llama checkpoints trained with layer dropout + early-exit loss.
 - **2024-10-30** — [Even Better, Even Faster Quantized LLMs with QTIP](<quantization/Even Better, Even Faster Quantized LLMs with QTIP.md>) · `quantization` · together
   Explains QTIP quantization for faster LLM inference with improved quality preservation.
+- **2024-10-29** — [Universal Assisted Generation: Faster Decoding with Any Assistant Model](<optimization/Universal Assisted Generation Faster Decoding with Any Assistant Model.md>) · `optimization` · huggingface
+  Universal Assisted Generation (Intel Labs + HF) lifts speculative decoding's requirement that the draft model share the target's tokenizer by re-encoding draft tokens between vocabularies, giving 1.5x-2x speedups for models like gemma-2-9b and Mixtral-8x22B that have no small same-family draft model.
 - **2024-10-22** — [Evaluating NVIDIA H200 Tensor Core GPUs for LLM inference](<hardware/Evaluating NVIDIA H200 Tensor Core GPUs for LLM inference.md>) · `hardware` · baseten
   Evaluates NVIDIA H200 GPUs for LLM inference and compares their serving performance characteristics.
 - **2024-10-15** — [FireAttention V3: Enabling AMD as a viable alternative for GPU inference](<hardware/FireAttention V3 Enabling AMD as a viable alternative for GPU inference.md>) · `hardware` · fireworks
   Describes FireAttention V3 and optimizations that make AMD GPUs more viable for inference workloads.
+- **2024-10-08** — [Faster Assisted Generation with Dynamic Speculation](<optimization/Faster Assisted Generation with Dynamic Speculation.md>) · `optimization` · huggingface
+  Dynamic speculative decoding (Intel Labs + HF, default in Transformers 4.45) adapts the speculation lookahead per iteration instead of using a fixed number of draft tokens, giving up to 2.7x faster assisted generation depending on task while preserving the target model's output.
+- **2024-09-18** — [Fine-tuning LLMs to 1.58bit: extreme quantization made easy](<quantization/Fine-tuning LLMs to 1.58bit extreme quantization made easy.md>) · `quantization` · huggingface
+  Shows how to fine-tune an existing Llama3-8B/SmolLM into BitNet's 1.58-bit ternary ({-1,0,1}) weight format instead of pre-training from scratch, using BitLinear layers, a lambda-scheduled quantization warmup and per-row/per-tensor scaling. Reports pre-training and fine-tuning results plus custom kernel benchmarks.
 - **2024-09-16** — [Boost your throughput with dynamic batching](<optimization/Boost your throughput with dynamic batching.md>) · `optimization` · modal
   Explains dynamic batching for Whisper transcription workloads and how batching improves throughput without changing model behavior.
 - **2024-09-05** — [Supercharging NVIDIA H200 and H100 GPU Cluster Performance With Together Kernel Collection](<hardware/Supercharging NVIDIA H200 and H100 GPU Cluster Performance With Together Kernel Collection.md>) · `hardware` · together
@@ -146,12 +174,18 @@
   Explains TEAL, a training-free activation sparsity method for large language models.
 - **2024-08-20** — [How to double tokens per second for Llama 3 with Medusa](<optimization/How to double tokens per second for Llama 3 with Medusa.md>) · `optimization` · baseten
   Explains Medusa-style speculative heads for increasing Llama 3 tokens per second.
+- **2024-08-13** — [Introduction to ggml](<optimization/Introduction to ggml.md>) · `optimization` · huggingface
+  A hands-on introduction to ggml — the C/C++ tensor library behind llama.cpp, whisper.cpp, ollama and LM Studio — covering its context/graph memory model, GGUF file format, quantized tensor types, and backend dispatch (CPU/CUDA/Metal) via a worked matrix-multiplication example.
 - **2024-08-01** — [Introducing automatic LLM optimization with TensorRT-LLM Engine Builder](<optimization/Introducing automatic LLM optimization with TensorRT-LLM Engine Builder.md>) · `optimization` · baseten
   Describes automatic LLM optimization with TensorRT-LLM Engine Builder for production serving.
 - **2024-08-01** — [How Fireworks evaluates quantization precisely and interpretably](<quantization/How Fireworks evaluates quantization precisely and interpretably.md>) · `quantization` · fireworks
   Details precise and interpretable quantization evaluation for understanding quality and performance tradeoffs.
+- **2024-07-30** — [Memory-efficient Diffusion Transformers with Quanto and Diffusers](<quantization/Memory-efficient Diffusion Transformers with Quanto and Diffusers.md>) · `quantization` · huggingface
+  Quantizes diffusion-transformer pipelines (PixArt-Sigma, SD3, Flux) with Quanto: int8/fp8/int4 on the transformer and T5 text encoders cuts SD3 inference memory from 18.8GB FP16 toward consumer-GPU range, with per-component memory/latency/quality tradeoffs and gotchas.
 - **2024-07-23** — [How to serve 10,000 fine-tuned LLMs from a single GPU](<serving/How to serve 10,000 fine-tuned LLMs from a single GPU.md>) · `serving` · baseten
   Explains serving many fine-tuned LLM adapters from a single GPU with efficient multiplexing.
+- **2024-07-18** — [TGI Multi-LoRA: Deploy Once, Serve 30 Models](<serving/TGI Multi-LoRA Deploy Once, Serve 30 Models.md>) · `serving` · huggingface
+  Explains TGI's multi-LoRA serving: load one base model plus up to ~30 LoRA adapters in a single deployment, batching requests for different adapters together via a gathered/segmented matmul so per-adapter overhead is small. Argues the cost and ops case for many specialized adapters over many full deployments, with latency numbers vs single-adapter serving.
 - **2024-07-11** — [FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-precision](<optimization/FlashAttention-3 Fast and Accurate Attention with Asynchrony and Low-precision.md>) · `optimization` · together
   Explains FlashAttention-3 and its asynchronous low-precision attention optimizations.
 - **2024-07-11** — [Using asynchronous inference in production](<serving/Using asynchronous inference in production.md>) · `serving` · baseten
@@ -162,24 +196,44 @@
   Explains FireAttention V2 and the serving optimizations that make long-context inference more practical.
 - **2024-06-18** — [SpecExec: Massively Parallel Speculative Decoding for Interactive LLM Inference on Consumer Devices](<optimization/SpecExec Massively Parallel Speculative Decoding for Interactive LLM Inference on Consumer Devices.md>) · `optimization` · together
   Introduces SpecExec for massively parallel speculative decoding on consumer devices.
+- **2024-05-29** — [Benchmarking Text Generation Inference](<serving/Benchmarking Text Generation Inference.md>) · `serving` · huggingface
+  How to use the TGI benchmarking tool to profile LLM serving: separating prefill from decode, reading latency vs throughput curves under different batch sizes, and choosing the batch size that meets your latency SLO.
+- **2024-05-03** — [Bringing the Artificial Analysis LLM Performance Leaderboard to Hugging Face](<serving/Bringing the Artificial Analysis LLM Performance Leaderboard to Hugging Face.md>) · `serving` · huggingface
+  The Artificial Analysis LLM Performance Leaderboard benchmarks hosted inference endpoints (not model quality) on throughput tokens/s, time-to-first-token, and price per token across providers, arguing latency is the limiting factor for agentic/tool-use systems where sequential LLM calls compound.
+- **2024-05-01** — [Powerful ASR + diarization + speculative decoding with Hugging Face Inference Endpoints](<serving/Powerful ASR + diarization + speculative decoding with Hugging Face Inference Endpoints.md>) · `serving` · huggingface
+  Walks through a custom Inference Endpoints handler that chains Whisper-large-v3 ASR, Pyannote diarization and speculative decoding (with a distil-whisper assistant model and SDPA/Flash Attention 2) into one deployable pipeline, including the pre/post-processing needed to align transcript timestamps with speaker turns.
 - **2024-04-05** — [Continuous vs dynamic batching for AI inference](<optimization/Continuous vs dynamic batching for AI inference.md>) · `optimization` · baseten
   Compares continuous and dynamic batching for inference serving and their latency-throughput tradeoffs.
+- **2024-04-03** — [Blazing Fast SetFit Inference with 🤗 Optimum Intel on Xeon](<optimization/Blazing Fast SetFit Inference with 🤗 Optimum Intel on Xeon.md>) · `optimization` · huggingface
+  Accelerates SetFit few-shot text classification inference by 7.8x on Intel Xeon (Sapphire Rapids) using Optimum Intel + OpenVINO post-training quantization to int8, with an accuracy-drop constraint; includes the few-shot accuracy context where SetFit beats 3-shot GPT-3.5/GPT-4 on Banking77.
 - **2024-03-28** — [Using fractional H100 GPUs for efficient model serving](<serving/Using fractional H100 GPUs for efficient model serving.md>) · `serving` · baseten
   Explains fractional H100 usage for efficient model serving and better GPU utilization.
+- **2024-03-18** — [Quanto: a PyTorch quantization backend for Optimum](<quantization/Quanto a PyTorch quantization backend for Optimum.md>) · `quantization` · huggingface
+  Introduces quanto, a PyTorch quantization backend for Optimum with a device-agnostic design: int8/float8 weights and activations, eager-mode quantized tensor subclass, calibration and QAT support, working across CUDA/MPS/CPU where most quantization libraries are locked to specific model or device configurations.
 - **2024-03-14** — [33% faster LLM inference with FP8 quantization](<quantization/33% faster LLM inference with FP8 quantization.md>) · `quantization` · baseten
   Shows how FP8 quantization improves LLM inference throughput while managing accuracy and hardware constraints.
 - **2024-03-12** — [High performance ML inference with NVIDIA TensorRT](<optimization/High performance ML inference with NVIDIA TensorRT.md>) · `optimization` · baseten
   Explains high-performance model inference with NVIDIA TensorRT and related deployment considerations.
 - **2024-03-07** — [FP8: Efficient model inference with 8-bit floating point numbers](<quantization/FP8 Efficient model inference with 8-bit floating point numbers.md>) · `quantization` · baseten
   Explains FP8 numeric formats and why 8-bit floating point can improve efficient model inference.
+- **2024-02-29** — [Text-Generation Pipeline on Intel® Gaudi® 2 AI Accelerator](<hardware/Text-Generation Pipeline on Intel® Gaudi® 2 AI Accelerator.md>) · `hardware` · huggingface
+  Runs a custom text-generation pipeline for Llama-2-7b on Intel Gaudi 2 via Optimum Habana, covering HPU graph warmup, bf16, batching and static shapes, and plugging the pipeline into LangChain for a RAG-style prompt template.
 - **2024-02-22** — [40% faster Stable Diffusion XL inference with NVIDIA TensorRT](<optimization/40% faster Stable Diffusion XL inference with NVIDIA TensorRT.md>) · `optimization` · baseten
   Explains TensorRT optimization for Stable Diffusion XL inference, including latency and throughput gains.
 - **2024-02-20** — [Why GPU utilization matters for model inference](<hardware/Why GPU utilization matters for model inference.md>) · `hardware` · baseten
   Explains why GPU utilization is central to inference cost and performance.
+- **2024-02-08** — [From OpenAI to Open LLMs with Messages API on Hugging Face](<serving/From OpenAI to Open LLMs with Messages API on Hugging Face.md>) · `serving` · huggingface
+  TGI 1.4 adds an OpenAI Chat Completions-compatible Messages API, so open models on Inference Endpoints become a drop-in swap for GPT-4 by only changing base_url and api_key — shown with the OpenAI Python/JS clients, LangChain and LlamaIndex, and a Nous-Hermes-2-Mixtral migration.
 - **2024-02-06** — [Unlocking the full power of NVIDIA H100 GPUs for ML inference with TensorRT](<optimization/Unlocking the full power of NVIDIA H100 GPUs for ML inference with TensorRT.md>) · `optimization` · baseten
   Shows how TensorRT unlocks H100 performance for model inference.
+- **2024-02-01** — [Hugging Face Text Generation Inference available for AWS Inferentia2](<hardware/Hugging Face Text Generation Inference available for AWS Inferentia2.md>) · `hardware` · huggingface
+  Deploys Zephyr-7B with TGI on AWS Inferentia2 via SageMaker as a GPU alternative, covering the Neuronx TGI image, the ahead-of-time model compilation/tracing step that Neuron requires (fixed batch size and sequence length), and how tensor parallelism plus continuous batching carry over.
 - **2024-01-31** — [Introduction to quantizing ML models](<quantization/Introduction to quantizing ML models.md>) · `quantization` · baseten
   Introduces model quantization concepts and how they affect inference efficiency and model quality.
+- **2024-01-30** — [Accelerate StarCoder with 🤗 Optimum Intel on Xeon: Q8/Q4 and Speculative Decoding](<quantization/Accelerate StarCoder with 🤗 Optimum Intel on Xeon Q8Q4 and Speculative Decoding.md>) · `quantization` · huggingface
+  Over 7x inference speedup for StarCoder-15B on 4th-gen Intel Xeon (AMX) by combining INT8/INT4 weight-only quantization with assisted/speculative decoding using a small draft model, with latency and accuracy tables per configuration.
+- **2024-01-15** — [Accelerating SD Turbo and SDXL Turbo Inference with ONNX Runtime and Olive](<optimization/Accelerating SD Turbo and SDXL Turbo Inference with ONNX Runtime and Olive.md>) · `optimization` · huggingface
+  Benchmarks ONNX Runtime CUDA and TensorRT execution providers against PyTorch for SD Turbo and SDXL Turbo one-step generation on NVIDIA GPUs, reporting throughput gains up to 229% (SDXL Turbo) and 120% (SD Turbo). Covers graph fusions, static vs dynamic shapes, and Olive-based optimization/quantization of the pipeline.
 - **2024-01-08** — [FireAttention: serving open models faster with quantization](<quantization/FireAttention serving open models faster with quantization.md>) · `quantization` · fireworks
   Introduces FireAttention for serving open models faster through quantization with minimal quality tradeoff.
 - **2023-12-22** — [Faster Mixtral inference with TensorRT-LLM and quantization](<quantization/Faster Mixtral inference with TensorRT-LLM and quantization.md>) · `quantization` · baseten
@@ -235,6 +289,8 @@
   Engineering writeup on building a fast speech-to-text stack.
 - **2026-05-29** — [Timestep distillation: 2.5x faster FLUX.2 image generation](<../models/multimodal/Timestep distillation 2.5x faster FLUX.2 image generation.md>) · `multimodal` · baseten
   Explains timestep distillation for faster FLUX.2 image generation.
+- **2026-05-27** — [Reachy Mini goes fully local](<../infra-platform/edge/Reachy Mini goes fully local.md>) · `edge` · huggingface
+  Runs a full cascaded voice stack (VAD -> STT -> LLM -> TTS) locally on-device behind an OpenAI-Realtime-API-compatible /v1/realtime WebSocket, replacing the cloud backend for the Reachy Mini robot; argues cascades beat end-to-end S2S models on flexibility and latency and shows which local components to swap in.
 - **2026-05-19** — [Benchmarking inference at scale: coding agents](<../evals-observability/evaluation/Benchmarking inference at scale coding agents.md>) · `evaluation` · together
   Benchmarks inference at scale for coding-agent workloads.
 - **2026-05-14** — [Cost-efficient, high-performance TTS with Qwen3-TTS](<../models/multimodal/Cost-efficient, high-performance TTS with Qwen3-TTS.md>) · `multimodal` · baseten
@@ -245,6 +301,8 @@
   Explains Modal’s serverless GPU architecture, including scheduling, cold starts, isolation, and utilization constraints.
 - **2026-05-04** — [Foundational research powering efficient inference at scale](<optimization/Foundational research powering efficient inference at scale.md>) · `optimization` · together
   Summarizes research lines behind efficient inference at production scale.
+- **2026-04-24** — [DeepSeek-V4: a million-token context that agents can actually use](<../models/architectures/DeepSeek-V4 a million-token context that agents can actually use.md>) · `architectures` · huggingface
+  Breaks down how DeepSeek-V4's architecture makes 1M-token context cheap for agents: V4-Pro needs 27% of V3.2's single-token inference FLOPs and 10% of its KV cache (V4-Flash: 10% and 7%, roughly 2% of an 8-head GQA bf16 cache), plus the agent-specific post-training decisions that build on it.
 - **2026-04-17** — [Making FlashAttention-4 faster for inference](<optimization/Making FlashAttention-4 faster for inference.md>) · `optimization` · modal
   Deep dive on making FlashAttention-4 faster for inference, including kernel-level and serving-performance considerations.
 - **2026-04-15** — [Parcae: Doing more with fewer parameters using stable looped models](<../models/reasoning/Parcae Doing more with fewer parameters using stable looped models.md>) · `reasoning` · together
@@ -305,6 +363,8 @@
   Critiques dollars-per-token as an inference cost metric and explains why workload shape, latency, and utilization matter more.
 - **2025-07-02** — [How we used evals and inference-time compute scaling to generate beautiful QR codes that actually work](<../evals-observability/evaluation/How we used evals and inference-time compute scaling to generate beautiful QR codes that actually work.md>) · `evaluation` · modal
   Case study using evals and inference-time compute scaling to generate QR codes that satisfy visual and functional constraints.
+- **2025-06-19** — [(LoRA) Fine-Tuning FLUX.1-dev on Consumer Hardware](<../models/fine-tuning/(LoRA) Fine-Tuning FLUX.1-dev on Consumer Hardware.md>) · `fine-tuning` · huggingface
+  Fine-tunes FLUX.1-dev with QLoRA under ~10GB of VRAM on a single RTX 4090 using bitsandbytes NF4, 8-bit optimizers and gradient checkpointing, and compares FP8 training with torchao for extra speed on compatible hardware.
 - **2025-06-14** — [3D FireOptimizer: Automating the Multi-Dimensional Tradeoffs in LLM Serving](<serving/3D FireOptimizer Automating the Multi-Dimensional Tradeoffs in LLM Serving.md>) · `serving` · fireworks
   Explains multi-dimensional optimization for LLM serving, balancing latency, cost, throughput, and quality tradeoffs.
 - **2025-06-12** — [Your client code matters: 12x higher embedding throughput with Python and Rust](<../rag-retrieval/embeddings/Your client code matters 12x higher embedding throughput with Python and Rust.md>) · `embeddings` · baseten
@@ -321,6 +381,14 @@
   Deep dive into BEI, a high-throughput embedding, reranker, and classifier inference system.
 - **2025-03-15** — [ThunderKittens Now Optimized for NVIDIA Blackwell GPUs](<hardware/ThunderKittens Now Optimized for NVIDIA Blackwell GPUs.md>) · `hardware` · together
   Describes ThunderKittens optimizations for NVIDIA Blackwell GPUs.
+- **2025-03-12** — [Welcome Gemma 3: Google's all new multimodal, multilingual, long context open LLM](<../models/releases/Welcome Gemma 3 Google's all new multimodal, multilingual, long context open LLM.md>) · `releases` · huggingface
+  Gemma 3 (1B-27B) adds a SigLIP vision encoder, 128k context (32k for 1B), 140+ languages, and interleaved local/global attention to keep long-context KV cache tractable; covers benchmarks and official QAT quantized checkpoints.
+- **2025-03-07** — [LLM Inference on Edge: A Fun and Easy Guide to run LLMs via React Native on your Phone!](<../infra-platform/edge/LLM Inference on Edge A Fun and Easy Guide to run LLMs via React Native on your Phone!.md>) · `edge` · huggingface
+  End-to-end guide to building a React Native chat app that runs LLMs fully on-device via llama.rn/llama.cpp, covering how to pick mobile-viable models, what the GGUF quantization suffixes (Q2_K, Q4_K_M, Q8_0) actually trade off in size vs quality, and the Expo/native build plumbing.
+- **2025-02-25** — [FastRTC: The Real-Time Communication Library for Python](<../product-engineering/architecture/FastRTC The Real-Time Communication Library for Python.md>) · `architecture` · huggingface
+  FastRTC builds real-time voice/video AI apps in Python over WebRTC or WebSockets: built-in voice activity detection and turn-taking (ReplyOnPause), automatic Gradio UI, phone-call ingress, and mounting streams onto FastAPI.
+- **2025-02-13** — [1 Billion Classifications](<../infra-platform/cost/1 Billion Classifications.md>) · `cost` · huggingface
+  Works through the actual cost and latency math of running 1 billion text classifications with encoder models (gte-modernbert-base), comparing batch inference vs heavy-usage serving across hardware and optimizations (ONNX, TensorRT, quantization). Includes a reproducible encoder-analysis repo and per-configuration cost tables.
 - **2025-02-07** — [DeepSeek v3 and R1 Model Architecture: Why it's powerful and economical](<../models/reasoning/DeepSeek v3 and R1 Model Architecture Why it's powerful and economical.md>) · `reasoning` · fireworks
   Explains DeepSeek V3 and R1 architecture choices, including why the models are efficient for reasoning workloads.
 - **2025-02-07** — [Testing Llama 3.3 70B inference performance on NVIDIA GH200 in Lambda Cloud](<../evals-observability/evaluation/Testing Llama 3.3 70B inference performance on NVIDIA GH200 in Lambda Cloud.md>) · `evaluation` · baseten
@@ -331,10 +399,14 @@
   Summarizes concrete model-performance optimization work across inference serving, batching, and hardware.
 - **2024-12-19** — [How we built production-ready speculative decoding with TensorRT-LLM](<optimization/How we built production-ready speculative decoding with TensorRT-LLM.md>) · `optimization` · baseten
   Deep dive into production-ready speculative decoding with TensorRT-LLM.
+- **2024-12-18** — [Bamba: Inference-Efficient Hybrid Mamba2 Model](<../models/architectures/Bamba Inference-Efficient Hybrid Mamba2 Model.md>) · `architectures` · huggingface
+  Bamba-9B is a hybrid Mamba2/transformer model trained by IBM, Princeton, CMU and UIUC on 2.2T tokens of fully open data, delivering 2.5x throughput and 2x lower latency than a comparable transformer in vLLM by shrinking the KV-cache memory-bandwidth bottleneck. Covers the hybrid architecture, training lineage, checkpoints and vLLM/transformers/llama.cpp enablement.
 - **2024-12-09** — [20x faster Whisper than OpenAI - Fireworks audio transcribes 1 hour in 4 seconds](<../models/multimodal/20x faster Whisper than OpenAI - Fireworks audio transcribes 1 hour in 4 seconds.md>) · `multimodal` · fireworks
   Describes high-throughput Whisper transcription serving and the latency/cost tradeoffs in batch audio inference.
 - **2024-10-30** — [Even Better, Even Faster Quantized LLMs with QTIP](<quantization/Even Better, Even Faster Quantized LLMs with QTIP.md>) · `quantization` · together
   Explains QTIP quantization for faster LLM inference with improved quality preservation.
+- **2024-10-22** — [Deploying Speech-to-Speech on Hugging Face](<../infra-platform/deployment/Deploying Speech-to-Speech on Hugging Face.md>) · `deployment` · huggingface
+  Deploys HF's cascaded speech-to-speech pipeline (VAD -> STT -> LLM -> TTS, 6 languages with auto-detect) as a custom Inference Endpoint, covering the handler and websocket/streaming plumbing needed to keep an interactive voice loop responsive.
 - **2024-10-15** — [FireAttention V3: Enabling AMD as a viable alternative for GPU inference](<hardware/FireAttention V3 Enabling AMD as a viable alternative for GPU inference.md>) · `hardware` · fireworks
   Describes FireAttention V3 and optimizations that make AMD GPUs more viable for inference workloads.
 - **2024-10-14** — [Linearizing LLMs with LoLCATs](<../models/reasoning/Linearizing LLMs with LoLCATs.md>) · `reasoning` · together
@@ -343,8 +415,14 @@
   Explains Multi-LoRA serving for personalized models at scale with better cost efficiency.
 - **2024-08-30** — [FireOptimizer: Customizing latency and quality for your production inference workload](<serving/FireOptimizer Customizing latency and quality for your production inference workload.md>) · `serving` · fireworks
   Explains FireOptimizer for tuning production inference workloads across latency, quality, and cost objectives.
+- **2024-08-19** — [Deploy Meta Llama 3.1 405B on Google Cloud Vertex AI](<../infra-platform/deployment/Deploy Meta Llama 3.1 405B on Google Cloud Vertex AI.md>) · `deployment` · huggingface
+  Step-by-step deployment of Llama 3.1 405B (FP8 quantized) on Google Cloud Vertex AI with Hugging Face TGI on an A3 8xH100 node: registering the model, endpoint config, and running online inference with 128k context.
 - **2024-08-01** — [Introducing automatic LLM optimization with TensorRT-LLM Engine Builder](<optimization/Introducing automatic LLM optimization with TensorRT-LLM Engine Builder.md>) · `optimization` · baseten
   Describes automatic LLM optimization with TensorRT-LLM Engine Builder for production serving.
+- **2024-07-23** — [Llama 3.1 - 405B, 70B & 8B with multilinguality and long context](<../models/releases/Llama 3.1 - 405B, 70B & 8B with multilinguality and long context.md>) · `releases` · huggingface
+  Llama 3.1 8B/70B/405B: 128k context via a new RoPE scaling recipe, 15T-token training, and the accompanying Llama Guard 3 safety classifier and Prompt Guard jailbreak/prompt-injection detector; covers FP8/AWQ/GPTQ quantization needed to actually serve 405B, TGI deployment, and using 405B for synthetic data and LLM-as-judge.
+- **2024-07-22** — [WWDC 24: Running Mistral 7B with Core ML](<../infra-platform/edge/WWDC 24 Running Mistral 7B with Core ML.md>) · `edge` · huggingface
+  Reproduces Apple's WWDC'24 Mistral-7B Core ML demo: exporting a Swift-Transformers model, stateful KV cache, multifunction models for prefill vs extend, INT4 block-wise weight quantization, and running across CPU/GPU/ANE on Apple Silicon.
 - **2024-07-11** — [FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-precision](<optimization/FlashAttention-3 Fast and Accurate Attention with Asynchrony and Low-precision.md>) · `optimization` · together
   Explains FlashAttention-3 and its asynchronous low-precision attention optimizations.
 - **2024-06-04** — [How latent consistency models work](<../models/multimodal/How latent consistency models work.md>) · `multimodal` · baseten
@@ -353,8 +431,14 @@
   Explains the control-plane/workload-plane split in model serving infrastructure.
 - **2024-04-18** — [Streaming real-time text to speech with XTTS V2](<../models/multimodal/Streaming real-time text to speech with XTTS V2.md>) · `multimodal` · baseten
   Covers streaming real-time text-to-speech serving with XTTS v2.
+- **2024-04-16** — [Running Privacy-Preserving Inferences on Hugging Face Endpoints](<../product-engineering/security/Running Privacy-Preserving Inferences on Hugging Face Endpoints.md>) · `security` · huggingface
+  Shows how to serve Zama Concrete ML models under Fully Homomorphic Encryption on HF Inference Endpoints via custom inference handlers, so a spam classifier runs on ciphertext without ever seeing the plaintext message; also covers compiling your own FHE-friendly model.
 - **2024-04-05** — [Continuous vs dynamic batching for AI inference](<optimization/Continuous vs dynamic batching for AI inference.md>) · `optimization` · baseten
   Compares continuous and dynamic batching for inference serving and their latency-throughput tradeoffs.
+- **2024-03-22** — [Binary and Scalar Embedding Quantization for Significantly Faster & Cheaper Retrieval](<../rag-retrieval/embeddings/Binary and Scalar Embedding Quantization for Significantly Faster & Cheaper Retrieval.md>) · `embeddings` · huggingface
+  Binary (1-bit) and int8 scalar quantization of embeddings cuts retrieval memory/cost ~32x and ~4x while retaining ~92-96% of performance; covers rescoring with float embeddings and combining binary search + int8 rescoring in FAISS/usearch.
+- **2024-03-15** — [CPU Optimized Embeddings with 🤗 Optimum Intel and fastRAG](<../rag-retrieval/embeddings/CPU Optimized Embeddings with 🤗 Optimum Intel and fastRAG.md>) · `embeddings` · huggingface
+  Speeds up bge-base embeddings on Xeon CPUs by quantizing to int8 with Optimum Intel / IPEX, reporting latency and MTEB retrieval-quality deltas, then wires the optimized encoder into a fastRAG retrieval pipeline.
 - **2024-03-14** — [33% faster LLM inference with FP8 quantization](<quantization/33% faster LLM inference with FP8 quantization.md>) · `quantization` · baseten
   Shows how FP8 quantization improves LLM inference throughput while managing accuracy and hardware constraints.
 - **2024-03-14** — [Benchmarking fast Mistral 7B inference](<../evals-observability/evaluation/Benchmarking fast Mistral 7B inference.md>) · `evaluation` · baseten

@@ -135,6 +135,7 @@ sources:
       - rlhf
       - inference-providers
     since: "2024-01-01"    # hard floor: nothing older is ingested, on update or backfill
+    rate_limit_seconds: 6  # HF returns 429 at the 2s default; it throttles harder than most
     tags: [open-source, models]
 
   - slug: simon-willison
