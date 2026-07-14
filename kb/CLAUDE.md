@@ -50,6 +50,25 @@ content_sha256`
 - Time-bounded queries → `jq 'select(.date >= "2026-01-01")' catalog.jsonl`.
 - Always cite the `url` from frontmatter when quoting an article.
 
+## Date integrity
+
+Publication dates on `kind: blog` articles are *extracted from the page*, and
+trafilatura will happily lift a stray year out of body prose — a 2026 Cresta post
+about word error rate once came back dated **1997**, because the article discussed
+WER's history. A wrong date is worse than a missing one: it sinks the article to the
+bottom of every index and it makes date-based rules delete the wrong things.
+
+`scraper lint` therefore rejects any blog date outside a plausible window
+(`2015-01-01` … today) and the scraper falls back to the feed/sitemap date, which is
+structured metadata rather than a guess. It runs in the daily job. Papers are exempt —
+their dates come from the arXiv API and are authoritative (Adam is legitimately 2014).
+
+> ⚠️ **Review in 2027.** The floor (`MIN_PLAUSIBLE_YEAR` in `scraper/extract.py`) is a
+> static judgment call. It will *not* break on the year rollover — the upper bound is
+> computed from today, so posts published in 2027 pass fine. But as the corpus ages the
+> floor should rise, so that bad extractions are caught instead of slipping through as
+> "old but plausible".
+
 ## Rules
 
 - `index.md` files, `_sources/`, and `catalog.jsonl` are **generated** — never

@@ -7,7 +7,7 @@ from typing import Optional
 
 import typer
 
-from .config import INBOX_DIR, load_sources, get_source, load_taxonomy, SourceConfig
+from .config import INBOX_DIR, KB_ROOT, load_sources, get_source, load_taxonomy, SourceConfig
 from .discover import Discovered, discover_feed, discover_sitemap
 from .extract import ExtractionError, TooShallow, extract_article
 from .fetch import Fetcher, FetchError
@@ -348,6 +348,47 @@ def papers_ingest(limit: Optional[int] = typer.Option(None, "--limit"),
 def reindex():
     """Rebuild per-topic index.md files, _sources/ views, and catalog.jsonl."""
     typer.echo(f"reindexed: {rebuild_indexes()}")
+
+
+@app.command()
+def lint():
+    """Check filed articles for integrity problems (implausible dates, missing fields).
+
+    A wrong date is worse than a missing one: it sorts the article to the bottom of
+    every index and makes date-based rules (like a pre-2023 cutoff) delete the wrong
+    things. arXiv papers are exempt — their dates come from the API, not from prose.
+    """
+    from .extract import MIN_PLAUSIBLE_YEAR, plausible_date
+
+    problems: list[str] = []
+    checked = 0
+    for path in sorted(KB_ROOT.rglob("*.md")):
+        if path.name in ("index.md", "CLAUDE.md") or {"_inbox", "_sources"} & set(path.parts):
+            continue
+        try:
+            fm, _ = parse_frontmatter(path.read_text())
+        except ValueError:
+            continue
+        checked += 1
+        rel = path.relative_to(KB_ROOT)
+        if fm.get("kind") == "paper":
+            continue  # arXiv API dates are authoritative
+        date = fm.get("published")
+        if not date:
+            problems.append(f"  NO DATE       {rel}")
+        elif not plausible_date(str(date)):
+            problems.append(f"  BAD DATE {date}  {rel}")
+        if not fm.get("summary"):
+            problems.append(f"  NO SUMMARY    {rel}")
+        if not fm.get("topic"):
+            problems.append(f"  NO TOPIC      {rel}")
+
+    for p in problems:
+        typer.echo(p)
+    typer.echo(f"\n{checked} articles checked, {len(problems)} problem(s)")
+    if problems:
+        typer.echo(f"(plausible window: {MIN_PLAUSIBLE_YEAR}-01-01 .. today)")
+        raise typer.Exit(1)
 
 
 @app.command("state")

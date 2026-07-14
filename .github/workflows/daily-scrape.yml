@@ -40,6 +40,13 @@ jobs:
       - name: Ingest queued arXiv papers
         run: scraper papers | tee -a scrape.log
 
+      # Catches implausible dates (trafilatura sometimes lifts a stray year out of
+      # body prose) and articles missing a topic/summary. Non-fatal: a bad date must
+      # not block the scrape, but it should be visible in the run summary.
+      - name: Lint the knowledge base
+        continue-on-error: true
+        run: scraper lint | tee -a scrape.log
+
       - name: Summarize
         run: |
           {
@@ -48,6 +55,12 @@ jobs:
             grep -E '^==|discovered|state:' scrape.log || true
             echo '```'
             echo "**Staged for classification:** $(ls kb/_inbox/*.md 2>/dev/null | wc -l)"
+            if grep -qE 'BAD DATE|NO DATE|NO SUMMARY|NO TOPIC' scrape.log; then
+              echo '### ⚠️ Lint problems'
+              echo '```'
+              grep -E 'BAD DATE|NO DATE|NO SUMMARY|NO TOPIC' scrape.log
+              echo '```'
+            fi
           } >> "$GITHUB_STEP_SUMMARY"
 
       - name: Commit new articles
