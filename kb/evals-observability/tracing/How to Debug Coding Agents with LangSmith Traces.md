@@ -1,10 +1,14 @@
 ---
 title: How to Debug Coding Agents with LangSmith Traces
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: evals-observability
+subtopic: tracing
+secondary_topics:
+- agents/harness
+summary: Introduces LangSmith tracing support across coding agents (Claude Code, Codex,
+  Cursor, Copilot Chat, Pi, OpenCode, dcode), normalizing each tool's fragmented session/tool-call/subagent-handoff
+  formats into one standardized trace structure so failures like a subagent inheriting
+  a stale offset-paging helper are visible instead of requiring a fresh restart.
 triage: null
 skip_reason: null
 source: langchain
@@ -12,7 +16,7 @@ url: https://www.langchain.com/blog/your-coding-agents-are-a-black-box-heres-how
 author: Hari Harish
 published: '2026-07-14'
 fetched: '2026-07-15T06:44:22Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 905
 content_sha256: 9bfaa1f423662a50236e1f725fb64dada4dfd06dcf2c7a76fccd4acf57d623fe

@@ -1,10 +1,16 @@
 ---
 title: From human-operated agent development to systematic agent improvement
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: agents
+subtopic: harness
+secondary_topics:
+- evals-observability/evaluation
+- evals-observability/tracing
+summary: 'Translates an Arize Observe 2026 keynote into an architecture for automated
+  agent improvement loops: managed reader/fixer/reviewer workers triage failures from
+  OpenInference traces, harness-as-a-judge evaluates fixes, and fleet controls catch
+  runaway or stuck sessions instead of a human pasting traces into a coding agent
+  by hand.'
 triage: null
 skip_reason: null
 source: arize
@@ -12,7 +18,7 @@ url: https://arize.com/blog/from-human-operated-agent-development-to-systematic-
 author: Sara Verdi
 published: '2026-07-14'
 fetched: '2026-07-15T06:44:28Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1948
 content_sha256: 91c1cc01fdec2ade0e5268a4c0e3d50a0e2864fbbe0e134932b6b9913bf48fb0

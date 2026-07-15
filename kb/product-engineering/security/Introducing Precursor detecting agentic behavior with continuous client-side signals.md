@@ -1,24 +1,25 @@
 ---
 title: 'Introducing Precursor: detecting agentic behavior with continuous client-side
   signals'
+kind: blog
 topic: product-engineering
 subtopic: security
 secondary_topics:
-- agents/computer-use
-summary: Cloudflare's Precursor injects client-side JS to continuously collect session-level
-  behavioral signals (mouse-movement physics, keystroke rhythm, focus changes) and
-  feeds them into an edge-side evaluator/dispatcher to distinguish human from agentic/bot
-  traffic in real time, feeding Cloudflare's bot score without exposing raw signals
-  to customers.
+- infra-platform/edge
+summary: Details Cloudflare's Precursor system, which injects client-side JS to continuously
+  score session-level behavioral signals (mouse-movement physics like wrist-pivot
+  arcs and hand tremor, keystroke rhythm) at the edge to distinguish humans from bots
+  and agentic automation across an entire user journey, not just at a single challenge
+  checkpoint.
 triage: null
 skip_reason: null
 source: cloudflare-ai
 url: https://blog.cloudflare.com/introducing-precursor/
 author: Marina Elmore
 published: '2026-07-13'
-fetched: '2026-07-13T20:52:20Z'
+fetched: '2026-07-15T06:44:13Z'
 classifier: claude
-taxonomy_rev: 1
+taxonomy_rev: 2
 words: 1394
 content_sha256: 6e89dfe802a599ffe537ff655911a7745818c2025b3820c804a19c777a184144
 ---

@@ -1,23 +1,25 @@
 ---
 title: How do you make an LLM, anyway? Microsoft just published a textbook.
+kind: blog
 topic: models
-subtopic: reinforcement-learning
+subtopic: training
 secondary_topics:
-- evals-observability/evaluation
-summary: 'Breaks down Microsoft''s 109-page MAI-Thinking-1 technical report: 30-trillion-token
-  pretraining on 8,192 GPUs with a 54.6%-code data mix, mid-training context extension
-  from 16K to 262K tokens, and RL post-training with reward-hacking countermeasures
-  like network-isolated coding environments and time-traveled repo snapshots with
-  future commits scrubbed.'
+- evals-observability/llm-as-judge
+- agents/tool-use
+summary: 'Walks through Microsoft''s 109-page MAI-Thinking-1 technical report: a 1.2-trillion-page
+  proprietary crawl filtered down and mixed to 54.6% code, a 30-trillion-token pretrain
+  on 8,192 GPUs, a mid-training context-stretching phase (16K to 262K tokens), and
+  RL post-training with anti-reward-hacking measures like time-traveled repo snapshots
+  and test-file resets.'
 triage: null
 skip_reason: null
 source: arize
 url: https://arize.com/blog/how-do-you-make-an-llm-anyway-microsoft-textbook/
 author: Laurie Voss
 published: '2026-07-13'
-fetched: '2026-07-13T20:52:31Z'
+fetched: '2026-07-15T06:44:33Z'
 classifier: claude
-taxonomy_rev: 1
+taxonomy_rev: 2
 words: 2071
 content_sha256: 7cb8e4f3e49ea685e8345fc554c52bdd61e3bbd28d6caad78ab8670feec6f81d
 ---

@@ -1,24 +1,24 @@
 ---
 title: How I shipped a month of engineering work in four days with GLM 5.2 Fast
+kind: blog
 topic: product-engineering
 subtopic: case-studies
 secondary_topics:
-- agents/tool-use
 - inference/serving
-summary: A senior engineer used GLM 5.2 Fast (via Fireworks' FireConnect with Claude
-  Code) to design, spec, and implement a GPU-scheduler 'reclaim' feature in four days
-  for $218 in inference cost — 4 PRs, ~3,000 LOC, 34 passing tests — crediting the
-  model's ~400 tok/s speed for sustaining a real-time design/test/implement loop instead
-  of async, tab-switching workflows.
+summary: An engineer used glm-5p2-fast (via Fireworks' FireConnect router into Claude
+  Code) to design, plan, and implement a GPU-scheduler reclaim feature test-first
+  (34 tests, 4 PRs, ~3,000 lines) in four days for $218 in inference, arguing that
+  2-3x faster inference keeps human-AI design iteration a live back-and-forth instead
+  of breaking into async context switches.
 triage: null
 skip_reason: null
 source: fireworks
 url: https://fireworks.ai/blog/glm5p2-fast-an-engineering-productivity-story
 author: null
 published: '2026-07-07'
-fetched: '2026-07-13T20:52:22Z'
+fetched: '2026-07-15T06:44:15Z'
 classifier: claude
-taxonomy_rev: 1
+taxonomy_rev: 2
 words: 1306
 content_sha256: d058a79307a65c6ea4852c8f4f896783075d2b27c6321ee87cc0381c7fc334f1
 ---

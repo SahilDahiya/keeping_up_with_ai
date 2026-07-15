@@ -2,10 +2,14 @@
 title: 'How to measure AI productivity: From LLM token costs to business value with
   Arize AX'
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: evals-observability
+subtopic: evaluation
+secondary_topics:
+- infra-platform/cost
+summary: Argues token/prompt/LOC counts don't measure AI productivity (citing METR's
+  finding that developers were 19% slower with AI while feeling 20% faster) and proposes
+  a five-dimension framework, built on a shared correlation_id tagging contract, that
+  joins traced AI work to outcomes like merged non-reverted PRs via Arize AX.
 triage: null
 skip_reason: null
 source: arize
@@ -13,7 +17,7 @@ url: https://arize.com/blog/how-to-measure-ai-productivity-llm-cost-business-val
 author: Duncan McKinnon; Jitendra Yadav
 published: '2026-07-14'
 fetched: '2026-07-15T06:44:31Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1739
 content_sha256: 5632ea150dbabbc35295eb030ae78430e184c7c157bedcc1b361fc2940e20ab1
