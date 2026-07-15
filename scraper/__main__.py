@@ -8,7 +8,7 @@ from typing import Optional
 import typer
 
 from .config import INBOX_DIR, KB_ROOT, load_sources, get_source, load_taxonomy, SourceConfig
-from .discover import Discovered, discover_feed, discover_hf, discover_sitemap
+from .discover import Discovered, discover_feed, discover_hf, discover_shopify, discover_sitemap
 from .extract import ExtractionError, TooShallow, extract_article
 from .fetch import Fetcher, FetchError
 from .index import rebuild_indexes
@@ -34,7 +34,8 @@ from .store import (
 
 app = typer.Typer(no_args_is_help=True, add_completion=False)
 
-_TIERS = {"feed": discover_feed, "sitemap": discover_sitemap, "hf": discover_hf}
+_TIERS = {"feed": discover_feed, "sitemap": discover_sitemap, "hf": discover_hf,
+          "shopify": discover_shopify}
 _SKIP_REASONS = {
     "archive-page",
     "promotion",
@@ -107,7 +108,9 @@ def _process(source: SourceConfig, discovered: list[Discovered], fetcher: Fetche
         try:
             resp = fetcher.get(d.url, interval=source.rate_limit_seconds)
             article = extract_article(resp.text, d.url, title_hint=d.title_hint,
-                                      date_hint=d.date_hint, min_words=source.min_words)
+                                      date_hint=d.date_hint, min_words=source.min_words,
+                                      prefer_hint_date=source.prefer_hint_date,
+                                      title_suffix=source.title_suffix)
         except TooShallow as e:
             # Deliberate config filter, not a failure — record so we never re-fetch it.
             typer.echo(f"  too-shallow: {d.url} ({e})")

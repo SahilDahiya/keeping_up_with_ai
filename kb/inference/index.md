@@ -1,6 +1,6 @@
 # inference
 
-130 articles.
+131 articles.
 
 - **2026-07-10** — [Optimizing MiniMax M3 Sparse Attention on NVIDIA Blackwell](<kernels/Optimizing MiniMax M3 Sparse Attention on NVIDIA Blackwell.md>) · `kernels` · fireworks
   Deep dive into sparse-attention kernel optimization for MiniMax M3 on NVIDIA Blackwell hardware.
@@ -78,6 +78,8 @@
   Analyzes host overhead as an inference bottleneck and shows why CPU-side orchestration can dominate model-serving efficiency.
 - **2025-11-12** — [Kimi K2 Thinking at 140+ TPS on NVIDIA Blackwell](<optimization/Kimi K2 Thinking at 140+ TPS on NVIDIA Blackwell.md>) · `optimization` · baseten
   Explains Kimi K2 Thinking serving at high throughput on NVIDIA Blackwell hardware.
+- **2025-11-12** — [Building world-class product search at Shopify: Where C++ excellence meets ML innovation (2025)](<serving/Building world-class product search at Shopify Where C++ excellence meets ML innovation (2025).md>) · `serving` · shopify
+  How Shopify runs transformers, neural rankers, and gradient-boosted models (LightGBM, CatBoost) at native C++ speed for product search, meeting millisecond-latency-at-scale while keeping fast ML iteration.
 - **2025-11-04** — [One-second voice-to-voice latency with Modal, Pipecat, and open models](<optimization/One-second voice-to-voice latency with Modal, Pipecat, and open models.md>) · `optimization` · modal
   Builds a low-latency voice-to-voice system with open models, covering speech pipeline latency and serving architecture.
 - **2025-10-24** — [How we made the fastest GPT-OSS on NVIDIA GPUs 60% faster](<optimization/How we made the fastest GPT-OSS on NVIDIA GPUs 60% faster.md>) · `optimization` · baseten

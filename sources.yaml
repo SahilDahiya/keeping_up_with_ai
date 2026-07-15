@@ -138,6 +138,18 @@ sources:
     rate_limit_seconds: 6  # HF returns 429 at the 2s default; it throttles harder than most
     tags: [open-source, models]
 
+  - slug: shopify
+    name: Shopify Engineering (AI/ML)
+    home: https://shopify.engineering/topics/ai-machine-learning
+    sitemap: https://shopify.engineering/sitemap.xml   # flat; used to date the topic's slugs
+    discovery: [shopify]  # React Router SPA, no RSS; topic .data ∩ sitemap (see discover/shopify.py)
+    # Scoped to the AI/ML topic only — the eng blog covers all of Shopify engineering.
+    since: "2024-01-01"
+    rate_limit_seconds: 3
+    prefer_hint_date: true      # trafilatura reads a constant template date from the body
+    title_suffix: " - Shopify"  # strip site chrome from the extracted <title>
+    tags: [production-ml, commerce]
+
   - slug: simon-willison
     name: Simon Willison's Weblog
     home: https://simonwillison.net/

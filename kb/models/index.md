@@ -1,6 +1,6 @@
 # models
 
-213 articles.
+216 articles.
 
 - **2026-07-13** — [How do you make an LLM, anyway? Microsoft just published a textbook.](<reinforcement-learning/How do you make an LLM, anyway Microsoft just published a textbook.md>) · `reinforcement-learning` · arize
   Breaks down Microsoft's 109-page MAI-Thinking-1 technical report: 30-trillion-token pretraining on 8,192 GPUs with a 54.6%-code data mix, mid-training context extension from 16K to 262K tokens, and RL post-training with reward-hacking countermeasures like network-isolated coding environments and time-traveled repo snapshots with future commits scrubbed.
@@ -58,6 +58,8 @@
   Describes a constellation-of-models architecture for powering agents, combining multiple models and routing behavior around task needs.
 - **2026-04-24** — [DeepSeek-V4: a million-token context that agents can actually use](<architectures/DeepSeek-V4 a million-token context that agents can actually use.md>) · `architectures` · huggingface
   Breaks down how DeepSeek-V4's architecture makes 1M-token context cheap for agents: V4-Pro needs 27% of V3.2's single-token inference FLOPs and 10% of its KV cache (V4-Flash: 10% and 7%, roughly 2% of an 8-head GQA bf16 cache), plus the agent-specific post-training decisions that build on it.
+- **2026-04-22** — [Flow generation through natural language: An agentic modeling approach (2026)](<fine-tuning/Flow generation through natural language An agentic modeling approach (2026).md>) · `fine-tuning` · shopify
+  Shopify fine-tunes a model to generate Flow automations from natural language, arguing differentiation comes from proprietary merchant-interaction data and the training recipe rather than closed-model API access.
 - **2026-04-20** — [Building an RL theorem-proving workflow on Modal](<reasoning/Building an RL theorem-proving workflow on Modal.md>) · `reasoning` · modal
   Walks through an RL theorem-proving workflow, connecting reasoning tasks, training loops, and scalable remote execution.
 - **2026-04-16** — [Ecom-RLVE: Adaptive Verifiable Environments for E-Commerce Conversational Agents](<reinforcement-learning/Ecom-RLVE Adaptive Verifiable Environments for E-Commerce Conversational Agents.md>) · `reinforcement-learning` · huggingface
@@ -86,6 +88,8 @@
   Discusses modeling outcomes for long conversations, including challenges around sequence length and delayed success signals.
 - **2026-02-27** — [DeepSeek Models: V3.2, R1, Distills, and Production Caveats](<reasoning/DeepSeek Models V3.2, R1, Distills, and Production Caveats.md>) · `reasoning` · fireworks
   Surveys DeepSeek model variants with production caveats around serving, reasoning behavior, and deployment tradeoffs.
+- **2026-02-25** — [The generative recommender behind Shopify's commerce engine (2026)](<architectures/The generative recommender behind Shopify's commerce engine (2026).md>) · `architectures` · shopify
+  Shopify's generative recommender treats a buyer's cross-storefront event history as a sequence and predicts the next action, a sequence-modeling approach to commerce recommendations over months-long journeys.
 - **2026-02-23** — [How speech models fail where it matters the most and what to do about it](<multimodal/How speech models fail where it matters the most and what to do about it.md>) · `multimodal` · together
   Analyzes speech model failure modes that matter for production applications.
 - **2026-02-02** — [Fine-tuning open LLM judges to outperform GPT-5.2](<reinforcement-learning/Fine-tuning open LLM judges to outperform GPT-5.2.md>) · `reinforcement-learning` · together
@@ -144,6 +148,8 @@
   Shows how open speech models and batch execution can reduce transcription latency and cost at large scale.
 - **2025-07-22** — [Kimi QK-Clip and multi-head latent attention](<reasoning/Kimi QK-Clip and multi-head latent attention.md>) · `reasoning` · fireworks
   Explains Kimi QK-Clip, multi-head latent attention, and why training-inference key construction affects stability.
+- **2025-07-16** — [Leveraging multimodal LLMs for Shopify’s global catalogue: Recap of expo talk at ICLR 2025](<multimodal/Leveraging multimodal LLMs for Shopify’s global catalogue Recap of expo talk at ICLR 2025.md>) · `multimodal` · shopify
+  Shopify uses multimodal LLMs to standardize product data across its global catalogue, producing the high-quality structured attributes that agent-driven shopping ('show me sustainable running shoes') depends on.
 - **2025-07-16** — [Ettin Suite: SoTA Paired Encoders and Decoders](<training/Ettin Suite SoTA Paired Encoders and Decoders.md>) · `training` · huggingface
   Ettin is the first suite of paired encoder-only and decoder-only models (17M-1B params) trained on identical data (2T tokens), architecture and recipe, giving a true apples-to-apples MLM vs causal-LM comparison. The open ModernBERT-style recipe beats ModernBERT on encoder tasks and beats Llama 3.2 1B and SmolLM2 on decoder tasks; also tests cross-objective continued training.
 - **2025-07-15** — [MuonClip and Kimi K2 training stability](<reasoning/MuonClip and Kimi K2 training stability.md>) · `reasoning` · fireworks
@@ -447,6 +453,8 @@
   Explains speculative decoding for lower inference latency, including draft-model tradeoffs and production serving considerations.
 - **2026-06-19** — [Speculation Is All You Need](<../inference/speculative-decoding/Speculation Is All You Need.md>) · `speculative-decoding` · modal
   Deep dive into speculative decoding and related techniques for improving LLM inference latency and throughput.
+- **2026-06-15** — [Teaching Sidekick to say no: automated data curation with LLM judge consensus (2026)](<../evals-observability/llm-as-judge/Teaching Sidekick to say no automated data curation with LLM judge consensus (2026).md>) · `llm-as-judge` · shopify
+  Shopify curates Sidekick training data using LLM-judge consensus to automatically filter examples ('teaching Sidekick to say no'), replacing manual labeling with judge-based quality and coverage control.
 - **2026-06-03** — [How Harvey & Fireworks Beat Closed Source on Cost + Quality](<../agents/multi-agent/How Harvey & Fireworks Beat Closed Source on Cost + Quality.md>) · `multi-agent` · fireworks
   Case study of using open-source agents with frontier advisors to improve cost and quality versus closed-source baselines.
 - **2026-06-02** — [MiniMax-M3 efficient 1M-token multimodal serving](<../inference/serving/MiniMax-M3 efficient 1M-token multimodal serving.md>) · `serving` · together
@@ -503,6 +511,8 @@
   Perplexity's production lessons running Realtime-1.5 voice across Comet and Computer: feed context in 2,000-token chunks to avoid all-or-nothing truncation, get system/user/assistant role semantics right, standardize audio via a Rust SDK (48 kHz mono, WebRTC APM), and a 'voice lock' pattern for user pauses.
 - **2026-03-20** — [Designing delightful frontends with GPT-5.4 | OpenAI Developers](<../prompt-engineering/techniques/Designing delightful frontends with GPT-5.4 OpenAI Developers.md>) · `techniques` · openai-devs
   Prompting guide for steering GPT-5.4 toward non-generic frontend design: the model was trained for UI work, native image search/generation (e.g. prompt it to build mood boards first), and computer use for self-verification with tools like Playwright.
+- **2026-03-19** — [Building a Magic Mirror: AI retail experiences with Remix (2026)](<../product-engineering/case-studies/Building a Magic Mirror AI retail experiences with Remix (2026).md>) · `case-studies` · shopify
+  Shopify builds an in-store 'Magic Mirror' AI retail experience with Remix, using multimodal AI to turn physical shopping into an interactive experience for hype-driven brands.
 - **2026-03-10** — [Training-Inference Parity in MoE Models: Where Numerics Drift](<../inference/kernels/Training-Inference Parity in MoE Models Where Numerics Drift.md>) · `kernels` · fireworks
   Explains training-inference parity issues in MoE models and how numeric drift can affect production behavior.
 - **2026-03-06** — [Eval awareness in Claude Opus 4.6’s BrowseComp performance](<../evals-observability/benchmark-design/Eval awareness in Claude Opus 4.6’s BrowseComp performance.md>) · `benchmark-design` · anthropic-engineering
@@ -521,6 +531,8 @@
   Investigates what LLMs do under underspecified prompting and how that affects evaluation.
 - **2026-02-03** — [The Benchmark Gap: What It Takes to Ship Kimi K2.5](<../evals-observability/evaluation/The Benchmark Gap What It Takes to Ship Kimi K2.5.md>) · `evaluation` · fireworks
   Explains the benchmark and quality gaps involved in shipping Kimi K2.5 for production workloads.
+- **2026-01-26** — [SkyPilot at Shopify: Multi-cloud GPUs without the pain (2026)](<../infra-platform/gpu-clusters/SkyPilot at Shopify Multi-cloud GPUs without the pain (2026).md>) · `gpu-clusters` · shopify
+  How Shopify uses SkyPilot to run ML training across fragmented multi-cloud GPU capacity (H200s, L4s) behind one interface, avoiding per-provider API and configuration lock-in for scarce accelerators.
 - **2026-01-23** — [Open-sourcing Baseten’s suffix automaton MTP accelerator](<../inference/speculative-decoding/Open-sourcing Baseten’s suffix automaton MTP accelerator.md>) · `speculative-decoding` · baseten
   Explains a suffix-automaton MTP accelerator for improving speculative decoding acceptance rates.
 - **2026-01-12** — [Inside multi-node training: How to scale model training across GPU clusters](<../infra-platform/gpu-clusters/Inside multi-node training How to scale model training across GPU clusters.md>) · `gpu-clusters` · together
@@ -529,6 +541,8 @@
   Guide to choosing open models for production based on workload, quality, and serving constraints.
 - **2025-12-30** — [OpenAI for Developers in 2025](<../industry/trends/OpenAI for Developers in 2025.md>) · `trends` · openai-devs
   Year-in-review of OpenAI's 2025 developer platform: reasoning converging from separate o1/o3/o4-mini lines into unified flagship models, multimodal I/O becoming default, agent building blocks (Responses API, Agents SDK, AgentKit), and GPT-5.2-Codex for long-horizon coding.
+- **2025-12-05** — [Tangle: An open-source ML experimentation platform built for scale (2025)](<../evals-observability/tracing/Tangle An open-source ML experimentation platform built for scale (2025).md>) · `tracing` · shopify
+  Tangle: Shopify's open-source ML experimentation platform for reproducibility at scale, tracking notebook versions, data snapshots, and parameters so experiments can be reproduced without re-running from scratch.
 - **2025-11-12** — [Kimi K2 Thinking at 140+ TPS on NVIDIA Blackwell](<../inference/optimization/Kimi K2 Thinking at 140+ TPS on NVIDIA Blackwell.md>) · `optimization` · baseten
   Explains Kimi K2 Thinking serving at high throughput on NVIDIA Blackwell hardware.
 - **2025-11-04** — [One-second voice-to-voice latency with Modal, Pipecat, and open models](<../inference/optimization/One-second voice-to-voice latency with Modal, Pipecat, and open models.md>) · `optimization` · modal
@@ -545,12 +559,16 @@
   Application-layer snapshot of LLM usage and model trends, useful for understanding production model adoption and quality/cost tradeoffs.
 - **2025-10-10** — [ATLAS runtime-learning accelerators for LLM inference](<../inference/speculative-decoding/ATLAS runtime-learning accelerators for LLM inference.md>) · `speculative-decoding` · together
   Introduces ATLAS, a runtime-learning accelerator for improving LLM inference.
+- **2025-10-09** — [How AI Agents are Evolving Shopify's Product Taxonomy at Scale (2025)](<../agents/multi-agent/How AI Agents are Evolving Shopify's Product Taxonomy at Scale (2025).md>) · `multi-agent` · shopify
+  Shopify uses AI agents to evolve its product taxonomy (10,000+ categories, 2,000+ attributes) that powers tens of millions of daily product classifications, keeping the taxonomy adapting without breaking the classifier.
 - **2025-09-22** — [Why we built the Responses API | OpenAI Developers](<../agents/tool-use/Why we built the Responses API OpenAI Developers.md>) · `tool-use` · openai-devs
   OpenAI's design rationale for the Responses API as an agentic loop unifying Chat Completions and Assistants: it preserves reasoning state across turns (+5% on TAUBench, better cache utilization) and emits multiple output items — tool calls, structured outputs, intermediate steps — not just the final message.
 - **2025-09-10** — [Jupyter Agents: training LLMs to reason with notebooks](<../agents/tool-use/Jupyter Agents training LLMs to reason with notebooks.md>) · `tool-use` · huggingface
   Builds a data-science agent that executes code inside a Jupyter notebook, then trains small models to do it: generates a synthetic notebook trajectory dataset from Kaggle notebooks, fine-tunes Qwen3-4B/32B on it, and measures the gain on the DABStep benchmark. Details the scaffolding (executor, context management) and the data-quality filtering that drove most of the improvement.
 - **2025-09-04** — [Welcome EmbeddingGemma, Google's new efficient embedding model](<../rag-retrieval/embeddings/Welcome EmbeddingGemma, Google's new efficient embedding model.md>) · `embeddings` · huggingface
   EmbeddingGemma is a 308M-param multilingual embedding model: a Gemma3 backbone converted to bidirectional attention plus mean pooling and two dense layers, trained on ~320B tokens with Matryoshka Representation Learning so its 768-dim output can be truncated to 512/256/128; runs under 200 MB RAM quantized, tops MTEB under 500M, and the post shows a domain fine-tune on MIRIAD that beats models twice its size.
+- **2025-08-26** — [Building production-ready agentic systems: Lessons from Shopify Sidekick (2025)](<../agents/harness/Building production-ready agentic systems Lessons from Shopify Sidekick (2025).md>) · `harness` · shopify
+  ICML 2025 talk on building Shopify Sidekick as a production agentic system: architecture, LLM-based evaluation, and GRPO reinforcement-learning training for a merchant-facing AI assistant.
 - **2025-08-21** — [Voice AI Agents for Customer Experience: Why Decentralized Agent Architectures Can Outperform Central Orchestrators](<../agents/multi-agent/Voice AI Agents for Customer Experience Why Decentralized Agent Architectures Can Outperform Central Orchestrators.md>) · `multi-agent` · cresta
   Argues for decentralized voice-agent architectures over central orchestration in some customer-experience workloads.
 - **2025-08-15** — [Your AI Benchmark is Lying to You. Here's How We Caught It](<../evals-observability/benchmark-design/Your AI Benchmark is Lying to You. Here's How We Caught It.md>) · `benchmark-design` · fireworks

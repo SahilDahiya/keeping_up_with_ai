@@ -74,7 +74,8 @@ class TooShallow(ExtractionError):
 
 
 def extract_article(html: str, url: str, *, title_hint: str | None = None,
-                    date_hint: str | None = None, min_words: int = 0) -> Article:
+                    date_hint: str | None = None, min_words: int = 0,
+                    prefer_hint_date: bool = False, title_suffix: str | None = None) -> Article:
     body = trafilatura.extract(
         html,
         url=url,
@@ -92,17 +93,21 @@ def extract_article(html: str, url: str, *, title_hint: str | None = None,
         raise ExtractionError(f"body too short ({len(body or '')} chars)")
     if not title:
         raise ExtractionError("no title found")
+    if title_suffix and title.rstrip().endswith(title_suffix):
+        title = title.rstrip()[: -len(title_suffix)].rstrip(" -|·—")
 
     words = len(body.split())
     if min_words and words < min_words:
         raise TooShallow(f"below min_words ({words} < {min_words})")
 
-    # Trust the page-extracted date only if it is plausible; otherwise fall back to the
-    # feed/sitemap date, which is structured metadata rather than a guess from prose.
-    # If neither is believable, publish no date at all rather than a wrong one.
+    # Prefer the page-extracted date (usually the most accurate) unless the source is
+    # flagged prefer_hint_date, in which case the feed/sitemap date wins — some sites
+    # serve a constant template date in the body that trafilatura misreads. Either way
+    # only a plausible date is kept; if neither is believable, publish no date.
     extracted = meta.date if meta else None
     hint = date_hint[:10] if date_hint else None
-    published = next((d for d in (extracted, hint) if plausible_date(d)), None)
+    order = (hint, extracted) if prefer_hint_date else (extracted, hint)
+    published = next((d for d in order if plausible_date(d)), None)
     return Article(
         url=url,
         title=title.strip(),

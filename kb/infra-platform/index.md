@@ -1,6 +1,6 @@
 # infra-platform
 
-68 articles.
+69 articles.
 
 - **2026-07-09** — [Trace before you migrate: Measuring Kubernetes bottlenecks in AI agent sandboxes](<deployment/Trace before you migrate Measuring Kubernetes bottlenecks in AI agent sandboxes.md>) · `deployment` · arize
   Shows how tracing can diagnose Kubernetes bottlenecks in AI agent sandboxes before migration decisions.
@@ -58,6 +58,8 @@
   Covers optimization patterns for training workloads on GPU clusters.
 - **2026-02-23** — [Directory Snapshots: Resumable project state for Sandboxes](<deployment/Directory Snapshots Resumable project state for Sandboxes.md>) · `deployment` · modal
   Introduces directory snapshots for sandbox state, enabling resumable project files across agent and remote-execution sessions.
+- **2026-01-26** — [SkyPilot at Shopify: Multi-cloud GPUs without the pain (2026)](<gpu-clusters/SkyPilot at Shopify Multi-cloud GPUs without the pain (2026).md>) · `gpu-clusters` · shopify
+  How Shopify uses SkyPilot to run ML training across fragmented multi-cloud GPU capacity (H200s, L4s) behind one interface, avoiding per-provider API and configuration lock-in for scarce accelerators.
 - **2026-01-12** — [Inside multi-node training: How to scale model training across GPU clusters](<gpu-clusters/Inside multi-node training How to scale model training across GPU clusters.md>) · `gpu-clusters` · together
   Explains multi-node model training across GPU clusters and the coordination issues that appear at scale.
 - **2025-12-28** — [Keeping 20,000 GPUs healthy](<gpu-clusters/Keeping 20,000 GPUs healthy.md>) · `gpu-clusters` · modal

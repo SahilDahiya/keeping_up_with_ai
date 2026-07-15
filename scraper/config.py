@@ -29,7 +29,7 @@ class SourceConfig(BaseModel):
     home: str
     feed: str | None = None
     sitemap: str | None = None
-    discovery: list[Literal["feed", "sitemap", "hf"]] = Field(default_factory=lambda: ["feed", "sitemap"])
+    discovery: list[Literal["feed", "sitemap", "hf", "shopify"]] = Field(default_factory=lambda: ["feed", "sitemap"])
     # Hugging Face only: the approved tag allowlist. Empty => ingest nothing.
     hf_tags: list[str] = Field(default_factory=list)
     include_prefixes: list[str] = Field(default_factory=list)
@@ -37,6 +37,13 @@ class SourceConfig(BaseModel):
     exclude_regex: str | None = None
     rate_limit_seconds: float = 2.0
     min_words: int = 0
+    # Trust the discovery date (feed/sitemap) over the page-extracted date. Set for
+    # sources where trafilatura misreads the date — e.g. Shopify serves a constant
+    # template date in the body that would otherwise win.
+    prefer_hint_date: bool = False
+    # Site chrome to strip from the end of an extracted title, e.g. " - Shopify"
+    # (trafilatura reads the HTML <title>, which often carries a site suffix).
+    title_suffix: str | None = None
     since: str | None = None  # ISO date floor for backfill
     tags: list[str] = Field(default_factory=list)
 

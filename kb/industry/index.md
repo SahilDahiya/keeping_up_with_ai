@@ -1,6 +1,6 @@
 # industry
 
-13 articles.
+14 articles.
 
 - **2026-07-01** — [Announcing the Monetization Gateway: charge for any resource behind Cloudflare via x402](<business/Announcing the Monetization Gateway charge for any resource behind Cloudflare via x402.md>) · `business` · cloudflare-ai
   Announces the Monetization Gateway: charge agents for any Cloudflare-protected resource (pages, datasets, APIs, MCP tools) with payment verification enforced at the edge, settling sub-cent stablecoin micropayments over the x402 protocol now stewarded by a 25+ member Linux Foundation x402 Foundation.
@@ -22,6 +22,8 @@
   Year-in-review of OpenAI's 2025 developer platform: reasoning converging from separate o1/o3/o4-mini lines into unified flagship models, multimodal I/O becoming default, agent building blocks (Responses API, Agents SDK, AgentKit), and GPT-5.2-Codex for long-horizon coding.
 - **2025-10-13** — [State of LLMs on the Application Layer](<trends/State of LLMs on the Application Layer.md>) · `trends` · langfuse
   Application-layer snapshot of LLM usage and model trends, useful for understanding production model adoption and quality/cost tradeoffs.
+- **2025-07-04** — [Augmented commerce: Machine learning at Shopify (2025)](<trends/Augmented commerce Machine learning at Shopify (2025).md>) · `trends` · shopify
+  Overview of how ML is applied across Shopify's commerce platform ('augmented commerce'), framing the merchant ecosystem as the problem space for recommendation, search, and classification systems.
 - **2024-12-02** — [Open Source Developers Guide to the EU AI Act](<trends/Open Source Developers Guide to the EU AI Act.md>) · `trends` · huggingface
   Practical guide to EU AI Act obligations for open-source model and system developers: the GPAI vs system distinction, the 10^25 FLOP systemic-risk threshold, and the documentation, transparency, watermarking and opt-out steps that satisfy limited-risk duties.
 - **2024-03-14** — [What I learned from looking at 900 most popular open source AI tools](<trends/What I learned from looking at 900 most popular open source AI tools.md>) · `trends` · chip-huyen
