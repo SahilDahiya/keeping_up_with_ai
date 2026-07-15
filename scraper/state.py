@@ -51,8 +51,18 @@ class State:
         self.conn.row_factory = sqlite3.Row
         self.conn.executescript(_SCHEMA)
         self._migrate()
-        if self._is_empty() and jsonl.exists():
-            self.import_jsonl()  # fresh checkout (CI / cloud run): hydrate the cache
+        # Always reconcile the cache from the committed JSONL before use.
+        # state.jsonl is the shared source of truth (git); state.db is a per-machine
+        # cache. If we only hydrated an EMPTY db, a persistent local cache would drift
+        # from what the cloud jobs commit, and the next `export_jsonl()` would silently
+        # overwrite their updates — re-staging already-filed articles every day (this
+        # actually happened: it re-staged precursor/bump/doomql across three runs).
+        # Import is an upsert with JSONL winning per row; since every mutating command
+        # exports afterwards, the cache and JSONL never diverge except when git pull
+        # brings in newer rows — which is exactly what we want to pick up. The reimport
+        # of ~2.5k rows is a few tens of ms, cheap enough to do unconditionally.
+        if jsonl.exists():
+            self.import_jsonl()
 
     def _migrate(self) -> None:
         cols = {row["name"] for row in self.conn.execute("PRAGMA table_info(articles)")}
