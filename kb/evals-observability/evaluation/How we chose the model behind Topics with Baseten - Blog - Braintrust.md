@@ -1,10 +1,14 @@
 ---
 title: How we chose the model behind Topics with Baseten - Blog - Braintrust
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: evals-observability
+subtopic: evaluation
+secondary_topics:
+- product-engineering/case-studies
+summary: Details how Braintrust and Baseten chose and tuned a sub-10B model (Gemma
+  4B, beating Qwen) to summarize every production trace for the Topics feature, built
+  a 650-example benchmark across label correctness/factuality/issues-recall/false-positive-rate,
+  and improved Issues recall from 0% to 32.8% through prompt iteration alone (no fine-tuning).
 triage: null
 skip_reason: null
 source: braintrust
@@ -12,7 +16,7 @@ url: https://www.braintrust.dev/blog/model-behind-topics-baseten
 author: Braintrust Team
 published: '2026-07-15'
 fetched: '2026-07-16T06:48:38Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1330
 content_sha256: cc29575a15f1c72765664abf9eeb3bb44abbb4ccebe8911f36abc7fbbc908adc

@@ -1,10 +1,14 @@
 ---
 title: 'Kiro CLI observability: trace and evaluate agent changes with Arize Skills'
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: evals-observability
+subtopic: evaluation
+secondary_topics:
+- agents/tool-use
+summary: 'Walks through pairing Amazon''s Kiro CLI coding agent with Arize Skills
+  to build a validation loop: instrument an app, export traces, build a regression
+  dataset from production failures, and run an experiment comparing the current implementation
+  against an agent-proposed revision before merging.'
 triage: null
 skip_reason: null
 source: arize
@@ -12,7 +16,7 @@ url: https://arize.com/blog/kiro-cli-observability-arize-skills/
 author: Richard Young
 published: '2026-07-15'
 fetched: '2026-07-16T06:48:54Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1984
 content_sha256: 7802b946c7c5be1089df625325dc3d3adb747f05f6e6ee1325179a6edbc1e3ac

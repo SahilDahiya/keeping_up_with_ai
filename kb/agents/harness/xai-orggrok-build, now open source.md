@@ -1,10 +1,15 @@
 ---
 title: xai-org/grok-build, now open source
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: agents
+subtopic: harness
+secondary_topics:
+- product-engineering/security
+summary: Covers xAI open-sourcing its 844K-line Rust 'Grok Build' coding-agent CLI
+  after backlash over it silently uploading users' entire home directories to Google
+  Cloud; digs into the released source for its system/subagent prompts and tool implementations
+  that were ported from Codex (apply_patch, grep_files) and OpenCode (bash, edit,
+  glob).
 triage: null
 skip_reason: null
 source: simon-willison
@@ -12,7 +17,7 @@ url: https://simonwillison.net/2026/Jul/15/grok-build/
 author: Simon Willison
 published: '2026-07-15'
 fetched: '2026-07-16T06:54:31Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 594
 content_sha256: 9e37a7fc122c97363355aca2f63720d66e1e9f15ca43f131c9f81ac5c0890777

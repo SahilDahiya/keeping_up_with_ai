@@ -1,10 +1,15 @@
 ---
 title: Agents need their own computer. Here's how to give them one safely.
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: agents
+subtopic: harness
+secondary_topics:
+- product-engineering/security
+summary: Argues agent execution environments need machine-level isolation (hardware-virtualized
+  microVMs, not shared-kernel containers) citing a 2025 npm supply-chain worm and
+  a 2026 Linux kernel CVE, then lays out four requirements (safe execution, control
+  via credential-proxying, observability, fast reproducible provisioning) that LangSmith
+  Sandboxes implements with sub-second boot and copy-on-write forking.
 triage: null
 skip_reason: null
 source: langchain
@@ -12,7 +17,7 @@ url: https://www.langchain.com/blog/agents-need-their-own-computer
 author: Amy Ru
 published: '2026-07-15'
 fetched: '2026-07-16T06:48:51Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 2425
 content_sha256: 4c76c345ee0744a209d59756275b6d204def2d009ac27671d4953ed5faf8f1f0

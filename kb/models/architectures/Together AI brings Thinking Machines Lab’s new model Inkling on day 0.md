@@ -1,10 +1,15 @@
 ---
 title: Together AI brings Thinking Machines Lab’s new model Inkling on day 0
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: models
+subtopic: architectures
+secondary_topics:
+- inference/kernels
+summary: Details Inkling's architecture (975B/40B active MoE with a shared expert
+  sink jointly normalized against routed experts, a learned query-conditioned relative
+  attention bias instead of RoPE, and 'sconv' short causal convolutions on K/V and
+  sublayer outputs) and Together's FlashAttention-4-based kernel adapted to serve
+  its query-conditioned relative attention efficiently.
 triage: null
 skip_reason: null
 source: together
@@ -12,7 +17,7 @@ url: https://www.together.ai/blog/together-ai-brings-thinking-machines-labs-new-
 author: Jue Wang; Wei Gong; Yineng Zhang; Hiral Jasani
 published: '2026-07-15'
 fetched: '2026-07-16T06:48:27Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 965
 content_sha256: d6e77853d33c358c005ad1fd785dbd08f8b596fa594106ed5722d7f93b1da3ca

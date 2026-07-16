@@ -1,10 +1,15 @@
 ---
 title: How I tricked Claude into leaking your deepest, darkest secrets
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: product-engineering
+subtopic: security
+secondary_topics:
+- agents/tool-use
+summary: Explains how researcher Ayush Paul bypassed Claude's web_fetch exfiltration
+  protections (which restrict navigation to user- or search-provided URLs) by having
+  a honeypot site serve nested links that the tool would follow, letting an attacker
+  exfiltrate a user's name, city, and employer letter-by-letter; Anthropic closed
+  the hole by disallowing navigation to links found within fetched content.
 triage: null
 skip_reason: null
 source: simon-willison
@@ -12,7 +17,7 @@ url: https://simonwillison.net/2026/Jul/15/claude-web-fetch-exfiltration/
 author: Simon Willison
 published: '2026-07-15'
 fetched: '2026-07-16T06:54:33Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 380
 content_sha256: 867b3ec8a62b17a63909308ecd31574a8f11e5030fdc8a98388336e6884ef190

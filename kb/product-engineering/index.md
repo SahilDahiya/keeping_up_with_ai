@@ -1,7 +1,9 @@
 # product-engineering
 
-110 articles.
+111 articles.
 
+- **2026-07-15** — [How I tricked Claude into leaking your deepest, darkest secrets](<security/How I tricked Claude into leaking your deepest, darkest secrets.md>) · `security` · simon-willison
+  Explains how researcher Ayush Paul bypassed Claude's web_fetch exfiltration protections (which restrict navigation to user- or search-provided URLs) by having a honeypot site serve nested links that the tool would follow, letting an attacker exfiltrate a user's name, city, and employer letter-by-letter; Anthropic closed the hole by disallowing navigation to links found within fetched content.
 - **2026-07-13** — [Introducing Precursor: detecting agentic behavior with continuous client-side signals](<security/Introducing Precursor detecting agentic behavior with continuous client-side signals.md>) · `security` · cloudflare-ai
   Details Cloudflare's Precursor system, which injects client-side JS to continuously score session-level behavioral signals (mouse-movement physics like wrist-pivot arcs and hand tremor, keystroke rhythm) at the edge to distinguish humans from bots and agentic automation across an entire user journey, not just at a single challenge checkpoint.
 - **2026-07-10** — [AI-pilling our company: lessons learned](<case-studies/AI-pilling our company lessons learned.md>) · `case-studies` · sierra
@@ -225,6 +227,14 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-07-15** — [Agents need their own computer. Here's how to give them one safely.](<../agents/harness/Agents need their own computer. Here's how to give them one safely.md>) · `harness` · langchain
+  Argues agent execution environments need machine-level isolation (hardware-virtualized microVMs, not shared-kernel containers) citing a 2025 npm supply-chain worm and a 2026 Linux kernel CVE, then lays out four requirements (safe execution, control via credential-proxying, observability, fast reproducible provisioning) that LangSmith Sandboxes implements with sub-second boot and copy-on-write forking.
+- **2026-07-15** — [Pinecone: Harnessing the wisdom of the workforce](<../agents/harness/Pinecone Harnessing the wisdom of the workforce.md>) · `harness` · sierra
+  Describes Sierra's internal cloud-agent platform Pinecone: an app server plus 'Agency' control plane that reconciles Kubernetes pods and Redis Streams for durable, resumable sessions, a Go runner supervising Codex/Claude Code, network-proxy credential injection so the agent never sees real tokens, and copy-on-write session forking/branching for multiplayer collaboration.
+- **2026-07-15** — [xai-org/grok-build, now open source](<../agents/harness/xai-orggrok-build, now open source.md>) · `harness` · simon-willison
+  Covers xAI open-sourcing its 844K-line Rust 'Grok Build' coding-agent CLI after backlash over it silently uploading users' entire home directories to Google Cloud; digs into the released source for its system/subagent prompts and tool implementations that were ported from Codex (apply_patch, grep_files) and OpenCode (bash, edit, glob).
+- **2026-07-15** — [How we chose the model behind Topics with Baseten - Blog - Braintrust](<../evals-observability/evaluation/How we chose the model behind Topics with Baseten - Blog - Braintrust.md>) · `evaluation` · braintrust
+  Details how Braintrust and Baseten chose and tuned a sub-10B model (Gemma 4B, beating Qwen) to summarize every production trace for the Topics feature, built a 650-example benchmark across label correctness/factuality/issues-recall/false-positive-rate, and improved Issues recall from 0% to 32.8% through prompt iteration alone (no fine-tuning).
 - **2026-07-08** — [Deep Agents Code on NVIDIA NemoClaw](<../agents/tool-use/Deep Agents Code on NVIDIA NemoClaw.md>) · `tool-use` · langchain
   Covers a governed Deep Agents code blueprint on NVIDIA NemoClaw for sensitive code workflows, emphasizing controls around agentic coding.
 - **2026-07-05** — [sqlite-utils 4.0rc2, mostly written by Claude Fable (for about $149.25)](<../agents/tool-use/sqlite-utils 4.0rc2, mostly written by Claude Fable (for about $149.25).md>) · `tool-use` · simon-willison

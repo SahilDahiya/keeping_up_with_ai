@@ -1,10 +1,15 @@
 ---
 title: Inkling by Thinking Machines now available on Modal | Modal Blog
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: inference
+subtopic: speculative-decoding
+secondary_topics:
+- models/architectures
+summary: Describes adapting Z Lab's DFlash block-diffusion speculator to Thinking
+  Machines' Inkling (which uses five sliding-window attention layers per full-attention
+  layer), making the drafter all-local-attention and causal for kernel support, reaching
+  250 tok/s/user at 2.5M TPM per GPU, 67% faster than Inkling's built-in MTP speculative
+  path.
 triage: null
 skip_reason: null
 source: modal
@@ -12,7 +17,7 @@ url: https://modal.com/blog/inkling-by-thinking-machines-labs-now-available-on-m
 author: null
 published: '2026-07-15'
 fetched: '2026-07-16T06:48:33Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 663
 content_sha256: b4cf5c56b421190ff002a0c268f0403e096973bf7f5239b5c45409103bdb664c

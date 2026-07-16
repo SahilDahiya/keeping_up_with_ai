@@ -1,7 +1,13 @@
 # agents
 
-161 articles.
+164 articles.
 
+- **2026-07-15** — [Agents need their own computer. Here's how to give them one safely.](<harness/Agents need their own computer. Here's how to give them one safely.md>) · `harness` · langchain
+  Argues agent execution environments need machine-level isolation (hardware-virtualized microVMs, not shared-kernel containers) citing a 2025 npm supply-chain worm and a 2026 Linux kernel CVE, then lays out four requirements (safe execution, control via credential-proxying, observability, fast reproducible provisioning) that LangSmith Sandboxes implements with sub-second boot and copy-on-write forking.
+- **2026-07-15** — [Pinecone: Harnessing the wisdom of the workforce](<harness/Pinecone Harnessing the wisdom of the workforce.md>) · `harness` · sierra
+  Describes Sierra's internal cloud-agent platform Pinecone: an app server plus 'Agency' control plane that reconciles Kubernetes pods and Redis Streams for durable, resumable sessions, a Go runner supervising Codex/Claude Code, network-proxy credential injection so the agent never sees real tokens, and copy-on-write session forking/branching for multiplayer collaboration.
+- **2026-07-15** — [xai-org/grok-build, now open source](<harness/xai-orggrok-build, now open source.md>) · `harness` · simon-willison
+  Covers xAI open-sourcing its 844K-line Rust 'Grok Build' coding-agent CLI after backlash over it silently uploading users' entire home directories to Google Cloud; digs into the released source for its system/subagent prompts and tool implementations that were ported from Codex (apply_patch, grep_files) and OpenCode (bash, edit, glob).
 - **2026-07-14** — [From human-operated agent development to systematic agent improvement](<harness/From human-operated agent development to systematic agent improvement.md>) · `harness` · arize
   Translates an Arize Observe 2026 keynote into an architecture for automated agent improvement loops: managed reader/fixer/reviewer workers triage failures from OpenInference traces, harness-as-a-judge evaluates fixes, and fleet controls catch runaway or stuck sessions instead of a human pasting traces into a coding agent by hand.
 - **2026-07-10** — [What is a loop in AI engineering, anyway?](<harness/What is a loop in AI engineering, anyway.md>) · `harness` · arize
@@ -327,6 +333,10 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-07-15** — [Kiro CLI observability: trace and evaluate agent changes with Arize Skills](<../evals-observability/evaluation/Kiro CLI observability trace and evaluate agent changes with Arize Skills.md>) · `evaluation` · arize
+  Walks through pairing Amazon's Kiro CLI coding agent with Arize Skills to build a validation loop: instrument an app, export traces, build a regression dataset from production failures, and run an experiment comparing the current implementation against an agent-proposed revision before merging.
+- **2026-07-15** — [How I tricked Claude into leaking your deepest, darkest secrets](<../product-engineering/security/How I tricked Claude into leaking your deepest, darkest secrets.md>) · `security` · simon-willison
+  Explains how researcher Ayush Paul bypassed Claude's web_fetch exfiltration protections (which restrict navigation to user- or search-provided URLs) by having a honeypot site serve nested links that the tool would follow, letting an attacker exfiltrate a user's name, city, and employer letter-by-letter; Anthropic closed the hole by disallowing navigation to links found within fetched content.
 - **2026-07-14** — [How to Debug Coding Agents with LangSmith Traces](<../evals-observability/tracing/How to Debug Coding Agents with LangSmith Traces.md>) · `tracing` · langchain
   Introduces LangSmith tracing support across coding agents (Claude Code, Codex, Cursor, Copilot Chat, Pi, OpenCode, dcode), normalizing each tool's fragmented session/tool-call/subagent-handoff formats into one standardized trace structure so failures like a subagent inheriting a stale offset-paging helper are visible instead of requiring a fresh restart.
 - **2026-07-13** — [How do you make an LLM, anyway? Microsoft just published a textbook.](<../models/training/How do you make an LLM, anyway Microsoft just published a textbook.md>) · `training` · arize

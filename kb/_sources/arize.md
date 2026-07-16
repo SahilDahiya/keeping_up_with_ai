@@ -1,7 +1,9 @@
 # arize
 
-185 articles.
+186 articles.
 
+- **2026-07-15** — [Kiro CLI observability: trace and evaluate agent changes with Arize Skills](<../evals-observability/evaluation/Kiro CLI observability trace and evaluate agent changes with Arize Skills.md>) · `evaluation` · arize
+  Walks through pairing Amazon's Kiro CLI coding agent with Arize Skills to build a validation loop: instrument an app, export traces, build a regression dataset from production failures, and run an experiment comparing the current implementation against an agent-proposed revision before merging.
 - **2026-07-14** — [From human-operated agent development to systematic agent improvement](<../agents/harness/From human-operated agent development to systematic agent improvement.md>) · `harness` · arize
   Translates an Arize Observe 2026 keynote into an architecture for automated agent improvement loops: managed reader/fixer/reviewer workers triage failures from OpenInference traces, harness-as-a-judge evaluates fixes, and fleet controls catch runaway or stuck sessions instead of a human pasting traces into a coding agent by hand.
 - **2026-07-14** — [How to measure AI productivity: From LLM token costs to business value with Arize AX](<../evals-observability/evaluation/How to measure AI productivity From LLM token costs to business value with Arize AX.md>) · `evaluation` · arize

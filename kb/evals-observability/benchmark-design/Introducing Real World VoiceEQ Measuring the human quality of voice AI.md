@@ -1,10 +1,15 @@
 ---
 title: 'Introducing Real World VoiceEQ: Measuring the human quality of voice AI'
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: evals-observability
+subtopic: benchmark-design
+secondary_topics:
+- models/benchmarks
+summary: Hume AI's Real World VoiceEQ benchmark evaluates 40+ voice models across
+  ASR, TTS, speech-to-speech, and speech understanding using 1M+ human ratings (785K
+  TTS, 48K STS), finding no single model tops all 8 TTS capability groups and that
+  speech-language-model judges disagree with human raters on subjective calls like
+  emotional fit or identity consistency.
 triage: null
 skip_reason: null
 source: huggingface
@@ -14,7 +19,7 @@ author: David Ayllon; Alice; Jeff Brooks; Franc Camps Febrer; Jakub Piotr Cłapa
   Panagiotis Tzirakis
 published: '2026-07-15'
 fetched: '2026-07-16T06:54:24Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 995
 content_sha256: 1dbda40de60e65e6387b5f9a7a0b644dc1174416c3a8c56db84452c7fe2d5905

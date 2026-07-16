@@ -1,10 +1,15 @@
 ---
 title: 'Pinecone: Harnessing the wisdom of the workforce'
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: agents
+subtopic: harness
+secondary_topics:
+- product-engineering/architecture
+summary: 'Describes Sierra''s internal cloud-agent platform Pinecone: an app server
+  plus ''Agency'' control plane that reconciles Kubernetes pods and Redis Streams
+  for durable, resumable sessions, a Go runner supervising Codex/Claude Code, network-proxy
+  credential injection so the agent never sees real tokens, and copy-on-write session
+  forking/branching for multiplayer collaboration.'
 triage: null
 skip_reason: null
 source: sierra
@@ -12,7 +17,7 @@ url: https://sierra.ai/blog/pinecone-harnessing-the-wisdom-of-the-workforce
 author: Allen Chen; Tess Rosania
 published: '2026-07-15'
 fetched: '2026-07-16T06:48:14Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 2357
 content_sha256: d7706eba9a78a5a9a87232c7349b368c908939c1c10e0ba249a7e7bc45f33d3f

@@ -1,10 +1,14 @@
 ---
 title: 'New in Together GPU Clusters: Reliability and control for production GPU clusters'
 kind: blog
-topic: null
-subtopic: null
+topic: infra-platform
+subtopic: gpu-clusters
 secondary_topics: []
-summary: null
+summary: 'Details operational upgrades to Together GPU Clusters: passive health checks
+  that catch GPUs falling off the PCIe bus, Xid errors, and thermal throttling on
+  live workloads; four automated-but-approved repair actions (reboot/reprovision/failover/remove);
+  and a rebuilt Slurm-on-Kubernetes stack (Slinky fork) targeting crashing daemons
+  and scheduler drift at scale.'
 triage: null
 skip_reason: null
 source: together
@@ -12,7 +16,7 @@ url: https://www.together.ai/blog/new-in-together-gpu-clusters-reliability-and-c
 author: Pavneet Ahluwalia
 published: '2026-07-15'
 fetched: '2026-07-16T06:48:29Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 2049
 content_sha256: 69891c83b7c43dc8a92914cac6a87048d547a868be34b64a998d6304d9ec2c38
