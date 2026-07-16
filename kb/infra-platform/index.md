@@ -1,6 +1,6 @@
 # infra-platform
 
-70 articles.
+72 articles.
 
 - **2026-07-15** — [New in Together GPU Clusters: Reliability and control for production GPU clusters](<gpu-clusters/New in Together GPU Clusters Reliability and control for production GPU clusters.md>) · `gpu-clusters` · together
   Details operational upgrades to Together GPU Clusters: passive health checks that catch GPUs falling off the PCIe bus, Xid errors, and thermal throttling on live workloads; four automated-but-approved repair actions (reboot/reprovision/failover/remove); and a rebuilt Slurm-on-Kubernetes stack (Slinky fork) targeting crashing daemons and scheduler drift at scale.
@@ -28,6 +28,8 @@
   Explains how LangChain made coding-agent spend more predictable using constraints, monitoring, and workflow-level cost controls.
 - **2026-06-12** — [Rolling deployments for zero-downtime model updates](<deployment/Rolling deployments for zero-downtime model updates.md>) · `deployment` · baseten
   Explains rolling deployments for zero-downtime model updates in production serving systems.
+- **2026-06-09** — [AI spend is the new headcount: why cost control is an observability problem](<cost/AI spend is the new headcount why cost control is an observability problem.md>) · `cost` · pydantic
+  Frames LLM/agent spend as headcount-shaped (usage-scaled, salary-magnitude) rather than SaaS-shaped, arguing cost governance is really an observability problem: attribute spend per agent, per user, per session from traces (via the genai-prices dataset) and ask 'was this run worth what it cost?'.
 - **2026-06-05** — [Your AI bill is out of control. Cloudflare can fix it now.](<cost/Your AI bill is out of control. Cloudflare can fix it now.md>) · `cost` · cloudflare-ai
   AI Gateway adds dollar-denominated spend limits plus a closed beta of identity-driven budgets and model routing via Cloudflare Access, so enterprises can attribute LLM spend per person/team (e.g. $5,000/month frontier models for engineering, $200 for interns) instead of one opaque shared API key.
 - **2026-06-04** — [Model Neutrality: Why Avoiding AI Vendor Lock-In Matters](<deployment/Model Neutrality Why Avoiding AI Vendor Lock-In Matters.md>) · `deployment` · langchain
@@ -52,6 +54,8 @@
   Guide to multi-tenant GPU cluster design for avoiding capacity conflicts in AI-native teams.
 - **2026-04-09** — [How the Baseten Delivery Network (BDN) makes cold starts fast](<deployment/How the Baseten Delivery Network (BDN) makes cold starts fast.md>) · `deployment` · baseten
   Deep dive into how the Baseten Delivery Network reduces cold starts for model serving.
+- **2026-03-31** — [Logfire vs LangSmith vs Langfuse vs Arize: AI Observability Pricing Compared](<cost/Logfire vs LangSmith vs Langfuse vs Arize AI Observability Pricing Compared.md>) · `cost` · pydantic
+  Breaks down how AI-observability billing units (spans, traces, GB ingested, Langfuse-style billable units) interact with agentic/RAG workloads, noting LLM spans carry tens of KB payloads (system prompts, retrieved chunks, completions) versus sub-KB REST spans. Compares Logfire, LangSmith, Langfuse, and Arize pricing to show the billing unit, not the headline fee, drives real cost.
 - **2026-03-19** — [Introducing the Baseten Delivery Network: Fast cold starts for big models](<deployment/Introducing the Baseten Delivery Network Fast cold starts for big models.md>) · `deployment` · baseten
   Introduces the Baseten Delivery Network for reducing cold starts when serving large models.
 - **2026-03-10** — [Simplifying Langfuse for Scale](<deployment/Simplifying Langfuse for Scale.md>) · `deployment` · langfuse
@@ -145,8 +149,12 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-07-15** — [AI gateway with data loss prevention, failover, and spend caps in Pydantic Logfire](<../product-engineering/security/AI gateway with data loss prevention, failover, and spend caps in Pydantic Logfire.md>) · `security` · pydantic
+  Makes the case for an LLM gateway as the single choke point for governance: one key across OpenAI/Anthropic/Google/Bedrock/etc., data-loss-prevention scanning of prompts and completions for secrets/PII (observe, flag, redact, or block), priority and weighted routing for failover/load-balancing, and hard per-key spend caps that block the request rather than alert after the budget is gone.
 - **2026-07-14** — [How to measure AI productivity: From LLM token costs to business value with Arize AX](<../evals-observability/evaluation/How to measure AI productivity From LLM token costs to business value with Arize AX.md>) · `evaluation` · arize
   Argues token/prompt/LOC counts don't measure AI productivity (citing METR's finding that developers were 19% slower with AI while feeling 20% faster) and proposes a five-dimension framework, built on a shared correlation_id tagging contract, that joins traced AI work to outcomes like merged non-reverted PRs via Arize AX.
+- **2026-07-14** — [Agent and LLM views in Pydantic Logfire](<../evals-observability/monitoring/Agent and LLM views in Pydantic Logfire.md>) · `monitoring` · pydantic
+  Argues that non-deterministic agent workloads should be monitored on turns-per-run and tool-calling-turns-per-run at p90, not the mean, because a rare runaway retry loop (e.g. 40 tool calls, $12) hides in the average; built from the gen_ai.* spans agents already emit.
 - **2026-07-13** — [Introducing Precursor: detecting agentic behavior with continuous client-side signals](<../product-engineering/security/Introducing Precursor detecting agentic behavior with continuous client-side signals.md>) · `security` · cloudflare-ai
   Details Cloudflare's Precursor system, which injects client-side JS to continuously score session-level behavioral signals (mouse-movement physics like wrist-pivot arcs and hand tremor, keystroke rhythm) at the edge to distinguish humans from bots and agentic automation across an entire user journey, not just at a single challenge checkpoint.
 - **2026-07-09** — [The new GPT-5.6 family: Luna, Terra, Sol](<../models/releases/The new GPT-5.6 family Luna, Terra, Sol.md>) · `releases` · simon-willison
@@ -193,6 +201,8 @@
   Argues that reinforcement learning progress depends heavily on infrastructure for scheduling, iteration, and scalable experiments.
 - **2026-05-27** — [Shipping a Trillion Parameters With a Hub Bucket: Delta Weight Sync in TRL](<../models/reinforcement-learning/Shipping a Trillion Parameters With a Hub Bucket Delta Weight Sync in TRL.md>) · `reinforcement-learning` · huggingface
   In async RL the trainer must ship the full model to the inference engine every step (14 GB for a 7B, ~1 TB for a frontier model); TRL exploits the fact that ~99% of bf16 weights are bit-identical between consecutive optimizer steps and syncs only a sparse safetensors delta via a Hub bucket, cutting Qwen3-0.6B's per-step payload from 1.2 GB to 20-35 MB and enabling fully disaggregated training with no shared cluster or RDMA.
+- **2026-05-25** — [Durable Runtime for Pydantic AI Agents](<../agents/harness/Durable Runtime for Pydantic AI Agents.md>) · `harness` · pydantic
+  Guest post on adding a durable execution runtime to Pydantic AI agents so a harnessed run survives production failures (pod evictions, tool timeouts, crashes after expensive model calls) by persisting intermediate decisions and supporting pause/resume for offline human approval, rather than losing agent state to terminal output.
 - **2026-05-20** — [The Agent Execution Tax](<../evals-observability/benchmark-design/The Agent Execution Tax.md>) · `benchmark-design` · fireworks
   Analyzes browser-agent runs to show how reliability, latency, and cost compound into task-level execution tax.
 - **2026-05-19** — [Scaling reinforcement learning at Applied Compute](<../models/reinforcement-learning/Scaling reinforcement learning at Applied Compute.md>) · `reinforcement-learning` · modal
@@ -217,6 +227,8 @@
   Eleven-month buildout of Cloudflare's internal AI engineering stack on its own products: 3,683 users (93% of R&D), 47.95M AI requests and 241B tokens/month through AI Gateway, an MCP Server Portal with single OAuth, and merge requests nearly doubling from ~5,600 to 10,952/week.
 - **2026-04-20** — [Building the agentic cloud: everything we launched during Agents Week 2026](<../industry/announcements/Building the agentic cloud everything we launched during Agents Week 2026.md>) · `announcements` · cloudflare-ai
   Roundup of every Agents Week 2026 launch for Cloudflare's 'agentic cloud': Artifacts (Git-compatible versioned storage), Sandboxes with Outbound Workers for zero-trust egress, Durable Object Facets, and Workflows rearchitected to 50,000 concurrency for durable background agents.
+- **2026-04-16** — [How to Optimize MCP Tool Schemas to Reduce Token Usage](<../agents/tool-use/How to Optimize MCP Tool Schemas to Reduce Token Usage.md>) · `tool-use` · pydantic
+  Shows how MCP tool definitions consume context tokens and how to engineer them for efficiency, using a Rust weather MCP server (Open-Meteo, built on the sans-IO 'mercutio' library) as the worked example for tightening the tool schemas and descriptions that Claude and other agents ingest on every request.
 - **2026-04-15** — [Data Fabric: Querying agent traces in BigQuery](<../evals-observability/tracing/Data Fabric Querying agent traces in BigQuery.md>) · `tracing` · arize
   Shows how to query production agent traces in BigQuery by connecting observability data with warehouse analysis workflows.
 - **2026-04-14** — [Autoscaling Autoresearch: Give your agents elastic GPUs on Modal](<../agents/tool-use/Autoscaling Autoresearch Give your agents elastic GPUs on Modal.md>) · `tool-use` · modal

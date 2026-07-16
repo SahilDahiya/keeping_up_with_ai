@@ -155,6 +155,20 @@ sources:
     title_suffix: " - Shopify"  # strip site chrome from the extracted <title>
     tags: [production-ml, commerce]
 
+  - slug: pydantic
+    name: Pydantic Blog
+    home: https://pydantic.dev/articles
+    feed: https://pydantic.dev/feed.xml
+    sitemap: https://pydantic.dev/sitemap.xml
+    include_prefixes: ["/articles/"]   # never author/docs pages
+    since: "2025-01-01"
+    # High-value source (PydanticAI, Logfire, structured output) but mixed. Drop the
+    # pydantic-core LIBRARY posts (releases/perf/wheels — Python, not AI) and the
+    # clearest company/product-news before scraping; the classify triage backstops the
+    # rest. Verified against all 121 article slugs: excludes 0 AI/agent/LLM content.
+    exclude_regex: "/articles/(hiring|hiring-again|company-announcement|gregor|hack-monty.*|hallway-track.*|eu-region-launch|[a-z0-9-]*-starter-credit|[a-z0-9-]*-head-of-[a-z0-9-]*|[a-z0-9-]*-sdk-launch|mcp-launch|logfire-gateway-launch|logfire-enterprise-dedicated|ingress-to-gateway|gateway-merging-into-logfire|pydantic-v[0-9][a-z0-9-]*|pydantic-bitset[a-z0-9-]*|pydantic-validation-[a-z0-9-]*|pydantic-events|pydantic-monty|pydantic-donates-[a-z0-9-]*|emscripten-wheels-pydantic|eval-type-backport|inline-snapshot|struct-field-pushdown|how-curvy-is-your-data|bloom-filter-folding-parquet-logfire)/?$"
+    tags: [agents, observability, structured-output]
+
   - slug: simon-willison
     name: Simon Willison's Weblog
     home: https://simonwillison.net/

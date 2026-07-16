@@ -1,9 +1,11 @@
 # prompt-engineering
 
-24 articles.
+26 articles.
 
 - **2026-06-26** — [Prompt Caching with Deep Agents](<context-engineering/Prompt Caching with Deep Agents.md>) · `context-engineering` · langchain
   Explains prompt caching for Deep Agents and how cache-aware context design reduces latency and cost for repeated agent work.
+- **2026-06-22** — [Skills on steroids: on-demand capabilities in Pydantic AI](<context-engineering/Skills on steroids on-demand capabilities in Pydantic AI.md>) · `context-engineering` · pydantic
+  Introduces progressive disclosure for agent capabilities in Pydantic AI: mark a capability defer_loading=True so it collapses to a one-line id+description in context, and the model calls load_capability to inject the full instructions/tools bundle only when it decides it needs it, cutting input tokens spent loading context that has no chance of being used on a given turn.
 - **2026-05-12** — [Context engineering: the key to great agents](<context-engineering/Context engineering the key to great agents.md>) · `context-engineering` · sierra
   Explains context engineering for agents, including how the right knowledge, state, and instructions shape agent quality.
 - **2026-04-30** — [Prompt templates as configs, not code](<context-engineering/Prompt templates as configs, not code.md>) · `context-engineering` · arize
@@ -12,6 +14,8 @@
   Prompting guide for steering GPT-5.4 toward non-generic frontend design: the model was trained for UI work, native image search/generation (e.g. prompt it to build mood boards first), and computer use for self-verification with tools like Playwright.
 - **2026-02-16** — [Using Agent Skills to Automatically Improve your Prompts](<techniques/Using Agent Skills to Automatically Improve your Prompts.md>) · `techniques` · langfuse
   Shows how agent skills can automatically improve prompts, using evaluation feedback and reusable agent workflows to iterate on prompt quality.
+- **2026-02-02** — [Automated Prompt Optimization with GEPA, Pydantic AI, and Pydantic Evals](<techniques/Automated Prompt Optimization with GEPA, Pydantic AI, and Pydantic Evals.md>) · `techniques` · pydantic
+  Walks through automated prompt optimization with GEPA's evolutionary/reflective algorithm driven by Pydantic Evals as the scoring harness, using Agent.override() to inject candidate prompts without modifying agent definitions, turning manual prompt iteration into a systematic search of the prompt space against defined success criteria.
 - **2025-11-20** — [CLAUDE.md: Best Practices Learned from Optimizing Claude Code with Prompt Learning](<context-engineering/CLAUDE.md Best Practices Learned from Optimizing Claude Code with Prompt Learning.md>) · `context-engineering` · arize
   Extracts CLAUDE.md best practices from prompt-learning experiments that optimized Claude Code behavior through repository instructions.
 - **2025-11-17** — [GEPA vs Prompt Learning: Benchmarking Different Prompt Optimization Approaches](<techniques/GEPA vs Prompt Learning Benchmarking Different Prompt Optimization Approaches.md>) · `techniques` · arize
@@ -53,6 +57,10 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-06-26** — [What makes a good agent harness](<../agents/harness/What makes a good agent harness.md>) · `harness` · pydantic
+  Follow-up to the harness thesis detailing what makes an agent harness good: safe tool access, memory that survives a single model call, guardrails that catch bad actions before they land, and context management that keeps the window full of what matters.
+- **2026-06-23** — [Pydantic AI v2: capabilities, a leaner core, and the Harness](<../agents/harness/Pydantic AI v2 capabilities, a leaner core, and the Harness.md>) · `harness` · pydantic
+  Pydantic AI v2 argues the agent inner loop is settled and the leverage is the surrounding layer, unifying instructions, tools, lifecycle hooks that rewrite what the model sees mid-run, context management, steering, and just-in-time tool loading into one composable 'capability' abstraction.
 - **2026-06-22** — [We got local models to triage the OpenClaw repo for FREE!*](<../agents/tool-use/We got local models to triage the OpenClaw repo for FREE!.md>) · `tool-use` · huggingface
   Uses local Gemma/Qwen models inside an agent harness with structured outputs to triage hundreds of daily OpenClaw issues/PRs on a 128GB NVIDIA GB10, replacing a quota-limited GPT-5/Opus workflow; covers label schema design, prompt iteration and accuracy vs closed models.
 - **2026-05-28** — [Claude Code: Best practices for agentic coding](<../agents/tool-use/Claude Code Best practices for agentic coding.md>) · `tool-use` · anthropic-engineering
@@ -65,12 +73,16 @@
   Explains a tokenizer-level prompt-injection fix and the implications for securing model-serving systems.
 - **2026-04-14** — [Classifying User Intent with Categorical LLM-as-a-Judge](<../evals-observability/llm-as-judge/Classifying User Intent with Categorical LLM-as-a-Judge.md>) · `llm-as-judge` · langfuse
   Shows how to classify user intent with categorical LLM-as-judge evaluators, including rubric design and structured scoring for production analysis.
+- **2026-04-08** — [MCP Code Execution: Why Your Agent Would Rather Write Code | Pydantic](<../agents/harness/MCP Code Execution Why Your Agent Would Rather Write Code Pydantic.md>) · `harness` · pydantic
+  After hand-crafting 40+ MCP tools for Logfire, a single code-execution (exec) tool outperformed them because tool descriptions themselves eat the context window (Cloudflare needed 1.17M tokens for a full MCP over a 2,500-endpoint API); a case for code-actions over many JSON tools while keeping curated tools around.
 - **2026-03-25** — [How Perplexity Brought Voice Search to Millions Using the Realtime API | OpenAI Developers](<../product-engineering/case-studies/How Perplexity Brought Voice Search to Millions Using the Realtime API OpenAI Developers.md>) · `case-studies` · openai-devs
   Perplexity's production lessons running Realtime-1.5 voice across Comet and Computer: feed context in 2,000-token chunks to avoid all-or-nothing truncation, get system/user/assistant role semantics right, standardize audio via a Rust SDK (48 kHz mono, WebRTC APM), and a 'voice lock' pattern for user pauses.
 - **2026-03-19** — [Managing Memory in AI Agents: Beyond the Context Window](<../agents/memory-context/Managing Memory in AI Agents Beyond the Context Window.md>) · `memory-context` · arize
   Covers memory and context-window management patterns for agents that need to preserve useful state over long tasks.
 - **2026-03-09** — [Using skills to accelerate OSS maintenance | OpenAI Developers](<../agents/tool-use/Using skills to accelerate OSS maintenance OpenAI Developers.md>) · `tool-use` · openai-devs
   How OpenAI maintains the Agents SDK repos with repo-local Codex skills, AGENTS.md policy, and the Codex GitHub Action — turning verification, release prep, and PR review into repeatable progressive-disclosure workflows; merged PRs rose from 316 to 457 quarter-over-quarter.
+- **2026-03-03** — [Scaling Open Source Code Review With AI | Pydantic](<../product-engineering/case-studies/Scaling Open Source Code Review With AI Pydantic.md>) · `case-studies` · pydantic
+  The Pydantic AI lead maintainer distills 4,668 historical PR review comments into ~150 AGENTS.md rules to build an automated AI code reviewer, a response to the AI-generated PR flood that inverted the old effort asymmetry between creating and reviewing a PR.
 - **2026-02-04** — [15 lessons learned building ChatGPT Apps | OpenAI Developers](<../product-engineering/ux-patterns/15 lessons learned building ChatGPT Apps OpenAI Developers.md>) · `ux-patterns` · openai-devs
   Alpic distills 15 lessons from building two dozen ChatGPT Apps on the Apps SDK, centered on 'context asymmetry' between user, UI widget, and model — deciding which tool-output fields each party sees — and packaged into their open-source Skybridge framework.
 - **2025-12-04** — [Fine-tuning LLMs as classifiers](<../models/fine-tuning/Fine-tuning LLMs as classifiers.md>) · `fine-tuning` · fireworks

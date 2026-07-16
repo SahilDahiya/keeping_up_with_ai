@@ -1,6 +1,6 @@
 # evals-observability
 
-220 articles.
+228 articles.
 
 - **2026-07-15** — [Introducing Real World VoiceEQ: Measuring the human quality of voice AI](<benchmark-design/Introducing Real World VoiceEQ Measuring the human quality of voice AI.md>) · `benchmark-design` · huggingface
   Hume AI's Real World VoiceEQ benchmark evaluates 40+ voice models across ASR, TTS, speech-to-speech, and speech understanding using 1M+ human ratings (785K TTS, 48K STS), finding no single model tops all 8 TTS capability groups and that speech-language-model judges disagree with human raters on subjective calls like emotional fit or identity consistency.
@@ -10,8 +10,12 @@
   Walks through pairing Amazon's Kiro CLI coding agent with Arize Skills to build a validation loop: instrument an app, export traces, build a regression dataset from production failures, and run an experiment comparing the current implementation against an agent-proposed revision before merging.
 - **2026-07-14** — [How to measure AI productivity: From LLM token costs to business value with Arize AX](<evaluation/How to measure AI productivity From LLM token costs to business value with Arize AX.md>) · `evaluation` · arize
   Argues token/prompt/LOC counts don't measure AI productivity (citing METR's finding that developers were 19% slower with AI while feeling 20% faster) and proposes a five-dimension framework, built on a shared correlation_id tagging contract, that joins traced AI work to outcomes like merged non-reverted PRs via Arize AX.
+- **2026-07-14** — [Agent and LLM views in Pydantic Logfire](<monitoring/Agent and LLM views in Pydantic Logfire.md>) · `monitoring` · pydantic
+  Argues that non-deterministic agent workloads should be monitored on turns-per-run and tool-calling-turns-per-run at p90, not the mean, because a rare runaway retry loop (e.g. 40 tool calls, $12) hides in the average; built from the gen_ai.* spans agents already emit.
 - **2026-07-14** — [How to Debug Coding Agents with LangSmith Traces](<tracing/How to Debug Coding Agents with LangSmith Traces.md>) · `tracing` · langchain
   Introduces LangSmith tracing support across coding agents (Claude Code, Codex, Cursor, Copilot Chat, Pi, OpenCode, dcode), normalizing each tool's fragmented session/tool-call/subagent-handoff formats into one standardized trace structure so failures like a subagent inheriting a stale offset-paging helper are visible instead of requiring a fresh restart.
+- **2026-07-13** — [Agents Week: ship real agents and fix them from production traces | Pydantic Logfire](<monitoring/Agents Week ship real agents and fix them from production traces Pydantic Logfire.md>) · `monitoring` · pydantic
+  Argues that agent quality is learned from production traces rather than pre-ship eval suites ('evals are a steering wheel, not a destination; it's a trace, not a test'), and that at scale you observe a 'herd' of agents over OpenTelemetry rather than hand-tuning each one.
 - **2026-07-07** — [Improving Agents is a Data Mining Problem](<monitoring/Improving Agents is a Data Mining Problem.md>) · `monitoring` · langchain
   Argues that improving agents is a data-mining problem over traces, failures, feedback, and recurring behavioral patterns.
 - **2026-07-07** — [Evals in CI: How to write your LLM evals as tests with Arize Phoenix](<testing/Evals in CI How to write your LLM evals as tests with Arize Phoenix.md>) · `testing` · arize
@@ -40,6 +44,8 @@
   Shows how to build a lower-cost trace judge with Fireworks, focusing on evaluator cost reduction while preserving useful scoring quality.
 - **2026-06-15** — [Teaching Sidekick to say no: automated data curation with LLM judge consensus (2026)](<llm-as-judge/Teaching Sidekick to say no automated data curation with LLM judge consensus (2026).md>) · `llm-as-judge` · shopify
   Shopify curates Sidekick training data using LLM-judge consensus to automatically filter examples ('teaching Sidekick to say no'), replacing manual labeling with judge-based quality and coverage control.
+- **2026-06-15** — [Agents are the new services in Pydantic Logfire](<monitoring/Agents are the new services in Pydantic Logfire.md>) · `monitoring` · pydantic
+  Argues agents need service-style observability reinvented for their shape: non-deterministic execution paths, per-request token cost, models silently swapped or throttled under you, and a data plane that is now a compliance plane (user-typed PII in prompts). Contrasts AI-observability vendors (LangSmith, Langfuse, Arize) with infra vendors (Datadog, Grafana) and pitches a unified RED-metrics/topology/SLO view over a single trace ID.
 - **2026-06-15** — [One agent, two trace destinations: Arize AX + Databricks Unity Catalog](<tracing/One agent, two trace destinations Arize AX + Databricks Unity Catalog.md>) · `tracing` · arize
   Shows how a single agent can emit traces to multiple destinations, highlighting interoperability concerns for observability stacks.
 - **2026-06-11** — [Bring production agent traces from Arize into Databricks Unity Catalog](<tracing/Bring production agent traces from Arize into Databricks Unity Catalog.md>) · `tracing` · arize
@@ -58,6 +64,8 @@
   Explains how to design efficient verifiers for legal agents so domain-specific correctness can be checked without excessive cost.
 - **2026-06-02** — [Introducing Rubrics: Build Agents that Evaluate and Correct Their Work](<llm-as-judge/Introducing Rubrics Build Agents that Evaluate and Correct Their Work.md>) · `llm-as-judge` · langchain
   Introduces rubrics for Deep Agents so agents can evaluate and correct their own work against explicit criteria.
+- **2026-06-02** — [AI observability for agent products: how Atlas uses Logfire](<tracing/AI observability for agent products how Atlas uses Logfire.md>) · `tracing` · pydantic
+  Atlas (8 engineers, 1000 DAU) instruments every span with user/project/workspace identity via X-Context-* headers so a coding agent can query production traces in plain English; the takeaway is that identity-carrying spans, not the AI, are what make trace data answerable.
 - **2026-06-01** — [The best eval harness for production AI and agents: A comparison](<testing/The best eval harness for production AI and agents A comparison.md>) · `testing` · arize
   Compares production AI eval harnesses and highlights the design dimensions that matter for agents and applications.
 - **2026-05-29** — [Evaluating Speech-to-Text Quality: Beyond Word Error Rate](<evaluation/Evaluating Speech-to-Text Quality Beyond Word Error Rate.md>) · `evaluation` · cresta
@@ -122,6 +130,8 @@
   Defines evaluation harnesses and how they structure repeatable measurement for AI applications and agents.
 - **2026-05-01** — [Why agent telemetry needs standards](<tracing/Why agent telemetry needs standards.md>) · `tracing` · arize
   Argues for standard agent telemetry schemas so teams can reconstruct tool calls, model hops, context use, and handoffs across production agent systems.
+- **2026-04-30** — [Online evals in Pydantic Logfire to monitor production AI](<evaluation/Online evals in Pydantic Logfire to monitor production AI.md>) · `evaluation` · pydantic
+  Explains online (production) evals: attach the same Evaluator classes used offline to live agent traffic, sample as much as you want (a cheap heuristic on every call, an expensive LLM judge on ~1%), score hallucination rate/tool-use accuracy/response quality on real inputs, and feed each regression back into the offline test suite anchored to the trace that produced it.
 - **2026-04-28** — [How to earn stakeholder trust with evals and observability](<monitoring/How to earn stakeholder trust with evals and observability.md>) · `monitoring` · braintrust
   Explains how evals and observability help build stakeholder trust by making AI product quality measurable, reviewable, and improvable.
 - **2026-04-27** — [DeepSeek V4 Pro: Validating Frontier Models for Production](<evaluation/DeepSeek V4 Pro Validating Frontier Models for Production.md>) · `evaluation` · fireworks
@@ -140,6 +150,8 @@
   Shows how to query production agent traces in BigQuery by connecting observability data with warehouse analysis workflows.
 - **2026-04-14** — [Classifying User Intent with Categorical LLM-as-a-Judge](<llm-as-judge/Classifying User Intent with Categorical LLM-as-a-Judge.md>) · `llm-as-judge` · langfuse
   Shows how to classify user intent with categorical LLM-as-judge evaluators, including rubric design and structured scoring for production analysis.
+- **2026-04-14** — [OpenTelemetry LLM Tracing with Vercel AI SDK and Pydantic Logfire](<tracing/OpenTelemetry LLM Tracing with Vercel AI SDK and Pydantic Logfire.md>) · `tracing` · pydantic
+  Shows how enabling experimental_telemetry on Vercel AI SDK generateText/streamText calls emits rich OpenTelemetry spans (full prompt, response, token counts, streaming latency, tool calls) following the OTel GenAI semantic conventions (gen_ai.* / ai.*), which any OTel backend can render as readable conversations.
 - **2026-04-09** — [Human judgment in the agent improvement loop](<evaluation/Human judgment in the agent improvement loop.md>) · `evaluation` · langchain
   Explains where human judgment fits into the agent improvement loop, including review, labeling, feedback, and evaluator calibration.
 - **2026-04-08** — [Agentic eval development with the Braintrust CLI](<testing/Agentic eval development with the Braintrust CLI.md>) · `testing` · braintrust
@@ -190,6 +202,8 @@
   Argues that coding-agent telemetry can close the loop toward self-improving software by capturing agent behavior, failures, and feedback.
 - **2026-02-12** — [The 5 pillars of AI model performance](<benchmark-design/The 5 pillars of AI model performance.md>) · `benchmark-design` · braintrust
   Defines five pillars of AI model performance and how to measure quality beyond a single aggregate benchmark score.
+- **2026-02-11** — [LLM-as-a-Judge: A Practical Guide with Pydantic Evals](<llm-as-judge/LLM-as-a-Judge A Practical Guide with Pydantic Evals.md>) · `llm-as-judge` · pydantic
+  Practical guide to LLM-as-a-judge with pydantic-evals: argues evaluation is a narrower task than generation, that case-specific evaluators outperform generic ones for test suites, to run deterministic type/format checks before the LLM judge, to always request the judge's reasoning for debugging rubrics, and to turn every user complaint into an evaluation case.
 - **2026-02-09** — [AI Model Performance Metrics Explained](<monitoring/AI Model Performance Metrics Explained.md>) · `monitoring` · baseten
   Explains model performance metrics used in production inference, including latency, throughput, and quality signals.
 - **2026-02-06** — [What do LLMs think when you don't tell them what to think about?](<evaluation/What do LLMs think when you don't tell them what to think about.md>) · `evaluation` · together
@@ -198,6 +212,8 @@
   Explains how to run LLM performance benchmarks and which serving metrics matter.
 - **2026-02-05** — [Quantifying infrastructure noise in agentic coding evals](<benchmark-design/Quantifying infrastructure noise in agentic coding evals.md>) · `benchmark-design` · anthropic-engineering
   Quantifies how infrastructure flakiness (timeouts, container variance) injects noise into agentic coding evals, and methods to measure and control for it.
+- **2026-02-05** — [The logs I never read](<tracing/The logs I never read.md>) · `tracing` · pydantic
+  A dogfooding walkthrough of tracking down a customer bug in a distributed system through Logfire traces rather than reading all the logs, framed by how large context windows and tool use have made coding agents productive but also more prolific bug generators.
 - **2026-02-03** — [The Benchmark Gap: What It Takes to Ship Kimi K2.5](<evaluation/The Benchmark Gap What It Takes to Ship Kimi K2.5.md>) · `evaluation` · fireworks
   Explains the benchmark and quality gaps involved in shipping Kimi K2.5 for production workloads.
 - **2026-01-29** — [Why AI Agents Break: A Field Analysis of Production Failures](<monitoring/Why AI Agents Break A Field Analysis of Production Failures.md>) · `monitoring` · arize
@@ -481,6 +497,8 @@
   Short analysis of newer coding models producing malformed arguments for third-party edit tools, raising the issue that tool schemas and edit mechanisms may need model-specific evaluation and adaptation.
 - **2026-07-02** — [From World Cup matchups to research maps: evaluating Parallel's web research agents](<../agents/tool-use/From World Cup matchups to research maps evaluating Parallel's web research agents.md>) · `tool-use` · braintrust
   Evaluates Parallel web research agents using World Cup matchups and research-map tasks, connecting tool use, knowledge graphs, and answer quality.
+- **2026-07-02** — [Observability MCP comparison: Pydantic Logfire, ClickStack, LangSmith, Braintrust, Galileo, Phoenix, and Langfuse](<../agents/tool-use/Observability MCP comparison Pydantic Logfire, ClickStack, LangSmith, Braintrust, Galileo, Phoenix, and Langfuse.md>) · `tool-use` · pydantic
+  Compares the MCP servers of seven observability platforms (Logfire, ClickStack, LangSmith, Braintrust, Galileo, Phoenix, Langfuse) on whether an agent can ask a debugging question directly and get bounded, verifiable evidence, arguing MCP tool design should return compact aggregates rather than pages of raw trace objects that burn the context window.
 - **2026-07-01** — [How Pendo uses LangSmith to trace Novus from user behavior to code fixes](<../product-engineering/case-studies/How Pendo uses LangSmith to trace Novus from user behavior to code fixes.md>) · `case-studies` · langchain
   Pendo case study tracing Novus from user behavior to code fixes, showing how traces connect product signals to agent improvements.
 - **2026-06-29** — [How Candidly Built State-Aware Agent Harnesses with LangSmith](<../product-engineering/case-studies/How Candidly Built State-Aware Agent Harnesses with LangSmith.md>) · `case-studies` · langchain
@@ -497,6 +515,8 @@
   Explains agent orchestration across frameworks, runtimes, and observability concerns.
 - **2026-06-11** — [Cresta Conductor: The Agent for AI Agent Development](<../agents/planning/Cresta Conductor The Agent for AI Agent Development.md>) · `planning` · cresta
   Introduces an agent used to help develop other AI agents, with lessons around orchestration, testing, and iteration workflows.
+- **2026-06-09** — [AI spend is the new headcount: why cost control is an observability problem](<../infra-platform/cost/AI spend is the new headcount why cost control is an observability problem.md>) · `cost` · pydantic
+  Frames LLM/agent spend as headcount-shaped (usage-scaled, salary-magnitude) rather than SaaS-shaped, arguing cost governance is really an observability problem: attribute spend per agent, per user, per session from traces (via the genai-prices dataset) and ask 'was this run worth what it cost?'.
 - **2026-06-09** — [How to detect credential theft in AI agent harness traces](<../product-engineering/security/How to detect credential theft in AI agent harness traces.md>) · `security` · arize
   Shows how agent harness traces can expose credential theft and other security failures during tool use.
 - **2026-06-09** — [AI is eating the AI engineering loop](<../industry/trends/AI is eating the AI engineering loop.md>) · `trends` · langfuse
@@ -559,8 +579,12 @@
   Connects AI compliance and governance to engineering controls such as observability, audit trails, data boundaries, review workflows, and policy enforcement.
 - **2026-04-04** — [How Arize Skills Improved RAG Recall from 39% to 75% in 8 Hours](<../rag-retrieval/pipelines/How Arize Skills Improved RAG Recall from 39% to 75% in 8 Hours.md>) · `pipelines` · arize
   Uses an eval-guided RAG improvement loop to show how retrieval recall can be diagnosed and improved quickly.
+- **2026-03-31** — [Logfire vs LangSmith vs Langfuse vs Arize: AI Observability Pricing Compared](<../infra-platform/cost/Logfire vs LangSmith vs Langfuse vs Arize AI Observability Pricing Compared.md>) · `cost` · pydantic
+  Breaks down how AI-observability billing units (spans, traces, GB ingested, Langfuse-style billable units) interact with agentic/RAG workloads, noting LLM spans carry tens of KB payloads (system prompts, retrieved chunks, completions) versus sub-KB REST spans. Compares Logfire, LangSmith, Langfuse, and Arize pricing to show the billing unit, not the headline fee, drives real cost.
 - **2026-03-27** — [Evals are the new PRD](<../product-engineering/architecture/Evals are the new PRD.md>) · `architecture` · braintrust
   Argues that evals can act as executable product requirements for AI systems, aligning teams around expected behavior and measurable quality.
+- **2026-03-25** — [Full-Stack Agent Observability with AgentSH + Pydantic Logfire | Pydantic](<../product-engineering/security/Full-Stack Agent Observability with AgentSH + Pydantic Logfire Pydantic.md>) · `security` · pydantic
+  Pairs LLM-level tracing (model calls, tool invocations) with AgentSH's OS-boundary auditing of what an agent actually did on the machine (file access, network connections, process execution) plus policy enforcement, both emitted as OpenTelemetry into one timeline to catch failures in the 'seams'.
 - **2026-03-17** — [Evals for PMs: A practical guide to AI product quality](<../product-engineering/ux-patterns/Evals for PMs A practical guide to AI product quality.md>) · `ux-patterns` · braintrust
   Practical guide for product managers defining AI product quality with evals, user-centered criteria, examples, and iteration loops.
 - **2026-03-10** — [Simplifying Langfuse for Scale](<../infra-platform/deployment/Simplifying Langfuse for Scale.md>) · `deployment` · langfuse
@@ -579,8 +603,12 @@
   Connects agent-framework design with observability requirements, arguing that runtime structure determines what teams can debug and evaluate.
 - **2026-02-12** — [OpenEnv in Practice: Evaluating Tool-Using Agents in Real-World Environments](<../agents/tool-use/OpenEnv in Practice Evaluating Tool-Using Agents in Real-World Environments.md>) · `tool-use` · huggingface
   Turing's Calendar Gym on Meta/HF's OpenEnv: a gym-style (reset/step/action/observation) environment exposing real calendar tools over MCP, with ACL-based access control, partial visibility and multi-step dependencies, used to evaluate tool-using agents against real systems rather than simulations — and reporting where current agents fail (permission errors, wrong action ordering).
+- **2026-02-03** — [How to build a production agentic app, the Pydantic Way](<../product-engineering/architecture/How to build a production agentic app, the Pydantic Way.md>) · `architecture` · pydantic
+  End-to-end guide to structuring a production agentic app on the Pydantic stack: FastAPI to expose the agent, Pydantic AI for the agent loop, Logfire for observability, and Pydantic Evals for evaluation, with reasoning on when to use an agent framework vs. the raw LLM SDK.
 - **2026-02-02** — [Fine-tuning open LLM judges to outperform GPT-5.2](<../models/reinforcement-learning/Fine-tuning open LLM judges to outperform GPT-5.2.md>) · `reinforcement-learning` · together
   Explains fine-tuning open LLM judges to outperform a frontier judge model.
+- **2026-02-02** — [Automated Prompt Optimization with GEPA, Pydantic AI, and Pydantic Evals](<../prompt-engineering/techniques/Automated Prompt Optimization with GEPA, Pydantic AI, and Pydantic Evals.md>) · `techniques` · pydantic
+  Walks through automated prompt optimization with GEPA's evolutionary/reflective algorithm driven by Pydantic Evals as the scoring harness, using Agent.override() to inject candidate prompts without modifying agent definitions, turning manual prompt iteration into a systematic search of the prompt space against defined success criteria.
 - **2026-01-22** — [Testing if "bash is all you need"](<../agents/tool-use/Testing if bash is all you need.md>) · `tool-use` · braintrust
   Tests whether bash-oriented agents can solve realistic tasks, using evals to measure command-line tool use and agent reliability.
 - **2026-01-20** — [Building observable AI agents with Temporal](<../agents/tool-use/Building observable AI agents with Temporal.md>) · `tool-use` · braintrust

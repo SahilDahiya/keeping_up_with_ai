@@ -1,6 +1,6 @@
 # agents
 
-164 articles.
+179 articles.
 
 - **2026-07-15** — [Agents need their own computer. Here's how to give them one safely.](<harness/Agents need their own computer. Here's how to give them one safely.md>) · `harness` · langchain
   Argues agent execution environments need machine-level isolation (hardware-virtualized microVMs, not shared-kernel containers) citing a 2025 npm supply-chain worm and a 2026 Linux kernel CVE, then lays out four requirements (safe execution, control via credential-proxying, observability, fast reproducible provisioning) that LangSmith Sandboxes implements with sub-second boot and copy-on-write forking.
@@ -10,6 +10,8 @@
   Covers xAI open-sourcing its 844K-line Rust 'Grok Build' coding-agent CLI after backlash over it silently uploading users' entire home directories to Google Cloud; digs into the released source for its system/subagent prompts and tool implementations that were ported from Codex (apply_patch, grep_files) and OpenCode (bash, edit, glob).
 - **2026-07-14** — [From human-operated agent development to systematic agent improvement](<harness/From human-operated agent development to systematic agent improvement.md>) · `harness` · arize
   Translates an Arize Observe 2026 keynote into an architecture for automated agent improvement loops: managed reader/fixer/reviewer workers triage failures from OpenInference traces, harness-as-a-judge evaluates fixes, and fleet controls catch runaway or stuck sessions instead of a human pasting traces into a coding agent by hand.
+- **2026-07-14** — [When agents build agents: the loop](<harness/When agents build agents the loop.md>) · `harness` · pydantic
+  Second post in the harness series on orchestrating loops of agents: sub-agent delegation via a delegate_task tool that gives each child an isolated context and its own narrow toolset, with tool_retries/contain_errors to bound and absorb child failures, plus 'code mode' dynamic workflows where the model writes a Python program (in sandboxed Pydantic Monty) to gather/vote/retry across specialists.
 - **2026-07-10** — [What is a loop in AI engineering, anyway?](<harness/What is a loop in AI engineering, anyway.md>) · `harness` · arize
   Defines feedback loops in AI engineering and why loops are central to agent and eval system design.
 - **2026-07-10** — [OpenWiki Brains: Proactive Memory for AI Agents](<memory-context/OpenWiki Brains Proactive Memory for AI Agents.md>) · `memory-context` · langchain
@@ -36,6 +38,8 @@
   Practical coding-agent pattern for delegating implementation work to cheaper subagents while reserving the main model for judgment, review, synthesis, and model-selection decisions.
 - **2026-07-02** — [From World Cup matchups to research maps: evaluating Parallel's web research agents](<tool-use/From World Cup matchups to research maps evaluating Parallel's web research agents.md>) · `tool-use` · braintrust
   Evaluates Parallel web research agents using World Cup matchups and research-map tasks, connecting tool use, knowledge graphs, and answer quality.
+- **2026-07-02** — [Observability MCP comparison: Pydantic Logfire, ClickStack, LangSmith, Braintrust, Galileo, Phoenix, and Langfuse](<tool-use/Observability MCP comparison Pydantic Logfire, ClickStack, LangSmith, Braintrust, Galileo, Phoenix, and Langfuse.md>) · `tool-use` · pydantic
+  Compares the MCP servers of seven observability platforms (Logfire, ClickStack, LangSmith, Braintrust, Galileo, Phoenix, Langfuse) on whether an agent can ask a debugging question directly and get bounded, verifiable evidence, arguing MCP tool design should return compact aggregates rather than pages of raw trace objects that burn the context window.
 - **2026-07-02** — [Release: llm-coding-agent 0.1a0](<tool-use/Release llm-coding-agent 0.1a0.md>) · `tool-use` · simon-willison
   Release and implementation notes for a Claude Code-style coding agent built on Simon Willison's LLM framework, including file-editing, command execution, search, read, and write tools plus approval modes.
 - **2026-07-01** — [How to Use RLMs in Deep Agents](<memory-context/How to Use RLMs in Deep Agents.md>) · `memory-context` · langchain
@@ -46,6 +50,8 @@
   Explains wiki memory as a persistent knowledge layer for agents, supporting retrieval, documentation, and long-term project context.
 - **2026-06-29** — [Introducing Dynamic Subagents in Deep Agents](<multi-agent/Introducing Dynamic Subagents in Deep Agents.md>) · `multi-agent` · langchain
   Introduces dynamic subagents in Deep Agents, covering delegation, specialized worker agents, and runtime coordination.
+- **2026-06-26** — [What makes a good agent harness](<harness/What makes a good agent harness.md>) · `harness` · pydantic
+  Follow-up to the harness thesis detailing what makes an agent harness good: safe tool access, memory that survives a single model call, guardrails that catch bad actions before they land, and context management that keeps the window full of what matters.
 - **2026-06-26** — [Building an auditable VC research agent with the Perplexity Agent API and LangGraph](<tool-use/Building an auditable VC research agent with the Perplexity Agent API and LangGraph.md>) · `tool-use` · langchain
   Walkthrough for building an auditable VC research agent with Perplexity, LangGraph, and LangSmith, emphasizing traceability and review.
 - **2026-06-24** — [How to Build Memory into AI Agents](<memory-context/How to Build Memory into AI Agents.md>) · `memory-context` · langchain
@@ -54,6 +60,8 @@
   Explains a worker-advisor pattern that combines open-source worker agents with closed-source advisors for cost-quality tradeoffs.
 - **2026-06-24** — [Using Braintrust to eval agentic setups from large-scale Hugging Face data](<planning/Using Braintrust to eval agentic setups from large-scale Hugging Face data.md>) · `planning` · braintrust
   Uses large-scale Hugging Face agent traces to evaluate agentic setups, connecting trace analysis to agent behavior and reliability measurement.
+- **2026-06-23** — [Pydantic AI v2: capabilities, a leaner core, and the Harness](<harness/Pydantic AI v2 capabilities, a leaner core, and the Harness.md>) · `harness` · pydantic
+  Pydantic AI v2 argues the agent inner loop is settled and the leverage is the surrounding layer, unifying instructions, tools, lifecycle hooks that rewrite what the model sees mid-run, context management, steering, and just-in-time tool loading into one composable 'capability' abstraction.
 - **2026-06-22** — [We got local models to triage the OpenClaw repo for FREE!*](<tool-use/We got local models to triage the OpenClaw repo for FREE!.md>) · `tool-use` · huggingface
   Uses local Gemma/Qwen models inside an agent harness with structured outputs to triage hundreds of daily OpenClaw issues/PRs on a 128GB NVIDIA GB10, replacing a quota-limited GPT-5/Opus workflow; covers label schema design, prompt iteration and accuracy vs closed models.
 - **2026-06-18** — [What is an agent harness? Why harnesses are replacing agent frameworks](<harness/What is an agent harness Why harnesses are replacing agent frameworks.md>) · `harness` · arize
@@ -78,10 +86,14 @@
   Explains fault tolerance in LangGraph with retries, timeouts, and error handlers for more reliable long-running agents.
 - **2026-06-03** — [How to Build a Custom Agent Harness](<harness/How to Build a Custom Agent Harness.md>) · `harness` · langchain
   Guide to building a custom agent harness, covering control loop design, state, tools, observability, and evaluation hooks.
+- **2026-06-03** — [Why long-running AI agents need a harness, not a model](<harness/Why long-running AI agents need a harness, not a model.md>) · `harness` · pydantic
+  Foundational argument that a capable model is not a reliable agent: long-running agents need a 'harness' — the layer of tools, coordination, context, orchestration, safety checks, fallbacks, and memory around the model that turns intent into durable work legible to humans and systems.
 - **2026-06-03** — [How Harvey & Fireworks Beat Closed Source on Cost + Quality](<multi-agent/How Harvey & Fireworks Beat Closed Source on Cost + Quality.md>) · `multi-agent` · fireworks
   Case study of using open-source agents with frontier advisors to improve cost and quality versus closed-source baselines.
 - **2026-06-03** — [Adding MCP Tools to Reachy Mini](<tool-use/Adding MCP Tools to Reachy Mini.md>) · `tool-use` · huggingface
   Walks through how the Reachy Mini conversation app exposes tools to the LLM (move_head, dance, camera) and how remote MCP tools hosted as Gradio Spaces are added with one command, plus tool profiles that gate what the robot may call and the latency limits of the remote path.
+- **2026-06-03** — [Building SQL-powered MCP tools with DataFusion](<tool-use/Building SQL-powered MCP tools with DataFusion.md>) · `tool-use` · pydantic
+  Builds an MCP tool exposing a single run_query function that hands the LLM arbitrary SQL, backed by Apache DataFusion as an embeddable SQL engine, arguing SQL (stable, declarative, ubiquitous in training data) is an excellent agent interface; maps a nested-tree TODO model into relational tables to demonstrate.
 - **2026-06-01** — [How Hermes implements an open source agent harness architecture](<harness/How Hermes implements an open source agent harness architecture.md>) · `harness` · arize
   Breaks down Hermes as an open-source agent harness architecture, focusing on components, control flow, and implementation boundaries.
 - **2026-05-29** — [How to build a better agent harness with traces and evals](<planning/How to build a better agent harness with traces and evals.md>) · `planning` · arize
@@ -90,6 +102,8 @@
   Introduces interpreter skills as reusable workflows for agents that need to execute code, inspect outputs, and compose tools.
 - **2026-05-28** — [Claude Code: Best practices for agentic coding](<tool-use/Claude Code Best practices for agentic coding.md>) · `tool-use` · anthropic-engineering
   Practical workflows for agentic coding with Claude Code: CLAUDE.md setup, explore-plan-code loops, test-driven iteration, headless automation, and multi-Claude patterns.
+- **2026-05-25** — [Durable Runtime for Pydantic AI Agents](<harness/Durable Runtime for Pydantic AI Agents.md>) · `harness` · pydantic
+  Guest post on adding a durable execution runtime to Pydantic AI agents so a harnessed run survives production failures (pod evictions, tool timeouts, crashes after expensive model calls) by persisting intermediate decisions and supporting pause/resume for offline human approval, rather than losing agent state to terminal output.
 - **2026-05-25** — [Harness, Scaffold, and the AI Agent Terms Worth Getting Right](<tool-use/Harness, Scaffold, and the AI Agent Terms Worth Getting Right.md>) · `tool-use` · huggingface
   A working glossary that disentangles the overloaded agent vocabulary — model vs scaffolding vs harness vs agent, plus context engineering, policy, tool use, skills, sub-agents and orchestrators — using Claude Code, Codex and RL-environment framing as reference points. Defines 'harness engineering' (stop conditions, error handling, guardrails) and the eval-harness variant.
 - **2026-05-21** — [The six generations of AI agents and how to eval them](<planning/The six generations of AI agents and how to eval them.md>) · `planning` · braintrust
@@ -104,6 +118,8 @@
   Shows how Claude managed agents can use Modal sandboxes for isolated execution, filesystem state, and scalable agent workloads.
 - **2026-05-13** — [LangSmith Sandboxes are Generally Available](<computer-use/LangSmith Sandboxes are Generally Available.md>) · `computer-use` · langchain
   Covers LangSmith Sandboxes for safely running agent code and tools in isolated execution environments.
+- **2026-05-12** — [Build durable agents with Restate and Pydantic AI](<harness/Build durable agents with Restate and Pydantic AI.md>) · `harness` · pydantic
+  Integrates Restate to give Pydantic AI agents durable execution (journaled steps with retry/recovery), durable sessions keyed by user/conversation, human-in-the-loop pauses that survive crashes for minutes to months, and durable multi-agent orchestration (RPC, fan-out, timeouts).
 - **2026-05-12** — [Delta Channels: How We’re Evolving our Runtime for Long-Running Agents](<harness/Delta Channels How We’re Evolving our Runtime for Long-Running Agents.md>) · `harness` · langchain
   Describes Delta Channels as an evolution of the LangGraph runtime for long-running agents, focused on durable state and runtime communication.
 - **2026-05-12** — [Sierra Agent OS 2.0: from answers to memory and action](<memory-context/Sierra Agent OS 2.0 from answers to memory and action.md>) · `memory-context` · sierra
@@ -138,6 +154,8 @@
   Discusses how swarms of agents change software engineering workflows, including orchestration, delegation, review, and human oversight.
 - **2026-04-16** — [Harnesses are everything. Here's how to optimize yours.](<harness/Harnesses are everything. Here's how to optimize yours.md>) · `harness` · baseten
   Explains why agent harness design matters and how to optimize harnesses for reliable agent behavior.
+- **2026-04-16** — [How to Optimize MCP Tool Schemas to Reduce Token Usage](<tool-use/How to Optimize MCP Tool Schemas to Reduce Token Usage.md>) · `tool-use` · pydantic
+  Shows how MCP tool definitions consume context tokens and how to engineer them for efficiency, using a Rust weather MCP server (Open-Meteo, built on the sans-IO 'mercutio' library) as the worked example for tightening the tool schemas and descriptions that Claude and other agents ingest on every request.
 - **2026-04-15** — [Autoresearch isn’t just for training models (2026)](<harness/Autoresearch isn’t just for training models (2026).md>) · `harness` · shopify
   Shopify's internal 'autoresearch' harness: an agentic loop that runs experiments, evaluates results, and iterates autonomously on ML side-projects and dev-productivity problems, framed around a real CI-fixing story.
 - **2026-04-14** — [Building smarter AI agents: architecture, evals, and lessons from the field](<planning/Building smarter AI agents architecture, evals, and lessons from the field.md>) · `planning` · arize
@@ -148,10 +166,14 @@
   Guide to running OpenAI Agents SDK workflows on Modal, including tool execution, deployment, and scalable background compute.
 - **2026-04-13** — [EinsteinArena: Harnessing the collective intelligence of agents in the wild to advance science](<multi-agent/EinsteinArena Harnessing the collective intelligence of agents in the wild to advance science.md>) · `multi-agent` · together
   Explains EinsteinArena for using collective agent intelligence to advance scientific tasks.
+- **2026-04-08** — [MCP Code Execution: Why Your Agent Would Rather Write Code | Pydantic](<harness/MCP Code Execution Why Your Agent Would Rather Write Code Pydantic.md>) · `harness` · pydantic
+  After hand-crafting 40+ MCP tools for Logfire, a single code-execution (exec) tool outperformed them because tool descriptions themselves eat the context window (Cloudflare needed 1.17M tokens for a full MCP over a 2,500-endpoint API); a case for code-actions over many JSON tools while keeping curated tools around.
 - **2026-03-24** — [Harness design for long-running application development](<harness/Harness design for long-running application development.md>) · `harness` · anthropic-engineering
   Deep dive on harness design for multi-day application builds: state management, verification loops, task queues, and recovery when the agent goes off track.
 - **2026-03-19** — [Managing Memory in AI Agents: Beyond the Context Window](<memory-context/Managing Memory in AI Agents Beyond the Context Window.md>) · `memory-context` · arize
   Covers memory and context-window management patterns for agents that need to preserve useful state over long tasks.
+- **2026-03-18** — [pydantic-deep: Production Deep Agents for Pydantic AI | Vstorm](<harness/pydantic-deep Production Deep Agents for Pydantic AI Vstorm.md>) · `harness` · pydantic
+  Guest post from Vstorm introducing pydantic-deep, a 'deep agents' framework on Pydantic AI (an alternative to LangChain's deepagents) covering the production patterns: planning/progress tracking, filesystem as a first-class abstraction, sub-agent task delegation, sandboxed code execution in Docker, context summarization, and human-in-the-loop approval, with a full example app using per-user containers and WebSocket streaming.
 - **2026-03-13** — [How We Built an Agent Skill to Synthesize what Langfuse Users want](<tool-use/How We Built an Agent Skill to Synthesize what Langfuse Users want.md>) · `tool-use` · langfuse
   Case study of building an agent skill to synthesize user feedback and product needs, showing how agents can support operational product workflows.
 - **2026-03-09** — [Using skills to accelerate OSS maintenance | OpenAI Developers](<tool-use/Using skills to accelerate OSS maintenance OpenAI Developers.md>) · `tool-use` · openai-devs
@@ -166,6 +188,10 @@
   Case study on scaling data annotation with a human-supervised multi-agent system, including review and quality-control loops.
 - **2026-02-23** — [Run long horizon tasks with Codex | OpenAI Developers](<planning/Run long horizon tasks with Codex OpenAI Developers.md>) · `planning` · openai-devs
   Stress test of long-horizon agentic coding: GPT-5.3-Codex at Extra High reasoning ran ~25 hours uninterrupted, consuming ~13M tokens and generating ~30k lines to build a design tool from a blank repo, framed by METR's ~7-month doubling time for agent task horizons.
+- **2026-02-20** — [Keeping docs in sync with your UI using Claude Code and browser automation](<computer-use/Keeping docs in sync with your UI using Claude Code and browser automation.md>) · `computer-use` · pydantic
+  Workflow where Claude Code drives Vercel's agent-browser (headless Chromium) as a skill to navigate the Logfire UI, capture step-by-step screenshots, and rewrite Markdown docs to match the current UI, keeping how-to guides from drifting after UI refactors.
+- **2026-02-19** — [Build Reliable AI Agents with Durable Execution | Pydantic AI + DBOS](<harness/Build Reliable AI Agents with Durable Execution Pydantic AI + DBOS.md>) · `harness` · pydantic
+  Adds durable execution to Pydantic AI agents by layering DBOS (a lightweight Postgres-backed library) under the agent loop: workflow/step checkpointing resumes from the last completed step after crashes instead of restarting and re-burning tokens, plus database-backed durable queues; demoed on a deep-research agent.
 - **2026-02-18** — [How Ramp built a full context background coding agent on Modal](<computer-use/How Ramp built a full context background coding agent on Modal.md>) · `computer-use` · modal
   Case study of a background coding agent architecture that gives agents full project context through remote sandboxes.
 - **2026-02-13** — [On Agent Frameworks and Agent Observability](<harness/On Agent Frameworks and Agent Observability.md>) · `harness` · langchain
@@ -240,6 +266,8 @@
   Frames the canonical agent architecture as a while loop around model calls, tool use, state updates, and termination criteria for controllable agent behavior.
 - **2025-08-06** — [Introducing Open SWE: An Open-Source Asynchronous Coding Agent](<tool-use/Introducing Open SWE An Open-Source Asynchronous Coding Agent.md>) · `tool-use` · langchain
   Introduces Open SWE as an open-source asynchronous coding agent and discusses its architecture for long-running coding tasks.
+- **2025-08-05** — [How to Integrate Hugging Face Inference in Pydantic AI](<multi-agent/How to Integrate Hugging Face Inference in Pydantic AI.md>) · `multi-agent` · pydantic
+  Integrates Hugging Face Inference Providers (unified access to open models via Groq, Cerebras, Together AI, SambaNova) as a Pydantic AI model provider, then builds a multi-agent flight-booking system where one agent delegates to another, powered by Kimi K2 on Together AI.
 - **2025-07-24** — [What is an AI code sandbox?](<computer-use/What is an AI code sandbox.md>) · `computer-use` · modal
   Explains AI code sandboxes as isolated execution environments for coding agents, including safety and state considerations.
 - **2025-07-15** — [Building reliable AI agents](<planning/Building reliable AI agents.md>) · `planning` · baseten
@@ -256,6 +284,8 @@
   How Anthropic built Claude's Research feature on an orchestrator-worker multi-agent architecture, with prompting lessons, token economics, and eval methodology.
 - **2025-06-12** — [From Zero to One: Building An Autonomous and Open Data Scientist Agent from Scratch](<planning/From Zero to One Building An Autonomous and Open Data Scientist Agent from Scratch.md>) · `planning` · together
   Walkthrough of building an autonomous open data-scientist agent from scratch.
+- **2025-05-28** — [How to Built an Elite Data Team Leveraging Pydantic AI](<multi-agent/How to Built an Elite Data Team Leveraging Pydantic AI.md>) · `multi-agent` · pydantic
+  Guest post from Definite on building 'Fi', a data-engineering agent on Pydantic AI: uses multi-agent processes, per-run and per-instantiation model hot-swapping, tool whitelisting via 'prepare' functions to eliminate model distraction, query validation and error correction, with Logfire tracing latency and the agent's thought process.
 - **2025-05-28** — [CodeAgents + Structure: A Better Way to Execute Actions](<tool-use/CodeAgents + Structure A Better Way to Execute Actions.md>) · `tool-use` · huggingface
   Shows that making a CodeAgent emit its thoughts and code as structured JSON (rather than free-form markdown code blocks) beats both plain CodeAgents and JSON ToolCallingAgents on SmolBench (GAIA, MATH, SimpleQA, Frames), with the gain concentrated in larger models; smaller models can be hurt by the added format constraint.
 - **2025-05-21** — [Building an open-source Browser Agent on Fireworks AI](<computer-use/Building an open-source Browser Agent on Fireworks AI.md>) · `computer-use` · fireworks
@@ -341,6 +371,8 @@
   Introduces LangSmith tracing support across coding agents (Claude Code, Codex, Cursor, Copilot Chat, Pi, OpenCode, dcode), normalizing each tool's fragmented session/tool-call/subagent-handoff formats into one standardized trace structure so failures like a subagent inheriting a stale offset-paging helper are visible instead of requiring a fresh restart.
 - **2026-07-13** — [How do you make an LLM, anyway? Microsoft just published a textbook.](<../models/training/How do you make an LLM, anyway Microsoft just published a textbook.md>) · `training` · arize
   Walks through Microsoft's 109-page MAI-Thinking-1 technical report: a 1.2-trillion-page proprietary crawl filtered down and mixed to 54.6% code, a 30-trillion-token pretrain on 8,192 GPUs, a mid-training context-stretching phase (16K to 262K tokens), and RL post-training with anti-reward-hacking measures like time-traveled repo snapshots and test-file resets.
+- **2026-07-13** — [Agents Week: ship real agents and fix them from production traces | Pydantic Logfire](<../evals-observability/monitoring/Agents Week ship real agents and fix them from production traces Pydantic Logfire.md>) · `monitoring` · pydantic
+  Argues that agent quality is learned from production traces rather than pre-ship eval suites ('evals are a steering wheel, not a destination; it's a trace, not a test'), and that at scale you observe a 'herd' of agents over OpenTelemetry rather than hand-tuning each one.
 - **2026-07-10** — [AI-pilling our company: lessons learned](<../product-engineering/case-studies/AI-pilling our company lessons learned.md>) · `case-studies` · sierra
   Internal adoption case study on spreading AI workflows through a company, including practical lessons for using agents and tools in day-to-day work.
 - **2026-07-09** — [The new GPT-5.6 family: Luna, Terra, Sol](<../models/releases/The new GPT-5.6 family Luna, Terra, Sol.md>) · `releases` · simon-willison
@@ -371,6 +403,8 @@
   Engineering design of OpenAI's Secure MCP Tunnel: a customer-run open-source client beside a private MCP server opens outbound-only HTTPS to OpenAI, forwarding MCP requests (including streaming and auth flows) so ChatGPT/Codex can reach the server without public endpoints, VPNs, or third-party tunnels.
 - **2026-06-24** — [Long-horizon agent benchmarks are fragmenting: a field guide to what each one actually measures](<../models/benchmarks/Long-horizon agent benchmarks are fragmenting a field guide to what each one actually measures.md>) · `benchmarks` · arize
   Field guide to long-horizon agent benchmarks and what each benchmark family reveals about agent performance.
+- **2026-06-22** — [Skills on steroids: on-demand capabilities in Pydantic AI](<../prompt-engineering/context-engineering/Skills on steroids on-demand capabilities in Pydantic AI.md>) · `context-engineering` · pydantic
+  Introduces progressive disclosure for agent capabilities in Pydantic AI: mark a capability defer_loading=True so it collapses to a one-line id+description in context, and the model calls load_capability to inject the full instructions/tools bundle only when it decides it needs it, cutting input tokens spent loading context that has no chance of being used on a given turn.
 - **2026-06-22** — [Project Rosetta Stone: a reference implementation for instrumenting agents in any framework](<../evals-observability/tracing/Project Rosetta Stone a reference implementation for instrumenting agents in any framework.md>) · `tracing` · arize
   Describes a reference implementation for instrumenting agents across frameworks, useful for standardizing trace capture.
 - **2026-06-19** — [Temporary Cloudflare Accounts for AI agents](<../infra-platform/deployment/Temporary Cloudflare Accounts for AI agents.md>) · `deployment` · cloudflare-ai
@@ -383,6 +417,8 @@
   Describes a three-layer production agent stack — framework (Flue, from the Astro team, built on the Pi harness), harness (Project Think, Pi), and runtime (Cloudflare Agents SDK) — with durable execution, dynamic code execution, and a durable filesystem exposed to any harness.
 - **2026-06-16** — [Why Fleet Has General Purpose Chat and Specialized Agents](<../product-engineering/architecture/Why Fleet Has General Purpose Chat and Specialized Agents.md>) · `architecture` · langchain
   Fleet case study explaining why a product needs both general-purpose chat and specialized agents for different user workflows.
+- **2026-06-15** — [Agents are the new services in Pydantic Logfire](<../evals-observability/monitoring/Agents are the new services in Pydantic Logfire.md>) · `monitoring` · pydantic
+  Argues agents need service-style observability reinvented for their shape: non-deterministic execution paths, per-request token cost, models silently swapped or throttled under you, and a data plane that is now a compliance plane (user-typed PII in prompts). Contrasts AI-observability vendors (LangSmith, Langfuse, Arize) with infra vendors (Datadog, Grafana) and pitches a unified RED-metrics/topology/SLO view over a single trace ID.
 - **2026-06-15** — [How LangChain Made Coding Agent Spend Predictable](<../infra-platform/cost/How LangChain Made Coding Agent Spend Predictable.md>) · `cost` · langchain
   Explains how LangChain made coding-agent spend more predictable using constraints, monitoring, and workflow-level cost controls.
 - **2026-06-12** — [How Box AI built enterprise content agents with Deep Agents](<../product-engineering/case-studies/How Box AI built enterprise content agents with Deep Agents.md>) · `case-studies` · langchain
@@ -533,6 +569,8 @@
   Case study of Typeform’s AI agent stack, useful for understanding production architecture choices in agent applications.
 - **2026-02-16** — [Using Agent Skills to Automatically Improve your Prompts](<../prompt-engineering/techniques/Using Agent Skills to Automatically Improve your Prompts.md>) · `techniques` · langfuse
   Shows how agent skills can automatically improve prompts, using evaluation feedback and reusable agent workflows to iterate on prompt quality.
+- **2026-02-05** — [The logs I never read](<../evals-observability/tracing/The logs I never read.md>) · `tracing` · pydantic
+  A dogfooding walkthrough of tracking down a customer bug in a distributed system through Logfire traces rather than reading all the logs, framed by how large context windows and tool use have made coding agents productive but also more prolific bug generators.
 - **2026-01-29** — [Why AI Agents Break: A Field Analysis of Production Failures](<../evals-observability/monitoring/Why AI Agents Break A Field Analysis of Production Failures.md>) · `monitoring` · arize
   Field analysis of production AI-agent failures, covering common operational failure modes and why fluent outputs can hide broken behavior.
 - **2026-01-29** — [OWASP Top 10 for Agentic Applications: Compliance Guide](<../product-engineering/security/OWASP Top 10 for Agentic Applications Compliance Guide.md>) · `security` · arize
@@ -553,6 +591,8 @@
   A practical framework for building agent evals: grader design, task suites, pass@k metrics, and evolving evals as agent capabilities improve.
 - **2026-01-01** — [How Graphite builds reliable AI code review at scale](<../product-engineering/case-studies/How Graphite builds reliable AI code review at scale.md>) · `case-studies` · braintrust
   Case study of Graphite building reliable AI code review at scale, with evaluation and workflow design for production developer tooling.
+- **2025-12-17** — [How Tiger Data Built a Production AI Slack Bot with Pydantic AI and Logfire](<../product-engineering/case-studies/How Tiger Data Built a Production AI Slack Bot with Pydantic AI and Logfire.md>) · `case-studies` · pydantic
+  Case study of Tiger Data's production Slack bot on Pydantic AI + Logfire, integrating eight MCP servers (Slack search, customer docs, Salesforce, GitHub, Linear, meeting transcripts, user memory, progress reports) with per-user memory/context, retry logic, provider switching, and Agent-Run trace visualization, scaled to thousands of concurrent conversations.
 - **2025-12-10** — [Best Practices for Multi-Turn RL](<../models/reinforcement-learning/Best Practices for Multi-Turn RL.md>) · `reinforcement-learning` · fireworks
   Covers best practices for multi-turn reinforcement learning, including environment design and reward structure.
 - **2025-12-03** — [Evaluating Deep Agents: Our Learnings](<../evals-observability/evaluation/Evaluating Deep Agents Our Learnings.md>) · `evaluation` · langchain
