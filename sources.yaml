@@ -17,6 +17,11 @@ sources:
     sitemap: https://cresta.com/sitemap.xml    # multilingual; /blog/ prefix keeps EN only
     discovery: [sitemap]
     include_prefixes: ["/blog/"]
+    # Cresta's blog is ~86% non-engineering (awards, hires, funding, expansion PR).
+    # Drop the unambiguous company-news slug shapes before scraping — verified to
+    # match 0 of the 41 filed engineering posts. The classify triage still backstops
+    # anything new that slips through; this just stops the obvious daily PR churn.
+    exclude_regex: "/blog/(cresta-crew-|leadership-spotlight-|cresta-leadership-update|cresta-named-|.*-names-cresta-|.*-hot-vendor|cresta-(achieves|secures|wins|recognized|raises)-|.*-joins-cresta|.*-joins-crestas-board|cresta-continues-international-expansion|were-going-global|cresta-expands-to|crestas-commitment-to-|a-letter-from-our-founders)"
     tags: [agents, contact-center]
 
   - slug: baseten
