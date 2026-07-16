@@ -24,6 +24,14 @@ articles worth keeping, then let the CLI do the mechanical filing.
      evals, observability, inference, model behavior, RAG, prompt/context engineering,
      production architecture, deployment, security, cost, reliability, or concrete
      implementation case studies.
+   - **Observability, SRE, and infra engineering count as AI engineering — keep them
+     even without an explicit LLM/agent angle.** The audience runs this infrastructure.
+     SLO/error-budget monitoring, OpenTelemetry and distributed tracing, zero-code/eBPF
+     instrumentation, infrastructure-as-code, deployment/self-hosting, performance and
+     latency engineering, memory/CPU profiling, storage-engine internals — all IN
+     SCOPE. File under `evals-observability/*`, `infra-platform/*`, or
+     `inference/optimization` as fits. Do NOT skip these as `off-topic`. Still off-topic:
+     pure frontend/CSS/UI-design, and business/sales content with no engineering.
    - Skip junk with `.venv/bin/scraper skip PATH --reason REASON`. Valid reasons:
      `archive-page`, `promotion`, `company-news`, `release-note-lite`, `event-list`,
      `thought-leadership-lite`, `duplicate`, `too-shallow`, `off-topic`.
