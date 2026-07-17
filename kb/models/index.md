@@ -1,7 +1,11 @@
 # models
 
-217 articles.
+219 articles.
 
+- **2026-07-16** — [Inkling: Our open-weights model](<releases/Inkling Our open-weights model.md>) · `releases` · simon-willison
+  Simon Willison covers Thinking Machines Lab's first open-weights release, Inkling: a 975B-parameter (41B active) Apache-2.0 MoE transformer trained on 45T multimodal tokens, positioned as a fine-tuning base for their Tinker platform rather than a frontier model, plus a promised smaller Inkling-Small variant.
+- **2026-07-16** — [Kimi K3, and what we can still learn from the pelican benchmark](<releases/Kimi K3, and what we can still learn from the pelican benchmark.md>) · `releases` · simon-willison
+  Simon Willison reviews Moonshot AI's Kimi K3 (2.8T parameters, open weights promised July 27, 2026), covering its Artificial Analysis benchmark standing (Elo 1547, +732 over K2.6), its $3/$15 per-million-token pricing, and revisits his informal 'pelican riding a bicycle' SVG test as an ad hoc capability check.
 - **2026-07-15** — [Together AI brings Thinking Machines Lab’s new model Inkling on day 0](<architectures/Together AI brings Thinking Machines Lab’s new model Inkling on day 0.md>) · `architectures` · together
   Details Inkling's architecture (975B/40B active MoE with a shared expert sink jointly normalized against routed experts, a learned query-conditioned relative attention bias instead of RoPE, and 'sconv' short causal convolutions on K/V and sublayer outputs) and Together's FlashAttention-4-based kernel adapted to serve its query-conditioned relative attention efficiently.
 - **2026-07-13** — [How do you make an LLM, anyway? Microsoft just published a textbook.](<training/How do you make an LLM, anyway Microsoft just published a textbook.md>) · `training` · arize
@@ -439,6 +443,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-07-16** — [Real-time video generation inference on Baseten](<../inference/optimization/Real-time video generation inference on Baseten.md>) · `optimization` · baseten
+  Details Baseten's real-time video inference runtime for Wan 2.2, combining four-step timestep distillation (~20x), custom kernel fusion (~1.5x), and NVFP4 quantization (~1.5x) for a combined 53.6x speedup, cutting per-clip generation from over two minutes to 2.75 seconds and cost from 5 cents to under a sixth of a cent.
 - **2026-07-15** — [Inkling by Thinking Machines now available on Modal | Modal Blog](<../inference/speculative-decoding/Inkling by Thinking Machines now available on Modal Modal Blog.md>) · `speculative-decoding` · modal
   Describes adapting Z Lab's DFlash block-diffusion speculator to Thinking Machines' Inkling (which uses five sliding-window attention layers per full-attention layer), making the drafter all-local-attention and causal for kernel support, reaching 250 tok/s/user at 2.5M TPM per GPU, 67% faster than Inkling's built-in MTP speculative path.
 - **2026-07-15** — [Introducing Real World VoiceEQ: Measuring the human quality of voice AI](<../evals-observability/benchmark-design/Introducing Real World VoiceEQ Measuring the human quality of voice AI.md>) · `benchmark-design` · huggingface

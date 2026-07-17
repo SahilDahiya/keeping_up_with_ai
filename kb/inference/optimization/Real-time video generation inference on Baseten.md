@@ -1,10 +1,14 @@
 ---
 title: Real-time video generation inference on Baseten
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: inference
+subtopic: optimization
+secondary_topics:
+- models/multimodal
+summary: Details Baseten's real-time video inference runtime for Wan 2.2, combining
+  four-step timestep distillation (~20x), custom kernel fusion (~1.5x), and NVFP4
+  quantization (~1.5x) for a combined 53.6x speedup, cutting per-clip generation from
+  over two minutes to 2.75 seconds and cost from 5 cents to under a sixth of a cent.
 triage: null
 skip_reason: null
 source: baseten
@@ -12,7 +16,7 @@ url: https://www.baseten.co/blog/real-time-video-generation-inference-on-baseten
 author: Ali Taha; Brendan Duke; Yikai Zhu; Faraz Shahsavan; Pankaj Gupta; Philip Kiely
 published: '2026-07-16'
 fetched: '2026-07-17T06:46:29Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1313
 content_sha256: b6672b76eea0a41b70a1144d568e0e691abdc6792101ee344ac0bb2728c1ad72

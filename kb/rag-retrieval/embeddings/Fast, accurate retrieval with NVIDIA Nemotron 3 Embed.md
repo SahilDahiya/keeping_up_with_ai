@@ -1,10 +1,15 @@
 ---
 title: Fast, accurate retrieval with NVIDIA Nemotron 3 Embed
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: rag-retrieval
+subtopic: embeddings
+secondary_topics:
+- inference/quantization
+summary: 'Compares NVIDIA''s Nemotron 3 Embed 8B and 1B embedding models available
+  on Baseten: the 1B model uses pruning, distillation, and NVFP4 quantization to retain
+  95% of the 8B''s retrieval accuracy (99% in NVFP4 on Blackwell, 2x throughput) while
+  cutting indexing latency and serving cost; also covers a fine-tuning recipe yielding
+  ~10% accuracy gains in 5 hours.'
 triage: null
 skip_reason: null
 source: baseten
@@ -12,7 +17,7 @@ url: https://www.baseten.co/blog/ai-retrieval-nvidia-nemotron-3-embed/
 author: Albert Lee
 published: '2026-07-16'
 fetched: '2026-07-17T06:46:31Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1052
 content_sha256: 8b55e61cf69791ea26fa274ace04c14ae03c984eb7c83509bb94fc6bb0ea3400

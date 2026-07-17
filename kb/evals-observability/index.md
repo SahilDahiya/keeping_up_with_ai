@@ -471,6 +471,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-07-16** — [What does 99.9% uptime mean for inference?](<../inference/serving/What does 99.9% uptime mean for inference.md>) · `serving` · together
+  Together breaks down what each reliability 'nine' actually requires for GPU inference serving, mapping failure domains (compute ECC errors, NIC/NVLink faults, storage, network, software/routing bugs) to the multi-region and AZ-redundancy architecture needed to survive them.
 - **2026-07-14** — [From human-operated agent development to systematic agent improvement](<../agents/harness/From human-operated agent development to systematic agent improvement.md>) · `harness` · arize
   Translates an Arize Observe 2026 keynote into an architecture for automated agent improvement loops: managed reader/fixer/reviewer workers triage failures from OpenInference traces, harness-as-a-judge evaluates fixes, and fleet controls catch runaway or stuck sessions instead of a human pasting traces into a coding agent by hand.
 - **2026-07-13** — [How do you make an LLM, anyway? Microsoft just published a textbook.](<../models/training/How do you make an LLM, anyway Microsoft just published a textbook.md>) · `training` · arize

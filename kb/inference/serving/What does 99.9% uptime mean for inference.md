@@ -1,10 +1,14 @@
 ---
 title: What does 99.9% uptime mean for inference?
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: inference
+subtopic: serving
+secondary_topics:
+- evals-observability/monitoring
+summary: Together breaks down what each reliability 'nine' actually requires for GPU
+  inference serving, mapping failure domains (compute ECC errors, NIC/NVLink faults,
+  storage, network, software/routing bugs) to the multi-region and AZ-redundancy architecture
+  needed to survive them.
 triage: null
 skip_reason: null
 source: together
@@ -12,7 +16,7 @@ url: https://www.together.ai/blog/99-9-uptime-for-inference
 author: Ryan Lucchese; Sarung Tripathi
 published: '2026-07-16'
 fetched: '2026-07-17T06:46:39Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1315
 content_sha256: dbdf0ae851e45e302abac83a6d150ca599e2136b6763a6f949a37bf937493574

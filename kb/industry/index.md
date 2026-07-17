@@ -33,6 +33,10 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-07-16** — [Inkling: Our open-weights model](<../models/releases/Inkling Our open-weights model.md>) · `releases` · simon-willison
+  Simon Willison covers Thinking Machines Lab's first open-weights release, Inkling: a 975B-parameter (41B active) Apache-2.0 MoE transformer trained on 45T multimodal tokens, positioned as a fine-tuning base for their Tinker platform rather than a frontier model, plus a promised smaller Inkling-Small variant.
+- **2026-07-16** — [Kimi K3, and what we can still learn from the pelican benchmark](<../models/releases/Kimi K3, and what we can still learn from the pelican benchmark.md>) · `releases` · simon-willison
+  Simon Willison reviews Moonshot AI's Kimi K3 (2.8T parameters, open weights promised July 27, 2026), covering its Artificial Analysis benchmark standing (Elo 1547, +732 over K2.6), its $3/$15 per-million-token pricing, and revisits his informal 'pelican riding a bicycle' SVG test as an ad hoc capability check.
 - **2026-07-01** — [Your site, your rules: new AI traffic options for all customers](<../product-engineering/security/Your site, your rules new AI traffic options for all customers.md>) · `security` · cloudflare-ai
   Cloudflare replaces the binary 'Block AI Bots' toggle with per-use-case controls — Search, Agent, and Training crawlers — for all customers including Free tier, and pushes bot operators to split multi-purpose crawlers so site owners can allow discovery without donating training data.
 - **2026-04-21** — [Moving past bots vs. humans](<../product-engineering/security/Moving past bots vs. humans.md>) · `security` · cloudflare-ai

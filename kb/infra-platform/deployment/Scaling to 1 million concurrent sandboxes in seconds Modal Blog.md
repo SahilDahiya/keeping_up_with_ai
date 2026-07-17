@@ -1,10 +1,14 @@
 ---
 title: Scaling to 1 million concurrent sandboxes in seconds | Modal Blog
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: infra-platform
+subtopic: deployment
+secondary_topics:
+- agents/computer-use
+summary: Modal rebuilt its sandbox scheduling platform to remove central coordination
+  (no Postgres/etcd-style datastore in the critical path), using horizontally scaled
+  scheduling servers and worker state published to Redis streams, enabling 1 million
+  concurrent sandboxes created in under a minute with sub-second median start latency.
 triage: null
 skip_reason: null
 source: modal
@@ -12,7 +16,7 @@ url: https://modal.com/blog/scaling-to-1-million-concurrent-sandboxes-in-seconds
 author: null
 published: '2026-07-15'
 fetched: '2026-07-17T06:46:43Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1964
 content_sha256: 0acdc2c6396e93d0d28df5bdb80b036200e0ed9b6e90f6e6a1ec4fc06718387a

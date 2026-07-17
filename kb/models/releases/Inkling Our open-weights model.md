@@ -1,10 +1,14 @@
 ---
 title: 'Inkling: Our open-weights model'
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: models
+subtopic: releases
+secondary_topics:
+- industry/announcements
+summary: 'Simon Willison covers Thinking Machines Lab''s first open-weights release,
+  Inkling: a 975B-parameter (41B active) Apache-2.0 MoE transformer trained on 45T
+  multimodal tokens, positioned as a fine-tuning base for their Tinker platform rather
+  than a frontier model, plus a promised smaller Inkling-Small variant.'
 triage: null
 skip_reason: null
 source: simon-willison
@@ -12,7 +16,7 @@ url: https://simonwillison.net/2026/Jul/16/inkling/
 author: Simon Willison
 published: '2026-07-16'
 fetched: '2026-07-17T06:52:40Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 668
 content_sha256: faa8ee2ffa455d822f5eee91e6dba0bf56ebe496da625089343f7d5a47692665

@@ -1,9 +1,11 @@
 # modal
 
-47 articles.
+48 articles.
 
 - **2026-07-15** — [Inkling by Thinking Machines now available on Modal | Modal Blog](<../inference/speculative-decoding/Inkling by Thinking Machines now available on Modal Modal Blog.md>) · `speculative-decoding` · modal
   Describes adapting Z Lab's DFlash block-diffusion speculator to Thinking Machines' Inkling (which uses five sliding-window attention layers per full-attention layer), making the drafter all-local-attention and causal for kernel support, reaching 250 tok/s/user at 2.5M TPM per GPU, 67% faster than Inkling's built-in MTP speculative path.
+- **2026-07-15** — [Scaling to 1 million concurrent sandboxes in seconds | Modal Blog](<../infra-platform/deployment/Scaling to 1 million concurrent sandboxes in seconds Modal Blog.md>) · `deployment` · modal
+  Modal rebuilt its sandbox scheduling platform to remove central coordination (no Postgres/etcd-style datastore in the critical path), using horizontally scaled scheduling servers and worker state published to Redis streams, enabling 1 million concurrent sandboxes created in under a minute with sub-second median start latency.
 - **2026-07-06** — [How to price serverless GPUs](<../infra-platform/cost/How to price serverless GPUs.md>) · `cost` · modal
   Explains serverless GPU pricing from utilization, scheduling, and workload-shape constraints rather than simple hourly rates.
 - **2026-06-30** — [Multi-token Residual Prediction](<../inference/speculative-decoding/Multi-token Residual Prediction.md>) · `speculative-decoding` · modal

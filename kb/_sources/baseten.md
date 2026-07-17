@@ -1,7 +1,11 @@
 # baseten
 
-84 articles.
+86 articles.
 
+- **2026-07-16** — [Real-time video generation inference on Baseten](<../inference/optimization/Real-time video generation inference on Baseten.md>) · `optimization` · baseten
+  Details Baseten's real-time video inference runtime for Wan 2.2, combining four-step timestep distillation (~20x), custom kernel fusion (~1.5x), and NVFP4 quantization (~1.5x) for a combined 53.6x speedup, cutting per-clip generation from over two minutes to 2.75 seconds and cost from 5 cents to under a sixth of a cent.
+- **2026-07-16** — [Fast, accurate retrieval with NVIDIA Nemotron 3 Embed](<../rag-retrieval/embeddings/Fast, accurate retrieval with NVIDIA Nemotron 3 Embed.md>) · `embeddings` · baseten
+  Compares NVIDIA's Nemotron 3 Embed 8B and 1B embedding models available on Baseten: the 1B model uses pruning, distillation, and NVFP4 quantization to retain 95% of the 8B's retrieval accuracy (99% in NVFP4 on Blackwell, 2x throughput) while cutting indexing latency and serving cost; also covers a fine-tuning recipe yielding ~10% accuracy gains in 5 hours.
 - **2026-07-02** — [H100 vs. H200 vs. B200: which GPU should you use?](<../inference/hardware/H100 vs. H200 vs. B200 which GPU should you use.md>) · `hardware` · baseten
   Compares H100, H200, and B200 GPUs for choosing hardware for inference workloads.
 - **2026-06-25** — [Live draft model training for speculative decoding](<../models/fine-tuning/Live draft model training for speculative decoding.md>) · `fine-tuning` · baseten

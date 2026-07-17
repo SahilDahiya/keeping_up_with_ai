@@ -1,7 +1,9 @@
 # together
 
-80 articles.
+81 articles.
 
+- **2026-07-16** — [What does 99.9% uptime mean for inference?](<../inference/serving/What does 99.9% uptime mean for inference.md>) · `serving` · together
+  Together breaks down what each reliability 'nine' actually requires for GPU inference serving, mapping failure domains (compute ECC errors, NIC/NVLink faults, storage, network, software/routing bugs) to the multi-region and AZ-redundancy architecture needed to survive them.
 - **2026-07-15** — [Together AI brings Thinking Machines Lab’s new model Inkling on day 0](<../models/architectures/Together AI brings Thinking Machines Lab’s new model Inkling on day 0.md>) · `architectures` · together
   Details Inkling's architecture (975B/40B active MoE with a shared expert sink jointly normalized against routed experts, a learned query-conditioned relative attention bias instead of RoPE, and 'sconv' short causal convolutions on K/V and sublayer outputs) and Together's FlashAttention-4-based kernel adapted to serve its query-conditioned relative attention efficiently.
 - **2026-07-15** — [New in Together GPU Clusters: Reliability and control for production GPU clusters](<../infra-platform/gpu-clusters/New in Together GPU Clusters Reliability and control for production GPU clusters.md>) · `gpu-clusters` · together

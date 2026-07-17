@@ -1,7 +1,11 @@
 # simon-willison
 
-9 articles.
+11 articles.
 
+- **2026-07-16** — [Inkling: Our open-weights model](<../models/releases/Inkling Our open-weights model.md>) · `releases` · simon-willison
+  Simon Willison covers Thinking Machines Lab's first open-weights release, Inkling: a 975B-parameter (41B active) Apache-2.0 MoE transformer trained on 45T multimodal tokens, positioned as a fine-tuning base for their Tinker platform rather than a frontier model, plus a promised smaller Inkling-Small variant.
+- **2026-07-16** — [Kimi K3, and what we can still learn from the pelican benchmark](<../models/releases/Kimi K3, and what we can still learn from the pelican benchmark.md>) · `releases` · simon-willison
+  Simon Willison reviews Moonshot AI's Kimi K3 (2.8T parameters, open weights promised July 27, 2026), covering its Artificial Analysis benchmark standing (Elo 1547, +732 over K2.6), its $3/$15 per-million-token pricing, and revisits his informal 'pelican riding a bicycle' SVG test as an ad hoc capability check.
 - **2026-07-15** — [xai-org/grok-build, now open source](<../agents/harness/xai-orggrok-build, now open source.md>) · `harness` · simon-willison
   Covers xAI open-sourcing its 844K-line Rust 'Grok Build' coding-agent CLI after backlash over it silently uploading users' entire home directories to Google Cloud; digs into the released source for its system/subagent prompts and tool implementations that were ported from Codex (apply_patch, grep_files) and OpenCode (bash, edit, glob).
 - **2026-07-15** — [How I tricked Claude into leaking your deepest, darkest secrets](<../product-engineering/security/How I tricked Claude into leaking your deepest, darkest secrets.md>) · `security` · simon-willison

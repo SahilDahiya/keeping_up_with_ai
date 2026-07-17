@@ -1,10 +1,14 @@
 ---
 title: Kimi K3, and what we can still learn from the pelican benchmark
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: models
+subtopic: releases
+secondary_topics:
+- industry/announcements
+summary: Simon Willison reviews Moonshot AI's Kimi K3 (2.8T parameters, open weights
+  promised July 27, 2026), covering its Artificial Analysis benchmark standing (Elo
+  1547, +732 over K2.6), its $3/$15 per-million-token pricing, and revisits his informal
+  'pelican riding a bicycle' SVG test as an ad hoc capability check.
 triage: null
 skip_reason: null
 source: simon-willison
@@ -12,7 +16,7 @@ url: https://simonwillison.net/2026/Jul/16/kimi-k3/
 author: Simon Willison
 published: '2026-07-16'
 fetched: '2026-07-17T06:52:36Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1110
 content_sha256: fb24c0f672e4b8af96d6de6ea5719bc6f3d67dc3b1dfdafa76e031c3d356bfa5

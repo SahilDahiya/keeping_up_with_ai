@@ -1,7 +1,9 @@
 # infra-platform
 
-73 articles.
+74 articles.
 
+- **2026-07-15** — [Scaling to 1 million concurrent sandboxes in seconds | Modal Blog](<deployment/Scaling to 1 million concurrent sandboxes in seconds Modal Blog.md>) · `deployment` · modal
+  Modal rebuilt its sandbox scheduling platform to remove central coordination (no Postgres/etcd-style datastore in the critical path), using horizontally scaled scheduling servers and worker state published to Redis streams, enabling 1 million concurrent sandboxes created in under a minute with sub-second median start latency.
 - **2026-07-15** — [New in Together GPU Clusters: Reliability and control for production GPU clusters](<gpu-clusters/New in Together GPU Clusters Reliability and control for production GPU clusters.md>) · `gpu-clusters` · together
   Details operational upgrades to Together GPU Clusters: passive health checks that catch GPUs falling off the PCIe bus, Xid errors, and thermal throttling on live workloads; four automated-but-approved repair actions (reboot/reprovision/failover/remove); and a rebuilt Slurm-on-Kubernetes stack (Slinky fork) targeting crashing daemons and scheduler drift at scale.
 - **2026-07-09** — [Trace before you migrate: Measuring Kubernetes bottlenecks in AI agent sandboxes](<deployment/Trace before you migrate Measuring Kubernetes bottlenecks in AI agent sandboxes.md>) · `deployment` · arize
