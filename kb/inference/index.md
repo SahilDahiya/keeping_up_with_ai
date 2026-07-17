@@ -1,6 +1,6 @@
 # inference
 
-134 articles.
+133 articles.
 
 - **2026-07-16** — [Real-time video generation inference on Baseten](<optimization/Real-time video generation inference on Baseten.md>) · `optimization` · baseten
   Details Baseten's real-time video inference runtime for Wan 2.2, combining four-step timestep distillation (~20x), custom kernel fusion (~1.5x), and NVFP4 quantization (~1.5x) for a combined 53.6x speedup, cutting per-clip generation from over two minutes to 2.75 seconds and cost from 5 cents to under a sixth of a cent.
@@ -60,8 +60,6 @@
   Explains training-inference parity issues in MoE models and how numeric drift can affect production behavior.
 - **2026-03-06** — [How we built the fastest GLM 5 API](<optimization/How we built the fastest GLM 5 API.md>) · `optimization` · baseten
   Explains serving optimizations used to build a fast GLM 5 API.
-- **2026-03-06** — [Inference providers vs. API routers](<serving/Inference providers vs. API routers.md>) · `serving` · fireworks
-  Explains the operational difference between inference providers and API routers, including routing, control, and token provenance.
 - **2026-03-05** — [FlashAttention-4: Algorithm and Kernel Pipelining Co-Design for Asymmetric Hardware Scaling](<kernels/FlashAttention-4 Algorithm and Kernel Pipelining Co-Design for Asymmetric Hardware Scaling.md>) · `kernels` · together
   Covers FlashAttention-4 algorithm and kernel co-design for asymmetric hardware scaling.
 - **2026-03-04** — [Cache-aware prefill-decode disaggregation for long-context LLM serving](<serving/Cache-aware prefill-decode disaggregation for long-context LLM serving.md>) · `serving` · together

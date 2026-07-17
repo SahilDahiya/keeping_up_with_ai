@@ -613,8 +613,6 @@
   Connects AI compliance and governance to engineering controls such as observability, audit trails, data boundaries, review workflows, and policy enforcement.
 - **2026-04-04** — [How Arize Skills Improved RAG Recall from 39% to 75% in 8 Hours](<../rag-retrieval/pipelines/How Arize Skills Improved RAG Recall from 39% to 75% in 8 Hours.md>) · `pipelines` · arize
   Uses an eval-guided RAG improvement loop to show how retrieval recall can be diagnosed and improved quickly.
-- **2026-03-31** — [Logfire vs LangSmith vs Langfuse vs Arize: AI Observability Pricing Compared](<../infra-platform/cost/Logfire vs LangSmith vs Langfuse vs Arize AI Observability Pricing Compared.md>) · `cost` · pydantic
-  Breaks down how AI-observability billing units (spans, traces, GB ingested, Langfuse-style billable units) interact with agentic/RAG workloads, noting LLM spans carry tens of KB payloads (system prompts, retrieved chunks, completions) versus sub-KB REST spans. Compares Logfire, LangSmith, Langfuse, and Arize pricing to show the billing unit, not the headline fee, drives real cost.
 - **2026-03-30** — [Building IaC providers for Logfire: design decisions that mattered](<../infra-platform/deployment/Building IaC providers for Logfire design decisions that mattered.md>) · `deployment` · pydantic
   Design decisions in building Terraform/IaC providers for Logfire so customers manage alerts, dashboards, projects, and tokens as code, including how to model observability resources for declarative provisioning.
 - **2026-03-27** — [Evals are the new PRD](<../product-engineering/architecture/Evals are the new PRD.md>) · `architecture` · braintrust
@@ -683,8 +681,6 @@
   Benchmarks GEPA against prompt learning and frames prompt optimization as an eval-driven engineering loop.
 - **2025-10-31** — [Genspark deep research agent with Fireworks RFT](<../models/reinforcement-learning/Genspark deep research agent with Fireworks RFT.md>) · `reinforcement-learning` · fireworks
   Case study of reinforcement fine-tuning a deep research agent to improve quality, tool calls, and cost.
-- **2025-10-28** — [8 Top Prompt Testing and Optimization Tools for LLMs and Multiagent Systems (2025)](<../prompt-engineering/techniques/8 Top Prompt Testing and Optimization Tools for LLMs and Multiagent Systems (2025).md>) · `techniques` · arize
-  Survey of prompt testing and optimization tools for LLM and multi-agent systems, focused on iteration workflows, evaluation support, and production prompt quality.
 - **2025-10-28** — [RAG Observability and Evals](<../rag-retrieval/pipelines/RAG Observability and Evals.md>) · `pipelines` · langfuse
   Explains observability and evaluation for RAG systems, including tracing retrieval/generation steps and measuring answer and context quality.
 - **2025-10-01** — [Introducing RTEB: A New Standard for Retrieval Evaluation](<../rag-retrieval/embeddings/Introducing RTEB A New Standard for Retrieval Evaluation.md>) · `embeddings` · huggingface
