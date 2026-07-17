@@ -695,8 +695,6 @@
   Covers tracing and evaluation patterns for LangGraph agents, linking graph-based control flow with observability.
 - **2024-10-07** — [Observability in Multi-Step LLM Systems](<../evals-observability/tracing/Observability in Multi-Step LLM Systems.md>) · `tracing` · langfuse
   Explains observability needs for multi-step LLM systems, including tracing chains, tools, intermediate state, and failure points across complex application flows.
-- **2024-10-03** — [Building AI Assistants with Vectara-agentic and Arize](<../rag-retrieval/pipelines/Building AI Assistants with Vectara-agentic and Arize.md>) · `pipelines` · arize
-  Shows how to build AI assistants with Vectara-agentic and Arize, tying retrieval, agent tools, and observability together.
 - **2024-09-26** — [Pushing LangSmith to new limits with Replit Agent's complex workflows](<../product-engineering/case-studies/Pushing LangSmith to new limits with Replit Agent's complex workflows.md>) · `case-studies` · langchain
   Replit Agent case study on tracing and managing complex agent workflows with LangSmith.
 - **2024-09-12** — [How to build function calling and JSON mode for open-source and fine-tuned LLMs](<../prompt-engineering/structured-output/How to build function calling and JSON mode for open-source and fine-tuned LLMs.md>) · `structured-output` · baseten

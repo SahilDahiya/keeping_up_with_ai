@@ -1,6 +1,6 @@
 # rag-retrieval
 
-57 articles.
+53 articles.
 
 - **2026-07-16** — [Fast, accurate retrieval with NVIDIA Nemotron 3 Embed](<embeddings/Fast, accurate retrieval with NVIDIA Nemotron 3 Embed.md>) · `embeddings` · baseten
   Compares NVIDIA's Nemotron 3 Embed 8B and 1B embedding models available on Baseten: the 1B model uses pruning, distillation, and NVFP4 quantization to retain 95% of the 8B's retrieval accuracy (99% in NVFP4 on Blackwell, 2x throughput) while cutting indexing latency and serving cost; also covers a fine-tuning recipe yielding ~10% accuracy gains in 5 hours.
@@ -46,8 +46,6 @@
   End-to-end guide to training SPLADE-style sparse embedding models with Sentence Transformers: the model/loss/evaluator/trainer components, FLOPS regularization to control sparsity, distillation from a cross-encoder, and NanoBEIR results plus the retrieval-cost tradeoff versus dense vectors.
 - **2025-06-12** — [Your client code matters: 12x higher embedding throughput with Python and Rust](<embeddings/Your client code matters 12x higher embedding throughput with Python and Rust.md>) · `embeddings` · baseten
   Shows how client implementation choices in Python and Rust affect embedding throughput.
-- **2025-04-09** — [Building Enterprise-Scale RAG Systems with Fireworks AI and MongoDB Atlas](<pipelines/Building Enterprise-Scale RAG Systems with Fireworks AI and MongoDB Atlas.md>) · `pipelines` · fireworks
-  Builds an enterprise-scale RAG system with MongoDB Atlas and Fireworks, covering retrieval and serving pieces.
 - **2025-03-27** — [How we built BEI: high-throughput embedding, reranker, and classifier inference](<embeddings/How we built BEI high-throughput embedding, reranker, and classifier inference.md>) · `embeddings` · baseten
   Deep dive into BEI, a high-throughput embedding, reranker, and classifier inference system.
 - **2025-03-26** — [Training and Finetuning Reranker Models with Sentence Transformers](<search/Training and Finetuning Reranker Models with Sentence Transformers.md>) · `search` · huggingface
@@ -58,18 +56,12 @@
   Trains static (token-embedding-lookup, no transformer forward pass) retrieval and similarity models with Sentence Transformers that run 100x-400x faster on CPU than all-mpnet-base-v2 while keeping ~85% of quality; details the recipe: contrastive MNRL loss with large batch sizes, hard-negative mining, Matryoshka dimensionality reduction, and dataset selection.
 - **2025-01-10** — [Visual Document Retrieval Goes Multilingual](<embeddings/Visual Document Retrieval Goes Multilingual.md>) · `embeddings` · huggingface
   vdr-2b-multi-v1 is a ColPali-style visual document retrieval embedding model trained on a new 500k multilingual query/page synthetic dataset across 5 languages, beating the English-only baseline on multilingual and cross-lingual document retrieval benchmarks.
-- **2024-11-18** — [Building a RAG app with MongoDB Atlas](<pipelines/Building a RAG app with MongoDB Atlas.md>) · `pipelines` · braintrust
-  Walkthrough of building a RAG app with MongoDB Atlas, covering retrieval setup, model calls, and evaluation of the generated answers.
 - **2024-10-08** — [Multimodal Document RAG with Llama 3.2 Vision and ColQwen2](<pipelines/Multimodal Document RAG with Llama 3.2 Vision and ColQwen2.md>) · `pipelines` · together
   Builds a multimodal document RAG pipeline with Llama 3.2 Vision and ColQwen2.
-- **2024-10-03** — [Building AI Assistants with Vectara-agentic and Arize](<pipelines/Building AI Assistants with Vectara-agentic and Arize.md>) · `pipelines` · arize
-  Shows how to build AI assistants with Vectara-agentic and Arize, tying retrieval, agent tools, and observability together.
 - **2024-09-24** — [Hybrid search over California embeddings with Modal, MongoDB, and Clay](<search/Hybrid search over California embeddings with Modal, MongoDB, and Clay.md>) · `search` · modal
   Example of hybrid search over embeddings, combining vector retrieval with MongoDB and a geospatial dataset.
 - **2024-09-19** — [Contextual Retrieval in AI Systems](<pipelines/Contextual Retrieval in AI Systems.md>) · `pipelines` · anthropic-engineering
   Introduces contextual retrieval: prepending chunk-situating context before embedding and BM25 indexing, cutting retrieval failure rates by 49% (67% with reranking).
-- **2024-09-17** — [Building high-performance compound AI applications with MongoDB Atlas and Baseten](<pipelines/Building high-performance compound AI applications with MongoDB Atlas and Baseten.md>) · `pipelines` · baseten
-  Shows how to build high-performance compound AI applications with retrieval, orchestration, and model serving.
 - **2024-08-14** — [Building a RAG with Astro, FastAPI, SurrealDB and Llama 3.1](<pipelines/Building a RAG with Astro, FastAPI, SurrealDB and Llama 3.1.md>) · `pipelines` · fireworks
   End-to-end RAG application example using Astro, FastAPI, SurrealDB, and Llama 3.1.
 - **2024-07-16** — [How we leveraged distilabel to create an Argilla 2.0 Chatbot](<pipelines/How we leveraged distilabel to create an Argilla 2.0 Chatbot.md>) · `pipelines` · huggingface
