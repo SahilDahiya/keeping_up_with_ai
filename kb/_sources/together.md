@@ -1,6 +1,6 @@
 # together
 
-81 articles.
+80 articles.
 
 - **2026-07-16** — [What does 99.9% uptime mean for inference?](<../inference/serving/What does 99.9% uptime mean for inference.md>) · `serving` · together
   Together breaks down what each reliability 'nine' actually requires for GPU inference serving, mapping failure domains (compute ECC errors, NIC/NVLink faults, storage, network, software/routing bugs) to the multi-region and AZ-redundancy architecture needed to survive them.
@@ -68,8 +68,6 @@
   Case study of using AI agents to automate engineering tasks while developing efficient inference systems.
 - **2025-08-15** — [Fine-tuning small open-source LLMs for specialized tasks](<../models/fine-tuning/Fine-tuning small open-source LLMs for specialized tasks.md>) · `fine-tuning` · together
   Case study fine-tuning small open-source LLMs to beat larger closed models on specialized tasks.
-- **2025-07-17** — [Back to The Future: Evaluating AI Agents on Predicting Future Events](<../evals-observability/benchmark-design/Back to The Future Evaluating AI Agents on Predicting Future Events (together).md>) · `benchmark-design` · together
-  Introduces FutureBench for evaluating agents on predicting future events.
 - **2025-07-02** — [DeepSWE coding agent trained with scaled RL](<../agents/tool-use/DeepSWE coding agent trained with scaled RL.md>) · `tool-use` · together
   Explains DeepSWE, an open-source coding agent trained by scaling reinforcement learning.
 - **2025-06-12** — [From Zero to One: Building An Autonomous and Open Data Scientist Agent from Scratch](<../agents/planning/From Zero to One Building An Autonomous and Open Data Scientist Agent from Scratch.md>) · `planning` · together
