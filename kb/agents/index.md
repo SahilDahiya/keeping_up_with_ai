@@ -363,6 +363,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-07-17** — [Inside Cursor's agent factory: how it verifies AI-written code](<../product-engineering/case-studies/Inside Cursor's agent factory how it verifies AI-written code.md>) · `case-studies` · arize
+  Details Cursor's verification architecture for AI-written code: risk scoring routes ~30-40% of PRs to merge without human review, behavioral video artifacts let reviewers inspect agent-exercised changes before the diff, and human corrections become rules/eval cases for its review agent Bugbot, with failed evals triggering diagnosis workflows with trace context attached.
 - **2026-07-16** — [Human annotations for agent runs in Pydantic Logfire](<../evals-observability/evaluation/Human annotations for agent runs in Pydantic Logfire.md>) · `evaluation` · pydantic
   Human-in-the-loop annotation of agent runs in Logfire to catch cases automated LLM judges miss—an agent that is fluent, polite, and wrong—by letting domain experts label traces the judge scored as good.
 - **2026-07-15** — [Kiro CLI observability: trace and evaluate agent changes with Arize Skills](<../evals-observability/evaluation/Kiro CLI observability trace and evaluate agent changes with Arize Skills.md>) · `evaluation` · arize

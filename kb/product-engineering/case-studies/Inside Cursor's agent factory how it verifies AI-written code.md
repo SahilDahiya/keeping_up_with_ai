@@ -1,10 +1,16 @@
 ---
 title: 'Inside Cursor''s agent factory: how it verifies AI-written code'
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: product-engineering
+subtopic: case-studies
+secondary_topics:
+- evals-observability/evaluation
+- agents/harness
+summary: 'Details Cursor''s verification architecture for AI-written code: risk scoring
+  routes ~30-40% of PRs to merge without human review, behavioral video artifacts
+  let reviewers inspect agent-exercised changes before the diff, and human corrections
+  become rules/eval cases for its review agent Bugbot, with failed evals triggering
+  diagnosis workflows with trace context attached.'
 triage: null
 skip_reason: null
 source: arize
@@ -12,7 +18,7 @@ url: https://arize.com/blog/inside-cursors-agent-factory-how-it-verifies-ai-writ
 author: Sara Verdi
 published: '2026-07-17'
 fetched: '2026-07-18T06:38:35Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1860
 content_sha256: 8595b75a178d0c04d815bd3d8bcb155ab150861c23282cb4f7fb74e9c0ebb16c

@@ -1,7 +1,9 @@
 # product-engineering
 
-119 articles.
+120 articles.
 
+- **2026-07-17** — [Inside Cursor's agent factory: how it verifies AI-written code](<case-studies/Inside Cursor's agent factory how it verifies AI-written code.md>) · `case-studies` · arize
+  Details Cursor's verification architecture for AI-written code: risk scoring routes ~30-40% of PRs to merge without human review, behavioral video artifacts let reviewers inspect agent-exercised changes before the diff, and human corrections become rules/eval cases for its review agent Bugbot, with failed evals triggering diagnosis workflows with trace context attached.
 - **2026-07-15** — [AI gateway with data loss prevention, failover, and spend caps in Pydantic Logfire](<security/AI gateway with data loss prevention, failover, and spend caps in Pydantic Logfire.md>) · `security` · pydantic
   Makes the case for an LLM gateway as the single choke point for governance: one key across OpenAI/Anthropic/Google/Bedrock/etc., data-loss-prevention scanning of prompts and completions for secrets/PII (observe, flag, redact, or block), priority and weighted routing for failover/load-balancing, and hard per-key spend caps that block the request rather than alert after the budget is gone.
 - **2026-07-15** — [How I tricked Claude into leaking your deepest, darkest secrets](<security/How I tricked Claude into leaking your deepest, darkest secrets.md>) · `security` · simon-willison

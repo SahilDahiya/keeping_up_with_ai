@@ -1,10 +1,16 @@
 ---
 title: Prompt optimization and managed prompts in Pydantic Logfire
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: prompt-engineering
+subtopic: techniques
+secondary_topics:
+- evals-observability/evaluation
+- evals-observability/tracing
+summary: Describes Pydantic Logfire's prompt optimizer, which reads up to 100 recent
+  production traces (failures weighted highest) via OpenTelemetry gen_ai spans, proposes
+  a single evidence-cited prompt edit with a confidence ladder (prefer/always/never),
+  rejects ungrounded claims via a validator, and separates prompt fixes from non-prompt
+  issues like flaky providers or broken tools.
 triage: null
 skip_reason: null
 source: pydantic
@@ -12,7 +18,7 @@ url: https://pydantic.dev/articles/logfire-prompt-optimization
 author: Bill Easton
 published: '2026-07-17'
 fetched: '2026-07-18T06:44:04Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1552
 content_sha256: b216677920d6f890fb9df944f4889d313112301033f61916f39a0ba0976037e0

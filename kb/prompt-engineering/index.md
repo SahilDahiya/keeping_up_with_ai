@@ -1,7 +1,9 @@
 # prompt-engineering
 
-26 articles.
+27 articles.
 
+- **2026-07-17** — [Prompt optimization and managed prompts in Pydantic Logfire](<techniques/Prompt optimization and managed prompts in Pydantic Logfire.md>) · `techniques` · pydantic
+  Describes Pydantic Logfire's prompt optimizer, which reads up to 100 recent production traces (failures weighted highest) via OpenTelemetry gen_ai spans, proposes a single evidence-cited prompt edit with a confidence ladder (prefer/always/never), rejects ungrounded claims via a validator, and separates prompt fixes from non-prompt issues like flaky providers or broken tools.
 - **2026-06-26** — [Prompt Caching with Deep Agents](<context-engineering/Prompt Caching with Deep Agents.md>) · `context-engineering` · langchain
   Explains prompt caching for Deep Agents and how cache-aware context design reduces latency and cost for repeated agent work.
 - **2026-06-22** — [Skills on steroids: on-demand capabilities in Pydantic AI](<context-engineering/Skills on steroids on-demand capabilities in Pydantic AI.md>) · `context-engineering` · pydantic
