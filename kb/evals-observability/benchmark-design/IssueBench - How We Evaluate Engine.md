@@ -1,10 +1,14 @@
 ---
 title: IssueBench - How We Evaluate Engine
 kind: blog
-topic: null
-subtopic: null
+topic: evals-observability
+subtopic: benchmark-design
 secondary_topics: []
-summary: null
+summary: 'Describes IssueBench, LangChain''s internal benchmark for LangSmith Engine
+  (an agent that finds/clusters/fixes issues in other agents'' traces): 15 tasks with
+  synthetically injected, ground-truth-labeled failures across SRE, software engineering,
+  and customer support domains, run on Harbor and scored on classification, categorization,
+  issue-attachment, and new-issue-grouping accuracy.'
 triage: null
 skip_reason: null
 source: langchain
@@ -12,7 +16,7 @@ url: https://www.langchain.com/blog/issuebench-how-we-evaluate-engine
 author: Nick Bray Arjun Nargolwala
 published: '2026-07-20'
 fetched: '2026-07-21T06:50:45Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1114
 content_sha256: 683632d17916c11d14f2257051e5b2959347754e7c1c79a8a450eb0daf2cc11b

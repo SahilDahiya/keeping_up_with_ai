@@ -153,6 +153,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-07-20** — [Building Governed Agents: A Framework for Cost, Control, and Compliance](<../product-engineering/security/Building Governed Agents A Framework for Cost, Control, and Compliance.md>) · `security` · langchain
+  Framework for governing production agents through an LLM gateway: a five-part govern/decide/protect/observe/assure operating model, pattern-based vs model-based guardrail detection for PII and prompt injection, fail-open/fail-closed fallback design, and layered spend controls (org/team/key limits) for controlling agent token cost.
 - **2026-07-15** — [AI gateway with data loss prevention, failover, and spend caps in Pydantic Logfire](<../product-engineering/security/AI gateway with data loss prevention, failover, and spend caps in Pydantic Logfire.md>) · `security` · pydantic
   Makes the case for an LLM gateway as the single choke point for governance: one key across OpenAI/Anthropic/Google/Bedrock/etc., data-loss-prevention scanning of prompts and completions for secrets/PII (observe, flag, redact, or block), priority and weighted routing for failover/load-balancing, and hard per-key spend caps that block the request rather than alert after the budget is gone.
 - **2026-07-14** — [How to measure AI productivity: From LLM token costs to business value with Arize AX](<../evals-observability/evaluation/How to measure AI productivity From LLM token costs to business value with Arize AX.md>) · `evaluation` · arize

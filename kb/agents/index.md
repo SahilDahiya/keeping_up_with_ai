@@ -1,7 +1,11 @@
 # agents
 
-179 articles.
+181 articles.
 
+- **2026-07-20** — [Harness Week: Pydantic AI Harness, the capability library for agents](<harness/Harness Week Pydantic AI Harness, the capability library for agents.md>) · `harness` · pydantic
+  Introduces Pydantic AI Harness, an official capability library of ~40 pluggable agent capabilities (file/shell access with path-traversal checks, memory, sub-agent delegation, context compaction, CodeMode's code-execution sandbox) that plug in without framework changes, plus community packages like pydantic-ai-shields, which layers a heuristic PromptInjection filter with a deterministic ToolGuard approval gate on sensitive tool calls.
+- **2026-07-20** — [Paper MCP vs Figma MCP for frontend agents - Blog - Braintrust](<tool-use/Paper MCP vs Figma MCP for frontend agents - Blog - Braintrust.md>) · `tool-use` · braintrust
+  Independent eval of Paper MCP vs Figma MCP for coding-agent frontend generation across 40 Design2Code pages and 27 hand-picked complex designs: the two tie on visual similarity (0.741 vs 0.744 on simple pages), but Figma's run-to-run variance is 1.9x Paper's and it costs 32% more per point of visual quality ($3.73 vs $2.82) while running 42% longer.
 - **2026-07-15** — [Agents need their own computer. Here's how to give them one safely.](<harness/Agents need their own computer. Here's how to give them one safely.md>) · `harness` · langchain
   Argues agent execution environments need machine-level isolation (hardware-virtualized microVMs, not shared-kernel containers) citing a 2025 npm supply-chain worm and a 2026 Linux kernel CVE, then lays out four requirements (safe execution, control via credential-proxying, observability, fast reproducible provisioning) that LangSmith Sandboxes implements with sub-second boot and copy-on-write forking.
 - **2026-07-15** — [Pinecone: Harnessing the wisdom of the workforce](<harness/Pinecone Harnessing the wisdom of the workforce.md>) · `harness` · sierra
@@ -363,6 +367,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-07-20** — [Building Governed Agents: A Framework for Cost, Control, and Compliance](<../product-engineering/security/Building Governed Agents A Framework for Cost, Control, and Compliance.md>) · `security` · langchain
+  Framework for governing production agents through an LLM gateway: a five-part govern/decide/protect/observe/assure operating model, pattern-based vs model-based guardrail detection for PII and prompt injection, fail-open/fail-closed fallback design, and layered spend controls (org/team/key limits) for controlling agent token cost.
 - **2026-07-17** — [Inside Cursor's agent factory: how it verifies AI-written code](<../product-engineering/case-studies/Inside Cursor's agent factory how it verifies AI-written code.md>) · `case-studies` · arize
   Details Cursor's verification architecture for AI-written code: risk scoring routes ~30-40% of PRs to merge without human review, behavioral video artifacts let reviewers inspect agent-exercised changes before the diff, and human corrections become rules/eval cases for its review agent Bugbot, with failed evals triggering diagnosis workflows with trace context attached.
 - **2026-07-16** — [Human annotations for agent runs in Pydantic Logfire](<../evals-observability/evaluation/Human annotations for agent runs in Pydantic Logfire.md>) · `evaluation` · pydantic

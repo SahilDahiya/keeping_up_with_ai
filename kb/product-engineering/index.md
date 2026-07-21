@@ -1,7 +1,9 @@
 # product-engineering
 
-120 articles.
+121 articles.
 
+- **2026-07-20** — [Building Governed Agents: A Framework for Cost, Control, and Compliance](<security/Building Governed Agents A Framework for Cost, Control, and Compliance.md>) · `security` · langchain
+  Framework for governing production agents through an LLM gateway: a five-part govern/decide/protect/observe/assure operating model, pattern-based vs model-based guardrail detection for PII and prompt injection, fail-open/fail-closed fallback design, and layered spend controls (org/team/key limits) for controlling agent token cost.
 - **2026-07-17** — [Inside Cursor's agent factory: how it verifies AI-written code](<case-studies/Inside Cursor's agent factory how it verifies AI-written code.md>) · `case-studies` · arize
   Details Cursor's verification architecture for AI-written code: risk scoring routes ~30-40% of PRs to merge without human review, behavioral video artifacts let reviewers inspect agent-exercised changes before the diff, and human corrections become rules/eval cases for its review agent Bugbot, with failed evals triggering diagnosis workflows with trace context attached.
 - **2026-07-15** — [AI gateway with data loss prevention, failover, and spend caps in Pydantic Logfire](<security/AI gateway with data loss prevention, failover, and spend caps in Pydantic Logfire.md>) · `security` · pydantic
@@ -245,12 +247,16 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-07-20** — [Harness Week: Pydantic AI Harness, the capability library for agents](<../agents/harness/Harness Week Pydantic AI Harness, the capability library for agents.md>) · `harness` · pydantic
+  Introduces Pydantic AI Harness, an official capability library of ~40 pluggable agent capabilities (file/shell access with path-traversal checks, memory, sub-agent delegation, context compaction, CodeMode's code-execution sandbox) that plug in without framework changes, plus community packages like pydantic-ai-shields, which layers a heuristic PromptInjection filter with a deterministic ToolGuard approval gate on sensitive tool calls.
 - **2026-07-15** — [Agents need their own computer. Here's how to give them one safely.](<../agents/harness/Agents need their own computer. Here's how to give them one safely.md>) · `harness` · langchain
   Argues agent execution environments need machine-level isolation (hardware-virtualized microVMs, not shared-kernel containers) citing a 2025 npm supply-chain worm and a 2026 Linux kernel CVE, then lays out four requirements (safe execution, control via credential-proxying, observability, fast reproducible provisioning) that LangSmith Sandboxes implements with sub-second boot and copy-on-write forking.
 - **2026-07-15** — [Pinecone: Harnessing the wisdom of the workforce](<../agents/harness/Pinecone Harnessing the wisdom of the workforce.md>) · `harness` · sierra
   Describes Sierra's internal cloud-agent platform Pinecone: an app server plus 'Agency' control plane that reconciles Kubernetes pods and Redis Streams for durable, resumable sessions, a Go runner supervising Codex/Claude Code, network-proxy credential injection so the agent never sees real tokens, and copy-on-write session forking/branching for multiplayer collaboration.
 - **2026-07-15** — [xai-org/grok-build, now open source](<../agents/harness/xai-orggrok-build, now open source.md>) · `harness` · simon-willison
   Covers xAI open-sourcing its 844K-line Rust 'Grok Build' coding-agent CLI after backlash over it silently uploading users' entire home directories to Google Cloud; digs into the released source for its system/subagent prompts and tool implementations that were ported from Codex (apply_patch, grep_files) and OpenCode (bash, edit, glob).
+- **2026-07-15** — [Building Deployment Gates for LLMs and AI Agents in Financial Services - Langfuse](<../evals-observability/evaluation/Building Deployment Gates for LLMs and AI Agents in Financial Services - Langfuse.md>) · `evaluation` · langfuse
+  Walks through a PASS/FAIL deployment-gate pipeline for LLM systems at a major bank, built on Langfuse datasets/experiments/prompt management/annotation queues: three golden datasets (FinanceBench, Financial PhraseBank, a custom adversarial advisory set) score models and agents, gate on thresholds like 85% numerical accuracy, and emit CI exit codes plus reviewable evidence for model risk management.
 - **2026-07-15** — [How we chose the model behind Topics with Baseten - Blog - Braintrust](<../evals-observability/evaluation/How we chose the model behind Topics with Baseten - Blog - Braintrust.md>) · `evaluation` · braintrust
   Details how Braintrust and Baseten chose and tuned a sub-10B model (Gemma 4B, beating Qwen) to summarize every production trace for the Topics feature, built a 650-example benchmark across label correctness/factuality/issues-recall/false-positive-rate, and improved Issues recall from 0% to 32.8% through prompt iteration alone (no fine-tuning).
 - **2026-07-08** — [Deep Agents Code on NVIDIA NemoClaw](<../agents/tool-use/Deep Agents Code on NVIDIA NemoClaw.md>) · `tool-use` · langchain

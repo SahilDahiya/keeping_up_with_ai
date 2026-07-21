@@ -1,7 +1,9 @@
 # pydantic
 
-42 articles.
+43 articles.
 
+- **2026-07-20** — [Harness Week: Pydantic AI Harness, the capability library for agents](<../agents/harness/Harness Week Pydantic AI Harness, the capability library for agents.md>) · `harness` · pydantic
+  Introduces Pydantic AI Harness, an official capability library of ~40 pluggable agent capabilities (file/shell access with path-traversal checks, memory, sub-agent delegation, context compaction, CodeMode's code-execution sandbox) that plug in without framework changes, plus community packages like pydantic-ai-shields, which layers a heuristic PromptInjection filter with a deterministic ToolGuard approval gate on sensitive tool calls.
 - **2026-07-17** — [Prompt optimization and managed prompts in Pydantic Logfire](<../prompt-engineering/techniques/Prompt optimization and managed prompts in Pydantic Logfire.md>) · `techniques` · pydantic
   Describes Pydantic Logfire's prompt optimizer, which reads up to 100 recent production traces (failures weighted highest) via OpenTelemetry gen_ai spans, proposes a single evidence-cited prompt edit with a confidence ladder (prefer/always/never), rejects ungrounded claims via a validator, and separates prompt fixes from non-prompt issues like flaky providers or broken tools.
 - **2026-07-16** — [Human annotations for agent runs in Pydantic Logfire](<../evals-observability/evaluation/Human annotations for agent runs in Pydantic Logfire.md>) · `evaluation` · pydantic

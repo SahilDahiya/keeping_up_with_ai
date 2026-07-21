@@ -1,10 +1,15 @@
 ---
 title: Building Deployment Gates for LLMs and AI Agents in Financial Services - Langfuse
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: evals-observability
+subtopic: evaluation
+secondary_topics:
+- product-engineering/case-studies
+summary: 'Walks through a PASS/FAIL deployment-gate pipeline for LLM systems at a
+  major bank, built on Langfuse datasets/experiments/prompt management/annotation
+  queues: three golden datasets (FinanceBench, Financial PhraseBank, a custom adversarial
+  advisory set) score models and agents, gate on thresholds like 85% numerical accuracy,
+  and emit CI exit codes plus reviewable evidence for model risk management.'
 triage: null
 skip_reason: null
 source: langfuse
@@ -12,7 +17,7 @@ url: https://langfuse.com/blog/2026-07-15-llm-certification-financial-services
 author: null
 published: '2026-07-15'
 fetched: '2026-07-21T06:50:45Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 3124
 content_sha256: e89c4a835ced5a338d8a9baf4c9a3fe9230f5880d8e1583a685192c92c4e6ab8

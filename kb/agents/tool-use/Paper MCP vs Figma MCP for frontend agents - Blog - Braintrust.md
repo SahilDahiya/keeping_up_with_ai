@@ -1,10 +1,15 @@
 ---
 title: Paper MCP vs Figma MCP for frontend agents - Blog - Braintrust
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: agents
+subtopic: tool-use
+secondary_topics:
+- evals-observability/benchmark-design
+summary: 'Independent eval of Paper MCP vs Figma MCP for coding-agent frontend generation
+  across 40 Design2Code pages and 27 hand-picked complex designs: the two tie on visual
+  similarity (0.741 vs 0.744 on simple pages), but Figma''s run-to-run variance is
+  1.9x Paper''s and it costs 32% more per point of visual quality ($3.73 vs $2.82)
+  while running 42% longer.'
 triage: null
 skip_reason: null
 source: braintrust
@@ -12,7 +17,7 @@ url: https://www.braintrust.dev/blog/paper-vs-figma-mcp
 author: Braintrust Team
 published: '2026-07-20'
 fetched: '2026-07-21T06:50:36Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 4090
 content_sha256: fe058e1f731a470a1abd7700e47f220daf62298f56e9e31d7267886b63ddcb6c

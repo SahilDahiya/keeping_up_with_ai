@@ -1,11 +1,15 @@
 # evals-observability
 
-233 articles.
+235 articles.
 
+- **2026-07-20** — [IssueBench - How We Evaluate Engine](<benchmark-design/IssueBench - How We Evaluate Engine.md>) · `benchmark-design` · langchain
+  Describes IssueBench, LangChain's internal benchmark for LangSmith Engine (an agent that finds/clusters/fixes issues in other agents' traces): 15 tasks with synthetically injected, ground-truth-labeled failures across SRE, software engineering, and customer support domains, run on Harbor and scored on classification, categorization, issue-attachment, and new-issue-grouping accuracy.
 - **2026-07-16** — [Human annotations for agent runs in Pydantic Logfire](<evaluation/Human annotations for agent runs in Pydantic Logfire.md>) · `evaluation` · pydantic
   Human-in-the-loop annotation of agent runs in Logfire to catch cases automated LLM judges miss—an agent that is fluent, polite, and wrong—by letting domain experts label traces the judge scored as good.
 - **2026-07-15** — [Introducing Real World VoiceEQ: Measuring the human quality of voice AI](<benchmark-design/Introducing Real World VoiceEQ Measuring the human quality of voice AI.md>) · `benchmark-design` · huggingface
   Hume AI's Real World VoiceEQ benchmark evaluates 40+ voice models across ASR, TTS, speech-to-speech, and speech understanding using 1M+ human ratings (785K TTS, 48K STS), finding no single model tops all 8 TTS capability groups and that speech-language-model judges disagree with human raters on subjective calls like emotional fit or identity consistency.
+- **2026-07-15** — [Building Deployment Gates for LLMs and AI Agents in Financial Services - Langfuse](<evaluation/Building Deployment Gates for LLMs and AI Agents in Financial Services - Langfuse.md>) · `evaluation` · langfuse
+  Walks through a PASS/FAIL deployment-gate pipeline for LLM systems at a major bank, built on Langfuse datasets/experiments/prompt management/annotation queues: three golden datasets (FinanceBench, Financial PhraseBank, a custom adversarial advisory set) score models and agents, gate on thresholds like 85% numerical accuracy, and emit CI exit codes plus reviewable evidence for model risk management.
 - **2026-07-15** — [How we chose the model behind Topics with Baseten - Blog - Braintrust](<evaluation/How we chose the model behind Topics with Baseten - Blog - Braintrust.md>) · `evaluation` · braintrust
   Details how Braintrust and Baseten chose and tuned a sub-10B model (Gemma 4B, beating Qwen) to summarize every production trace for the Topics feature, built a 650-example benchmark across label correctness/factuality/issues-recall/false-positive-rate, and improved Issues recall from 0% to 32.8% through prompt iteration alone (no fine-tuning).
 - **2026-07-15** — [Kiro CLI observability: trace and evaluate agent changes with Arize Skills](<evaluation/Kiro CLI observability trace and evaluate agent changes with Arize Skills.md>) · `evaluation` · arize
@@ -471,6 +475,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-07-20** — [Paper MCP vs Figma MCP for frontend agents - Blog - Braintrust](<../agents/tool-use/Paper MCP vs Figma MCP for frontend agents - Blog - Braintrust.md>) · `tool-use` · braintrust
+  Independent eval of Paper MCP vs Figma MCP for coding-agent frontend generation across 40 Design2Code pages and 27 hand-picked complex designs: the two tie on visual similarity (0.741 vs 0.744 on simple pages), but Figma's run-to-run variance is 1.9x Paper's and it costs 32% more per point of visual quality ($3.73 vs $2.82) while running 42% longer.
 - **2026-07-17** — [Prompt optimization and managed prompts in Pydantic Logfire](<../prompt-engineering/techniques/Prompt optimization and managed prompts in Pydantic Logfire.md>) · `techniques` · pydantic
   Describes Pydantic Logfire's prompt optimizer, which reads up to 100 recent production traces (failures weighted highest) via OpenTelemetry gen_ai spans, proposes a single evidence-cited prompt edit with a confidence ladder (prefer/always/never), rejects ungrounded claims via a validator, and separates prompt fixes from non-prompt issues like flaky providers or broken tools.
 - **2026-07-17** — [Inside Cursor's agent factory: how it verifies AI-written code](<../product-engineering/case-studies/Inside Cursor's agent factory how it verifies AI-written code.md>) · `case-studies` · arize

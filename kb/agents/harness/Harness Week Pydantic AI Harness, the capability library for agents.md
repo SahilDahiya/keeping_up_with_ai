@@ -1,10 +1,16 @@
 ---
 title: 'Harness Week: Pydantic AI Harness, the capability library for agents'
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: agents
+subtopic: harness
+secondary_topics:
+- product-engineering/security
+summary: Introduces Pydantic AI Harness, an official capability library of ~40 pluggable
+  agent capabilities (file/shell access with path-traversal checks, memory, sub-agent
+  delegation, context compaction, CodeMode's code-execution sandbox) that plug in
+  without framework changes, plus community packages like pydantic-ai-shields, which
+  layers a heuristic PromptInjection filter with a deterministic ToolGuard approval
+  gate on sensitive tool calls.
 triage: null
 skip_reason: null
 source: pydantic
@@ -12,7 +18,7 @@ url: https://pydantic.dev/articles/harness-week
 author: Douwe Maan
 published: '2026-07-20'
 fetched: '2026-07-21T06:56:21Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1271
 content_sha256: 861ba373e8592873a80494f7a60591f68935112323f705b4a938f987976bb4ba

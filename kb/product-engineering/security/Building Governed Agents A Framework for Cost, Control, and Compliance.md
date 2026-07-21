@@ -1,10 +1,16 @@
 ---
 title: 'Building Governed Agents: A Framework for Cost, Control, and Compliance'
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: product-engineering
+subtopic: security
+secondary_topics:
+- infra-platform/cost
+- agents/tool-use
+summary: 'Framework for governing production agents through an LLM gateway: a five-part
+  govern/decide/protect/observe/assure operating model, pattern-based vs model-based
+  guardrail detection for PII and prompt injection, fail-open/fail-closed fallback
+  design, and layered spend controls (org/team/key limits) for controlling agent token
+  cost.'
 triage: null
 skip_reason: null
 source: langchain
@@ -12,7 +18,7 @@ url: https://www.langchain.com/blog/building-governed-agents-a-framework-for-cos
 author: Martha Janicki
 published: '2026-07-20'
 fetched: '2026-07-21T06:50:47Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 2656
 content_sha256: 7bb24557282d7305bc2faef09a9165ad581502d4225f6c5b7c2983b3295965de

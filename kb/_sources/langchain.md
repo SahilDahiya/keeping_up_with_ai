@@ -1,7 +1,11 @@
 # langchain
 
-86 articles.
+88 articles.
 
+- **2026-07-20** — [IssueBench - How We Evaluate Engine](<../evals-observability/benchmark-design/IssueBench - How We Evaluate Engine.md>) · `benchmark-design` · langchain
+  Describes IssueBench, LangChain's internal benchmark for LangSmith Engine (an agent that finds/clusters/fixes issues in other agents' traces): 15 tasks with synthetically injected, ground-truth-labeled failures across SRE, software engineering, and customer support domains, run on Harbor and scored on classification, categorization, issue-attachment, and new-issue-grouping accuracy.
+- **2026-07-20** — [Building Governed Agents: A Framework for Cost, Control, and Compliance](<../product-engineering/security/Building Governed Agents A Framework for Cost, Control, and Compliance.md>) · `security` · langchain
+  Framework for governing production agents through an LLM gateway: a five-part govern/decide/protect/observe/assure operating model, pattern-based vs model-based guardrail detection for PII and prompt injection, fail-open/fail-closed fallback design, and layered spend controls (org/team/key limits) for controlling agent token cost.
 - **2026-07-15** — [Agents need their own computer. Here's how to give them one safely.](<../agents/harness/Agents need their own computer. Here's how to give them one safely.md>) · `harness` · langchain
   Argues agent execution environments need machine-level isolation (hardware-virtualized microVMs, not shared-kernel containers) citing a 2025 npm supply-chain worm and a 2026 Linux kernel CVE, then lays out four requirements (safe execution, control via credential-proxying, observability, fast reproducible provisioning) that LangSmith Sandboxes implements with sub-second boot and copy-on-write forking.
 - **2026-07-14** — [How to Debug Coding Agents with LangSmith Traces](<../evals-observability/tracing/How to Debug Coding Agents with LangSmith Traces.md>) · `tracing` · langchain
