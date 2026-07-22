@@ -1,6 +1,6 @@
 # baseten
 
-87 articles.
+85 articles.
 
 - **2026-07-22** — [GLM 5.2 With Vision](<../models/multimodal/GLM 5.2 With Vision.md>) · `multimodal` · baseten
   Baseten post-trained vision onto GLM 5.2 by training only a 50M-parameter, 2-layer MLP projector (reusing Kimi K2.6's vision tower) via SFT on 66k image-QA pairs, reaching MMMU-Pro scores equivalent to Claude 4.5 Haiku (55%) without touching GLM's text weights, and observed grokking plus strong generalization to entities never seen in the alignment dataset.
@@ -100,8 +100,6 @@
   Deep dive into production-ready speculative decoding with TensorRT-LLM.
 - **2024-10-22** — [Evaluating NVIDIA H200 Tensor Core GPUs for LLM inference](<../inference/hardware/Evaluating NVIDIA H200 Tensor Core GPUs for LLM inference.md>) · `hardware` · baseten
   Evaluates NVIDIA H200 GPUs for LLM inference and compares their serving performance characteristics.
-- **2024-09-17** — [Building high-performance compound AI applications with MongoDB Atlas and Baseten](<../rag-retrieval/pipelines/Building high-performance compound AI applications with MongoDB Atlas and Baseten.md>) · `pipelines` · baseten
-  Shows how to build high-performance compound AI applications with retrieval, orchestration, and model serving.
 - **2024-09-12** — [How to build function calling and JSON mode for open-source and fine-tuned LLMs](<../prompt-engineering/structured-output/How to build function calling and JSON mode for open-source and fine-tuned LLMs.md>) · `structured-output` · baseten
   Shows how to build function calling and JSON mode for open-source and fine-tuned LLMs.
 - **2024-08-20** — [How to double tokens per second for Llama 3 with Medusa](<../inference/speculative-decoding/How to double tokens per second for Llama 3 with Medusa.md>) · `speculative-decoding` · baseten
@@ -154,8 +152,6 @@
   Explains LLM inference performance benchmarks and how to interpret serving metrics.
 - **2023-12-22** — [Faster Mixtral inference with TensorRT-LLM and quantization](<../inference/quantization/Faster Mixtral inference with TensorRT-LLM and quantization.md>) · `quantization` · baseten
   Shows how TensorRT-LLM and quantization improve Mixtral inference performance.
-- **2023-12-13** — [Playground v2 vs Stable Diffusion XL 1.0 for text-to-image generation](<../models/benchmarks/Playground v2 vs Stable Diffusion XL 1.0 for text-to-image generation.md>) · `benchmarks` · baseten
-  Compares Playground v2 and Stable Diffusion XL for text-to-image generation quality and serving use cases.
 - **2023-12-08** — [How to serve your ComfyUI model behind an API endpoint](<../models/multimodal/How to serve your ComfyUI model behind an API endpoint.md>) · `multimodal` · baseten
   Shows how to serve a ComfyUI model behind an API endpoint for production image workflows.
 - **2023-11-28** — [NVIDIA A10 vs A10G for ML model inference](<../inference/hardware/NVIDIA A10 vs A10G for ML model inference.md>) · `hardware` · baseten

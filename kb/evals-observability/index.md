@@ -1,6 +1,6 @@
 # evals-observability
 
-238 articles.
+236 articles.
 
 - **2026-07-21** — [How OpenAI uses human feedback to evaluate and improve LLMs](<evaluation/How OpenAI uses human feedback to evaluate and improve LLMs.md>) · `evaluation` · arize
   OpenAI aggregates explicit and implicit user feedback into a shared data layer, using an LLM-derived pipeline to recover in-conversation corrections (2-3x more actionable signal) and embedding-based KNN clustering to surface failure patterns beyond a hierarchical taxonomy, with MCP/skills letting Codex turn a raw bug report into a root-caused pull request.
@@ -252,8 +252,6 @@
   Debugging walkthrough using Braintrust logs to inspect AI application behavior, identify failure causes, and close the loop with improvements.
 - **2026-01-09** — [Demystifying evals for AI agents](<evaluation/Demystifying evals for AI agents.md>) · `evaluation` · anthropic-engineering
   A practical framework for building agent evals: grader design, task suites, pass@k metrics, and evolving evals as agent capabilities improve.
-- **2025-12-18** — [Brainstore makes AI observability at scale possible](<monitoring/Brainstore makes AI observability at scale possible.md>) · `monitoring` · braintrust
-  Benchmark-oriented note on Brainstore performance and why purpose-built storage is needed for high-volume AI observability workloads.
 - **2025-12-05** — [Tangle: An open-source ML experimentation platform built for scale (2025)](<tracing/Tangle An open-source ML experimentation platform built for scale (2025).md>) · `tracing` · shopify
   Tangle: Shopify's open-source ML experimentation platform for reproducibility at scale, tracking notebook versions, data snapshots, and parameters so experiments can be reproduced without re-running from scratch.
 - **2025-12-03** — [Evaluating Deep Agents: Our Learnings](<evaluation/Evaluating Deep Agents Our Learnings.md>) · `evaluation` · langchain
@@ -318,8 +316,6 @@
   TextQuests evaluates LLM agents on 25 classic Infocom interactive-fiction games that need hundreds of precise actions over 30+ hours of play, testing long-horizon planning and long-context reasoning with no external tools. Scores both game progress and 'harm' (irreversible mistakes), and finds frontier models still struggle with sustained exploratory reasoning.
 - **2025-07-18** — [LLM Observability for AI Agents and Applications](<monitoring/LLM Observability for AI Agents and Applications.md>) · `monitoring` · arize
   Introduces observability practices for LLM applications and agents, including monitoring signals beyond traditional metrics.
-- **2025-07-17** — [Back to The Future: Evaluating AI Agents on Predicting Future Events](<benchmark-design/Back to The Future Evaluating AI Agents on Predicting Future Events (together).md>) · `benchmark-design` · together
-  Introduces FutureBench for evaluating agents on predicting future events.
 - **2025-07-17** — [Back to The Future: Evaluating AI Agents on Predicting Future Events](<benchmark-design/Back to The Future Evaluating AI Agents on Predicting Future Events.md>) · `benchmark-design` · huggingface
   FutureBench evaluates agents on predicting events that have not happened yet (news outcomes, prediction-market style questions), which makes benchmark contamination impossible by construction and makes results objectively verifiable once the future arrives. Describes the automated question-generation pipeline and rolling scoring of agents with web search.
 - **2025-07-17** — [Five hard-learned lessons about AI evals](<evaluation/Five hard-learned lessons about AI evals.md>) · `evaluation` · braintrust
@@ -689,8 +685,6 @@
   Analyzes Claude Sonnet 4.5 with aspirational evals, focusing on how harder task suites reveal model strengths and gaps beyond standard benchmarks.
 - **2025-09-17** — [A postmortem of three recent issues](<../inference/serving/A postmortem of three recent issues.md>) · `serving` · anthropic-engineering
   Postmortem of three overlapping serving-stack bugs that silently degraded Claude's output quality, and the detection and rollout changes made in response.
-- **2025-09-17** — [adb Benchmarks](<../infra-platform/deployment/adb Benchmarks.md>) · `deployment` · arize
-  Benchmarks Arize database performance at the storage and application level for AI observability workloads powered by high-volume traces and model data.
 - **2025-09-11** — [Monte Carlo: Building Data + AI Observability Agents with LangGraph and LangSmith](<../product-engineering/case-studies/Monte Carlo Building Data + AI Observability Agents with LangGraph and LangSmith.md>) · `case-studies` · langchain
   Monte Carlo case study on building data and AI observability agents with LangGraph and LangSmith.
 - **2025-09-08** — [Cresta’s Three Strategic Pillars of AI Agent Defense for Enterprise Security and Compliance](<../product-engineering/security/Cresta’s Three Strategic Pillars of AI Agent Defense for Enterprise Security and Compliance.md>) · `security` · cresta
@@ -699,8 +693,6 @@
   ICML 2025 talk on building Shopify Sidekick as a production agentic system: architecture, LLM-based evaluation, and GRPO reinforcement-learning training for a merchant-facing AI assistant.
 - **2025-08-20** — [Evidence-Based Prompting Strategies for LLM-as-a-Judge: Explanations and Chain-of-Thought](<../prompt-engineering/techniques/Evidence-Based Prompting Strategies for LLM-as-a-Judge Explanations and Chain-of-Thought.md>) · `techniques` · arize
   Examines prompting strategies for LLM-as-judge evaluators, including explanations and chain-of-thought design choices.
-- **2025-08-11** — [adb Database: Realtime Ingestion At Scale](<../infra-platform/deployment/adb Database Realtime Ingestion At Scale.md>) · `deployment` · arize
-  Describes realtime ingestion design for Arize database, including scale requirements for AI observability data and production trace ingestion.
 - **2025-08-08** — [GPT-5 vs. Claude Opus 4.1](<../models/benchmarks/GPT-5 vs. Claude Opus 4.1.md>) · `benchmarks` · braintrust
   Compares GPT-5 and Claude Opus 4.1 with eval-driven analysis of strengths, weaknesses, and model-selection implications.
 - **2025-08-06** — [Grounding Reality – How Cresta Tackles LLM Hallucinations in Enterprise AI](<../rag-retrieval/pipelines/Grounding Reality – How Cresta Tackles LLM Hallucinations in Enterprise AI.md>) · `pipelines` · cresta
@@ -767,8 +759,6 @@
   Evaluates NVIDIA H200 GPUs for LLM inference and compares their serving performance characteristics.
 - **2024-10-01** — [🇨🇿 BenCzechMark - Can your LLM Understand Czech?](<../models/benchmarks/🇨🇿 BenCzechMark - Can your LLM Understand Czech.md>) · `benchmarks` · huggingface
   Introduces BenCzechMark, a Czech LLM evaluation suite of 50 tasks across 9 categories (90% natively Czech, not translated) with a leaderboard covering 25+ open models, plus its statistical duel-based ranking methodology.
-- **2024-09-30** — [Arize AI + MongoDB: Leveraging Agent Evaluation and Memory to Build Robust Agentic Systems](<../agents/memory-context/Arize AI + MongoDB Leveraging Agent Evaluation and Memory to Build Robust Agentic Systems.md>) · `memory-context` · arize
-  Explains how Arize and MongoDB combine agent evaluation and memory patterns for more robust agentic systems.
 - **2024-09-26** — [Pushing LangSmith to new limits with Replit Agent's complex workflows](<../product-engineering/case-studies/Pushing LangSmith to new limits with Replit Agent's complex workflows.md>) · `case-studies` · langchain
   Replit Agent case study on tracing and managing complex agent workflows with LangSmith.
 - **2024-08-01** — [How Fireworks evaluates quantization precisely and interpretably](<../inference/quantization/How Fireworks evaluates quantization precisely and interpretably.md>) · `quantization` · fireworks

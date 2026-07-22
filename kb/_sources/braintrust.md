@@ -1,6 +1,6 @@
 # braintrust
 
-72 articles.
+70 articles.
 
 - **2026-07-20** — [Paper MCP vs Figma MCP for frontend agents - Blog - Braintrust](<../agents/tool-use/Paper MCP vs Figma MCP for frontend agents - Blog - Braintrust.md>) · `tool-use` · braintrust
   Independent eval of Paper MCP vs Figma MCP for coding-agent frontend generation across 40 Design2Code pages and 27 hand-picked complex designs: the two tie on visual similarity (0.741 vs 0.744 on simple pages), but Figma's run-to-run variance is 1.9x Paper's and it costs 32% more per point of visual quality ($3.73 vs $2.82) while running 42% longer.
@@ -84,8 +84,6 @@
   Case study of Retool using production logs and Loop-style review to turn AI usage data into roadmap and quality decisions.
 - **2026-01-01** — [How Zapier builds production-ready AI products](<../product-engineering/case-studies/How Zapier builds production-ready AI products.md>) · `case-studies` · braintrust
   Case study of Zapier building production-ready AI products with observability, evals, and feedback loops across real customer workflows.
-- **2025-12-18** — [Brainstore makes AI observability at scale possible](<../evals-observability/monitoring/Brainstore makes AI observability at scale possible.md>) · `monitoring` · braintrust
-  Benchmark-oriented note on Brainstore performance and why purpose-built storage is needed for high-volume AI observability workloads.
 - **2025-11-25** — [Evals are a team sport: How we built Loop](<../evals-observability/testing/Evals are a team sport How we built Loop.md>) · `testing` · braintrust
   Describes collaborative eval workflows for teams, including feedback loops that turn production examples, review, and datasets into better AI behavior.
 - **2025-11-24** — [Turn production data into better AI with Loop](<../evals-observability/monitoring/Turn production data into better AI with Loop.md>) · `monitoring` · braintrust
@@ -118,8 +116,6 @@
   Detailed guide to evaluating agents, including task design, tool-use traces, intermediate-step analysis, and failure modes unique to multi-step systems.
 - **2024-12-04** — [What to do when a new AI model comes out](<../evals-observability/evaluation/What to do when a new AI model comes out.md>) · `evaluation` · braintrust
   Playbook for responding when a new AI model ships: run targeted evals, compare cost and quality, inspect regressions, and decide rollout strategy.
-- **2024-11-18** — [Building a RAG app with MongoDB Atlas](<../rag-retrieval/pipelines/Building a RAG app with MongoDB Atlas.md>) · `pipelines` · braintrust
-  Walkthrough of building a RAG app with MongoDB Atlas, covering retrieval setup, model calls, and evaluation of the generated answers.
 - **2024-11-14** — [Evaluating Gemini models for vision](<../models/multimodal/Evaluating Gemini models for vision.md>) · `multimodal` · braintrust
   Evaluates Gemini vision models and shows how multimodal evals can compare image-understanding behavior across model versions.
 - **2024-11-04** — [Building serverless apps with the OpenAI Realtime API](<../models/multimodal/Building serverless apps with the OpenAI Realtime API.md>) · `multimodal` · braintrust

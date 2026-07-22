@@ -1,6 +1,6 @@
 # arize
 
-188 articles.
+179 articles.
 
 - **2026-07-21** — [How OpenAI uses human feedback to evaluate and improve LLMs](<../evals-observability/evaluation/How OpenAI uses human feedback to evaluate and improve LLMs.md>) · `evaluation` · arize
   OpenAI aggregates explicit and implicit user feedback into a shared data layer, using an LLM-derived pipeline to recover in-conversation corrections (2-3x more actionable signal) and embedding-based KNN clustering to surface failure patterns beyond a hierarchical taxonomy, with MCP/skills letting Codex turn a raw bug report into a root-caused pull request.
@@ -136,8 +136,6 @@
   Case study from shipping Arize Alyx that distills debugging lessons around traces, failure analysis, context inspection, and production agent iteration.
 - **2026-02-24** — [Alyx 2.0: The AI Agent That Actually Plans](<../agents/planning/Alyx 2.0 The AI Agent That Actually Plans.md>) · `planning` · arize
   Introduces Alyx 2.0 as an agent that plans over observability workflows, covering product design lessons from building a more capable AI analyst.
-- **2026-02-23** — [Mastering Production RAG with Google ADK and Arize AX for Enterprise Knowledge Systems](<../rag-retrieval/pipelines/Mastering Production RAG with Google ADK and Arize AX for Enterprise Knowledge Systems.md>) · `pipelines` · arize
-  Explains production RAG architecture with Google ADK and Arize AX, including agentic retrieval and evaluation concerns.
 - **2026-02-17** — [Closing the Loop: Coding Agents, Telemetry, and the Path to Self-Improving Software](<../evals-observability/tracing/Closing the Loop Coding Agents, Telemetry, and the Path to Self-Improving Software.md>) · `tracing` · arize
   Argues that coding-agent telemetry can close the loop toward self-improving software by capturing agent behavior, failures, and feedback.
 - **2026-02-17** — [Inside Typeform’s AI Agent Stack](<../product-engineering/case-studies/Inside Typeform’s AI Agent Stack.md>) · `case-studies` · arize
@@ -170,32 +168,22 @@
   How-to guide for tracing, evaluating, and observing Google ADK agents in production-style workflows.
 - **2025-10-30** — [Building the Data Flywheel for Smarter AI Systems with Arize AX and NVIDIA NeMo](<../evals-observability/monitoring/Building the Data Flywheel for Smarter AI Systems with Arize AX and NVIDIA NeMo.md>) · `monitoring` · arize
   Explains a data-flywheel approach for improving AI systems with Arize AX and NVIDIA NeMo, using production feedback to drive model and agent improvements.
-- **2025-10-28** — [8 Top Prompt Testing and Optimization Tools for LLMs and Multiagent Systems (2025)](<../prompt-engineering/techniques/8 Top Prompt Testing and Optimization Tools for LLMs and Multiagent Systems (2025).md>) · `techniques` · arize
-  Survey of prompt testing and optimization tools for LLM and multi-agent systems, focused on iteration workflows, evaluation support, and production prompt quality.
 - **2025-10-14** — [Optimizing Coding Agent Rules (./clinerules) for Improved Accuracy](<../agents/computer-use/Optimizing Coding Agent Rules (.clinerules) for Improved Accuracy.md>) · `computer-use` · arize
   Explains how coding-agent rule files affect accuracy and how to optimize them for better agent behavior.
 - **2025-10-08** — [Should I Use the Same LLM for My Eval as My Agent? Testing Self-Evaluation Bias](<../evals-observability/llm-as-judge/Should I Use the Same LLM for My Eval as My Agent Testing Self-Evaluation Bias.md>) · `llm-as-judge` · arize
   Tests self-evaluation bias when using the same model for agent behavior and evaluation, with guidance for eval design.
 - **2025-09-24** — [Testing Binary vs Score Evals on the Latest Models](<../evals-observability/testing/Testing Binary vs Score Evals on the Latest Models.md>) · `testing` · arize
   Compares binary and score-based LLM evals across models to clarify tradeoffs in evaluator design.
-- **2025-09-17** — [adb Benchmarks](<../infra-platform/deployment/adb Benchmarks.md>) · `deployment` · arize
-  Benchmarks Arize database performance at the storage and application level for AI observability workloads powered by high-volume traces and model data.
-- **2025-09-09** — [Orchestrator-Worker Agents: A Practical Comparison of Common Agent Frameworks](<../agents/multi-agent/Orchestrator-Worker Agents A Practical Comparison of Common Agent Frameworks.md>) · `multi-agent` · arize
-  Compares orchestrator-worker agent frameworks and clarifies when this multi-agent pattern is useful.
 - **2025-09-09** — [Building a Multilingual Cypher Query Evaluation Pipeline](<../evals-observability/evaluation/Building a Multilingual Cypher Query Evaluation Pipeline.md>) · `evaluation` · arize
   Walks through building a multilingual Cypher query evaluation pipeline for testing whether LLMs generate correct database queries across languages.
 - **2025-09-05** — [NVIDIA's Peter Belcak Distills Why Small Language Models are the Future of Agentic AI](<../models/reasoning/NVIDIA's Peter Belcak Distills Why Small Language Models are the Future of Agentic AI.md>) · `reasoning` · arize
   Summarizes the argument for small language models in agentic AI and where they can replace larger models.
 - **2025-09-03** — [AI Evals Maven Course Homework: the Recipe Bot Workflow](<../evals-observability/evaluation/AI Evals Maven Course Homework the Recipe Bot Workflow.md>) · `evaluation` · arize
   Walks through a recipe-bot homework workflow from an AI evals course, showing how to design tests and iterate on an LLM application.
-- **2025-08-28** — [Claude Code vs Cursor: A Power-User’s Playbook](<../agents/tool-use/Claude Code vs Cursor A Power-User’s Playbook.md>) · `tool-use` · arize
-  Compares Claude Code and Cursor from a power-user workflow perspective, focusing on coding-agent interfaces and usage patterns.
 - **2025-08-21** — [Annotation for Strong AI Evaluation Pipelines](<../evals-observability/evaluation/Annotation for Strong AI Evaluation Pipelines.md>) · `evaluation` · arize
   Explains how human annotations support strong AI evaluation pipelines and how annotation data can be combined with evals in Phoenix workflows.
 - **2025-08-20** — [Evidence-Based Prompting Strategies for LLM-as-a-Judge: Explanations and Chain-of-Thought](<../prompt-engineering/techniques/Evidence-Based Prompting Strategies for LLM-as-a-Judge Explanations and Chain-of-Thought.md>) · `techniques` · arize
   Examines prompting strategies for LLM-as-judge evaluators, including explanations and chain-of-thought design choices.
-- **2025-08-11** — [adb Database: Realtime Ingestion At Scale](<../infra-platform/deployment/adb Database Realtime Ingestion At Scale.md>) · `deployment` · arize
-  Describes realtime ingestion design for Arize database, including scale requirements for AI observability data and production trace ingestion.
 - **2025-07-30** — [A Watermark for Large Language Models](<../product-engineering/security/A Watermark for Large Language Models.md>) · `security` · arize
   Summary of a paper-reading session on watermarking generated text from large language models, including detection goals and implications for responsible deployment.
 - **2025-07-18** — [Prompt Learning: Using English Feedback to Optimize LLM Systems](<../prompt-engineering/techniques/Prompt Learning Using English Feedback to Optimize LLM Systems.md>) · `techniques` · arize
@@ -252,18 +240,12 @@
   Describes Arize and Vertex AI API evaluation workflows for accelerating generative application development and measuring AI ROI.
 - **2024-10-23** — [Techniques for Self-Improving LLM Evals](<../evals-observability/llm-as-judge/Techniques for Self-Improving LLM Evals.md>) · `llm-as-judge` · arize
   Covers techniques for making LLM evals self-improving through feedback, iteration, and evaluator refinement.
-- **2024-10-16** — [Comparing OpenAI Swarm with other Multi Agent Frameworks](<../agents/multi-agent/Comparing OpenAI Swarm with other Multi Agent Frameworks.md>) · `multi-agent` · arize
-  Compares OpenAI Swarm with other multi-agent frameworks, highlighting orchestration patterns and framework tradeoffs.
 - **2024-10-16** — [Tracing and Evaluating LangGraph Agents](<../evals-observability/tracing/Tracing and Evaluating LangGraph Agents.md>) · `tracing` · arize
   Covers tracing and evaluation patterns for LangGraph agents, linking graph-based control flow with observability.
 - **2024-10-15** — [Google's NotebookLM and the Future of AI-Generated Audio](<../models/multimodal/Google's NotebookLM and the Future of AI-Generated Audio.md>) · `multimodal` · arize
   Paper-reading style overview of Google NotebookLM and AI-generated audio as a multimodal product pattern.
 - **2024-10-08** — [The Role of OpenTelemetry (OTEL) in LLM Observability](<../evals-observability/tracing/The Role of OpenTelemetry (OTEL) in LLM Observability.md>) · `tracing` · arize
   Explains OpenTelemetry’s role in LLM observability and why standard traces matter for production systems.
-- **2024-10-03** — [Building AI Assistants with Vectara-agentic and Arize](<../rag-retrieval/pipelines/Building AI Assistants with Vectara-agentic and Arize.md>) · `pipelines` · arize
-  Shows how to build AI assistants with Vectara-agentic and Arize, tying retrieval, agent tools, and observability together.
-- **2024-09-30** — [Arize AI + MongoDB: Leveraging Agent Evaluation and Memory to Build Robust Agentic Systems](<../agents/memory-context/Arize AI + MongoDB Leveraging Agent Evaluation and Memory to Build Robust Agentic Systems.md>) · `memory-context` · arize
-  Explains how Arize and MongoDB combine agent evaluation and memory patterns for more robust agentic systems.
 - **2024-09-30** — [Best Practices for Selecting the Right Model for LLM-as-a-Judge Evaluations](<../evals-observability/llm-as-judge/Best Practices for Selecting the Right Model for LLM-as-a-Judge Evaluations.md>) · `llm-as-judge` · arize
   Best practices for choosing an LLM-as-judge evaluation model, including tradeoffs in evaluator quality and fit for task.
 - **2024-09-27** — [Exploring OpenAI's o1-preview and o1-mini](<../models/reasoning/Exploring OpenAI's o1-preview and o1-mini.md>) · `reasoning` · arize

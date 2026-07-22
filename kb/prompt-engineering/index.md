@@ -1,6 +1,6 @@
 # prompt-engineering
 
-28 articles.
+27 articles.
 
 - **2026-07-20** — [Custom Code Review rules for Codex | OpenAI Developers](<context-engineering/Custom Code Review rules for Codex OpenAI Developers.md>) · `context-engineering` · openai-devs
   Codex Code Review can now apply custom repository rules written in AGENTS.md (preserving API contracts, keeping customer data out of logs, avoiding breaking renames) so the review agent catches team-specific issues that used to depend on tribal reviewer knowledge, citing the specific rule behind each finding.
@@ -24,8 +24,6 @@
   Extracts CLAUDE.md best practices from prompt-learning experiments that optimized Claude Code behavior through repository instructions.
 - **2025-11-17** — [GEPA vs Prompt Learning: Benchmarking Different Prompt Optimization Approaches](<techniques/GEPA vs Prompt Learning Benchmarking Different Prompt Optimization Approaches.md>) · `techniques` · arize
   Benchmarks GEPA against prompt learning and frames prompt optimization as an eval-driven engineering loop.
-- **2025-10-28** — [8 Top Prompt Testing and Optimization Tools for LLMs and Multiagent Systems (2025)](<techniques/8 Top Prompt Testing and Optimization Tools for LLMs and Multiagent Systems (2025).md>) · `techniques` · arize
-  Survey of prompt testing and optimization tools for LLM and multi-agent systems, focused on iteration workflows, evaluation support, and production prompt quality.
 - **2025-09-29** — [Effective context engineering for AI agents](<context-engineering/Effective context engineering for AI agents.md>) · `context-engineering` · anthropic-engineering
   Strategies for managing agent context windows—compaction, structured note-taking, sub-agent architectures—and why context engineering supersedes prompt engineering.
 - **2025-09-29** — [VibeGame: Exploring Vibe Coding Games](<context-engineering/VibeGame Exploring Vibe Coding Games.md>) · `context-engineering` · huggingface

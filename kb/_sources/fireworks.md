@@ -1,6 +1,6 @@
 # fireworks
 
-69 articles.
+65 articles.
 
 - **2026-07-21** — [Kimi K3 is competitive with Fable; Kimi K3 + Fable is SoTA.](<../models/benchmarks/Kimi K3 is competitive with Fable; Kimi K3 + Fable is SoTA.md>) · `benchmarks` · fireworks
   Fireworks benchmarked open Kimi K3 against closed Fable 5 across ~1,030 agentic tasks (SWE-bench-style fixes, terminal ops, algorithmic problems, multi-language, legal), finding near-parity on quality (92.4% vs 92.6% on SWE) and that oracle routing between the two models hits 93% accuracy at up to 50x lower cost than running Fable alone.
@@ -28,8 +28,6 @@
   Argues that frontier reinforcement learning can be cost-effective with the right infrastructure and training-loop design.
 - **2026-03-10** — [Training-Inference Parity in MoE Models: Where Numerics Drift](<../inference/kernels/Training-Inference Parity in MoE Models Where Numerics Drift.md>) · `kernels` · fireworks
   Explains training-inference parity issues in MoE models and how numeric drift can affect production behavior.
-- **2026-03-06** — [Inference providers vs. API routers](<../inference/serving/Inference providers vs. API routers.md>) · `serving` · fireworks
-  Explains the operational difference between inference providers and API routers, including routing, control, and token provenance.
 - **2026-02-27** — [DeepSeek Models: V3.2, R1, Distills, and Production Caveats](<../models/reasoning/DeepSeek Models V3.2, R1, Distills, and Production Caveats.md>) · `reasoning` · fireworks
   Surveys DeepSeek model variants with production caveats around serving, reasoning behavior, and deployment tradeoffs.
 - **2026-02-03** — [The Benchmark Gap: What It Takes to Ship Kimi K2.5](<../evals-observability/evaluation/The Benchmark Gap What It Takes to Ship Kimi K2.5.md>) · `evaluation` · fireworks
@@ -92,8 +90,6 @@
   Overview of agentic AI systems, covering planning, tool use, control loops, and production architecture concerns.
 - **2025-05-12** — [Supervised Fine-Tuning (SFT) with LoRA on Fireworks AI: Tutorial](<../models/fine-tuning/Supervised Fine-Tuning (SFT) with LoRA on Fireworks AI Tutorial.md>) · `fine-tuning` · fireworks
   Tutorial for supervised fine-tuning with LoRA, including setup, training, and deployment workflow.
-- **2025-04-09** — [Building Enterprise-Scale RAG Systems with Fireworks AI and MongoDB Atlas](<../rag-retrieval/pipelines/Building Enterprise-Scale RAG Systems with Fireworks AI and MongoDB Atlas.md>) · `pipelines` · fireworks
-  Builds an enterprise-scale RAG system with MongoDB Atlas and Fireworks, covering retrieval and serving pieces.
 - **2025-03-12** — [Fine-Tuning DeepSeek v3 & R1 to optimize quality, latency, & cost](<../models/fine-tuning/Fine-Tuning DeepSeek v3 & R1 to optimize quality, latency, & cost.md>) · `fine-tuning` · fireworks
   Guide to fine-tuning DeepSeek V3 and R1 models while balancing quality, latency, and cost.
 - **2025-02-07** — [DeepSeek v3 and R1 Model Architecture: Why it's powerful and economical](<../models/reasoning/DeepSeek v3 and R1 Model Architecture Why it's powerful and economical.md>) · `reasoning` · fireworks
@@ -104,8 +100,6 @@
   Discusses distilling reasoning behavior from DeepSeek R1 and the limits of teacher-model supervision.
 - **2025-01-27** — [Beyond Supervised Fine Tuning: How Reinforcement Learning Empowers AI with Minimal Labels](<../models/reinforcement-learning/Beyond Supervised Fine Tuning How Reinforcement Learning Empowers AI with Minimal Labels.md>) · `reinforcement-learning` · fireworks
   Explains reinforcement learning with verifiable rewards as a way to improve models with minimal labels.
-- **2025-01-24** — [DeepSeek-R1 Overview: Features, Capabilities, Parameters](<../models/reasoning/DeepSeek-R1 Overview Features, Capabilities, Parameters.md>) · `reasoning` · fireworks
-  Deep dive into DeepSeek-R1 capabilities, parameters, and reasoning behavior for production model selection.
 - **2024-12-09** — [20x faster Whisper than OpenAI - Fireworks audio transcribes 1 hour in 4 seconds](<../models/multimodal/20x faster Whisper than OpenAI - Fireworks audio transcribes 1 hour in 4 seconds.md>) · `multimodal` · fireworks
   Describes high-throughput Whisper transcription serving and the latency/cost tradeoffs in batch audio inference.
 - **2024-10-15** — [FireAttention V3: Enabling AMD as a viable alternative for GPU inference](<../inference/hardware/FireAttention V3 Enabling AMD as a viable alternative for GPU inference.md>) · `hardware` · fireworks
@@ -128,8 +122,6 @@
   Explains on-demand GPU infrastructure as a middle ground between serverless and reserved capacity.
 - **2024-05-08** — [Code Generation with Large Language Models - Fireworks AI Take](<../agents/tool-use/Code Generation with Large Language Models - Fireworks AI Take.md>) · `tool-use` · fireworks
   Discusses code-generation copilots with LLMs, including model behavior, latency, and developer workflow considerations.
-- **2024-03-21** — [Optimizing Retrieval Augmented Generation (RAG) with MongoDB Atlas and Fireworks AI](<../rag-retrieval/pipelines/Optimizing Retrieval Augmented Generation (RAG) with MongoDB Atlas and Fireworks AI.md>) · `pipelines` · fireworks
-  Shows how to optimize a RAG pipeline with MongoDB Atlas and Fireworks models.
 - **2024-02-20** — [Why do all LLMs need structured output modes?](<../prompt-engineering/structured-output/Why do all LLMs need structured output modes.md>) · `structured-output` · fireworks
   Explains why structured-output modes matter for reliable LLM applications and tool-calling systems.
 - **2024-01-08** — [FireAttention: serving open models faster with quantization](<../inference/quantization/FireAttention serving open models faster with quantization.md>) · `quantization` · fireworks

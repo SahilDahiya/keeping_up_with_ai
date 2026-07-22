@@ -1,6 +1,6 @@
 # langfuse
 
-37 articles.
+36 articles.
 
 - **2026-07-15** — [Building Deployment Gates for LLMs and AI Agents in Financial Services - Langfuse](<../evals-observability/evaluation/Building Deployment Gates for LLMs and AI Agents in Financial Services - Langfuse.md>) · `evaluation` · langfuse
   Walks through a PASS/FAIL deployment-gate pipeline for LLM systems at a major bank, built on Langfuse datasets/experiments/prompt management/annotation queues: three golden datasets (FinanceBench, Financial PhraseBank, a custom adversarial advisory set) score models and agents, gate on thresholds like 85% numerical accuracy, and emit CI exit codes plus reviewable evidence for model risk management.
@@ -52,8 +52,6 @@
   Engineering writeup on building scalable customizable dashboards for observability data, covering query, rendering, and product architecture concerns.
 - **2025-04-24** — [How we use LLMs to build and scale Langfuse](<../product-engineering/case-studies/How we use LLMs to build and scale Langfuse.md>) · `case-studies` · langfuse
   Case study of how Langfuse uses LLMs internally to build and scale the product, including practical workflows for AI-assisted engineering and operations.
-- **2025-03-19** — [Comparing Open-Source AI Agent Frameworks](<../agents/harness/Comparing Open-Source AI Agent Frameworks.md>) · `harness` · langfuse
-  Compares open-source AI agent frameworks and their architecture tradeoffs around orchestration, tools, memory, extensibility, and production readiness.
 - **2025-03-13** — [Hugging Face and Langfuse: 5 Ways to use them Together](<../infra-platform/deployment/Hugging Face and Langfuse 5 Ways to use them Together.md>) · `deployment` · langfuse
   Shows ways to combine Hugging Face workflows with Langfuse for model experimentation, tracing, evaluation, and deployment feedback loops.
 - **2025-03-04** — [LLM Evaluation 101: Best Practices, Challenges & Proven Techniques](<../evals-observability/evaluation/LLM Evaluation 101 Best Practices, Challenges & Proven Techniques.md>) · `evaluation` · langfuse

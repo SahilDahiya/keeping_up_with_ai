@@ -1,6 +1,6 @@
 # models
 
-222 articles.
+220 articles.
 
 - **2026-07-22** — [GLM 5.2 With Vision](<multimodal/GLM 5.2 With Vision.md>) · `multimodal` · baseten
   Baseten post-trained vision onto GLM 5.2 by training only a 50M-parameter, 2-layer MLP projector (reusing Kimi K2.6's vision tower) via SFT on 66k image-QA pairs, reaching MMMU-Pro scores equivalent to Claude 4.5 Haiku (55%) without touching GLM's text weights, and observed grokking plus strong generalization to entities never seen in the alignment dataset.
@@ -230,8 +230,6 @@
   Lays out the Open-R1 plan to fully reproduce DeepSeek-R1: distill reasoning traces from R1 to build an open SFT dataset, reimplement the pure-RL (GRPO) pipeline that produced R1-Zero without human supervision, and run the multi-stage RL+SFT recipe — naming the unknowns DeepSeek left out (data curation, hyperparameters, scaling trade-offs).
 - **2025-01-27** — [Beyond Supervised Fine Tuning: How Reinforcement Learning Empowers AI with Minimal Labels](<reinforcement-learning/Beyond Supervised Fine Tuning How Reinforcement Learning Empowers AI with Minimal Labels.md>) · `reinforcement-learning` · fireworks
   Explains reinforcement learning with verifiable rewards as a way to improve models with minimal labels.
-- **2025-01-24** — [DeepSeek-R1 Overview: Features, Capabilities, Parameters](<reasoning/DeepSeek-R1 Overview Features, Capabilities, Parameters.md>) · `reasoning` · fireworks
-  Deep dive into DeepSeek-R1 capabilities, parameters, and reasoning behavior for production model selection.
 - **2025-01-22** — [Building Audio Support with OpenAI: Insights from our Journey](<multimodal/Building Audio Support with OpenAI Insights from our Journey.md>) · `multimodal` · arize
   Case study on adding audio support with OpenAI models, covering product and engineering lessons from building multimodal support.
 - **2025-01-22** — [Evaluating and Monitoring Voice AI Agents](<multimodal/Evaluating and Monitoring Voice AI Agents.md>) · `multimodal` · langfuse
@@ -380,8 +378,6 @@
   Explains decoding parameters such as temperature, top-k, top-p, and test-time compute, connecting generation configuration to reliability, diversity, latency, and cost.
 - **2023-12-27** — [Mistral AI (Mixtral-8x7B): Performance, Benchmarks](<releases/Mistral AI (Mixtral-8x7B) Performance, Benchmarks.md>) · `releases` · arize
   Technical overview of Mistral and Mixtral model behavior, performance, and benchmark positioning.
-- **2023-12-13** — [Playground v2 vs Stable Diffusion XL 1.0 for text-to-image generation](<benchmarks/Playground v2 vs Stable Diffusion XL 1.0 for text-to-image generation.md>) · `benchmarks` · baseten
-  Compares Playground v2 and Stable Diffusion XL for text-to-image generation quality and serving use cases.
 - **2023-12-08** — [How to serve your ComfyUI model behind an API endpoint](<multimodal/How to serve your ComfyUI model behind an API endpoint.md>) · `multimodal` · baseten
   Shows how to serve a ComfyUI model behind an API endpoint for production image workflows.
 - **2023-12-08** — [StripedHyena-7B and efficient architectures beyond Transformers](<reasoning/StripedHyena-7B and efficient architectures beyond Transformers.md>) · `reasoning` · together

@@ -1,6 +1,6 @@
 # agents
 
-184 articles.
+179 articles.
 
 - **2026-07-21** — [A Fireside Chat with Cat and Thariq from the Claude Code team](<harness/A Fireside Chat with Cat and Thariq from the Claude Code team.md>) · `harness` · simon-willison
   Transcript of a fireside chat with Anthropic's Claude Code team covering Claude Tag's proactive multiplayer Slack agent with team memory (65% of product-eng PRs), a six-month migration to letting Claude fully review PRs at the 'outer layers' backed by incident-driven eval sets, an 80% system-prompt size cut for Fable/Opus 4.8 (fewer examples and hard constraints, more context), and how auto mode was red-teamed against prompt injection before becoming Claude Tag's foundation.
@@ -260,12 +260,8 @@
   Guidance on designing tool interfaces agents use reliably—consolidating workflows, namespacing, returning meaningful context—and using Claude to optimize its own tools.
 - **2025-09-10** — [Jupyter Agents: training LLMs to reason with notebooks](<tool-use/Jupyter Agents training LLMs to reason with notebooks.md>) · `tool-use` · huggingface
   Builds a data-science agent that executes code inside a Jupyter notebook, then trains small models to do it: generates a synthetic notebook trajectory dataset from Kaggle notebooks, fine-tunes Qwen3-4B/32B on it, and measures the gain on the DABStep benchmark. Details the scaffolding (executor, context management) and the data-quality filtering that drove most of the improvement.
-- **2025-09-09** — [Orchestrator-Worker Agents: A Practical Comparison of Common Agent Frameworks](<multi-agent/Orchestrator-Worker Agents A Practical Comparison of Common Agent Frameworks.md>) · `multi-agent` · arize
-  Compares orchestrator-worker agent frameworks and clarifies when this multi-agent pattern is useful.
 - **2025-09-04** — [Building LangGraph: Designing an Agent Runtime from first principles](<harness/Building LangGraph Designing an Agent Runtime from first principles.md>) · `harness` · langchain
   Design history of LangGraph as an agent runtime from first principles, covering control flow, state, durability, and production requirements.
-- **2025-08-28** — [Claude Code vs Cursor: A Power-User’s Playbook](<tool-use/Claude Code vs Cursor A Power-User’s Playbook.md>) · `tool-use` · arize
-  Compares Claude Code and Cursor from a power-user workflow perspective, focusing on coding-agent interfaces and usage patterns.
 - **2025-08-26** — [Building production-ready agentic systems: Lessons from Shopify Sidekick (2025)](<harness/Building production-ready agentic systems Lessons from Shopify Sidekick (2025).md>) · `harness` · shopify
   ICML 2025 talk on building Shopify Sidekick as a production agentic system: architecture, LLM-based evaluation, and GRPO reinforcement-learning training for a merchant-facing AI assistant.
 - **2025-08-21** — [Voice AI Agents for Customer Experience: Why Decentralized Agent Architectures Can Outperform Central Orchestrators](<multi-agent/Voice AI Agents for Customer Experience Why Decentralized Agent Architectures Can Outperform Central Orchestrators.md>) · `multi-agent` · cresta
@@ -312,8 +308,6 @@
   Describes DeepCoder, an open-source coding model trained for O3-mini-level coding performance.
 - **2025-03-20** — [The "think" tool: Enabling Claude to stop and think](<tool-use/The think tool Enabling Claude to stop and think.md>) · `tool-use` · anthropic-engineering
   Adding a no-op 'think' tool gives Claude space for intermediate reasoning mid-task, significantly improving policy-heavy agentic benchmarks like tau-bench.
-- **2025-03-19** — [Comparing Open-Source AI Agent Frameworks](<harness/Comparing Open-Source AI Agent Frameworks.md>) · `harness` · langfuse
-  Compares open-source AI agent frameworks and their architecture tradeoffs around orchestration, tools, memory, extensibility, and production readiness.
 - **2025-02-26** — [Memory and State in LLM Applications](<memory-context/Memory and State in LLM Applications.md>) · `memory-context` · arize
   Explains memory and state patterns in LLM applications and how they affect reliability across interactions.
 - **2025-02-20** — [The Agent Deep Dive: David Zhang’s Open Deep Research](<planning/The Agent Deep Dive David Zhang’s Open Deep Research.md>) · `planning` · langfuse
@@ -340,12 +334,8 @@
   Introduces practical agent workflow and architecture patterns, emphasizing simple tool-calling loops and design choices over vague autonomy claims.
 - **2024-12-03** — [Building an AI Agent that Thrives in the Real World](<planning/Building an AI Agent that Thrives in the Real World.md>) · `planning` · arize
   Practical guidance for building production AI agents that survive real-world failures through monitoring, iteration, and reliability practices.
-- **2024-10-16** — [Comparing OpenAI Swarm with other Multi Agent Frameworks](<multi-agent/Comparing OpenAI Swarm with other Multi Agent Frameworks.md>) · `multi-agent` · arize
-  Compares OpenAI Swarm with other multi-agent frameworks, highlighting orchestration patterns and framework tradeoffs.
 - **2024-10-08** — [Functions: flexible AI engineering primitives](<tool-use/Functions flexible AI engineering primitives.md>) · `tool-use` · braintrust
   Introduces functions as flexible AI engineering primitives for tool calling, structured behavior, and reusable evaluation or workflow components.
-- **2024-09-30** — [Arize AI + MongoDB: Leveraging Agent Evaluation and Memory to Build Robust Agentic Systems](<memory-context/Arize AI + MongoDB Leveraging Agent Evaluation and Memory to Build Robust Agentic Systems.md>) · `memory-context` · arize
-  Explains how Arize and MongoDB combine agent evaluation and memory patterns for more robust agentic systems.
 - **2024-08-29** — [Build Your Own Flight Recommendation System using FastAPI, SerpAPI, and Firefunction](<tool-use/Build Your Own Flight Recommendation System using FastAPI, SerpAPI, and Firefunction.md>) · `tool-use` · fireworks
   Tutorial for building a function-calling application with FastAPI, SerpAPI, and structured tool invocation.
 - **2024-08-12** — [Tool Use, Unified](<tool-use/Tool Use, Unified.md>) · `tool-use` · huggingface
@@ -581,8 +571,6 @@
   Explains how to evaluate AI agent skills, including task design, scoring, trace inspection, and regression testing for reusable agent capabilities.
 - **2026-02-26** — [Agent Observability: How to Monitor and Evaluate LLM Agents in Production](<../evals-observability/monitoring/Agent Observability How to Monitor and Evaluate LLM Agents in Production.md>) · `monitoring` · langchain
   Guide to monitoring and evaluating LLM agents in production, including traces, feedback, evals, and alerting signals.
-- **2026-02-23** — [Mastering Production RAG with Google ADK and Arize AX for Enterprise Knowledge Systems](<../rag-retrieval/pipelines/Mastering Production RAG with Google ADK and Arize AX for Enterprise Knowledge Systems.md>) · `pipelines` · arize
-  Explains production RAG architecture with Google ADK and Arize AX, including agentic retrieval and evaluation concerns.
 - **2026-02-23** — [Directory Snapshots: Resumable project state for Sandboxes](<../infra-platform/deployment/Directory Snapshots Resumable project state for Sandboxes.md>) · `deployment` · modal
   Introduces directory snapshots for sandbox state, enabling resumable project files across agent and remote-execution sessions.
 - **2026-02-20** — [AI Agent Observability, Tracing & Evaluation with Langfuse](<../evals-observability/tracing/AI Agent Observability, Tracing & Evaluation with Langfuse.md>) · `tracing` · langfuse

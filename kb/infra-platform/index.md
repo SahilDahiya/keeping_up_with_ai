@@ -1,6 +1,6 @@
 # infra-platform
 
-75 articles.
+72 articles.
 
 - **2026-07-21** — [Devin Outposts on Modal | Modal Blog](<deployment/Devin Outposts on Modal Modal Blog.md>) · `deployment` · modal
   Modal's open-source modal-devin library lets Cognition's Devin coding agent execute in user-controlled Modal Sandboxes (GPU-backed, custom images, snapshot suspend/resume) while its reasoning stays in Cognition's cloud, splitting the agent's control-plane queue from a self-hosted data-plane orchestrator and worker.
@@ -58,8 +58,6 @@
   Guide to multi-tenant GPU cluster design for avoiding capacity conflicts in AI-native teams.
 - **2026-04-09** — [How the Baseten Delivery Network (BDN) makes cold starts fast](<deployment/How the Baseten Delivery Network (BDN) makes cold starts fast.md>) · `deployment` · baseten
   Deep dive into how the Baseten Delivery Network reduces cold starts for model serving.
-- **2026-03-31** — [Logfire vs LangSmith vs Langfuse vs Arize: AI Observability Pricing Compared](<cost/Logfire vs LangSmith vs Langfuse vs Arize AI Observability Pricing Compared.md>) · `cost` · pydantic
-  Breaks down how AI-observability billing units (spans, traces, GB ingested, Langfuse-style billable units) interact with agentic/RAG workloads, noting LLM spans carry tens of KB payloads (system prompts, retrieved chunks, completions) versus sub-KB REST spans. Compares Logfire, LangSmith, Langfuse, and Arize pricing to show the billing unit, not the headline fee, drives real cost.
 - **2026-03-30** — [Building IaC providers for Logfire: design decisions that mattered](<deployment/Building IaC providers for Logfire design decisions that mattered.md>) · `deployment` · pydantic
   Design decisions in building Terraform/IaC providers for Logfire so customers manage alerts, dashboards, projects, and tokens as code, including how to model observability resources for declarative provisioning.
 - **2026-03-19** — [Introducing the Baseten Delivery Network: Fast cold starts for big models](<deployment/Introducing the Baseten Delivery Network Fast cold starts for big models.md>) · `deployment` · baseten
@@ -78,12 +76,8 @@
   Describes operational practices for keeping a large GPU fleet healthy, including failure detection and reliability management.
 - **2025-11-20** — [Incident Report for Nov 18, 2025](<deployment/Incident Report for Nov 18, 2025.md>) · `deployment` · langfuse
   Incident report with reliability lessons for production observability infrastructure, including failure analysis and operational follow-up.
-- **2025-09-17** — [adb Benchmarks](<deployment/adb Benchmarks.md>) · `deployment` · arize
-  Benchmarks Arize database performance at the storage and application level for AI observability workloads powered by high-volume traces and model data.
 - **2025-09-16** — [Inside Modal Notebooks: How we built a cloud GPU notebook that boots in seconds](<deployment/Inside Modal Notebooks How we built a cloud GPU notebook that boots in seconds.md>) · `deployment` · modal
   Engineering writeup on cloud GPU notebooks that boot quickly, covering startup paths, state, and execution isolation.
-- **2025-08-11** — [adb Database: Realtime Ingestion At Scale](<deployment/adb Database Realtime Ingestion At Scale.md>) · `deployment` · arize
-  Describes realtime ingestion design for Arize database, including scale requirements for AI observability data and production trace ingestion.
 - **2025-07-16** — [Dollars per token considered harmful](<cost/Dollars per token considered harmful.md>) · `cost` · modal
   Critiques dollars-per-token as an inference cost metric and explains why workload shape, latency, and utilization matter more.
 - **2025-06-23** — [How we built Multi-cloud Capacity Management (MCM)](<gpu-clusters/How we built Multi-cloud Capacity Management (MCM).md>) · `gpu-clusters` · baseten
@@ -263,8 +257,6 @@
   Surveys 16 open-source async RL libraries across 7 axes (orchestration, rollout buffers, weight-sync protocols, staleness handling, partial rollouts, LoRA, distributed backends); the shared pattern is disaggregating inference and training GPU pools so neither idles, with Ray dominating orchestration (8/16) and NCCL broadcast the default weight transfer.
 - **2026-03-09** — [Ulysses Sequence Parallelism: Training with Million-Token Contexts](<../models/training/Ulysses Sequence Parallelism Training with Million-Token Contexts.md>) · `training` · huggingface
   Ulysses Sequence Parallelism (from Snowflake's ALST) shards attention by heads across GPUs via all-to-all so context length scales with GPU count, enabling million-token training; explains the algorithm and its integration into Accelerate, Transformers Trainer and TRL SFTTrainer.
-- **2026-03-06** — [Inference providers vs. API routers](<../inference/serving/Inference providers vs. API routers.md>) · `serving` · fireworks
-  Explains the operational difference between inference providers and API routers, including routing, control, and token provenance.
 - **2026-02-25** — [Accelerating AI research that accelerates AI research](<../product-engineering/case-studies/Accelerating AI research that accelerates AI research.md>) · `case-studies` · modal
   Case study on using elastic compute to accelerate AI research workflows, including experiment throughput and infrastructure offload.
 - **2026-02-18** — [How Ramp built a full context background coding agent on Modal](<../agents/computer-use/How Ramp built a full context background coding agent on Modal.md>) · `computer-use` · modal
@@ -275,8 +267,6 @@
   Quantifies how infrastructure flakiness (timeouts, container variance) injects noise into agentic coding evals, and methods to measure and control for it.
 - **2026-01-22** — [Optimizing inference speed and costs: Lessons learned from large-scale deployments](<../inference/optimization/Optimizing inference speed and costs Lessons learned from large-scale deployments.md>) · `optimization` · together
   Lessons from optimizing inference speed and cost in large-scale deployments.
-- **2025-12-18** — [Brainstore makes AI observability at scale possible](<../evals-observability/monitoring/Brainstore makes AI observability at scale possible.md>) · `monitoring` · braintrust
-  Benchmark-oriented note on Brainstore performance and why purpose-built storage is needed for high-volume AI observability workloads.
 - **2025-11-25** — [Building and Deploying Production‑Grade AI Agents: Cresta’s End‑to‑End Approach](<../agents/planning/Building and Deploying Production‑Grade AI Agents Cresta’s End‑to‑End Approach.md>) · `planning` · cresta
   End-to-end guide to production AI agent deployment, including design, launch, monitoring, and operational controls.
 - **2025-11-19** — [50 Trillion Tokens Per Day: The State of Agent Environments](<../agents/computer-use/50 Trillion Tokens Per Day The State of Agent Environments.md>) · `computer-use` · fireworks

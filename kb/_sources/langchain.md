@@ -1,6 +1,6 @@
 # langchain
 
-90 articles.
+89 articles.
 
 - **2026-07-21** — [How Apollo Uses Deep Agents and LangSmith for GTM AI](<../agents/harness/How Apollo Uses Deep Agents and LangSmith for GTM AI.md>) · `harness` · langchain
   Apollo rearchitected its GTM AI Assistant from a LangGraph supervisor-hierarchy multi-agent system (a bespoke sub-agent wired into the router per use case) to LangChain's Deep Agents for goal-based, model-neutral execution, paired with LangSmith for tracing and evaluation.
@@ -170,8 +170,6 @@
   Benchmarks query analysis in high-cardinality situations, relevant to retrieval, search, and observability filtering workloads.
 - **2024-03-11** — [Iterating Towards LLM Reliability with Evaluation Driven Development](<../evals-observability/testing/Iterating Towards LLM Reliability with Evaluation Driven Development.md>) · `testing` · langchain
   Explains evaluation-driven development for LLM reliability using regression tests, examples, and iterative quality gates.
-- **2024-01-16** — [Build and deploy a RAG app with Pinecone Serverless](<../rag-retrieval/pipelines/Build and deploy a RAG app with Pinecone Serverless.md>) · `pipelines` · langchain
-  Walkthrough for building and deploying a RAG application with Pinecone Serverless and LangChain components.
 - **2023-12-20** — [Benchmarking Agent Tool Use](<../agents/tool-use/Benchmarking Agent Tool Use.md>) · `tool-use` · langchain
   Benchmarking study for agent tool use, focused on measuring whether agents choose and invoke tools correctly across tasks.
 - **2023-12-05** — [Extraction Benchmarking](<../models/benchmarks/Extraction Benchmarking.md>) · `benchmarks` · langchain

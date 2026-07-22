@@ -1,6 +1,6 @@
 # pydantic
 
-44 articles.
+43 articles.
 
 - **2026-07-21** — [Building a research agent with Pydantic AI Harness and Exa](<../agents/harness/Building a research agent with Pydantic AI Harness and Exa.md>) · `harness` · pydantic
   Walks through building a research agent with Pydantic AI Harness's Exa capabilities: native WebSearch for shallow lookups, the hosted ExaAgent for full plan-search-synthesize research runs with citations and multi-turn context via previous_run_id, and lower-level ExaSearch tools (web_search/get_page) for custom source allowlists or citation bars.
@@ -52,8 +52,6 @@
   Shows how enabling experimental_telemetry on Vercel AI SDK generateText/streamText calls emits rich OpenTelemetry spans (full prompt, response, token counts, streaming latency, tool calls) following the OTel GenAI semantic conventions (gen_ai.* / ai.*), which any OTel backend can render as readable conversations.
 - **2026-04-08** — [MCP Code Execution: Why Your Agent Would Rather Write Code | Pydantic](<../agents/harness/MCP Code Execution Why Your Agent Would Rather Write Code Pydantic.md>) · `harness` · pydantic
   After hand-crafting 40+ MCP tools for Logfire, a single code-execution (exec) tool outperformed them because tool descriptions themselves eat the context window (Cloudflare needed 1.17M tokens for a full MCP over a 2,500-endpoint API); a case for code-actions over many JSON tools while keeping curated tools around.
-- **2026-03-31** — [Logfire vs LangSmith vs Langfuse vs Arize: AI Observability Pricing Compared](<../infra-platform/cost/Logfire vs LangSmith vs Langfuse vs Arize AI Observability Pricing Compared.md>) · `cost` · pydantic
-  Breaks down how AI-observability billing units (spans, traces, GB ingested, Langfuse-style billable units) interact with agentic/RAG workloads, noting LLM spans carry tens of KB payloads (system prompts, retrieved chunks, completions) versus sub-KB REST spans. Compares Logfire, LangSmith, Langfuse, and Arize pricing to show the billing unit, not the headline fee, drives real cost.
 - **2026-03-30** — [Building IaC providers for Logfire: design decisions that mattered](<../infra-platform/deployment/Building IaC providers for Logfire design decisions that mattered.md>) · `deployment` · pydantic
   Design decisions in building Terraform/IaC providers for Logfire so customers manage alerts, dashboards, projects, and tokens as code, including how to model observability resources for declarative provisioning.
 - **2026-03-25** — [Full-Stack Agent Observability with AgentSH + Pydantic Logfire | Pydantic](<../product-engineering/security/Full-Stack Agent Observability with AgentSH + Pydantic Logfire Pydantic.md>) · `security` · pydantic
