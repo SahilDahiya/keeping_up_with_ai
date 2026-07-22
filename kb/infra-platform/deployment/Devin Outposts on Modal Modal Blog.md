@@ -1,10 +1,14 @@
 ---
 title: Devin Outposts on Modal | Modal Blog
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: infra-platform
+subtopic: deployment
+secondary_topics:
+- agents/computer-use
+summary: Modal's open-source modal-devin library lets Cognition's Devin coding agent
+  execute in user-controlled Modal Sandboxes (GPU-backed, custom images, snapshot
+  suspend/resume) while its reasoning stays in Cognition's cloud, splitting the agent's
+  control-plane queue from a self-hosted data-plane orchestrator and worker.
 triage: null
 skip_reason: null
 source: modal
@@ -12,7 +16,7 @@ url: https://modal.com/blog/devin-outposts-run-devin-in-modal-sandoxes
 author: null
 published: '2026-07-21'
 fetched: '2026-07-22T06:51:24Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 587
 content_sha256: 93261a20a755483bcbd3ac9a099e706d03c45d698e7a28afc27bfcc5868bca05

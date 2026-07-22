@@ -1,10 +1,13 @@
 ---
 title: Trace voice agents in LangSmith
 kind: blog
-topic: null
-subtopic: null
+topic: evals-observability
+subtopic: tracing
 secondary_topics: []
-summary: null
+summary: LangSmith adds Python tracing integrations for four voice agent frameworks
+  (Pipecat, LiveKit, OpenAI Realtime, Gemini Live/ADK), covering both 'sandwich' (STT
+  to LLM to TTS) and speech-to-speech architectures with audio recording, per-component
+  latency breakdown, and interruption tracking.
 triage: null
 skip_reason: null
 source: langchain
@@ -12,7 +15,7 @@ url: https://www.langchain.com/blog/trace-voice-agents-in-langsmith
 author: Caroline di Vittorio
 published: '2026-07-21'
 fetched: '2026-07-22T06:51:35Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 666
 content_sha256: 63bc8d826ae78afe02e753bcb8080e4ee9045bc45e4b5b9b63561f82735420ab

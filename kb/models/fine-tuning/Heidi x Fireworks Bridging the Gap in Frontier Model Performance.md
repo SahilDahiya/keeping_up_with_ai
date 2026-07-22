@@ -1,10 +1,15 @@
 ---
 title: 'Heidi x Fireworks: Bridging the Gap in Frontier Model Performance'
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: models
+subtopic: fine-tuning
+secondary_topics:
+- evals-observability/evaluation
+summary: 'Heidi''s ambient clinical scribe moved from proprietary to fine-tuned open
+  models on Fireworks: SFT beat Gemini Flash and RFT/DPO beat Gemini Pro on internal
+  side-by-side evals, with the key levers being LLM-judge and synthetic-rewrite filtering
+  of noisy preference data and scaling effective batch size from 64k to 768k tokens
+  via gradient accumulation (win rate 48.0% to 51.3%).'
 triage: null
 skip_reason: null
 source: fireworks
@@ -12,7 +17,7 @@ url: https://fireworks.ai/blog/Heidi-Health
 author: null
 published: '2026-07-20'
 fetched: '2026-07-22T06:51:17Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 571
 content_sha256: cf096abe70abc4ce19868407f4042f4ae9e872476afe9a09b213410bd86db3d5

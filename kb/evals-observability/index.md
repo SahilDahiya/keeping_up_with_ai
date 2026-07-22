@@ -1,7 +1,13 @@
 # evals-observability
 
-235 articles.
+238 articles.
 
+- **2026-07-21** — [How OpenAI uses human feedback to evaluate and improve LLMs](<evaluation/How OpenAI uses human feedback to evaluate and improve LLMs.md>) · `evaluation` · arize
+  OpenAI aggregates explicit and implicit user feedback into a shared data layer, using an LLM-derived pipeline to recover in-conversation corrections (2-3x more actionable signal) and embedding-based KNN clustering to surface failure patterns beyond a hierarchical taxonomy, with MCP/skills letting Codex turn a raw bug report into a root-caused pull request.
+- **2026-07-21** — [What I Learned by Dogfooding Our Own AI Agent, Signal](<evaluation/What I Learned by Dogfooding Our Own AI Agent, Signal.md>) · `evaluation` · cresta
+  Cresta dogfooded its Synthetic Customers tool (personas built from real conversation data) against its own website AI agent, Signal, to test the agent against realistic non-happy-path visitors (impatient, adversarial, or channel-switching) instead of idealized test cases.
+- **2026-07-21** — [Trace voice agents in LangSmith](<tracing/Trace voice agents in LangSmith.md>) · `tracing` · langchain
+  LangSmith adds Python tracing integrations for four voice agent frameworks (Pipecat, LiveKit, OpenAI Realtime, Gemini Live/ADK), covering both 'sandwich' (STT to LLM to TTS) and speech-to-speech architectures with audio recording, per-component latency breakdown, and interruption tracking.
 - **2026-07-20** — [IssueBench - How We Evaluate Engine](<benchmark-design/IssueBench - How We Evaluate Engine.md>) · `benchmark-design` · langchain
   Describes IssueBench, LangChain's internal benchmark for LangSmith Engine (an agent that finds/clusters/fixes issues in other agents' traces): 15 tasks with synthetically injected, ground-truth-labeled failures across SRE, software engineering, and customer support domains, run on Harbor and scored on classification, categorization, issue-attachment, and new-issue-grouping accuracy.
 - **2026-07-16** — [Human annotations for agent runs in Pydantic Logfire](<evaluation/Human annotations for agent runs in Pydantic Logfire.md>) · `evaluation` · pydantic
@@ -475,8 +481,12 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-07-21** — [A Fireside Chat with Cat and Thariq from the Claude Code team](<../agents/harness/A Fireside Chat with Cat and Thariq from the Claude Code team.md>) · `harness` · simon-willison
+  Transcript of a fireside chat with Anthropic's Claude Code team covering Claude Tag's proactive multiplayer Slack agent with team memory (65% of product-eng PRs), a six-month migration to letting Claude fully review PRs at the 'outer layers' backed by incident-driven eval sets, an 80% system-prompt size cut for Fable/Opus 4.8 (fewer examples and hard constraints, more context), and how auto mode was red-teamed against prompt injection before becoming Claude Tag's foundation.
 - **2026-07-20** — [Paper MCP vs Figma MCP for frontend agents - Blog - Braintrust](<../agents/tool-use/Paper MCP vs Figma MCP for frontend agents - Blog - Braintrust.md>) · `tool-use` · braintrust
   Independent eval of Paper MCP vs Figma MCP for coding-agent frontend generation across 40 Design2Code pages and 27 hand-picked complex designs: the two tie on visual similarity (0.741 vs 0.744 on simple pages), but Figma's run-to-run variance is 1.9x Paper's and it costs 32% more per point of visual quality ($3.73 vs $2.82) while running 42% longer.
+- **2026-07-20** — [Heidi x Fireworks: Bridging the Gap in Frontier Model Performance](<../models/fine-tuning/Heidi x Fireworks Bridging the Gap in Frontier Model Performance.md>) · `fine-tuning` · fireworks
+  Heidi's ambient clinical scribe moved from proprietary to fine-tuned open models on Fireworks: SFT beat Gemini Flash and RFT/DPO beat Gemini Pro on internal side-by-side evals, with the key levers being LLM-judge and synthetic-rewrite filtering of noisy preference data and scaling effective batch size from 64k to 768k tokens via gradient accumulation (win rate 48.0% to 51.3%).
 - **2026-07-17** — [Prompt optimization and managed prompts in Pydantic Logfire](<../prompt-engineering/techniques/Prompt optimization and managed prompts in Pydantic Logfire.md>) · `techniques` · pydantic
   Describes Pydantic Logfire's prompt optimizer, which reads up to 100 recent production traces (failures weighted highest) via OpenTelemetry gen_ai spans, proposes a single evidence-cited prompt edit with a confidence ladder (prefer/always/never), rejects ungrounded claims via a validator, and separates prompt fixes from non-prompt issues like flaky providers or broken tools.
 - **2026-07-17** — [Inside Cursor's agent factory: how it verifies AI-written code](<../product-engineering/case-studies/Inside Cursor's agent factory how it verifies AI-written code.md>) · `case-studies` · arize

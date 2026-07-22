@@ -1,7 +1,13 @@
 # agents
 
-181 articles.
+184 articles.
 
+- **2026-07-21** — [A Fireside Chat with Cat and Thariq from the Claude Code team](<harness/A Fireside Chat with Cat and Thariq from the Claude Code team.md>) · `harness` · simon-willison
+  Transcript of a fireside chat with Anthropic's Claude Code team covering Claude Tag's proactive multiplayer Slack agent with team memory (65% of product-eng PRs), a six-month migration to letting Claude fully review PRs at the 'outer layers' backed by incident-driven eval sets, an 80% system-prompt size cut for Fable/Opus 4.8 (fewer examples and hard constraints, more context), and how auto mode was red-teamed against prompt injection before becoming Claude Tag's foundation.
+- **2026-07-21** — [Building a research agent with Pydantic AI Harness and Exa](<harness/Building a research agent with Pydantic AI Harness and Exa.md>) · `harness` · pydantic
+  Walks through building a research agent with Pydantic AI Harness's Exa capabilities: native WebSearch for shallow lookups, the hosted ExaAgent for full plan-search-synthesize research runs with citations and multi-turn context via previous_run_id, and lower-level ExaSearch tools (web_search/get_page) for custom source allowlists or citation bars.
+- **2026-07-21** — [How Apollo Uses Deep Agents and LangSmith for GTM AI](<harness/How Apollo Uses Deep Agents and LangSmith for GTM AI.md>) · `harness` · langchain
+  Apollo rearchitected its GTM AI Assistant from a LangGraph supervisor-hierarchy multi-agent system (a bespoke sub-agent wired into the router per use case) to LangChain's Deep Agents for goal-based, model-neutral execution, paired with LangSmith for tracing and evaluation.
 - **2026-07-20** — [Harness Week: Pydantic AI Harness, the capability library for agents](<harness/Harness Week Pydantic AI Harness, the capability library for agents.md>) · `harness` · pydantic
   Introduces Pydantic AI Harness, an official capability library of ~40 pluggable agent capabilities (file/shell access with path-traversal checks, memory, sub-agent delegation, context compaction, CodeMode's code-execution sandbox) that plug in without framework changes, plus community packages like pydantic-ai-shields, which layers a heuristic PromptInjection filter with a deterministic ToolGuard approval gate on sensitive tool calls.
 - **2026-07-20** — [Paper MCP vs Figma MCP for frontend agents - Blog - Braintrust](<tool-use/Paper MCP vs Figma MCP for frontend agents - Blog - Braintrust.md>) · `tool-use` · braintrust
@@ -367,6 +373,12 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-07-21** — [How OpenAI uses human feedback to evaluate and improve LLMs](<../evals-observability/evaluation/How OpenAI uses human feedback to evaluate and improve LLMs.md>) · `evaluation` · arize
+  OpenAI aggregates explicit and implicit user feedback into a shared data layer, using an LLM-derived pipeline to recover in-conversation corrections (2-3x more actionable signal) and embedding-based KNN clustering to surface failure patterns beyond a hierarchical taxonomy, with MCP/skills letting Codex turn a raw bug report into a root-caused pull request.
+- **2026-07-21** — [Devin Outposts on Modal | Modal Blog](<../infra-platform/deployment/Devin Outposts on Modal Modal Blog.md>) · `deployment` · modal
+  Modal's open-source modal-devin library lets Cognition's Devin coding agent execute in user-controlled Modal Sandboxes (GPU-backed, custom images, snapshot suspend/resume) while its reasoning stays in Cognition's cloud, splitting the agent's control-plane queue from a self-hosted data-plane orchestrator and worker.
+- **2026-07-20** — [Custom Code Review rules for Codex | OpenAI Developers](<../prompt-engineering/context-engineering/Custom Code Review rules for Codex OpenAI Developers.md>) · `context-engineering` · openai-devs
+  Codex Code Review can now apply custom repository rules written in AGENTS.md (preserving API contracts, keeping customer data out of logs, avoiding breaking renames) so the review agent catches team-specific issues that used to depend on tribal reviewer knowledge, citing the specific rule behind each finding.
 - **2026-07-20** — [Building Governed Agents: A Framework for Cost, Control, and Compliance](<../product-engineering/security/Building Governed Agents A Framework for Cost, Control, and Compliance.md>) · `security` · langchain
   Framework for governing production agents through an LLM gateway: a five-part govern/decide/protect/observe/assure operating model, pattern-based vs model-based guardrail detection for PII and prompt injection, fail-open/fail-closed fallback design, and layered spend controls (org/team/key limits) for controlling agent token cost.
 - **2026-07-17** — [Inside Cursor's agent factory: how it verifies AI-written code](<../product-engineering/case-studies/Inside Cursor's agent factory how it verifies AI-written code.md>) · `case-studies` · arize

@@ -1,10 +1,14 @@
 ---
 title: How Apollo Uses Deep Agents and LangSmith for GTM AI
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: agents
+subtopic: harness
+secondary_topics:
+- product-engineering/case-studies
+summary: Apollo rearchitected its GTM AI Assistant from a LangGraph supervisor-hierarchy
+  multi-agent system (a bespoke sub-agent wired into the router per use case) to LangChain's
+  Deep Agents for goal-based, model-neutral execution, paired with LangSmith for tracing
+  and evaluation.
 triage: null
 skip_reason: null
 source: langchain
@@ -12,7 +16,7 @@ url: https://www.langchain.com/blog/how-apollo-rebuilt-its-ai-assistant-on-deep-
 author: Sofia Sulikowski
 published: '2026-07-21'
 fetched: '2026-07-22T06:51:29Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1149
 content_sha256: bc9861af1aae9c7868e17379460bbe140b811cce8a7f456c77a9b7a18a15f686

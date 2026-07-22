@@ -1,10 +1,14 @@
 ---
 title: What I Learned by Dogfooding Our Own AI Agent, Signal
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: evals-observability
+subtopic: evaluation
+secondary_topics:
+- product-engineering/case-studies
+summary: Cresta dogfooded its Synthetic Customers tool (personas built from real conversation
+  data) against its own website AI agent, Signal, to test the agent against realistic
+  non-happy-path visitors (impatient, adversarial, or channel-switching) instead of
+  idealized test cases.
 triage: null
 skip_reason: null
 source: cresta
@@ -12,7 +16,7 @@ url: https://cresta.com/blog/what-i-learned-by-dogfooding-our-own-ai-agent-signa
 author: Topher Boehm
 published: '2026-07-21'
 fetched: '2026-07-22T06:51:04Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1862
 content_sha256: 8b6a74bbecbf6c3499dd0294939c044a8a0998bd4dfe0ab8f0b5b904db833e84

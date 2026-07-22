@@ -1,10 +1,15 @@
 ---
 title: Building a research agent with Pydantic AI Harness and Exa
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: agents
+subtopic: harness
+secondary_topics:
+- rag-retrieval/search
+summary: 'Walks through building a research agent with Pydantic AI Harness''s Exa
+  capabilities: native WebSearch for shallow lookups, the hosted ExaAgent for full
+  plan-search-synthesize research runs with citations and multi-turn context via previous_run_id,
+  and lower-level ExaSearch tools (web_search/get_page) for custom source allowlists
+  or citation bars.'
 triage: null
 skip_reason: null
 source: pydantic
@@ -12,7 +17,7 @@ url: https://pydantic.dev/articles/harness-exa
 author: Bill Easton
 published: '2026-07-21'
 fetched: '2026-07-22T06:57:07Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1241
 content_sha256: 5dbade0aa2d79bc34ed92b142f5d26960f215befa0add84157c314439bab2128

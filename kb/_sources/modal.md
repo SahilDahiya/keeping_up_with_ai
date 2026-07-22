@@ -1,7 +1,9 @@
 # modal
 
-48 articles.
+49 articles.
 
+- **2026-07-21** — [Devin Outposts on Modal | Modal Blog](<../infra-platform/deployment/Devin Outposts on Modal Modal Blog.md>) · `deployment` · modal
+  Modal's open-source modal-devin library lets Cognition's Devin coding agent execute in user-controlled Modal Sandboxes (GPU-backed, custom images, snapshot suspend/resume) while its reasoning stays in Cognition's cloud, splitting the agent's control-plane queue from a self-hosted data-plane orchestrator and worker.
 - **2026-07-15** — [Inkling by Thinking Machines now available on Modal | Modal Blog](<../inference/speculative-decoding/Inkling by Thinking Machines now available on Modal Modal Blog.md>) · `speculative-decoding` · modal
   Describes adapting Z Lab's DFlash block-diffusion speculator to Thinking Machines' Inkling (which uses five sliding-window attention layers per full-attention layer), making the drafter all-local-attention and causal for kernel support, reaching 250 tok/s/user at 2.5M TPM per GPU, 67% faster than Inkling's built-in MTP speculative path.
 - **2026-07-15** — [Scaling to 1 million concurrent sandboxes in seconds | Modal Blog](<../infra-platform/deployment/Scaling to 1 million concurrent sandboxes in seconds Modal Blog.md>) · `deployment` · modal

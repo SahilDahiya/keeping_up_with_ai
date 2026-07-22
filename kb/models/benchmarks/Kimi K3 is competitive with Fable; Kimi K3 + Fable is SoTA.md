@@ -1,10 +1,15 @@
 ---
 title: Kimi K3 is competitive with Fable; Kimi K3 + Fable is SoTA.
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: models
+subtopic: benchmarks
+secondary_topics:
+- inference/optimization
+summary: Fireworks benchmarked open Kimi K3 against closed Fable 5 across ~1,030 agentic
+  tasks (SWE-bench-style fixes, terminal ops, algorithmic problems, multi-language,
+  legal), finding near-parity on quality (92.4% vs 92.6% on SWE) and that oracle routing
+  between the two models hits 93% accuracy at up to 50x lower cost than running Fable
+  alone.
 triage: null
 skip_reason: null
 source: fireworks
@@ -12,7 +17,7 @@ url: https://fireworks.ai/blog/kimik3-fable
 author: null
 published: '2026-07-21'
 fetched: '2026-07-22T06:51:19Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 910
 content_sha256: 0eaabcd6ca09a38a54d80b416fd7841a171ffa00c244551356fa38fe74765a41

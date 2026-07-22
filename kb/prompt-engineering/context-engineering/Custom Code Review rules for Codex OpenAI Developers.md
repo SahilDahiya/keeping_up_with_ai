@@ -1,10 +1,14 @@
 ---
 title: Custom Code Review rules for Codex | OpenAI Developers
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: prompt-engineering
+subtopic: context-engineering
+secondary_topics:
+- agents/tool-use
+summary: Codex Code Review can now apply custom repository rules written in AGENTS.md
+  (preserving API contracts, keeping customer data out of logs, avoiding breaking
+  renames) so the review agent catches team-specific issues that used to depend on
+  tribal reviewer knowledge, citing the specific rule behind each finding.
 triage: null
 skip_reason: null
 source: openai-devs
@@ -12,7 +16,7 @@ url: https://developers.openai.com/blog/custom-code-review-rules-for-codex/
 author: null
 published: '2026-07-20'
 fetched: '2026-07-22T06:51:15Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1318
 content_sha256: 2cdd82fd7d9b02ce334314f7250e539e82cbc6298f7823b95fb2043c269391cb

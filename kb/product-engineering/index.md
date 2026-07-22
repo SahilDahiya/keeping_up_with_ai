@@ -247,6 +247,12 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-07-21** — [A Fireside Chat with Cat and Thariq from the Claude Code team](<../agents/harness/A Fireside Chat with Cat and Thariq from the Claude Code team.md>) · `harness` · simon-willison
+  Transcript of a fireside chat with Anthropic's Claude Code team covering Claude Tag's proactive multiplayer Slack agent with team memory (65% of product-eng PRs), a six-month migration to letting Claude fully review PRs at the 'outer layers' backed by incident-driven eval sets, an 80% system-prompt size cut for Fable/Opus 4.8 (fewer examples and hard constraints, more context), and how auto mode was red-teamed against prompt injection before becoming Claude Tag's foundation.
+- **2026-07-21** — [How Apollo Uses Deep Agents and LangSmith for GTM AI](<../agents/harness/How Apollo Uses Deep Agents and LangSmith for GTM AI.md>) · `harness` · langchain
+  Apollo rearchitected its GTM AI Assistant from a LangGraph supervisor-hierarchy multi-agent system (a bespoke sub-agent wired into the router per use case) to LangChain's Deep Agents for goal-based, model-neutral execution, paired with LangSmith for tracing and evaluation.
+- **2026-07-21** — [What I Learned by Dogfooding Our Own AI Agent, Signal](<../evals-observability/evaluation/What I Learned by Dogfooding Our Own AI Agent, Signal.md>) · `evaluation` · cresta
+  Cresta dogfooded its Synthetic Customers tool (personas built from real conversation data) against its own website AI agent, Signal, to test the agent against realistic non-happy-path visitors (impatient, adversarial, or channel-switching) instead of idealized test cases.
 - **2026-07-20** — [Harness Week: Pydantic AI Harness, the capability library for agents](<../agents/harness/Harness Week Pydantic AI Harness, the capability library for agents.md>) · `harness` · pydantic
   Introduces Pydantic AI Harness, an official capability library of ~40 pluggable agent capabilities (file/shell access with path-traversal checks, memory, sub-agent delegation, context compaction, CodeMode's code-execution sandbox) that plug in without framework changes, plus community packages like pydantic-ai-shields, which layers a heuristic PromptInjection filter with a deterministic ToolGuard approval gate on sensitive tool calls.
 - **2026-07-15** — [Agents need their own computer. Here's how to give them one safely.](<../agents/harness/Agents need their own computer. Here's how to give them one safely.md>) · `harness` · langchain

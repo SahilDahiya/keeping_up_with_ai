@@ -1,10 +1,17 @@
 ---
 title: A Fireside Chat with Cat and Thariq from the Claude Code team
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: agents
+subtopic: harness
+secondary_topics:
+- evals-observability/evaluation
+- product-engineering/security
+summary: Transcript of a fireside chat with Anthropic's Claude Code team covering
+  Claude Tag's proactive multiplayer Slack agent with team memory (65% of product-eng
+  PRs), a six-month migration to letting Claude fully review PRs at the 'outer layers'
+  backed by incident-driven eval sets, an 80% system-prompt size cut for Fable/Opus
+  4.8 (fewer examples and hard constraints, more context), and how auto mode was red-teamed
+  against prompt injection before becoming Claude Tag's foundation.
 triage: null
 skip_reason: null
 source: simon-willison
@@ -12,7 +19,7 @@ url: https://simonwillison.net/2026/Jul/21/cat-and-thariq/
 author: Simon Willison
 published: '2026-07-21'
 fetched: '2026-07-22T06:57:11Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 8217
 content_sha256: b3ff5848ea4b8fe45c4fde91f71b69da9ef9eb4cfbb2a4e669cd64d3db0e521f

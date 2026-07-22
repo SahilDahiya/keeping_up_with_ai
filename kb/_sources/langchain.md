@@ -1,7 +1,11 @@
 # langchain
 
-88 articles.
+90 articles.
 
+- **2026-07-21** — [How Apollo Uses Deep Agents and LangSmith for GTM AI](<../agents/harness/How Apollo Uses Deep Agents and LangSmith for GTM AI.md>) · `harness` · langchain
+  Apollo rearchitected its GTM AI Assistant from a LangGraph supervisor-hierarchy multi-agent system (a bespoke sub-agent wired into the router per use case) to LangChain's Deep Agents for goal-based, model-neutral execution, paired with LangSmith for tracing and evaluation.
+- **2026-07-21** — [Trace voice agents in LangSmith](<../evals-observability/tracing/Trace voice agents in LangSmith.md>) · `tracing` · langchain
+  LangSmith adds Python tracing integrations for four voice agent frameworks (Pipecat, LiveKit, OpenAI Realtime, Gemini Live/ADK), covering both 'sandwich' (STT to LLM to TTS) and speech-to-speech architectures with audio recording, per-component latency breakdown, and interruption tracking.
 - **2026-07-20** — [IssueBench - How We Evaluate Engine](<../evals-observability/benchmark-design/IssueBench - How We Evaluate Engine.md>) · `benchmark-design` · langchain
   Describes IssueBench, LangChain's internal benchmark for LangSmith Engine (an agent that finds/clusters/fixes issues in other agents' traces): 15 tasks with synthetically injected, ground-truth-labeled failures across SRE, software engineering, and customer support domains, run on Harbor and scored on classification, categorization, issue-attachment, and new-issue-grouping accuracy.
 - **2026-07-20** — [Building Governed Agents: A Framework for Cost, Control, and Compliance](<../product-engineering/security/Building Governed Agents A Framework for Cost, Control, and Compliance.md>) · `security` · langchain

@@ -1,10 +1,15 @@
 ---
 title: How OpenAI uses human feedback to evaluate and improve LLMs
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: evals-observability
+subtopic: evaluation
+secondary_topics:
+- agents/tool-use
+summary: OpenAI aggregates explicit and implicit user feedback into a shared data
+  layer, using an LLM-derived pipeline to recover in-conversation corrections (2-3x
+  more actionable signal) and embedding-based KNN clustering to surface failure patterns
+  beyond a hierarchical taxonomy, with MCP/skills letting Codex turn a raw bug report
+  into a root-caused pull request.
 triage: null
 skip_reason: null
 source: arize
@@ -12,7 +17,7 @@ url: https://arize.com/blog/how-openai-turns-user-feedback-into-product-improvem
 author: Sara Verdi
 published: '2026-07-21'
 fetched: '2026-07-22T06:51:37Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 2511
 content_sha256: fb03e329b9b199965829f99dab5aca11eb2450b3939a924449a8b8429a4084b6

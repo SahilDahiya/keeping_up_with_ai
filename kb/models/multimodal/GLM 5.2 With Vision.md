@@ -1,10 +1,14 @@
 ---
 title: GLM 5.2 With Vision
 kind: blog
-topic: null
-subtopic: null
+topic: models
+subtopic: multimodal
 secondary_topics: []
-summary: null
+summary: Baseten post-trained vision onto GLM 5.2 by training only a 50M-parameter,
+  2-layer MLP projector (reusing Kimi K2.6's vision tower) via SFT on 66k image-QA
+  pairs, reaching MMMU-Pro scores equivalent to Claude 4.5 Haiku (55%) without touching
+  GLM's text weights, and observed grokking plus strong generalization to entities
+  never seen in the alignment dataset.
 triage: null
 skip_reason: null
 source: baseten
@@ -12,7 +16,7 @@ url: https://www.baseten.co/blog/glm-52-with-vision/
 author: Harry Partridge
 published: '2026-07-22'
 fetched: '2026-07-22T06:51:06Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 886
 content_sha256: 902429f6d531535425c34e4158c762b0b4d6f49db9fd4ed08f4e6cb158358b46

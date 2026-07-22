@@ -1,7 +1,9 @@
 # cresta
 
-41 articles.
+42 articles.
 
+- **2026-07-21** — [What I Learned by Dogfooding Our Own AI Agent, Signal](<../evals-observability/evaluation/What I Learned by Dogfooding Our Own AI Agent, Signal.md>) · `evaluation` · cresta
+  Cresta dogfooded its Synthetic Customers tool (personas built from real conversation data) against its own website AI agent, Signal, to test the agent against realistic non-happy-path visitors (impatient, adversarial, or channel-switching) instead of idealized test cases.
 - **2026-06-12** — [Agent Assist: What It Is, How It Works & How to Choose](<../agents/tool-use/Agent Assist What It Is, How It Works & How to Choose.md>) · `tool-use` · cresta
   Explains real-time agent assist as a tool-augmented workflow that surfaces guidance during live interactions.
 - **2026-06-11** — [Cresta Conductor: The Agent for AI Agent Development](<../agents/planning/Cresta Conductor The Agent for AI Agent Development.md>) · `planning` · cresta

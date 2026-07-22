@@ -1,7 +1,9 @@
 # simon-willison
 
-11 articles.
+12 articles.
 
+- **2026-07-21** — [A Fireside Chat with Cat and Thariq from the Claude Code team](<../agents/harness/A Fireside Chat with Cat and Thariq from the Claude Code team.md>) · `harness` · simon-willison
+  Transcript of a fireside chat with Anthropic's Claude Code team covering Claude Tag's proactive multiplayer Slack agent with team memory (65% of product-eng PRs), a six-month migration to letting Claude fully review PRs at the 'outer layers' backed by incident-driven eval sets, an 80% system-prompt size cut for Fable/Opus 4.8 (fewer examples and hard constraints, more context), and how auto mode was red-teamed against prompt injection before becoming Claude Tag's foundation.
 - **2026-07-16** — [Inkling: Our open-weights model](<../models/releases/Inkling Our open-weights model.md>) · `releases` · simon-willison
   Simon Willison covers Thinking Machines Lab's first open-weights release, Inkling: a 975B-parameter (41B active) Apache-2.0 MoE transformer trained on 45T multimodal tokens, positioned as a fine-tuning base for their Tinker platform rather than a frontier model, plus a promised smaller Inkling-Small variant.
 - **2026-07-16** — [Kimi K3, and what we can still learn from the pelican benchmark](<../models/releases/Kimi K3, and what we can still learn from the pelican benchmark.md>) · `releases` · simon-willison
