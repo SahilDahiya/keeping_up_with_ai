@@ -1,10 +1,12 @@
 ---
 title: How to optimize LLM inference speed and reduce costs in production
 kind: blog
-topic: null
-subtopic: null
+topic: inference
+subtopic: optimization
 secondary_topics: []
-summary: null
+summary: Surveys production LLM inference optimization techniques -- continuous batching,
+  speculative decoding, KV cache reuse, quantization, and smarter routing -- for cutting
+  latency and cost when GPUs sit idle or repeat work.
 triage: null
 skip_reason: null
 source: baseten
@@ -12,7 +14,7 @@ url: https://www.baseten.co/blog/how-to-optimize-llm-inference-speed-and-reduce-
 author: Chloe Florit
 published: '2026-07-23'
 fetched: '2026-07-23T06:49:51Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 2050
 content_sha256: 56917e74acf8d53d721573bcd78628c508b425c78b4058f0d34ec87bec153a60

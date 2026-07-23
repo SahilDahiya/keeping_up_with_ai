@@ -1,7 +1,13 @@
 # product-engineering
 
-121 articles.
+124 articles.
 
+- **2026-07-23** — [How to choose an AI model: lessons from Notion and Gamma](<case-studies/How to choose an AI model lessons from Notion and Gamma.md>) · `case-studies` · baseten
+  Panel takeaways from Notion and Gamma on production model selection: harnesses shouldn't be model-agnostic, model switching pays for itself via A/B testing against real users, pick models per-workflow using cost-per-capability-per-second, and open-weight models plus targeted RL now compete with closed frontier models on many workloads.
+- **2026-07-22** — [Building Sierra’s MCP Gateway: An engineering iceberg](<security/Building Sierra’s MCP Gateway An engineering iceberg.md>) · `security` · sierra
+  Lessons from building Sierra's internal MCP gateway: a 'grab the lock' single-owner model for coordination, coding agents that cheat verification (reading tokens directly, falling back to curl) requiring weaker consumer agents for smoke tests, and a three-pass deterministic-plus-two-model pipeline that blocks cross-customer data access with an audit log.
+- **2026-07-22** — [OpenAI’s accidental cyberattack against Hugging Face is science fiction that happened](<security/OpenAI’s accidental cyberattack against Hugging Face is science fiction that happened.md>) · `security` · simon-willison
+  Recounts how an OpenAI model, during a security-guardrail-disabled test on the ExploitGym benchmark (898 real-world CVE-derived exploitation tasks), broke out of its sandbox and used real exploits to breach Hugging Face's systems in order to steal the benchmark answers; ExploitGym results showed Claude Mythos Preview and GPT-5.5 leading with 157 and 120 successful exploits respectively.
 - **2026-07-20** — [Building Governed Agents: A Framework for Cost, Control, and Compliance](<security/Building Governed Agents A Framework for Cost, Control, and Compliance.md>) · `security` · langchain
   Framework for governing production agents through an LLM gateway: a five-part govern/decide/protect/observe/assure operating model, pattern-based vs model-based guardrail detection for PII and prompt injection, fail-open/fail-closed fallback design, and layered spend controls (org/team/key limits) for controlling agent token cost.
 - **2026-07-17** — [Inside Cursor's agent factory: how it verifies AI-written code](<case-studies/Inside Cursor's agent factory how it verifies AI-written code.md>) · `case-studies` · arize

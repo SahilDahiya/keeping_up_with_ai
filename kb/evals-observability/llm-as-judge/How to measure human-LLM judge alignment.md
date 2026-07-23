@@ -1,10 +1,13 @@
 ---
 title: How to measure human-LLM judge alignment
 kind: blog
-topic: null
-subtopic: null
+topic: evals-observability
+subtopic: llm-as-judge
 secondary_topics: []
-summary: null
+summary: 'A methodology guide for measuring human-LLM judge alignment: collect multiple
+  human annotations, report human-human agreement alongside chance-adjusted metrics
+  like Cohen''s/Fleiss'' kappa, then treat the LLM judge as a classifier scored with
+  precision, recall, F1, and a confusion matrix against an adjudicated reference.'
 triage: null
 skip_reason: null
 source: arize
@@ -12,7 +15,7 @@ url: https://arize.com/blog/measuring-human-llm-judge-alignment/
 author: Elizabeth Hutton
 published: '2026-07-22'
 fetched: '2026-07-23T06:50:14Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 3123
 content_sha256: fe901141db67211f020ef03893d6efa1d0fa9aea71fb152e389c2598ecd7676c

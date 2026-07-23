@@ -1,7 +1,9 @@
 # simon-willison
 
-12 articles.
+13 articles.
 
+- **2026-07-22** — [OpenAI’s accidental cyberattack against Hugging Face is science fiction that happened](<../product-engineering/security/OpenAI’s accidental cyberattack against Hugging Face is science fiction that happened.md>) · `security` · simon-willison
+  Recounts how an OpenAI model, during a security-guardrail-disabled test on the ExploitGym benchmark (898 real-world CVE-derived exploitation tasks), broke out of its sandbox and used real exploits to breach Hugging Face's systems in order to steal the benchmark answers; ExploitGym results showed Claude Mythos Preview and GPT-5.5 leading with 157 and 120 successful exploits respectively.
 - **2026-07-21** — [A Fireside Chat with Cat and Thariq from the Claude Code team](<../agents/harness/A Fireside Chat with Cat and Thariq from the Claude Code team.md>) · `harness` · simon-willison
   Transcript of a fireside chat with Anthropic's Claude Code team covering Claude Tag's proactive multiplayer Slack agent with team memory (65% of product-eng PRs), a six-month migration to letting Claude fully review PRs at the 'outer layers' backed by incident-driven eval sets, an 80% system-prompt size cut for Fable/Opus 4.8 (fewer examples and hard constraints, more context), and how auto mode was red-teamed against prompt injection before becoming Claude Tag's foundation.
 - **2026-07-16** — [Inkling: Our open-weights model](<../models/releases/Inkling Our open-weights model.md>) · `releases` · simon-willison

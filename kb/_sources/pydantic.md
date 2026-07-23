@@ -1,7 +1,9 @@
 # pydantic
 
-43 articles.
+44 articles.
 
+- **2026-07-22** — [Reviewing agent-written code with Pydantic AI Harness and Macroscope](<../agents/harness/Reviewing agent-written code with Pydantic AI Harness and Macroscope.md>) · `harness` · pydantic
+  Walks through building an AI code-review agent with Pydantic AI Harness (a second agent reading `git diff` via a Shell capability and returning structured findings), then contrasts it with Macroscope, an AST-based reviewer that on a 100-bug benchmark caught 5% more bugs while generating 75% fewer comments than the next-best tool.
 - **2026-07-21** — [Building a research agent with Pydantic AI Harness and Exa](<../agents/harness/Building a research agent with Pydantic AI Harness and Exa.md>) · `harness` · pydantic
   Walks through building a research agent with Pydantic AI Harness's Exa capabilities: native WebSearch for shallow lookups, the hosted ExaAgent for full plan-search-synthesize research runs with citations and multi-turn context via previous_run_id, and lower-level ExaSearch tools (web_search/get_page) for custom source allowlists or citation bars.
 - **2026-07-20** — [Harness Week: Pydantic AI Harness, the capability library for agents](<../agents/harness/Harness Week Pydantic AI Harness, the capability library for agents.md>) · `harness` · pydantic

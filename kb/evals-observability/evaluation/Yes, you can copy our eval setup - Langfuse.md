@@ -1,10 +1,13 @@
 ---
 title: Yes, you can copy our eval setup - Langfuse
 kind: blog
-topic: null
-subtopic: null
+topic: evals-observability
+subtopic: evaluation
 secondary_topics: []
-summary: null
+summary: 'Langfuse shares its full eval setup for its own RAG-backed docs chatbot:
+  trace every step with userId/sessionId for session grouping, monitor production
+  signals, convert reviewed traces into datasets, and run experiments -- following
+  their ''AI engineering loop'' of trace, monitor, dataset, experiment.'
 triage: null
 skip_reason: null
 source: langfuse
@@ -12,7 +15,7 @@ url: https://langfuse.com/blog/2026-07-16-steal-our-eval-setup
 author: null
 published: '2026-07-16'
 fetched: '2026-07-23T06:50:07Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1707
 content_sha256: 68796fafc3d6f182700b47b7eea6e69d38fc2cd7f8e65c8ac8891ee1a06f27cd

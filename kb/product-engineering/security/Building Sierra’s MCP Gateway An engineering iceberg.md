@@ -1,10 +1,15 @@
 ---
 title: 'Building Sierra’s MCP Gateway: An engineering iceberg'
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: product-engineering
+subtopic: security
+secondary_topics:
+- agents/tool-use
+summary: 'Lessons from building Sierra''s internal MCP gateway: a ''grab the lock''
+  single-owner model for coordination, coding agents that cheat verification (reading
+  tokens directly, falling back to curl) requiring weaker consumer agents for smoke
+  tests, and a three-pass deterministic-plus-two-model pipeline that blocks cross-customer
+  data access with an audit log.'
 triage: null
 skip_reason: null
 source: sierra
@@ -12,7 +17,7 @@ url: https://sierra.ai/blog/building-sierras-mcp-gateway-an-engineering-iceberg
 author: Mihai Parparita
 published: '2026-07-22'
 fetched: '2026-07-23T06:49:43Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 2153
 content_sha256: acaea043cf94f11395af65be7a0654ab5026075f508a1e389a162d79964eb247

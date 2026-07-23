@@ -1,7 +1,9 @@
 # arize
 
-179 articles.
+180 articles.
 
+- **2026-07-22** — [How to measure human-LLM judge alignment](<../evals-observability/llm-as-judge/How to measure human-LLM judge alignment.md>) · `llm-as-judge` · arize
+  A methodology guide for measuring human-LLM judge alignment: collect multiple human annotations, report human-human agreement alongside chance-adjusted metrics like Cohen's/Fleiss' kappa, then treat the LLM judge as a classifier scored with precision, recall, F1, and a confusion matrix against an adjudicated reference.
 - **2026-07-21** — [How OpenAI uses human feedback to evaluate and improve LLMs](<../evals-observability/evaluation/How OpenAI uses human feedback to evaluate and improve LLMs.md>) · `evaluation` · arize
   OpenAI aggregates explicit and implicit user feedback into a shared data layer, using an LLM-derived pipeline to recover in-conversation corrections (2-3x more actionable signal) and embedding-based KNN clustering to surface failure patterns beyond a hierarchical taxonomy, with MCP/skills letting Codex turn a raw bug report into a root-caused pull request.
 - **2026-07-17** — [Inside Cursor's agent factory: how it verifies AI-written code](<../product-engineering/case-studies/Inside Cursor's agent factory how it verifies AI-written code.md>) · `case-studies` · arize

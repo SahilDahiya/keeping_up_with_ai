@@ -1,7 +1,11 @@
 # langchain
 
-89 articles.
+91 articles.
 
+- **2026-07-22** — [3 Years of Graph Engineering with LangGraph](<../agents/harness/3 Years of Graph Engineering with LangGraph.md>) · `harness` · langchain
+  LangChain's three-year retrospective on building agents as graphs: production agent graphs are rarely DAGs since they need retry/revision cycles, loops are just simple cyclic graphs, dynamic fan-out (LangGraph's Send API) handles map-reduce without predefined edges, and the new pattern is embedding full agent runs (e.g. coding agents) as graph nodes rather than single LLM calls.
+- **2026-07-22** — [Eval Engineering Skill: Build Evals From Repo Context and Traces](<../evals-observability/evaluation/Eval Engineering Skill Build Evals From Repo Context and Traces.md>) · `evaluation` · langchain
+  LangChain's Eval Engineering Skill builds executable evals (in Harbor task format) by crawling a repo's agent surface and traces, interviewing the user to pick eval directions, and iterating verifiers by inspecting agent/verifier trajectories to catch reward hacking like overciting sources or claiming untaken actions.
 - **2026-07-21** — [How Apollo Uses Deep Agents and LangSmith for GTM AI](<../agents/harness/How Apollo Uses Deep Agents and LangSmith for GTM AI.md>) · `harness` · langchain
   Apollo rearchitected its GTM AI Assistant from a LangGraph supervisor-hierarchy multi-agent system (a bespoke sub-agent wired into the router per use case) to LangChain's Deep Agents for goal-based, model-neutral execution, paired with LangSmith for tracing and evaluation.
 - **2026-07-21** — [Trace voice agents in LangSmith](<../evals-observability/tracing/Trace voice agents in LangSmith.md>) · `tracing` · langchain

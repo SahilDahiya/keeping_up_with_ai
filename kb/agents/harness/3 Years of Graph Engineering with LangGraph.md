@@ -1,10 +1,14 @@
 ---
 title: 3 Years of Graph Engineering with LangGraph
 kind: blog
-topic: null
-subtopic: null
+topic: agents
+subtopic: harness
 secondary_topics: []
-summary: null
+summary: 'LangChain''s three-year retrospective on building agents as graphs: production
+  agent graphs are rarely DAGs since they need retry/revision cycles, loops are just
+  simple cyclic graphs, dynamic fan-out (LangGraph''s Send API) handles map-reduce
+  without predefined edges, and the new pattern is embedding full agent runs (e.g.
+  coding agents) as graph nodes rather than single LLM calls.'
 triage: null
 skip_reason: null
 source: langchain
@@ -12,7 +16,7 @@ url: https://www.langchain.com/blog/3-years-of-graph-engineering-with-langgraph
 author: Sydney Runkle Harrison Chase
 published: '2026-07-22'
 fetched: '2026-07-23T06:50:11Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1258
 content_sha256: 9244c40c20369d5e142fabb79ad7b8118f13ba5ed6f222a34d450b9e67d73565

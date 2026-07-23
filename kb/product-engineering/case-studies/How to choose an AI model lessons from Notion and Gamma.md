@@ -1,10 +1,14 @@
 ---
 title: 'How to choose an AI model: lessons from Notion and Gamma'
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: product-engineering
+subtopic: case-studies
+secondary_topics:
+- models/benchmarks
+summary: 'Panel takeaways from Notion and Gamma on production model selection: harnesses
+  shouldn''t be model-agnostic, model switching pays for itself via A/B testing against
+  real users, pick models per-workflow using cost-per-capability-per-second, and open-weight
+  models plus targeted RL now compete with closed frontier models on many workloads.'
 triage: null
 skip_reason: null
 source: baseten
@@ -12,7 +16,7 @@ url: https://www.baseten.co/blog/how-to-choose-a-model-lessons-from-notion-and-g
 author: Chloe Florit
 published: '2026-07-23'
 fetched: '2026-07-23T06:49:49Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1203
 content_sha256: 84a18b940c74a94bd7c7bc7d0562f615c5cc7f1ae804827a9792fef1a25f8ed3

@@ -1,7 +1,9 @@
 # langfuse
 
-36 articles.
+37 articles.
 
+- **2026-07-16** — [Yes, you can copy our eval setup - Langfuse](<../evals-observability/evaluation/Yes, you can copy our eval setup - Langfuse.md>) · `evaluation` · langfuse
+  Langfuse shares its full eval setup for its own RAG-backed docs chatbot: trace every step with userId/sessionId for session grouping, monitor production signals, convert reviewed traces into datasets, and run experiments -- following their 'AI engineering loop' of trace, monitor, dataset, experiment.
 - **2026-07-15** — [Building Deployment Gates for LLMs and AI Agents in Financial Services - Langfuse](<../evals-observability/evaluation/Building Deployment Gates for LLMs and AI Agents in Financial Services - Langfuse.md>) · `evaluation` · langfuse
   Walks through a PASS/FAIL deployment-gate pipeline for LLM systems at a major bank, built on Langfuse datasets/experiments/prompt management/annotation queues: three golden datasets (FinanceBench, Financial PhraseBank, a custom adversarial advisory set) score models and agents, gate on thresholds like 85% numerical accuracy, and emit CI exit codes plus reviewable evidence for model risk management.
 - **2026-06-22** — [Designing the runtime for Langfuse code evaluators](<../evals-observability/testing/Designing the runtime for Langfuse code evaluators.md>) · `testing` · langfuse

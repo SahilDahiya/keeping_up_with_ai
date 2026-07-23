@@ -1,10 +1,13 @@
 ---
 title: 'Eval Engineering Skill: Build Evals From Repo Context and Traces'
 kind: blog
-topic: null
-subtopic: null
+topic: evals-observability
+subtopic: evaluation
 secondary_topics: []
-summary: null
+summary: LangChain's Eval Engineering Skill builds executable evals (in Harbor task
+  format) by crawling a repo's agent surface and traces, interviewing the user to
+  pick eval directions, and iterating verifiers by inspecting agent/verifier trajectories
+  to catch reward hacking like overciting sources or claiming untaken actions.
 triage: null
 skip_reason: null
 source: langchain
@@ -12,7 +15,7 @@ url: https://www.langchain.com/blog/towards-automating-eval-engineering
 author: Vivek Trivedy
 published: '2026-07-22'
 fetched: '2026-07-23T06:50:09Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 947
 content_sha256: 4f7a27e67ea64d3d8c691b6ad5bc5ba2cf58304cc9900974f7fb983bcc434aa6

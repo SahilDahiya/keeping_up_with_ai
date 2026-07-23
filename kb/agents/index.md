@@ -1,7 +1,11 @@
 # agents
 
-179 articles.
+181 articles.
 
+- **2026-07-22** — [3 Years of Graph Engineering with LangGraph](<harness/3 Years of Graph Engineering with LangGraph.md>) · `harness` · langchain
+  LangChain's three-year retrospective on building agents as graphs: production agent graphs are rarely DAGs since they need retry/revision cycles, loops are just simple cyclic graphs, dynamic fan-out (LangGraph's Send API) handles map-reduce without predefined edges, and the new pattern is embedding full agent runs (e.g. coding agents) as graph nodes rather than single LLM calls.
+- **2026-07-22** — [Reviewing agent-written code with Pydantic AI Harness and Macroscope](<harness/Reviewing agent-written code with Pydantic AI Harness and Macroscope.md>) · `harness` · pydantic
+  Walks through building an AI code-review agent with Pydantic AI Harness (a second agent reading `git diff` via a Shell capability and returning structured findings), then contrasts it with Macroscope, an AST-based reviewer that on a 100-bug benchmark caught 5% more bugs while generating 75% fewer comments than the next-best tool.
 - **2026-07-21** — [A Fireside Chat with Cat and Thariq from the Claude Code team](<harness/A Fireside Chat with Cat and Thariq from the Claude Code team.md>) · `harness` · simon-willison
   Transcript of a fireside chat with Anthropic's Claude Code team covering Claude Tag's proactive multiplayer Slack agent with team memory (65% of product-eng PRs), a six-month migration to letting Claude fully review PRs at the 'outer layers' backed by incident-driven eval sets, an 80% system-prompt size cut for Fable/Opus 4.8 (fewer examples and hard constraints, more context), and how auto mode was red-teamed against prompt injection before becoming Claude Tag's foundation.
 - **2026-07-21** — [Building a research agent with Pydantic AI Harness and Exa](<harness/Building a research agent with Pydantic AI Harness and Exa.md>) · `harness` · pydantic
@@ -363,6 +367,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-07-22** — [Building Sierra’s MCP Gateway: An engineering iceberg](<../product-engineering/security/Building Sierra’s MCP Gateway An engineering iceberg.md>) · `security` · sierra
+  Lessons from building Sierra's internal MCP gateway: a 'grab the lock' single-owner model for coordination, coding agents that cheat verification (reading tokens directly, falling back to curl) requiring weaker consumer agents for smoke tests, and a three-pass deterministic-plus-two-model pipeline that blocks cross-customer data access with an audit log.
 - **2026-07-21** — [How OpenAI uses human feedback to evaluate and improve LLMs](<../evals-observability/evaluation/How OpenAI uses human feedback to evaluate and improve LLMs.md>) · `evaluation` · arize
   OpenAI aggregates explicit and implicit user feedback into a shared data layer, using an LLM-derived pipeline to recover in-conversation corrections (2-3x more actionable signal) and embedding-based KNN clustering to surface failure patterns beyond a hierarchical taxonomy, with MCP/skills letting Codex turn a raw bug report into a root-caused pull request.
 - **2026-07-21** — [Devin Outposts on Modal | Modal Blog](<../infra-platform/deployment/Devin Outposts on Modal Modal Blog.md>) · `deployment` · modal

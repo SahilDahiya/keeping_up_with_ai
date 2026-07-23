@@ -1,10 +1,15 @@
 ---
 title: Reviewing agent-written code with Pydantic AI Harness and Macroscope
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: agents
+subtopic: harness
+secondary_topics:
+- evals-observability/evaluation
+summary: Walks through building an AI code-review agent with Pydantic AI Harness (a
+  second agent reading `git diff` via a Shell capability and returning structured
+  findings), then contrasts it with Macroscope, an AST-based reviewer that on a 100-bug
+  benchmark caught 5% more bugs while generating 75% fewer comments than the next-best
+  tool.
 triage: null
 skip_reason: null
 source: pydantic
@@ -12,7 +17,7 @@ url: https://pydantic.dev/articles/harness-macroscope
 author: Bill Easton
 published: '2026-07-22'
 fetched: '2026-07-23T06:55:44Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1494
 content_sha256: f4987e8dab5b3c8e313903948261af260993d4b9d4246ac02e0b8bb317020d23
