@@ -1,7 +1,9 @@
 # langchain
 
-91 articles.
+92 articles.
 
+- **2026-07-23** — [How We Benchmark Deep Agents](<../evals-observability/evaluation/How We Benchmark Deep Agents.md>) · `evaluation` · langchain
+  LangChain describes how it evaluates Deep Agents using Harbor as an eval runner across three benchmark suites — Harbor-Index (82 end-to-end SWE/search/data-analysis tasks distilled from 6,000+ candidates), τ³-bench (30-task multi-turn conversation), and ContextBench (30 retrieval tasks with in-sandbox corpora) — judged by artifact-checking scripts rather than final-response inspection.
 - **2026-07-22** — [3 Years of Graph Engineering with LangGraph](<../agents/harness/3 Years of Graph Engineering with LangGraph.md>) · `harness` · langchain
   LangChain's three-year retrospective on building agents as graphs: production agent graphs are rarely DAGs since they need retry/revision cycles, loops are just simple cyclic graphs, dynamic fan-out (LangGraph's Send API) handles map-reduce without predefined edges, and the new pattern is embedding full agent runs (e.g. coding agents) as graph nodes rather than single LLM calls.
 - **2026-07-22** — [Eval Engineering Skill: Build Evals From Repo Context and Traces](<../evals-observability/evaluation/Eval Engineering Skill Build Evals From Repo Context and Traces.md>) · `evaluation` · langchain

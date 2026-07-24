@@ -1,10 +1,15 @@
 ---
 title: Running Pydantic AI Harness agents on Modal sandboxes
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: agents
+subtopic: harness
+secondary_topics:
+- infra-platform/deployment
+summary: Pydantic AI Harness's ModalSandbox capability offloads agent shell/file work
+  into gVisor-isolated Modal containers spun up per sub-agent (sub-second scheduling,
+  torn down after use) while CodeMode keeps the model's reasoning code in-process
+  via Monty; shown fanning out 40-500 sandboxed test-suite runs and racing candidate
+  fixes with asyncio, all traced through Logfire.
 triage: null
 skip_reason: null
 source: pydantic
@@ -12,7 +17,7 @@ url: https://pydantic.dev/articles/harness-modal
 author: Bill Easton
 published: '2026-07-23'
 fetched: '2026-07-24T06:55:41Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1163
 content_sha256: d94866c45d2d98ec678975b3ca8fbc0d7f983da34ddd73d9f1402a4e4ff99c80

@@ -149,6 +149,10 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-07-23** — [Running Pydantic AI Harness agents on Modal sandboxes](<../agents/harness/Running Pydantic AI Harness agents on Modal sandboxes.md>) · `harness` · pydantic
+  Pydantic AI Harness's ModalSandbox capability offloads agent shell/file work into gVisor-isolated Modal containers spun up per sub-agent (sub-second scheduling, torn down after use) while CodeMode keeps the model's reasoning code in-process via Monty; shown fanning out 40-500 sandboxed test-suite runs and racing candidate fixes with asyncio, all traced through Logfire.
+- **2026-07-23** — [The production platform for open-weight AI inference](<../inference/serving/The production platform for open-weight AI inference.md>) · `serving` · together
+  Together's Dedicated Model Inference platform decouples a stable endpoint from underlying deployments, adding canary/blue-green/rolling rollouts with auto-rollback, A/B and shadow traffic testing, autoscaling on signals like TTFT/GPU utilization/decode speed, and a rebuilt model-caching/distribution layer delivering roughly 4x faster warm starts, alongside a closed beta for full-weight and LoRA RL/SFT training with direct-to-prod checkpoint deploys.
 - **2026-07-20** — [Building Governed Agents: A Framework for Cost, Control, and Compliance](<../product-engineering/security/Building Governed Agents A Framework for Cost, Control, and Compliance.md>) · `security` · langchain
   Framework for governing production agents through an LLM gateway: a five-part govern/decide/protect/observe/assure operating model, pattern-based vs model-based guardrail detection for PII and prompt injection, fail-open/fail-closed fallback design, and layered spend controls (org/team/key limits) for controlling agent token cost.
 - **2026-07-15** — [AI gateway with data loss prevention, failover, and spend caps in Pydantic Logfire](<../product-engineering/security/AI gateway with data loss prevention, failover, and spend caps in Pydantic Logfire.md>) · `security` · pydantic

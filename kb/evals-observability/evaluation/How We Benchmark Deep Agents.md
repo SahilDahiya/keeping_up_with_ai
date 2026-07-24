@@ -1,10 +1,15 @@
 ---
 title: How We Benchmark Deep Agents
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: evals-observability
+subtopic: evaluation
+secondary_topics:
+- agents/harness
+summary: LangChain describes how it evaluates Deep Agents using Harbor as an eval
+  runner across three benchmark suites — Harbor-Index (82 end-to-end SWE/search/data-analysis
+  tasks distilled from 6,000+ candidates), τ³-bench (30-task multi-turn conversation),
+  and ContextBench (30 retrieval tasks with in-sandbox corpora) — judged by artifact-checking
+  scripts rather than final-response inspection.
 triage: null
 skip_reason: null
 source: langchain
@@ -12,7 +17,7 @@ url: https://www.langchain.com/blog/how-we-benchmark-deep-agents
 author: Nick Hollon Harrison Chase
 published: '2026-07-23'
 fetched: '2026-07-24T06:49:59Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 725
 content_sha256: 368575019c1d833da8dfcd2acf33ad78fd0cf6694e491ce7cb9c0fadef21ef4f

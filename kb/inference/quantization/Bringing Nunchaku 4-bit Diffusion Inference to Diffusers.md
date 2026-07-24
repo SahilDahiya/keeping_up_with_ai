@@ -1,10 +1,14 @@
 ---
 title: Bringing Nunchaku 4-bit Diffusion Inference to Diffusers
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: inference
+subtopic: quantization
+secondary_topics:
+- models/multimodal
+summary: Diffusers now natively loads Nunchaku's SVDQuant W4A4 checkpoints via from_pretrained()
+  and the Hugging Face `kernels` package, requiring no local CUDA compilation; unlike
+  weight-only quantization, SVDQuant runs transformer layers in 4-bit weights and
+  activations, cutting both memory and denoising-loop latency.
 triage: null
 skip_reason: null
 source: huggingface
@@ -12,7 +16,7 @@ url: https://huggingface.co/blog/nunchaku-diffusers
 author: Pham Hong Vinh; Sayak Paul
 published: '2026-07-23'
 fetched: '2026-07-24T06:55:36Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 2035
 content_sha256: 369b596f9994175736acb744295381f5e4a50fed7f55e7742d3b9349e3823e7e

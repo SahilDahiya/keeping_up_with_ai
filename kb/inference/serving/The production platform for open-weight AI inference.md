@@ -1,10 +1,16 @@
 ---
 title: The production platform for open-weight AI inference
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: inference
+subtopic: serving
+secondary_topics:
+- infra-platform/deployment
+summary: Together's Dedicated Model Inference platform decouples a stable endpoint
+  from underlying deployments, adding canary/blue-green/rolling rollouts with auto-rollback,
+  A/B and shadow traffic testing, autoscaling on signals like TTFT/GPU utilization/decode
+  speed, and a rebuilt model-caching/distribution layer delivering roughly 4x faster
+  warm starts, alongside a closed beta for full-weight and LoRA RL/SFT training with
+  direct-to-prod checkpoint deploys.
 triage: null
 skip_reason: null
 source: together
@@ -12,7 +18,7 @@ url: https://www.together.ai/blog/the-production-platform-for-open-weight-ai-inf
 author: Nikitha Suryadevara; Ted Cui; Will Van Eaton; Charles Zedlewski
 published: '2026-07-23'
 fetched: '2026-07-24T06:49:50Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1579
 content_sha256: 01b13e0828bfa6dc4e886acf0cd7709093a091fdb9a95adeed60b4905afc9d80

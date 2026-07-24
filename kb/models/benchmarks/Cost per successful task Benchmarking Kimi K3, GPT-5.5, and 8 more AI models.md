@@ -1,10 +1,15 @@
 ---
 title: 'Cost per successful task: Benchmarking Kimi K3, GPT-5.5, and 8 more AI models'
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: models
+subtopic: benchmarks
+secondary_topics:
+- evals-observability/benchmark-design
+summary: Arize and Fireworks benchmark 10 models (Kimi K3, K2.6, GPT-5.5, GPT-5, Claude
+  Sonnet 5, GLM-5.2, DeepSeek V4 Pro, gpt-oss-120b, two Gemini variants) across 40
+  agent tasks and 2,400 runs, arguing cost-per-successful-task (spend across all attempts
+  / successes) is the metric that matters, not token price — gpt-oss-120b wins on
+  cost-per-success despite a 33% pass rate.
 triage: null
 skip_reason: null
 source: arize
@@ -12,7 +17,7 @@ url: https://arize.com/blog/cost-per-successful-task-ai-model-benchmark
 author: Laurie Voss
 published: '2026-07-23'
 fetched: '2026-07-24T06:50:05Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 3261
 content_sha256: 162126166fd371f8884065bbd9ad959dd3aa3ad850c74a90f72e8ab241f2fccd

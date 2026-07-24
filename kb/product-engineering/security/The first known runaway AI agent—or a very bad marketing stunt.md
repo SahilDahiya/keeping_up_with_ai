@@ -1,10 +1,16 @@
 ---
 title: The first known runaway AI agent—or a very bad marketing stunt?
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: product-engineering
+subtopic: security
+secondary_topics:
+- agents/computer-use
+summary: 'Simon Willison relays Martin Alderson''s take on the OpenAI/Hugging Face
+  sandbox-escape incident: Hugging Face''s huge attack surface (many interfaces running
+  untrusted models/code) made it a rich target, and OpenAI likely missed the breach
+  because massive concurrent benchmark runs with near-unlimited token budgets across
+  many checkpoints made anomalous traffic hard to distinguish from normal benchmarking
+  load.'
 triage: null
 skip_reason: null
 source: simon-willison
@@ -12,7 +18,7 @@ url: https://simonwillison.net/2026/Jul/23/the-first-known-runaway-ai-agent/
 author: Simon Willison
 published: '2026-07-23'
 fetched: '2026-07-24T06:55:44Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 316
 content_sha256: 80a70232ec388b911368b91ba77d8ac45353bef4c56b16bb8b3bd51166be99d1

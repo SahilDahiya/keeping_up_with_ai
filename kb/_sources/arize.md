@@ -1,7 +1,9 @@
 # arize
 
-180 articles.
+181 articles.
 
+- **2026-07-23** — [Cost per successful task: Benchmarking Kimi K3, GPT-5.5, and 8 more AI models](<../models/benchmarks/Cost per successful task Benchmarking Kimi K3, GPT-5.5, and 8 more AI models.md>) · `benchmarks` · arize
+  Arize and Fireworks benchmark 10 models (Kimi K3, K2.6, GPT-5.5, GPT-5, Claude Sonnet 5, GLM-5.2, DeepSeek V4 Pro, gpt-oss-120b, two Gemini variants) across 40 agent tasks and 2,400 runs, arguing cost-per-successful-task (spend across all attempts / successes) is the metric that matters, not token price — gpt-oss-120b wins on cost-per-success despite a 33% pass rate.
 - **2026-07-22** — [How to measure human-LLM judge alignment](<../evals-observability/llm-as-judge/How to measure human-LLM judge alignment.md>) · `llm-as-judge` · arize
   A methodology guide for measuring human-LLM judge alignment: collect multiple human annotations, report human-human agreement alongside chance-adjusted metrics like Cohen's/Fleiss' kappa, then treat the LLM judge as a classifier scored with precision, recall, F1, and a confusion matrix against an adjudicated reference.
 - **2026-07-21** — [How OpenAI uses human feedback to evaluate and improve LLMs](<../evals-observability/evaluation/How OpenAI uses human feedback to evaluate and improve LLMs.md>) · `evaluation` · arize

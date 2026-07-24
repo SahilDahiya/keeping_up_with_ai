@@ -1,7 +1,9 @@
 # pydantic
 
-44 articles.
+45 articles.
 
+- **2026-07-23** — [Running Pydantic AI Harness agents on Modal sandboxes](<../agents/harness/Running Pydantic AI Harness agents on Modal sandboxes.md>) · `harness` · pydantic
+  Pydantic AI Harness's ModalSandbox capability offloads agent shell/file work into gVisor-isolated Modal containers spun up per sub-agent (sub-second scheduling, torn down after use) while CodeMode keeps the model's reasoning code in-process via Monty; shown fanning out 40-500 sandboxed test-suite runs and racing candidate fixes with asyncio, all traced through Logfire.
 - **2026-07-22** — [Reviewing agent-written code with Pydantic AI Harness and Macroscope](<../agents/harness/Reviewing agent-written code with Pydantic AI Harness and Macroscope.md>) · `harness` · pydantic
   Walks through building an AI code-review agent with Pydantic AI Harness (a second agent reading `git diff` via a Shell capability and returning structured findings), then contrasts it with Macroscope, an AST-based reviewer that on a 100-bug benchmark caught 5% more bugs while generating 75% fewer comments than the next-best tool.
 - **2026-07-21** — [Building a research agent with Pydantic AI Harness and Exa](<../agents/harness/Building a research agent with Pydantic AI Harness and Exa.md>) · `harness` · pydantic

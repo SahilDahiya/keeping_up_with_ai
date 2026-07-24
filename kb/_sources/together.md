@@ -1,7 +1,9 @@
 # together
 
-80 articles.
+81 articles.
 
+- **2026-07-23** — [The production platform for open-weight AI inference](<../inference/serving/The production platform for open-weight AI inference.md>) · `serving` · together
+  Together's Dedicated Model Inference platform decouples a stable endpoint from underlying deployments, adding canary/blue-green/rolling rollouts with auto-rollback, A/B and shadow traffic testing, autoscaling on signals like TTFT/GPU utilization/decode speed, and a rebuilt model-caching/distribution layer delivering roughly 4x faster warm starts, alongside a closed beta for full-weight and LoRA RL/SFT training with direct-to-prod checkpoint deploys.
 - **2026-07-16** — [What does 99.9% uptime mean for inference?](<../inference/serving/What does 99.9% uptime mean for inference.md>) · `serving` · together
   Together breaks down what each reliability 'nine' actually requires for GPU inference serving, mapping failure domains (compute ECC errors, NIC/NVLink faults, storage, network, software/routing bugs) to the multi-region and AZ-redundancy architecture needed to survive them.
 - **2026-07-15** — [Together AI brings Thinking Machines Lab’s new model Inkling on day 0](<../models/architectures/Together AI brings Thinking Machines Lab’s new model Inkling on day 0.md>) · `architectures` · together

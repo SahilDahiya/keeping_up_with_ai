@@ -1,7 +1,9 @@
 # models
 
-220 articles.
+221 articles.
 
+- **2026-07-23** — [Cost per successful task: Benchmarking Kimi K3, GPT-5.5, and 8 more AI models](<benchmarks/Cost per successful task Benchmarking Kimi K3, GPT-5.5, and 8 more AI models.md>) · `benchmarks` · arize
+  Arize and Fireworks benchmark 10 models (Kimi K3, K2.6, GPT-5.5, GPT-5, Claude Sonnet 5, GLM-5.2, DeepSeek V4 Pro, gpt-oss-120b, two Gemini variants) across 40 agent tasks and 2,400 runs, arguing cost-per-successful-task (spend across all attempts / successes) is the metric that matters, not token price — gpt-oss-120b wins on cost-per-success despite a 33% pass rate.
 - **2026-07-22** — [GLM 5.2 With Vision](<multimodal/GLM 5.2 With Vision.md>) · `multimodal` · baseten
   Baseten post-trained vision onto GLM 5.2 by training only a 50M-parameter, 2-layer MLP projector (reusing Kimi K2.6's vision tower) via SFT on 66k image-QA pairs, reaching MMMU-Pro scores equivalent to Claude 4.5 Haiku (55%) without touching GLM's text weights, and observed grokking plus strong generalization to entities never seen in the alignment dataset.
 - **2026-07-21** — [Kimi K3 is competitive with Fable; Kimi K3 + Fable is SoTA.](<benchmarks/Kimi K3 is competitive with Fable; Kimi K3 + Fable is SoTA.md>) · `benchmarks` · fireworks
@@ -445,6 +447,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-07-23** — [Bringing Nunchaku 4-bit Diffusion Inference to Diffusers](<../inference/quantization/Bringing Nunchaku 4-bit Diffusion Inference to Diffusers.md>) · `quantization` · huggingface
+  Diffusers now natively loads Nunchaku's SVDQuant W4A4 checkpoints via from_pretrained() and the Hugging Face `kernels` package, requiring no local CUDA compilation; unlike weight-only quantization, SVDQuant runs transformer layers in 4-bit weights and activations, cutting both memory and denoising-loop latency.
 - **2026-07-23** — [How to choose an AI model: lessons from Notion and Gamma](<../product-engineering/case-studies/How to choose an AI model lessons from Notion and Gamma.md>) · `case-studies` · baseten
   Panel takeaways from Notion and Gamma on production model selection: harnesses shouldn't be model-agnostic, model switching pays for itself via A/B testing against real users, pick models per-workflow using cost-per-capability-per-second, and open-weight models plus targeted RL now compete with closed frontier models on many workloads.
 - **2026-07-16** — [Real-time video generation inference on Baseten](<../inference/optimization/Real-time video generation inference on Baseten.md>) · `optimization` · baseten

@@ -1,7 +1,9 @@
 # evals-observability
 
-239 articles.
+240 articles.
 
+- **2026-07-23** — [How We Benchmark Deep Agents](<evaluation/How We Benchmark Deep Agents.md>) · `evaluation` · langchain
+  LangChain describes how it evaluates Deep Agents using Harbor as an eval runner across three benchmark suites — Harbor-Index (82 end-to-end SWE/search/data-analysis tasks distilled from 6,000+ candidates), τ³-bench (30-task multi-turn conversation), and ContextBench (30 retrieval tasks with in-sandbox corpora) — judged by artifact-checking scripts rather than final-response inspection.
 - **2026-07-22** — [Eval Engineering Skill: Build Evals From Repo Context and Traces](<evaluation/Eval Engineering Skill Build Evals From Repo Context and Traces.md>) · `evaluation` · langchain
   LangChain's Eval Engineering Skill builds executable evals (in Harbor task format) by crawling a repo's agent surface and traces, interviewing the user to pick eval directions, and iterating verifiers by inspecting agent/verifier trajectories to catch reward hacking like overciting sources or claiming untaken actions.
 - **2026-07-22** — [How to measure human-LLM judge alignment](<llm-as-judge/How to measure human-LLM judge alignment.md>) · `llm-as-judge` · arize
@@ -483,6 +485,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-07-23** — [Cost per successful task: Benchmarking Kimi K3, GPT-5.5, and 8 more AI models](<../models/benchmarks/Cost per successful task Benchmarking Kimi K3, GPT-5.5, and 8 more AI models.md>) · `benchmarks` · arize
+  Arize and Fireworks benchmark 10 models (Kimi K3, K2.6, GPT-5.5, GPT-5, Claude Sonnet 5, GLM-5.2, DeepSeek V4 Pro, gpt-oss-120b, two Gemini variants) across 40 agent tasks and 2,400 runs, arguing cost-per-successful-task (spend across all attempts / successes) is the metric that matters, not token price — gpt-oss-120b wins on cost-per-success despite a 33% pass rate.
 - **2026-07-22** — [Reviewing agent-written code with Pydantic AI Harness and Macroscope](<../agents/harness/Reviewing agent-written code with Pydantic AI Harness and Macroscope.md>) · `harness` · pydantic
   Walks through building an AI code-review agent with Pydantic AI Harness (a second agent reading `git diff` via a Shell capability and returning structured findings), then contrasts it with Macroscope, an AST-based reviewer that on a 100-bug benchmark caught 5% more bugs while generating 75% fewer comments than the next-best tool.
 - **2026-07-22** — [OpenAI’s accidental cyberattack against Hugging Face is science fiction that happened](<../product-engineering/security/OpenAI’s accidental cyberattack against Hugging Face is science fiction that happened.md>) · `security` · simon-willison

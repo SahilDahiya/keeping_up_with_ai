@@ -1,7 +1,9 @@
 # huggingface
 
-158 articles.
+159 articles.
 
+- **2026-07-23** — [Bringing Nunchaku 4-bit Diffusion Inference to Diffusers](<../inference/quantization/Bringing Nunchaku 4-bit Diffusion Inference to Diffusers.md>) · `quantization` · huggingface
+  Diffusers now natively loads Nunchaku's SVDQuant W4A4 checkpoints via from_pretrained() and the Hugging Face `kernels` package, requiring no local CUDA compilation; unlike weight-only quantization, SVDQuant runs transformer layers in 4-bit weights and activations, cutting both memory and denoising-loop latency.
 - **2026-07-15** — [Introducing Real World VoiceEQ: Measuring the human quality of voice AI](<../evals-observability/benchmark-design/Introducing Real World VoiceEQ Measuring the human quality of voice AI.md>) · `benchmark-design` · huggingface
   Hume AI's Real World VoiceEQ benchmark evaluates 40+ voice models across ASR, TTS, speech-to-speech, and speech understanding using 1M+ human ratings (785K TTS, 48K STS), finding no single model tops all 8 TTS capability groups and that speech-language-model judges disagree with human raters on subjective calls like emotional fit or identity consistency.
 - **2026-06-24** — [Introducing the FFASR Leaderboard: Benchmarking ASR in the Real World](<../evals-observability/benchmark-design/Introducing the FFASR Leaderboard Benchmarking ASR in the Real World.md>) · `benchmark-design` · huggingface

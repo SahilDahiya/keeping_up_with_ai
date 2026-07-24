@@ -1,7 +1,9 @@
 # agents
 
-181 articles.
+182 articles.
 
+- **2026-07-23** — [Running Pydantic AI Harness agents on Modal sandboxes](<harness/Running Pydantic AI Harness agents on Modal sandboxes.md>) · `harness` · pydantic
+  Pydantic AI Harness's ModalSandbox capability offloads agent shell/file work into gVisor-isolated Modal containers spun up per sub-agent (sub-second scheduling, torn down after use) while CodeMode keeps the model's reasoning code in-process via Monty; shown fanning out 40-500 sandboxed test-suite runs and racing candidate fixes with asyncio, all traced through Logfire.
 - **2026-07-22** — [3 Years of Graph Engineering with LangGraph](<harness/3 Years of Graph Engineering with LangGraph.md>) · `harness` · langchain
   LangChain's three-year retrospective on building agents as graphs: production agent graphs are rarely DAGs since they need retry/revision cycles, loops are just simple cyclic graphs, dynamic fan-out (LangGraph's Send API) handles map-reduce without predefined edges, and the new pattern is embedding full agent runs (e.g. coding agents) as graph nodes rather than single LLM calls.
 - **2026-07-22** — [Reviewing agent-written code with Pydantic AI Harness and Macroscope](<harness/Reviewing agent-written code with Pydantic AI Harness and Macroscope.md>) · `harness` · pydantic
@@ -367,6 +369,10 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-07-23** — [How We Benchmark Deep Agents](<../evals-observability/evaluation/How We Benchmark Deep Agents.md>) · `evaluation` · langchain
+  LangChain describes how it evaluates Deep Agents using Harbor as an eval runner across three benchmark suites — Harbor-Index (82 end-to-end SWE/search/data-analysis tasks distilled from 6,000+ candidates), τ³-bench (30-task multi-turn conversation), and ContextBench (30 retrieval tasks with in-sandbox corpora) — judged by artifact-checking scripts rather than final-response inspection.
+- **2026-07-23** — [The first known runaway AI agent—or a very bad marketing stunt?](<../product-engineering/security/The first known runaway AI agent—or a very bad marketing stunt.md>) · `security` · simon-willison
+  Simon Willison relays Martin Alderson's take on the OpenAI/Hugging Face sandbox-escape incident: Hugging Face's huge attack surface (many interfaces running untrusted models/code) made it a rich target, and OpenAI likely missed the breach because massive concurrent benchmark runs with near-unlimited token budgets across many checkpoints made anomalous traffic hard to distinguish from normal benchmarking load.
 - **2026-07-22** — [Building Sierra’s MCP Gateway: An engineering iceberg](<../product-engineering/security/Building Sierra’s MCP Gateway An engineering iceberg.md>) · `security` · sierra
   Lessons from building Sierra's internal MCP gateway: a 'grab the lock' single-owner model for coordination, coding agents that cheat verification (reading tokens directly, falling back to curl) requiring weaker consumer agents for smoke tests, and a three-pass deterministic-plus-two-model pipeline that blocks cross-customer data access with an audit log.
 - **2026-07-21** — [How OpenAI uses human feedback to evaluate and improve LLMs](<../evals-observability/evaluation/How OpenAI uses human feedback to evaluate and improve LLMs.md>) · `evaluation` · arize

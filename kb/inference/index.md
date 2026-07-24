@@ -1,11 +1,15 @@
 # inference
 
-135 articles.
+137 articles.
 
 - **2026-07-23** — [H100 vs. H200 GPUs](<hardware/H100 vs. H200 GPUs.md>) · `hardware` · baseten
   Compares H100 vs H200 SXM nodes for LLM serving: an 8x H100 node has 640GB VRAM versus 1,128GB for H200 (needed to fit models like GLM 5.2 at 744B params/~755GB FP8 on one node), and covers MIG partitioning for serving small models cheaply on fractional GPUs.
 - **2026-07-23** — [How to optimize LLM inference speed and reduce costs in production](<optimization/How to optimize LLM inference speed and reduce costs in production.md>) · `optimization` · baseten
   Surveys production LLM inference optimization techniques -- continuous batching, speculative decoding, KV cache reuse, quantization, and smarter routing -- for cutting latency and cost when GPUs sit idle or repeat work.
+- **2026-07-23** — [Bringing Nunchaku 4-bit Diffusion Inference to Diffusers](<quantization/Bringing Nunchaku 4-bit Diffusion Inference to Diffusers.md>) · `quantization` · huggingface
+  Diffusers now natively loads Nunchaku's SVDQuant W4A4 checkpoints via from_pretrained() and the Hugging Face `kernels` package, requiring no local CUDA compilation; unlike weight-only quantization, SVDQuant runs transformer layers in 4-bit weights and activations, cutting both memory and denoising-loop latency.
+- **2026-07-23** — [The production platform for open-weight AI inference](<serving/The production platform for open-weight AI inference.md>) · `serving` · together
+  Together's Dedicated Model Inference platform decouples a stable endpoint from underlying deployments, adding canary/blue-green/rolling rollouts with auto-rollback, A/B and shadow traffic testing, autoscaling on signals like TTFT/GPU utilization/decode speed, and a rebuilt model-caching/distribution layer delivering roughly 4x faster warm starts, alongside a closed beta for full-weight and LoRA RL/SFT training with direct-to-prod checkpoint deploys.
 - **2026-07-16** — [Real-time video generation inference on Baseten](<optimization/Real-time video generation inference on Baseten.md>) · `optimization` · baseten
   Details Baseten's real-time video inference runtime for Wan 2.2, combining four-step timestep distillation (~20x), custom kernel fusion (~1.5x), and NVFP4 quantization (~1.5x) for a combined 53.6x speedup, cutting per-clip generation from over two minutes to 2.75 seconds and cost from 5 cents to under a sixth of a cent.
 - **2026-07-16** — [What does 99.9% uptime mean for inference?](<serving/What does 99.9% uptime mean for inference.md>) · `serving` · together
