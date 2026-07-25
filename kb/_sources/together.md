@@ -1,9 +1,7 @@
 # together
 
-82 articles.
+81 articles.
 
-- **2026-07-24** — [Kimi K3 vs Claude Fable 5 on DeepSWE: Cost and Coding](<../models/benchmarks/Kimi K3 vs Claude Fable 5 on DeepSWE Cost and Coding.md>) · `benchmarks` · together
-  Benchmarks Kimi K3 against Claude Fable 5 on DeepSWE (452 graded rollouts across 113 real-world SWE tasks): Fable leads pass@1 69.9% vs 68.5%, but Kimi wins pass@2 (82.0 vs 80.2) and pass@4 (89.4% vs 88.5%) at $4.65 vs $13.41 per rollout (2.8x more solves per dollar), with Kimi stronger on Go/Rust and Fable stronger on Python/JS/TS.
 - **2026-07-23** — [The production platform for open-weight AI inference](<../inference/serving/The production platform for open-weight AI inference.md>) · `serving` · together
   Together's Dedicated Model Inference platform decouples a stable endpoint from underlying deployments, adding canary/blue-green/rolling rollouts with auto-rollback, A/B and shadow traffic testing, autoscaling on signals like TTFT/GPU utilization/decode speed, and a rebuilt model-caching/distribution layer delivering roughly 4x faster warm starts, alongside a closed beta for full-weight and LoRA RL/SFT training with direct-to-prod checkpoint deploys.
 - **2026-07-16** — [What does 99.9% uptime mean for inference?](<../inference/serving/What does 99.9% uptime mean for inference.md>) · `serving` · together
