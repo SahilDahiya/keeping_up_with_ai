@@ -1,10 +1,15 @@
 ---
 title: 'Kimi K3 vs Claude Fable 5 on DeepSWE: Cost and Coding'
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: models
+subtopic: benchmarks
+secondary_topics:
+- infra-platform/cost
+summary: 'Benchmarks Kimi K3 against Claude Fable 5 on DeepSWE (452 graded rollouts
+  across 113 real-world SWE tasks): Fable leads pass@1 69.9% vs 68.5%, but Kimi wins
+  pass@2 (82.0 vs 80.2) and pass@4 (89.4% vs 88.5%) at $4.65 vs $13.41 per rollout
+  (2.8x more solves per dollar), with Kimi stronger on Go/Rust and Fable stronger
+  on Python/JS/TS.'
 triage: null
 skip_reason: null
 source: together
@@ -12,7 +17,7 @@ url: https://www.together.ai/blog/kimi-k3-vs-claude-fable-5-on-deepswe-cost-and-
 author: Zain Hasan; Shobhit Dixit
 published: '2026-07-24'
 fetched: '2026-07-25T06:45:59Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1076
 content_sha256: da6a1cb29f01e49903f01b5d449da275e018dab031a4b07adb06e9f56ee5b860

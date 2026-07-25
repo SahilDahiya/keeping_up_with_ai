@@ -1,7 +1,9 @@
 # models
 
-221 articles.
+222 articles.
 
+- **2026-07-24** — [Kimi K3 vs Claude Fable 5 on DeepSWE: Cost and Coding](<benchmarks/Kimi K3 vs Claude Fable 5 on DeepSWE Cost and Coding.md>) · `benchmarks` · together
+  Benchmarks Kimi K3 against Claude Fable 5 on DeepSWE (452 graded rollouts across 113 real-world SWE tasks): Fable leads pass@1 69.9% vs 68.5%, but Kimi wins pass@2 (82.0 vs 80.2) and pass@4 (89.4% vs 88.5%) at $4.65 vs $13.41 per rollout (2.8x more solves per dollar), with Kimi stronger on Go/Rust and Fable stronger on Python/JS/TS.
 - **2026-07-23** — [Cost per successful task: Benchmarking Kimi K3, GPT-5.5, and 8 more AI models](<benchmarks/Cost per successful task Benchmarking Kimi K3, GPT-5.5, and 8 more AI models.md>) · `benchmarks` · arize
   Arize and Fireworks benchmark 10 models (Kimi K3, K2.6, GPT-5.5, GPT-5, Claude Sonnet 5, GLM-5.2, DeepSeek V4 Pro, gpt-oss-120b, two Gemini variants) across 40 agent tasks and 2,400 runs, arguing cost-per-successful-task (spend across all attempts / successes) is the metric that matters, not token price — gpt-oss-120b wins on cost-per-success despite a 33% pass rate.
 - **2026-07-22** — [GLM 5.2 With Vision](<multimodal/GLM 5.2 With Vision.md>) · `multimodal` · baseten

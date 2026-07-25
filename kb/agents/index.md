@@ -1,7 +1,9 @@
 # agents
 
-182 articles.
+184 articles.
 
+- **2026-07-24** — [Running AI agents against emulated AWS with Pydantic AI Harness and LocalStack](<harness/Running AI agents against emulated AWS with Pydantic AI Harness and LocalStack.md>) · `harness` · pydantic
+  Shows how Pydantic AI Harness's LocalStack capability (`capabilities=[LocalStack(manage_container=True)]`) gives an agent a free, disposable emulated-AWS sandbox so cloud deploys drop from minutes to seconds at zero cost and zero blast radius, enabling patterns like running several agents in parallel to build and load-test competing DynamoDB rate-limiter designs.
 - **2026-07-23** — [Running Pydantic AI Harness agents on Modal sandboxes](<harness/Running Pydantic AI Harness agents on Modal sandboxes.md>) · `harness` · pydantic
   Pydantic AI Harness's ModalSandbox capability offloads agent shell/file work into gVisor-isolated Modal containers spun up per sub-agent (sub-second scheduling, torn down after use) while CodeMode keeps the model's reasoning code in-process via Monty; shown fanning out 40-500 sandboxed test-suite runs and racing candidate fixes with asyncio, all traced through Logfire.
 - **2026-07-22** — [3 Years of Graph Engineering with LangGraph](<harness/3 Years of Graph Engineering with LangGraph.md>) · `harness` · langchain
@@ -314,6 +316,8 @@
   Describes DeepCoder, an open-source coding model trained for O3-mini-level coding performance.
 - **2025-03-20** — [The "think" tool: Enabling Claude to stop and think](<tool-use/The think tool Enabling Claude to stop and think.md>) · `tool-use` · anthropic-engineering
   Adding a no-op 'think' tool gives Claude space for intermediate reasoning mid-task, significantly improving policy-heavy agentic benchmarks like tau-bench.
+- **2025-03-19** — [Comparing Open-Source AI Agent Frameworks - Langfuse](<harness/Comparing Open-Source AI Agent Frameworks - Langfuse.md>) · `harness` · langfuse
+  Compares 13 open-source agent frameworks as of July 2026 (LangGraph, LangChain DeepAgents, OpenAI Agents SDK, Claude Agent SDK, Google ADK, Pydantic AI, CrewAI, Strands Agents, Mastra, Vercel AI SDK, Microsoft Agent Framework, Agno, Smolagents), detailing each one's architecture, production features (durable execution, memory, human-in-the-loop), and ecosystem fit.
 - **2025-02-26** — [Memory and State in LLM Applications](<memory-context/Memory and State in LLM Applications.md>) · `memory-context` · arize
   Explains memory and state patterns in LLM applications and how they affect reliability across interactions.
 - **2025-02-20** — [The Agent Deep Dive: David Zhang’s Open Deep Research](<planning/The Agent Deep Dive David Zhang’s Open Deep Research.md>) · `planning` · langfuse
@@ -369,6 +373,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-07-24** — [How to write effective AI agent skills: 6 data-backed practices](<../prompt-engineering/context-engineering/How to write effective AI agent skills 6 data-backed practices.md>) · `context-engineering` · arize
+  Synthesizes three 2026 studies (SkillsBench, SkillComposer, a generative skill-composition paper) into six data-backed rules for writing AI agent skills: curated skills added 18.2-24.8 points over baseline on Claude Code/Codex/Gemini CLI while self-generated skills scored 8.1-11.5 points below baseline, and loading only 1-3 skills outperformed larger, comprehensive sets.
 - **2026-07-23** — [How We Benchmark Deep Agents](<../evals-observability/evaluation/How We Benchmark Deep Agents.md>) · `evaluation` · langchain
   LangChain describes how it evaluates Deep Agents using Harbor as an eval runner across three benchmark suites — Harbor-Index (82 end-to-end SWE/search/data-analysis tasks distilled from 6,000+ candidates), τ³-bench (30-task multi-turn conversation), and ContextBench (30 retrieval tasks with in-sandbox corpora) — judged by artifact-checking scripts rather than final-response inspection.
 - **2026-07-23** — [The first known runaway AI agent—or a very bad marketing stunt?](<../product-engineering/security/The first known runaway AI agent—or a very bad marketing stunt.md>) · `security` · simon-willison

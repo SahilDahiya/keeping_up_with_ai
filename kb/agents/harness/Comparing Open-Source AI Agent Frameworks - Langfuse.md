@@ -1,10 +1,14 @@
 ---
 title: Comparing Open-Source AI Agent Frameworks - Langfuse
 kind: blog
-topic: null
-subtopic: null
+topic: agents
+subtopic: harness
 secondary_topics: []
-summary: null
+summary: Compares 13 open-source agent frameworks as of July 2026 (LangGraph, LangChain
+  DeepAgents, OpenAI Agents SDK, Claude Agent SDK, Google ADK, Pydantic AI, CrewAI,
+  Strands Agents, Mastra, Vercel AI SDK, Microsoft Agent Framework, Agno, Smolagents),
+  detailing each one's architecture, production features (durable execution, memory,
+  human-in-the-loop), and ecosystem fit.
 triage: null
 skip_reason: null
 source: langfuse
@@ -12,7 +16,7 @@ url: https://langfuse.com/blog/2025-03-19-ai-agent-comparison
 author: null
 published: '2025-03-19'
 fetched: '2026-07-25T06:46:08Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 3743
 content_sha256: a82512185aafbbd83d3ff9ead58bdfb4b256ea739b3d334f185cea2a3474a5d4

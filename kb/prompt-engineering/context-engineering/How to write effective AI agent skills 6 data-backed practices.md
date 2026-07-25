@@ -1,10 +1,16 @@
 ---
 title: 'How to write effective AI agent skills: 6 data-backed practices'
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: prompt-engineering
+subtopic: context-engineering
+secondary_topics:
+- agents/harness
+- evals-observability/evaluation
+summary: 'Synthesizes three 2026 studies (SkillsBench, SkillComposer, a generative
+  skill-composition paper) into six data-backed rules for writing AI agent skills:
+  curated skills added 18.2-24.8 points over baseline on Claude Code/Codex/Gemini
+  CLI while self-generated skills scored 8.1-11.5 points below baseline, and loading
+  only 1-3 skills outperformed larger, comprehensive sets.'
 triage: null
 skip_reason: null
 source: arize
@@ -12,7 +18,7 @@ url: https://arize.com/blog/how-to-write-effective-ai-agent-skills/
 author: Laurie Voss
 published: '2026-07-24'
 fetched: '2026-07-25T06:46:14Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1977
 content_sha256: 66d96d584f933b0cfe43f5fa2fe70285857a9f4765271e0f4838f3c65d45f7e0

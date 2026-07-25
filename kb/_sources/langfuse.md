@@ -1,6 +1,6 @@
 # langfuse
 
-37 articles.
+38 articles.
 
 - **2026-07-16** — [Yes, you can copy our eval setup - Langfuse](<../evals-observability/evaluation/Yes, you can copy our eval setup - Langfuse.md>) · `evaluation` · langfuse
   Langfuse shares its full eval setup for its own RAG-backed docs chatbot: trace every step with userId/sessionId for session grouping, monitor production signals, convert reviewed traces into datasets, and run experiments -- following their 'AI engineering loop' of trace, monitor, dataset, experiment.
@@ -54,6 +54,8 @@
   Engineering writeup on building scalable customizable dashboards for observability data, covering query, rendering, and product architecture concerns.
 - **2025-04-24** — [How we use LLMs to build and scale Langfuse](<../product-engineering/case-studies/How we use LLMs to build and scale Langfuse.md>) · `case-studies` · langfuse
   Case study of how Langfuse uses LLMs internally to build and scale the product, including practical workflows for AI-assisted engineering and operations.
+- **2025-03-19** — [Comparing Open-Source AI Agent Frameworks - Langfuse](<../agents/harness/Comparing Open-Source AI Agent Frameworks - Langfuse.md>) · `harness` · langfuse
+  Compares 13 open-source agent frameworks as of July 2026 (LangGraph, LangChain DeepAgents, OpenAI Agents SDK, Claude Agent SDK, Google ADK, Pydantic AI, CrewAI, Strands Agents, Mastra, Vercel AI SDK, Microsoft Agent Framework, Agno, Smolagents), detailing each one's architecture, production features (durable execution, memory, human-in-the-loop), and ecosystem fit.
 - **2025-03-13** — [Hugging Face and Langfuse: 5 Ways to use them Together](<../infra-platform/deployment/Hugging Face and Langfuse 5 Ways to use them Together.md>) · `deployment` · langfuse
   Shows ways to combine Hugging Face workflows with Langfuse for model experimentation, tracing, evaluation, and deployment feedback loops.
 - **2025-03-04** — [LLM Evaluation 101: Best Practices, Challenges & Proven Techniques](<../evals-observability/evaluation/LLM Evaluation 101 Best Practices, Challenges & Proven Techniques.md>) · `evaluation` · langfuse

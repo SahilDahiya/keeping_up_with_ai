@@ -1,7 +1,9 @@
 # pydantic
 
-45 articles.
+46 articles.
 
+- **2026-07-24** — [Running AI agents against emulated AWS with Pydantic AI Harness and LocalStack](<../agents/harness/Running AI agents against emulated AWS with Pydantic AI Harness and LocalStack.md>) · `harness` · pydantic
+  Shows how Pydantic AI Harness's LocalStack capability (`capabilities=[LocalStack(manage_container=True)]`) gives an agent a free, disposable emulated-AWS sandbox so cloud deploys drop from minutes to seconds at zero cost and zero blast radius, enabling patterns like running several agents in parallel to build and load-test competing DynamoDB rate-limiter designs.
 - **2026-07-23** — [Running Pydantic AI Harness agents on Modal sandboxes](<../agents/harness/Running Pydantic AI Harness agents on Modal sandboxes.md>) · `harness` · pydantic
   Pydantic AI Harness's ModalSandbox capability offloads agent shell/file work into gVisor-isolated Modal containers spun up per sub-agent (sub-second scheduling, torn down after use) while CodeMode keeps the model's reasoning code in-process via Monty; shown fanning out 40-500 sandboxed test-suite runs and racing candidate fixes with asyncio, all traced through Logfire.
 - **2026-07-22** — [Reviewing agent-written code with Pydantic AI Harness and Macroscope](<../agents/harness/Reviewing agent-written code with Pydantic AI Harness and Macroscope.md>) · `harness` · pydantic

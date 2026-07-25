@@ -1,10 +1,15 @@
 ---
 title: Running AI agents against emulated AWS with Pydantic AI Harness and LocalStack
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: agents
+subtopic: harness
+secondary_topics:
+- infra-platform/cost
+summary: Shows how Pydantic AI Harness's LocalStack capability (`capabilities=[LocalStack(manage_container=True)]`)
+  gives an agent a free, disposable emulated-AWS sandbox so cloud deploys drop from
+  minutes to seconds at zero cost and zero blast radius, enabling patterns like running
+  several agents in parallel to build and load-test competing DynamoDB rate-limiter
+  designs.
 triage: null
 skip_reason: null
 source: pydantic
@@ -12,7 +17,7 @@ url: https://pydantic.dev/articles/harness-localstack
 author: Bill Easton
 published: '2026-07-24'
 fetched: '2026-07-25T06:51:44Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1227
 content_sha256: 2ef137d754110d617faa1d61977796872ad5fcaa8de5d73e68eca752fb1729e8

@@ -1,7 +1,9 @@
 # prompt-engineering
 
-27 articles.
+28 articles.
 
+- **2026-07-24** — [How to write effective AI agent skills: 6 data-backed practices](<context-engineering/How to write effective AI agent skills 6 data-backed practices.md>) · `context-engineering` · arize
+  Synthesizes three 2026 studies (SkillsBench, SkillComposer, a generative skill-composition paper) into six data-backed rules for writing AI agent skills: curated skills added 18.2-24.8 points over baseline on Claude Code/Codex/Gemini CLI while self-generated skills scored 8.1-11.5 points below baseline, and loading only 1-3 skills outperformed larger, comprehensive sets.
 - **2026-07-20** — [Custom Code Review rules for Codex | OpenAI Developers](<context-engineering/Custom Code Review rules for Codex OpenAI Developers.md>) · `context-engineering` · openai-devs
   Codex Code Review can now apply custom repository rules written in AGENTS.md (preserving API contracts, keeping customer data out of logs, avoiding breaking renames) so the review agent catches team-specific issues that used to depend on tribal reviewer knowledge, citing the specific rule behind each finding.
 - **2026-07-17** — [Prompt optimization and managed prompts in Pydantic Logfire](<techniques/Prompt optimization and managed prompts in Pydantic Logfire.md>) · `techniques` · pydantic
