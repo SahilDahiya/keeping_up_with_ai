@@ -1,10 +1,14 @@
 ---
 title: How we built the new fastest API for GLM-5.2
 kind: blog
-topic: null
-subtopic: null
+topic: inference
+subtopic: optimization
 secondary_topics: []
-summary: null
+summary: Baseten details how it doubled GLM-5.2 API throughput to 601 tok/s (per Artificial
+  Analysis) by launching a separate low-latency "fast" API that swaps Attention Data
+  Parallelism for Tensor and Expert Parallelism and sharply cuts max batch size, alongside
+  scheduler tuning, NVFP4 weights, and an updated speculative-decoding profile on
+  the same NVIDIA B200 GPUs.
 triage: null
 skip_reason: null
 source: baseten
@@ -13,7 +17,7 @@ author: Alex Korte; Magdy Saleh; Tri Dao; Anant Desai; Bryce Dubayah; Abu Qader;
   Kiely
 published: '2026-07-26'
 fetched: '2026-07-26T06:54:10Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 588
 content_sha256: 8a40198857c9a2b337fd99baac696466479b577862823e17ef6ed1c44401d67b

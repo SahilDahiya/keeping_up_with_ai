@@ -1,7 +1,9 @@
 # inference
 
-137 articles.
+138 articles.
 
+- **2026-07-26** — [How we built the new fastest API for GLM-5.2](<optimization/How we built the new fastest API for GLM-5.2.md>) · `optimization` · baseten
+  Baseten details how it doubled GLM-5.2 API throughput to 601 tok/s (per Artificial Analysis) by launching a separate low-latency "fast" API that swaps Attention Data Parallelism for Tensor and Expert Parallelism and sharply cuts max batch size, alongside scheduler tuning, NVFP4 weights, and an updated speculative-decoding profile on the same NVIDIA B200 GPUs.
 - **2026-07-23** — [H100 vs. H200 GPUs](<hardware/H100 vs. H200 GPUs.md>) · `hardware` · baseten
   Compares H100 vs H200 SXM nodes for LLM serving: an 8x H100 node has 640GB VRAM versus 1,128GB for H200 (needed to fit models like GLM 5.2 at 744B params/~755GB FP8 on one node), and covers MIG partitioning for serving small models cheaply on fractional GPUs.
 - **2026-07-23** — [How to optimize LLM inference speed and reduce costs in production](<optimization/How to optimize LLM inference speed and reduce costs in production.md>) · `optimization` · baseten
