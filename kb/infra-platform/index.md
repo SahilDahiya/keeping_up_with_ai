@@ -149,6 +149,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-07-26** — [Kimi K3 vs GPT-5.6 Sol on DeepSWE: Cost, Coding, and Routing](<../models/benchmarks/Kimi K3 vs GPT-5.6 Sol on DeepSWE Cost, Coding, and Routing.md>) · `benchmarks` · together
+  Analyzes 904 graded DeepSWE rollouts comparing Kimi K3 and GPT-5.6 Sol: Sol leads pass@1 72.7% to 68.5%, but Kimi K3 wins pass@4 (89.4% vs 85.8%) at 64% lower cost ($4.65 vs $8.37 per rollout). With only 0.46 task-level correlation between the two models, a Kimi-first cascade that escalates to Sol on test failure covers 108/113 tasks (~85.6%), beating both single models and a perfect one-shot router.
 - **2026-07-24** — [Running AI agents against emulated AWS with Pydantic AI Harness and LocalStack](<../agents/harness/Running AI agents against emulated AWS with Pydantic AI Harness and LocalStack.md>) · `harness` · pydantic
   Shows how Pydantic AI Harness's LocalStack capability (`capabilities=[LocalStack(manage_container=True)]`) gives an agent a free, disposable emulated-AWS sandbox so cloud deploys drop from minutes to seconds at zero cost and zero blast radius, enabling patterns like running several agents in parallel to build and load-test competing DynamoDB rate-limiter designs.
 - **2026-07-23** — [Running Pydantic AI Harness agents on Modal sandboxes](<../agents/harness/Running Pydantic AI Harness agents on Modal sandboxes.md>) · `harness` · pydantic

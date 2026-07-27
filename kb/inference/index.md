@@ -281,6 +281,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-07-26** — [Kimi K3 vs GPT-5.6 Sol on DeepSWE: Cost, Coding, and Routing](<../models/benchmarks/Kimi K3 vs GPT-5.6 Sol on DeepSWE Cost, Coding, and Routing.md>) · `benchmarks` · together
+  Analyzes 904 graded DeepSWE rollouts comparing Kimi K3 and GPT-5.6 Sol: Sol leads pass@1 72.7% to 68.5%, but Kimi K3 wins pass@4 (89.4% vs 85.8%) at 64% lower cost ($4.65 vs $8.37 per rollout). With only 0.46 task-level correlation between the two models, a Kimi-first cascade that escalates to Sol on test failure covers 108/113 tasks (~85.6%), beating both single models and a perfect one-shot router.
 - **2026-07-21** — [Kimi K3 is competitive with Fable; Kimi K3 + Fable is SoTA.](<../models/benchmarks/Kimi K3 is competitive with Fable; Kimi K3 + Fable is SoTA.md>) · `benchmarks` · fireworks
   Fireworks benchmarked open Kimi K3 against closed Fable 5 across ~1,030 agentic tasks (SWE-bench-style fixes, terminal ops, algorithmic problems, multi-language, legal), finding near-parity on quality (92.4% vs 92.6% on SWE) and that oracle routing between the two models hits 93% accuracy at up to 50x lower cost than running Fable alone.
 - **2026-07-16** — [Fast, accurate retrieval with NVIDIA Nemotron 3 Embed](<../rag-retrieval/embeddings/Fast, accurate retrieval with NVIDIA Nemotron 3 Embed.md>) · `embeddings` · baseten

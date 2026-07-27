@@ -1,7 +1,9 @@
 # together
 
-81 articles.
+82 articles.
 
+- **2026-07-26** — [Kimi K3 vs GPT-5.6 Sol on DeepSWE: Cost, Coding, and Routing](<../models/benchmarks/Kimi K3 vs GPT-5.6 Sol on DeepSWE Cost, Coding, and Routing.md>) · `benchmarks` · together
+  Analyzes 904 graded DeepSWE rollouts comparing Kimi K3 and GPT-5.6 Sol: Sol leads pass@1 72.7% to 68.5%, but Kimi K3 wins pass@4 (89.4% vs 85.8%) at 64% lower cost ($4.65 vs $8.37 per rollout). With only 0.46 task-level correlation between the two models, a Kimi-first cascade that escalates to Sol on test failure covers 108/113 tasks (~85.6%), beating both single models and a perfect one-shot router.
 - **2026-07-23** — [The production platform for open-weight AI inference](<../inference/serving/The production platform for open-weight AI inference.md>) · `serving` · together
   Together's Dedicated Model Inference platform decouples a stable endpoint from underlying deployments, adding canary/blue-green/rolling rollouts with auto-rollback, A/B and shadow traffic testing, autoscaling on signals like TTFT/GPU utilization/decode speed, and a rebuilt model-caching/distribution layer delivering roughly 4x faster warm starts, alongside a closed beta for full-weight and LoRA RL/SFT training with direct-to-prod checkpoint deploys.
 - **2026-07-16** — [What does 99.9% uptime mean for inference?](<../inference/serving/What does 99.9% uptime mean for inference.md>) · `serving` · together

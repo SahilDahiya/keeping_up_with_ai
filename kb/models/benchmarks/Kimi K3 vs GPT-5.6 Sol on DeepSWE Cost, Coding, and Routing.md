@@ -1,10 +1,16 @@
 ---
 title: 'Kimi K3 vs GPT-5.6 Sol on DeepSWE: Cost, Coding, and Routing'
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: models
+subtopic: benchmarks
+secondary_topics:
+- infra-platform/cost
+- inference/optimization
+summary: 'Analyzes 904 graded DeepSWE rollouts comparing Kimi K3 and GPT-5.6 Sol:
+  Sol leads pass@1 72.7% to 68.5%, but Kimi K3 wins pass@4 (89.4% vs 85.8%) at 64%
+  lower cost ($4.65 vs $8.37 per rollout). With only 0.46 task-level correlation between
+  the two models, a Kimi-first cascade that escalates to Sol on test failure covers
+  108/113 tasks (~85.6%), beating both single models and a perfect one-shot router.'
 triage: null
 skip_reason: null
 source: together
@@ -12,7 +18,7 @@ url: https://www.together.ai/blog/kimi-k3-vs-gpt-5-6-sol-on-deepswe-cost-coding-
 author: Zain Hasan; Shobhit Dixit
 published: '2026-07-26'
 fetched: '2026-07-27T07:06:19Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1269
 content_sha256: 4c0b8e6fd1f4eec82c32db8d657e59b5d26747de3a05c054e6e3d6d97406c53f
