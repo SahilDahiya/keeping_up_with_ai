@@ -1,6 +1,6 @@
 # infra-platform
 
-72 articles.
+69 articles.
 
 - **2026-07-21** — [Devin Outposts on Modal | Modal Blog](<deployment/Devin Outposts on Modal Modal Blog.md>) · `deployment` · modal
   Modal's open-source modal-devin library lets Cognition's Devin coding agent execute in user-controlled Modal Sandboxes (GPU-backed, custom images, snapshot suspend/resume) while its reasoning stays in Cognition's cloud, splitting the agent's control-plane queue from a self-hosted data-plane orchestrator and worker.
@@ -8,18 +8,12 @@
   Modal rebuilt its sandbox scheduling platform to remove central coordination (no Postgres/etcd-style datastore in the critical path), using horizontally scaled scheduling servers and worker state published to Redis streams, enabling 1 million concurrent sandboxes created in under a minute with sub-second median start latency.
 - **2026-07-15** — [New in Together GPU Clusters: Reliability and control for production GPU clusters](<gpu-clusters/New in Together GPU Clusters Reliability and control for production GPU clusters.md>) · `gpu-clusters` · together
   Details operational upgrades to Together GPU Clusters: passive health checks that catch GPUs falling off the PCIe bus, Xid errors, and thermal throttling on live workloads; four automated-but-approved repair actions (reboot/reprovision/failover/remove); and a rebuilt Slurm-on-Kubernetes stack (Slinky fork) targeting crashing daemons and scheduler drift at scale.
-- **2026-07-09** — [Trace before you migrate: Measuring Kubernetes bottlenecks in AI agent sandboxes](<deployment/Trace before you migrate Measuring Kubernetes bottlenecks in AI agent sandboxes.md>) · `deployment` · arize
-  Shows how tracing can diagnose Kubernetes bottlenecks in AI agent sandboxes before migration decisions.
 - **2026-07-06** — [How to price serverless GPUs](<cost/How to price serverless GPUs.md>) · `cost` · modal
   Explains serverless GPU pricing from utilization, scheduling, and workload-shape constraints rather than simple hourly rates.
 - **2026-07-02** — [Your coding agent bill doubled. Here’s how to fix it.](<cost/Your coding agent bill doubled. Here’s how to fix it.md>) · `cost` · langchain
   Practical guide to reducing coding-agent spend through model choice, caching, harness tuning, and workflow design.
-- **2026-07-01** — [Model subsidies are ending. What do you do now?](<cost/Model subsidies are ending. What do you do now.md>) · `cost` · arize
-  Analyzes the end of subsidized LLM pricing and what agentic task success rates imply for real inference cost per correct result.
 - **2026-06-24** — [Frontier-lab training infrastructure, now as a service](<gpu-clusters/Frontier-lab training infrastructure, now as a service.md>) · `gpu-clusters` · fireworks
   Describes training infrastructure as a service for frontier-lab workloads, including scale, orchestration, and reliability needs.
-- **2026-06-19** — [Why AI token costs don't tell you if your AI is working](<cost/Why AI token costs don't tell you if your AI is working.md>) · `cost` · arize
-  Explains why token cost alone is an incomplete production metric and how quality, latency, and outcomes must be measured together.
 - **2026-06-19** — [Temporary Cloudflare Accounts for AI agents](<deployment/Temporary Cloudflare Accounts for AI agents.md>) · `deployment` · cloudflare-ai
   Temporary Cloudflare Accounts let agents run 'wrangler deploy --temporary' to ship a Worker with zero signup — a 60-minute claimable account with auto-provisioned API token — with Wrangler itself prompting agents about the flag, removing human-built OAuth/dashboard friction from the deploy loop.
 - **2026-06-19** — [Unpacking sandbox startup latency: why started is not ready](<deployment/Unpacking sandbox startup latency why started is not ready.md>) · `deployment` · modal
@@ -161,8 +155,6 @@
   Framework for governing production agents through an LLM gateway: a five-part govern/decide/protect/observe/assure operating model, pattern-based vs model-based guardrail detection for PII and prompt injection, fail-open/fail-closed fallback design, and layered spend controls (org/team/key limits) for controlling agent token cost.
 - **2026-07-15** — [AI gateway with data loss prevention, failover, and spend caps in Pydantic Logfire](<../product-engineering/security/AI gateway with data loss prevention, failover, and spend caps in Pydantic Logfire.md>) · `security` · pydantic
   Makes the case for an LLM gateway as the single choke point for governance: one key across OpenAI/Anthropic/Google/Bedrock/etc., data-loss-prevention scanning of prompts and completions for secrets/PII (observe, flag, redact, or block), priority and weighted routing for failover/load-balancing, and hard per-key spend caps that block the request rather than alert after the budget is gone.
-- **2026-07-14** — [How to measure AI productivity: From LLM token costs to business value with Arize AX](<../evals-observability/evaluation/How to measure AI productivity From LLM token costs to business value with Arize AX.md>) · `evaluation` · arize
-  Argues token/prompt/LOC counts don't measure AI productivity (citing METR's finding that developers were 19% slower with AI while feeling 20% faster) and proposes a five-dimension framework, built on a shared correlation_id tagging contract, that joins traced AI work to outcomes like merged non-reverted PRs via Arize AX.
 - **2026-07-14** — [Agent and LLM views in Pydantic Logfire](<../evals-observability/monitoring/Agent and LLM views in Pydantic Logfire.md>) · `monitoring` · pydantic
   Argues that non-deterministic agent workloads should be monitored on turns-per-run and tool-calling-turns-per-run at p90, not the mean, because a rare runaway retry loop (e.g. 40 tool calls, $12) hides in the average; built from the gen_ai.* spans agents already emit.
 - **2026-07-13** — [Introducing Precursor: detecting agentic behavior with continuous client-side signals](<../product-engineering/security/Introducing Precursor detecting agentic behavior with continuous client-side signals.md>) · `security` · cloudflare-ai
@@ -195,10 +187,6 @@
   Integration guide for capturing Braintrust traces and evals across different AI frameworks and model providers without locking the application stack to one SDK.
 - **2026-06-15** — [Building a 100x Cheaper Trace Judge with Fireworks](<../evals-observability/llm-as-judge/Building a 100x Cheaper Trace Judge with Fireworks.md>) · `llm-as-judge` · langchain
   Shows how to build a lower-cost trace judge with Fireworks, focusing on evaluator cost reduction while preserving useful scoring quality.
-- **2026-06-15** — [One agent, two trace destinations: Arize AX + Databricks Unity Catalog](<../evals-observability/tracing/One agent, two trace destinations Arize AX + Databricks Unity Catalog.md>) · `tracing` · arize
-  Shows how a single agent can emit traces to multiple destinations, highlighting interoperability concerns for observability stacks.
-- **2026-06-11** — [Bring production agent traces from Arize into Databricks Unity Catalog](<../evals-observability/tracing/Bring production agent traces from Arize into Databricks Unity Catalog.md>) · `tracing` · arize
-  Explains how to bring production agent traces, evaluations, and annotations from Arize into Databricks Unity Catalog for queryable analysis.
 - **2026-06-10** — [Full Text Search in SmithDB: Designing an Inverted Index for Object Storage](<../rag-retrieval/search/Full Text Search in SmithDB Designing an Inverted Index for Object Storage.md>) · `search` · langchain
   Architecture writeup on designing an inverted index for object storage in SmithDB, motivated by full-text search over agent traces.
 - **2026-06-05** — [How we use agents to review production infrastructure](<../product-engineering/case-studies/How we use agents to review production infrastructure.md>) · `case-studies` · langfuse
@@ -227,8 +215,6 @@
   Explains Sierra's inference-layer reliability strategy for foundation models, including routing, redundancy, and serving behavior preservation under provider failures.
 - **2026-04-30** — [Agents can now create Cloudflare accounts, buy domains, and deploy](<../agents/tool-use/Agents can now create Cloudflare accounts, buy domains, and deploy.md>) · `tool-use` · cloudflare-ai
   Via a protocol co-designed with Stripe for Stripe Projects, coding agents can now provision a Cloudflare account, start a paid subscription, register a domain, and receive an API token to deploy — end-to-end with humans only approving payment and terms of service.
-- **2026-04-30** — [Prompt templates as configs, not code](<../prompt-engineering/context-engineering/Prompt templates as configs, not code.md>) · `context-engineering` · arize
-  Argues for treating prompt templates as configuration, improving iteration, versioning, and deployment safety.
 - **2026-04-23** — [How we built RBAC that scales for the enterprise](<../product-engineering/security/How we built RBAC that scales for the enterprise.md>) · `security` · baseten
   Engineering writeup on building RBAC for enterprise AI infrastructure and balancing autonomy with control.
 - **2026-04-20** — [Building an RL theorem-proving workflow on Modal](<../models/reasoning/Building an RL theorem-proving workflow on Modal.md>) · `reasoning` · modal
@@ -239,8 +225,6 @@
   Roundup of every Agents Week 2026 launch for Cloudflare's 'agentic cloud': Artifacts (Git-compatible versioned storage), Sandboxes with Outbound Workers for zero-trust egress, Durable Object Facets, and Workflows rearchitected to 50,000 concurrency for durable background agents.
 - **2026-04-16** — [How to Optimize MCP Tool Schemas to Reduce Token Usage](<../agents/tool-use/How to Optimize MCP Tool Schemas to Reduce Token Usage.md>) · `tool-use` · pydantic
   Shows how MCP tool definitions consume context tokens and how to engineer them for efficiency, using a Rust weather MCP server (Open-Meteo, built on the sans-IO 'mercutio' library) as the worked example for tightening the tool schemas and descriptions that Claude and other agents ingest on every request.
-- **2026-04-15** — [Data Fabric: Querying agent traces in BigQuery](<../evals-observability/tracing/Data Fabric Querying agent traces in BigQuery.md>) · `tracing` · arize
-  Shows how to query production agent traces in BigQuery by connecting observability data with warehouse analysis workflows.
 - **2026-04-14** — [Autoscaling Autoresearch: Give your agents elastic GPUs on Modal](<../agents/tool-use/Autoscaling Autoresearch Give your agents elastic GPUs on Modal.md>) · `tool-use` · modal
   Shows how autoresearch agents can use elastic GPU compute for parallel experiments, background jobs, and scalable tool execution.
 - **2026-04-14** — [Building with Modal and the OpenAI Agents SDK](<../agents/tool-use/Building with Modal and the OpenAI Agents SDK.md>) · `tool-use` · modal
@@ -315,8 +299,6 @@
   Introduces end-to-end OpenTelemetry support in LangSmith for standardizing traces across AI application components.
 - **2025-03-20** — [Build vs. Buy: How Cresta Engineered Its Own Customer Data Access Solution](<../product-engineering/architecture/Build vs. Buy How Cresta Engineered Its Own Customer Data Access Solution.md>) · `architecture` · cresta
   Engineering case study on building a customer data access layer, useful for understanding integration tradeoffs in enterprise AI products.
-- **2025-03-05** — [Build More Accurate AI Apps Through Fast Experimentation with Arize Phoenix, Langflow, and NVIDIA](<../evals-observability/evaluation/Build More Accurate AI Apps Through Fast Experimentation with Arize Phoenix, Langflow, and NVIDIA.md>) · `evaluation` · arize
-  Shows how Arize Phoenix, Langflow, and NVIDIA can support fast experimentation loops for improving AI application accuracy.
 - **2025-03-04** — [Understanding Cresta’s Voice Platform - The Voice Stack](<../models/multimodal/Understanding Cresta’s Voice Platform - The Voice Stack.md>) · `multimodal` · cresta
   Breaks down the components of a production voice AI stack, including telephony, speech, model, and orchestration layers.
 - **2025-02-25** — [Minions: embracing small LMs, shifting compute on-device, and cutting cloud costs in the process](<../models/reasoning/Minions embracing small LMs, shifting compute on-device, and cutting cloud costs in the process.md>) · `reasoning` · together
@@ -331,14 +313,8 @@
   CFM (quant hedge fund) case study: use an LLM to label financial NER data, distill that into a compact fine-tuned model, and deploy it on Inference Endpoints — with an F1 and $/hour table showing the fine-tuned small model beating zero-shot LLM accuracy at a fraction of the inference cost.
 - **2024-11-26** — [SmolVLM - small yet mighty Vision Language Model](<../models/multimodal/SmolVLM - small yet mighty Vision Language Model.md>) · `multimodal` · huggingface
   SmolVLM is a 2B VLM tuned for memory footprint: SigLIP vision encoder with aggressive pixel-shuffle visual-token compression (9x fewer tokens than Qwen2-VL), trained on the Cauldron and Docmatix, using ~5GB of GPU RAM at inference versus tens of GB for peers.
-- **2024-11-19** — [Instrumenting Your LLM Application: Arize Phoenix and Vercel AI SDK](<../evals-observability/tracing/Instrumenting Your LLM Application Arize Phoenix and Vercel AI SDK.md>) · `tracing` · arize
-  Shows how to instrument an LLM application with Phoenix and Vercel AI SDK so traces are available for debugging and evaluation.
-- **2024-11-01** — [Arize, Vertex AI API: Evaluation Workflows to Accelerate Generative App Development and AI ROI](<../evals-observability/evaluation/Arize, Vertex AI API Evaluation Workflows to Accelerate Generative App Development and AI ROI.md>) · `evaluation` · arize
-  Describes Arize and Vertex AI API evaluation workflows for accelerating generative application development and measuring AI ROI.
 - **2024-10-14** — [OpenTelemetry (OTel) for LLM Observability](<../evals-observability/tracing/OpenTelemetry (OTel) for LLM Observability.md>) · `tracing` · langfuse
   Introduces OpenTelemetry for LLM observability and how OTel-style traces can standardize spans, metadata, and interoperability across AI systems.
-- **2024-10-08** — [The Role of OpenTelemetry (OTEL) in LLM Observability](<../evals-observability/tracing/The Role of OpenTelemetry (OTEL) in LLM Observability.md>) · `tracing` · arize
-  Explains OpenTelemetry’s role in LLM observability and why standard traces matter for production systems.
 - **2024-09-25** — [Llama can now see and run on your device - welcome Llama 3.2](<../models/releases/Llama can now see and run on your device - welcome Llama 3.2.md>) · `releases` · huggingface
   Llama 3.2 adds 11B/90B vision models (cross-attention adapter over a frozen text backbone, via the new MllamaForConditionalGeneration) and 1B/3B on-device text models, plus a vision-capable Llama Guard 3 and a 1B Llama Guard for input/output safety classification.
 - **2024-09-05** — [Supercharging NVIDIA H200 and H100 GPU Cluster Performance With Together Kernel Collection](<../inference/hardware/Supercharging NVIDIA H200 and H100 GPU Cluster Performance With Together Kernel Collection.md>) · `hardware` · together
@@ -351,8 +327,6 @@
   Reference architecture for generative AI platforms covering context construction and RAG, guardrails, gateways and routers, caching, observability, orchestration, and tool/action layers.
 - **2024-07-11** — [Using asynchronous inference in production](<../inference/serving/Using asynchronous inference in production.md>) · `serving` · baseten
   Explains asynchronous inference patterns for production model-serving workloads.
-- **2024-06-20** — [Managing and Monitoring Your Open Source LLM Applications](<../evals-observability/monitoring/Managing and Monitoring Your Open Source LLM Applications.md>) · `monitoring` · arize
-  Covers practical monitoring needs for open-source LLM applications, including operational metrics and deployment feedback.
 - **2024-06-13** — [From DeepSpeed to FSDP and Back Again with Hugging Face Accelerate](<../models/training/From DeepSpeed to FSDP and Back Again with Hugging Face Accelerate.md>) · `training` · huggingface
   Debugs why Mistral-7B bf16 training converged under DeepSpeed but not FSDP: DeepSpeed silently upcasts master weights to fp32 while FSDP flattens in the model dtype; explains the mixed-precision differences and how Accelerate now aligns them.
 - **2024-06-06** — [How to catch crypto miners using syscall signatures](<../product-engineering/security/How to catch crypto miners using syscall signatures.md>) · `security` · modal
@@ -377,8 +351,6 @@
   Shows how to serve a ComfyUI model behind an API endpoint for production image workflows.
 - **2023-11-28** — [NVIDIA A10 vs A10G for ML model inference](<../inference/hardware/NVIDIA A10 vs A10G for ML model inference.md>) · `hardware` · baseten
   Compares NVIDIA A10 and A10G GPUs for model inference performance and cost.
-- **2023-10-26** — [AI ROI: Guide To Observability Value Statistics](<../evals-observability/monitoring/AI ROI Guide To Observability Value Statistics.md>) · `monitoring` · arize
-  Frames AI observability value through ROI statistics, linking monitoring and model performance visibility to business outcomes.
 - **2023-09-15** — [NVIDIA A10 vs A100 GPUs for LLM and Stable Diffusion inference](<../inference/hardware/NVIDIA A10 vs A100 GPUs for LLM and Stable Diffusion inference.md>) · `hardware` · baseten
   Compares NVIDIA A10 and A100 GPUs for LLM and Stable Diffusion inference workloads.
 - **2023-04-27** — [Comparing NVIDIA GPUs for AI: T4 vs A10](<../inference/hardware/Comparing NVIDIA GPUs for AI T4 vs A10.md>) · `hardware` · baseten

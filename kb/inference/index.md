@@ -1,6 +1,6 @@
 # inference
 
-138 articles.
+137 articles.
 
 - **2026-07-26** — [How we built the new fastest API for GLM-5.2](<optimization/How we built the new fastest API for GLM-5.2.md>) · `optimization` · baseten
   Baseten details how it doubled GLM-5.2 API throughput to 601 tok/s (per Artificial Analysis) by launching a separate low-latency "fast" API that swaps Attention Data Parallelism for Tensor and Expert Parallelism and sharply cuts max batch size, alongside scheduler tuning, NVFP4 weights, and an updated speculative-decoding profile on the same NVIDIA B200 GPUs.
@@ -130,8 +130,6 @@
   Explains multi-dimensional optimization for LLM serving, balancing latency, cost, throughput, and quality tradeoffs.
 - **2025-06-12** — [Learn the Hugging Face Kernel Hub in 5 Minutes](<kernels/Learn the Hugging Face Kernel Hub in 5 Minutes.md>) · `kernels` · huggingface
   Introduces the Kernel Hub: `get_kernel("kernels-community/activation")` downloads precompiled optimized CUDA kernels at runtime with no local build system, and the post benchmarks the drop-in kernels (activation, RMSNorm, Flash Attention) against native PyTorch.
-- **2025-06-05** — [Accurate KV Cache Quantization with Outlier Tokens Tracing](<quantization/Accurate KV Cache Quantization with Outlier Tokens Tracing.md>) · `quantization` · arize
-  Summarizes research on KV-cache quantization with outlier token tracing to reduce LLM inference memory cost while preserving output quality.
 - **2025-06-05** — [Model-Preserving Adaptive Rounding with YAQA](<quantization/Model-Preserving Adaptive Rounding with YAQA.md>) · `quantization` · together
   Explains YAQA, a model-preserving adaptive rounding approach for quantization.
 - **2025-06-04** — [KV Cache from scratch in nanoVLM](<kernels/KV Cache from scratch in nanoVLM.md>) · `kernels` · huggingface
@@ -293,8 +291,6 @@
   An engineer used glm-5p2-fast (via Fireworks' FireConnect router into Claude Code) to design, plan, and implement a GPU-scheduler reclaim feature test-first (34 tests, 4 PRs, ~3,000 lines) in four days for $218 in inference, arguing that 2-3x faster inference keeps human-AI design iteration a live back-and-forth instead of breaking into async context switches.
 - **2026-07-06** — [How to price serverless GPUs](<../infra-platform/cost/How to price serverless GPUs.md>) · `cost` · modal
   Explains serverless GPU pricing from utilization, scheduling, and workload-shape constraints rather than simple hourly rates.
-- **2026-07-01** — [Model subsidies are ending. What do you do now?](<../infra-platform/cost/Model subsidies are ending. What do you do now.md>) · `cost` · arize
-  Analyzes the end of subsidized LLM pricing and what agentic task success rates imply for real inference cost per correct result.
 - **2026-06-25** — [Live draft model training for speculative decoding](<../models/fine-tuning/Live draft model training for speculative decoding.md>) · `fine-tuning` · baseten
   Describes live draft-model training for speculative decoding systems.
 - **2026-06-23** — [ParallelKernelBench: Frontier LLMs can't write fast multi-GPU kernels (yet)](<../evals-observability/benchmark-design/ParallelKernelBench Frontier LLMs can't write fast multi-GPU kernels (yet).md>) · `benchmark-design` · together
@@ -345,8 +341,6 @@
   Engineering guide to real-time multilingual intelligence for conversations, focusing on latency and speech-language quality.
 - **2025-11-03** — [Vercel code fixing with open models, speculative decoding, and RFT](<../product-engineering/case-studies/Vercel code fixing with open models, speculative decoding, and RFT.md>) · `case-studies` · fireworks
   Case study of improving Vercel code-fixing outputs with open models, speculative decoding, and reinforcement fine-tuning.
-- **2025-09-05** — [NVIDIA's Peter Belcak Distills Why Small Language Models are the Future of Agentic AI](<../models/reasoning/NVIDIA's Peter Belcak Distills Why Small Language Models are the Future of Agentic AI.md>) · `reasoning` · arize
-  Summarizes the argument for small language models in agentic AI and where they can replace larger models.
 - **2025-08-21** — [AI agents for efficient LLM inference engineering](<../agents/tool-use/AI agents for efficient LLM inference engineering.md>) · `tool-use` · together
   Case study of using AI agents to automate engineering tasks while developing efficient inference systems.
 - **2025-08-13** — [Evaluating Model Performance Across Clouds](<../models/benchmarks/Evaluating Model Performance Across Clouds.md>) · `benchmarks` · langfuse
@@ -427,13 +421,9 @@
   Introduces StripedHyena-7B and efficient architectures beyond Transformers.
 - **2023-11-02** — [Deployment and inference for open source text embedding models](<../rag-retrieval/embeddings/Deployment and inference for open source text embedding models.md>) · `embeddings` · baseten
   Covers deployment and inference patterns for open-source text embedding models.
-- **2023-08-24** — [Skeleton of Thought: LLMs Can Do Parallel Decoding Paper Reading](<../models/reasoning/Skeleton of Thought LLMs Can Do Parallel Decoding Paper Reading.md>) · `reasoning` · arize
-  Summarizes Skeleton of Thought and how parallel decoding can speed structured reasoning.
 - **2023-07-25** — [Monarch Mixer: A new model architecture for increased efficiency](<../models/reasoning/Monarch Mixer A new model architecture for increased efficiency.md>) · `reasoning` · together
   Introduces Monarch Mixer as an efficient model architecture.
 - **2023-07-12** — [Multi-Query Attention is All You Need](<../models/reasoning/Multi-Query Attention is All You Need.md>) · `reasoning` · fireworks
   Explains multi-query attention and why attention variants matter for efficient LLM inference.
-- **2023-03-29** — [Hungry Hungry Hippos (H3) and Language Modeling with State Space Models](<../models/reasoning/Hungry Hungry Hippos (H3) and Language Modeling with State Space Models.md>) · `reasoning` · arize
-  Explains H3/state-space model ideas as alternatives to standard attention and why they matter for sequence modeling efficiency.
 - **2023-01-23** — [FlashConv: speeding up state space models](<../models/reasoning/FlashConv speeding up state space models.md>) · `reasoning` · together
   Explains FlashConv and efficient state-space model execution.

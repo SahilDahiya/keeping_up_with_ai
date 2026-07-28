@@ -1,6 +1,6 @@
 # industry
 
-14 articles.
+13 articles.
 
 - **2026-07-01** — [Announcing the Monetization Gateway: charge for any resource behind Cloudflare via x402](<business/Announcing the Monetization Gateway charge for any resource behind Cloudflare via x402.md>) · `business` · cloudflare-ai
   Announces the Monetization Gateway: charge agents for any Cloudflare-protected resource (pages, datasets, APIs, MCP tools) with payment verification enforced at the edge, settling sub-cent stablecoin micropayments over the x402 protocol now stewarded by a 25+ member Linux Foundation x402 Foundation.
@@ -16,8 +16,6 @@
   Argues that AI is reshaping the AI engineering loop itself, with agents increasingly participating in prompt, eval, observability, and product iteration workflows.
 - **2026-04-20** — [Building the agentic cloud: everything we launched during Agents Week 2026](<announcements/Building the agentic cloud everything we launched during Agents Week 2026.md>) · `announcements` · cloudflare-ai
   Roundup of every Agents Week 2026 launch for Cloudflare's 'agentic cloud': Artifacts (Git-compatible versioned storage), Sandboxes with Outbound Workers for zero-trust egress, Durable Object Facets, and Workflows rearchitected to 50,000 concurrency for durable background agents.
-- **2026-04-20** — [Code is free, technical debt isn’t: Notes from AI Engineer Europe](<trends/Code is free, technical debt isn’t Notes from AI Engineer Europe.md>) · `trends` · arize
-  AI Engineer Europe notes arguing that faster code generation increases the need for verification, standards, and technical-debt management.
 - **2025-12-30** — [OpenAI for Developers in 2025](<trends/OpenAI for Developers in 2025.md>) · `trends` · openai-devs
   Year-in-review of OpenAI's 2025 developer platform: reasoning converging from separate o1/o3/o4-mini lines into unified flagship models, multimodal I/O becoming default, agent building blocks (Responses API, Agents SDK, AgentKit), and GPT-5.2-Codex for long-horizon coding.
 - **2025-10-13** — [State of LLMs on the Application Layer](<trends/State of LLMs on the Application Layer.md>) · `trends` · langfuse
@@ -47,5 +45,3 @@
   Defines agent engineering as a discipline around designing, evaluating, observing, and iterating on production agents rather than treating them as prompt-only systems.
 - **2025-05-12** — [Vision Language Models (Better, faster, stronger)](<../models/multimodal/Vision Language Models (Better, faster, stronger).md>) · `multimodal` · huggingface
   A year-in-review of vision language models covering new model classes (any-to-any, reasoning VLMs, small on-device VLMs, MoE VLMs), multimodal RAG with ColPali-style late-interaction retrievers, VLM agents for GUI/computer use, video understanding, and how alignment/benchmarks for VLMs have evolved. Names the specific models and techniques behind each shift.
-- **2024-10-15** — [Google's NotebookLM and the Future of AI-Generated Audio](<../models/multimodal/Google's NotebookLM and the Future of AI-Generated Audio.md>) · `multimodal` · arize
-  Paper-reading style overview of Google NotebookLM and AI-generated audio as a multimodal product pattern.

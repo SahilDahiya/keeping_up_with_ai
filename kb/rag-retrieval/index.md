@@ -1,6 +1,6 @@
 # rag-retrieval
 
-50 articles.
+40 articles.
 
 - **2026-07-16** — [Fast, accurate retrieval with NVIDIA Nemotron 3 Embed](<embeddings/Fast, accurate retrieval with NVIDIA Nemotron 3 Embed.md>) · `embeddings` · baseten
   Compares NVIDIA's Nemotron 3 Embed 8B and 1B embedding models available on Baseten: the 1B model uses pruning, distillation, and NVFP4 quantization to retain 95% of the 8B's retrieval accuracy (99% in NVFP4 on Blackwell, 2x throughput) while cutting indexing latency and serving cost; also covers a fine-tuning recipe yielding ~10% accuracy gains in 5 hours.
@@ -24,8 +24,6 @@
   Walks through finetuning Qwen3-VL-Embedding-2B for Visual Document Retrieval with Sentence Transformers' new multimodal support, showing a specialized 2B model beating much larger general-purpose embedders on NDCG. Covers multimodal dataset format, loss selection (cached MNRL), hard-negative mining and training a reranker on top.
 - **2026-04-09** — [Multimodal Embedding & Reranker Models with Sentence Transformers](<embeddings/Multimodal Embedding & Reranker Models with Sentence Transformers.md>) · `embeddings` · huggingface
   Sentence Transformers v5+ adds multimodal embedding and reranker models (shared text/image embedding space, mixed-modality cross-encoder scoring) for visual document retrieval, cross-modal search and multimodal RAG; covers the API and model choices.
-- **2026-04-04** — [How Arize Skills Improved RAG Recall from 39% to 75% in 8 Hours](<pipelines/How Arize Skills Improved RAG Recall from 39% to 75% in 8 Hours.md>) · `pipelines` · arize
-  Uses an eval-guided RAG improvement loop to show how retrieval recall can be diagnosed and improved quickly.
 - **2026-01-01** — [How Dropbox built an evaluation pipeline for AI search](<search/How Dropbox built an evaluation pipeline for AI search.md>) · `search` · braintrust
   Case study of Dropbox's evaluation pipeline for AI search, focused on measuring retrieval and answer quality for production search experiences.
 - **2025-10-28** — [RAG Observability and Evals](<pipelines/RAG Observability and Evals.md>) · `pipelines` · langfuse
@@ -48,8 +46,6 @@
   Deep dive into BEI, a high-throughput embedding, reranker, and classifier inference system.
 - **2025-03-26** — [Training and Finetuning Reranker Models with Sentence Transformers](<search/Training and Finetuning Reranker Models with Sentence Transformers.md>) · `search` · huggingface
   Full guide to training cross-encoder reranker models with Sentence Transformers v4: dataset formats, losses (BinaryCrossEntropy, CachedMultipleNegativesRanking, ListNet), hard-negative mining, and evaluation, with a fine-tune that beats much larger general rerankers on the target domain.
-- **2025-02-05** — [Understanding Agentic RAG](<pipelines/Understanding Agentic RAG.md>) · `pipelines` · arize
-  Explains agentic RAG and how agents change retrieval planning, tool use, and synthesis workflows.
 - **2025-01-15** — [Train 400x faster Static Embedding Models with Sentence Transformers](<embeddings/Train 400x faster Static Embedding Models with Sentence Transformers.md>) · `embeddings` · huggingface
   Trains static (token-embedding-lookup, no transformer forward pass) retrieval and similarity models with Sentence Transformers that run 100x-400x faster on CPU than all-mpnet-base-v2 while keeping ~85% of quality; details the recipe: contrastive MNRL loss with large batch sizes, hard-negative mining, Matryoshka dimensionality reduction, and dataset selection.
 - **2025-01-10** — [Visual Document Retrieval Goes Multilingual](<embeddings/Visual Document Retrieval Goes Multilingual.md>) · `embeddings` · huggingface
@@ -66,8 +62,6 @@
   End-to-end build of a docs chatbot: distilabel generates synthetic query/answer pairs from Argilla 2.0 documentation, which fine-tunes a bge-base Matryoshka embedding model used in a retrieval + Gradio chat pipeline.
 - **2024-07-02** — [Improving Memory Retrieval: How New Computer achieved 50% higher recall with LangSmith](<search/Improving Memory Retrieval How New Computer achieved 50% higher recall with LangSmith.md>) · `search` · langchain
   New Computer case study on improving memory retrieval recall with LangSmith-backed evaluation and debugging.
-- **2024-06-28** — [RAFT: Adapting Language Model to Domain Specific RAG](<pipelines/RAFT Adapting Language Model to Domain Specific RAG.md>) · `pipelines` · arize
-  Summarizes RAFT as a method for adapting language models to domain-specific RAG workflows.
 - **2024-06-24** — [Building a personalized code assistant with open-source LLMs using RAG Fine-tuning](<pipelines/Building a personalized code assistant with open-source LLMs using RAG Fine-tuning.md>) · `pipelines` · together
   Builds a personalized code assistant using RAG fine-tuning with open-source LLMs.
 - **2024-05-28** — [Training and Finetuning Embedding Models with Sentence Transformers](<embeddings/Training and Finetuning Embedding Models with Sentence Transformers.md>) · `embeddings` · huggingface
@@ -78,28 +72,14 @@
   Speeds up bge-base embeddings on Xeon CPUs by quantizing to int8 with Optimum Intel / IPEX, reporting latency and MTEB retrieval-quality deltas, then wires the optimized encoder into a fastRAG retrieval pipeline.
 - **2024-03-15** — [Benchmarking Query Analysis in High Cardinality Situations](<search/Benchmarking Query Analysis in High Cardinality Situations.md>) · `search` · langchain
   Benchmarks query analysis in high-cardinality situations, relevant to retrieval, search, and observability filtering workloads.
-- **2024-03-06** — [Evaluate RAG with LLM Evals and Benchmarks](<pipelines/Evaluate RAG with LLM Evals and Benchmarks.md>) · `pipelines` · arize
-  Workshop recap on evaluating RAG systems with LLM evals and benchmarks.
 - **2024-02-23** — [🪆 Introduction to Matryoshka Embedding Models](<embeddings/🪆 Introduction to Matryoshka Embedding Models.md>) · `embeddings` · huggingface
   Matryoshka Representation Learning trains embeddings whose leading dimensions are independently useful, so vectors can be truncated (e.g. 768 -> 64) with small quality loss; compares a Matryoshka vs regular model across truncation sizes and shows the Sentence Transformers loss to train one.
-- **2024-02-16** — [Evaluating the Generation Stage in RAG](<pipelines/Evaluating the Generation Stage in RAG.md>) · `pipelines` · arize
-  Focuses on evaluating the generation stage in RAG pipelines, complementing retrieval-focused evaluation.
-- **2024-02-08** — [RAG vs Fine-Tuning](<pipelines/RAG vs Fine-Tuning.md>) · `pipelines` · arize
-  Compares RAG and fine-tuning as adaptation strategies, including when retrieval is preferable to model updates.
 - **2024-01-23** — [Embedding English Wikipedia in under 15 minutes](<embeddings/Embedding English Wikipedia in under 15 minutes.md>) · `embeddings` · modal
   Walkthrough of embedding English Wikipedia quickly, covering large-scale embedding jobs, batching, and storage workflow.
 - **2024-01-11** — [Long context retrieval models with Monarch Mixer](<search/Long context retrieval models with Monarch Mixer.md>) · `search` · together
   Explains long-context retrieval models using Monarch Mixer.
-- **2023-11-08** — [Ingesting Data for Semantic Searches in a Production-Ready Way](<pipelines/Ingesting Data for Semantic Searches in a Production-Ready Way.md>) · `pipelines` · arize
-  Explains production ingestion concerns for semantic search, including data preparation and retrieval pipeline reliability.
 - **2023-11-02** — [Deployment and inference for open source text embedding models](<embeddings/Deployment and inference for open source text embedding models.md>) · `embeddings` · baseten
   Covers deployment and inference patterns for open-source text embedding models.
-- **2023-10-17** — [RankVicuna: Zero-Shot Listwise Document Reranking with Open-Source Large Language Models](<search/RankVicuna Zero-Shot Listwise Document Reranking with Open-Source Large Language Models.md>) · `search` · arize
-  Summarizes RankVicuna for zero-shot listwise reranking and its implications for LLM-powered search.
-- **2023-06-27** — [HyDE: Precise Zero-Shot Dense Retrieval without Relevance Labels](<search/HyDE Precise Zero-Shot Dense Retrieval without Relevance Labels.md>) · `search` · arize
-  Summarizes HyDE for zero-shot dense retrieval and how hypothetical document generation can improve semantic search.
-- **2023-06-09** — [Retrieval-Augmented Generation - Paper Reading and Discussion](<pipelines/Retrieval-Augmented Generation - Paper Reading and Discussion.md>) · `pipelines` · arize
-  Paper-reading summary of retrieval-augmented generation and the architecture behind combining retrieval with generation.
 - **2020-05-22** — **[Paper]** [Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks](<pipelines/[Paper] Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks.md>) · `pipelines` · arxiv
   Introduces Retrieval-Augmented Generation: a seq2seq model coupled to a dense-vector Wikipedia index via DPR, with the retriever and generator fine-tuned end-to-end. Sets SOTA on three open-domain QA tasks and yields more factual, specific generations than a parametric-only BART baseline.
 
@@ -127,8 +107,6 @@
   How Shopify clusters billions of product listings across millions of stores into canonical entities via embeddings for its agentic-commerce Catalog API, reconciling inconsistent merchant listing structures.
 - **2026-05-13** — [Tau-Knowledge: benchmarking agents on realistic knowledge](<../evals-observability/benchmark-design/Tau-Knowledge benchmarking agents on realistic knowledge.md>) · `benchmark-design` · sierra
   Introduces tau-knowledge for benchmarking agents on realistic knowledge tasks that require grounded retrieval and use of external information.
-- **2026-04-29** — [Using context graphs: build a data moat like Google's using your enterprise data](<../agents/memory-context/Using context graphs build a data moat like Google's using your enterprise data.md>) · `memory-context` · arize
-  Explains context graphs as an enterprise memory layer for agents and retrieval-heavy AI systems.
 - **2026-02-25** — [The generative recommender behind Shopify's commerce engine (2026)](<../models/architectures/The generative recommender behind Shopify's commerce engine (2026).md>) · `architectures` · shopify
   Shopify's generative recommender treats a buyer's cross-storefront event history as a sequence and predicts the next action, a sequence-modeling approach to commerce recommendations over months-long journeys.
 - **2025-11-12** — [Building world-class product search at Shopify: Where C++ excellence meets ML innovation (2025)](<../inference/serving/Building world-class product search at Shopify Where C++ excellence meets ML innovation (2025).md>) · `serving` · shopify
@@ -155,7 +133,5 @@
   Explains fine-tuning embedding models to beat proprietary baselines for a retrieval task with a compact training loop.
 - **2024-04-04** — [Text2SQL using Hugging Face Dataset Viewer API and Motherduck DuckDB-NSQL-7B](<../prompt-engineering/structured-output/Text2SQL using Hugging Face Dataset Viewer API and Motherduck DuckDB-NSQL-7B.md>) · `structured-output` · huggingface
   Text-to-SQL walkthrough using MotherDuck's DuckDB-NSQL-7B (Llama-2-7B fine-tuned on DuckDB SQL pairs) with the HF Dataset Viewer parquet API: schema-in-prompt templating, generation, and executing the SQL against DuckDB.
-- **2024-02-20** — [Evaluating and Analyzing Your RAG Pipeline with Ragas](<../evals-observability/evaluation/Evaluating and Analyzing Your RAG Pipeline with Ragas.md>) · `evaluation` · arize
-  Explains how to evaluate RAG pipelines with Ragas and Phoenix, including retrieval and generation quality dimensions.
 - **2023-04-11** — [Building LLM applications for production](<../product-engineering/architecture/Building LLM applications for production.md>) · `architecture` · chip-huyen
   Practical guide to production LLM applications covering task decomposition, retrieval, prompt construction, evaluation, monitoring, and latency/cost tradeoffs.
