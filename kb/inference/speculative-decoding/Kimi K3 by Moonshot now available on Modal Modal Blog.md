@@ -1,10 +1,14 @@
 ---
 title: Kimi K3 by Moonshot now available on Modal | Modal Blog
 kind: blog
-topic: null
-subtopic: null
+topic: inference
+subtopic: speculative-decoding
 secondary_topics: []
-summary: null
+summary: Modal details Day-0 serving of Kimi K3 with a custom DFlash speculator tuned
+  to K3's architecture, trained on hidden states from 28 B300 nodes running K3 at
+  TP8 against 4 training nodes, yielding 360% faster interactivity (100 to 460 tok/s)
+  and 88% higher throughput; also notes Moonshot's MXFP4/MXFP8 quantization-aware
+  training and a new KDA-compatible prefix-caching implementation contributed to vLLM.
 triage: null
 skip_reason: null
 source: modal
@@ -12,7 +16,7 @@ url: https://modal.com/blog/kimi-k3-by-moonshot-now-available-on-modal
 author: null
 published: '2026-07-27'
 fetched: '2026-07-28T06:51:40Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 584
 content_sha256: 3802d41b11b666d5ca644913407836ebbfd72626904d7991bee6e991e6511298

@@ -1,7 +1,11 @@
 # agents
 
-184 articles.
+186 articles.
 
+- **2026-07-28** — [How LangChain Built an Agent-First Data Stack](<memory-context/How LangChain Built an Agent-First Data Stack.md>) · `memory-context` · langchain
+  LangChain's data team describes migrating from a traditional BI tool to an agent-first stack on Hex, where dbt column/table definitions and a semantic metrics layer supply the business context (allowed values, filtering defaults, metric relationships) that lets a self-serve data agent handle ~40x the request volume of their 3-person team.
+- **2026-07-27** — [MCP Python SDK v2 beta: what is new and how to try it](<tool-use/MCP Python SDK v2 beta what is new and how to try it.md>) · `tool-use` · pydantic
+  MCP Python SDK v2 maintainer walks through the 2026-07-28 MCP spec revision as implemented in the beta: FastMCP renamed to MCPServer with wire types split into a standalone mcp-types package, a stateless core with no handshake/session so requests carry protocol version and capabilities per-call, and elicitation/sampling callbacks replaced by a return-and-resume InputRequiredResult/request_state mechanism since the server-initiated back-channel is retired.
 - **2026-07-24** — [Running AI agents against emulated AWS with Pydantic AI Harness and LocalStack](<harness/Running AI agents against emulated AWS with Pydantic AI Harness and LocalStack.md>) · `harness` · pydantic
   Shows how Pydantic AI Harness's LocalStack capability (`capabilities=[LocalStack(manage_container=True)]`) gives an agent a free, disposable emulated-AWS sandbox so cloud deploys drop from minutes to seconds at zero cost and zero blast radius, enabling patterns like running several agents in parallel to build and load-test competing DynamoDB rate-limiter designs.
 - **2026-07-23** — [Running Pydantic AI Harness agents on Modal sandboxes](<harness/Running Pydantic AI Harness agents on Modal sandboxes.md>) · `harness` · pydantic

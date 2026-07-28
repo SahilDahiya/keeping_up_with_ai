@@ -1,7 +1,13 @@
 # inference
 
-138 articles.
+141 articles.
 
+- **2026-07-27** — [Making Kimi K3 tokenization 18x faster for million-token agentic workloads](<optimization/Making Kimi K3 tokenization 18x faster for million-token agentic workloads.md>) · `optimization` · baseten
+  Describes Baseten's Rust-based Basetenkenizer, built to replace a Python tiktoken implementation for Kimi K3's up-to-1M-token agentic inputs, correctly distinguishing literal control-token strings from structural chat-template tokens while running up to 18x faster than tiktoken with exact token-ID parity.
+- **2026-07-27** — [How to build a day-0 API for Kimi K3](<serving/How to build a day-0 API for Kimi K3.md>) · `serving` · baseten
+  Walks through Baseten's five milestones for standing up a day-0 inference API for the 2.8T-parameter Kimi K3 on NVIDIA GB300 NVL72 systems: bringing up vLLM/SGLang with native MXFP4 weights, validating fidelity with Moonshot's Kimi Vendor Verifier, sweeping TP/EP/ADP configs, applying speculation/disaggregation/caching, and scaling replicas with KV-aware routing for prefix cache hit rate.
+- **2026-07-27** — [Kimi K3 by Moonshot now available on Modal | Modal Blog](<speculative-decoding/Kimi K3 by Moonshot now available on Modal Modal Blog.md>) · `speculative-decoding` · modal
+  Modal details Day-0 serving of Kimi K3 with a custom DFlash speculator tuned to K3's architecture, trained on hidden states from 28 B300 nodes running K3 at TP8 against 4 training nodes, yielding 360% faster interactivity (100 to 460 tok/s) and 88% higher throughput; also notes Moonshot's MXFP4/MXFP8 quantization-aware training and a new KDA-compatible prefix-caching implementation contributed to vLLM.
 - **2026-07-26** — [How we built the new fastest API for GLM-5.2](<optimization/How we built the new fastest API for GLM-5.2.md>) · `optimization` · baseten
   Baseten details how it doubled GLM-5.2 API throughput to 601 tok/s (per Artificial Analysis) by launching a separate low-latency "fast" API that swaps Attention Data Parallelism for Tensor and Expert Parallelism and sharply cuts max batch size, alongside scheduler tuning, NVFP4 weights, and an updated speculative-decoding profile on the same NVIDIA B200 GPUs.
 - **2026-07-23** — [H100 vs. H200 GPUs](<hardware/H100 vs. H200 GPUs.md>) · `hardware` · baseten

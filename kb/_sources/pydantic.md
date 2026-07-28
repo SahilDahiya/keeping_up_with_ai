@@ -1,7 +1,9 @@
 # pydantic
 
-46 articles.
+47 articles.
 
+- **2026-07-27** — [MCP Python SDK v2 beta: what is new and how to try it](<../agents/tool-use/MCP Python SDK v2 beta what is new and how to try it.md>) · `tool-use` · pydantic
+  MCP Python SDK v2 maintainer walks through the 2026-07-28 MCP spec revision as implemented in the beta: FastMCP renamed to MCPServer with wire types split into a standalone mcp-types package, a stateless core with no handshake/session so requests carry protocol version and capabilities per-call, and elicitation/sampling callbacks replaced by a return-and-resume InputRequiredResult/request_state mechanism since the server-initiated back-channel is retired.
 - **2026-07-24** — [Running AI agents against emulated AWS with Pydantic AI Harness and LocalStack](<../agents/harness/Running AI agents against emulated AWS with Pydantic AI Harness and LocalStack.md>) · `harness` · pydantic
   Shows how Pydantic AI Harness's LocalStack capability (`capabilities=[LocalStack(manage_container=True)]`) gives an agent a free, disposable emulated-AWS sandbox so cloud deploys drop from minutes to seconds at zero cost and zero blast radius, enabling patterns like running several agents in parallel to build and load-test competing DynamoDB rate-limiter designs.
 - **2026-07-23** — [Running Pydantic AI Harness agents on Modal sandboxes](<../agents/harness/Running Pydantic AI Harness agents on Modal sandboxes.md>) · `harness` · pydantic

@@ -1,10 +1,15 @@
 ---
 title: 'MCP Python SDK v2 beta: what is new and how to try it'
 kind: blog
-topic: null
-subtopic: null
+topic: agents
+subtopic: tool-use
 secondary_topics: []
-summary: null
+summary: 'MCP Python SDK v2 maintainer walks through the 2026-07-28 MCP spec revision
+  as implemented in the beta: FastMCP renamed to MCPServer with wire types split into
+  a standalone mcp-types package, a stateless core with no handshake/session so requests
+  carry protocol version and capabilities per-call, and elicitation/sampling callbacks
+  replaced by a return-and-resume InputRequiredResult/request_state mechanism since
+  the server-initiated back-channel is retired.'
 triage: null
 skip_reason: null
 source: pydantic
@@ -12,7 +17,7 @@ url: https://pydantic.dev/articles/mcp-python-sdk-v2-beta
 author: Marcelo Trylesinski
 published: '2026-07-27'
 fetched: '2026-07-28T06:57:18Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1692
 content_sha256: e748a2dd4dc8907ba35f92a826da5a7115b7d2cbf77d568a7140fb503fe89034

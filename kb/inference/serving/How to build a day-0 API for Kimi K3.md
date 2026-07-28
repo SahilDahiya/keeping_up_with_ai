@@ -1,10 +1,15 @@
 ---
 title: How to build a day-0 API for Kimi K3
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: inference
+subtopic: serving
+secondary_topics:
+- models/architectures
+summary: 'Walks through Baseten''s five milestones for standing up a day-0 inference
+  API for the 2.8T-parameter Kimi K3 on NVIDIA GB300 NVL72 systems: bringing up vLLM/SGLang
+  with native MXFP4 weights, validating fidelity with Moonshot''s Kimi Vendor Verifier,
+  sweeping TP/EP/ADP configs, applying speculation/disaggregation/caching, and scaling
+  replicas with KV-aware routing for prefix cache hit rate.'
 triage: null
 skip_reason: null
 source: baseten
@@ -12,7 +17,7 @@ url: https://www.baseten.co/blog/how-to-build-a-day-zero-api-for-kimi-k3/
 author: Model Performance Team
 published: '2026-07-27'
 fetched: '2026-07-28T06:51:23Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 2049
 content_sha256: 8bed8dba4e0c438931d8f299e43a0b081b0bea56908b70ad23d00150093f4f3c

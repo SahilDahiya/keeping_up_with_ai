@@ -1,7 +1,9 @@
 # evals-observability
 
-240 articles.
+241 articles.
 
+- **2026-07-27** — [From traditional ML to AI agents: How Booking.com scales AI observability with Arize](<monitoring/From traditional ML to AI agents How Booking.com scales AI observability with Arize.md>) · `monitoring` · arize
+  Case study on how Booking.com built a unified observability architecture on Arize, routing OpenTelemetry/OpenInference traces for GenAI agents and tabular prediction logs for traditional ML into one platform; details a latency-regression investigation traced to a missing model service tier, and using eval scores plus P90 token counts to catch context bloat from long attraction URLs accumulating in conversation history.
 - **2026-07-23** — [How We Benchmark Deep Agents](<evaluation/How We Benchmark Deep Agents.md>) · `evaluation` · langchain
   LangChain describes how it evaluates Deep Agents using Harbor as an eval runner across three benchmark suites — Harbor-Index (82 end-to-end SWE/search/data-analysis tasks distilled from 6,000+ candidates), τ³-bench (30-task multi-turn conversation), and ContextBench (30 retrieval tasks with in-sandbox corpora) — judged by artifact-checking scripts rather than final-response inspection.
 - **2026-07-22** — [Eval Engineering Skill: Build Evals From Repo Context and Traces](<evaluation/Eval Engineering Skill Build Evals From Repo Context and Traces.md>) · `evaluation` · langchain

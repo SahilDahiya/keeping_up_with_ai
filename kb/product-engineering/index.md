@@ -255,6 +255,10 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-07-28** — [How LangChain Built an Agent-First Data Stack](<../agents/memory-context/How LangChain Built an Agent-First Data Stack.md>) · `memory-context` · langchain
+  LangChain's data team describes migrating from a traditional BI tool to an agent-first stack on Hex, where dbt column/table definitions and a semantic metrics layer supply the business context (allowed values, filtering defaults, metric relationships) that lets a self-serve data agent handle ~40x the request volume of their 3-person team.
+- **2026-07-27** — [From traditional ML to AI agents: How Booking.com scales AI observability with Arize](<../evals-observability/monitoring/From traditional ML to AI agents How Booking.com scales AI observability with Arize.md>) · `monitoring` · arize
+  Case study on how Booking.com built a unified observability architecture on Arize, routing OpenTelemetry/OpenInference traces for GenAI agents and tabular prediction logs for traditional ML into one platform; details a latency-regression investigation traced to a missing model service tier, and using eval scores plus P90 token counts to catch context bloat from long attraction URLs accumulating in conversation history.
 - **2026-07-21** — [A Fireside Chat with Cat and Thariq from the Claude Code team](<../agents/harness/A Fireside Chat with Cat and Thariq from the Claude Code team.md>) · `harness` · simon-willison
   Transcript of a fireside chat with Anthropic's Claude Code team covering Claude Tag's proactive multiplayer Slack agent with team memory (65% of product-eng PRs), a six-month migration to letting Claude fully review PRs at the 'outer layers' backed by incident-driven eval sets, an 80% system-prompt size cut for Fable/Opus 4.8 (fewer examples and hard constraints, more context), and how auto mode was red-teamed against prompt injection before becoming Claude Tag's foundation.
 - **2026-07-21** — [How Apollo Uses Deep Agents and LangSmith for GTM AI](<../agents/harness/How Apollo Uses Deep Agents and LangSmith for GTM AI.md>) · `harness` · langchain

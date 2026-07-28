@@ -1,7 +1,9 @@
 # arize
 
-182 articles.
+183 articles.
 
+- **2026-07-27** — [From traditional ML to AI agents: How Booking.com scales AI observability with Arize](<../evals-observability/monitoring/From traditional ML to AI agents How Booking.com scales AI observability with Arize.md>) · `monitoring` · arize
+  Case study on how Booking.com built a unified observability architecture on Arize, routing OpenTelemetry/OpenInference traces for GenAI agents and tabular prediction logs for traditional ML into one platform; details a latency-regression investigation traced to a missing model service tier, and using eval scores plus P90 token counts to catch context bloat from long attraction URLs accumulating in conversation history.
 - **2026-07-24** — [How to write effective AI agent skills: 6 data-backed practices](<../prompt-engineering/context-engineering/How to write effective AI agent skills 6 data-backed practices.md>) · `context-engineering` · arize
   Synthesizes three 2026 studies (SkillsBench, SkillComposer, a generative skill-composition paper) into six data-backed rules for writing AI agent skills: curated skills added 18.2-24.8 points over baseline on Claude Code/Codex/Gemini CLI while self-generated skills scored 8.1-11.5 points below baseline, and loading only 1-3 skills outperformed larger, comprehensive sets.
 - **2026-07-23** — [Cost per successful task: Benchmarking Kimi K3, GPT-5.5, and 8 more AI models](<../models/benchmarks/Cost per successful task Benchmarking Kimi K3, GPT-5.5, and 8 more AI models.md>) · `benchmarks` · arize

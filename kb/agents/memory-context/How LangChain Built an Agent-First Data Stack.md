@@ -1,10 +1,15 @@
 ---
 title: How LangChain Built an Agent-First Data Stack
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: agents
+subtopic: memory-context
+secondary_topics:
+- product-engineering/case-studies
+summary: LangChain's data team describes migrating from a traditional BI tool to an
+  agent-first stack on Hex, where dbt column/table definitions and a semantic metrics
+  layer supply the business context (allowed values, filtering defaults, metric relationships)
+  that lets a self-serve data agent handle ~40x the request volume of their 3-person
+  team.
 triage: null
 skip_reason: null
 source: langchain
@@ -12,7 +17,7 @@ url: https://www.langchain.com/blog/agent-data-stack
 author: Emily Hawkins
 published: '2026-07-28'
 fetched: '2026-07-28T06:51:45Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 2848
 content_sha256: 3a3e917062f3d1346200967dd63911281a8e288df62c6a5d6b76b139671a511a

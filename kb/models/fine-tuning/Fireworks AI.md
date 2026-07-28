@@ -1,10 +1,13 @@
 ---
 title: Fireworks AI
 kind: blog
-topic: null
-subtopic: null
+topic: models
+subtopic: fine-tuning
 secondary_topics: []
-summary: null
+summary: Demonstrates LoRA post-training of Kimi K3 via Fireworks Serverless Training
+  on two RL tasks, Countdown and Frozen Lake, showing how dense partial-credit rewards
+  produce fast smooth learning curves versus sparse goal-only rewards, with a small
+  RL run (~20 steps, 860K tokens) costing about $65.
 triage: null
 skip_reason: null
 source: fireworks
@@ -12,7 +15,7 @@ url: https://fireworks.ai/blog/K3-LoRA-Training
 author: null
 published: '2026-07-26'
 fetched: '2026-07-28T06:51:34Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1860
 content_sha256: 674c3438918394400b68099f01834f5a11540d8636e61573a78e3df3d96987e5

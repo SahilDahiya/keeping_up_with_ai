@@ -2,10 +2,16 @@
 title: 'From traditional ML to AI agents: How Booking.com scales AI observability
   with Arize'
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: evals-observability
+subtopic: monitoring
+secondary_topics:
+- product-engineering/case-studies
+summary: Case study on how Booking.com built a unified observability architecture
+  on Arize, routing OpenTelemetry/OpenInference traces for GenAI agents and tabular
+  prediction logs for traditional ML into one platform; details a latency-regression
+  investigation traced to a missing model service tier, and using eval scores plus
+  P90 token counts to catch context bloat from long attraction URLs accumulating in
+  conversation history.
 triage: null
 skip_reason: null
 source: arize
@@ -13,7 +19,7 @@ url: https://arize.com/blog/booking-com-ai-observability/
 author: Press
 published: '2026-07-27'
 fetched: '2026-07-28T06:51:49Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 2008
 content_sha256: ea826fac9ebd5af9f0128082c9838d223f3fe330d81e6e92b151bbd80fddc5b3

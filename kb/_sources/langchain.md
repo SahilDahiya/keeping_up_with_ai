@@ -1,7 +1,9 @@
 # langchain
 
-92 articles.
+93 articles.
 
+- **2026-07-28** — [How LangChain Built an Agent-First Data Stack](<../agents/memory-context/How LangChain Built an Agent-First Data Stack.md>) · `memory-context` · langchain
+  LangChain's data team describes migrating from a traditional BI tool to an agent-first stack on Hex, where dbt column/table definitions and a semantic metrics layer supply the business context (allowed values, filtering defaults, metric relationships) that lets a self-serve data agent handle ~40x the request volume of their 3-person team.
 - **2026-07-23** — [How We Benchmark Deep Agents](<../evals-observability/evaluation/How We Benchmark Deep Agents.md>) · `evaluation` · langchain
   LangChain describes how it evaluates Deep Agents using Harbor as an eval runner across three benchmark suites — Harbor-Index (82 end-to-end SWE/search/data-analysis tasks distilled from 6,000+ candidates), τ³-bench (30-task multi-turn conversation), and ContextBench (30 retrieval tasks with in-sandbox corpora) — judged by artifact-checking scripts rather than final-response inspection.
 - **2026-07-22** — [3 Years of Graph Engineering with LangGraph](<../agents/harness/3 Years of Graph Engineering with LangGraph.md>) · `harness` · langchain

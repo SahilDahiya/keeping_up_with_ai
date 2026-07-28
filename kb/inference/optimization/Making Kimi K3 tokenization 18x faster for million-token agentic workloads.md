@@ -1,10 +1,13 @@
 ---
 title: Making Kimi K3 tokenization 18x faster for million-token agentic workloads
 kind: blog
-topic: null
-subtopic: null
+topic: inference
+subtopic: optimization
 secondary_topics: []
-summary: null
+summary: Describes Baseten's Rust-based Basetenkenizer, built to replace a Python
+  tiktoken implementation for Kimi K3's up-to-1M-token agentic inputs, correctly distinguishing
+  literal control-token strings from structural chat-template tokens while running
+  up to 18x faster than tiktoken with exact token-ID parity.
 triage: null
 skip_reason: null
 source: baseten
@@ -12,7 +15,7 @@ url: https://www.baseten.co/blog/making-kimi-k3-tokenization-18x-faster-for-mill
 author: Michael Feil
 published: '2026-07-27'
 fetched: '2026-07-28T06:51:21Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1388
 content_sha256: 85c89504d3a19e0f1e4777c2c706b19b90fa97b7af537c52ba5f881dc64b4289
