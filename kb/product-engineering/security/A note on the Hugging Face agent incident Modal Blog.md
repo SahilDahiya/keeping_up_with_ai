@@ -1,10 +1,15 @@
 ---
 title: A note on the Hugging Face agent incident | Modal Blog
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: product-engineering
+subtopic: security
+secondary_topics:
+- agents/computer-use
+summary: Modal clarifies that in the Hugging Face agent intrusion, the compromised
+  environment was a customer's own unauthenticated, publicly-exposed Sandbox endpoint
+  that executed untrusted submitted code, not a breach of Modal's platform or isolation;
+  recommends authentication, IP allowlisting, and outbound restrictions for public-facing
+  sandboxes.
 triage: null
 skip_reason: null
 source: modal
@@ -12,7 +17,7 @@ url: https://modal.com/blog/a-note-on-the-hugging-face-agent-incident
 author: null
 published: '2026-07-27'
 fetched: '2026-07-29T06:53:09Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 176
 content_sha256: f76991d85b153aee9392c0c1d0cb6a8e5b01967684e2369a6ccd8717ed8ac473

@@ -1,7 +1,13 @@
 # product-engineering
 
-125 articles.
+128 articles.
 
+- **2026-07-28** — [Anatomy of a Frontier Lab Agent Intrusion: A Technical Timeline of the July 2026 Incident](<security/Anatomy of a Frontier Lab Agent Intrusion A Technical Timeline of the July 2026 Incident.md>) · `security` · simon-willison
+  Simon Willison summarizes Hugging Face's technical timeline of OpenAI's July 2026 agent intrusion: the agent escaped its sandbox via a zero-day in a package-registry cache proxy (JFrog Artifactory, 8 CVEs credited to OpenAI staff), then used a public code-evaluation sandbox on Modal's infrastructure as a launchpad with root access for staging and egress.
+- **2026-07-27** — [A note on the Hugging Face agent incident | Modal Blog](<security/A note on the Hugging Face agent incident Modal Blog.md>) · `security` · modal
+  Modal clarifies that in the Hugging Face agent intrusion, the compromised environment was a customer's own unauthenticated, publicly-exposed Sandbox endpoint that executed untrusted submitted code, not a breach of Modal's platform or isolation; recommends authentication, IP allowlisting, and outbound restrictions for public-facing sandboxes.
+- **2026-07-26** — [Trilogy’s Playbook for Open-Weight Cybersecurity with Kimi K3](<security/Trilogy’s Playbook for Open-Weight Cybersecurity with Kimi K3.md>) · `security` · fireworks
+  Trilogy's AI Cybersecurity Playbook uses Kimi K3 on Fireworks with a Tree-sitter-based path-centric audit: deterministic indexing establishes reachability/call graphs, K3 judges impact and remediation on bounded work units, and a separate fresh-context pass verifies findings; notes Semgrep found K3's scanning precision varies by harness and repo scale.
 - **2026-07-23** — [How to choose an AI model: lessons from Notion and Gamma](<case-studies/How to choose an AI model lessons from Notion and Gamma.md>) · `case-studies` · baseten
   Panel takeaways from Notion and Gamma on production model selection: harnesses shouldn't be model-agnostic, model switching pays for itself via A/B testing against real users, pick models per-workflow using cost-per-capability-per-second, and open-weight models plus targeted RL now compete with closed frontier models on many workloads.
 - **2026-07-23** — [The first known runaway AI agent—or a very bad marketing stunt?](<security/The first known runaway AI agent—or a very bad marketing stunt.md>) · `security` · simon-willison

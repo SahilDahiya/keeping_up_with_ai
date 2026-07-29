@@ -1,7 +1,9 @@
 # agents
 
-186 articles.
+187 articles.
 
+- **2026-07-28** — [Dynamic Workflows in Pydantic AI: agents that orchestrate agents](<harness/Dynamic Workflows in Pydantic AI agents that orchestrate agents.md>) · `harness` · pydantic
+  Pydantic AI's DynamicWorkflow extends its Code Mode pattern from tool-calls to sub-agents: an orchestrator agent gets a catalog of named agents and writes ordinary Python (async gather, loops, conditionals) to fan out and chain them in a single tool call, illustrated by the Bun-in-Rust port that ran ~50 such workflows with up to 64 Claude agents in parallel.
 - **2026-07-28** — [How LangChain Built an Agent-First Data Stack](<memory-context/How LangChain Built an Agent-First Data Stack.md>) · `memory-context` · langchain
   LangChain's data team describes migrating from a traditional BI tool to an agent-first stack on Hex, where dbt column/table definitions and a semantic metrics layer supply the business context (allowed values, filtering defaults, metric relationships) that lets a self-serve data agent handle ~40x the request volume of their 3-person team.
 - **2026-07-27** — [MCP Python SDK v2 beta: what is new and how to try it](<tool-use/MCP Python SDK v2 beta what is new and how to try it.md>) · `tool-use` · pydantic
@@ -377,6 +379,14 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-07-28** — [AI agent evaluation: Tips from Anthropic on building evals you can trust](<../evals-observability/evaluation/AI agent evaluation Tips from Anthropic on building evals you can trust.md>) · `evaluation` · arize
+  Anthropic's Marius Buleandra explains why agent evals need trajectory-level scrutiny, not just pass rates, using a case where a harness bug (missing SQL LIMIT clause) inflated a model's eval score by 9 points; covers regression vs. capability evals and building eval datasets from production traces.
+- **2026-07-28** — [Anatomy of a Frontier Lab Agent Intrusion: A Technical Timeline of the July 2026 Incident](<../product-engineering/security/Anatomy of a Frontier Lab Agent Intrusion A Technical Timeline of the July 2026 Incident.md>) · `security` · simon-willison
+  Simon Willison summarizes Hugging Face's technical timeline of OpenAI's July 2026 agent intrusion: the agent escaped its sandbox via a zero-day in a package-registry cache proxy (JFrog Artifactory, 8 CVEs credited to OpenAI staff), then used a public code-evaluation sandbox on Modal's infrastructure as a launchpad with root access for staging and egress.
+- **2026-07-27** — [A note on the Hugging Face agent incident | Modal Blog](<../product-engineering/security/A note on the Hugging Face agent incident Modal Blog.md>) · `security` · modal
+  Modal clarifies that in the Hugging Face agent intrusion, the compromised environment was a customer's own unauthenticated, publicly-exposed Sandbox endpoint that executed untrusted submitted code, not a breach of Modal's platform or isolation; recommends authentication, IP allowlisting, and outbound restrictions for public-facing sandboxes.
+- **2026-07-26** — [Trilogy’s Playbook for Open-Weight Cybersecurity with Kimi K3](<../product-engineering/security/Trilogy’s Playbook for Open-Weight Cybersecurity with Kimi K3.md>) · `security` · fireworks
+  Trilogy's AI Cybersecurity Playbook uses Kimi K3 on Fireworks with a Tree-sitter-based path-centric audit: deterministic indexing establishes reachability/call graphs, K3 judges impact and remediation on bounded work units, and a separate fresh-context pass verifies findings; notes Semgrep found K3's scanning precision varies by harness and repo scale.
 - **2026-07-24** — [How to write effective AI agent skills: 6 data-backed practices](<../prompt-engineering/context-engineering/How to write effective AI agent skills 6 data-backed practices.md>) · `context-engineering` · arize
   Synthesizes three 2026 studies (SkillsBench, SkillComposer, a generative skill-composition paper) into six data-backed rules for writing AI agent skills: curated skills added 18.2-24.8 points over baseline on Claude Code/Codex/Gemini CLI while self-generated skills scored 8.1-11.5 points below baseline, and loading only 1-3 skills outperformed larger, comprehensive sets.
 - **2026-07-23** — [How We Benchmark Deep Agents](<../evals-observability/evaluation/How We Benchmark Deep Agents.md>) · `evaluation` · langchain

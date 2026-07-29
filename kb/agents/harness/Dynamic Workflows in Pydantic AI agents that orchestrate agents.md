@@ -1,10 +1,14 @@
 ---
 title: 'Dynamic Workflows in Pydantic AI: agents that orchestrate agents'
 kind: blog
-topic: null
-subtopic: null
+topic: agents
+subtopic: harness
 secondary_topics: []
-summary: null
+summary: 'Pydantic AI''s DynamicWorkflow extends its Code Mode pattern from tool-calls
+  to sub-agents: an orchestrator agent gets a catalog of named agents and writes ordinary
+  Python (async gather, loops, conditionals) to fan out and chain them in a single
+  tool call, illustrated by the Bun-in-Rust port that ran ~50 such workflows with
+  up to 64 Claude agents in parallel.'
 triage: null
 skip_reason: null
 source: pydantic
@@ -12,7 +16,7 @@ url: https://pydantic.dev/articles/dynamic-workflows
 author: Aditya Vardhan
 published: '2026-07-28'
 fetched: '2026-07-29T06:58:55Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 637
 content_sha256: c324865488018865f5709ec73c1e1ba2b4672a4465ef2bf39088e1c62c5ccb64

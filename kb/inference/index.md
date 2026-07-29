@@ -1,7 +1,9 @@
 # inference
 
-141 articles.
+142 articles.
 
+- **2026-07-29** — [Configuring Dedicated Model Inference](<serving/Configuring Dedicated Model Inference.md>) · `serving` · together
+  Explains Together AI's Dedicated Model Inference resource model: immutable configs (engine, GPU type/count, parallelism), disposable deployments bound to a config with an autoscaling policy, and stable endpoints with capacity-aware traffic splits across deployments, enabling rollouts, A/B tests, and shadow experiments as just weighted-deployment changes.
 - **2026-07-27** — [Making Kimi K3 tokenization 18x faster for million-token agentic workloads](<optimization/Making Kimi K3 tokenization 18x faster for million-token agentic workloads.md>) · `optimization` · baseten
   Describes Baseten's Rust-based Basetenkenizer, built to replace a Python tiktoken implementation for Kimi K3's up-to-1M-token agentic inputs, correctly distinguishing literal control-token strings from structural chat-template tokens while running up to 18x faster than tiktoken with exact token-ID parity.
 - **2026-07-27** — [How to build a day-0 API for Kimi K3](<serving/How to build a day-0 API for Kimi K3.md>) · `serving` · baseten

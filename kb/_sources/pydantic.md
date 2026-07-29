@@ -1,7 +1,9 @@
 # pydantic
 
-47 articles.
+48 articles.
 
+- **2026-07-28** — [Dynamic Workflows in Pydantic AI: agents that orchestrate agents](<../agents/harness/Dynamic Workflows in Pydantic AI agents that orchestrate agents.md>) · `harness` · pydantic
+  Pydantic AI's DynamicWorkflow extends its Code Mode pattern from tool-calls to sub-agents: an orchestrator agent gets a catalog of named agents and writes ordinary Python (async gather, loops, conditionals) to fan out and chain them in a single tool call, illustrated by the Bun-in-Rust port that ran ~50 such workflows with up to 64 Claude agents in parallel.
 - **2026-07-27** — [MCP Python SDK v2 beta: what is new and how to try it](<../agents/tool-use/MCP Python SDK v2 beta what is new and how to try it.md>) · `tool-use` · pydantic
   MCP Python SDK v2 maintainer walks through the 2026-07-28 MCP spec revision as implemented in the beta: FastMCP renamed to MCPServer with wire types split into a standalone mcp-types package, a stateless core with no handshake/session so requests carry protocol version and capabilities per-call, and elicitation/sampling callbacks replaced by a return-and-resume InputRequiredResult/request_state mechanism since the server-initiated back-channel is retired.
 - **2026-07-24** — [Running AI agents against emulated AWS with Pydantic AI Harness and LocalStack](<../agents/harness/Running AI agents against emulated AWS with Pydantic AI Harness and LocalStack.md>) · `harness` · pydantic

@@ -1,10 +1,14 @@
 ---
 title: 'AI agent evaluation: Tips from Anthropic on building evals you can trust'
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: evals-observability
+subtopic: evaluation
+secondary_topics:
+- agents/harness
+summary: Anthropic's Marius Buleandra explains why agent evals need trajectory-level
+  scrutiny, not just pass rates, using a case where a harness bug (missing SQL LIMIT
+  clause) inflated a model's eval score by 9 points; covers regression vs. capability
+  evals and building eval datasets from production traces.
 triage: null
 skip_reason: null
 source: arize
@@ -12,7 +16,7 @@ url: https://arize.com/blog/ai-agent-evaluation-how-to-build-evals-you-can-trust
 author: Sara Verdi
 published: '2026-07-28'
 fetched: '2026-07-29T06:53:26Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 3258
 content_sha256: 5799b8fe9bc170747443be2d86ccce8cd7e424693b94189bd81c6a3429a4b608

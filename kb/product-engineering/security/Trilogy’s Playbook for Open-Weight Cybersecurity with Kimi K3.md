@@ -1,10 +1,15 @@
 ---
 title: Trilogy’s Playbook for Open-Weight Cybersecurity with Kimi K3
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: product-engineering
+subtopic: security
+secondary_topics:
+- agents/tool-use
+summary: 'Trilogy''s AI Cybersecurity Playbook uses Kimi K3 on Fireworks with a Tree-sitter-based
+  path-centric audit: deterministic indexing establishes reachability/call graphs,
+  K3 judges impact and remediation on bounded work units, and a separate fresh-context
+  pass verifies findings; notes Semgrep found K3''s scanning precision varies by harness
+  and repo scale.'
 triage: null
 skip_reason: null
 source: fireworks
@@ -12,7 +17,7 @@ url: https://fireworks.ai/blog/trilogy-coe-playbook-for-cybersecurity
 author: null
 published: '2026-07-26'
 fetched: '2026-07-29T06:53:03Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 767
 content_sha256: 254ba44d47479f4de371e9d0acd94ac87f7a97c062634d85707044ba5edd4840

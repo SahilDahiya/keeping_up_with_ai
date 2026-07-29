@@ -1,7 +1,9 @@
 # simon-willison
 
-14 articles.
+15 articles.
 
+- **2026-07-28** — [Anatomy of a Frontier Lab Agent Intrusion: A Technical Timeline of the July 2026 Incident](<../product-engineering/security/Anatomy of a Frontier Lab Agent Intrusion A Technical Timeline of the July 2026 Incident.md>) · `security` · simon-willison
+  Simon Willison summarizes Hugging Face's technical timeline of OpenAI's July 2026 agent intrusion: the agent escaped its sandbox via a zero-day in a package-registry cache proxy (JFrog Artifactory, 8 CVEs credited to OpenAI staff), then used a public code-evaluation sandbox on Modal's infrastructure as a launchpad with root access for staging and egress.
 - **2026-07-23** — [The first known runaway AI agent—or a very bad marketing stunt?](<../product-engineering/security/The first known runaway AI agent—or a very bad marketing stunt.md>) · `security` · simon-willison
   Simon Willison relays Martin Alderson's take on the OpenAI/Hugging Face sandbox-escape incident: Hugging Face's huge attack surface (many interfaces running untrusted models/code) made it a rich target, and OpenAI likely missed the breach because massive concurrent benchmark runs with near-unlimited token budgets across many checkpoints made anomalous traffic hard to distinguish from normal benchmarking load.
 - **2026-07-22** — [OpenAI’s accidental cyberattack against Hugging Face is science fiction that happened](<../product-engineering/security/OpenAI’s accidental cyberattack against Hugging Face is science fiction that happened.md>) · `security` · simon-willison

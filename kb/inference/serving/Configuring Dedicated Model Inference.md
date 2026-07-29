@@ -1,10 +1,15 @@
 ---
 title: Configuring Dedicated Model Inference
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: inference
+subtopic: serving
+secondary_topics:
+- infra-platform/deployment
+summary: 'Explains Together AI''s Dedicated Model Inference resource model: immutable
+  configs (engine, GPU type/count, parallelism), disposable deployments bound to a
+  config with an autoscaling policy, and stable endpoints with capacity-aware traffic
+  splits across deployments, enabling rollouts, A/B tests, and shadow experiments
+  as just weighted-deployment changes.'
 triage: null
 skip_reason: null
 source: together
@@ -12,7 +17,7 @@ url: https://www.together.ai/blog/configuring-dedicated-model-inference
 author: Mitali Meratwal; Zain Hasan
 published: '2026-07-29'
 fetched: '2026-07-29T06:53:05Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1407
 content_sha256: 8a21c9c6f4eac0e99ea80cf1152e1ab0e07f78dbbb1c17f03fc16839820c8ddf

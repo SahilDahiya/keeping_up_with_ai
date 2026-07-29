@@ -1,7 +1,9 @@
 # evals-observability
 
-241 articles.
+242 articles.
 
+- **2026-07-28** — [AI agent evaluation: Tips from Anthropic on building evals you can trust](<evaluation/AI agent evaluation Tips from Anthropic on building evals you can trust.md>) · `evaluation` · arize
+  Anthropic's Marius Buleandra explains why agent evals need trajectory-level scrutiny, not just pass rates, using a case where a harness bug (missing SQL LIMIT clause) inflated a model's eval score by 9 points; covers regression vs. capability evals and building eval datasets from production traces.
 - **2026-07-27** — [From traditional ML to AI agents: How Booking.com scales AI observability with Arize](<monitoring/From traditional ML to AI agents How Booking.com scales AI observability with Arize.md>) · `monitoring` · arize
   Case study on how Booking.com built a unified observability architecture on Arize, routing OpenTelemetry/OpenInference traces for GenAI agents and tabular prediction logs for traditional ML into one platform; details a latency-regression investigation traced to a missing model service tier, and using eval scores plus P90 token counts to catch context bloat from long attraction URLs accumulating in conversation history.
 - **2026-07-23** — [How We Benchmark Deep Agents](<evaluation/How We Benchmark Deep Agents.md>) · `evaluation` · langchain
