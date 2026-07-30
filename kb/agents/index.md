@@ -1,7 +1,9 @@
 # agents
 
-187 articles.
+188 articles.
 
+- **2026-07-29** — [Deep Agents v0.7](<harness/Deep Agents v0.7.md>) · `harness` · langchain
+  LangChain's Deep Agents v0.7 cuts base input tokens 65% (~6k to ~2k) by removing the default system prompt, trimming built-in tool descriptions 43%, and making TodoListMiddleware opt-in after evals across autonomous/conversational/long-context benchmarks on four models (gpt-5.6-luna, gemini-3.6-flash, claude-sonnet-4-6, claude-opus-4-8) showed steady reward with lower tokens/cost; also adds overridable middleware and filesystem tool improvements (paginated read_file, truncated grep/glob).
 - **2026-07-28** — [Dynamic Workflows in Pydantic AI: agents that orchestrate agents](<harness/Dynamic Workflows in Pydantic AI agents that orchestrate agents.md>) · `harness` · pydantic
   Pydantic AI's DynamicWorkflow extends its Code Mode pattern from tool-calls to sub-agents: an orchestrator agent gets a catalog of named agents and writes ordinary Python (async gather, loops, conditionals) to fan out and chain them in a single tool call, illustrated by the Bun-in-Rust port that ran ~50 such workflows with up to 64 Claude agents in parallel.
 - **2026-07-28** — [How LangChain Built an Agent-First Data Stack](<memory-context/How LangChain Built an Agent-First Data Stack.md>) · `memory-context` · langchain
@@ -379,8 +381,16 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-07-29** — [ThunderAgent: 2x Faster Agentic Inference for Synthetic Data Generation at Scale](<../inference/optimization/ThunderAgent 2x Faster Agentic Inference for Synthetic Data Generation at Scale.md>) · `optimization` · together
+  Together AI's ThunderAgent (ICML 2026 Spotlight) fixes KV cache thrashing in high-concurrency agentic inference by scheduling at the program level instead of per-request: it pauses low-priority agent workflows under memory pressure and resumes them via a global waiting queue, achieving 803 vs 390 tok/s single-node throughput over SGLang and near-linear scaling to 2.4x speedup across 8 H100 nodes.
+- **2026-07-29** — [How Similarweb Evaluates Agent Reports with LangSmith](<../evals-observability/evaluation/How Similarweb Evaluates Agent Reports with LangSmith.md>) · `evaluation` · langchain
+  Similarweb's Data Studio team describes evaluating an open-ended, long-form research-report agent in LangSmith: combining deterministic tool-call checks with LLM-as-judge rubric scoring anchored to golden answers or explicit rubrics, and how a miscalibrated rubric weighting cost them a week by making a genuine improvement look like a regression.
+- **2026-07-29** — [Behavior specs, an open standard for supervising long-horizon agents - Blog - Braintrust](<../evals-observability/llm-as-judge/Behavior specs, an open standard for supervising long-horizon agents - Blog - Braintrust.md>) · `llm-as-judge` · braintrust
+  Braintrust and Basis (an AI tax-return agent builder) introduce behavior specs, an open standard (agentbehavior.dev) for judging long-horizon agent trajectories on individual expected behaviors (true/false/NA) rather than only outcomes, citing OpenAI's 2023 and DeepMind's process-reward-model research as precedent for process over outcome supervision.
 - **2026-07-28** — [AI agent evaluation: Tips from Anthropic on building evals you can trust](<../evals-observability/evaluation/AI agent evaluation Tips from Anthropic on building evals you can trust.md>) · `evaluation` · arize
   Anthropic's Marius Buleandra explains why agent evals need trajectory-level scrutiny, not just pass rates, using a case where a harness bug (missing SQL LIMIT clause) inflated a model's eval score by 9 points; covers regression vs. capability evals and building eval datasets from production traces.
+- **2026-07-28** — [How to improve agent skills with tracing and evals](<../evals-observability/evaluation/How to improve agent skills with tracing and evals.md>) · `evaluation` · arize
+  A first-person case study instrumenting an agent skill (the i-have-adhd verbosity-cutting SKILL.md) with OpenInference-tagged traces in Arize AX: enabling the skill cut tokens 27%, latency 56%, and cost 44% but regressed answer completeness, and a long-running agent then revised the skill against a fixed eval dataset until completeness beat baseline while keeping most of the efficiency gains.
 - **2026-07-28** — [Anatomy of a Frontier Lab Agent Intrusion: A Technical Timeline of the July 2026 Incident](<../product-engineering/security/Anatomy of a Frontier Lab Agent Intrusion A Technical Timeline of the July 2026 Incident.md>) · `security` · simon-willison
   Simon Willison summarizes Hugging Face's technical timeline of OpenAI's July 2026 agent intrusion: the agent escaped its sandbox via a zero-day in a package-registry cache proxy (JFrog Artifactory, 8 CVEs credited to OpenAI staff), then used a public code-evaluation sandbox on Modal's infrastructure as a launchpad with root access for staging and egress.
 - **2026-07-27** — [A note on the Hugging Face agent incident | Modal Blog](<../product-engineering/security/A note on the Hugging Face agent incident Modal Blog.md>) · `security` · modal

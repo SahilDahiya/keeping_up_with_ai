@@ -1,9 +1,11 @@
 # arize
 
-184 articles.
+185 articles.
 
 - **2026-07-28** — [AI agent evaluation: Tips from Anthropic on building evals you can trust](<../evals-observability/evaluation/AI agent evaluation Tips from Anthropic on building evals you can trust.md>) · `evaluation` · arize
   Anthropic's Marius Buleandra explains why agent evals need trajectory-level scrutiny, not just pass rates, using a case where a harness bug (missing SQL LIMIT clause) inflated a model's eval score by 9 points; covers regression vs. capability evals and building eval datasets from production traces.
+- **2026-07-28** — [How to improve agent skills with tracing and evals](<../evals-observability/evaluation/How to improve agent skills with tracing and evals.md>) · `evaluation` · arize
+  A first-person case study instrumenting an agent skill (the i-have-adhd verbosity-cutting SKILL.md) with OpenInference-tagged traces in Arize AX: enabling the skill cut tokens 27%, latency 56%, and cost 44% but regressed answer completeness, and a long-running agent then revised the skill against a fixed eval dataset until completeness beat baseline while keeping most of the efficiency gains.
 - **2026-07-27** — [From traditional ML to AI agents: How Booking.com scales AI observability with Arize](<../evals-observability/monitoring/From traditional ML to AI agents How Booking.com scales AI observability with Arize.md>) · `monitoring` · arize
   Case study on how Booking.com built a unified observability architecture on Arize, routing OpenTelemetry/OpenInference traces for GenAI agents and tabular prediction logs for traditional ML into one platform; details a latency-regression investigation traced to a missing model service tier, and using eval scores plus P90 token counts to catch context bloat from long attraction URLs accumulating in conversation history.
 - **2026-07-24** — [How to write effective AI agent skills: 6 data-backed practices](<../prompt-engineering/context-engineering/How to write effective AI agent skills 6 data-backed practices.md>) · `context-engineering` · arize

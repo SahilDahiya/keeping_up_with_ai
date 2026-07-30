@@ -2,10 +2,15 @@
 title: Behavior specs, an open standard for supervising long-horizon agents - Blog
   - Braintrust
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: evals-observability
+subtopic: llm-as-judge
+secondary_topics:
+- agents/planning
+summary: Braintrust and Basis (an AI tax-return agent builder) introduce behavior
+  specs, an open standard (agentbehavior.dev) for judging long-horizon agent trajectories
+  on individual expected behaviors (true/false/NA) rather than only outcomes, citing
+  OpenAI's 2023 and DeepMind's process-reward-model research as precedent for process
+  over outcome supervision.
 triage: null
 skip_reason: null
 source: braintrust
@@ -13,7 +18,7 @@ url: https://www.braintrust.dev/blog/behavior-specs
 author: Braintrust Team
 published: '2026-07-29'
 fetched: '2026-07-30T06:52:15Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1617
 content_sha256: 076234431c070e0c32f706755e055a8a377b5e74208ec95676a93e13869efa2a

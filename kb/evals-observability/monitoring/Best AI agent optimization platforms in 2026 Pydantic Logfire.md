@@ -1,10 +1,17 @@
 ---
 title: Best AI agent optimization platforms in 2026 | Pydantic Logfire
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: evals-observability
+subtopic: monitoring
+secondary_topics:
+- infra-platform/cost
+summary: 'A comparative technical breakdown of AI agent observability/optimization
+  platforms after 2026 industry consolidation (Langfuse to ClickHouse, Promptfoo to
+  OpenAI, Galileo to Cisco, Helicone into Mintlify): compares Pydantic Logfire, Braintrust,
+  Arize AX, LangSmith, Langfuse, DeepEval/Promptfoo/Patronus, and Elastic on trace
+  scope (full distributed trace vs LLM-spans-only), OTel-native vs proprietary storage,
+  and per-score billing (e.g. Braintrust''s $1.50-2.50/1k scores vs Logfire''s flat
+  span pricing).'
 triage: null
 skip_reason: null
 source: pydantic
@@ -12,7 +19,7 @@ url: https://pydantic.dev/articles/best-ai-agent-optimization-platforms-2026
 author: Bill Easton
 published: '2026-07-29'
 fetched: '2026-07-30T06:57:54Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 2793
 content_sha256: c5e52636fadbb81ef83368d359bc6894b055bcc82bc7780ebeddc607490ea1ba

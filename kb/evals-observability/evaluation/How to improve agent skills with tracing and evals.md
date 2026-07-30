@@ -1,10 +1,16 @@
 ---
 title: How to improve agent skills with tracing and evals
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: evals-observability
+subtopic: evaluation
+secondary_topics:
+- prompt-engineering/context-engineering
+- agents/tool-use
+summary: 'A first-person case study instrumenting an agent skill (the i-have-adhd
+  verbosity-cutting SKILL.md) with OpenInference-tagged traces in Arize AX: enabling
+  the skill cut tokens 27%, latency 56%, and cost 44% but regressed answer completeness,
+  and a long-running agent then revised the skill against a fixed eval dataset until
+  completeness beat baseline while keeping most of the efficiency gains.'
 triage: null
 skip_reason: null
 source: arize
@@ -12,7 +18,7 @@ url: https://arize.com/blog/how-to-evaluate-and-optimize-agent-skills-with-traci
 author: Yusuf Cattaneo
 published: '2026-07-28'
 fetched: '2026-07-30T06:52:24Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1496
 content_sha256: f8f1398d451ed28eb8d8c5a6fbe6bb604192305f1f19cd347a00f665ec78e92a

@@ -1,10 +1,17 @@
 ---
 title: Deep Agents v0.7
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: agents
+subtopic: harness
+secondary_topics:
+- prompt-engineering/context-engineering
+- evals-observability/evaluation
+summary: LangChain's Deep Agents v0.7 cuts base input tokens 65% (~6k to ~2k) by removing
+  the default system prompt, trimming built-in tool descriptions 43%, and making TodoListMiddleware
+  opt-in after evals across autonomous/conversational/long-context benchmarks on four
+  models (gpt-5.6-luna, gemini-3.6-flash, claude-sonnet-4-6, claude-opus-4-8) showed
+  steady reward with lower tokens/cost; also adds overridable middleware and filesystem
+  tool improvements (paginated read_file, truncated grep/glob).
 triage: null
 skip_reason: null
 source: langchain
@@ -12,7 +19,7 @@ url: https://www.langchain.com/blog/deep-agents-v0-7
 author: Sydney Runkle
 published: '2026-07-29'
 fetched: '2026-07-30T06:52:18Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1183
 content_sha256: c28b9a36767afe90c7181c799fee68e94c25fac9f7a8dc1cb577c2c3f4b4c95a

@@ -1,7 +1,9 @@
 # product-engineering
 
-128 articles.
+129 articles.
 
+- **2026-07-29** — [Agency: Secure, scalable sandboxes for agents](<architecture/Agency Secure, scalable sandboxes for agents.md>) · `architecture` · sierra
+  Sierra describes Agency, its Kubernetes-based agent-sandbox orchestration layer powering Pinecone and Ghostwriter: a stateless control plane provisioning per-runner pods with dedicated IAM roles and an LLM proxy for just-in-time key injection, plus a hibernation design that models each runner as a finite state machine restorable from an append-only checkpoint/event log (p50 8ms, p99 40ms round trips) to reclaim compute from the 2-4 orders of magnitude of idle agents.
 - **2026-07-28** — [Anatomy of a Frontier Lab Agent Intrusion: A Technical Timeline of the July 2026 Incident](<security/Anatomy of a Frontier Lab Agent Intrusion A Technical Timeline of the July 2026 Incident.md>) · `security` · simon-willison
   Simon Willison summarizes Hugging Face's technical timeline of OpenAI's July 2026 agent intrusion: the agent escaped its sandbox via a zero-day in a package-registry cache proxy (JFrog Artifactory, 8 CVEs credited to OpenAI staff), then used a public code-evaluation sandbox on Modal's infrastructure as a launchpad with root access for staging and egress.
 - **2026-07-27** — [A note on the Hugging Face agent incident | Modal Blog](<security/A note on the Hugging Face agent incident Modal Blog.md>) · `security` · modal

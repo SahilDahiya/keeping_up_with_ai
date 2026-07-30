@@ -1,10 +1,16 @@
 ---
 title: 'Agency: Secure, scalable sandboxes for agents'
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: product-engineering
+subtopic: architecture
+secondary_topics:
+- infra-platform/deployment
+summary: 'Sierra describes Agency, its Kubernetes-based agent-sandbox orchestration
+  layer powering Pinecone and Ghostwriter: a stateless control plane provisioning
+  per-runner pods with dedicated IAM roles and an LLM proxy for just-in-time key injection,
+  plus a hibernation design that models each runner as a finite state machine restorable
+  from an append-only checkpoint/event log (p50 8ms, p99 40ms round trips) to reclaim
+  compute from the 2-4 orders of magnitude of idle agents.'
 triage: null
 skip_reason: null
 source: sierra
@@ -12,7 +18,7 @@ url: https://sierra.ai/blog/agency-secure-scalable-sandboxes-for-agents
 author: Rohith Ravi
 published: '2026-07-29'
 fetched: '2026-07-30T06:51:52Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1913
 content_sha256: 948af97e869f3e6e70fe0eaa90292c6fdf4cac94124240a58bd34b6bd4d8dad5

@@ -61,6 +61,10 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-07-29** — [Deep Agents v0.7](<../agents/harness/Deep Agents v0.7.md>) · `harness` · langchain
+  LangChain's Deep Agents v0.7 cuts base input tokens 65% (~6k to ~2k) by removing the default system prompt, trimming built-in tool descriptions 43%, and making TodoListMiddleware opt-in after evals across autonomous/conversational/long-context benchmarks on four models (gpt-5.6-luna, gemini-3.6-flash, claude-sonnet-4-6, claude-opus-4-8) showed steady reward with lower tokens/cost; also adds overridable middleware and filesystem tool improvements (paginated read_file, truncated grep/glob).
+- **2026-07-28** — [How to improve agent skills with tracing and evals](<../evals-observability/evaluation/How to improve agent skills with tracing and evals.md>) · `evaluation` · arize
+  A first-person case study instrumenting an agent skill (the i-have-adhd verbosity-cutting SKILL.md) with OpenInference-tagged traces in Arize AX: enabling the skill cut tokens 27%, latency 56%, and cost 44% but regressed answer completeness, and a long-running agent then revised the skill against a fixed eval dataset until completeness beat baseline while keeping most of the efficiency gains.
 - **2026-06-26** — [What makes a good agent harness](<../agents/harness/What makes a good agent harness.md>) · `harness` · pydantic
   Follow-up to the harness thesis detailing what makes an agent harness good: safe tool access, memory that survives a single model call, guardrails that catch bad actions before they land, and context management that keeps the window full of what matters.
 - **2026-06-23** — [Pydantic AI v2: capabilities, a leaner core, and the Harness](<../agents/harness/Pydantic AI v2 capabilities, a leaner core, and the Harness.md>) · `harness` · pydantic

@@ -2,10 +2,15 @@
 title: 'ThunderAgent: 2x Faster Agentic Inference for Synthetic Data Generation at
   Scale'
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: inference
+subtopic: optimization
+secondary_topics:
+- agents/harness
+summary: 'Together AI''s ThunderAgent (ICML 2026 Spotlight) fixes KV cache thrashing
+  in high-concurrency agentic inference by scheduling at the program level instead
+  of per-request: it pauses low-priority agent workflows under memory pressure and
+  resumes them via a global waiting queue, achieving 803 vs 390 tok/s single-node
+  throughput over SGLang and near-linear scaling to 2.4x speedup across 8 H100 nodes.'
 triage: null
 skip_reason: null
 source: together
@@ -14,7 +19,7 @@ author: Hao Kang; Ziyang Li; Weili Xu; Xinyu Yang; Yinfang Chen; Junxiong Wang; 
   Chen; Tushar Krishna; Chenfeng Xu; Simran Arora
 published: '2026-07-29'
 fetched: '2026-07-30T06:52:09Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1371
 content_sha256: 2ccd248836ef85b26bdaee618452dece48a68a46a833bac7da10917f115e8e15

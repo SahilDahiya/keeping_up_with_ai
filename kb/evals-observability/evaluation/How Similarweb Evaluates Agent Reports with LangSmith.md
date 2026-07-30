@@ -1,10 +1,15 @@
 ---
 title: How Similarweb Evaluates Agent Reports with LangSmith
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: evals-observability
+subtopic: evaluation
+secondary_topics:
+- agents/planning
+summary: 'Similarweb''s Data Studio team describes evaluating an open-ended, long-form
+  research-report agent in LangSmith: combining deterministic tool-call checks with
+  LLM-as-judge rubric scoring anchored to golden answers or explicit rubrics, and
+  how a miscalibrated rubric weighting cost them a week by making a genuine improvement
+  look like a regression.'
 triage: null
 skip_reason: null
 source: langchain
@@ -12,7 +17,7 @@ url: https://www.langchain.com/blog/how-similarweb-evaluates-long-form-agent-res
 author: Liora Korni
 published: '2026-07-29'
 fetched: '2026-07-30T06:52:20Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 2174
 content_sha256: 5bb2a9665fa660773c4d219903a93a6f83e1dcb0656ad871c97d228ccb60f47f
