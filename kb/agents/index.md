@@ -1,7 +1,9 @@
 # agents
 
-188 articles.
+189 articles.
 
+- **2026-07-29** — [Building an agentic harness that outlasts the model (2026)](<harness/Building an agentic harness that outlasts the model (2026).md>) · `harness` · shopify
+  Shopify details Dispatch, their Ruby-orchestrated multi-agent security-scanning harness: it partitions a Rails monolith by size/scope, runs parallel Hunter agents per partition backed by shared architecture artifacts, verifies candidate findings with a different model acting as a test oracle, then opens fix PRs -- across 80+ applications and thousands of scans it produced 300+ findings valued at $400k+ in equivalent bug-bounty payouts.
 - **2026-07-29** — [Deep Agents v0.7](<harness/Deep Agents v0.7.md>) · `harness` · langchain
   LangChain's Deep Agents v0.7 cuts base input tokens 65% (~6k to ~2k) by removing the default system prompt, trimming built-in tool descriptions 43%, and making TodoListMiddleware opt-in after evals across autonomous/conversational/long-context benchmarks on four models (gpt-5.6-luna, gemini-3.6-flash, claude-sonnet-4-6, claude-opus-4-8) showed steady reward with lower tokens/cost; also adds overridable middleware and filesystem tool improvements (paginated read_file, truncated grep/glob).
 - **2026-07-28** — [Dynamic Workflows in Pydantic AI: agents that orchestrate agents](<harness/Dynamic Workflows in Pydantic AI agents that orchestrate agents.md>) · `harness` · pydantic

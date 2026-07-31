@@ -1,10 +1,14 @@
 ---
 title: Fine-Tune Your Own Embedding Model from an LLM — for the Price of a Coffee
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: rag-retrieval
+subtopic: embeddings
+secondary_topics:
+- models/fine-tuning
+summary: Shows a sub-$10 recipe for contrastive fine-tuning of Qwen3-Embedding-8B
+  (in-batch negatives, InfoNCE) on the Fireworks platform, lifting retrieval quality
+  on domain tasks like legal citation retrieval (LegalBench, +36% nDCG@10), clinical
+  trial matching, and EU case-law retrieval, while preserving general-purpose performance.
 triage: null
 skip_reason: null
 source: fireworks
@@ -12,7 +16,7 @@ url: https://fireworks.ai/blog/fine-tuning-your-own-embeddings-model
 author: null
 published: '2026-07-29'
 fetched: '2026-07-31T06:58:02Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 3635
 content_sha256: eff56d5aeadd1fb4f20c13dece0cceeea03a49fa098739dc0ffeb7c3c1b2da70

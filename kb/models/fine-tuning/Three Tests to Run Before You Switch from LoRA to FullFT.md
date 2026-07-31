@@ -1,10 +1,14 @@
 ---
 title: Three Tests to Run Before You Switch from LoRA to FullFT
 kind: blog
-topic: null
-subtopic: null
+topic: models
+subtopic: fine-tuning
 secondary_topics: []
-summary: null
+summary: Controlled experiments on Qwen3.5-9B isolate which lever actually closes
+  the LoRA-to-FullFT quality gap -- rank, learning-rate tuning, and training-data
+  coverage -- finding that recipe/learning-rate tuning erases much of a naive fixed-recipe
+  FullFT advantage, rank hits a ceiling on supported behaviors, and broader curriculum
+  coverage is what moves results beyond it.
 triage: null
 skip_reason: null
 source: fireworks
@@ -12,7 +16,7 @@ url: https://fireworks.ai/blog/three-tests-to-run-before-you-switch-from-LoRa-to
 author: null
 published: '2026-07-30'
 fetched: '2026-07-31T06:58:00Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 3626
 content_sha256: 2a289159d423df3528dc895d7b9f5431097fabb9b55526d6557b60c03a46b6cc

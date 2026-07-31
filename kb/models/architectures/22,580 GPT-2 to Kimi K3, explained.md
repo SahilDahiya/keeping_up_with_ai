@@ -1,10 +1,13 @@
 ---
 title: '22,580: GPT-2 to Kimi K3, explained'
 kind: blog
-topic: null
-subtopic: null
+topic: models
+subtopic: architectures
 secondary_topics: []
-summary: null
+summary: Worklog tracing the architectural path from GPT-2 (2019) to Kimi K3 (2026,
+  22,580x larger), walking through decoder-only attention code and then the successive
+  changes -- RoPE, GQA/MQA, MoE routing, and other efficiency techniques -- that took
+  models from dense transformers to today's sparse, trillion-parameter frontier models.
 triage: null
 skip_reason: null
 source: baseten
@@ -12,7 +15,7 @@ url: https://www.baseten.co/blog/22580-gpt-2-to-kimi-k3-explained/
 author: Ali Taha
 published: '2026-07-30'
 fetched: '2026-07-31T06:57:52Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 4326
 content_sha256: b989e899ace22ea2f6be2897fc33500c9213b58ce30fb099e61043ab2022249d

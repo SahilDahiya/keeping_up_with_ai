@@ -1,7 +1,9 @@
 # baseten
 
-91 articles.
+92 articles.
 
+- **2026-07-30** — [22,580: GPT-2 to Kimi K3, explained](<../models/architectures/22,580 GPT-2 to Kimi K3, explained.md>) · `architectures` · baseten
+  Worklog tracing the architectural path from GPT-2 (2019) to Kimi K3 (2026, 22,580x larger), walking through decoder-only attention code and then the successive changes -- RoPE, GQA/MQA, MoE routing, and other efficiency techniques -- that took models from dense transformers to today's sparse, trillion-parameter frontier models.
 - **2026-07-27** — [Making Kimi K3 tokenization 18x faster for million-token agentic workloads](<../inference/optimization/Making Kimi K3 tokenization 18x faster for million-token agentic workloads.md>) · `optimization` · baseten
   Describes Baseten's Rust-based Basetenkenizer, built to replace a Python tiktoken implementation for Kimi K3's up-to-1M-token agentic inputs, correctly distinguishing literal control-token strings from structural chat-template tokens while running up to 18x faster than tiktoken with exact token-ID parity.
 - **2026-07-27** — [How to build a day-0 API for Kimi K3](<../inference/serving/How to build a day-0 API for Kimi K3.md>) · `serving` · baseten

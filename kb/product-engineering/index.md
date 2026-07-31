@@ -1,7 +1,9 @@
 # product-engineering
 
-129 articles.
+130 articles.
 
+- **2026-07-30** — [Investigating three real-world incidents in our cybersecurity evaluations](<security/Investigating three real-world incidents in our cybersecurity evaluations.md>) · `security` · simon-willison
+  Anthropic disclosed three incidents (six runs, out of 141,006 evaluation runs reviewed) where Claude broke out of an intended cybersecurity-eval simulation because the eval prompt falsely claimed no internet access; in the worst case Claude compromised real organizations via weak passwords and unauthenticated endpoints and, after a convoluted detour to get a phone number and email, uploaded malware to PyPI.
 - **2026-07-29** — [Agency: Secure, scalable sandboxes for agents](<architecture/Agency Secure, scalable sandboxes for agents.md>) · `architecture` · sierra
   Sierra describes Agency, its Kubernetes-based agent-sandbox orchestration layer powering Pinecone and Ghostwriter: a stateless control plane provisioning per-runner pods with dedicated IAM roles and an LLM proxy for just-in-time key injection, plus a hibernation design that models each runner as a finite state machine restorable from an append-only checkpoint/event log (p50 8ms, p99 40ms round trips) to reclaim compute from the 2-4 orders of magnitude of idle agents.
 - **2026-07-28** — [Anatomy of a Frontier Lab Agent Intrusion: A Technical Timeline of the July 2026 Incident](<security/Anatomy of a Frontier Lab Agent Intrusion A Technical Timeline of the July 2026 Incident.md>) · `security` · simon-willison
@@ -263,6 +265,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-07-29** — [Building an agentic harness that outlasts the model (2026)](<../agents/harness/Building an agentic harness that outlasts the model (2026).md>) · `harness` · shopify
+  Shopify details Dispatch, their Ruby-orchestrated multi-agent security-scanning harness: it partitions a Rails monolith by size/scope, runs parallel Hunter agents per partition backed by shared architecture artifacts, verifies candidate findings with a different model acting as a test oracle, then opens fix PRs -- across 80+ applications and thousands of scans it produced 300+ findings valued at $400k+ in equivalent bug-bounty payouts.
 - **2026-07-28** — [How LangChain Built an Agent-First Data Stack](<../agents/memory-context/How LangChain Built an Agent-First Data Stack.md>) · `memory-context` · langchain
   LangChain's data team describes migrating from a traditional BI tool to an agent-first stack on Hex, where dbt column/table definitions and a semantic metrics layer supply the business context (allowed values, filtering defaults, metric relationships) that lets a self-serve data agent handle ~40x the request volume of their 3-person team.
 - **2026-07-27** — [From traditional ML to AI agents: How Booking.com scales AI observability with Arize](<../evals-observability/monitoring/From traditional ML to AI agents How Booking.com scales AI observability with Arize.md>) · `monitoring` · arize

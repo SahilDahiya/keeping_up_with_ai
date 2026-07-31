@@ -1,6 +1,6 @@
 # langchain
 
-95 articles.
+96 articles.
 
 - **2026-07-29** — [Deep Agents v0.7](<../agents/harness/Deep Agents v0.7.md>) · `harness` · langchain
   LangChain's Deep Agents v0.7 cuts base input tokens 65% (~6k to ~2k) by removing the default system prompt, trimming built-in tool descriptions 43%, and making TodoListMiddleware opt-in after evals across autonomous/conversational/long-context benchmarks on four models (gpt-5.6-luna, gemini-3.6-flash, claude-sonnet-4-6, claude-opus-4-8) showed steady reward with lower tokens/cost; also adds overridable middleware and filesystem tool improvements (paginated read_file, truncated grep/glob).
@@ -154,6 +154,8 @@
   Design history of LangGraph as an agent runtime from first principles, covering control flow, state, durability, and production requirements.
 - **2025-08-06** — [Introducing Open SWE: An Open-Source Asynchronous Coding Agent](<../agents/tool-use/Introducing Open SWE An Open-Source Asynchronous Coding Agent.md>) · `tool-use` · langchain
   Introduces Open SWE as an open-source asynchronous coding agent and discusses its architecture for long-running coding tasks.
+- **2025-07-29** — [Introducing Align Evals: Streamlining LLM Application Evaluation](<../evals-observability/llm-as-judge/Introducing Align Evals Streamlining LLM Application Evaluation.md>) · `llm-as-judge` · langchain
+  Describes a four-step method (inspired by Eugene Yan's AlignEval writeup) for calibrating an LLM-as-judge evaluator to human preferences: pick eval criteria, gather representative examples, hand-grade a 'golden set', then iterate the evaluator prompt against that golden set using an alignment score, shipped as LangSmith's Align Evals feature.
 - **2025-06-16** — [How and when to build multi-agent systems](<../agents/multi-agent/How and when to build multi-agent systems.md>) · `multi-agent` · langchain
   Guidance on when multi-agent systems are warranted and how to design agent roles, coordination, and boundaries.
 - **2025-04-20** — [How to think about agent frameworks](<../agents/harness/How to think about agent frameworks.md>) · `harness` · langchain

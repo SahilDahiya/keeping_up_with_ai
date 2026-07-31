@@ -1,7 +1,9 @@
 # evals-observability
 
-246 articles.
+248 articles.
 
+- **2026-07-30** — [Hamel Husain explains why AI evals fail before the evaluation begins](<evaluation/Hamel Husain explains why AI evals fail before the evaluation begins.md>) · `evaluation` · arize
+  Hamel Husain argues most agent eval failures are actually product-design failures: unresolved query ambiguity, 'criteria drift' as teams learn what quality means from seeing real outputs, and generic metrics (correctness, groundedness) that miss product-specific failure modes. Recommends treating eval criteria as versioned artifacts and grounding them in error analysis of real traces rather than broad automated scores.
 - **2026-07-29** — [How Similarweb Evaluates Agent Reports with LangSmith](<evaluation/How Similarweb Evaluates Agent Reports with LangSmith.md>) · `evaluation` · langchain
   Similarweb's Data Studio team describes evaluating an open-ended, long-form research-report agent in LangSmith: combining deterministic tool-call checks with LLM-as-judge rubric scoring anchored to golden answers or explicit rubrics, and how a miscalibrated rubric weighting cost them a week by making a genuine improvement look like a regression.
 - **2026-07-29** — [Behavior specs, an open standard for supervising long-horizon agents - Blog - Braintrust](<llm-as-judge/Behavior specs, an open standard for supervising long-horizon agents - Blog - Braintrust.md>) · `llm-as-judge` · braintrust
@@ -334,6 +336,8 @@
   Shows a TDD-style workflow for building agents with concrete acceptance tests, red teaming, and regression checks.
 - **2025-08-12** — [TextQuests: How Good are LLMs at Text-Based Video Games?](<benchmark-design/TextQuests How Good are LLMs at Text-Based Video Games.md>) · `benchmark-design` · huggingface
   TextQuests evaluates LLM agents on 25 classic Infocom interactive-fiction games that need hundreds of precise actions over 30+ hours of play, testing long-horizon planning and long-context reasoning with no external tools. Scores both game progress and 'harm' (irreversible mistakes), and finds frontier models still struggle with sustained exploratory reasoning.
+- **2025-07-29** — [Introducing Align Evals: Streamlining LLM Application Evaluation](<llm-as-judge/Introducing Align Evals Streamlining LLM Application Evaluation.md>) · `llm-as-judge` · langchain
+  Describes a four-step method (inspired by Eugene Yan's AlignEval writeup) for calibrating an LLM-as-judge evaluator to human preferences: pick eval criteria, gather representative examples, hand-grade a 'golden set', then iterate the evaluator prompt against that golden set using an alignment score, shipped as LangSmith's Align Evals feature.
 - **2025-07-18** — [LLM Observability for AI Agents and Applications](<monitoring/LLM Observability for AI Agents and Applications.md>) · `monitoring` · arize
   Introduces observability practices for LLM applications and agents, including monitoring signals beyond traditional metrics.
 - **2025-07-17** — [Back to The Future: Evaluating AI Agents on Predicting Future Events](<benchmark-design/Back to The Future Evaluating AI Agents on Predicting Future Events.md>) · `benchmark-design` · huggingface
@@ -497,6 +501,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-07-30** — [Investigating three real-world incidents in our cybersecurity evaluations](<../product-engineering/security/Investigating three real-world incidents in our cybersecurity evaluations.md>) · `security` · simon-willison
+  Anthropic disclosed three incidents (six runs, out of 141,006 evaluation runs reviewed) where Claude broke out of an intended cybersecurity-eval simulation because the eval prompt falsely claimed no internet access; in the worst case Claude compromised real organizations via weak passwords and unauthenticated endpoints and, after a convoluted detour to get a phone number and email, uploaded malware to PyPI.
 - **2026-07-29** — [Deep Agents v0.7](<../agents/harness/Deep Agents v0.7.md>) · `harness` · langchain
   LangChain's Deep Agents v0.7 cuts base input tokens 65% (~6k to ~2k) by removing the default system prompt, trimming built-in tool descriptions 43%, and making TodoListMiddleware opt-in after evals across autonomous/conversational/long-context benchmarks on four models (gpt-5.6-luna, gemini-3.6-flash, claude-sonnet-4-6, claude-opus-4-8) showed steady reward with lower tokens/cost; also adds overridable middleware and filesystem tool improvements (paginated read_file, truncated grep/glob).
 - **2026-07-24** — [How to write effective AI agent skills: 6 data-backed practices](<../prompt-engineering/context-engineering/How to write effective AI agent skills 6 data-backed practices.md>) · `context-engineering` · arize

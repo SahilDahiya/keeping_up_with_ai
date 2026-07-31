@@ -1,10 +1,14 @@
 ---
 title: 'Introducing Align Evals: Streamlining LLM Application Evaluation'
 kind: blog
-topic: null
-subtopic: null
+topic: evals-observability
+subtopic: llm-as-judge
 secondary_topics: []
-summary: null
+summary: 'Describes a four-step method (inspired by Eugene Yan''s AlignEval writeup)
+  for calibrating an LLM-as-judge evaluator to human preferences: pick eval criteria,
+  gather representative examples, hand-grade a ''golden set'', then iterate the evaluator
+  prompt against that golden set using an alignment score, shipped as LangSmith''s
+  Align Evals feature.'
 triage: null
 skip_reason: null
 source: langchain
@@ -12,7 +16,7 @@ url: https://www.langchain.com/blog/introducing-align-evals
 author: The LangChain Team
 published: '2025-07-29'
 fetched: '2026-07-31T06:58:13Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 596
 content_sha256: 992018d60392f5788d5bdf1a5fdf76e2605e29ecf9ec61fea637bd0e516af6b3

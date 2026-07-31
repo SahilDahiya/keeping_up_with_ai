@@ -1,10 +1,16 @@
 ---
 title: Building an agentic harness that outlasts the model (2026)
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: agents
+subtopic: harness
+secondary_topics:
+- product-engineering/security
+summary: 'Shopify details Dispatch, their Ruby-orchestrated multi-agent security-scanning
+  harness: it partitions a Rails monolith by size/scope, runs parallel Hunter agents
+  per partition backed by shared architecture artifacts, verifies candidate findings
+  with a different model acting as a test oracle, then opens fix PRs -- across 80+
+  applications and thousands of scans it produced 300+ findings valued at $400k+ in
+  equivalent bug-bounty payouts.'
 triage: null
 skip_reason: null
 source: shopify
@@ -12,7 +18,7 @@ url: https://shopify.engineering/building-an-agentic-harness-that-outlasts-the-m
 author: Zack Deveau
 published: '2026-07-29'
 fetched: '2026-07-31T07:03:50Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1869
 content_sha256: f0facb37f4f259d94bcf37fa1434226c43424313405ea8b4c5f6b9023b5aa92e

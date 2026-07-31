@@ -1,10 +1,14 @@
 ---
 title: Advancing the price-performance frontier with GPT‑5.6
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: models
+subtopic: releases
+secondary_topics:
+- inference/optimization
+summary: Simon Willison notes OpenAI's GPT-5.6 Luna price drop (80%, to $0.20/$1.20
+  per million tokens, undercutting Gemini 3.1 Flash-Lite and 5x cheaper than Claude
+  Haiku 4.5 on input), attributing it to GPT-5.6 Sol autonomously rewriting production
+  inference kernels in Triton and Gluon, cutting end-to-end serving costs 20%.
 triage: null
 skip_reason: null
 source: simon-willison
@@ -12,7 +16,7 @@ url: https://simonwillison.net/2026/Jul/30/luna-price-drop/
 author: Simon Willison
 published: '2026-07-30'
 fetched: '2026-07-31T07:03:55Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 308
 content_sha256: 099c627e8dddb1c41a15ca060f1cc91cf80f25d324533df79500899c29fb642f

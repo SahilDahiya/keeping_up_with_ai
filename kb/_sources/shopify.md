@@ -1,7 +1,9 @@
 # shopify
 
-15 articles.
+16 articles.
 
+- **2026-07-29** — [Building an agentic harness that outlasts the model (2026)](<../agents/harness/Building an agentic harness that outlasts the model (2026).md>) · `harness` · shopify
+  Shopify details Dispatch, their Ruby-orchestrated multi-agent security-scanning harness: it partitions a Rails monolith by size/scope, runs parallel Hunter agents per partition backed by shared architecture artifacts, verifies candidate findings with a different model acting as a test oracle, then opens fix PRs -- across 80+ applications and thousands of scans it produced 300+ findings valued at $400k+ in equivalent bug-bounty payouts.
 - **2026-06-17** — [Clustering billions of products for agentic commerce with Catalog API (2026)](<../product-engineering/case-studies/Clustering billions of products for agentic commerce with Catalog API (2026).md>) · `case-studies` · shopify
   How Shopify clusters billions of product listings across millions of stores into canonical entities via embeddings for its agentic-commerce Catalog API, reconciling inconsistent merchant listing structures.
 - **2026-06-15** — [Teaching Sidekick to say no: automated data curation with LLM judge consensus (2026)](<../evals-observability/llm-as-judge/Teaching Sidekick to say no automated data curation with LLM judge consensus (2026).md>) · `llm-as-judge` · shopify

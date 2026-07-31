@@ -1,7 +1,9 @@
 # arize
 
-185 articles.
+186 articles.
 
+- **2026-07-30** — [Hamel Husain explains why AI evals fail before the evaluation begins](<../evals-observability/evaluation/Hamel Husain explains why AI evals fail before the evaluation begins.md>) · `evaluation` · arize
+  Hamel Husain argues most agent eval failures are actually product-design failures: unresolved query ambiguity, 'criteria drift' as teams learn what quality means from seeing real outputs, and generic metrics (correctness, groundedness) that miss product-specific failure modes. Recommends treating eval criteria as versioned artifacts and grounding them in error analysis of real traces rather than broad automated scores.
 - **2026-07-28** — [AI agent evaluation: Tips from Anthropic on building evals you can trust](<../evals-observability/evaluation/AI agent evaluation Tips from Anthropic on building evals you can trust.md>) · `evaluation` · arize
   Anthropic's Marius Buleandra explains why agent evals need trajectory-level scrutiny, not just pass rates, using a case where a harness bug (missing SQL LIMIT clause) inflated a model's eval score by 9 points; covers regression vs. capability evals and building eval datasets from production traces.
 - **2026-07-28** — [How to improve agent skills with tracing and evals](<../evals-observability/evaluation/How to improve agent skills with tracing and evals.md>) · `evaluation` · arize

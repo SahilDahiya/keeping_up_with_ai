@@ -61,6 +61,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-07-30** — [Hamel Husain explains why AI evals fail before the evaluation begins](<../evals-observability/evaluation/Hamel Husain explains why AI evals fail before the evaluation begins.md>) · `evaluation` · arize
+  Hamel Husain argues most agent eval failures are actually product-design failures: unresolved query ambiguity, 'criteria drift' as teams learn what quality means from seeing real outputs, and generic metrics (correctness, groundedness) that miss product-specific failure modes. Recommends treating eval criteria as versioned artifacts and grounding them in error analysis of real traces rather than broad automated scores.
 - **2026-07-29** — [Deep Agents v0.7](<../agents/harness/Deep Agents v0.7.md>) · `harness` · langchain
   LangChain's Deep Agents v0.7 cuts base input tokens 65% (~6k to ~2k) by removing the default system prompt, trimming built-in tool descriptions 43%, and making TodoListMiddleware opt-in after evals across autonomous/conversational/long-context benchmarks on four models (gpt-5.6-luna, gemini-3.6-flash, claude-sonnet-4-6, claude-opus-4-8) showed steady reward with lower tokens/cost; also adds overridable middleware and filesystem tool improvements (paginated read_file, truncated grep/glob).
 - **2026-07-28** — [How to improve agent skills with tracing and evals](<../evals-observability/evaluation/How to improve agent skills with tracing and evals.md>) · `evaluation` · arize

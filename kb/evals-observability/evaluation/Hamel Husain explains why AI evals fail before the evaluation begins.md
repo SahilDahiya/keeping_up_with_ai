@@ -1,10 +1,16 @@
 ---
 title: Hamel Husain explains why AI evals fail before the evaluation begins
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: evals-observability
+subtopic: evaluation
+secondary_topics:
+- prompt-engineering/context-engineering
+summary: 'Hamel Husain argues most agent eval failures are actually product-design
+  failures: unresolved query ambiguity, ''criteria drift'' as teams learn what quality
+  means from seeing real outputs, and generic metrics (correctness, groundedness)
+  that miss product-specific failure modes. Recommends treating eval criteria as versioned
+  artifacts and grounding them in error analysis of real traces rather than broad
+  automated scores.'
 triage: null
 skip_reason: null
 source: arize
@@ -12,7 +18,7 @@ url: https://arize.com/blog/rise-of-the-ai-engineer-why-ai-evals-fail-before-the
 author: Sara Verdi
 published: '2026-07-30'
 fetched: '2026-07-31T06:58:20Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1377
 content_sha256: 4d7a7b7b2e7126dfad1e61c4a41f87800e108791175e09408eb1521765efa542
