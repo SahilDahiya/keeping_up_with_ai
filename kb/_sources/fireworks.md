@@ -1,7 +1,15 @@
 # fireworks
 
-65 articles.
+69 articles.
 
+- **2026-07-30** — [Three Tests to Run Before You Switch from LoRA to FullFT](<../models/fine-tuning/Three Tests to Run Before You Switch from LoRA to FullFT.md>) · `fine-tuning` · fireworks
+  Controlled experiments on Qwen3.5-9B isolate which lever actually closes the LoRA-to-FullFT quality gap -- rank, learning-rate tuning, and training-data coverage -- finding that recipe/learning-rate tuning erases much of a naive fixed-recipe FullFT advantage, rank hits a ceiling on supported behaviors, and broader curriculum coverage is what moves results beyond it.
+- **2026-07-29** — [Fine-Tune Your Own Embedding Model from an LLM — for the Price of a Coffee](<../rag-retrieval/embeddings/Fine-Tune Your Own Embedding Model from an LLM — for the Price of a Coffee.md>) · `embeddings` · fireworks
+  Shows a sub-$10 recipe for contrastive fine-tuning of Qwen3-Embedding-8B (in-batch negatives, InfoNCE) on the Fireworks platform, lifting retrieval quality on domain tasks like legal citation retrieval (LegalBench, +36% nDCG@10), clinical trial matching, and EU case-law retrieval, while preserving general-purpose performance.
+- **2026-07-26** — [Fireworks AI](<../models/fine-tuning/Fireworks AI.md>) · `fine-tuning` · fireworks
+  Demonstrates LoRA post-training of Kimi K3 via Fireworks Serverless Training on two RL tasks, Countdown and Frozen Lake, showing how dense partial-credit rewards produce fast smooth learning curves versus sparse goal-only rewards, with a small RL run (~20 steps, 860K tokens) costing about $65.
+- **2026-07-26** — [Trilogy’s Playbook for Open-Weight Cybersecurity with Kimi K3](<../product-engineering/security/Trilogy’s Playbook for Open-Weight Cybersecurity with Kimi K3.md>) · `security` · fireworks
+  Trilogy's AI Cybersecurity Playbook uses Kimi K3 on Fireworks with a Tree-sitter-based path-centric audit: deterministic indexing establishes reachability/call graphs, K3 judges impact and remediation on bounded work units, and a separate fresh-context pass verifies findings; notes Semgrep found K3's scanning precision varies by harness and repo scale.
 - **2026-07-21** — [Kimi K3 is competitive with Fable; Kimi K3 + Fable is SoTA.](<../models/benchmarks/Kimi K3 is competitive with Fable; Kimi K3 + Fable is SoTA.md>) · `benchmarks` · fireworks
   Fireworks benchmarked open Kimi K3 against closed Fable 5 across ~1,030 agentic tasks (SWE-bench-style fixes, terminal ops, algorithmic problems, multi-language, legal), finding near-parity on quality (92.4% vs 92.6% on SWE) and that oracle routing between the two models hits 93% accuracy at up to 50x lower cost than running Fable alone.
 - **2026-07-20** — [Heidi x Fireworks: Bridging the Gap in Frontier Model Performance](<../models/fine-tuning/Heidi x Fireworks Bridging the Gap in Frontier Model Performance.md>) · `fine-tuning` · fireworks

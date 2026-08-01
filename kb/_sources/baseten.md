@@ -1,7 +1,13 @@
 # baseten
 
-89 articles.
+92 articles.
 
+- **2026-07-30** — [22,580: GPT-2 to Kimi K3, explained](<../models/architectures/22,580 GPT-2 to Kimi K3, explained.md>) · `architectures` · baseten
+  Worklog tracing the architectural path from GPT-2 (2019) to Kimi K3 (2026, 22,580x larger), walking through decoder-only attention code and then the successive changes -- RoPE, GQA/MQA, MoE routing, and other efficiency techniques -- that took models from dense transformers to today's sparse, trillion-parameter frontier models.
+- **2026-07-27** — [Making Kimi K3 tokenization 18x faster for million-token agentic workloads](<../inference/optimization/Making Kimi K3 tokenization 18x faster for million-token agentic workloads.md>) · `optimization` · baseten
+  Describes Baseten's Rust-based Basetenkenizer, built to replace a Python tiktoken implementation for Kimi K3's up-to-1M-token agentic inputs, correctly distinguishing literal control-token strings from structural chat-template tokens while running up to 18x faster than tiktoken with exact token-ID parity.
+- **2026-07-27** — [How to build a day-0 API for Kimi K3](<../inference/serving/How to build a day-0 API for Kimi K3.md>) · `serving` · baseten
+  Walks through Baseten's five milestones for standing up a day-0 inference API for the 2.8T-parameter Kimi K3 on NVIDIA GB300 NVL72 systems: bringing up vLLM/SGLang with native MXFP4 weights, validating fidelity with Moonshot's Kimi Vendor Verifier, sweeping TP/EP/ADP configs, applying speculation/disaggregation/caching, and scaling replicas with KV-aware routing for prefix cache hit rate.
 - **2026-07-26** — [How we built the new fastest API for GLM-5.2](<../inference/optimization/How we built the new fastest API for GLM-5.2.md>) · `optimization` · baseten
   Baseten details how it doubled GLM-5.2 API throughput to 601 tok/s (per Artificial Analysis) by launching a separate low-latency "fast" API that swaps Attention Data Parallelism for Tensor and Expert Parallelism and sharply cuts max batch size, alongside scheduler tuning, NVFP4 weights, and an updated speculative-decoding profile on the same NVIDIA B200 GPUs.
 - **2026-07-23** — [H100 vs. H200 GPUs](<../inference/hardware/H100 vs. H200 GPUs.md>) · `hardware` · baseten

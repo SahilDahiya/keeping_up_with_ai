@@ -1,7 +1,11 @@
 # modal
 
-49 articles.
+51 articles.
 
+- **2026-07-27** — [Kimi K3 by Moonshot now available on Modal | Modal Blog](<../inference/speculative-decoding/Kimi K3 by Moonshot now available on Modal Modal Blog.md>) · `speculative-decoding` · modal
+  Modal details Day-0 serving of Kimi K3 with a custom DFlash speculator tuned to K3's architecture, trained on hidden states from 28 B300 nodes running K3 at TP8 against 4 training nodes, yielding 360% faster interactivity (100 to 460 tok/s) and 88% higher throughput; also notes Moonshot's MXFP4/MXFP8 quantization-aware training and a new KDA-compatible prefix-caching implementation contributed to vLLM.
+- **2026-07-27** — [A note on the Hugging Face agent incident | Modal Blog](<../product-engineering/security/A note on the Hugging Face agent incident Modal Blog.md>) · `security` · modal
+  Modal clarifies that in the Hugging Face agent intrusion, the compromised environment was a customer's own unauthenticated, publicly-exposed Sandbox endpoint that executed untrusted submitted code, not a breach of Modal's platform or isolation; recommends authentication, IP allowlisting, and outbound restrictions for public-facing sandboxes.
 - **2026-07-21** — [Devin Outposts on Modal | Modal Blog](<../infra-platform/deployment/Devin Outposts on Modal Modal Blog.md>) · `deployment` · modal
   Modal's open-source modal-devin library lets Cognition's Devin coding agent execute in user-controlled Modal Sandboxes (GPU-backed, custom images, snapshot suspend/resume) while its reasoning stays in Cognition's cloud, splitting the agent's control-plane queue from a self-hosted data-plane orchestrator and worker.
 - **2026-07-15** — [Inkling by Thinking Machines now available on Modal | Modal Blog](<../inference/speculative-decoding/Inkling by Thinking Machines now available on Modal Modal Blog.md>) · `speculative-decoding` · modal

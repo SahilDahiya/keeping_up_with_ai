@@ -1,9 +1,17 @@
 # models
 
-183 articles.
+187 articles.
 
+- **2026-07-30** — [22,580: GPT-2 to Kimi K3, explained](<architectures/22,580 GPT-2 to Kimi K3, explained.md>) · `architectures` · baseten
+  Worklog tracing the architectural path from GPT-2 (2019) to Kimi K3 (2026, 22,580x larger), walking through decoder-only attention code and then the successive changes -- RoPE, GQA/MQA, MoE routing, and other efficiency techniques -- that took models from dense transformers to today's sparse, trillion-parameter frontier models.
+- **2026-07-30** — [Three Tests to Run Before You Switch from LoRA to FullFT](<fine-tuning/Three Tests to Run Before You Switch from LoRA to FullFT.md>) · `fine-tuning` · fireworks
+  Controlled experiments on Qwen3.5-9B isolate which lever actually closes the LoRA-to-FullFT quality gap -- rank, learning-rate tuning, and training-data coverage -- finding that recipe/learning-rate tuning erases much of a naive fixed-recipe FullFT advantage, rank hits a ceiling on supported behaviors, and broader curriculum coverage is what moves results beyond it.
+- **2026-07-30** — [Advancing the price-performance frontier with GPT‑5.6](<releases/Advancing the price-performance frontier with GPT‑5.6.md>) · `releases` · simon-willison
+  Simon Willison notes OpenAI's GPT-5.6 Luna price drop (80%, to $0.20/$1.20 per million tokens, undercutting Gemini 3.1 Flash-Lite and 5x cheaper than Claude Haiku 4.5 on input), attributing it to GPT-5.6 Sol autonomously rewriting production inference kernels in Triton and Gluon, cutting end-to-end serving costs 20%.
 - **2026-07-26** — [Kimi K3 vs GPT-5.6 Sol on DeepSWE: Cost, Coding, and Routing](<benchmarks/Kimi K3 vs GPT-5.6 Sol on DeepSWE Cost, Coding, and Routing.md>) · `benchmarks` · together
   Analyzes 904 graded DeepSWE rollouts comparing Kimi K3 and GPT-5.6 Sol: Sol leads pass@1 72.7% to 68.5%, but Kimi K3 wins pass@4 (89.4% vs 85.8%) at 64% lower cost ($4.65 vs $8.37 per rollout). With only 0.46 task-level correlation between the two models, a Kimi-first cascade that escalates to Sol on test failure covers 108/113 tasks (~85.6%), beating both single models and a perfect one-shot router.
+- **2026-07-26** — [Fireworks AI](<fine-tuning/Fireworks AI.md>) · `fine-tuning` · fireworks
+  Demonstrates LoRA post-training of Kimi K3 via Fireworks Serverless Training on two RL tasks, Countdown and Frozen Lake, showing how dense partial-credit rewards produce fast smooth learning curves versus sparse goal-only rewards, with a small RL run (~20 steps, 860K tokens) costing about $65.
 - **2026-07-22** — [GLM 5.2 With Vision](<multimodal/GLM 5.2 With Vision.md>) · `multimodal` · baseten
   Baseten post-trained vision onto GLM 5.2 by training only a 50M-parameter, 2-layer MLP projector (reusing Kimi K2.6's vision tower) via SFT on 66k image-QA pairs, reaching MMMU-Pro scores equivalent to Claude 4.5 Haiku (55%) without touching GLM's text weights, and observed grokking plus strong generalization to entities never seen in the alignment dataset.
 - **2026-07-21** — [Kimi K3 is competitive with Fable; Kimi K3 + Fable is SoTA.](<benchmarks/Kimi K3 is competitive with Fable; Kimi K3 + Fable is SoTA.md>) · `benchmarks` · fireworks
@@ -371,6 +379,10 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-07-29** — [Fine-Tune Your Own Embedding Model from an LLM — for the Price of a Coffee](<../rag-retrieval/embeddings/Fine-Tune Your Own Embedding Model from an LLM — for the Price of a Coffee.md>) · `embeddings` · fireworks
+  Shows a sub-$10 recipe for contrastive fine-tuning of Qwen3-Embedding-8B (in-batch negatives, InfoNCE) on the Fireworks platform, lifting retrieval quality on domain tasks like legal citation retrieval (LegalBench, +36% nDCG@10), clinical trial matching, and EU case-law retrieval, while preserving general-purpose performance.
+- **2026-07-27** — [How to build a day-0 API for Kimi K3](<../inference/serving/How to build a day-0 API for Kimi K3.md>) · `serving` · baseten
+  Walks through Baseten's five milestones for standing up a day-0 inference API for the 2.8T-parameter Kimi K3 on NVIDIA GB300 NVL72 systems: bringing up vLLM/SGLang with native MXFP4 weights, validating fidelity with Moonshot's Kimi Vendor Verifier, sweeping TP/EP/ADP configs, applying speculation/disaggregation/caching, and scaling replicas with KV-aware routing for prefix cache hit rate.
 - **2026-07-23** — [Bringing Nunchaku 4-bit Diffusion Inference to Diffusers](<../inference/quantization/Bringing Nunchaku 4-bit Diffusion Inference to Diffusers.md>) · `quantization` · huggingface
   Diffusers now natively loads Nunchaku's SVDQuant W4A4 checkpoints via from_pretrained() and the Hugging Face `kernels` package, requiring no local CUDA compilation; unlike weight-only quantization, SVDQuant runs transformer layers in 4-bit weights and activations, cutting both memory and denoising-loop latency.
 - **2026-07-23** — [How to choose an AI model: lessons from Notion and Gamma](<../product-engineering/case-studies/How to choose an AI model lessons from Notion and Gamma.md>) · `case-studies` · baseten

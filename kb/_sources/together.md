@@ -1,7 +1,11 @@
 # together
 
-82 articles.
+84 articles.
 
+- **2026-07-29** — [ThunderAgent: 2x Faster Agentic Inference for Synthetic Data Generation at Scale](<../inference/optimization/ThunderAgent 2x Faster Agentic Inference for Synthetic Data Generation at Scale.md>) · `optimization` · together
+  Together AI's ThunderAgent (ICML 2026 Spotlight) fixes KV cache thrashing in high-concurrency agentic inference by scheduling at the program level instead of per-request: it pauses low-priority agent workflows under memory pressure and resumes them via a global waiting queue, achieving 803 vs 390 tok/s single-node throughput over SGLang and near-linear scaling to 2.4x speedup across 8 H100 nodes.
+- **2026-07-29** — [Configuring Dedicated Model Inference](<../inference/serving/Configuring Dedicated Model Inference.md>) · `serving` · together
+  Explains Together AI's Dedicated Model Inference resource model: immutable configs (engine, GPU type/count, parallelism), disposable deployments bound to a config with an autoscaling policy, and stable endpoints with capacity-aware traffic splits across deployments, enabling rollouts, A/B tests, and shadow experiments as just weighted-deployment changes.
 - **2026-07-26** — [Kimi K3 vs GPT-5.6 Sol on DeepSWE: Cost, Coding, and Routing](<../models/benchmarks/Kimi K3 vs GPT-5.6 Sol on DeepSWE Cost, Coding, and Routing.md>) · `benchmarks` · together
   Analyzes 904 graded DeepSWE rollouts comparing Kimi K3 and GPT-5.6 Sol: Sol leads pass@1 72.7% to 68.5%, but Kimi K3 wins pass@4 (89.4% vs 85.8%) at 64% lower cost ($4.65 vs $8.37 per rollout). With only 0.46 task-level correlation between the two models, a Kimi-first cascade that escalates to Sol on test failure covers 108/113 tasks (~85.6%), beating both single models and a perfect one-shot router.
 - **2026-07-23** — [The production platform for open-weight AI inference](<../inference/serving/The production platform for open-weight AI inference.md>) · `serving` · together

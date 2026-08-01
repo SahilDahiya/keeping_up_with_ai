@@ -1,7 +1,9 @@
 # braintrust
 
-70 articles.
+71 articles.
 
+- **2026-07-29** — [Behavior specs, an open standard for supervising long-horizon agents - Blog - Braintrust](<../evals-observability/llm-as-judge/Behavior specs, an open standard for supervising long-horizon agents - Blog - Braintrust.md>) · `llm-as-judge` · braintrust
+  Braintrust and Basis (an AI tax-return agent builder) introduce behavior specs, an open standard (agentbehavior.dev) for judging long-horizon agent trajectories on individual expected behaviors (true/false/NA) rather than only outcomes, citing OpenAI's 2023 and DeepMind's process-reward-model research as precedent for process over outcome supervision.
 - **2026-07-20** — [Paper MCP vs Figma MCP for frontend agents - Blog - Braintrust](<../agents/tool-use/Paper MCP vs Figma MCP for frontend agents - Blog - Braintrust.md>) · `tool-use` · braintrust
   Independent eval of Paper MCP vs Figma MCP for coding-agent frontend generation across 40 Design2Code pages and 27 hand-picked complex designs: the two tie on visual similarity (0.741 vs 0.744 on simple pages), but Figma's run-to-run variance is 1.9x Paper's and it costs 32% more per point of visual quality ($3.73 vs $2.82) while running 42% longer.
 - **2026-07-15** — [How we chose the model behind Topics with Baseten - Blog - Braintrust](<../evals-observability/evaluation/How we chose the model behind Topics with Baseten - Blog - Braintrust.md>) · `evaluation` · braintrust

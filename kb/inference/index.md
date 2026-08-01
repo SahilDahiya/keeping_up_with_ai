@@ -1,7 +1,17 @@
 # inference
 
-137 articles.
+142 articles.
 
+- **2026-07-29** — [ThunderAgent: 2x Faster Agentic Inference for Synthetic Data Generation at Scale](<optimization/ThunderAgent 2x Faster Agentic Inference for Synthetic Data Generation at Scale.md>) · `optimization` · together
+  Together AI's ThunderAgent (ICML 2026 Spotlight) fixes KV cache thrashing in high-concurrency agentic inference by scheduling at the program level instead of per-request: it pauses low-priority agent workflows under memory pressure and resumes them via a global waiting queue, achieving 803 vs 390 tok/s single-node throughput over SGLang and near-linear scaling to 2.4x speedup across 8 H100 nodes.
+- **2026-07-29** — [Configuring Dedicated Model Inference](<serving/Configuring Dedicated Model Inference.md>) · `serving` · together
+  Explains Together AI's Dedicated Model Inference resource model: immutable configs (engine, GPU type/count, parallelism), disposable deployments bound to a config with an autoscaling policy, and stable endpoints with capacity-aware traffic splits across deployments, enabling rollouts, A/B tests, and shadow experiments as just weighted-deployment changes.
+- **2026-07-27** — [Making Kimi K3 tokenization 18x faster for million-token agentic workloads](<optimization/Making Kimi K3 tokenization 18x faster for million-token agentic workloads.md>) · `optimization` · baseten
+  Describes Baseten's Rust-based Basetenkenizer, built to replace a Python tiktoken implementation for Kimi K3's up-to-1M-token agentic inputs, correctly distinguishing literal control-token strings from structural chat-template tokens while running up to 18x faster than tiktoken with exact token-ID parity.
+- **2026-07-27** — [How to build a day-0 API for Kimi K3](<serving/How to build a day-0 API for Kimi K3.md>) · `serving` · baseten
+  Walks through Baseten's five milestones for standing up a day-0 inference API for the 2.8T-parameter Kimi K3 on NVIDIA GB300 NVL72 systems: bringing up vLLM/SGLang with native MXFP4 weights, validating fidelity with Moonshot's Kimi Vendor Verifier, sweeping TP/EP/ADP configs, applying speculation/disaggregation/caching, and scaling replicas with KV-aware routing for prefix cache hit rate.
+- **2026-07-27** — [Kimi K3 by Moonshot now available on Modal | Modal Blog](<speculative-decoding/Kimi K3 by Moonshot now available on Modal Modal Blog.md>) · `speculative-decoding` · modal
+  Modal details Day-0 serving of Kimi K3 with a custom DFlash speculator tuned to K3's architecture, trained on hidden states from 28 B300 nodes running K3 at TP8 against 4 training nodes, yielding 360% faster interactivity (100 to 460 tok/s) and 88% higher throughput; also notes Moonshot's MXFP4/MXFP8 quantization-aware training and a new KDA-compatible prefix-caching implementation contributed to vLLM.
 - **2026-07-26** — [How we built the new fastest API for GLM-5.2](<optimization/How we built the new fastest API for GLM-5.2.md>) · `optimization` · baseten
   Baseten details how it doubled GLM-5.2 API throughput to 601 tok/s (per Artificial Analysis) by launching a separate low-latency "fast" API that swaps Attention Data Parallelism for Tensor and Expert Parallelism and sharply cuts max batch size, alongside scheduler tuning, NVFP4 weights, and an updated speculative-decoding profile on the same NVIDIA B200 GPUs.
 - **2026-07-23** — [H100 vs. H200 GPUs](<hardware/H100 vs. H200 GPUs.md>) · `hardware` · baseten
@@ -279,6 +289,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-07-30** — [Advancing the price-performance frontier with GPT‑5.6](<../models/releases/Advancing the price-performance frontier with GPT‑5.6.md>) · `releases` · simon-willison
+  Simon Willison notes OpenAI's GPT-5.6 Luna price drop (80%, to $0.20/$1.20 per million tokens, undercutting Gemini 3.1 Flash-Lite and 5x cheaper than Claude Haiku 4.5 on input), attributing it to GPT-5.6 Sol autonomously rewriting production inference kernels in Triton and Gluon, cutting end-to-end serving costs 20%.
 - **2026-07-26** — [Kimi K3 vs GPT-5.6 Sol on DeepSWE: Cost, Coding, and Routing](<../models/benchmarks/Kimi K3 vs GPT-5.6 Sol on DeepSWE Cost, Coding, and Routing.md>) · `benchmarks` · together
   Analyzes 904 graded DeepSWE rollouts comparing Kimi K3 and GPT-5.6 Sol: Sol leads pass@1 72.7% to 68.5%, but Kimi K3 wins pass@4 (89.4% vs 85.8%) at 64% lower cost ($4.65 vs $8.37 per rollout). With only 0.46 task-level correlation between the two models, a Kimi-first cascade that escalates to Sol on test failure covers 108/113 tasks (~85.6%), beating both single models and a perfect one-shot router.
 - **2026-07-21** — [Kimi K3 is competitive with Fable; Kimi K3 + Fable is SoTA.](<../models/benchmarks/Kimi K3 is competitive with Fable; Kimi K3 + Fable is SoTA.md>) · `benchmarks` · fireworks

@@ -1,7 +1,13 @@
 # langchain
 
-92 articles.
+96 articles.
 
+- **2026-07-29** — [Deep Agents v0.7](<../agents/harness/Deep Agents v0.7.md>) · `harness` · langchain
+  LangChain's Deep Agents v0.7 cuts base input tokens 65% (~6k to ~2k) by removing the default system prompt, trimming built-in tool descriptions 43%, and making TodoListMiddleware opt-in after evals across autonomous/conversational/long-context benchmarks on four models (gpt-5.6-luna, gemini-3.6-flash, claude-sonnet-4-6, claude-opus-4-8) showed steady reward with lower tokens/cost; also adds overridable middleware and filesystem tool improvements (paginated read_file, truncated grep/glob).
+- **2026-07-29** — [How Similarweb Evaluates Agent Reports with LangSmith](<../evals-observability/evaluation/How Similarweb Evaluates Agent Reports with LangSmith.md>) · `evaluation` · langchain
+  Similarweb's Data Studio team describes evaluating an open-ended, long-form research-report agent in LangSmith: combining deterministic tool-call checks with LLM-as-judge rubric scoring anchored to golden answers or explicit rubrics, and how a miscalibrated rubric weighting cost them a week by making a genuine improvement look like a regression.
+- **2026-07-28** — [How LangChain Built an Agent-First Data Stack](<../agents/memory-context/How LangChain Built an Agent-First Data Stack.md>) · `memory-context` · langchain
+  LangChain's data team describes migrating from a traditional BI tool to an agent-first stack on Hex, where dbt column/table definitions and a semantic metrics layer supply the business context (allowed values, filtering defaults, metric relationships) that lets a self-serve data agent handle ~40x the request volume of their 3-person team.
 - **2026-07-23** — [How We Benchmark Deep Agents](<../evals-observability/evaluation/How We Benchmark Deep Agents.md>) · `evaluation` · langchain
   LangChain describes how it evaluates Deep Agents using Harbor as an eval runner across three benchmark suites — Harbor-Index (82 end-to-end SWE/search/data-analysis tasks distilled from 6,000+ candidates), τ³-bench (30-task multi-turn conversation), and ContextBench (30 retrieval tasks with in-sandbox corpora) — judged by artifact-checking scripts rather than final-response inspection.
 - **2026-07-22** — [3 Years of Graph Engineering with LangGraph](<../agents/harness/3 Years of Graph Engineering with LangGraph.md>) · `harness` · langchain
@@ -148,6 +154,8 @@
   Design history of LangGraph as an agent runtime from first principles, covering control flow, state, durability, and production requirements.
 - **2025-08-06** — [Introducing Open SWE: An Open-Source Asynchronous Coding Agent](<../agents/tool-use/Introducing Open SWE An Open-Source Asynchronous Coding Agent.md>) · `tool-use` · langchain
   Introduces Open SWE as an open-source asynchronous coding agent and discusses its architecture for long-running coding tasks.
+- **2025-07-29** — [Introducing Align Evals: Streamlining LLM Application Evaluation](<../evals-observability/llm-as-judge/Introducing Align Evals Streamlining LLM Application Evaluation.md>) · `llm-as-judge` · langchain
+  Describes a four-step method (inspired by Eugene Yan's AlignEval writeup) for calibrating an LLM-as-judge evaluator to human preferences: pick eval criteria, gather representative examples, hand-grade a 'golden set', then iterate the evaluator prompt against that golden set using an alignment score, shipped as LangSmith's Align Evals feature.
 - **2025-06-16** — [How and when to build multi-agent systems](<../agents/multi-agent/How and when to build multi-agent systems.md>) · `multi-agent` · langchain
   Guidance on when multi-agent systems are warranted and how to design agent roles, coordination, and boundaries.
 - **2025-04-20** — [How to think about agent frameworks](<../agents/harness/How to think about agent frameworks.md>) · `harness` · langchain
