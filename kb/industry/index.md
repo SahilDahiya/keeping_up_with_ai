@@ -1,19 +1,7 @@
 # industry
 
-11 articles.
+5 articles.
 
-- **2026-07-01** — [Announcing the Monetization Gateway: charge for any resource behind Cloudflare via x402](<business/Announcing the Monetization Gateway charge for any resource behind Cloudflare via x402.md>) · `business` · cloudflare-ai
-  Announces the Monetization Gateway: charge agents for any Cloudflare-protected resource (pages, datasets, APIs, MCP tools) with payment verification enforced at the edge, settling sub-cent stablecoin micropayments over the x402 protocol now stewarded by a 25+ member Linux Foundation x402 Foundation.
-- **2026-07-01** — [Making AI search smarter](<business/Making AI search smarter.md>) · `business` · cloudflare-ai
-  Two initiatives to rebuild search economics: a research program sharing content-freshness signals with answer engines (over 50% of good-bot crawl traffic re-fetches unchanged pages) and evolving Pay Per Crawl into Pay Per Use, piloting pay-per-query compensation with Ceramic.ai and You.com.
-- **2026-07-01** — [Unmasking the crawls with Attribution Business Insights](<business/Unmasking the crawls with Attribution Business Insights.md>) · `business` · cloudflare-ai
-  Announces the Attribution Business Insights dashboard for Bot Management customers: per-operator crawl-to-referral ratios (observed from 118:1 to ~50,000:1 for AI crawlers), bot-vs-human traffic breakdowns, and crawler classification into Training, Search, and Agent purposes.
-- **2026-07-01** — [Content Independence Day, one year on- building the business model for the agentic Internet](<trends/Content Independence Day, one year on- building the business model for the agentic Internet.md>) · `trends` · cloudflare-ai
-  Data report one year after Content Independence Day: over 50% of Internet traffic is now non-human, AI-training crawling grew from 22% to 52% of crawler requests (June 2026), heavily crawled categories lost up to 40% of human traffic, and publishers brace for 'Google Zero'.
-- **2026-06-15** — [Growing the Cloudflare AI team with talent from Ensemble AI](<announcements/Growing the Cloudflare AI team with talent from Ensemble AI.md>) · `announcements` · cloudflare-ai
-  Ensemble AI's team joins Cloudflare's Workers AI to improve inference economics, bringing NdLinear — a drop-in linear-layer replacement operating on multidimensional activations to cut parameters and compute — and NdLinear-LoRA for parameter-efficient fine-tuning, complementing Infire and Unweight.
-- **2026-04-20** — [Building the agentic cloud: everything we launched during Agents Week 2026](<announcements/Building the agentic cloud everything we launched during Agents Week 2026.md>) · `announcements` · cloudflare-ai
-  Roundup of every Agents Week 2026 launch for Cloudflare's 'agentic cloud': Artifacts (Git-compatible versioned storage), Sandboxes with Outbound Workers for zero-trust egress, Durable Object Facets, and Workflows rearchitected to 50,000 concurrency for durable background agents.
 - **2025-12-30** — [OpenAI for Developers in 2025](<trends/OpenAI for Developers in 2025.md>) · `trends` · openai-devs
   Year-in-review of OpenAI's 2025 developer platform: reasoning converging from separate o1/o3/o4-mini lines into unified flagship models, multimodal I/O becoming default, agent building blocks (Responses API, Agents SDK, AgentKit), and GPT-5.2-Codex for long-horizon coding.
 - **2025-07-04** — [Augmented commerce: Machine learning at Shopify (2025)](<trends/Augmented commerce Machine learning at Shopify (2025).md>) · `trends` · shopify
@@ -33,9 +21,5 @@
   Simon Willison covers Thinking Machines Lab's first open-weights release, Inkling: a 975B-parameter (41B active) Apache-2.0 MoE transformer trained on 45T multimodal tokens, positioned as a fine-tuning base for their Tinker platform rather than a frontier model, plus a promised smaller Inkling-Small variant.
 - **2026-07-16** — [Kimi K3, and what we can still learn from the pelican benchmark](<../models/releases/Kimi K3, and what we can still learn from the pelican benchmark.md>) · `releases` · simon-willison
   Simon Willison reviews Moonshot AI's Kimi K3 (2.8T parameters, open weights promised July 27, 2026), covering its Artificial Analysis benchmark standing (Elo 1547, +732 over K2.6), its $3/$15 per-million-token pricing, and revisits his informal 'pelican riding a bicycle' SVG test as an ad hoc capability check.
-- **2026-07-01** — [Your site, your rules: new AI traffic options for all customers](<../product-engineering/security/Your site, your rules new AI traffic options for all customers.md>) · `security` · cloudflare-ai
-  Cloudflare replaces the binary 'Block AI Bots' toggle with per-use-case controls — Search, Agent, and Training crawlers — for all customers including Free tier, and pushes bot operators to split multi-purpose crawlers so site owners can allow discovery without donating training data.
-- **2026-04-21** — [Moving past bots vs. humans](<../product-engineering/security/Moving past bots vs. humans.md>) · `security` · cloudflare-ai
-  Argues bot detection must move from 'bots vs. humans' to intent and behavior as AI agents fetch raw content without rendering pages: covers Web Bot Auth (HTTP message signatures) for crawler identification and private rate limiting for clients that no longer behave like browsers.
 - **2025-05-12** — [Vision Language Models (Better, faster, stronger)](<../models/multimodal/Vision Language Models (Better, faster, stronger).md>) · `multimodal` · huggingface
   A year-in-review of vision language models covering new model classes (any-to-any, reasoning VLMs, small on-device VLMs, MoE VLMs), multimodal RAG with ColPali-style late-interaction retrievers, VLM agents for GUI/computer use, video understanding, and how alignment/benchmarks for VLMs have evolved. Names the specific models and techniques behind each shift.

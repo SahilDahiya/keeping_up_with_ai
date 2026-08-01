@@ -50,12 +50,10 @@ sources:
     exclude_regex: "^/blog/topic/"   # tag-index listing pages, not articles
     tags: [llm-vendors]
 
-  - slug: cloudflare-ai
-    name: Cloudflare Blog (AI tag)
-    home: https://blog.cloudflare.com/tag/ai/
-    feed: https://blog.cloudflare.com/tag/ai/rss
-    discovery: [feed]                          # site sitemap is the whole blog, not just AI
-    tags: [infra, edge]
+  # Cloudflare Blog (AI tag) removed 2026-07-27 (user-directed): the /tag/ai/ feed
+  # was a low-signal firehose — ~65% product/business/policy announcements (Agents
+  # Week, monetization gateway, spend limits) with only ~7 real engineering posts.
+  # Whole source dropped and all 20 filed articles purged.
 
   - slug: fireworks
     name: Fireworks AI Blog
