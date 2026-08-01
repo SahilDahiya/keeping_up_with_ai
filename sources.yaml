@@ -145,15 +145,10 @@ sources:
     exclude_regex: "/articles/(hiring|hiring-again|company-announcement|gregor|hack-monty.*|hallway-track.*|eu-region-launch|[a-z0-9-]*-starter-credit|[a-z0-9-]*-head-of-[a-z0-9-]*|[a-z0-9-]*-sdk-launch|mcp-launch|logfire-gateway-launch|logfire-enterprise-dedicated|ingress-to-gateway|gateway-merging-into-logfire|pydantic-v[0-9][a-z0-9-]*|pydantic-bitset[a-z0-9-]*|pydantic-validation-[a-z0-9-]*|pydantic-events|pydantic-monty|pydantic-donates-[a-z0-9-]*|emscripten-wheels-pydantic|eval-type-backport|inline-snapshot|struct-field-pushdown|how-curvy-is-your-data|bloom-filter-folding-parquet-logfire)/?$"
     tags: [agents, observability, structured-output]
 
-  - slug: simon-willison
-    name: Simon Willison's Weblog
-    home: https://simonwillison.net/
-    feed: https://simonwillison.net/atom/everything/
-    sitemap: https://simonwillison.net/sitemap.xml
-    include_regex: "^/\\d{4}/"
-    min_words: 300                             # skip link-blog one-liners and quotations
-    since: "2023-01-01"                        # backfill floor; 16.7k URLs otherwise
-    tags: [independent, llm-reviews]
+  # Simon Willison's Weblog removed 2026-07-27 (user-directed): whole source
+  # dropped and all 20 filed articles purged. NB: an independent high-signal
+  # blog, not a vendor marketing feed — removed by explicit request, not on the
+  # promo-rot rationale that drove the vendor purges.
 
   - slug: chip-huyen
     name: Chip Huyen's Blog

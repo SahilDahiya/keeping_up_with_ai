@@ -1,33 +1,21 @@
 # models
 
-160 articles.
+154 articles.
 
 - **2026-07-31** — [Fine-tuning Qwen3-TTS for high-quality voice cloning](<fine-tuning/Fine-tuning Qwen3-TTS for high-quality voice cloning.md>) · `fine-tuning` · baseten
   Baseten details a fine-tuning recipe for Qwen3-TTS voice cloning: an ASR-driven pipeline for building utterance-level (audio, text) pairs, talker/sub-talker cross-entropy loss over 12 RVQ codebook frames/sec, a centroid speaker embedding averaged over 64 clips, and warmup+cosine LR decay, trained in ~1 hour on a single H100 for 8 epochs on 1.5 hours of LJ Speech audio, reaching ~130ms TTFA (vs ~154ms for ICL cloning).
-- **2026-07-31** — [deepseek-ai/DeepSeek-V4-Flash-0731](<releases/deepseek-aiDeepSeek-V4-Flash-0731.md>) · `releases` · simon-willison
-  Simon Willison covers DeepSeek-V4-Flash-0731, a 304B-parameter (167GB) model ranked by Artificial Analysis ahead of the larger 428B MiniMax M3 on its Intelligence-Index-vs-cost Pareto frontier at $0.14/$0.27 per million tokens, and notes the default reasoning effort produces a much worse 'pelican riding a bicycle' SVG than the high reasoning-effort setting.
 - **2026-07-30** — [22,580: GPT-2 to Kimi K3, explained](<architectures/22,580 GPT-2 to Kimi K3, explained.md>) · `architectures` · baseten
   Worklog tracing the architectural path from GPT-2 (2019) to Kimi K3 (2026, 22,580x larger), walking through decoder-only attention code and then the successive changes -- RoPE, GQA/MQA, MoE routing, and other efficiency techniques -- that took models from dense transformers to today's sparse, trillion-parameter frontier models.
 - **2026-07-30** — [Three Tests to Run Before You Switch from LoRA to FullFT](<fine-tuning/Three Tests to Run Before You Switch from LoRA to FullFT.md>) · `fine-tuning` · fireworks
   Controlled experiments on Qwen3.5-9B isolate which lever actually closes the LoRA-to-FullFT quality gap -- rank, learning-rate tuning, and training-data coverage -- finding that recipe/learning-rate tuning erases much of a naive fixed-recipe FullFT advantage, rank hits a ceiling on supported behaviors, and broader curriculum coverage is what moves results beyond it.
-- **2026-07-30** — [Advancing the price-performance frontier with GPT‑5.6](<releases/Advancing the price-performance frontier with GPT‑5.6.md>) · `releases` · simon-willison
-  Simon Willison notes OpenAI's GPT-5.6 Luna price drop (80%, to $0.20/$1.20 per million tokens, undercutting Gemini 3.1 Flash-Lite and 5x cheaper than Claude Haiku 4.5 on input), attributing it to GPT-5.6 Sol autonomously rewriting production inference kernels in Triton and Gluon, cutting end-to-end serving costs 20%.
 - **2026-07-26** — [Kimi K3 vs GPT-5.6 Sol on DeepSWE: Cost, Coding, and Routing](<benchmarks/Kimi K3 vs GPT-5.6 Sol on DeepSWE Cost, Coding, and Routing.md>) · `benchmarks` · together
   Analyzes 904 graded DeepSWE rollouts comparing Kimi K3 and GPT-5.6 Sol: Sol leads pass@1 72.7% to 68.5%, but Kimi K3 wins pass@4 (89.4% vs 85.8%) at 64% lower cost ($4.65 vs $8.37 per rollout). With only 0.46 task-level correlation between the two models, a Kimi-first cascade that escalates to Sol on test failure covers 108/113 tasks (~85.6%), beating both single models and a perfect one-shot router.
 - **2026-07-26** — [Fireworks AI](<fine-tuning/Fireworks AI.md>) · `fine-tuning` · fireworks
   Demonstrates LoRA post-training of Kimi K3 via Fireworks Serverless Training on two RL tasks, Countdown and Frozen Lake, showing how dense partial-credit rewards produce fast smooth learning curves versus sparse goal-only rewards, with a small RL run (~20 steps, 860K tokens) costing about $65.
 - **2026-07-22** — [GLM 5.2 With Vision](<multimodal/GLM 5.2 With Vision.md>) · `multimodal` · baseten
   Baseten post-trained vision onto GLM 5.2 by training only a 50M-parameter, 2-layer MLP projector (reusing Kimi K2.6's vision tower) via SFT on 66k image-QA pairs, reaching MMMU-Pro scores equivalent to Claude 4.5 Haiku (55%) without touching GLM's text weights, and observed grokking plus strong generalization to entities never seen in the alignment dataset.
-- **2026-07-16** — [Inkling: Our open-weights model](<releases/Inkling Our open-weights model.md>) · `releases` · simon-willison
-  Simon Willison covers Thinking Machines Lab's first open-weights release, Inkling: a 975B-parameter (41B active) Apache-2.0 MoE transformer trained on 45T multimodal tokens, positioned as a fine-tuning base for their Tinker platform rather than a frontier model, plus a promised smaller Inkling-Small variant.
-- **2026-07-16** — [Kimi K3, and what we can still learn from the pelican benchmark](<releases/Kimi K3, and what we can still learn from the pelican benchmark.md>) · `releases` · simon-willison
-  Simon Willison reviews Moonshot AI's Kimi K3 (2.8T parameters, open weights promised July 27, 2026), covering its Artificial Analysis benchmark standing (Elo 1547, +732 over K2.6), its $3/$15 per-million-token pricing, and revisits his informal 'pelican riding a bicycle' SVG test as an ad hoc capability check.
 - **2026-07-15** — [Together AI brings Thinking Machines Lab’s new model Inkling on day 0](<architectures/Together AI brings Thinking Machines Lab’s new model Inkling on day 0.md>) · `architectures` · together
   Details Inkling's architecture (975B/40B active MoE with a shared expert sink jointly normalized against routed experts, a learned query-conditioned relative attention bias instead of RoPE, and 'sconv' short causal convolutions on K/V and sublayer outputs) and Together's FlashAttention-4-based kernel adapted to serve its query-conditioned relative attention efficiently.
-- **2026-07-09** — [The new GPT-5.6 family: Luna, Terra, Sol](<releases/The new GPT-5.6 family Luna, Terra, Sol.md>) · `releases` · simon-willison
-  Notes on the GPT-5.6 Luna, Terra, and Sol release, including pricing, million-token context, agentic benchmark claims, SWE-Bench Pro caveats, programmatic tool calling, subagents, and prompt-cache breakpoints.
-- **2026-06-30** — [What’s new in Claude Sonnet 5](<releases/What’s new in Claude Sonnet 5.md>) · `releases` · simon-willison
-  Developer-focused notes on Claude Sonnet 5 covering adaptive thinking defaults, removed sampling parameters, million-token context, pricing/tokenizer changes, and comparative tokenization cost across document types.
 - **2026-06-25** — [Live draft model training for speculative decoding](<fine-tuning/Live draft model training for speculative decoding.md>) · `fine-tuning` · baseten
   Describes live draft-model training for speculative decoding systems.
 - **2026-06-18** — [Beyond LoRA: Can you beat the most popular fine-tuning technique?](<fine-tuning/Beyond LoRA Can you beat the most popular fine-tuning technique.md>) · `fine-tuning` · huggingface

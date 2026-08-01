@@ -99,14 +99,8 @@
   Analyzes 904 graded DeepSWE rollouts comparing Kimi K3 and GPT-5.6 Sol: Sol leads pass@1 72.7% to 68.5%, but Kimi K3 wins pass@4 (89.4% vs 85.8%) at 64% lower cost ($4.65 vs $8.37 per rollout). With only 0.46 task-level correlation between the two models, a Kimi-first cascade that escalates to Sol on test failure covers 108/113 tasks (~85.6%), beating both single models and a perfect one-shot router.
 - **2026-07-14** — [Agent and LLM views in Pydantic Logfire](<../evals-observability/monitoring/Agent and LLM views in Pydantic Logfire.md>) · `monitoring` · pydantic
   Argues that non-deterministic agent workloads should be monitored on turns-per-run and tool-calling-turns-per-run at p90, not the mean, because a rare runaway retry loop (e.g. 40 tool calls, $12) hides in the average; built from the gen_ai.* spans agents already emit.
-- **2026-07-09** — [The new GPT-5.6 family: Luna, Terra, Sol](<../models/releases/The new GPT-5.6 family Luna, Terra, Sol.md>) · `releases` · simon-willison
-  Notes on the GPT-5.6 Luna, Terra, and Sol release, including pricing, million-token context, agentic benchmark claims, SWE-Bench Pro caveats, programmatic tool calling, subagents, and prompt-cache breakpoints.
-- **2026-07-03** — [Fable's judgement](<../agents/multi-agent/Fable's judgement.md>) · `multi-agent` · simon-willison
-  Practical coding-agent pattern for delegating implementation work to cheaper subagents while reserving the main model for judgment, review, synthesis, and model-selection decisions.
 - **2026-07-02** — [H100 vs. H200 vs. B200: which GPU should you use?](<../inference/hardware/H100 vs. H200 vs. B200 which GPU should you use.md>) · `hardware` · baseten
   Compares H100, H200, and B200 GPUs for choosing hardware for inference workloads.
-- **2026-06-30** — [What’s new in Claude Sonnet 5](<../models/releases/What’s new in Claude Sonnet 5.md>) · `releases` · simon-willison
-  Developer-focused notes on Claude Sonnet 5 covering adaptive thinking defaults, removed sampling parameters, million-token context, pricing/tokenizer changes, and comparative tokenization cost across document types.
 - **2026-06-25** — [Proxying inference requests in 6ms with Pingora, Envoy, and Spanner](<../inference/serving/Proxying inference requests in 6ms with Pingora, Envoy, and Spanner.md>) · `serving` · modal
   Explains low-latency inference proxying with Pingora, Envoy, and Spanner, including request-routing architecture.
 - **2026-05-28** — [Reinforcement learning is an infrastructure problem](<../models/reinforcement-learning/Reinforcement learning is an infrastructure problem.md>) · `reinforcement-learning` · modal
