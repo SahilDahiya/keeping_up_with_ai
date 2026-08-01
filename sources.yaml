@@ -93,13 +93,9 @@ sources:
   # mostly own-product / eval-methodology marketing; whole source dropped and all
   # 38 filed articles purged. Same rationale as the Arize removal above.
 
-  - slug: langchain
-    name: LangChain Blog
-    home: https://blog.langchain.com/
-    feed: https://blog.langchain.com/rss.xml
-    sitemap: https://blog.langchain.com/sitemap.xml
-    exclude_regex: "^/(tag|author|page)/"
-    tags: [frameworks, agents]
+  # LangChain Blog removed 2026-07-27 (user-directed): framework-vendor blog;
+  # whole source dropped and all 97 filed articles purged despite substantial
+  # technical content. Same source-removal pattern as Arize/Langfuse above.
 
   # Arize AI Blog removed 2026-07-27 (user-directed): vendor blog dominated by
   # Phoenix/AX product marketing and integration tutorials; whole source dropped

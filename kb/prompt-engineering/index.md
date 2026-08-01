@@ -1,13 +1,11 @@
 # prompt-engineering
 
-17 articles.
+15 articles.
 
 - **2026-07-20** — [Custom Code Review rules for Codex | OpenAI Developers](<context-engineering/Custom Code Review rules for Codex OpenAI Developers.md>) · `context-engineering` · openai-devs
   Codex Code Review can now apply custom repository rules written in AGENTS.md (preserving API contracts, keeping customer data out of logs, avoiding breaking renames) so the review agent catches team-specific issues that used to depend on tribal reviewer knowledge, citing the specific rule behind each finding.
 - **2026-07-17** — [Prompt optimization and managed prompts in Pydantic Logfire](<techniques/Prompt optimization and managed prompts in Pydantic Logfire.md>) · `techniques` · pydantic
   Describes Pydantic Logfire's prompt optimizer, which reads up to 100 recent production traces (failures weighted highest) via OpenTelemetry gen_ai spans, proposes a single evidence-cited prompt edit with a confidence ladder (prefer/always/never), rejects ungrounded claims via a validator, and separates prompt fixes from non-prompt issues like flaky providers or broken tools.
-- **2026-06-26** — [Prompt Caching with Deep Agents](<context-engineering/Prompt Caching with Deep Agents.md>) · `context-engineering` · langchain
-  Explains prompt caching for Deep Agents and how cache-aware context design reduces latency and cost for repeated agent work.
 - **2026-06-22** — [Skills on steroids: on-demand capabilities in Pydantic AI](<context-engineering/Skills on steroids on-demand capabilities in Pydantic AI.md>) · `context-engineering` · pydantic
   Introduces progressive disclosure for agent capabilities in Pydantic AI: mark a capability defer_loading=True so it collapses to a one-line id+description in context, and the model calls load_capability to inject the full instructions/tools bundle only when it decides it needs it, cutting input tokens spent loading context that has no chance of being used on a given turn.
 - **2026-05-12** — [Context engineering: the key to great agents](<context-engineering/Context engineering the key to great agents.md>) · `context-engineering` · sierra
@@ -24,8 +22,6 @@
   Explains constrained generation for structured extraction with reasoning models and schema-bound outputs.
 - **2024-12-23** — [Controlling Language Model Generation with NVIDIA's LogitsProcessorZoo](<structured-output/Controlling Language Model Generation with NVIDIA's LogitsProcessorZoo.md>) · `structured-output` · huggingface
   Uses NVIDIA's LogitsProcessorZoo to steer generation by editing the logit distribution directly: GenLengthLogitsProcessor to control answer length, CiteFromPromptLogitsProcessor to bias tokens toward the source passage (useful for RAG), ForceLastPhraseLogitsProcessor and MultipleChoiceLogitsProcessor for constrained answers.
-- **2024-11-13** — [Promptim: an experimental library for prompt optimization](<techniques/Promptim an experimental library for prompt optimization.md>) · `techniques` · langchain
-  Introduces Promptim as an experimental prompt-optimization library that uses evaluation feedback to improve prompts.
 - **2024-09-12** — [How to build function calling and JSON mode for open-source and fine-tuned LLMs](<structured-output/How to build function calling and JSON mode for open-source and fine-tuned LLMs.md>) · `structured-output` · baseten
   Shows how to build function calling and JSON mode for open-source and fine-tuned LLMs.
 - **2024-04-30** — [Improving Prompt Consistency with Structured Generations](<structured-output/Improving Prompt Consistency with Structured Generations.md>) · `structured-output` · huggingface
@@ -39,8 +35,6 @@
 
 ## Also relevant (filed elsewhere)
 
-- **2026-07-29** — [Deep Agents v0.7](<../agents/harness/Deep Agents v0.7.md>) · `harness` · langchain
-  LangChain's Deep Agents v0.7 cuts base input tokens 65% (~6k to ~2k) by removing the default system prompt, trimming built-in tool descriptions 43%, and making TodoListMiddleware opt-in after evals across autonomous/conversational/long-context benchmarks on four models (gpt-5.6-luna, gemini-3.6-flash, claude-sonnet-4-6, claude-opus-4-8) showed steady reward with lower tokens/cost; also adds overridable middleware and filesystem tool improvements (paginated read_file, truncated grep/glob).
 - **2026-06-26** — [What makes a good agent harness](<../agents/harness/What makes a good agent harness.md>) · `harness` · pydantic
   Follow-up to the harness thesis detailing what makes an agent harness good: safe tool access, memory that survives a single model call, guardrails that catch bad actions before they land, and context management that keeps the window full of what matters.
 - **2026-06-23** — [Pydantic AI v2: capabilities, a leaner core, and the Harness](<../agents/harness/Pydantic AI v2 capabilities, a leaner core, and the Harness.md>) · `harness` · pydantic
@@ -75,8 +69,6 @@
   Dagster Labs describes using Codex to accelerate documentation work — writing docs, translating content across mediums, and measuring doc completeness — and finds a well-structured CONTRIBUTING.md doubles as high-leverage scaffolding for the agent.
 - **2025-10-16** — [Equipping agents for the real world with Agent Skills](<../agents/tool-use/Equipping agents for the real world with Agent Skills.md>) · `tool-use` · anthropic-engineering
   Introduces Agent Skills: folder-based packages of instructions, scripts, and resources that agents load progressively to gain domain expertise on demand.
-- **2025-09-11** — [How to turn Claude Code into a domain specific coding agent](<../agents/tool-use/How to turn Claude Code into a domain specific coding agent.md>) · `tool-use` · langchain
-  Shows how to turn Claude Code into a domain-specific coding agent using instructions, tools, context, and workflow constraints.
 - **2025-07-11** — [Function calling for agentic AI systems](<../agents/tool-use/Function calling for agentic AI systems.md>) · `tool-use` · fireworks
   Explains function calling as the bridge between LLM outputs, external tools, and agentic execution loops.
 - **2025-05-28** — [CodeAgents + Structure: A Better Way to Execute Actions](<../agents/tool-use/CodeAgents + Structure A Better Way to Execute Actions.md>) · `tool-use` · huggingface
@@ -95,8 +87,6 @@
   Tutorial for building a function-calling application with FastAPI, SerpAPI, and structured tool invocation.
 - **2024-08-12** — [Tool Use, Unified](<../agents/tool-use/Tool Use, Unified.md>) · `tool-use` · huggingface
   Explains the unified tool-use API in Transformers chat templates: pass plain Python functions with typed signatures and docstrings and they are auto-converted to JSON schema, then rendered per-model by the model's Jinja chat template — plus the conventions chosen for tool-call and tool-result messages so tool-calling chats are portable across models that disagree on formats.
-- **2024-06-26** — [Aligning LLM-as-a-Judge with Human Preferences](<../evals-observability/llm-as-judge/Aligning LLM-as-a-Judge with Human Preferences.md>) · `llm-as-judge` · langchain
-  Covers aligning LLM-as-judge evaluators with human preferences through calibration, examples, and evaluation design.
 - **2024-06-20** — [FireAttention V2: 12x faster to make Long Contexts practical for Online Inference](<../inference/kernels/FireAttention V2 12x faster to make Long Contexts practical for Online Inference.md>) · `kernels` · fireworks
   Explains FireAttention V2 and the serving optimizations that make long-context inference more practical.
 - **2024-05-13** — [License to Call: Introducing Transformers Agents 2.0](<../agents/tool-use/License to Call Introducing Transformers Agents 2.0.md>) · `tool-use` · huggingface
@@ -107,8 +97,6 @@
   Explains Evo and long-context modeling from molecular to genome-scale sequences.
 - **2024-01-11** — [Long context retrieval models with Monarch Mixer](<../rag-retrieval/search/Long context retrieval models with Monarch Mixer.md>) · `search` · together
   Explains long-context retrieval models using Monarch Mixer.
-- **2023-12-05** — [Extraction Benchmarking](<../models/benchmarks/Extraction Benchmarking.md>) · `benchmarks` · langchain
-  Benchmarking post for extraction tasks, comparing structured-output performance and evaluation approaches for information extraction.
 - **2023-10-12** — [Flash-Decoding for long-context inference](<../inference/kernels/Flash-Decoding for long-context inference.md>) · `kernels` · together
   Introduces Flash-Decoding for efficient long-context inference.
 - **2023-06-15** — [Three techniques to adapt LLMs for any use case](<../models/fine-tuning/Three techniques to adapt LLMs for any use case.md>) · `fine-tuning` · baseten
