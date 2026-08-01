@@ -1,6 +1,6 @@
 # evals-observability
 
-102 articles.
+103 articles.
 
 - **2026-07-31** — [smevals—a small eval suite for evaluating models, prompts, and harnesses](<evaluation/smevals—a small eval suite for evaluating models, prompts, and harnesses.md>) · `evaluation` · simon-willison
   Simon Willison's smevals is a small CLI eval framework (run/grade/serve/build) with a defined vocabulary of evals, tasks, configs, runs, graders and checks for comparing models, prompts, and agent harnesses, demonstrated with a haiku-writing eval scored across GPT models via CLI-driven checks.
@@ -202,6 +202,8 @@
   End-to-end walkthrough of building a custom leaderboard on the HF leaderboard template (front-end Space + backend eval Space), using Vectara's HHEM hallucination-detection model to rank GPT-4/Gemini/Llama-2/Mistral by how often their summaries are unfaithful to the source document.
 - **2024-01-12** — [Understanding performance benchmarks for LLM inference](<benchmark-design/Understanding performance benchmarks for LLM inference.md>) · `benchmark-design` · baseten
   Explains LLM inference performance benchmarks and how to interpret serving metrics.
+- **2023-10-10** — **[Paper]** [SWE-bench: Can Language Models Resolve Real-World GitHub Issues?](<benchmark-design/[Paper] SWE-bench Can Language Models Resolve Real-World GitHub Issues.md>) · `benchmark-design` · arxiv
+  A benchmark of 2,294 real GitHub issue+PR task instances across 12 Python repositories where a model must produce a patch that passes the repo's hidden test suite. Exposes how hard real-world software engineering is for LLMs (early frontier models solved only low-single-digit %) and became the canonical agentic-coding eval; ships an execution harness and the widely-used SWE-bench Lite/Verified subsets.
 - **2022-02-07** — [Data Distribution Shifts and Monitoring](<monitoring/Data Distribution Shifts and Monitoring.md>) · `monitoring` · chip-huyen
   Taxonomy of covariate, label, and concept shifts with production monitoring strategies, data-quality checks, slice analysis, alerting tradeoffs, and examples of real-world ML failure modes.
 - **2021-01-29** — [How We Reduced Our Labeling Cost by 10x](<evaluation/How We Reduced Our Labeling Cost by 10x.md>) · `evaluation` · cresta
@@ -331,6 +333,8 @@
   How a Transformers CodeAgent (LLM writes Python actions rather than JSON) topped the GAIA agent benchmark: multi-agent web-browser delegation, tool design, and error analysis of GAIA failure modes.
 - **2024-05-29** — [Benchmarking Text Generation Inference](<../inference/serving/Benchmarking Text Generation Inference.md>) · `serving` · huggingface
   How to use the TGI benchmarking tool to profile LLM serving: separating prefill from decode, reading latency vs throughput curves under different batch sizes, and choosing the batch size that meets your latency SLO.
+- **2024-05-06** — **[Paper]** [SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering](<../agents/harness/[Paper] SWE-agent Agent-Computer Interfaces Enable Automated Software Engineering.md>) · `harness` · arxiv
+  Introduces the Agent-Computer Interface (ACI) as a first-class design surface: custom, LM-friendly commands for viewing, editing, and navigating files and running tests, with guardrails and concise feedback. Shows the interface — not just the underlying model — drives agent performance, lifting SWE-bench solve rates well above prior scaffolds, and argues interface design deserves as much attention as model choice.
 - **2024-05-05** — [Introducing the Open Leaderboard for Hebrew LLMs!](<../models/benchmarks/Introducing the Open Leaderboard for Hebrew LLMs!.md>) · `benchmarks` · huggingface
   An open leaderboard for Hebrew LLMs, motivated by Hebrew's root-and-pattern morphology breaking tokenization strategies designed for simpler languages; it evaluates on Hebrew-native tasks (Q&A, sentiment, winograd, translation) rather than translated English benchmarks.
 - **2024-05-03** — [Bringing the Artificial Analysis LLM Performance Leaderboard to Hugging Face](<../inference/serving/Bringing the Artificial Analysis LLM Performance Leaderboard to Hugging Face.md>) · `serving` · huggingface
@@ -347,6 +351,8 @@
   Empirical head-to-head of DPO vs IPO vs KTO in TRL on two SFT'd 7B models (Zephyr and OpenHermes), sweeping the beta hyperparameter and scoring on MT-Bench; finds DPO/IPO roughly on par and beating KTO in the paired-preference setting, with beta mattering more than algorithm choice. Includes an errata where a summed-vs-averaged log-likelihood bug in TRL's IPO loss changed the results.
 - **2023-11-03** — [LLM Inference Performance Benchmarking (Part 1)](<../inference/serving/LLM Inference Performance Benchmarking (Part 1).md>) · `serving` · fireworks
   Introduces LLM inference performance benchmarking and the metrics needed to compare serving systems.
+- **2023-10-05** — **[Paper]** [DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines](<../prompt-engineering/techniques/[Paper] DSPy Compiling Declarative Language Model Calls into Self-Improving Pipelines.md>) · `techniques` · arxiv
+  Reframes LLM pipelines as declarative modules with typed input/output signatures, compiled by optimizers (teleprompters) that bootstrap few-shot demonstrations and instructions against a metric instead of hand-tuned prompt strings. Compiled DSPy programs on GSM8K and multi-hop QA beat hand-crafted prompt chains and often let small open models rival few-shot GPT-3.5 — the foundational 'programming, not prompting' / prompt-optimization framework.
 - **2023-08-16** — [Open challenges in LLM research](<../models/reasoning/Open challenges in LLM research.md>) · `reasoning` · chip-huyen
   Surveys open LLM research problems around hallucination, context length, efficiency, multimodality, agents, evaluation, and post-training behavior that shape engineering constraints.
 - **2023-05-02** — [RLHF: Reinforcement Learning from Human Feedback](<../models/reinforcement-learning/RLHF Reinforcement Learning from Human Feedback.md>) · `reinforcement-learning` · chip-huyen

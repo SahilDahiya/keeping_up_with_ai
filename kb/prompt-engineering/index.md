@@ -1,6 +1,6 @@
 # prompt-engineering
 
-15 articles.
+18 articles.
 
 - **2026-07-20** — [Custom Code Review rules for Codex | OpenAI Developers](<context-engineering/Custom Code Review rules for Codex OpenAI Developers.md>) · `context-engineering` · openai-devs
   Codex Code Review can now apply custom repository rules written in AGENTS.md (preserving API contracts, keeping customer data out of logs, avoiding breaking renames) so the review agent catches team-specific issues that used to depend on tribal reviewer knowledge, citing the specific rule behind each finding.
@@ -32,6 +32,12 @@
   Explains why structured-output modes matter for reliable LLM applications and tool-calling systems.
 - **2024-01-31** — [Function calling and JSON mode](<structured-output/Function calling and JSON mode.md>) · `structured-output` · together
   Explains function calling and JSON mode for structured LLM application outputs.
+- **2023-10-05** — **[Paper]** [DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines](<techniques/[Paper] DSPy Compiling Declarative Language Model Calls into Self-Improving Pipelines.md>) · `techniques` · arxiv
+  Reframes LLM pipelines as declarative modules with typed input/output signatures, compiled by optimizers (teleprompters) that bootstrap few-shot demonstrations and instructions against a metric instead of hand-tuned prompt strings. Compiled DSPy programs on GSM8K and multi-hop QA beat hand-crafted prompt chains and often let small open models rival few-shot GPT-3.5 — the foundational 'programming, not prompting' / prompt-optimization framework.
+- **2022-11-22** — **[Paper]** [Program of Thoughts Prompting: Disentangling Computation from Reasoning for Numerical Reasoning Tasks](<techniques/[Paper] Program of Thoughts Prompting Disentangling Computation from Reasoning for Numerical Reasoning Tasks.md>) · `techniques` · arxiv
+  Program of Thoughts prompting disentangles reasoning from computation by expressing the reasoning as executable program statements evaluated externally, in contrast to Chain-of-Thought's in-context arithmetic. Yields large gains on numerical, financial, and math word-problem QA and is complementary to PAL in arguing that computation belongs in an interpreter, not the model.
+- **2022-11-18** — **[Paper]** [PAL: Program-aided Language Models](<techniques/[Paper] PAL Program-aided Language Models.md>) · `techniques` · arxiv
+  Program-aided Language models: the LLM reads a problem and emits a Python program as its reasoning chain, offloading the actual computation to an interpreter rather than doing arithmetic in-context. Sharply improves accuracy on math, symbolic, and algorithmic benchmarks (e.g., GSM8K) by decoupling 'decompose the problem' (LLM) from 'compute the answer' (interpreter).
 
 ## Also relevant (filed elsewhere)
 

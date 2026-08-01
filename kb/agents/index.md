@@ -1,6 +1,6 @@
 # agents
 
-106 articles.
+112 articles.
 
 - **2026-07-31** — [When agents improve agents: loops that improve themselves](<harness/When agents improve agents loops that improve themselves.md>) · `harness` · pydantic
   Third in Pydantic's harness series: proposes moving the 'keep going or stop' decision inside the agent loop (via retry-verdict guardrails and Macroscope self-review), backing it with BM25 conversation search and persistent memory over prior runs, and closing the loop with a self-grading judge — but warns that LLM judges suffer position/self-preference bias and must be calibrated against a human, graded per-dimension, and version-tracked (ties into Pydantic Logfire's managed prompts, online evals, and GEPA prompt optimization).
@@ -212,8 +212,20 @@
   Transformers Agents 2.0 introduces ReAct-style CodeAgent and JsonAgent that iterate on past observations, with a code-writing action format, tool definitions and system prompts, benchmarked against LangChain agents.
 - **2024-05-08** — [Code Generation with Large Language Models - Fireworks AI Take](<tool-use/Code Generation with Large Language Models - Fireworks AI Take.md>) · `tool-use` · fireworks
   Discusses code-generation copilots with LLMs, including model behavior, latency, and developer workflow considerations.
+- **2024-05-06** — **[Paper]** [SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering](<harness/[Paper] SWE-agent Agent-Computer Interfaces Enable Automated Software Engineering.md>) · `harness` · arxiv
+  Introduces the Agent-Computer Interface (ACI) as a first-class design surface: custom, LM-friendly commands for viewing, editing, and navigating files and running tests, with guardrails and concise feedback. Shows the interface — not just the underlying model — drives agent performance, lifting SWE-bench solve rates well above prior scaffolds, and argues interface design deserves as much attention as model choice.
+- **2024-02-01** — **[Paper]** [Executable Code Actions Elicit Better LLM Agents](<tool-use/[Paper] Executable Code Actions Elicit Better LLM Agents.md>) · `tool-use` · arxiv
+  Argues LLM agents should act by generating executable Python code rather than JSON tool calls or free text. Consolidating actions into code gives one unified action space where the model composes tools, uses control flow, and revises on execution feedback; across 17 LLMs CodeAct achieves up to ~20% higher success with fewer actions than JSON/text baselines. Releases the CodeActInstruct dataset and the open CodeActAgent — the canonical statement of the code-as-action paradigm.
 - **2024-01-24** — [Open-source LLMs as LangChain Agents](<tool-use/Open-source LLMs as LangChain Agents.md>) · `tool-use` · huggingface
   Explains the ReAct loop mechanics (thought/action/observation, stopping, error handling) and builds such agents with LangChain's ChatHuggingFace, then benchmarks open LLMs on a custom agent evaluation set against GPT-3.5/GPT-4. Mixtral-8x7B comes out ahead of GPT-3.5 on the agentic tasks; also covers the JSON-parsing failure modes that dominate agent errors.
+- **2023-10-12** — **[Paper]** [MemGPT: Towards LLMs as Operating Systems](<memory-context/[Paper] MemGPT Towards LLMs as Operating Systems.md>) · `memory-context` · arxiv
+  Treats the LLM as an operating system managing a tiered memory hierarchy: a fixed-size in-context 'main memory' plus external storage, with the model issuing function calls to page information in and out and to interrupt/resume itself. Enables coherent unbounded conversations and long-document analysis beyond the context window, and introduces self-editing working context that survives eviction — the anchor reference for durable agent state.
+- **2023-05-25** — **[Paper]** [Voyager: An Open-Ended Embodied Agent with Large Language Models](<planning/[Paper] Voyager An Open-Ended Embodied Agent with Large Language Models.md>) · `planning` · arxiv
+  An LLM-driven lifelong-learning agent in Minecraft with three components: an automatic curriculum that proposes open-ended goals, a growing skill library of executable code actions retrieved for reuse, and an iterative prompting loop that refines skills from environment and execution feedback. Learns continually without gradient updates and transfers to new worlds — an early, influential demonstration of code-as-skills and self-directed exploration.
+- **2023-04-07** — **[Paper]** [Generative Agents: Interactive Simulacra of Human Behavior](<multi-agent/[Paper] Generative Agents Interactive Simulacra of Human Behavior.md>) · `multi-agent` · arxiv
+  Twenty-five LLM-backed 'generative agents' inhabit a sandbox town, each driven by a memory stream of observations, a retrieval model scoring recency/importance/relevance, reflection that synthesizes higher-level insights, and planning. Produces believable emergent individual and social behavior (agents autonomously spread word of and attend a party) — an influential architecture for long-horizon memory and multi-agent simulation.
+- **2023-03-20** — **[Paper]** [Reflexion: Language Agents with Verbal Reinforcement Learning](<planning/[Paper] Reflexion Language Agents with Verbal Reinforcement Learning.md>) · `planning` · arxiv
+  Agents improve by verbal self-reflection instead of weight updates: after a failed trajectory the agent writes a natural-language critique into episodic memory and retries, converting sparse reward into linguistic feedback. Delivers large gains on decision-making (ALFWorld), reasoning (HotpotQA), and coding (91% pass@1 on HumanEval) over ReAct/CoT baselines — a foundational self-improving agent loop.
 
 ## Also relevant (filed elsewhere)
 
@@ -399,6 +411,8 @@
   Explains why structured-output modes matter for reliable LLM applications and tool-calling systems.
 - **2024-01-31** — [Function calling and JSON mode](<../prompt-engineering/structured-output/Function calling and JSON mode.md>) · `structured-output` · together
   Explains function calling and JSON mode for structured LLM application outputs.
+- **2023-10-10** — **[Paper]** [SWE-bench: Can Language Models Resolve Real-World GitHub Issues?](<../evals-observability/benchmark-design/[Paper] SWE-bench Can Language Models Resolve Real-World GitHub Issues.md>) · `benchmark-design` · arxiv
+  A benchmark of 2,294 real GitHub issue+PR task instances across 12 Python repositories where a model must produce a patch that passes the repo's hidden test suite. Exposes how hard real-world software engineering is for LLMs (early frontier models solved only low-single-digit %) and became the canonical agentic-coding eval; ships an execution harness and the widely-used SWE-bench Lite/Verified subsets.
 - **2021-01-13** — [Action Directed GPT-2](<../models/reasoning/Action Directed GPT-2.md>) · `reasoning` · cresta
   Explains Action Directed GPT-2 as an early pattern for steering language model behavior toward actions, relevant to tool-using and task-oriented agents.
 - **2017-06-12** — **[Paper]** [Attention Is All You Need](<../models/architectures/[Paper] Attention Is All You Need.md>) · `architectures` · arxiv
