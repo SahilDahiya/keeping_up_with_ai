@@ -1,6 +1,6 @@
 # models
 
-189 articles.
+187 articles.
 
 - **2026-07-31** — [Fine-tuning Qwen3-TTS for high-quality voice cloning](<fine-tuning/Fine-tuning Qwen3-TTS for high-quality voice cloning.md>) · `fine-tuning` · baseten
   Baseten details a fine-tuning recipe for Qwen3-TTS voice cloning: an ASR-driven pipeline for building utterance-level (audio, text) pairs, talker/sub-talker cross-entropy loss over 12 RVQ codebook frames/sec, a centroid speaker embedding averaged over 64 clips, and warmup+cosine LR decay, trained in ~1 hour on a single H100 for 8 epochs on 1.5 hours of LJ Speech audio, reaching ~130ms TTFA (vs ~154ms for ICL cloning).
@@ -144,8 +144,6 @@
   Case study fine-tuning small open-source LLMs to beat larger closed models on specialized tasks.
 - **2025-08-15** — [Fine-tuning small open-source LLMs to outperform large closed-source models by 60% on specialized tasks](<fine-tuning/Fine-tuning small open-source LLMs to outperform large closed-source models by 60% on specialized tasks.md>) · `fine-tuning` · baseten
   Case study on fine-tuning small open-source LLMs to beat larger closed models on specialized tasks.
-- **2025-08-13** — [Evaluating Model Performance Across Clouds](<benchmarks/Evaluating Model Performance Across Clouds.md>) · `benchmarks` · langfuse
-  Evaluates model performance across cloud providers, focusing on latency, cost, quality, and provider-selection tradeoffs for production inference.
 - **2025-08-08** — [GPT-5 vs. Claude Opus 4.1](<benchmarks/GPT-5 vs. Claude Opus 4.1.md>) · `benchmarks` · braintrust
   Compares GPT-5 and Claude Opus 4.1 with eval-driven analysis of strengths, weaknesses, and model-selection implications.
 - **2025-08-08** — [Accelerate ND-Parallel: A guide to Efficient Multi-GPU Training](<training/Accelerate ND-Parallel A guide to Efficient Multi-GPU Training.md>) · `training` · huggingface
@@ -220,8 +218,6 @@
   Lays out the Open-R1 plan to fully reproduce DeepSeek-R1: distill reasoning traces from R1 to build an open SFT dataset, reimplement the pure-RL (GRPO) pipeline that produced R1-Zero without human supervision, and run the multi-stage RL+SFT recipe — naming the unknowns DeepSeek left out (data curation, hyperparameters, scaling trade-offs).
 - **2025-01-27** — [Beyond Supervised Fine Tuning: How Reinforcement Learning Empowers AI with Minimal Labels](<reinforcement-learning/Beyond Supervised Fine Tuning How Reinforcement Learning Empowers AI with Minimal Labels.md>) · `reinforcement-learning` · fireworks
   Explains reinforcement learning with verifiable rewards as a way to improve models with minimal labels.
-- **2025-01-22** — [Evaluating and Monitoring Voice AI Agents](<multimodal/Evaluating and Monitoring Voice AI Agents.md>) · `multimodal` · langfuse
-  Covers evaluation and monitoring for voice AI agents, including speech-specific quality signals and agent behavior beyond text-only evals.
 - **2025-01-06** — [Claude SWE-Bench Performance](<benchmarks/Claude SWE-Bench Performance.md>) · `benchmarks` · anthropic-engineering
   How Anthropic scaffolded Claude 3.5 Sonnet to 49% on SWE-bench Verified with a minimal agent harness, detailing tool design and error analysis.
 - **2024-12-19** — [Finally, a Replacement for BERT: Introducing ModernBERT](<architectures/Finally, a Replacement for BERT Introducing ModernBERT.md>) · `architectures` · huggingface
@@ -513,8 +509,6 @@
   Benchmark study showing instruction-following failures during reasoning.
 - **2025-10-21** — [Engineering for Real-Time Voice Agent Latency](<../inference/serving/Engineering for Real-Time Voice Agent Latency.md>) · `serving` · cresta
   Technical discussion of latency in real-time voice agents and the engineering constraints behind responsive spoken interaction.
-- **2025-10-13** — [State of LLMs on the Application Layer](<../industry/trends/State of LLMs on the Application Layer.md>) · `trends` · langfuse
-  Application-layer snapshot of LLM usage and model trends, useful for understanding production model adoption and quality/cost tradeoffs.
 - **2025-10-10** — [ATLAS runtime-learning accelerators for LLM inference](<../inference/speculative-decoding/ATLAS runtime-learning accelerators for LLM inference.md>) · `speculative-decoding` · together
   Introduces ATLAS, a runtime-learning accelerator for improving LLM inference.
 - **2025-10-09** — [How AI Agents are Evolving Shopify's Product Taxonomy at Scale (2025)](<../agents/multi-agent/How AI Agents are Evolving Shopify's Product Taxonomy at Scale (2025).md>) · `multi-agent` · shopify
@@ -557,8 +551,6 @@
   Full guide to training cross-encoder reranker models with Sentence Transformers v4: dataset formats, losses (BinaryCrossEntropy, CachedMultipleNegativesRanking, ListNet), hard-negative mining, and evaluation, with a fine-tune that beats much larger general rerankers on the target domain.
 - **2025-03-13** — [Understanding Cresta’s Voice Platform - ML Services, Inference Graphs, and Real-Time Intelligence](<../inference/serving/Understanding Cresta’s Voice Platform - ML Services, Inference Graphs, and Real-Time Intelligence.md>) · `serving` · cresta
   Explains ML services, inference graphs, and real-time intelligence components in a production voice platform.
-- **2025-03-13** — [Hugging Face and Langfuse: 5 Ways to use them Together](<../infra-platform/deployment/Hugging Face and Langfuse 5 Ways to use them Together.md>) · `deployment` · langfuse
-  Shows ways to combine Hugging Face workflows with Langfuse for model experimentation, tracing, evaluation, and deployment feedback loops.
 - **2025-02-26** — [Evaluating Large Language Models With OpenEvals](<../evals-observability/llm-as-judge/Evaluating Large Language Models With OpenEvals.md>) · `llm-as-judge` · langchain
   Guide to evaluating large language models with OpenEvals, including reusable evaluators and model comparison workflows.
 - **2025-02-25** — [Understanding Cresta’s Voice Platform - Handling Incoming Traffic with Customer-Specific Subdomains](<../infra-platform/deployment/Understanding Cresta’s Voice Platform - Handling Incoming Traffic with Customer-Specific Subdomains.md>) · `deployment` · cresta

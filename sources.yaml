@@ -89,13 +89,9 @@ sources:
     include_prefixes: ["/blog/"]
     tags: [evals]
 
-  - slug: langfuse
-    name: Langfuse Blog
-    home: https://langfuse.com/blog
-    sitemap: https://langfuse.com/sitemap.xml
-    discovery: [sitemap]
-    include_prefixes: ["/blog/"]
-    tags: [observability]
+  # Langfuse Blog removed 2026-07-27 (user-directed): observability-vendor blog,
+  # mostly own-product / eval-methodology marketing; whole source dropped and all
+  # 38 filed articles purged. Same rationale as the Arize removal above.
 
   - slug: langchain
     name: LangChain Blog

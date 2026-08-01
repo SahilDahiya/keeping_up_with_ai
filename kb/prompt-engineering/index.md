@@ -1,6 +1,6 @@
 # prompt-engineering
 
-18 articles.
+17 articles.
 
 - **2026-07-20** — [Custom Code Review rules for Codex | OpenAI Developers](<context-engineering/Custom Code Review rules for Codex OpenAI Developers.md>) · `context-engineering` · openai-devs
   Codex Code Review can now apply custom repository rules written in AGENTS.md (preserving API contracts, keeping customer data out of logs, avoiding breaking renames) so the review agent catches team-specific issues that used to depend on tribal reviewer knowledge, citing the specific rule behind each finding.
@@ -14,8 +14,6 @@
   Explains context engineering for agents, including how the right knowledge, state, and instructions shape agent quality.
 - **2026-03-20** — [Designing delightful frontends with GPT-5.4 | OpenAI Developers](<techniques/Designing delightful frontends with GPT-5.4 OpenAI Developers.md>) · `techniques` · openai-devs
   Prompting guide for steering GPT-5.4 toward non-generic frontend design: the model was trained for UI work, native image search/generation (e.g. prompt it to build mood boards first), and computer use for self-verification with tools like Playwright.
-- **2026-02-16** — [Using Agent Skills to Automatically Improve your Prompts](<techniques/Using Agent Skills to Automatically Improve your Prompts.md>) · `techniques` · langfuse
-  Shows how agent skills can automatically improve prompts, using evaluation feedback and reusable agent workflows to iterate on prompt quality.
 - **2026-02-02** — [Automated Prompt Optimization with GEPA, Pydantic AI, and Pydantic Evals](<techniques/Automated Prompt Optimization with GEPA, Pydantic AI, and Pydantic Evals.md>) · `techniques` · pydantic
   Walks through automated prompt optimization with GEPA's evolutionary/reflective algorithm driven by Pydantic Evals as the scoring harness, using Agent.override() to inject candidate prompts without modifying agent definitions, turning manual prompt iteration into a systematic search of the prompt space against defined success criteria.
 - **2025-09-29** — [Effective context engineering for AI agents](<context-engineering/Effective context engineering for AI agents.md>) · `context-engineering` · anthropic-engineering
@@ -57,8 +55,6 @@
   Explains why million-token context serving is primarily an inference-systems problem.
 - **2026-04-24** — [How we fixed prompt injection for all models on Fireworks](<../product-engineering/security/How we fixed prompt injection for all models on Fireworks.md>) · `security` · fireworks
   Explains a tokenizer-level prompt-injection fix and the implications for securing model-serving systems.
-- **2026-04-14** — [Classifying User Intent with Categorical LLM-as-a-Judge](<../evals-observability/llm-as-judge/Classifying User Intent with Categorical LLM-as-a-Judge.md>) · `llm-as-judge` · langfuse
-  Shows how to classify user intent with categorical LLM-as-judge evaluators, including rubric design and structured scoring for production analysis.
 - **2026-04-08** — [MCP Code Execution: Why Your Agent Would Rather Write Code | Pydantic](<../agents/harness/MCP Code Execution Why Your Agent Would Rather Write Code Pydantic.md>) · `harness` · pydantic
   After hand-crafting 40+ MCP tools for Logfire, a single code-execution (exec) tool outperformed them because tool descriptions themselves eat the context window (Cloudflare needed 1.17M tokens for a full MCP over a 2,500-endpoint API); a case for code-actions over many JSON tools while keeping curated tools around.
 - **2026-03-25** — [How Perplexity Brought Voice Search to Millions Using the Realtime API | OpenAI Developers](<../product-engineering/case-studies/How Perplexity Brought Voice Search to Millions Using the Realtime API OpenAI Developers.md>) · `case-studies` · openai-devs

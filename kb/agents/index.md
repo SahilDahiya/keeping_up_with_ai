@@ -1,6 +1,6 @@
 # agents
 
-155 articles.
+151 articles.
 
 - **2026-07-31** — [When agents improve agents: loops that improve themselves](<harness/When agents improve agents loops that improve themselves.md>) · `harness` · pydantic
   Third in Pydantic's harness series: proposes moving the 'keep going or stop' decision inside the agent loop (via retry-verdict guardrails and Macroscope self-review), backing it with BM25 conversation search and persistent memory over prior runs, and closing the loop with a self-grading judge — but warns that LLM judges suffer position/self-preference bias and must be calibrated against a human, graded per-dimension, and version-tracked (ties into Pydantic Logfire's managed prompts, online evals, and GEPA prompt optimization).
@@ -168,8 +168,6 @@
   Deep dive on harness design for multi-day application builds: state management, verification loops, task queues, and recovery when the agent goes off track.
 - **2026-03-18** — [pydantic-deep: Production Deep Agents for Pydantic AI | Vstorm](<harness/pydantic-deep Production Deep Agents for Pydantic AI Vstorm.md>) · `harness` · pydantic
   Guest post from Vstorm introducing pydantic-deep, a 'deep agents' framework on Pydantic AI (an alternative to LangChain's deepagents) covering the production patterns: planning/progress tracking, filesystem as a first-class abstraction, sub-agent task delegation, sandboxed code execution in Docker, context summarization, and human-in-the-loop approval, with a full example app using per-user containers and WebSocket streaming.
-- **2026-03-13** — [How We Built an Agent Skill to Synthesize what Langfuse Users want](<tool-use/How We Built an Agent Skill to Synthesize what Langfuse Users want.md>) · `tool-use` · langfuse
-  Case study of building an agent skill to synthesize user feedback and product needs, showing how agents can support operational product workflows.
 - **2026-03-09** — [Using skills to accelerate OSS maintenance | OpenAI Developers](<tool-use/Using skills to accelerate OSS maintenance OpenAI Developers.md>) · `tool-use` · openai-devs
   How OpenAI maintains the Agents SDK repos with repo-local Codex skills, AGENTS.md policy, and the Codex GitHub Action — turning verification, release prep, and PR review into repeatable progressive-disclosure workflows; merged PRs rose from 316 to 457 quarter-over-quarter.
 - **2026-02-26** — [Building frontend UIs with Codex and Figma | OpenAI Developers](<tool-use/Building frontend UIs with Codex and Figma OpenAI Developers.md>) · `tool-use` · openai-devs
@@ -202,8 +200,6 @@
   Describes self-improving agents powered by eval loops, using evaluation feedback to improve behavior.
 - **2025-12-09** — [Agent Engineering: A New Discipline](<planning/Agent Engineering A New Discipline.md>) · `planning` · langchain
   Defines agent engineering as a discipline around designing, evaluating, observing, and iterating on production agents rather than treating them as prompt-only systems.
-- **2025-12-09** — [Building Langfuse's MCP Server: Code Reuse and Developer Experience](<tool-use/Building Langfuse's MCP Server Code Reuse and Developer Experience.md>) · `tool-use` · langfuse
-  Engineering writeup on building the Langfuse MCP server, focusing on code reuse, developer experience, and exposing observability workflows to agents.
 - **2025-12-04** — [How We Built a State-of-the-Art Research Agent for Call Center Conversation Analytics](<planning/How We Built a State-of-the-Art Research Agent for Call Center Conversation Analytics.md>) · `planning` · cresta
   Detailed build story for a research agent over conversation analytics, covering agent design and domain-specific workflow constraints.
 - **2025-11-26** — [Effective harnesses for long-running agents](<harness/Effective harnesses for long-running agents.md>) · `harness` · anthropic-engineering
@@ -278,10 +274,6 @@
   Describes DeepCoder, an open-source coding model trained for O3-mini-level coding performance.
 - **2025-03-20** — [The "think" tool: Enabling Claude to stop and think](<tool-use/The think tool Enabling Claude to stop and think.md>) · `tool-use` · anthropic-engineering
   Adding a no-op 'think' tool gives Claude space for intermediate reasoning mid-task, significantly improving policy-heavy agentic benchmarks like tau-bench.
-- **2025-03-19** — [Comparing Open-Source AI Agent Frameworks - Langfuse](<harness/Comparing Open-Source AI Agent Frameworks - Langfuse.md>) · `harness` · langfuse
-  Compares 13 open-source agent frameworks as of July 2026 (LangGraph, LangChain DeepAgents, OpenAI Agents SDK, Claude Agent SDK, Google ADK, Pydantic AI, CrewAI, Strands Agents, Mastra, Vercel AI SDK, Microsoft Agent Framework, Agno, Smolagents), detailing each one's architecture, production features (durable execution, memory, human-in-the-loop), and ecosystem fit.
-- **2025-02-20** — [The Agent Deep Dive: David Zhang’s Open Deep Research](<planning/The Agent Deep Dive David Zhang’s Open Deep Research.md>) · `planning` · langfuse
-  Deep dive on Open Deep Research as an agentic system, covering planning, tool use, research workflows, and trace-based inspection.
 - **2025-02-10** — [Benchmarking Single Agent Performance](<planning/Benchmarking Single Agent Performance.md>) · `planning` · langchain
   Benchmarks single-agent ReAct-style performance and discusses evaluation methodology for agent reasoning/tool-use loops.
 - **2025-02-04** — [Open-source DeepResearch – Freeing our search agents](<tool-use/Open-source DeepResearch – Freeing our search agents.md>) · `tool-use` · huggingface
@@ -399,10 +391,6 @@
   Explains the missing application-layer pieces around agents, connecting agent runtimes to product interfaces, state, and deployment workflows.
 - **2026-06-09** — [The Data Comes First: Mining Real Conversations for Test Coverage](<../evals-observability/testing/The Data Comes First Mining Real Conversations for Test Coverage.md>) · `testing` · cresta
   Explains how real conversation data can be mined to create better test coverage for AI agents.
-- **2026-06-09** — [AI is eating the AI engineering loop](<../industry/trends/AI is eating the AI engineering loop.md>) · `trends` · langfuse
-  Argues that AI is reshaping the AI engineering loop itself, with agents increasingly participating in prompt, eval, observability, and product iteration workflows.
-- **2026-06-05** — [How we use agents to review production infrastructure](<../product-engineering/case-studies/How we use agents to review production infrastructure.md>) · `case-studies` · langfuse
-  Case study of using agents to review production infrastructure, including operational workflows, review boundaries, and human oversight.
 - **2026-06-04** — [Introducing AI Agent Testing 2.0: Confidence at Launch, Confidence at Scale](<../evals-observability/testing/Introducing AI Agent Testing 2.0 Confidence at Launch, Confidence at Scale.md>) · `testing` · cresta
   Describes AI agent testing at launch and scale, including confidence-building practices for production deployments.
 - **2026-06-03** — [How Harmonic Rebuilt Scout on Deep Agents and 4x'd Retention with LangSmith](<../product-engineering/case-studies/How Harmonic Rebuilt Scout on Deep Agents and 4x'd Retention with LangSmith.md>) · `case-studies` · langchain
@@ -483,8 +471,6 @@
   Shows how to trace multi-service LLM pipelines for AI agents with Langfuse, including cross-service visibility concerns.
 - **2026-03-25** — [How we built Claude Code auto mode: a safer way to skip permissions](<../product-engineering/security/How we built Claude Code auto mode a safer way to skip permissions.md>) · `security` · anthropic-engineering
   Design of Claude Code auto mode: sandboxing plus permission heuristics that let the agent act without per-action approval while bounding blast radius.
-- **2026-03-24** — [We Used Autoresearch on Our AI Skill, It Taught Us to Write Better Tests](<../evals-observability/testing/We Used Autoresearch on Our AI Skill, It Taught Us to Write Better Tests.md>) · `testing` · langfuse
-  Case study of using Autoresearch to improve an AI skill, with emphasis on writing better tests and using research-agent output to harden behavior.
 - **2026-03-11** — [From prompts to products: One year of Responses | OpenAI Developers](<../product-engineering/case-studies/From prompts to products One year of Responses OpenAI Developers.md>) · `case-studies` · openai-devs
   One-year retrospective on the Responses API told through five developer stories, including Raindrop AI's production agent-monitoring platform (failure detection and debugging on GPT-5.2 via the Vercel AI SDK) built on its hosted-tool and background-analysis primitives.
 - **2026-03-09** — [How we built LangChain’s GTM Agent](<../product-engineering/case-studies/How we built LangChain’s GTM Agent.md>) · `case-studies` · langchain
@@ -493,16 +479,10 @@
   Explains how to evaluate agent skills as reusable capabilities, with tests that isolate skill behavior from the full agent loop.
 - **2026-02-27** — [2,000 robots walk into a shop: Simulated A/B testing (2026)](<../evals-observability/testing/2,000 robots walk into a shop Simulated AB testing (2026).md>) · `testing` · shopify
   SimGym: Shopify's simulated A/B testing environment where thousands of LLM-driven shopper agents exercise storefronts, letting teams test changes against synthetic-but-realistic buyer behavior before real traffic.
-- **2026-02-26** — [Evaluating AI Agent Skills](<../evals-observability/evaluation/Evaluating AI Agent Skills.md>) · `evaluation` · langfuse
-  Explains how to evaluate AI agent skills, including task design, scoring, trace inspection, and regression testing for reusable agent capabilities.
 - **2026-02-26** — [Agent Observability: How to Monitor and Evaluate LLM Agents in Production](<../evals-observability/monitoring/Agent Observability How to Monitor and Evaluate LLM Agents in Production.md>) · `monitoring` · langchain
   Guide to monitoring and evaluating LLM agents in production, including traces, feedback, evals, and alerting signals.
 - **2026-02-23** — [Directory Snapshots: Resumable project state for Sandboxes](<../infra-platform/deployment/Directory Snapshots Resumable project state for Sandboxes.md>) · `deployment` · modal
   Introduces directory snapshots for sandbox state, enabling resumable project files across agent and remote-execution sessions.
-- **2026-02-20** — [AI Agent Observability, Tracing & Evaluation with Langfuse](<../evals-observability/tracing/AI Agent Observability, Tracing & Evaluation with Langfuse.md>) · `tracing` · langfuse
-  Guide to observability for AI agents, covering traces, spans, tool calls, evaluations, and debugging workflows for agentic systems.
-- **2026-02-16** — [Using Agent Skills to Automatically Improve your Prompts](<../prompt-engineering/techniques/Using Agent Skills to Automatically Improve your Prompts.md>) · `techniques` · langfuse
-  Shows how agent skills can automatically improve prompts, using evaluation feedback and reusable agent workflows to iterate on prompt quality.
 - **2026-02-05** — [The logs I never read](<../evals-observability/tracing/The logs I never read.md>) · `tracing` · pydantic
   A dogfooding walkthrough of tracking down a customer bug in a distributed system through Logfire traces rather than reading all the logs, framed by how large context windows and tool use have made coding agents productive but also more prolific bug generators.
 - **2026-01-28** — [How to Debug & Evaluate AI Agents with Observability — LangChain Guide](<../evals-observability/tracing/How to Debug & Evaluate AI Agents with Observability — LangChain Guide.md>) · `tracing` · langchain
@@ -525,16 +505,12 @@
   Covers best practices for multi-turn reinforcement learning, including environment design and reward structure.
 - **2025-12-03** — [Evaluating Deep Agents: Our Learnings](<../evals-observability/evaluation/Evaluating Deep Agents Our Learnings.md>) · `evaluation` · langchain
   Shares lessons from evaluating Deep Agents, including task design, traces, scoring, and how agent architectures change eval needs.
-- **2025-11-25** — [Vibe Coding a Custom Annotation UI](<../product-engineering/ux-patterns/Vibe Coding a Custom Annotation UI.md>) · `ux-patterns` · langfuse
-  Case study of building a custom annotation UI for eval workflows with AI-assisted coding, highlighting review ergonomics and human feedback collection.
 - **2025-11-20** — [Eval Protocol: RL on your agents, in any environment](<../models/reinforcement-learning/Eval Protocol RL on your agents, in any environment.md>) · `reinforcement-learning` · fireworks
   Describes using Eval Protocol to run reinforcement learning on agents in task environments.
 - **2025-11-20** — [Agents need good developer experience too](<../product-engineering/architecture/Agents need good developer experience too.md>) · `architecture` · modal
   Argues that agent systems need strong developer experience, covering observability, iteration loops, deployment ergonomics, and tool surfaces.
 - **2025-11-10** — [Fireworks RFT: Build AI agents with fine-tuned open models that outperform frontier closed models](<../models/reinforcement-learning/Fireworks RFT Build AI agents with fine-tuned open models that outperform frontier closed models.md>) · `reinforcement-learning` · fireworks
   Explains reinforcement fine-tuning for building agent models that can outperform closed frontier models on target tasks.
-- **2025-11-06** — [Systematic Evaluation of AI Agents](<../evals-observability/evaluation/Systematic Evaluation of AI Agents.md>) · `evaluation` · langfuse
-  Covers systematic evaluation of AI agents, focusing on experiment interpretation, failure analysis, and how to compare agent variants.
 - **2025-10-31** — [Genspark deep research agent with Fireworks RFT](<../models/reinforcement-learning/Genspark deep research agent with Fireworks RFT.md>) · `reinforcement-learning` · fireworks
   Case study of reinforcement fine-tuning a deep research agent to improve quality, tool calls, and cost.
 - **2025-10-20** — [Making Claude Code more secure and autonomous with sandboxing](<../product-engineering/security/Making Claude Code more secure and autonomous with sandboxing.md>) · `security` · anthropic-engineering
@@ -543,8 +519,6 @@
   Practical guide for choosing AI agent testing and evaluation methods based on deployment stage and risk.
 - **2025-10-10** — [How Codex ran OpenAI DevDay 2025](<../product-engineering/case-studies/How Codex ran OpenAI DevDay 2025.md>) · `case-studies` · openai-devs
   Behind-the-scenes account of OpenAI using Codex to build DevDay 2025: it implemented the 1990s VISCA protocol to control venue cameras, built an MCP server for stage lighting, and used Codex Cloud best-of-N to iterate Apps SDK demos like a beat pad in parallel.
-- **2025-10-09** — [Evaluating Multi-Turn Conversations](<../evals-observability/evaluation/Evaluating Multi-Turn Conversations.md>) · `evaluation` · langfuse
-  Explains how to evaluate multi-turn conversations, including context retention, conversation-level scoring, and stateful failure modes.
 - **2025-10-07** — [AI-Ready Knowledge for Contact Centers: Closing the Gap Between the Knowledge Base and AI](<../rag-retrieval/pipelines/AI-Ready Knowledge for Contact Centers Closing the Gap Between the Knowledge Base and AI.md>) · `pipelines` · cresta
   Explains how operational knowledge bases need to be structured for AI agents, with emphasis on grounding and retrieval readiness.
 - **2025-09-29** — [Effective context engineering for AI agents](<../prompt-engineering/context-engineering/Effective context engineering for AI agents.md>) · `context-engineering` · anthropic-engineering
@@ -565,22 +539,16 @@
   Introduces Desktop Extensions (.dxt): a packaging format for one-click installation of local MCP servers in Claude Desktop, with manifest spec and distribution details.
 - **2025-05-28** — [Mixture-of-Agents Alignment for post-training](<../models/fine-tuning/Mixture-of-Agents Alignment for post-training.md>) · `fine-tuning` · together
   Explains Mixture-of-Agents Alignment for improving post-training with collective model intelligence.
-- **2025-04-24** — [How we use LLMs to build and scale Langfuse](<../product-engineering/case-studies/How we use LLMs to build and scale Langfuse.md>) · `case-studies` · langfuse
-  Case study of how Langfuse uses LLMs internally to build and scale the product, including practical workflows for AI-assisted engineering and operations.
 - **2025-03-18** — [Our Own Zero to One: Lessons Learned in Building The Brinks Home AI Agent](<../product-engineering/case-studies/Our Own Zero to One Lessons Learned in Building The Brinks Home AI Agent.md>) · `case-studies` · cresta
   Production case study on building an AI agent from zero to one, with lessons about scope, rollout, and operational constraints.
 - **2025-02-04** — [DABStep: Data Agent Benchmark for Multi-step Reasoning](<../evals-observability/benchmark-design/DABStep Data Agent Benchmark for Multi-step Reasoning.md>) · `benchmark-design` · huggingface
   DABStep, built by Adyen and Hugging Face, is a benchmark of 450+ real multi-step data-analysis tasks over messy payments data that requires agents to write and execute code across heterogeneous files. Reports that frontier models solve only a small fraction of the hard split, and describes the easy/hard split and leak-resistant submission design.
-- **2025-01-22** — [Evaluating and Monitoring Voice AI Agents](<../models/multimodal/Evaluating and Monitoring Voice AI Agents.md>) · `multimodal` · langfuse
-  Covers evaluation and monitoring for voice AI agents, including speech-specific quality signals and agent behavior beyond text-only evals.
 - **2025-01-06** — [Claude SWE-Bench Performance](<../models/benchmarks/Claude SWE-Bench Performance.md>) · `benchmarks` · anthropic-engineering
   How Anthropic scaffolded Claude 3.5 Sonnet to 49% on SWE-bench Verified with a minimal agent harness, detailing tool design and error analysis.
 - **2024-11-25** — [Fine-Tuning LLMs for Multi-Turn Conversations: A Technical Deep Dive](<../models/fine-tuning/Fine-Tuning LLMs for Multi-Turn Conversations A Technical Deep Dive.md>) · `fine-tuning` · together
   Technical deep dive into fine-tuning LLMs for multi-turn conversations.
 - **2024-11-20** — [Letting Large Models Debate: The First Multilingual LLM Debate Competition](<../evals-observability/benchmark-design/Letting Large Models Debate The First Multilingual LLM Debate Competition.md>) · `benchmark-design` · huggingface
   BAAI's FlagEval Debate makes LLMs argue against each other as a dynamic eval, arguing that Chatbot-Arena-style setups lack discriminative power, never let models actually interact, and let style bias votes; uses a dual expert-plus-user scoring system across Chinese, English, Korean and Arabic.
-- **2024-10-07** — [Observability in Multi-Step LLM Systems](<../evals-observability/tracing/Observability in Multi-Step LLM Systems.md>) · `tracing` · langfuse
-  Explains observability needs for multi-step LLM systems, including tracing chains, tools, intermediate state, and failure points across complex application flows.
 - **2024-09-26** — [Pushing LangSmith to new limits with Replit Agent's complex workflows](<../product-engineering/case-studies/Pushing LangSmith to new limits with Replit Agent's complex workflows.md>) · `case-studies` · langchain
   Replit Agent case study on tracing and managing complex agent workflows with LangSmith.
 - **2024-09-12** — [How to build function calling and JSON mode for open-source and fine-tuned LLMs](<../prompt-engineering/structured-output/How to build function calling and JSON mode for open-source and fine-tuned LLMs.md>) · `structured-output` · baseten

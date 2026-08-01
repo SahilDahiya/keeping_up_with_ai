@@ -1,6 +1,6 @@
 # rag-retrieval
 
-41 articles.
+40 articles.
 
 - **2026-07-29** — [Fine-Tune Your Own Embedding Model from an LLM — for the Price of a Coffee](<embeddings/Fine-Tune Your Own Embedding Model from an LLM — for the Price of a Coffee.md>) · `embeddings` · fireworks
   Shows a sub-$10 recipe for contrastive fine-tuning of Qwen3-Embedding-8B (in-batch negatives, InfoNCE) on the Fireworks platform, lifting retrieval quality on domain tasks like legal citation retrieval (LegalBench, +36% nDCG@10), clinical trial matching, and EU case-law retrieval, while preserving general-purpose performance.
@@ -28,8 +28,6 @@
   Sentence Transformers v5+ adds multimodal embedding and reranker models (shared text/image embedding space, mixed-modality cross-encoder scoring) for visual document retrieval, cross-modal search and multimodal RAG; covers the API and model choices.
 - **2026-01-01** — [How Dropbox built an evaluation pipeline for AI search](<search/How Dropbox built an evaluation pipeline for AI search.md>) · `search` · braintrust
   Case study of Dropbox's evaluation pipeline for AI search, focused on measuring retrieval and answer quality for production search experiences.
-- **2025-10-28** — [RAG Observability and Evals](<pipelines/RAG Observability and Evals.md>) · `pipelines` · langfuse
-  Explains observability and evaluation for RAG systems, including tracing retrieval/generation steps and measuring answer and context quality.
 - **2025-10-07** — [AI-Ready Knowledge for Contact Centers: Closing the Gap Between the Knowledge Base and AI](<pipelines/AI-Ready Knowledge for Contact Centers Closing the Gap Between the Knowledge Base and AI.md>) · `pipelines` · cresta
   Explains how operational knowledge bases need to be structured for AI agents, with emphasis on grounding and retrieval readiness.
 - **2025-10-01** — [Introducing RTEB: A New Standard for Retrieval Evaluation](<embeddings/Introducing RTEB A New Standard for Retrieval Evaluation.md>) · `embeddings` · huggingface

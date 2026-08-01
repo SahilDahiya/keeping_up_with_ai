@@ -1,6 +1,6 @@
 # infra-platform
 
-69 articles.
+64 articles.
 
 - **2026-07-21** — [Devin Outposts on Modal | Modal Blog](<deployment/Devin Outposts on Modal Modal Blog.md>) · `deployment` · modal
   Modal's open-source modal-devin library lets Cognition's Devin coding agent execute in user-controlled Modal Sandboxes (GPU-backed, custom images, snapshot suspend/resume) while its reasoning stays in Cognition's cloud, splitting the agent's control-plane queue from a self-hosted data-plane orchestrator and worker.
@@ -56,8 +56,6 @@
   Design decisions in building Terraform/IaC providers for Logfire so customers manage alerts, dashboards, projects, and tokens as code, including how to model observability resources for declarative provisioning.
 - **2026-03-19** — [Introducing the Baseten Delivery Network: Fast cold starts for big models](<deployment/Introducing the Baseten Delivery Network Fast cold starts for big models.md>) · `deployment` · baseten
   Introduces the Baseten Delivery Network for reducing cold starts when serving large models.
-- **2026-03-10** — [Simplifying Langfuse for Scale](<deployment/Simplifying Langfuse for Scale.md>) · `deployment` · langfuse
-  Architecture case study on simplifying Langfuse for scale, covering operational complexity, storage and compute boundaries, and reliability improvements.
 - **2026-02-24** — [Optimizing Training Workloads for GPU Clusters](<gpu-clusters/Optimizing Training Workloads for GPU Clusters.md>) · `gpu-clusters` · together
   Covers optimization patterns for training workloads on GPU clusters.
 - **2026-02-23** — [Directory Snapshots: Resumable project state for Sandboxes](<deployment/Directory Snapshots Resumable project state for Sandboxes.md>) · `deployment` · modal
@@ -68,8 +66,6 @@
   Explains multi-node model training across GPU clusters and the coordination issues that appear at scale.
 - **2025-12-28** — [Keeping 20,000 GPUs healthy](<gpu-clusters/Keeping 20,000 GPUs healthy.md>) · `gpu-clusters` · modal
   Describes operational practices for keeping a large GPU fleet healthy, including failure detection and reliability management.
-- **2025-11-20** — [Incident Report for Nov 18, 2025](<deployment/Incident Report for Nov 18, 2025.md>) · `deployment` · langfuse
-  Incident report with reliability lessons for production observability infrastructure, including failure analysis and operational follow-up.
 - **2025-09-16** — [Inside Modal Notebooks: How we built a cloud GPU notebook that boots in seconds](<deployment/Inside Modal Notebooks How we built a cloud GPU notebook that boots in seconds.md>) · `deployment` · modal
   Engineering writeup on cloud GPU notebooks that boot quickly, covering startup paths, state, and execution isolation.
 - **2025-07-16** — [Dollars per token considered harmful](<cost/Dollars per token considered harmful.md>) · `cost` · modal
@@ -80,8 +76,6 @@
   Explains multi-cloud capacity management for unifying cloud, self-hosted, and hybrid inference deployments.
 - **2025-05-07** — [Linear programming for fun and profit](<cost/Linear programming for fun and profit.md>) · `cost` · modal
   Shows how linear programming can allocate compute resources under constraints, useful for GPU scheduling and cost control.
-- **2025-03-13** — [Hugging Face and Langfuse: 5 Ways to use them Together](<deployment/Hugging Face and Langfuse 5 Ways to use them Together.md>) · `deployment` · langfuse
-  Shows ways to combine Hugging Face workflows with Langfuse for model experimentation, tracing, evaluation, and deployment feedback loops.
 - **2025-03-07** — [LLM Inference on Edge: A Fun and Easy Guide to run LLMs via React Native on your Phone!](<edge/LLM Inference on Edge A Fun and Easy Guide to run LLMs via React Native on your Phone!.md>) · `edge` · huggingface
   End-to-end guide to building a React Native chat app that runs LLMs fully on-device via llama.rn/llama.cpp, covering how to pick mobile-viable models, what the GGUF quantization suffixes (Q2_K, Q4_K_M, Q8_0) actually trade off in size vs quality, and the Expo/native build plumbing.
 - **2025-03-03** — [Brainstore: the database designed for the AI engineering era](<deployment/Brainstore the database designed for the AI engineering era.md>) · `deployment` · braintrust
@@ -96,14 +90,10 @@
   Explains memory snapshots as checkpoint/restore infrastructure for faster startup in serverless AI workloads.
 - **2024-12-02** — [WireGuard at Modal: Static IPs for serverless containers](<deployment/WireGuard at Modal Static IPs for serverless containers.md>) · `deployment` · modal
   Explains static IP support for serverless containers using WireGuard, relevant to secure networked AI deployments.
-- **2024-11-17** — [From Zero to Scale: Langfuse's Infrastructure Evolution](<deployment/From Zero to Scale Langfuse's Infrastructure Evolution.md>) · `deployment` · langfuse
-  Case study of Langfuse infrastructure evolution from early product to scale, including data architecture, observability workloads, and operational tradeoffs.
 - **2024-10-22** — [Deploying Speech-to-Speech on Hugging Face](<deployment/Deploying Speech-to-Speech on Hugging Face.md>) · `deployment` · huggingface
   Deploys HF's cascaded speech-to-speech pipeline (VAD -> STT -> LLM -> TTS, 6 languages with auto-detect) as a custom Inference Endpoint, covering the handler and websocket/streaming plumbing needed to keep an interactive voice loop responsive.
 - **2024-10-09** — [Scaling AI-based Data Processing with Hugging Face + Dask](<gpu-clusters/Scaling AI-based Data Processing with Hugging Face + Dask.md>) · `gpu-clusters` · huggingface
   Uses Dask with hf.co/datasets and the fineweb-edu-classifier to run distributed, out-of-core AI data processing (Parquet chunking, GPU classifier inference) across a cloud cluster, showing how to scale a filtering/labeling pipeline past single-machine memory.
-- **2024-09-23** — [Should you use an LLM Proxy to Build your Application?](<deployment/Should you use an LLM Proxy to Build your Application.md>) · `deployment` · langfuse
-  Explains the LLM proxy pattern for AI applications, including provider abstraction, centralized logging, key management, routing, and governance tradeoffs.
 - **2024-08-19** — [Deploy Meta Llama 3.1 405B on Google Cloud Vertex AI](<deployment/Deploy Meta Llama 3.1 405B on Google Cloud Vertex AI.md>) · `deployment` · huggingface
   Step-by-step deployment of Llama 3.1 405B (FP8 quantized) on Google Cloud Vertex AI with Hugging Face TGI on an A3 8xH100 node: registering the model, endpoint config, and running online inference with 128k context.
 - **2024-08-13** — [A practitioner's guide to testing and running large GPU clusters for training generative AI models](<gpu-clusters/A practitioner's guide to testing and running large GPU clusters for training generative AI models.md>) · `gpu-clusters` · together
@@ -189,16 +179,12 @@
   Deep dive on constructing and querying SmithDB's inverted index for full-text search over observability data.
 - **2026-06-22** — [Introducing Modal Auto Endpoints: Optimized inference you actually own](<../inference/serving/Introducing Modal Auto Endpoints Optimized inference you actually own.md>) · `serving` · modal
   Describes auto endpoints for owned inference deployments, including optimized serving configuration and operational control.
-- **2026-06-22** — [Designing the runtime for Langfuse code evaluators](<../evals-observability/testing/Designing the runtime for Langfuse code evaluators.md>) · `testing` · langfuse
-  Design deep dive on the runtime for Langfuse code evaluators, covering execution isolation, evaluator lifecycle, and safe scalable scoring infrastructure.
 - **2026-06-16** — [How to use Braintrust with any framework or provider](<../evals-observability/tracing/How to use Braintrust with any framework or provider.md>) · `tracing` · braintrust
   Integration guide for capturing Braintrust traces and evals across different AI frameworks and model providers without locking the application stack to one SDK.
 - **2026-06-15** — [Building a 100x Cheaper Trace Judge with Fireworks](<../evals-observability/llm-as-judge/Building a 100x Cheaper Trace Judge with Fireworks.md>) · `llm-as-judge` · langchain
   Shows how to build a lower-cost trace judge with Fireworks, focusing on evaluator cost reduction while preserving useful scoring quality.
 - **2026-06-10** — [Full Text Search in SmithDB: Designing an Inverted Index for Object Storage](<../rag-retrieval/search/Full Text Search in SmithDB Designing an Inverted Index for Object Storage.md>) · `search` · langchain
   Architecture writeup on designing an inverted index for object storage in SmithDB, motivated by full-text search over agent traces.
-- **2026-06-05** — [How we use agents to review production infrastructure](<../product-engineering/case-studies/How we use agents to review production infrastructure.md>) · `case-studies` · langfuse
-  Case study of using agents to review production infrastructure, including operational workflows, review boundaries, and human oversight.
 - **2026-06-04** — [Fault Tolerance in LangGraph: Retries, Timeouts and Error Handlers](<../agents/harness/Fault Tolerance in LangGraph Retries, Timeouts and Error Handlers.md>) · `harness` · langchain
   Explains fault tolerance in LangGraph with retries, timeouts, and error handlers for more reliable long-running agents.
 - **2026-06-04** — [How we made continuous trace intelligence possible at scale](<../evals-observability/tracing/How we made continuous trace intelligence possible at scale.md>) · `tracing` · braintrust
@@ -287,8 +273,6 @@
   Guide to fine-tuning GPT-OSS 120B with Axolotl and scalable training infrastructure.
 - **2025-08-18** — [From Zero to GPU: A Guide to Building and Scaling Production-Ready CUDA Kernels](<../inference/hardware/From Zero to GPU A Guide to Building and Scaling Production-Ready CUDA Kernels.md>) · `hardware` · huggingface
   End-to-end guide to writing a custom CUDA kernel and shipping it with HF's kernel-builder: Nix-based reproducible builds across multiple GPU architectures and torch ABIs, PyTorch op registration and torch.compile compatibility, and distribution via `get_kernel()` from the Hub instead of compiling at install time.
-- **2025-08-13** — [Evaluating Model Performance Across Clouds](<../models/benchmarks/Evaluating Model Performance Across Clouds.md>) · `benchmarks` · langfuse
-  Evaluates model performance across cloud providers, focusing on latency, cost, quality, and provider-selection tradeoffs for production inference.
 - **2025-08-08** — [Accelerate ND-Parallel: A guide to Efficient Multi-GPU Training](<../models/training/Accelerate ND-Parallel A guide to Efficient Multi-GPU Training.md>) · `training` · huggingface
   Guide to combining FSDP/HSDP with tensor, context and pipeline parallelism (ND parallelism) in HF Accelerate, with config examples for Llama-3.1-8B and guidance on when each axis pays off.
 - **2025-07-30** — [GPU Memory Snapshots: Supercharging sub-second startup](<../inference/optimization/GPU Memory Snapshots Supercharging sub-second startup.md>) · `optimization` · modal
@@ -297,8 +281,6 @@
   Gemma 3n E2B/E4B: models with 5B and 8B actual parameters that need only 2B/4B worth of VRAM (2-3 GB) thanks to per-layer embeddings and MatFormer nesting, paired with a MobileNet-V5-300 vision encoder (60 FPS on Pixel, beating ViT-Giant with 3x fewer params) and a USM-based audio encoder processing 160ms chunks.
 - **2025-06-03** — [No GPU left behind: Unlocking Efficiency with Co-located vLLM in TRL](<../models/reinforcement-learning/No GPU left behind Unlocking Efficiency with Co-located vLLM in TRL.md>) · `reinforcement-learning` · huggingface
   In TRL's GRPO setup, running vLLM in server mode leaves generation and training GPUs idling in turn; co-locating vLLM in the same process/GPUs as the trainer (sharing memory via a gpu_memory_utilization split and sleep/wake between phases) removes the idle gap, with throughput and GPU-utilization numbers across model sizes and TP configs.
-- **2025-05-21** — [How we Built Scalable & Customizable Dashboards](<../evals-observability/monitoring/How we Built Scalable & Customizable Dashboards.md>) · `monitoring` · langfuse
-  Engineering writeup on building scalable customizable dashboards for observability data, covering query, rendering, and product architecture concerns.
 - **2025-05-13** — [Blazingly fast whisper transcriptions with Inference Endpoints](<../inference/optimization/Blazingly fast whisper transcriptions with Inference Endpoints.md>) · `optimization` · huggingface
   An optimized Whisper deployment on Inference Endpoints built on vLLM, targeting Ada Lovelace GPUs (L4/L40s) to unlock torch.compile JIT kernels, CUDA graphs and a float8 KV cache — with the resulting latency/throughput gains for transcription workloads.
 - **2025-04-03** — [Resilient observability by design](<../evals-observability/monitoring/Resilient observability by design.md>) · `monitoring` · braintrust
@@ -321,8 +303,6 @@
   CFM (quant hedge fund) case study: use an LLM to label financial NER data, distill that into a compact fine-tuned model, and deploy it on Inference Endpoints — with an F1 and $/hour table showing the fine-tuned small model beating zero-shot LLM accuracy at a fraction of the inference cost.
 - **2024-11-26** — [SmolVLM - small yet mighty Vision Language Model](<../models/multimodal/SmolVLM - small yet mighty Vision Language Model.md>) · `multimodal` · huggingface
   SmolVLM is a 2B VLM tuned for memory footprint: SigLIP vision encoder with aggressive pixel-shuffle visual-token compression (9x fewer tokens than Qwen2-VL), trained on the Cauldron and Docmatix, using ~5GB of GPU RAM at inference versus tens of GB for peers.
-- **2024-10-14** — [OpenTelemetry (OTel) for LLM Observability](<../evals-observability/tracing/OpenTelemetry (OTel) for LLM Observability.md>) · `tracing` · langfuse
-  Introduces OpenTelemetry for LLM observability and how OTel-style traces can standardize spans, metadata, and interoperability across AI systems.
 - **2024-09-25** — [Llama can now see and run on your device - welcome Llama 3.2](<../models/releases/Llama can now see and run on your device - welcome Llama 3.2.md>) · `releases` · huggingface
   Llama 3.2 adds 11B/90B vision models (cross-attention adapter over a frozen text backbone, via the new MllamaForConditionalGeneration) and 1B/3B on-device text models, plus a vision-capable Llama Guard 3 and a 1B Llama Guard for input/output safety classification.
 - **2024-09-05** — [Supercharging NVIDIA H200 and H100 GPU Cluster Performance With Together Kernel Collection](<../inference/hardware/Supercharging NVIDIA H200 and H100 GPU Cluster Performance With Together Kernel Collection.md>) · `hardware` · together

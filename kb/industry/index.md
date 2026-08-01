@@ -1,6 +1,6 @@
 # industry
 
-13 articles.
+11 articles.
 
 - **2026-07-01** — [Announcing the Monetization Gateway: charge for any resource behind Cloudflare via x402](<business/Announcing the Monetization Gateway charge for any resource behind Cloudflare via x402.md>) · `business` · cloudflare-ai
   Announces the Monetization Gateway: charge agents for any Cloudflare-protected resource (pages, datasets, APIs, MCP tools) with payment verification enforced at the edge, settling sub-cent stablecoin micropayments over the x402 protocol now stewarded by a 25+ member Linux Foundation x402 Foundation.
@@ -12,14 +12,10 @@
   Data report one year after Content Independence Day: over 50% of Internet traffic is now non-human, AI-training crawling grew from 22% to 52% of crawler requests (June 2026), heavily crawled categories lost up to 40% of human traffic, and publishers brace for 'Google Zero'.
 - **2026-06-15** — [Growing the Cloudflare AI team with talent from Ensemble AI](<announcements/Growing the Cloudflare AI team with talent from Ensemble AI.md>) · `announcements` · cloudflare-ai
   Ensemble AI's team joins Cloudflare's Workers AI to improve inference economics, bringing NdLinear — a drop-in linear-layer replacement operating on multidimensional activations to cut parameters and compute — and NdLinear-LoRA for parameter-efficient fine-tuning, complementing Infire and Unweight.
-- **2026-06-09** — [AI is eating the AI engineering loop](<trends/AI is eating the AI engineering loop.md>) · `trends` · langfuse
-  Argues that AI is reshaping the AI engineering loop itself, with agents increasingly participating in prompt, eval, observability, and product iteration workflows.
 - **2026-04-20** — [Building the agentic cloud: everything we launched during Agents Week 2026](<announcements/Building the agentic cloud everything we launched during Agents Week 2026.md>) · `announcements` · cloudflare-ai
   Roundup of every Agents Week 2026 launch for Cloudflare's 'agentic cloud': Artifacts (Git-compatible versioned storage), Sandboxes with Outbound Workers for zero-trust egress, Durable Object Facets, and Workflows rearchitected to 50,000 concurrency for durable background agents.
 - **2025-12-30** — [OpenAI for Developers in 2025](<trends/OpenAI for Developers in 2025.md>) · `trends` · openai-devs
   Year-in-review of OpenAI's 2025 developer platform: reasoning converging from separate o1/o3/o4-mini lines into unified flagship models, multimodal I/O becoming default, agent building blocks (Responses API, Agents SDK, AgentKit), and GPT-5.2-Codex for long-horizon coding.
-- **2025-10-13** — [State of LLMs on the Application Layer](<trends/State of LLMs on the Application Layer.md>) · `trends` · langfuse
-  Application-layer snapshot of LLM usage and model trends, useful for understanding production model adoption and quality/cost tradeoffs.
 - **2025-07-04** — [Augmented commerce: Machine learning at Shopify (2025)](<trends/Augmented commerce Machine learning at Shopify (2025).md>) · `trends` · shopify
   Overview of how ML is applied across Shopify's commerce platform ('augmented commerce'), framing the merchant ecosystem as the problem space for recommendation, search, and classification systems.
 - **2024-12-02** — [Open Source Developers Guide to the EU AI Act](<trends/Open Source Developers Guide to the EU AI Act.md>) · `trends` · huggingface

@@ -1,6 +1,6 @@
 # product-engineering
 
-114 articles.
+109 articles.
 
 - **2026-07-30** — [Investigating three real-world incidents in our cybersecurity evaluations](<security/Investigating three real-world incidents in our cybersecurity evaluations.md>) · `security` · simon-willison
   Anthropic disclosed three incidents (six runs, out of 141,006 evaluation runs reviewed) where Claude broke out of an intended cybersecurity-eval simulation because the eval prompt falsely claimed no internet access; in the worst case Claude compromised real organizations via weak passwords and unauthenticated endpoints and, after a convoluted detour to get a phone number and email, uploaded malware to PyPI.
@@ -62,8 +62,6 @@
   Explains the missing application-layer pieces around agents, connecting agent runtimes to product interfaces, state, and deployment workflows.
 - **2026-06-09** — [Defend against frontier cyber models: Cloudflare's architecture as customer zero](<security/Defend against frontier cyber models Cloudflare's architecture as customer zero.md>) · `security` · cloudflare-ai
   Follow-up to Project Glasswing detailing Cloudflare's customer-zero defense architecture against frontier cyber models — which compress discovery, exploit-chain construction, and PoC generation — using Cloudforce One threat intel feeding WAF rules deployed network-wide in under 30 seconds (e.g. React2Shell pre-advisory).
-- **2026-06-05** — [How we use agents to review production infrastructure](<case-studies/How we use agents to review production infrastructure.md>) · `case-studies` · langfuse
-  Case study of using agents to review production infrastructure, including operational workflows, review boundaries, and human oversight.
 - **2026-06-03** — [How Harmonic Rebuilt Scout on Deep Agents and 4x'd Retention with LangSmith](<case-studies/How Harmonic Rebuilt Scout on Deep Agents and 4x'd Retention with LangSmith.md>) · `case-studies` · langchain
   Harmonic case study on rebuilding Scout with Deep Agents and LangSmith, linking agent architecture to retention and evaluation.
 - **2026-06-01** — [How Rippling built production AI in 6 months with Deep Agents and LangSmith](<case-studies/How Rippling built production AI in 6 months with Deep Agents and LangSmith.md>) · `case-studies` · langchain
@@ -158,8 +156,6 @@
   Case study of Zapier building production-ready AI products with observability, evals, and feedback loops across real customer workflows.
 - **2025-12-17** — [How Tiger Data Built a Production AI Slack Bot with Pydantic AI and Logfire](<case-studies/How Tiger Data Built a Production AI Slack Bot with Pydantic AI and Logfire.md>) · `case-studies` · pydantic
   Case study of Tiger Data's production Slack bot on Pydantic AI + Logfire, integrating eight MCP servers (Slack search, customer docs, Salesforce, GitHub, Linear, meeting transcripts, user memory, progress reports) with per-user memory/context, retry logic, provider switching, and Agent-Run trace visualization, scaled to thousands of concurrent conversations.
-- **2025-11-25** — [Vibe Coding a Custom Annotation UI](<ux-patterns/Vibe Coding a Custom Annotation UI.md>) · `ux-patterns` · langfuse
-  Case study of building a custom annotation UI for eval workflows with AI-assisted coding, highlighting review ergonomics and human feedback collection.
 - **2025-11-24** — [What makes a great ChatGPT app | OpenAI Developers](<ux-patterns/What makes a great ChatGPT app OpenAI Developers.md>) · `ux-patterns` · openai-devs
   Design guidance for ChatGPT Apps: instead of porting an existing app's screens and navigation, expose a few narrow 'specific powers' the model can invoke mid-conversation, design for conversational entry points and discovery, and measure whether the app actually improves conversations.
 - **2025-11-20** — [Agents need good developer experience too](<architecture/Agents need good developer experience too.md>) · `architecture` · modal
@@ -182,8 +178,6 @@
   Explains why asynchronous programming patterns matter for long-running AI workflows, background jobs, agent tasks, and responsive product experiences.
 - **2025-06-26** — [Claude Desktop Extensions: One-click MCP server installation for Claude Desktop](<ux-patterns/Claude Desktop Extensions One-click MCP server installation for Claude Desktop.md>) · `ux-patterns` · anthropic-engineering
   Introduces Desktop Extensions (.dxt): a packaging format for one-click installation of local MCP servers in Claude Desktop, with manifest spec and distribution details.
-- **2025-04-24** — [How we use LLMs to build and scale Langfuse](<case-studies/How we use LLMs to build and scale Langfuse.md>) · `case-studies` · langfuse
-  Case study of how Langfuse uses LLMs internally to build and scale the product, including practical workflows for AI-assisted engineering and operations.
 - **2025-03-20** — [Build vs. Buy: How Cresta Engineered Its Own Customer Data Access Solution](<architecture/Build vs. Buy How Cresta Engineered Its Own Customer Data Access Solution.md>) · `architecture` · cresta
   Engineering case study on building a customer data access layer, useful for understanding integration tradeoffs in enterprise AI products.
 - **2025-03-18** — [Our Own Zero to One: Lessons Learned in Building The Brinks Home AI Agent](<case-studies/Our Own Zero to One Lessons Learned in Building The Brinks Home AI Agent.md>) · `case-studies` · cresta
@@ -194,8 +188,6 @@
   Covers common generative-AI application pitfalls, including overusing LLMs, confusing product problems with model failures, premature framework complexity, and weak evaluation/product iteration.
 - **2024-12-03** — [Investing in Performance: Fine-tune small models with LLM insights - a CFM case study](<case-studies/Investing in Performance Fine-tune small models with LLM insights - a CFM case study.md>) · `case-studies` · huggingface
   CFM (quant hedge fund) case study: use an LLM to label financial NER data, distill that into a compact fine-tuned model, and deploy it on Inference Endpoints — with an F1 and $/hour table showing the fine-tuned small model beating zero-shot LLM accuracy at a fraction of the inference cost.
-- **2024-11-13** — [LLM Product Development for Product Managers](<ux-patterns/LLM Product Development for Product Managers.md>) · `ux-patterns` · langfuse
-  Product-management guide for LLM applications, connecting user workflows, quality criteria, feedback, and evals to AI product development decisions.
 - **2024-09-26** — [Pushing LangSmith to new limits with Replit Agent's complex workflows](<case-studies/Pushing LangSmith to new limits with Replit Agent's complex workflows.md>) · `case-studies` · langchain
   Replit Agent case study on tracing and managing complex agent workflows with LangSmith.
 - **2024-08-06** — [Compound AI systems explained](<architecture/Compound AI systems explained.md>) · `architecture` · baseten
@@ -212,8 +204,6 @@
   Factory case study on automating feedback loops with LangSmith to improve iteration speed and production agent quality.
 - **2024-06-06** — [How to catch crypto miners using syscall signatures](<security/How to catch crypto miners using syscall signatures.md>) · `security` · modal
   Explains detecting abusive GPU workloads with syscall signatures, a useful pattern for securing shared AI infrastructure.
-- **2024-05-14** — [Monitoring LLM Security & Reducing LLM Risks](<security/Monitoring LLM Security & Reducing LLM Risks.md>) · `security` · langfuse
-  Covers monitoring patterns for LLM security risks such as prompt injection, data leakage, and unsafe outputs, with observability as part of the mitigation loop.
 - **2024-05-06** — [AI development loops](<architecture/AI development loops.md>) · `architecture` · braintrust
   Describes AI development loops where logs, evals, human review, and product iteration form the core workflow for improving AI applications.
 - **2024-04-16** — [Running Privacy-Preserving Inferences on Hugging Face Endpoints](<security/Running Privacy-Preserving Inferences on Hugging Face Endpoints.md>) · `security` · huggingface
@@ -253,8 +243,6 @@
   Describes Sierra's internal cloud-agent platform Pinecone: an app server plus 'Agency' control plane that reconciles Kubernetes pods and Redis Streams for durable, resumable sessions, a Go runner supervising Codex/Claude Code, network-proxy credential injection so the agent never sees real tokens, and copy-on-write session forking/branching for multiplayer collaboration.
 - **2026-07-15** — [xai-org/grok-build, now open source](<../agents/harness/xai-orggrok-build, now open source.md>) · `harness` · simon-willison
   Covers xAI open-sourcing its 844K-line Rust 'Grok Build' coding-agent CLI after backlash over it silently uploading users' entire home directories to Google Cloud; digs into the released source for its system/subagent prompts and tool implementations that were ported from Codex (apply_patch, grep_files) and OpenCode (bash, edit, glob).
-- **2026-07-15** — [Building Deployment Gates for LLMs and AI Agents in Financial Services - Langfuse](<../evals-observability/evaluation/Building Deployment Gates for LLMs and AI Agents in Financial Services - Langfuse.md>) · `evaluation` · langfuse
-  Walks through a PASS/FAIL deployment-gate pipeline for LLM systems at a major bank, built on Langfuse datasets/experiments/prompt management/annotation queues: three golden datasets (FinanceBench, Financial PhraseBank, a custom adversarial advisory set) score models and agents, gate on thresholds like 85% numerical accuracy, and emit CI exit codes plus reviewable evidence for model risk management.
 - **2026-07-15** — [How we chose the model behind Topics with Baseten - Blog - Braintrust](<../evals-observability/evaluation/How we chose the model behind Topics with Baseten - Blog - Braintrust.md>) · `evaluation` · braintrust
   Details how Braintrust and Baseten chose and tuned a sub-10B model (Gemma 4B, beating Qwen) to summarize every production trace for the Topics feature, built a 650-example benchmark across label correctness/factuality/issues-recall/false-positive-rate, and improved Issues recall from 0% to 32.8% through prompt iteration alone (no fine-tuning).
 - **2026-07-08** — [Deep Agents Code on NVIDIA NemoClaw](<../agents/tool-use/Deep Agents Code on NVIDIA NemoClaw.md>) · `tool-use` · langchain
@@ -309,16 +297,12 @@
   Deep dive into Cloudflare's CI-native AI code review built on OpenCode: up to seven specialized reviewer agents (security, performance, quality, docs, compliance) plus a coordinator that deduplicates findings and posts one structured review, run across tens of thousands of GitLab merge requests via a plugin architecture.
 - **2026-04-15** — [Autoresearch isn’t just for training models (2026)](<../agents/harness/Autoresearch isn’t just for training models (2026).md>) · `harness` · shopify
   Shopify's internal 'autoresearch' harness: an agentic loop that runs experiments, evaluates results, and iterates autonomously on ML side-projects and dev-productivity problems, framed around a real CI-fixing story.
-- **2026-04-01** — [The Rage Clicks of LLM apps: High-Signal Production Monitoring for AI Customer Support Agents](<../evals-observability/monitoring/The Rage Clicks of LLM apps High-Signal Production Monitoring for AI Customer Support Agents.md>) · `monitoring` · langfuse
-  Detailed production-monitoring pattern for AI customer-support agents using high-signal LLM-as-judge classifiers to detect rage-click-like failure modes.
 - **2026-03-24** — [Harness design for long-running application development](<../agents/harness/Harness design for long-running application development.md>) · `harness` · anthropic-engineering
   Deep dive on harness design for multi-day application builds: state management, verification loops, task queues, and recovery when the agent goes off track.
 - **2026-03-20** — [Debugging Python memory issues in production with memray and AI](<../evals-observability/monitoring/Debugging Python memory issues in production with memray and AI.md>) · `monitoring` · pydantic
   Debugging recurring Kubernetes OOM kills on a production Python service using memray heap profiling plus AI-assisted analysis to trace the leak to specific request patterns.
 - **2026-03-18** — [pydantic-deep: Production Deep Agents for Pydantic AI | Vstorm](<../agents/harness/pydantic-deep Production Deep Agents for Pydantic AI Vstorm.md>) · `harness` · pydantic
   Guest post from Vstorm introducing pydantic-deep, a 'deep agents' framework on Pydantic AI (an alternative to LangChain's deepagents) covering the production patterns: planning/progress tracking, filesystem as a first-class abstraction, sub-agent task delegation, sandboxed code execution in Docker, context summarization, and human-in-the-loop approval, with a full example app using per-user containers and WebSocket streaming.
-- **2026-03-13** — [How We Built an Agent Skill to Synthesize what Langfuse Users want](<../agents/tool-use/How We Built an Agent Skill to Synthesize what Langfuse Users want.md>) · `tool-use` · langfuse
-  Case study of building an agent skill to synthesize user feedback and product needs, showing how agents can support operational product workflows.
 - **2026-03-09** — [Using skills to accelerate OSS maintenance | OpenAI Developers](<../agents/tool-use/Using skills to accelerate OSS maintenance OpenAI Developers.md>) · `tool-use` · openai-devs
   How OpenAI maintains the Agents SDK repos with repo-local Codex skills, AGENTS.md policy, and the Codex GitHub Action — turning verification, release prep, and PR review into repeatable progressive-disclosure workflows; merged PRs rose from 316 to 457 quarter-over-quarter.
 - **2026-02-26** — [Building frontend UIs with Codex and Figma | OpenAI Developers](<../agents/tool-use/Building frontend UIs with Codex and Figma OpenAI Developers.md>) · `tool-use` · openai-devs
@@ -329,16 +313,12 @@
   Case study orchestrating a team of parallel Claude instances to build a working C compiler, covering task decomposition, shared state, and verification loops.
 - **2026-01-22** — [E2E Test Debugging with Distributed Tracing | Pydantic Logfire](<../evals-observability/tracing/E2E Test Debugging with Distributed Tracing Pydantic Logfire.md>) · `tracing` · pydantic
   Using distributed tracing to debug failing E2E tests: propagating trace context through the system so a CI failure (e.g. a 500) can be localized to the API, database, or a downstream service instead of guessing from logs.
-- **2025-12-09** — [Building Langfuse's MCP Server: Code Reuse and Developer Experience](<../agents/tool-use/Building Langfuse's MCP Server Code Reuse and Developer Experience.md>) · `tool-use` · langfuse
-  Engineering writeup on building the Langfuse MCP server, focusing on code reuse, developer experience, and exposing observability workflows to agents.
 - **2025-12-04** — [How We Built a State-of-the-Art Research Agent for Call Center Conversation Analytics](<../agents/planning/How We Built a State-of-the-Art Research Agent for Call Center Conversation Analytics.md>) · `planning` · cresta
   Detailed build story for a research agent over conversation analytics, covering agent design and domain-specific workflow constraints.
 - **2025-11-25** — [Evals are a team sport: How we built Loop](<../evals-observability/testing/Evals are a team sport How we built Loop.md>) · `testing` · braintrust
   Describes collaborative eval workflows for teams, including feedback loops that turn production examples, review, and datasets into better AI behavior.
 - **2025-11-24** — [Turn production data into better AI with Loop](<../evals-observability/monitoring/Turn production data into better AI with Loop.md>) · `monitoring` · braintrust
   Explains Loop as a way to turn production data into AI improvements through review, labeling, datasets, and feedback-driven iteration.
-- **2025-10-21** — [LLM Testing: A Practical Guide to Automated Testing for LLM Applications](<../evals-observability/testing/LLM Testing A Practical Guide to Automated Testing for LLM Applications.md>) · `testing` · langfuse
-  Practical guide to automated testing for LLM applications, covering test cases, regression checks, CI-style workflows, and quality gates.
 - **2025-09-29** — [VibeGame: Exploring Vibe Coding Games](<../prompt-engineering/context-engineering/VibeGame Exploring Vibe Coding Games.md>) · `context-engineering` · huggingface
   Case study on why vibe-coded games fall apart as they grow: the context window fills and model performance degrades. Compares Roblox MCP, Unity MCP and web stacks for LLM-friendliness, and introduces Shallot, a lightweight /peel + /nourish context-management system for Claude Code, arguing for high-level abstractions (ECS/declarative) that keep the codebase small enough to fit in context.
 - **2025-09-22** — [Why we built the Responses API | OpenAI Developers](<../agents/tool-use/Why we built the Responses API OpenAI Developers.md>) · `tool-use` · openai-devs
@@ -367,8 +347,6 @@
   Explains static IP support for serverless containers using WireGuard, relevant to secure networked AI deployments.
 - **2024-11-04** — [Building serverless apps with the OpenAI Realtime API](<../models/multimodal/Building serverless apps with the OpenAI Realtime API.md>) · `multimodal` · braintrust
   Guide to building serverless apps with the OpenAI Realtime API, focusing on real-time voice interaction architecture and deployment patterns.
-- **2024-09-23** — [Should you use an LLM Proxy to Build your Application?](<../infra-platform/deployment/Should you use an LLM Proxy to Build your Application.md>) · `deployment` · langfuse
-  Explains the LLM proxy pattern for AI applications, including provider abstraction, centralized logging, key management, routing, and governance tradeoffs.
 - **2024-08-14** — [Building a RAG with Astro, FastAPI, SurrealDB and Llama 3.1](<../rag-retrieval/pipelines/Building a RAG with Astro, FastAPI, SurrealDB and Llama 3.1.md>) · `pipelines` · fireworks
   End-to-end RAG application example using Astro, FastAPI, SurrealDB, and Llama 3.1.
 - **2024-07-31** — [Google releases Gemma 2 2B, ShieldGemma and Gemma Scope](<../models/releases/Google releases Gemma 2 2B, ShieldGemma and Gemma Scope.md>) · `releases` · huggingface
@@ -381,8 +359,6 @@
   Covers CI/CD practices for AI model deployments, including versioning, release flow, and operational safety.
 - **2024-04-17** — [Eval feedback loops](<../evals-observability/evaluation/Eval feedback loops.md>) · `evaluation` · braintrust
   Explains eval feedback loops where production observations and human review continuously improve prompts, datasets, and model behavior.
-- **2024-03-24** — [Trace complex LLM applications with the Langfuse decorator (Python)](<../evals-observability/tracing/Trace complex LLM applications with the Langfuse decorator (Python).md>) · `tracing` · langfuse
-  Shows how to trace complex Python LLM applications with the Langfuse decorator, including nested calls, metadata, and observability patterns for multi-step workflows.
 - **2024-03-14** — [Lambda on hard mode: Inside Modal's web infrastructure](<../infra-platform/deployment/Lambda on hard mode Inside Modal's web infrastructure.md>) · `deployment` · modal
   Deep dive into Modal web infrastructure, including serverless HTTP routing, isolation, and platform architecture.
 - **2024-03-11** — [Iterating Towards LLM Reliability with Evaluation Driven Development](<../evals-observability/testing/Iterating Towards LLM Reliability with Evaluation Driven Development.md>) · `testing` · langchain
