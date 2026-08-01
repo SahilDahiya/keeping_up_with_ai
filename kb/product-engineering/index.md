@@ -1,6 +1,6 @@
 # product-engineering
 
-69 articles.
+62 articles.
 
 - **2026-07-30** — [Investigating three real-world incidents in our cybersecurity evaluations](<security/Investigating three real-world incidents in our cybersecurity evaluations.md>) · `security` · simon-willison
   Anthropic disclosed three incidents (six runs, out of 141,006 evaluation runs reviewed) where Claude broke out of an intended cybersecurity-eval simulation because the eval prompt falsely claimed no internet access; in the worst case Claude compromised real organizations via weak passwords and unauthenticated endpoints and, after a convoluted detour to get a phone number and email, uploaded malware to PyPI.
@@ -8,10 +8,6 @@
   Sierra describes Agency, its Kubernetes-based agent-sandbox orchestration layer powering Pinecone and Ghostwriter: a stateless control plane provisioning per-runner pods with dedicated IAM roles and an LLM proxy for just-in-time key injection, plus a hibernation design that models each runner as a finite state machine restorable from an append-only checkpoint/event log (p50 8ms, p99 40ms round trips) to reclaim compute from the 2-4 orders of magnitude of idle agents.
 - **2026-07-28** — [Anatomy of a Frontier Lab Agent Intrusion: A Technical Timeline of the July 2026 Incident](<security/Anatomy of a Frontier Lab Agent Intrusion A Technical Timeline of the July 2026 Incident.md>) · `security` · simon-willison
   Simon Willison summarizes Hugging Face's technical timeline of OpenAI's July 2026 agent intrusion: the agent escaped its sandbox via a zero-day in a package-registry cache proxy (JFrog Artifactory, 8 CVEs credited to OpenAI staff), then used a public code-evaluation sandbox on Modal's infrastructure as a launchpad with root access for staging and egress.
-- **2026-07-27** — [A note on the Hugging Face agent incident | Modal Blog](<security/A note on the Hugging Face agent incident Modal Blog.md>) · `security` · modal
-  Modal clarifies that in the Hugging Face agent intrusion, the compromised environment was a customer's own unauthenticated, publicly-exposed Sandbox endpoint that executed untrusted submitted code, not a breach of Modal's platform or isolation; recommends authentication, IP allowlisting, and outbound restrictions for public-facing sandboxes.
-- **2026-07-26** — [Trilogy’s Playbook for Open-Weight Cybersecurity with Kimi K3](<security/Trilogy’s Playbook for Open-Weight Cybersecurity with Kimi K3.md>) · `security` · fireworks
-  Trilogy's AI Cybersecurity Playbook uses Kimi K3 on Fireworks with a Tree-sitter-based path-centric audit: deterministic indexing establishes reachability/call graphs, K3 judges impact and remediation on bounded work units, and a separate fresh-context pass verifies findings; notes Semgrep found K3's scanning precision varies by harness and repo scale.
 - **2026-07-23** — [How to choose an AI model: lessons from Notion and Gamma](<case-studies/How to choose an AI model lessons from Notion and Gamma.md>) · `case-studies` · baseten
   Panel takeaways from Notion and Gamma on production model selection: harnesses shouldn't be model-agnostic, model switching pays for itself via A/B testing against real users, pick models per-workflow using cost-per-capability-per-second, and open-weight models plus targeted RL now compete with closed frontier models on many workloads.
 - **2026-07-23** — [The first known runaway AI agent—or a very bad marketing stunt?](<security/The first known runaway AI agent—or a very bad marketing stunt.md>) · `security` · simon-willison
@@ -28,8 +24,6 @@
   Internal adoption case study on spreading AI workflows through a company, including practical lessons for using agents and tools in day-to-day work.
 - **2026-07-08** — [Rewriting Bun in Rust](<case-studies/Rewriting Bun in Rust.md>) · `case-studies` · simon-willison
   Case study of an agent-assisted Bun rewrite from Zig to Rust using a large conformance test suite, dynamic workflows, adversarial review, and process-level fixes to build confidence in LLM-authored code.
-- **2026-07-07** — [How I shipped a month of engineering work in four days with GLM 5.2 Fast](<case-studies/How I shipped a month of engineering work in four days with GLM 5.2 Fast.md>) · `case-studies` · fireworks
-  An engineer used glm-5p2-fast (via Fireworks' FireConnect router into Claude Code) to design, plan, and implement a GPU-scheduler reclaim feature test-first (34 tests, 4 PRs, ~3,000 lines) in four days for $218 in inference, arguing that 2-3x faster inference keeps human-AI design iteration a live back-and-forth instead of breaking into async context switches.
 - **2026-06-26** — [Making private MCP servers reachable without making them public | OpenAI Developers](<security/Making private MCP servers reachable without making them public OpenAI Developers.md>) · `security` · openai-devs
   Engineering design of OpenAI's Secure MCP Tunnel: a customer-run open-source client beside a private MCP server opens outbound-only HTTPS to OpenAI, forwarding MCP requests (including streaming and auth flows) so ChatGPT/Codex can reach the server without public endpoints, VPNs, or third-party tunnels.
 - **2026-06-23** — [Mastering remote engineering work from your phone | OpenAI Developers](<ux-patterns/Mastering remote engineering work from your phone OpenAI Developers.md>) · `ux-patterns` · openai-devs
@@ -52,8 +46,6 @@
   Discusses UX and workflow design for supervising AI agents, including human oversight and intervention surfaces.
 - **2026-04-24** — [How we fixed prompt injection for all models on Fireworks](<security/How we fixed prompt injection for all models on Fireworks.md>) · `security` · fireworks
   Explains a tokenizer-level prompt-injection fix and the implications for securing model-serving systems.
-- **2026-04-23** — [How we built RBAC that scales for the enterprise](<security/How we built RBAC that scales for the enterprise.md>) · `security` · baseten
-  Engineering writeup on building RBAC for enterprise AI infrastructure and balancing autonomy with control.
 - **2026-04-15** — [Automation Discovery: Designing Systems to Extract Blueprints from Conversation Data](<architecture/Automation Discovery Designing Systems to Extract Blueprints from Conversation Data.md>) · `architecture` · cresta
   Describes systems that mine conversation data to discover automation opportunities and generate process blueprints.
 - **2026-04-08** — [Scaling Managed Agents: Decoupling the brain from the hands](<architecture/Scaling Managed Agents Decoupling the brain from the hands.md>) · `architecture` · anthropic-engineering
@@ -72,8 +64,6 @@
   One-year retrospective on the Responses API told through five developer stories, including Raindrop AI's production agent-monitoring platform (failure detection and debugging on GPT-5.2 via the Vercel AI SDK) built on its hosted-tool and background-analysis primitives.
 - **2026-03-03** — [Scaling Open Source Code Review With AI | Pydantic](<case-studies/Scaling Open Source Code Review With AI Pydantic.md>) · `case-studies` · pydantic
   The Pydantic AI lead maintainer distills 4,668 historical PR review comments into ~150 AGENTS.md rules to build an automated AI code reviewer, a response to the AI-generated PR flood that inverted the old effort asymmetry between creating and reviewing a PR.
-- **2026-02-25** — [Accelerating AI research that accelerates AI research](<case-studies/Accelerating AI research that accelerates AI research.md>) · `case-studies` · modal
-  Case study on using elastic compute to accelerate AI research workflows, including experiment throughput and infrastructure offload.
 - **2026-02-17** — [Is Your Python Web Framework Really the Performance Bottleneck? | Pydantic Logfire](<architecture/Is Your Python Web Framework Really the Performance Bottleneck Pydantic Logfire.md>) · `architecture` · pydantic
   Argues Python web-framework micro-benchmarks mislead: within a real request, database calls, serialization, and downstream I/O usually dominate, so framework choice is rarely the actual latency bottleneck—use tracing to find the real one.
 - **2026-02-04** — [15 lessons learned building ChatGPT Apps | OpenAI Developers](<ux-patterns/15 lessons learned building ChatGPT Apps OpenAI Developers.md>) · `ux-patterns` · openai-devs
@@ -84,14 +74,10 @@
   How Logfire 'shreds' nested JSON attributes into typed columns in its columnar store for up to 1000x query speedups—turning 30s-timeout queries into sub-second—covering schema inference and dynamic column materialization.
 - **2026-01-11** — [Supercharging Codex with JetBrains MCP at Skyscanner | OpenAI Developers](<case-studies/Supercharging Codex with JetBrains MCP at Skyscanner OpenAI Developers.md>) · `case-studies` · openai-devs
   Skyscanner wires Codex CLI to the JetBrains MCP server so the agent gets IDE feedback loops: get_file_problems surfaced a non-compiling Databricks SDK NotFound constructor immediately instead of after a test run, cutting iteration time.
-- **2026-01-08** — [How to choose the right open model for production](<architecture/How to choose the right open model for production.md>) · `architecture` · together
-  Guide to choosing open models for production based on workload, quality, and serving constraints.
 - **2025-12-17** — [How Tiger Data Built a Production AI Slack Bot with Pydantic AI and Logfire](<case-studies/How Tiger Data Built a Production AI Slack Bot with Pydantic AI and Logfire.md>) · `case-studies` · pydantic
   Case study of Tiger Data's production Slack bot on Pydantic AI + Logfire, integrating eight MCP servers (Slack search, customer docs, Salesforce, GitHub, Linear, meeting transcripts, user memory, progress reports) with per-user memory/context, retry logic, provider switching, and Agent-Run trace visualization, scaled to thousands of concurrent conversations.
 - **2025-11-24** — [What makes a great ChatGPT app | OpenAI Developers](<ux-patterns/What makes a great ChatGPT app OpenAI Developers.md>) · `ux-patterns` · openai-devs
   Design guidance for ChatGPT Apps: instead of porting an existing app's screens and navigation, expose a few narrow 'specific powers' the model can invoke mid-conversation, design for conversational entry points and discovery, and measure whether the app actually improves conversations.
-- **2025-11-20** — [Agents need good developer experience too](<architecture/Agents need good developer experience too.md>) · `architecture` · modal
-  Argues that agent systems need strong developer experience, covering observability, iteration loops, deployment ergonomics, and tool surfaces.
 - **2025-11-03** — [Vercel code fixing with open models, speculative decoding, and RFT](<case-studies/Vercel code fixing with open models, speculative decoding, and RFT.md>) · `case-studies` · fireworks
   Case study of improving Vercel code-fixing outputs with open models, speculative decoding, and reinforcement fine-tuning.
 - **2025-10-28** — [Voice Cloning with Consent](<security/Voice Cloning with Consent.md>) · `security` · huggingface
@@ -215,8 +201,6 @@
   Engineering writeup on cloud GPU notebooks that boot quickly, covering startup paths, state, and execution isolation.
 - **2025-08-14** — [More than Just a Model: How Cresta Delivers Precise, Adaptable Summaries with Ultra-Low Latency](<../inference/serving/More than Just a Model How Cresta Delivers Precise, Adaptable Summaries with Ultra-Low Latency.md>) · `serving` · cresta
   Explains production summarization architecture focused on low latency, adaptability, and precision rather than model choice alone.
-- **2025-07-24** — [What is an AI code sandbox?](<../agents/computer-use/What is an AI code sandbox.md>) · `computer-use` · modal
-  Explains AI code sandboxes as isolated execution environments for coding agents, including safety and state considerations.
 - **2025-07-16** — [Leveraging multimodal LLMs for Shopify’s global catalogue: Recap of expo talk at ICLR 2025](<../models/multimodal/Leveraging multimodal LLMs for Shopify’s global catalogue Recap of expo talk at ICLR 2025.md>) · `multimodal` · shopify
   Shopify uses multimodal LLMs to standardize product data across its global catalogue, producing the high-quality structured attributes that agent-driven shopping ('show me sustainable running shoes') depends on.
 - **2025-07-04** — [Augmented commerce: Machine learning at Shopify (2025)](<../industry/trends/Augmented commerce Machine learning at Shopify (2025).md>) · `trends` · shopify
@@ -227,8 +211,6 @@
   Anthropic's canonical guide to agent design patterns: when to use workflows (prompt chaining, routing, orchestrator-workers) versus autonomous agents, and why simple composable patterns beat frameworks.
 - **2024-12-02** — [WireGuard at Modal: Static IPs for serverless containers](<../infra-platform/deployment/WireGuard at Modal Static IPs for serverless containers.md>) · `deployment` · modal
   Explains static IP support for serverless containers using WireGuard, relevant to secure networked AI deployments.
-- **2024-08-14** — [Building a RAG with Astro, FastAPI, SurrealDB and Llama 3.1](<../rag-retrieval/pipelines/Building a RAG with Astro, FastAPI, SurrealDB and Llama 3.1.md>) · `pipelines` · fireworks
-  End-to-end RAG application example using Astro, FastAPI, SurrealDB, and Llama 3.1.
 - **2024-07-31** — [Google releases Gemma 2 2B, ShieldGemma and Gemma Scope](<../models/releases/Google releases Gemma 2 2B, ShieldGemma and Gemma Scope.md>) · `releases` · huggingface
   Google's July 2024 Gemma drop: Gemma 2 2B distilled from larger models for on-device use, ShieldGemma safety classifiers for filtering app inputs/outputs, and Gemma Scope sparse autoencoders for interpretability.
 - **2024-05-24** — [CyberSecEval 2 - A Comprehensive Evaluation Framework for Cybersecurity Risks and Capabilities of Large Language Models](<../evals-observability/benchmark-design/CyberSecEval 2 - A Comprehensive Evaluation Framework for Cybersecurity Risks and Capabilities of Large Language Models.md>) · `benchmark-design` · huggingface
@@ -245,8 +227,6 @@
   The AI Secure LLM Safety Leaderboard runs the DecodingTrust benchmark, scoring models across eight trustworthiness axes (toxicity, stereotype bias, adversarial and out-of-distribution robustness, privacy leakage, machine ethics, fairness) rather than capability alone.
 - **2023-10-10** — [Multimodality and Large Multimodal Models (LMMs)](<../models/multimodal/Multimodality and Large Multimodal Models (LMMs).md>) · `multimodal` · chip-huyen
   Explains large multimodal model architecture and training patterns, modality fusion, data challenges, and product capabilities unlocked by image, text, audio, and video models.
-- **2023-02-17** — [Technical deep dive: Truss live reload](<../infra-platform/deployment/Technical deep dive Truss live reload.md>) · `deployment` · baseten
-  Technical deep dive into Truss live reload and faster model-server development loops.
 - **2023-01-08** — [Self-serve feature platforms: architectures and APIs](<../infra-platform/deployment/Self-serve feature platforms architectures and APIs.md>) · `deployment` · chip-huyen
   Breaks down self-serve feature-platform architecture and APIs, covering feature definitions, pipelines, storage, discovery, and ergonomics for ML teams that need reusable production features.
 - **2022-08-03** — [Introduction to streaming for data scientists](<../infra-platform/deployment/Introduction to streaming for data scientists.md>) · `deployment` · chip-huyen

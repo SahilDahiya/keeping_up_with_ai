@@ -1,6 +1,6 @@
 # models
 
-176 articles.
+160 articles.
 
 - **2026-07-31** — [Fine-tuning Qwen3-TTS for high-quality voice cloning](<fine-tuning/Fine-tuning Qwen3-TTS for high-quality voice cloning.md>) · `fine-tuning` · baseten
   Baseten details a fine-tuning recipe for Qwen3-TTS voice cloning: an ASR-driven pipeline for building utterance-level (audio, text) pairs, talker/sub-talker cross-entropy loss over 12 RVQ codebook frames/sec, a centroid speaker embedding averaged over 64 clips, and warmup+cosine LR decay, trained in ~1 hour on a single H100 for 8 epochs on 1.5 hours of LJ Speech audio, reaching ~130ms TTFA (vs ~154ms for ICL cloning).
@@ -18,10 +18,6 @@
   Demonstrates LoRA post-training of Kimi K3 via Fireworks Serverless Training on two RL tasks, Countdown and Frozen Lake, showing how dense partial-credit rewards produce fast smooth learning curves versus sparse goal-only rewards, with a small RL run (~20 steps, 860K tokens) costing about $65.
 - **2026-07-22** — [GLM 5.2 With Vision](<multimodal/GLM 5.2 With Vision.md>) · `multimodal` · baseten
   Baseten post-trained vision onto GLM 5.2 by training only a 50M-parameter, 2-layer MLP projector (reusing Kimi K2.6's vision tower) via SFT on 66k image-QA pairs, reaching MMMU-Pro scores equivalent to Claude 4.5 Haiku (55%) without touching GLM's text weights, and observed grokking plus strong generalization to entities never seen in the alignment dataset.
-- **2026-07-21** — [Kimi K3 is competitive with Fable; Kimi K3 + Fable is SoTA.](<benchmarks/Kimi K3 is competitive with Fable; Kimi K3 + Fable is SoTA.md>) · `benchmarks` · fireworks
-  Fireworks benchmarked open Kimi K3 against closed Fable 5 across ~1,030 agentic tasks (SWE-bench-style fixes, terminal ops, algorithmic problems, multi-language, legal), finding near-parity on quality (92.4% vs 92.6% on SWE) and that oracle routing between the two models hits 93% accuracy at up to 50x lower cost than running Fable alone.
-- **2026-07-20** — [Heidi x Fireworks: Bridging the Gap in Frontier Model Performance](<fine-tuning/Heidi x Fireworks Bridging the Gap in Frontier Model Performance.md>) · `fine-tuning` · fireworks
-  Heidi's ambient clinical scribe moved from proprietary to fine-tuned open models on Fireworks: SFT beat Gemini Flash and RFT/DPO beat Gemini Pro on internal side-by-side evals, with the key levers being LLM-judge and synthetic-rewrite filtering of noisy preference data and scaling effective batch size from 64k to 768k tokens via gradient accumulation (win rate 48.0% to 51.3%).
 - **2026-07-16** — [Inkling: Our open-weights model](<releases/Inkling Our open-weights model.md>) · `releases` · simon-willison
   Simon Willison covers Thinking Machines Lab's first open-weights release, Inkling: a 975B-parameter (41B active) Apache-2.0 MoE transformer trained on 45T multimodal tokens, positioned as a fine-tuning base for their Tinker platform rather than a frontier model, plus a promised smaller Inkling-Small variant.
 - **2026-07-16** — [Kimi K3, and what we can still learn from the pelican benchmark](<releases/Kimi K3, and what we can still learn from the pelican benchmark.md>) · `releases` · simon-willison
@@ -44,8 +40,6 @@
   Argues that reinforcement learning progress depends heavily on infrastructure for scheduling, iteration, and scalable experiments.
 - **2026-05-27** — [Shipping a Trillion Parameters With a Hub Bucket: Delta Weight Sync in TRL](<reinforcement-learning/Shipping a Trillion Parameters With a Hub Bucket Delta Weight Sync in TRL.md>) · `reinforcement-learning` · huggingface
   In async RL the trainer must ship the full model to the inference engine every step (14 GB for a 7B, ~1 TB for a frontier model); TRL exploits the fact that ~99% of bf16 weights are bit-identical between consecutive optimizer steps and syncs only a sparse safetensors delta via a Hub bucket, cutting Qwen3-0.6B's per-step payload from 1.2 GB to 20-35 MB and enabling fully disaggregated training with no shared cluster or RDMA.
-- **2026-05-19** — [Scaling reinforcement learning at Applied Compute](<reinforcement-learning/Scaling reinforcement learning at Applied Compute.md>) · `reinforcement-learning` · modal
-  Case study on scaling reinforcement learning workloads with elastic GPU infrastructure and faster experiment iteration.
 - **2026-05-18** — [Voice AI is only as good as what it hears](<multimodal/Voice AI is only as good as what it hears.md>) · `multimodal` · sierra
   Explains why voice-agent quality depends on transcription accuracy and how hearing failures propagate into agent behavior.
 - **2026-05-14** — [Cost-efficient, high-performance TTS with Qwen3-TTS](<multimodal/Cost-efficient, high-performance TTS with Qwen3-TTS.md>) · `multimodal` · baseten
@@ -68,8 +62,6 @@
   Breaks down how DeepSeek-V4's architecture makes 1M-token context cheap for agents: V4-Pro needs 27% of V3.2's single-token inference FLOPs and 10% of its KV cache (V4-Flash: 10% and 7%, roughly 2% of an 8-head GQA bf16 cache), plus the agent-specific post-training decisions that build on it.
 - **2026-04-22** — [Flow generation through natural language: An agentic modeling approach (2026)](<fine-tuning/Flow generation through natural language An agentic modeling approach (2026).md>) · `fine-tuning` · shopify
   Shopify fine-tunes a model to generate Flow automations from natural language, arguing differentiation comes from proprietary merchant-interaction data and the training recipe rather than closed-model API access.
-- **2026-04-20** — [Building an RL theorem-proving workflow on Modal](<reasoning/Building an RL theorem-proving workflow on Modal.md>) · `reasoning` · modal
-  Walks through an RL theorem-proving workflow, connecting reasoning tasks, training loops, and scalable remote execution.
 - **2026-04-16** — [Ecom-RLVE: Adaptive Verifiable Environments for E-Commerce Conversational Agents](<reinforcement-learning/Ecom-RLVE Adaptive Verifiable Environments for E-Commerce Conversational Agents.md>) · `reinforcement-learning` · huggingface
   Extends RLVE from single-turn puzzles to multi-turn tool-using e-commerce agents: 8 verifiable environments (search, substitution, cart, returns, policy QA...) with procedural problem generation, a 12-axis difficulty curriculum and algorithmic (non-LLM-judge) rewards; trains Qwen3-8B with DAPO for 300 steps.
 - **2026-04-15** — [Parcae: Doing more with fewer parameters using stable looped models](<reasoning/Parcae Doing more with fewer parameters using stable looped models.md>) · `reasoning` · together
@@ -78,8 +70,6 @@
   Explains training custom EAGLE-3 heads for speculative decoding acceleration.
 - **2026-04-02** — [Welcome Gemma 4: Frontier multimodal intelligence on device](<releases/Welcome Gemma 4 Frontier multimodal intelligence on device.md>) · `releases` · huggingface
   Gemma 4 (Apache 2.0, up to 256K context) mixes alternating local sliding-window and global attention layers, dual RoPE configs, MoE (26B total / 4B active, LMArena ~1441) alongside a 31B dense model at ~1452, plus a USM-style conformer audio encoder and a variable-aspect-ratio image encoder with configurable image-token budget.
-- **2026-03-31** — [Baseten Training: an autoresearch substrate](<fine-tuning/Baseten Training an autoresearch substrate.md>) · `fine-tuning` · baseten
-  Frames model training infrastructure as an autoresearch substrate for running iterative experiments and training jobs.
 - **2026-03-31** — [Open-source LLM training is a mess. Here is how it all works.](<fine-tuning/Open-source LLM training is a mess. Here is how it all works.md>) · `fine-tuning` · baseten
   Explains the moving pieces of open-source LLM training, including data, trainers, infrastructure, and evaluation.
 - **2026-03-28** — [The Fine-Tuning Bottleneck Isn't the Algorithm](<fine-tuning/The Fine-Tuning Bottleneck Isn't the Algorithm.md>) · `fine-tuning` · fireworks
@@ -118,10 +108,6 @@
   Shows how to adapt generative LLMs for classification tasks while preserving probability outputs and efficient serving.
 - **2025-11-20** — [Eval Protocol: RL on your agents, in any environment](<reinforcement-learning/Eval Protocol RL on your agents, in any environment.md>) · `reinforcement-learning` · fireworks
   Describes using Eval Protocol to run reinforcement learning on agents in task environments.
-- **2025-11-10** — [Fireworks RFT: Build AI agents with fine-tuned open models that outperform frontier closed models](<reinforcement-learning/Fireworks RFT Build AI agents with fine-tuned open models that outperform frontier closed models.md>) · `reinforcement-learning` · fireworks
-  Explains reinforcement fine-tuning for building agent models that can outperform closed frontier models on target tasks.
-- **2025-10-31** — [Genspark deep research agent with Fireworks RFT](<reinforcement-learning/Genspark deep research agent with Fireworks RFT.md>) · `reinforcement-learning` · fireworks
-  Case study of reinforcement fine-tuning a deep research agent to improve quality, tool calls, and cost.
 - **2025-10-23** — [DeepSeek-OCR and the Unreasonable Usefulness of Compression](<multimodal/DeepSeek-OCR and the Unreasonable Usefulness of Compression.md>) · `multimodal` · baseten
   Explains DeepSeek-OCR and why compression can be useful for multimodal model workflows.
 - **2025-10-06** — [LLM Fine-Tuning: Deep Dive & Best Practices](<fine-tuning/LLM Fine-Tuning Deep Dive & Best Practices.md>) · `fine-tuning` · fireworks
@@ -130,8 +116,6 @@
   Developer notes on the Realtime API GA and the gpt-realtime speech-to-speech model: beta-to-GA interface migration, new marin/cedar voices, and advice to rewrite prompts because instruction-following improved enough that literal instructions are now honored.
 - **2025-09-09** — [mmBERT: ModernBERT goes Multilingual](<training/mmBERT ModernBERT goes Multilingual.md>) · `training` · huggingface
   mmBERT is a ModernBERT-style multilingual encoder trained on 3T+ tokens across 1,800+ languages using a three-phase schedule with an inverse masking-ratio decay and 'annealed language learning' that progressively adds low-resource languages late in training. Beats XLM-R and mGTE on multilingual retrieval and classification while running significantly faster.
-- **2025-08-19** — [How to fine-tune gpt-oss-120b with Baseten and Axolotl](<fine-tuning/How to fine-tune gpt-oss-120b with Baseten and Axolotl.md>) · `fine-tuning` · baseten
-  Guide to fine-tuning GPT-OSS 120B with Axolotl and scalable training infrastructure.
 - **2025-08-15** — [Fine-tuning small open-source LLMs for specialized tasks](<fine-tuning/Fine-tuning small open-source LLMs for specialized tasks.md>) · `fine-tuning` · together
   Case study fine-tuning small open-source LLMs to beat larger closed models on specialized tasks.
 - **2025-08-15** — [Fine-tuning small open-source LLMs to outperform large closed-source models by 60% on specialized tasks](<fine-tuning/Fine-tuning small open-source LLMs to outperform large closed-source models by 60% on specialized tasks.md>) · `fine-tuning` · baseten
@@ -162,8 +146,6 @@
   Gemma 3n E2B/E4B: models with 5B and 8B actual parameters that need only 2B/4B worth of VRAM (2-3 GB) thanks to per-layer embeddings and MatFormer nesting, paired with a MobileNet-V5-300 vision encoder (60 FPS on Pixel, beating ViT-Giant with 3x fewer params) and a USM-based audio encoder processing 160ms chunks.
 - **2025-06-19** — [(LoRA) Fine-Tuning FLUX.1-dev on Consumer Hardware](<fine-tuning/(LoRA) Fine-Tuning FLUX.1-dev on Consumer Hardware.md>) · `fine-tuning` · huggingface
   Fine-tunes FLUX.1-dev with QLoRA under ~10GB of VRAM on a single RTX 4090 using bitsandbytes NF4, 8-bit optimizers and gradient checkpointing, and compares FP8 training with torchao for extra speed on compatible hardware.
-- **2025-06-09** — [Reinforcement Fine Tuning: Train expert open models to surpass closed frontier models](<reinforcement-learning/Reinforcement Fine Tuning Train expert open models to surpass closed frontier models.md>) · `reinforcement-learning` · fireworks
-  Introduces reinforcement fine-tuning for training expert open models beyond supervised baselines.
 - **2025-06-04** — [Synthetic data pipeline for fine-tuning and evaluation](<fine-tuning/Synthetic data pipeline for fine-tuning and evaluation.md>) · `fine-tuning` · fireworks
   Describes a synthetic-data pipeline that connects task definition, generation, SFT/RFT, evaluation, and cleanup.
 - **2025-06-03** — [No GPU left behind: Unlocking Efficiency with Co-located vLLM in TRL](<reinforcement-learning/No GPU left behind Unlocking Efficiency with Co-located vLLM in TRL.md>) · `reinforcement-learning` · huggingface
@@ -174,12 +156,8 @@
   Explains how speech-to-text quality drives downstream AI performance and why it should be treated as a system dependency.
 - **2025-05-21** — [nanoVLM: The simplest repository to train your VLM in pure PyTorch](<multimodal/nanoVLM The simplest repository to train your VLM in pure PyTorch.md>) · `multimodal` · huggingface
   nanoVLM is a ~750-line pure-PyTorch VLM training repo (nanoGPT for vision): a SigLIP vision encoder plus a SmolLM2 language backbone joined by a pixel-shuffle modality-projection MLP, trainable to 35.3% on MMStar in ~6 hours on a single H100.
-- **2025-05-12** — [Supervised Fine-Tuning (SFT) with LoRA on Fireworks AI: Tutorial](<fine-tuning/Supervised Fine-Tuning (SFT) with LoRA on Fireworks AI Tutorial.md>) · `fine-tuning` · fireworks
-  Tutorial for supervised fine-tuning with LoRA, including setup, training, and deployment workflow.
 - **2025-05-12** — [Vision Language Models (Better, faster, stronger)](<multimodal/Vision Language Models (Better, faster, stronger).md>) · `multimodal` · huggingface
   A year-in-review of vision language models covering new model classes (any-to-any, reasoning VLMs, small on-device VLMs, MoE VLMs), multimodal RAG with ColPali-style late-interaction retrievers, VLM agents for GUI/computer use, video understanding, and how alignment/benchmarks for VLMs have evolved. Names the specific models and techniques behind each shift.
-- **2025-04-29** — [Day zero benchmarks for Qwen 3 with SGLang on Baseten](<benchmarks/Day zero benchmarks for Qwen 3 with SGLang on Baseten.md>) · `benchmarks` · baseten
-  Provides day-zero Qwen 3 benchmarks with SGLang and discusses serving-performance implications.
 - **2025-04-18** — [Why Transcription Performance Is Holding Back Your AI Strategy](<multimodal/Why Transcription Performance Is Holding Back Your AI Strategy.md>) · `multimodal` · cresta
   Connects transcription performance to broader AI application quality, especially for voice-first systems.
 - **2025-04-17** — [Continued Fine-tuning of LLMs: A Technical Deep Dive](<fine-tuning/Continued Fine-tuning of LLMs A Technical Deep Dive.md>) · `fine-tuning` · together
@@ -214,10 +192,6 @@
   Bamba-9B is a hybrid Mamba2/transformer model trained by IBM, Princeton, CMU and UIUC on 2.2T tokens of fully open data, delivering 2.5x throughput and 2x lower latency than a comparable transformer in vLLM by shrinking the KV-cache memory-bandwidth bottleneck. Covers the hybrid architecture, training lineage, checkpoints and vLLM/transformers/llama.cpp enablement.
 - **2024-12-17** — [Welcome to the Falcon 3 Family of Open Models!](<releases/Welcome to the Falcon 3 Family of Open Models!.md>) · `releases` · huggingface
   TII's Falcon 3 family (1B-10B, plus Mamba and quantized variants) trained with a single 14T-token pretraining run on 1024 H100s, then depth up-scaled from 7B to 10B by duplicating redundant layers and continuing pretraining on 2T more tokens. Reports SoTA zero/few-shot results for sub-13B models on math, code and science benchmarks.
-- **2024-12-10** — [What is LLM fine-tuning?](<fine-tuning/What is LLM fine-tuning.md>) · `fine-tuning` · modal
-  Overview of LLM fine-tuning concepts, when to fine-tune, and how training data and serving constraints affect the workflow.
-- **2024-12-09** — [20x faster Whisper than OpenAI - Fireworks audio transcribes 1 hour in 4 seconds](<multimodal/20x faster Whisper than OpenAI - Fireworks audio transcribes 1 hour in 4 seconds.md>) · `multimodal` · fireworks
-  Describes high-throughput Whisper transcription serving and the latency/cost tradeoffs in batch audio inference.
 - **2024-12-05** — [Welcome PaliGemma 2 – New vision language models by Google](<multimodal/Welcome PaliGemma 2 – New vision language models by Google.md>) · `multimodal` · huggingface
   PaliGemma 2 pairs a SigLIP image encoder with Gemma 2 LLMs at 3B/10B/28B and 224/448/896px input resolutions, designed as pre-trained checkpoints intended to be fine-tuned per task rather than used zero-shot. Covers the resolution-vs-cost trade-off, DOCCI long-caption fine-tunes, and the transformers fine-tuning scripts/VQAv2 demo.
 - **2024-11-26** — [SmolVLM - small yet mighty Vision Language Model](<multimodal/SmolVLM - small yet mighty Vision Language Model.md>) · `multimodal` · huggingface
@@ -242,8 +216,6 @@
   Falcon Mamba 7B is a pure SSM (Mamba with extra RMSNorm for training stability) trained on 5.8T tokens: constant per-token generation time and flat memory regardless of context length, with throughput and benchmark comparisons against attention-based 7Bs.
 - **2024-07-31** — [Google releases Gemma 2 2B, ShieldGemma and Gemma Scope](<releases/Google releases Gemma 2 2B, ShieldGemma and Gemma Scope.md>) · `releases` · huggingface
   Google's July 2024 Gemma drop: Gemma 2 2B distilled from larger models for on-device use, ShieldGemma safety classifiers for filtering app inputs/outputs, and Gemma Scope sparse autoencoders for interpretability.
-- **2024-07-25** — [Deploying custom ComfyUI workflows as APIs](<multimodal/Deploying custom ComfyUI workflows as APIs.md>) · `multimodal` · baseten
-  Shows how to deploy custom ComfyUI image-generation workflows behind API endpoints.
 - **2024-07-23** — [Llama 3.1 - 405B, 70B & 8B with multilinguality and long context](<releases/Llama 3.1 - 405B, 70B & 8B with multilinguality and long context.md>) · `releases` · huggingface
   Llama 3.1 8B/70B/405B: 128k context via a new RoPE scaling recipe, 15T-token training, and the accompanying Llama Guard 3 safety classifier and Prompt Guard jailbreak/prompt-injection detector; covers FP8/AWQ/GPTQ quantization needed to actually serve 405B, TGI deployment, and using 405B for synthetic data and LLM-as-judge.
 - **2024-07-18** — [Docmatix - a huge dataset for Document Visual Question Answering](<training/Docmatix - a huge dataset for Document Visual Question Answering.md>) · `training` · huggingface
@@ -272,8 +244,6 @@
   Explains latent consistency models and how they enable faster image generation.
 - **2024-05-24** — [Falcon 2: An 11B parameter pretrained language model and VLM, trained on over 5000B tokens and 11 languages](<releases/Falcon 2 An 11B parameter pretrained language model and VLM, trained on over 5000B tokens and 11 languages.md>) · `releases` · huggingface
   Falcon2-11B: 11B params trained on 5,000B tokens of RefinedWeb in a four-stage curriculum that raises context length 2048 -> 4096 -> 8192 with a final high-quality-data stage, plus a VLM variant; benchmarked against Llama 3 8B and Gemma 7B.
-- **2024-05-21** — [Create an infinite icon library by fine-tuning Stable Diffusion](<fine-tuning/Create an infinite icon library by fine-tuning Stable Diffusion.md>) · `fine-tuning` · modal
-  Practical example of fine-tuning Stable Diffusion for a custom image-generation domain using Modal infrastructure.
 - **2024-05-05** — [Introducing the Open Leaderboard for Hebrew LLMs!](<benchmarks/Introducing the Open Leaderboard for Hebrew LLMs!.md>) · `benchmarks` · huggingface
   An open leaderboard for Hebrew LLMs, motivated by Hebrew's root-and-pattern morphology breaking tokenization strategies designed for simpler languages; it evaluates on Hebrew-native tasks (Q&A, sentiment, winograd, translation) rather than translated English benchmarks.
 - **2024-05-01** — [FAQ: Building LLMs with RedPajama-v2, a 30 trillion token web dataset](<fine-tuning/FAQ Building LLMs with RedPajama-v2, a 30 trillion token web dataset.md>) · `fine-tuning` · together
@@ -324,8 +294,6 @@
   Empirical head-to-head of DPO vs IPO vs KTO in TRL on two SFT'd 7B models (Zephyr and OpenHermes), sweeping the beta hyperparameter and scoring on MT-Bench; finds DPO/IPO roughly on par and beating KTO in the paired-preference setting, with beta mattering more than algorithm choice. Includes an errata where a summed-vs-averaged log-likelihood bug in TRL's IPO loss changed the results.
 - **2024-01-16** — [Generation configurations: temperature, top-k, top-p, and test time compute](<reasoning/Generation configurations temperature, top-k, top-p, and test time compute.md>) · `reasoning` · chip-huyen
   Explains decoding parameters such as temperature, top-k, top-p, and test-time compute, connecting generation configuration to reliability, diversity, latency, and cost.
-- **2023-12-08** — [How to serve your ComfyUI model behind an API endpoint](<multimodal/How to serve your ComfyUI model behind an API endpoint.md>) · `multimodal` · baseten
-  Shows how to serve a ComfyUI model behind an API endpoint for production image workflows.
 - **2023-12-08** — [StripedHyena-7B and efficient architectures beyond Transformers](<reasoning/StripedHyena-7B and efficient architectures beyond Transformers.md>) · `reasoning` · together
   Introduces StripedHyena-7B and efficient architectures beyond Transformers.
 - **2023-10-30** — [RedPajama-Data-v2: An open dataset with 30 trillion tokens for training large language models](<fine-tuning/RedPajama-Data-v2 An open dataset with 30 trillion tokens for training large language models.md>) · `fine-tuning` · together
@@ -377,16 +345,12 @@
   Explains a worker-advisor pattern that combines open-source worker agents with closed-source advisors for cost-quality tradeoffs.
 - **2026-06-24** — [Introducing the FFASR Leaderboard: Benchmarking ASR in the Real World](<../evals-observability/benchmark-design/Introducing the FFASR Leaderboard Benchmarking ASR in the Real World.md>) · `benchmark-design` · huggingface
   The FFASR leaderboard benchmarks far-field ASR (clean/noisy/reverberant) using hybrid wave-based room simulation with sim-to-real validation, held-out audio and standardized eval hardware; it plots a WER-vs-RTFx Pareto front and finds far-field WER at low SNR is several times worse than near-field on the same speech.
-- **2026-06-24** — [Frontier-lab training infrastructure, now as a service](<../infra-platform/gpu-clusters/Frontier-lab training infrastructure, now as a service.md>) · `gpu-clusters` · fireworks
-  Describes training infrastructure as a service for frontier-lab workloads, including scale, orchestration, and reliability needs.
 - **2026-06-22** — [Achieve state-of-the-art inference latencies with speculative decoding](<../inference/speculative-decoding/Achieve state-of-the-art inference latencies with speculative decoding.md>) · `speculative-decoding` · modal
   Explains speculative decoding for lower inference latency, including draft-model tradeoffs and production serving considerations.
 - **2026-06-19** — [Speculation Is All You Need](<../inference/speculative-decoding/Speculation Is All You Need.md>) · `speculative-decoding` · modal
   Deep dive into speculative decoding and related techniques for improving LLM inference latency and throughput.
 - **2026-06-15** — [Teaching Sidekick to say no: automated data curation with LLM judge consensus (2026)](<../evals-observability/llm-as-judge/Teaching Sidekick to say no automated data curation with LLM judge consensus (2026).md>) · `llm-as-judge` · shopify
   Shopify curates Sidekick training data using LLM-judge consensus to automatically filter examples ('teaching Sidekick to say no'), replacing manual labeling with judge-based quality and coverage control.
-- **2026-06-03** — [How Harvey & Fireworks Beat Closed Source on Cost + Quality](<../agents/multi-agent/How Harvey & Fireworks Beat Closed Source on Cost + Quality.md>) · `multi-agent` · fireworks
-  Case study of using open-source agents with frontier advisors to improve cost and quality versus closed-source baselines.
 - **2026-06-02** — [MiniMax-M3 efficient 1M-token multimodal serving](<../inference/serving/MiniMax-M3 efficient 1M-token multimodal serving.md>) · `serving` · together
   Covers efficient MiniMax-M3 serving for million-token context and multimodal workloads.
 - **2026-05-29** — [Evaluating Speech-to-Text Quality: Beyond Word Error Rate](<../evals-observability/evaluation/Evaluating Speech-to-Text Quality Beyond Word Error Rate.md>) · `evaluation` · cresta
@@ -449,8 +413,6 @@
   Stress test of long-horizon agentic coding: GPT-5.3-Codex at Extra High reasoning ran ~25 hours uninterrupted, consuming ~13M tokens and generating ~30k lines to build a design tool from a blank repo, framed by METR's ~7-month doubling time for agent task horizons.
 - **2026-02-19** — [Consistency diffusion language models: Up to 14x faster inference without sacrificing quality](<../inference/optimization/Consistency diffusion language models Up to 14x faster inference without sacrificing quality.md>) · `optimization` · together
   Explains consistency diffusion language models for faster inference without large quality loss.
-- **2026-02-11** — [How we built the fastest Kimi K2.5 on Artificial Analysis](<../inference/optimization/How we built the fastest Kimi K2.5 on Artificial Analysis.md>) · `optimization` · baseten
-  Explains optimizations behind fast Kimi K2.5 serving on Artificial Analysis.
 - **2026-02-06** — [What do LLMs think when you don't tell them what to think about?](<../evals-observability/evaluation/What do LLMs think when you don't tell them what to think about.md>) · `evaluation` · together
   Investigates what LLMs do under underspecified prompting and how that affects evaluation.
 - **2026-02-03** — [The Benchmark Gap: What It Takes to Ship Kimi K2.5](<../evals-observability/evaluation/The Benchmark Gap What It Takes to Ship Kimi K2.5.md>) · `evaluation` · fireworks
@@ -461,14 +423,10 @@
   Explains a suffix-automaton MTP accelerator for improving speculative decoding acceptance rates.
 - **2026-01-12** — [Inside multi-node training: How to scale model training across GPU clusters](<../infra-platform/gpu-clusters/Inside multi-node training How to scale model training across GPU clusters.md>) · `gpu-clusters` · together
   Explains multi-node model training across GPU clusters and the coordination issues that appear at scale.
-- **2026-01-08** — [How to choose the right open model for production](<../product-engineering/architecture/How to choose the right open model for production.md>) · `architecture` · together
-  Guide to choosing open models for production based on workload, quality, and serving constraints.
 - **2025-12-30** — [OpenAI for Developers in 2025](<../industry/trends/OpenAI for Developers in 2025.md>) · `trends` · openai-devs
   Year-in-review of OpenAI's 2025 developer platform: reasoning converging from separate o1/o3/o4-mini lines into unified flagship models, multimodal I/O becoming default, agent building blocks (Responses API, Agents SDK, AgentKit), and GPT-5.2-Codex for long-horizon coding.
 - **2025-12-05** — [Tangle: An open-source ML experimentation platform built for scale (2025)](<../evals-observability/tracing/Tangle An open-source ML experimentation platform built for scale (2025).md>) · `tracing` · shopify
   Tangle: Shopify's open-source ML experimentation platform for reproducibility at scale, tracking notebook versions, data snapshots, and parameters so experiments can be reproduced without re-running from scratch.
-- **2025-11-12** — [Kimi K2 Thinking at 140+ TPS on NVIDIA Blackwell](<../inference/optimization/Kimi K2 Thinking at 140+ TPS on NVIDIA Blackwell.md>) · `optimization` · baseten
-  Explains Kimi K2 Thinking serving at high throughput on NVIDIA Blackwell hardware.
 - **2025-11-04** — [One-second voice-to-voice latency with Modal, Pipecat, and open models](<../inference/optimization/One-second voice-to-voice latency with Modal, Pipecat, and open models.md>) · `optimization` · modal
   Builds a low-latency voice-to-voice system with open models, covering speech pipeline latency and serving architecture.
 - **2025-11-04** — [How to evaluate and benchmark Large Language Models (LLMs)](<../evals-observability/benchmark-design/How to evaluate and benchmark Large Language Models (LLMs).md>) · `benchmark-design` · together
@@ -523,8 +481,6 @@
   Explains ML services, inference graphs, and real-time intelligence components in a production voice platform.
 - **2025-02-25** — [Understanding Cresta’s Voice Platform - Handling Incoming Traffic with Customer-Specific Subdomains](<../infra-platform/deployment/Understanding Cresta’s Voice Platform - Handling Incoming Traffic with Customer-Specific Subdomains.md>) · `deployment` · cresta
   Architecture note on routing incoming voice traffic with customer-specific subdomains in a production voice platform.
-- **2025-02-13** — [Together AI Achieves 90% Faster BF16 Training with NVIDIA Blackwell Platform and Together Kernel Collection](<../inference/hardware/Together AI Achieves 90% Faster BF16 Training with NVIDIA Blackwell Platform and Together Kernel Collection.md>) · `hardware` · together
-  Describes Blackwell BF16 training acceleration with the Together Kernel Collection.
 - **2025-02-10** — [The Open Arabic LLM Leaderboard 2](<../evals-observability/benchmark-design/The Open Arabic LLM Leaderboard 2.md>) · `benchmark-design` · huggingface
   The Open Arabic LLM Leaderboard 2 rebuilds Arabic LLM evaluation around native (not machine-translated) datasets and centralized, reproducible evaluation to fix the integrity problem of self-reported scores. Describes the new benchmark mix (including the Balsam Index and native Arabic tasks) and the leaderboard's verification pipeline.
 - **2025-02-01** — [From text to task: Constrained generation for structured extraction in R1](<../prompt-engineering/structured-output/From text to task Constrained generation for structured extraction in R1.md>) · `structured-output` · fireworks
@@ -605,8 +561,6 @@
   Introduces Medusa, a multi-decoding-head framework for accelerating LLM generation.
 - **2023-08-30** — [SDXL inference in under 2 seconds](<../inference/optimization/SDXL inference in under 2 seconds.md>) · `optimization` · baseten
   Guide to Stable Diffusion XL inference optimization for sub-2-second image generation.
-- **2022-12-08** — [Accelerating model deployment: 100X faster dev loops with development deployments](<../infra-platform/deployment/Accelerating model deployment 100X faster dev loops with development deployments.md>) · `deployment` · baseten
-  Explains development deployments and draft models as a way to shorten model deployment iteration loops.
 - **2022-12-05** — [Overcoming communication bottlenecks for decentralized training, part 2](<../infra-platform/gpu-clusters/Overcoming communication bottlenecks for decentralized training, part 2.md>) · `gpu-clusters` · together
   Continues the decentralized training discussion with techniques for communication-efficient optimization.
 - **2022-11-30** — [Overcoming communication bottlenecks for decentralized training, part 1](<../infra-platform/gpu-clusters/Overcoming communication bottlenecks for decentralized training, part 1.md>) · `gpu-clusters` · together
