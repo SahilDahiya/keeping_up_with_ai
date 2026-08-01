@@ -143,6 +143,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-07-31** — [Autoscaling endpoints for LLM inference](<../inference/optimization/Autoscaling endpoints for LLM inference.md>) · `optimization` · together
+  Together AI details its dedicated-inference autoscaler (proportional control loop, asymmetric scale-up/scale-down windows) and compares 8 scaling metrics; an experiment replaying sine-wave + spike traffic under inflight_requests, ttft-p95, and gpu_utilization policies shows only the concurrency-based inflight_requests metric caught saturation, since continuous batching hid the problem from both TTFT and GPU-utilization signals.
 - **2026-07-29** — [Configuring Dedicated Model Inference](<../inference/serving/Configuring Dedicated Model Inference.md>) · `serving` · together
   Explains Together AI's Dedicated Model Inference resource model: immutable configs (engine, GPU type/count, parallelism), disposable deployments bound to a config with an autoscaling policy, and stable endpoints with capacity-aware traffic splits across deployments, enabling rollouts, A/B tests, and shadow experiments as just weighted-deployment changes.
 - **2026-07-29** — [Best AI agent optimization platforms in 2026 | Pydantic Logfire](<../evals-observability/monitoring/Best AI agent optimization platforms in 2026 Pydantic Logfire.md>) · `monitoring` · pydantic

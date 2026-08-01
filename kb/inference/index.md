@@ -1,7 +1,9 @@
 # inference
 
-142 articles.
+143 articles.
 
+- **2026-07-31** — [Autoscaling endpoints for LLM inference](<optimization/Autoscaling endpoints for LLM inference.md>) · `optimization` · together
+  Together AI details its dedicated-inference autoscaler (proportional control loop, asymmetric scale-up/scale-down windows) and compares 8 scaling metrics; an experiment replaying sine-wave + spike traffic under inflight_requests, ttft-p95, and gpu_utilization policies shows only the concurrency-based inflight_requests metric caught saturation, since continuous batching hid the problem from both TTFT and GPU-utilization signals.
 - **2026-07-29** — [ThunderAgent: 2x Faster Agentic Inference for Synthetic Data Generation at Scale](<optimization/ThunderAgent 2x Faster Agentic Inference for Synthetic Data Generation at Scale.md>) · `optimization` · together
   Together AI's ThunderAgent (ICML 2026 Spotlight) fixes KV cache thrashing in high-concurrency agentic inference by scheduling at the program level instead of per-request: it pauses low-priority agent workflows under memory pressure and resumes them via a global waiting queue, achieving 803 vs 390 tok/s single-node throughput over SGLang and near-linear scaling to 2.4x speedup across 8 H100 nodes.
 - **2026-07-29** — [Configuring Dedicated Model Inference](<serving/Configuring Dedicated Model Inference.md>) · `serving` · together
@@ -289,6 +291,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-07-31** — [Fine-tuning Qwen3-TTS for high-quality voice cloning](<../models/fine-tuning/Fine-tuning Qwen3-TTS for high-quality voice cloning.md>) · `fine-tuning` · baseten
+  Baseten details a fine-tuning recipe for Qwen3-TTS voice cloning: an ASR-driven pipeline for building utterance-level (audio, text) pairs, talker/sub-talker cross-entropy loss over 12 RVQ codebook frames/sec, a centroid speaker embedding averaged over 64 clips, and warmup+cosine LR decay, trained in ~1 hour on a single H100 for 8 epochs on 1.5 hours of LJ Speech audio, reaching ~130ms TTFA (vs ~154ms for ICL cloning).
 - **2026-07-30** — [Advancing the price-performance frontier with GPT‑5.6](<../models/releases/Advancing the price-performance frontier with GPT‑5.6.md>) · `releases` · simon-willison
   Simon Willison notes OpenAI's GPT-5.6 Luna price drop (80%, to $0.20/$1.20 per million tokens, undercutting Gemini 3.1 Flash-Lite and 5x cheaper than Claude Haiku 4.5 on input), attributing it to GPT-5.6 Sol autonomously rewriting production inference kernels in Triton and Gluon, cutting end-to-end serving costs 20%.
 - **2026-07-26** — [Kimi K3 vs GPT-5.6 Sol on DeepSWE: Cost, Coding, and Routing](<../models/benchmarks/Kimi K3 vs GPT-5.6 Sol on DeepSWE Cost, Coding, and Routing.md>) · `benchmarks` · together

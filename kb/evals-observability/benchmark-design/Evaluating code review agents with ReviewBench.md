@@ -1,10 +1,15 @@
 ---
 title: Evaluating code review agents with ReviewBench
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: evals-observability
+subtopic: benchmark-design
+secondary_topics:
+- agents/tool-use
+summary: LangChain built ReviewBench, a 59-task Harbor-format benchmark distilled
+  from curated LangSmith PR review comments (via an LLM gate plus manual review),
+  scoring agents on coverage/precision F1; a bare Deep Agents harness recovers only
+  ~30% of baseline issues, but a structured review prompt that traces changed-code
+  dependencies substantially improved GPT-5.6 Luna's score without adding tools.
 triage: null
 skip_reason: null
 source: langchain
@@ -12,7 +17,7 @@ url: https://www.langchain.com/blog/evaluating-code-review-agents-with-reviewben
 author: Nick Hollon
 published: '2026-07-31'
 fetched: '2026-08-01T06:49:40Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1187
 content_sha256: 8a4b74d29a01b67aea33dd55b68ce8d89125df1330ed79fe7d78a9140857010a

@@ -1,10 +1,15 @@
 ---
 title: deepseek-ai/DeepSeek-V4-Flash-0731
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: models
+subtopic: releases
+secondary_topics:
+- industry/announcements
+summary: Simon Willison covers DeepSeek-V4-Flash-0731, a 304B-parameter (167GB) model
+  ranked by Artificial Analysis ahead of the larger 428B MiniMax M3 on its Intelligence-Index-vs-cost
+  Pareto frontier at $0.14/$0.27 per million tokens, and notes the default reasoning
+  effort produces a much worse 'pelican riding a bicycle' SVG than the high reasoning-effort
+  setting.
 triage: null
 skip_reason: null
 source: simon-willison
@@ -12,7 +17,7 @@ url: https://simonwillison.net/2026/Jul/31/deepseek-v4-flash-0731/
 author: Simon Willison
 published: '2026-07-31'
 fetched: '2026-08-01T06:55:16Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 414
 content_sha256: 72d5047aba3ed86ab4fcbd18b7ffe0442fca51ab5b9e27dc33d32534724f093f

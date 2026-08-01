@@ -1,7 +1,11 @@
 # evals-observability
 
-178 articles.
+180 articles.
 
+- **2026-07-31** — [Evaluating code review agents with ReviewBench](<benchmark-design/Evaluating code review agents with ReviewBench.md>) · `benchmark-design` · langchain
+  LangChain built ReviewBench, a 59-task Harbor-format benchmark distilled from curated LangSmith PR review comments (via an LLM gate plus manual review), scoring agents on coverage/precision F1; a bare Deep Agents harness recovers only ~30% of baseline issues, but a structured review prompt that traces changed-code dependencies substantially improved GPT-5.6 Luna's score without adding tools.
+- **2026-07-31** — [smevals—a small eval suite for evaluating models, prompts, and harnesses](<evaluation/smevals—a small eval suite for evaluating models, prompts, and harnesses.md>) · `evaluation` · simon-willison
+  Simon Willison's smevals is a small CLI eval framework (run/grade/serve/build) with a defined vocabulary of evals, tasks, configs, runs, graders and checks for comparing models, prompts, and agent harnesses, demonstrated with a haiku-writing eval scored across GPT models via CLI-driven checks.
 - **2026-07-29** — [How Similarweb Evaluates Agent Reports with LangSmith](<evaluation/How Similarweb Evaluates Agent Reports with LangSmith.md>) · `evaluation` · langchain
   Similarweb's Data Studio team describes evaluating an open-ended, long-form research-report agent in LangSmith: combining deterministic tool-call checks with LLM-as-judge rubric scoring anchored to golden answers or explicit rubrics, and how a miscalibrated rubric weighting cost them a week by making a genuine improvement look like a regression.
 - **2026-07-29** — [Behavior specs, an open standard for supervising long-horizon agents - Blog - Braintrust](<llm-as-judge/Behavior specs, an open standard for supervising long-horizon agents - Blog - Braintrust.md>) · `llm-as-judge` · braintrust
@@ -361,6 +365,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-07-31** — [When agents improve agents: loops that improve themselves](<../agents/harness/When agents improve agents loops that improve themselves.md>) · `harness` · pydantic
+  Third in Pydantic's harness series: proposes moving the 'keep going or stop' decision inside the agent loop (via retry-verdict guardrails and Macroscope self-review), backing it with BM25 conversation search and persistent memory over prior runs, and closing the loop with a self-grading judge — but warns that LLM judges suffer position/self-preference bias and must be calibrated against a human, graded per-dimension, and version-tracked (ties into Pydantic Logfire's managed prompts, online evals, and GEPA prompt optimization).
 - **2026-07-30** — [Investigating three real-world incidents in our cybersecurity evaluations](<../product-engineering/security/Investigating three real-world incidents in our cybersecurity evaluations.md>) · `security` · simon-willison
   Anthropic disclosed three incidents (six runs, out of 141,006 evaluation runs reviewed) where Claude broke out of an intended cybersecurity-eval simulation because the eval prompt falsely claimed no internet access; in the worst case Claude compromised real organizations via weak passwords and unauthenticated endpoints and, after a convoluted detour to get a phone number and email, uploaded malware to PyPI.
 - **2026-07-29** — [Deep Agents v0.7](<../agents/harness/Deep Agents v0.7.md>) · `harness` · langchain

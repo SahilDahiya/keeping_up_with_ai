@@ -1,10 +1,16 @@
 ---
 title: Stateless MCP has recaptured my interest (and inspired mcp-explorer and datasette-mcp)
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: agents
+subtopic: tool-use
+secondary_topics:
+- product-engineering/security
+summary: Simon Willison walks through the new stateless MCP 2026-07-28 spec (collapsing
+  init+session-ID handshakes into a single HTTP request) and the tools it let him
+  build in a week — mcp-explorer (a stateless CLI for probing any MCP server), datasette-mcp
+  (a 3-tool read-only SQL plugin), and an llm-mcp-client plugin — arguing MCP's narrower
+  capability surface is easier to reason about than giving agents open shell/curl
+  access.
 triage: null
 skip_reason: null
 source: simon-willison
@@ -12,7 +18,7 @@ url: https://simonwillison.net/2026/Jul/31/stateless-mcp/
 author: Simon Willison
 published: '2026-07-31'
 fetched: '2026-08-01T06:55:16Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1255
 content_sha256: 459a0e4bd864b23660879ae120b9e20f9bf0ac3264b822cabcac1de2bfb5371e

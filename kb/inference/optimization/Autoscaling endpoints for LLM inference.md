@@ -1,10 +1,16 @@
 ---
 title: Autoscaling endpoints for LLM inference
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: inference
+subtopic: optimization
+secondary_topics:
+- infra-platform/cost
+summary: Together AI details its dedicated-inference autoscaler (proportional control
+  loop, asymmetric scale-up/scale-down windows) and compares 8 scaling metrics; an
+  experiment replaying sine-wave + spike traffic under inflight_requests, ttft-p95,
+  and gpu_utilization policies shows only the concurrency-based inflight_requests
+  metric caught saturation, since continuous batching hid the problem from both TTFT
+  and GPU-utilization signals.
 triage: null
 skip_reason: null
 source: together
@@ -12,7 +18,7 @@ url: https://www.together.ai/blog/autoscaling-endpoints-for-llm-inference
 author: Zain Hasan; SoYoung Park; Nikitha Suryadevara; Ted Cui
 published: '2026-07-31'
 fetched: '2026-08-01T06:49:29Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1885
 content_sha256: 0245b2887b2795eefd7518a04d6e8d260b88f90ebc3959bbf8c2f836257a56fa

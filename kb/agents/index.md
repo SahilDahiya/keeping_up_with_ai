@@ -1,7 +1,11 @@
 # agents
 
-153 articles.
+155 articles.
 
+- **2026-07-31** — [When agents improve agents: loops that improve themselves](<harness/When agents improve agents loops that improve themselves.md>) · `harness` · pydantic
+  Third in Pydantic's harness series: proposes moving the 'keep going or stop' decision inside the agent loop (via retry-verdict guardrails and Macroscope self-review), backing it with BM25 conversation search and persistent memory over prior runs, and closing the loop with a self-grading judge — but warns that LLM judges suffer position/self-preference bias and must be calibrated against a human, graded per-dimension, and version-tracked (ties into Pydantic Logfire's managed prompts, online evals, and GEPA prompt optimization).
+- **2026-07-31** — [Stateless MCP has recaptured my interest (and inspired mcp-explorer and datasette-mcp)](<tool-use/Stateless MCP has recaptured my interest (and inspired mcp-explorer and datasette-mcp).md>) · `tool-use` · simon-willison
+  Simon Willison walks through the new stateless MCP 2026-07-28 spec (collapsing init+session-ID handshakes into a single HTTP request) and the tools it let him build in a week — mcp-explorer (a stateless CLI for probing any MCP server), datasette-mcp (a 3-tool read-only SQL plugin), and an llm-mcp-client plugin — arguing MCP's narrower capability surface is easier to reason about than giving agents open shell/curl access.
 - **2026-07-29** — [Building an agentic harness that outlasts the model (2026)](<harness/Building an agentic harness that outlasts the model (2026).md>) · `harness` · shopify
   Shopify details Dispatch, their Ruby-orchestrated multi-agent security-scanning harness: it partitions a Rails monolith by size/scope, runs parallel Hunter agents per partition backed by shared architecture artifacts, verifies candidate findings with a different model acting as a test oracle, then opens fix PRs -- across 80+ applications and thousands of scans it produced 300+ findings valued at $400k+ in equivalent bug-bounty payouts.
 - **2026-07-29** — [Deep Agents v0.7](<harness/Deep Agents v0.7.md>) · `harness` · langchain
@@ -311,6 +315,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-07-31** — [Evaluating code review agents with ReviewBench](<../evals-observability/benchmark-design/Evaluating code review agents with ReviewBench.md>) · `benchmark-design` · langchain
+  LangChain built ReviewBench, a 59-task Harbor-format benchmark distilled from curated LangSmith PR review comments (via an LLM gate plus manual review), scoring agents on coverage/precision F1; a bare Deep Agents harness recovers only ~30% of baseline issues, but a structured review prompt that traces changed-code dependencies substantially improved GPT-5.6 Luna's score without adding tools.
 - **2026-07-29** — [ThunderAgent: 2x Faster Agentic Inference for Synthetic Data Generation at Scale](<../inference/optimization/ThunderAgent 2x Faster Agentic Inference for Synthetic Data Generation at Scale.md>) · `optimization` · together
   Together AI's ThunderAgent (ICML 2026 Spotlight) fixes KV cache thrashing in high-concurrency agentic inference by scheduling at the program level instead of per-request: it pauses low-priority agent workflows under memory pressure and resumes them via a global waiting queue, achieving 803 vs 390 tok/s single-node throughput over SGLang and near-linear scaling to 2.4x speedup across 8 H100 nodes.
 - **2026-07-29** — [How Similarweb Evaluates Agent Reports with LangSmith](<../evals-observability/evaluation/How Similarweb Evaluates Agent Reports with LangSmith.md>) · `evaluation` · langchain

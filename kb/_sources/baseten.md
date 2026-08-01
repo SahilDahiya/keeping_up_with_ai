@@ -1,7 +1,9 @@
 # baseten
 
-92 articles.
+93 articles.
 
+- **2026-07-31** — [Fine-tuning Qwen3-TTS for high-quality voice cloning](<../models/fine-tuning/Fine-tuning Qwen3-TTS for high-quality voice cloning.md>) · `fine-tuning` · baseten
+  Baseten details a fine-tuning recipe for Qwen3-TTS voice cloning: an ASR-driven pipeline for building utterance-level (audio, text) pairs, talker/sub-talker cross-entropy loss over 12 RVQ codebook frames/sec, a centroid speaker embedding averaged over 64 clips, and warmup+cosine LR decay, trained in ~1 hour on a single H100 for 8 epochs on 1.5 hours of LJ Speech audio, reaching ~130ms TTFA (vs ~154ms for ICL cloning).
 - **2026-07-30** — [22,580: GPT-2 to Kimi K3, explained](<../models/architectures/22,580 GPT-2 to Kimi K3, explained.md>) · `architectures` · baseten
   Worklog tracing the architectural path from GPT-2 (2019) to Kimi K3 (2026, 22,580x larger), walking through decoder-only attention code and then the successive changes -- RoPE, GQA/MQA, MoE routing, and other efficiency techniques -- that took models from dense transformers to today's sparse, trillion-parameter frontier models.
 - **2026-07-27** — [Making Kimi K3 tokenization 18x faster for million-token agentic workloads](<../inference/optimization/Making Kimi K3 tokenization 18x faster for million-token agentic workloads.md>) · `optimization` · baseten

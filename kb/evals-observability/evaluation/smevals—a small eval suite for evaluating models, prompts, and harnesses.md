@@ -1,10 +1,13 @@
 ---
 title: smevals—a small eval suite for evaluating models, prompts, and harnesses
 kind: blog
-topic: null
-subtopic: null
+topic: evals-observability
+subtopic: evaluation
 secondary_topics: []
-summary: null
+summary: Simon Willison's smevals is a small CLI eval framework (run/grade/serve/build)
+  with a defined vocabulary of evals, tasks, configs, runs, graders and checks for
+  comparing models, prompts, and agent harnesses, demonstrated with a haiku-writing
+  eval scored across GPT models via CLI-driven checks.
 triage: null
 skip_reason: null
 source: simon-willison
@@ -12,7 +15,7 @@ url: https://simonwillison.net/2026/Jul/31/smevals/
 author: Simon Willison
 published: '2026-07-31'
 fetched: '2026-08-01T06:55:22Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 559
 content_sha256: 7ee85388e59f53221ffef112f76e95d47f3174f33f2f7a9598ad89299847420e

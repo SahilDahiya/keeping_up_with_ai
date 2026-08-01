@@ -1,10 +1,16 @@
 ---
 title: Fine-tuning Qwen3-TTS for high-quality voice cloning
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: models
+subtopic: fine-tuning
+secondary_topics:
+- inference/optimization
+summary: 'Baseten details a fine-tuning recipe for Qwen3-TTS voice cloning: an ASR-driven
+  pipeline for building utterance-level (audio, text) pairs, talker/sub-talker cross-entropy
+  loss over 12 RVQ codebook frames/sec, a centroid speaker embedding averaged over
+  64 clips, and warmup+cosine LR decay, trained in ~1 hour on a single H100 for 8
+  epochs on 1.5 hours of LJ Speech audio, reaching ~130ms TTFA (vs ~154ms for ICL
+  cloning).'
 triage: null
 skip_reason: null
 source: baseten
@@ -12,7 +18,7 @@ url: https://www.baseten.co/blog/fine-tuning-qwen3-tts-for-high-quality-voice-cl
 author: Ian Carrasco
 published: '2026-07-31'
 fetched: '2026-08-01T06:49:20Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1412
 content_sha256: 040cf5f7d5db82a0f46a8c103ac7992b261cb2f377ad6945b2aa6d12b1f8203e

@@ -233,6 +233,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-07-31** — [Stateless MCP has recaptured my interest (and inspired mcp-explorer and datasette-mcp)](<../agents/tool-use/Stateless MCP has recaptured my interest (and inspired mcp-explorer and datasette-mcp).md>) · `tool-use` · simon-willison
+  Simon Willison walks through the new stateless MCP 2026-07-28 spec (collapsing init+session-ID handshakes into a single HTTP request) and the tools it let him build in a week — mcp-explorer (a stateless CLI for probing any MCP server), datasette-mcp (a 3-tool read-only SQL plugin), and an llm-mcp-client plugin — arguing MCP's narrower capability surface is easier to reason about than giving agents open shell/curl access.
 - **2026-07-29** — [Building an agentic harness that outlasts the model (2026)](<../agents/harness/Building an agentic harness that outlasts the model (2026).md>) · `harness` · shopify
   Shopify details Dispatch, their Ruby-orchestrated multi-agent security-scanning harness: it partitions a Rails monolith by size/scope, runs parallel Hunter agents per partition backed by shared architecture artifacts, verifies candidate findings with a different model acting as a test oracle, then opens fix PRs -- across 80+ applications and thousands of scans it produced 300+ findings valued at $400k+ in equivalent bug-bounty payouts.
 - **2026-07-28** — [How LangChain Built an Agent-First Data Stack](<../agents/memory-context/How LangChain Built an Agent-First Data Stack.md>) · `memory-context` · langchain

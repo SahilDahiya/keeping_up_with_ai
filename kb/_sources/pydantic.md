@@ -1,7 +1,9 @@
 # pydantic
 
-49 articles.
+50 articles.
 
+- **2026-07-31** — [When agents improve agents: loops that improve themselves](<../agents/harness/When agents improve agents loops that improve themselves.md>) · `harness` · pydantic
+  Third in Pydantic's harness series: proposes moving the 'keep going or stop' decision inside the agent loop (via retry-verdict guardrails and Macroscope self-review), backing it with BM25 conversation search and persistent memory over prior runs, and closing the loop with a self-grading judge — but warns that LLM judges suffer position/self-preference bias and must be calibrated against a human, graded per-dimension, and version-tracked (ties into Pydantic Logfire's managed prompts, online evals, and GEPA prompt optimization).
 - **2026-07-29** — [Best AI agent optimization platforms in 2026 | Pydantic Logfire](<../evals-observability/monitoring/Best AI agent optimization platforms in 2026 Pydantic Logfire.md>) · `monitoring` · pydantic
   A comparative technical breakdown of AI agent observability/optimization platforms after 2026 industry consolidation (Langfuse to ClickHouse, Promptfoo to OpenAI, Galileo to Cisco, Helicone into Mintlify): compares Pydantic Logfire, Braintrust, Arize AX, LangSmith, Langfuse, DeepEval/Promptfoo/Patronus, and Elastic on trace scope (full distributed trace vs LLM-spans-only), OTel-native vs proprietary storage, and per-score billing (e.g. Braintrust's $1.50-2.50/1k scores vs Logfire's flat span pricing).
 - **2026-07-28** — [Dynamic Workflows in Pydantic AI: agents that orchestrate agents](<../agents/harness/Dynamic Workflows in Pydantic AI agents that orchestrate agents.md>) · `harness` · pydantic

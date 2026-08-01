@@ -1,7 +1,9 @@
 # together
 
-84 articles.
+85 articles.
 
+- **2026-07-31** — [Autoscaling endpoints for LLM inference](<../inference/optimization/Autoscaling endpoints for LLM inference.md>) · `optimization` · together
+  Together AI details its dedicated-inference autoscaler (proportional control loop, asymmetric scale-up/scale-down windows) and compares 8 scaling metrics; an experiment replaying sine-wave + spike traffic under inflight_requests, ttft-p95, and gpu_utilization policies shows only the concurrency-based inflight_requests metric caught saturation, since continuous batching hid the problem from both TTFT and GPU-utilization signals.
 - **2026-07-29** — [ThunderAgent: 2x Faster Agentic Inference for Synthetic Data Generation at Scale](<../inference/optimization/ThunderAgent 2x Faster Agentic Inference for Synthetic Data Generation at Scale.md>) · `optimization` · together
   Together AI's ThunderAgent (ICML 2026 Spotlight) fixes KV cache thrashing in high-concurrency agentic inference by scheduling at the program level instead of per-request: it pauses low-priority agent workflows under memory pressure and resumes them via a global waiting queue, achieving 803 vs 390 tok/s single-node throughput over SGLang and near-linear scaling to 2.4x speedup across 8 H100 nodes.
 - **2026-07-29** — [Configuring Dedicated Model Inference](<../inference/serving/Configuring Dedicated Model Inference.md>) · `serving` · together

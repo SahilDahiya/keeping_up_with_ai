@@ -1,7 +1,11 @@
 # models
 
-187 articles.
+189 articles.
 
+- **2026-07-31** — [Fine-tuning Qwen3-TTS for high-quality voice cloning](<fine-tuning/Fine-tuning Qwen3-TTS for high-quality voice cloning.md>) · `fine-tuning` · baseten
+  Baseten details a fine-tuning recipe for Qwen3-TTS voice cloning: an ASR-driven pipeline for building utterance-level (audio, text) pairs, talker/sub-talker cross-entropy loss over 12 RVQ codebook frames/sec, a centroid speaker embedding averaged over 64 clips, and warmup+cosine LR decay, trained in ~1 hour on a single H100 for 8 epochs on 1.5 hours of LJ Speech audio, reaching ~130ms TTFA (vs ~154ms for ICL cloning).
+- **2026-07-31** — [deepseek-ai/DeepSeek-V4-Flash-0731](<releases/deepseek-aiDeepSeek-V4-Flash-0731.md>) · `releases` · simon-willison
+  Simon Willison covers DeepSeek-V4-Flash-0731, a 304B-parameter (167GB) model ranked by Artificial Analysis ahead of the larger 428B MiniMax M3 on its Intelligence-Index-vs-cost Pareto frontier at $0.14/$0.27 per million tokens, and notes the default reasoning effort produces a much worse 'pelican riding a bicycle' SVG than the high reasoning-effort setting.
 - **2026-07-30** — [22,580: GPT-2 to Kimi K3, explained](<architectures/22,580 GPT-2 to Kimi K3, explained.md>) · `architectures` · baseten
   Worklog tracing the architectural path from GPT-2 (2019) to Kimi K3 (2026, 22,580x larger), walking through decoder-only attention code and then the successive changes -- RoPE, GQA/MQA, MoE routing, and other efficiency techniques -- that took models from dense transformers to today's sparse, trillion-parameter frontier models.
 - **2026-07-30** — [Three Tests to Run Before You Switch from LoRA to FullFT](<fine-tuning/Three Tests to Run Before You Switch from LoRA to FullFT.md>) · `fine-tuning` · fireworks

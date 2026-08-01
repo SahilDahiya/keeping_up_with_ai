@@ -1,7 +1,13 @@
 # simon-willison
 
-17 articles.
+20 articles.
 
+- **2026-07-31** — [Stateless MCP has recaptured my interest (and inspired mcp-explorer and datasette-mcp)](<../agents/tool-use/Stateless MCP has recaptured my interest (and inspired mcp-explorer and datasette-mcp).md>) · `tool-use` · simon-willison
+  Simon Willison walks through the new stateless MCP 2026-07-28 spec (collapsing init+session-ID handshakes into a single HTTP request) and the tools it let him build in a week — mcp-explorer (a stateless CLI for probing any MCP server), datasette-mcp (a 3-tool read-only SQL plugin), and an llm-mcp-client plugin — arguing MCP's narrower capability surface is easier to reason about than giving agents open shell/curl access.
+- **2026-07-31** — [deepseek-ai/DeepSeek-V4-Flash-0731](<../models/releases/deepseek-aiDeepSeek-V4-Flash-0731.md>) · `releases` · simon-willison
+  Simon Willison covers DeepSeek-V4-Flash-0731, a 304B-parameter (167GB) model ranked by Artificial Analysis ahead of the larger 428B MiniMax M3 on its Intelligence-Index-vs-cost Pareto frontier at $0.14/$0.27 per million tokens, and notes the default reasoning effort produces a much worse 'pelican riding a bicycle' SVG than the high reasoning-effort setting.
+- **2026-07-31** — [smevals—a small eval suite for evaluating models, prompts, and harnesses](<../evals-observability/evaluation/smevals—a small eval suite for evaluating models, prompts, and harnesses.md>) · `evaluation` · simon-willison
+  Simon Willison's smevals is a small CLI eval framework (run/grade/serve/build) with a defined vocabulary of evals, tasks, configs, runs, graders and checks for comparing models, prompts, and agent harnesses, demonstrated with a haiku-writing eval scored across GPT models via CLI-driven checks.
 - **2026-07-30** — [Advancing the price-performance frontier with GPT‑5.6](<../models/releases/Advancing the price-performance frontier with GPT‑5.6.md>) · `releases` · simon-willison
   Simon Willison notes OpenAI's GPT-5.6 Luna price drop (80%, to $0.20/$1.20 per million tokens, undercutting Gemini 3.1 Flash-Lite and 5x cheaper than Claude Haiku 4.5 on input), attributing it to GPT-5.6 Sol autonomously rewriting production inference kernels in Triton and Gluon, cutting end-to-end serving costs 20%.
 - **2026-07-30** — [Investigating three real-world incidents in our cybersecurity evaluations](<../product-engineering/security/Investigating three real-world incidents in our cybersecurity evaluations.md>) · `security` · simon-willison

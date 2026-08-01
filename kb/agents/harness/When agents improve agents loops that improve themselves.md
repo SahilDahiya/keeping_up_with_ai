@@ -1,10 +1,17 @@
 ---
 title: 'When agents improve agents: loops that improve themselves'
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: agents
+subtopic: harness
+secondary_topics:
+- evals-observability/llm-as-judge
+summary: 'Third in Pydantic''s harness series: proposes moving the ''keep going or
+  stop'' decision inside the agent loop (via retry-verdict guardrails and Macroscope
+  self-review), backing it with BM25 conversation search and persistent memory over
+  prior runs, and closing the loop with a self-grading judge — but warns that LLM
+  judges suffer position/self-preference bias and must be calibrated against a human,
+  graded per-dimension, and version-tracked (ties into Pydantic Logfire''s managed
+  prompts, online evals, and GEPA prompt optimization).'
 triage: null
 skip_reason: null
 source: pydantic
@@ -12,7 +19,7 @@ url: https://pydantic.dev/articles/when-agents-improve-agents
 author: David Sanchez
 published: '2026-07-31'
 fetched: '2026-08-01T06:55:10Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1435
 content_sha256: fa87dd7e69a315f094b9a8390cca0fea05ac957ca504641d58b5df5e310805f7

@@ -1,7 +1,9 @@
 # langchain
 
-96 articles.
+97 articles.
 
+- **2026-07-31** — [Evaluating code review agents with ReviewBench](<../evals-observability/benchmark-design/Evaluating code review agents with ReviewBench.md>) · `benchmark-design` · langchain
+  LangChain built ReviewBench, a 59-task Harbor-format benchmark distilled from curated LangSmith PR review comments (via an LLM gate plus manual review), scoring agents on coverage/precision F1; a bare Deep Agents harness recovers only ~30% of baseline issues, but a structured review prompt that traces changed-code dependencies substantially improved GPT-5.6 Luna's score without adding tools.
 - **2026-07-29** — [Deep Agents v0.7](<../agents/harness/Deep Agents v0.7.md>) · `harness` · langchain
   LangChain's Deep Agents v0.7 cuts base input tokens 65% (~6k to ~2k) by removing the default system prompt, trimming built-in tool descriptions 43%, and making TodoListMiddleware opt-in after evals across autonomous/conversational/long-context benchmarks on four models (gpt-5.6-luna, gemini-3.6-flash, claude-sonnet-4-6, claude-opus-4-8) showed steady reward with lower tokens/cost; also adds overridable middleware and filesystem tool improvements (paginated read_file, truncated grep/glob).
 - **2026-07-29** — [How Similarweb Evaluates Agent Reports with LangSmith](<../evals-observability/evaluation/How Similarweb Evaluates Agent Reports with LangSmith.md>) · `evaluation` · langchain
