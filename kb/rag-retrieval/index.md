@@ -67,8 +67,6 @@
 
 ## Also relevant (filed elsewhere)
 
-- **2026-07-21** — [Building a research agent with Pydantic AI Harness and Exa](<../agents/harness/Building a research agent with Pydantic AI Harness and Exa.md>) · `harness` · pydantic
-  Walks through building a research agent with Pydantic AI Harness's Exa capabilities: native WebSearch for shallow lookups, the hosted ExaAgent for full plan-search-synthesize research runs with citations and multi-turn context via previous_run_id, and lower-level ExaSearch tools (web_search/get_page) for custom source allowlists or citation bars.
 - **2026-06-17** — [Clustering billions of products for agentic commerce with Catalog API (2026)](<../product-engineering/case-studies/Clustering billions of products for agentic commerce with Catalog API (2026).md>) · `case-studies` · shopify
   How Shopify clusters billions of product listings across millions of stores into canonical entities via embeddings for its agentic-commerce Catalog API, reconciling inconsistent merchant listing structures.
 - **2026-05-13** — [Tau-Knowledge: benchmarking agents on realistic knowledge](<../evals-observability/benchmark-design/Tau-Knowledge benchmarking agents on realistic knowledge.md>) · `benchmark-design` · sierra

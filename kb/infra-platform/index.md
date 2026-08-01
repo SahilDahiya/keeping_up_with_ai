@@ -1,6 +1,6 @@
 # infra-platform
 
-44 articles.
+43 articles.
 
 - **2026-07-21** — [Devin Outposts on Modal | Modal Blog](<deployment/Devin Outposts on Modal Modal Blog.md>) · `deployment` · modal
   Modal's open-source modal-devin library lets Cognition's Devin coding agent execute in user-controlled Modal Sandboxes (GPU-backed, custom images, snapshot suspend/resume) while its reasoning stays in Cognition's cloud, splitting the agent's control-plane queue from a self-hosted data-plane orchestrator and worker.
@@ -30,8 +30,6 @@
   Guide to multi-tenant GPU cluster design for avoiding capacity conflicts in AI-native teams.
 - **2026-04-09** — [How the Baseten Delivery Network (BDN) makes cold starts fast](<deployment/How the Baseten Delivery Network (BDN) makes cold starts fast.md>) · `deployment` · baseten
   Deep dive into how the Baseten Delivery Network reduces cold starts for model serving.
-- **2026-03-30** — [Building IaC providers for Logfire: design decisions that mattered](<deployment/Building IaC providers for Logfire design decisions that mattered.md>) · `deployment` · pydantic
-  Design decisions in building Terraform/IaC providers for Logfire so customers manage alerts, dashboards, projects, and tokens as code, including how to model observability resources for declarative provisioning.
 - **2026-02-24** — [Optimizing Training Workloads for GPU Clusters](<gpu-clusters/Optimizing Training Workloads for GPU Clusters.md>) · `gpu-clusters` · together
   Covers optimization patterns for training workloads on GPU clusters.
 - **2026-02-23** — [Directory Snapshots: Resumable project state for Sandboxes](<deployment/Directory Snapshots Resumable project state for Sandboxes.md>) · `deployment` · modal
@@ -95,18 +93,10 @@
 
 - **2026-07-31** — [Autoscaling endpoints for LLM inference](<../inference/optimization/Autoscaling endpoints for LLM inference.md>) · `optimization` · together
   Together AI details its dedicated-inference autoscaler (proportional control loop, asymmetric scale-up/scale-down windows) and compares 8 scaling metrics; an experiment replaying sine-wave + spike traffic under inflight_requests, ttft-p95, and gpu_utilization policies shows only the concurrency-based inflight_requests metric caught saturation, since continuous batching hid the problem from both TTFT and GPU-utilization signals.
-- **2026-07-29** — [Best AI agent optimization platforms in 2026 | Pydantic Logfire](<../evals-observability/monitoring/Best AI agent optimization platforms in 2026 Pydantic Logfire.md>) · `monitoring` · pydantic
-  A comparative technical breakdown of AI agent observability/optimization platforms after 2026 industry consolidation (Langfuse to ClickHouse, Promptfoo to OpenAI, Galileo to Cisco, Helicone into Mintlify): compares Pydantic Logfire, Braintrust, Arize AX, LangSmith, Langfuse, DeepEval/Promptfoo/Patronus, and Elastic on trace scope (full distributed trace vs LLM-spans-only), OTel-native vs proprietary storage, and per-score billing (e.g. Braintrust's $1.50-2.50/1k scores vs Logfire's flat span pricing).
 - **2026-07-29** — [Agency: Secure, scalable sandboxes for agents](<../product-engineering/architecture/Agency Secure, scalable sandboxes for agents.md>) · `architecture` · sierra
   Sierra describes Agency, its Kubernetes-based agent-sandbox orchestration layer powering Pinecone and Ghostwriter: a stateless control plane provisioning per-runner pods with dedicated IAM roles and an LLM proxy for just-in-time key injection, plus a hibernation design that models each runner as a finite state machine restorable from an append-only checkpoint/event log (p50 8ms, p99 40ms round trips) to reclaim compute from the 2-4 orders of magnitude of idle agents.
 - **2026-07-26** — [Kimi K3 vs GPT-5.6 Sol on DeepSWE: Cost, Coding, and Routing](<../models/benchmarks/Kimi K3 vs GPT-5.6 Sol on DeepSWE Cost, Coding, and Routing.md>) · `benchmarks` · together
   Analyzes 904 graded DeepSWE rollouts comparing Kimi K3 and GPT-5.6 Sol: Sol leads pass@1 72.7% to 68.5%, but Kimi K3 wins pass@4 (89.4% vs 85.8%) at 64% lower cost ($4.65 vs $8.37 per rollout). With only 0.46 task-level correlation between the two models, a Kimi-first cascade that escalates to Sol on test failure covers 108/113 tasks (~85.6%), beating both single models and a perfect one-shot router.
-- **2026-07-24** — [Running AI agents against emulated AWS with Pydantic AI Harness and LocalStack](<../agents/harness/Running AI agents against emulated AWS with Pydantic AI Harness and LocalStack.md>) · `harness` · pydantic
-  Shows how Pydantic AI Harness's LocalStack capability (`capabilities=[LocalStack(manage_container=True)]`) gives an agent a free, disposable emulated-AWS sandbox so cloud deploys drop from minutes to seconds at zero cost and zero blast radius, enabling patterns like running several agents in parallel to build and load-test competing DynamoDB rate-limiter designs.
-- **2026-07-23** — [Running Pydantic AI Harness agents on Modal sandboxes](<../agents/harness/Running Pydantic AI Harness agents on Modal sandboxes.md>) · `harness` · pydantic
-  Pydantic AI Harness's ModalSandbox capability offloads agent shell/file work into gVisor-isolated Modal containers spun up per sub-agent (sub-second scheduling, torn down after use) while CodeMode keeps the model's reasoning code in-process via Monty; shown fanning out 40-500 sandboxed test-suite runs and racing candidate fixes with asyncio, all traced through Logfire.
-- **2026-07-15** — [AI gateway with data loss prevention, failover, and spend caps in Pydantic Logfire](<../product-engineering/security/AI gateway with data loss prevention, failover, and spend caps in Pydantic Logfire.md>) · `security` · pydantic
-  Makes the case for an LLM gateway as the single choke point for governance: one key across OpenAI/Anthropic/Google/Bedrock/etc., data-loss-prevention scanning of prompts and completions for secrets/PII (observe, flag, redact, or block), priority and weighted routing for failover/load-balancing, and hard per-key spend caps that block the request rather than alert after the budget is gone.
 - **2026-07-14** — [Agent and LLM views in Pydantic Logfire](<../evals-observability/monitoring/Agent and LLM views in Pydantic Logfire.md>) · `monitoring` · pydantic
   Argues that non-deterministic agent workloads should be monitored on turns-per-run and tool-calling-turns-per-run at p90, not the mean, because a rare runaway retry loop (e.g. 40 tool calls, $12) hides in the average; built from the gen_ai.* spans agents already emit.
 - **2026-07-09** — [The new GPT-5.6 family: Luna, Terra, Sol](<../models/releases/The new GPT-5.6 family Luna, Terra, Sol.md>) · `releases` · simon-willison

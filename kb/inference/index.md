@@ -315,8 +315,6 @@
   Case study of improving Vercel code-fixing outputs with open models, speculative decoding, and reinforcement fine-tuning.
 - **2025-08-21** — [AI agents for efficient LLM inference engineering](<../agents/tool-use/AI agents for efficient LLM inference engineering.md>) · `tool-use` · together
   Case study of using AI agents to automate engineering tasks while developing efficient inference systems.
-- **2025-08-05** — [How to Integrate Hugging Face Inference in Pydantic AI](<../agents/multi-agent/How to Integrate Hugging Face Inference in Pydantic AI.md>) · `multi-agent` · pydantic
-  Integrates Hugging Face Inference Providers (unified access to open models via Groq, Cerebras, Together AI, SambaNova) as a Pydantic AI model provider, then builds a multi-agent flight-booking system where one agent delegates to another, powered by Kimi K2 on Together AI.
 - **2025-07-28** — [Building Voice AI That Actually Works: Balancing Realistic Voices vs. Production-Ready Performance](<../models/multimodal/Building Voice AI That Actually Works Balancing Realistic Voices vs. Production-Ready Performance.md>) · `multimodal` · cresta
   Explains tradeoffs in building production voice AI, balancing naturalness, latency, reliability, and operational constraints.
 - **2025-07-23** — [Transcribe speech 100x faster and 100x cheaper with open models](<../models/multimodal/Transcribe speech 100x faster and 100x cheaper with open models.md>) · `multimodal` · modal

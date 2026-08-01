@@ -1,11 +1,9 @@
 # prompt-engineering
 
-18 articles.
+17 articles.
 
 - **2026-07-20** — [Custom Code Review rules for Codex | OpenAI Developers](<context-engineering/Custom Code Review rules for Codex OpenAI Developers.md>) · `context-engineering` · openai-devs
   Codex Code Review can now apply custom repository rules written in AGENTS.md (preserving API contracts, keeping customer data out of logs, avoiding breaking renames) so the review agent catches team-specific issues that used to depend on tribal reviewer knowledge, citing the specific rule behind each finding.
-- **2026-07-17** — [Prompt optimization and managed prompts in Pydantic Logfire](<techniques/Prompt optimization and managed prompts in Pydantic Logfire.md>) · `techniques` · pydantic
-  Describes Pydantic Logfire's prompt optimizer, which reads up to 100 recent production traces (failures weighted highest) via OpenTelemetry gen_ai spans, proposes a single evidence-cited prompt edit with a confidence ladder (prefer/always/never), rejects ungrounded claims via a validator, and separates prompt fixes from non-prompt issues like flaky providers or broken tools.
 - **2026-06-22** — [Skills on steroids: on-demand capabilities in Pydantic AI](<context-engineering/Skills on steroids on-demand capabilities in Pydantic AI.md>) · `context-engineering` · pydantic
   Introduces progressive disclosure for agent capabilities in Pydantic AI: mark a capability defer_loading=True so it collapses to a one-line id+description in context, and the model calls load_capability to inject the full instructions/tools bundle only when it decides it needs it, cutting input tokens spent loading context that has no chance of being used on a given turn.
 - **2026-05-12** — [Context engineering: the key to great agents](<context-engineering/Context engineering the key to great agents.md>) · `context-engineering` · sierra
@@ -43,8 +41,6 @@
 
 - **2026-06-26** — [What makes a good agent harness](<../agents/harness/What makes a good agent harness.md>) · `harness` · pydantic
   Follow-up to the harness thesis detailing what makes an agent harness good: safe tool access, memory that survives a single model call, guardrails that catch bad actions before they land, and context management that keeps the window full of what matters.
-- **2026-06-23** — [Pydantic AI v2: capabilities, a leaner core, and the Harness](<../agents/harness/Pydantic AI v2 capabilities, a leaner core, and the Harness.md>) · `harness` · pydantic
-  Pydantic AI v2 argues the agent inner loop is settled and the leverage is the surrounding layer, unifying instructions, tools, lifecycle hooks that rewrite what the model sees mid-run, context management, steering, and just-in-time tool loading into one composable 'capability' abstraction.
 - **2026-06-22** — [We got local models to triage the OpenClaw repo for FREE!*](<../agents/tool-use/We got local models to triage the OpenClaw repo for FREE!.md>) · `tool-use` · huggingface
   Uses local Gemma/Qwen models inside an agent harness with structured outputs to triage hundreds of daily OpenClaw issues/PRs on a 128GB NVIDIA GB10, replacing a quota-limited GPT-5/Opus workflow; covers label schema design, prompt iteration and accuracy vs closed models.
 - **2026-05-28** — [Claude Code: Best practices for agentic coding](<../agents/tool-use/Claude Code Best practices for agentic coding.md>) · `tool-use` · anthropic-engineering
