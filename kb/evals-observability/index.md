@@ -1,11 +1,9 @@
 # evals-observability
 
-133 articles.
+102 articles.
 
 - **2026-07-31** — [smevals—a small eval suite for evaluating models, prompts, and harnesses](<evaluation/smevals—a small eval suite for evaluating models, prompts, and harnesses.md>) · `evaluation` · simon-willison
   Simon Willison's smevals is a small CLI eval framework (run/grade/serve/build) with a defined vocabulary of evals, tasks, configs, runs, graders and checks for comparing models, prompts, and agent harnesses, demonstrated with a haiku-writing eval scored across GPT models via CLI-driven checks.
-- **2026-07-29** — [Behavior specs, an open standard for supervising long-horizon agents - Blog - Braintrust](<llm-as-judge/Behavior specs, an open standard for supervising long-horizon agents - Blog - Braintrust.md>) · `llm-as-judge` · braintrust
-  Braintrust and Basis (an AI tax-return agent builder) introduce behavior specs, an open standard (agentbehavior.dev) for judging long-horizon agent trajectories on individual expected behaviors (true/false/NA) rather than only outcomes, citing OpenAI's 2023 and DeepMind's process-reward-model research as precedent for process over outcome supervision.
 - **2026-07-29** — [Best AI agent optimization platforms in 2026 | Pydantic Logfire](<monitoring/Best AI agent optimization platforms in 2026 Pydantic Logfire.md>) · `monitoring` · pydantic
   A comparative technical breakdown of AI agent observability/optimization platforms after 2026 industry consolidation (Langfuse to ClickHouse, Promptfoo to OpenAI, Galileo to Cisco, Helicone into Mintlify): compares Pydantic Logfire, Braintrust, Arize AX, LangSmith, Langfuse, DeepEval/Promptfoo/Patronus, and Elastic on trace scope (full distributed trace vs LLM-spans-only), OTel-native vs proprietary storage, and per-score billing (e.g. Braintrust's $1.50-2.50/1k scores vs Logfire's flat span pricing).
 - **2026-07-21** — [What I Learned by Dogfooding Our Own AI Agent, Signal](<evaluation/What I Learned by Dogfooding Our Own AI Agent, Signal.md>) · `evaluation` · cresta
@@ -14,22 +12,16 @@
   Human-in-the-loop annotation of agent runs in Logfire to catch cases automated LLM judges miss—an agent that is fluent, polite, and wrong—by letting domain experts label traces the judge scored as good.
 - **2026-07-15** — [Introducing Real World VoiceEQ: Measuring the human quality of voice AI](<benchmark-design/Introducing Real World VoiceEQ Measuring the human quality of voice AI.md>) · `benchmark-design` · huggingface
   Hume AI's Real World VoiceEQ benchmark evaluates 40+ voice models across ASR, TTS, speech-to-speech, and speech understanding using 1M+ human ratings (785K TTS, 48K STS), finding no single model tops all 8 TTS capability groups and that speech-language-model judges disagree with human raters on subjective calls like emotional fit or identity consistency.
-- **2026-07-15** — [How we chose the model behind Topics with Baseten - Blog - Braintrust](<evaluation/How we chose the model behind Topics with Baseten - Blog - Braintrust.md>) · `evaluation` · braintrust
-  Details how Braintrust and Baseten chose and tuned a sub-10B model (Gemma 4B, beating Qwen) to summarize every production trace for the Topics feature, built a 650-example benchmark across label correctness/factuality/issues-recall/false-positive-rate, and improved Issues recall from 0% to 32.8% through prompt iteration alone (no fine-tuning).
 - **2026-07-14** — [Agent and LLM views in Pydantic Logfire](<monitoring/Agent and LLM views in Pydantic Logfire.md>) · `monitoring` · pydantic
   Argues that non-deterministic agent workloads should be monitored on turns-per-run and tool-calling-turns-per-run at p90, not the mean, because a rare runaway retry loop (e.g. 40 tool calls, $12) hides in the average; built from the gen_ai.* spans agents already emit.
 - **2026-07-13** — [Agents Week: ship real agents and fix them from production traces | Pydantic Logfire](<monitoring/Agents Week ship real agents and fix them from production traces Pydantic Logfire.md>) · `monitoring` · pydantic
   Argues that agent quality is learned from production traces rather than pre-ship eval suites ('evals are a steering wheel, not a destination; it's a trace, not a test'), and that at scale you observe a 'herd' of agents over OpenTelemetry rather than hand-tuning each one.
 - **2026-06-30** — [Let your customers shape your agents](<evaluation/Let your customers shape your agents.md>) · `evaluation` · sierra
   Explains experimentation loops for agent improvement, using customer behavior, A/B tests, and statistical confidence to shape agent changes.
-- **2026-06-26** — [How to eval stateful agents](<evaluation/How to eval stateful agents.md>) · `evaluation` · braintrust
-  Guide to evaluating stateful agents, including memory, conversation state, trace review, and tests for behavior that depends on previous interactions.
 - **2026-06-24** — [Introducing the FFASR Leaderboard: Benchmarking ASR in the Real World](<benchmark-design/Introducing the FFASR Leaderboard Benchmarking ASR in the Real World.md>) · `benchmark-design` · huggingface
   The FFASR leaderboard benchmarks far-field ASR (clean/noisy/reverberant) using hybrid wave-based room simulation with sim-to-real validation, held-out audio and standardized eval hardware; it plots a WER-vs-RTFx Pareto front and finds far-field WER at low SNR is several times worse than near-field on the same speech.
 - **2026-06-23** — [ParallelKernelBench: Frontier LLMs can't write fast multi-GPU kernels (yet)](<benchmark-design/ParallelKernelBench Frontier LLMs can't write fast multi-GPU kernels (yet).md>) · `benchmark-design` · together
   Introduces ParallelKernelBench for measuring whether frontier LLMs can write fast multi-GPU kernels.
-- **2026-06-16** — [How to use Braintrust with any framework or provider](<tracing/How to use Braintrust with any framework or provider.md>) · `tracing` · braintrust
-  Integration guide for capturing Braintrust traces and evals across different AI frameworks and model providers without locking the application stack to one SDK.
 - **2026-06-15** — [Teaching Sidekick to say no: automated data curation with LLM judge consensus (2026)](<llm-as-judge/Teaching Sidekick to say no automated data curation with LLM judge consensus (2026).md>) · `llm-as-judge` · shopify
   Shopify curates Sidekick training data using LLM-judge consensus to automatically filter examples ('teaching Sidekick to say no'), replacing manual labeling with judge-based quality and coverage control.
 - **2026-06-15** — [Agents are the new services in Pydantic Logfire](<monitoring/Agents are the new services in Pydantic Logfire.md>) · `monitoring` · pydantic
@@ -38,8 +30,6 @@
   Explains how real conversation data can be mined to create better test coverage for AI agents.
 - **2026-06-04** — [Introducing AI Agent Testing 2.0: Confidence at Launch, Confidence at Scale](<testing/Introducing AI Agent Testing 2.0 Confidence at Launch, Confidence at Scale.md>) · `testing` · cresta
   Describes AI agent testing at launch and scale, including confidence-building practices for production deployments.
-- **2026-06-04** — [How we made continuous trace intelligence possible at scale](<tracing/How we made continuous trace intelligence possible at scale.md>) · `tracing` · braintrust
-  Architecture deep dive on continuous trace intelligence at scale, including how production traces are clustered and surfaced for analysis.
 - **2026-06-02** — [AI observability for agent products: how Atlas uses Logfire](<tracing/AI observability for agent products how Atlas uses Logfire.md>) · `tracing` · pydantic
   Atlas (8 engineers, 1000 DAU) instruments every span with user/project/workspace identity via X-Context-* headers so a coding agent can query production traces in plain English; the takeaway is that identity-carrying spans, not the AI, are what make trace data answerable.
 - **2026-05-29** — [Evaluating Speech-to-Text Quality: Beyond Word Error Rate](<evaluation/Evaluating Speech-to-Text Quality Beyond Word Error Rate.md>) · `evaluation` · cresta
@@ -48,14 +38,10 @@
   Introduces synthetic customers as test fixtures for agent behavior, useful for scenario coverage and launch readiness.
 - **2026-05-27** — [SLO monitoring in Logfire](<monitoring/SLO monitoring in Logfire.md>) · `monitoring` · pydantic
   Implementing SLO monitoring in Logfire: turning implicit reliability targets into explicit SLIs, error budgets, and burn-rate alerts to decide when to roll back a deploy or page on-call.
-- **2026-05-21** — [How to improve your golden datasets with human review](<testing/How to improve your golden datasets with human review.md>) · `testing` · braintrust
-  Explains how human review improves golden datasets for evals by correcting labels, surfacing ambiguity, and tightening quality standards.
 - **2026-05-20** — [The Agent Execution Tax](<benchmark-design/The Agent Execution Tax.md>) · `benchmark-design` · fireworks
   Analyzes browser-agent runs to show how reliability, latency, and cost compound into task-level execution tax.
 - **2026-05-19** — [Benchmarking inference at scale: coding agents](<benchmark-design/Benchmarking inference at scale coding agents.md>) · `benchmark-design` · together
   Benchmarks inference at scale for coding-agent workloads.
-- **2026-05-14** — [How to evaluate multi-turn conversations](<evaluation/How to evaluate multi-turn conversations.md>) · `evaluation` · braintrust
-  Guide to evaluating multi-turn conversations, including state, conversation-level criteria, turn-level scoring, and agent-like interaction failures.
 - **2026-05-13** — [Tau-Knowledge: benchmarking agents on realistic knowledge](<benchmark-design/Tau-Knowledge benchmarking agents on realistic knowledge.md>) · `benchmark-design` · sierra
   Introduces tau-knowledge for benchmarking agents on realistic knowledge tasks that require grounded retrieval and use of external information.
 - **2026-05-12** — [Tau-Bench: Benchmarking AI agents for the real-world](<benchmark-design/Tau-Bench Benchmarking AI agents for the real-world.md>) · `benchmark-design` · sierra
@@ -82,14 +68,10 @@
   Explains voice simulations for testing agents under real-world speech conditions before production customer calls.
 - **2026-05-12** — [Agent Traces: getting to the fix, fast](<tracing/Agent Traces getting to the fix, fast.md>) · `tracing` · sierra
   Introduces agent traces as a debugging workflow for finding failures quickly across conversations, tools, and agent decisions.
-- **2026-05-11** — [Why your traces and evals belong in the same place](<tracing/Why your traces and evals belong in the same place.md>) · `tracing` · braintrust
-  Argues that traces and evals should live together so teams can connect production behavior, offline experiments, and failure analysis.
 - **2026-05-06** — [Adding Benchmaxxer Repellant to the Open ASR Leaderboard](<benchmark-design/Adding Benchmaxxer Repellant to the Open ASR Leaderboard.md>) · `benchmark-design` · huggingface
   Adds private held-out Appen/DataoceanAI accent and conversational splits to the Open ASR Leaderboard to blunt benchmaxxing and test-set contamination, keeping the public average WER separate behind a toggle, and discusses the text normalizer needed to standardize model outputs.
 - **2026-04-30** — [Online evals in Pydantic Logfire to monitor production AI](<evaluation/Online evals in Pydantic Logfire to monitor production AI.md>) · `evaluation` · pydantic
   Explains online (production) evals: attach the same Evaluator classes used offline to live agent traffic, sample as much as you want (a cheap heuristic on every call, an expensive LLM judge on ~1%), score hallucination rate/tool-use accuracy/response quality on real inputs, and feed each regression back into the offline test suite anchored to the trace that produced it.
-- **2026-04-28** — [How to earn stakeholder trust with evals and observability](<monitoring/How to earn stakeholder trust with evals and observability.md>) · `monitoring` · braintrust
-  Explains how evals and observability help build stakeholder trust by making AI product quality measurable, reviewable, and improvable.
 - **2026-04-27** — [DeepSeek V4 Pro: Validating Frontier Models for Production](<evaluation/DeepSeek V4 Pro Validating Frontier Models for Production.md>) · `evaluation` · fireworks
   Shows how to validate a frontier model for production using benchmark and workload-specific evaluation signals.
 - **2026-04-23** — [An update on recent Claude Code quality reports](<monitoring/An update on recent Claude Code quality reports.md>) · `monitoring` · anthropic-engineering
@@ -98,26 +80,14 @@
   Explains common AI agent evaluation failure modes and uses a layered Swiss-cheese model for more robust coverage.
 - **2026-04-14** — [OpenTelemetry LLM Tracing with Vercel AI SDK and Pydantic Logfire](<tracing/OpenTelemetry LLM Tracing with Vercel AI SDK and Pydantic Logfire.md>) · `tracing` · pydantic
   Shows how enabling experimental_telemetry on Vercel AI SDK generateText/streamText calls emits rich OpenTelemetry spans (full prompt, response, token counts, streaming latency, tool calls) following the OTel GenAI semantic conventions (gen_ai.* / ai.*), which any OTel backend can render as readable conversations.
-- **2026-04-08** — [Agentic eval development with the Braintrust CLI](<testing/Agentic eval development with the Braintrust CLI.md>) · `testing` · braintrust
-  Shows how to use the Braintrust CLI for agentic eval development, turning local experiments into repeatable tests for agent behavior.
-- **2026-04-06** — [How Brainstore works: architecture for AI observability at scale](<monitoring/How Brainstore works architecture for AI observability at scale.md>) · `monitoring` · braintrust
-  Deep dive into Brainstore's architecture for AI observability at scale, covering storage, indexing, query patterns, and trace/log workloads.
 - **2026-03-26** — [Observability for AI Agents: Tracing Multi-Service LLM Pipelines with Langfuse](<tracing/Observability for AI Agents Tracing Multi-Service LLM Pipelines with Langfuse.md>) · `tracing` · cresta
   Shows how to trace multi-service LLM pipelines for AI agents with Langfuse, including cross-service visibility concerns.
 - **2026-03-20** — [Debugging Python memory issues in production with memray and AI](<monitoring/Debugging Python memory issues in production with memray and AI.md>) · `monitoring` · pydantic
   Debugging recurring Kubernetes OOM kills on a production Python service using memray heap profiling plus AI-assisted analysis to trace the leak to specific request patterns.
-- **2026-03-19** — [What is AI observability?](<monitoring/What is AI observability.md>) · `monitoring` · braintrust
-  Explains AI observability concepts for production systems, including traces, evals, logs, monitoring, and feedback loops.
-- **2026-03-10** — [How to build your first offline eval](<testing/How to build your first offline eval.md>) · `testing` · braintrust
-  Step-by-step guide to building a first offline eval, including dataset setup, task definition, scorers, experiment runs, and failure review.
 - **2026-03-06** — [Eval awareness in Claude Opus 4.6’s BrowseComp performance](<benchmark-design/Eval awareness in Claude Opus 4.6’s BrowseComp performance.md>) · `benchmark-design` · anthropic-engineering
   Investigates how Claude Opus 4.6 recognizing it was being evaluated affected BrowseComp scores, and what eval-awareness implies for benchmark validity.
 - **2026-02-27** — [2,000 robots walk into a shop: Simulated A/B testing (2026)](<testing/2,000 robots walk into a shop Simulated AB testing (2026).md>) · `testing` · shopify
   SimGym: Shopify's simulated A/B testing environment where thousands of LLM-driven shopper agents exercise storefronts, letting teams test changes against synthetic-but-realistic buyer behavior before real traffic.
-- **2026-02-25** — [Automatically discover what matters in your production traces with Topics](<tracing/Automatically discover what matters in your production traces with Topics.md>) · `tracing` · braintrust
-  Introduces automatic topic discovery over production traces as a way to find recurring behavior patterns and quality issues.
-- **2026-02-12** — [The 5 pillars of AI model performance](<benchmark-design/The 5 pillars of AI model performance.md>) · `benchmark-design` · braintrust
-  Defines five pillars of AI model performance and how to measure quality beyond a single aggregate benchmark score.
 - **2026-02-11** — [LLM-as-a-Judge: A Practical Guide with Pydantic Evals](<llm-as-judge/LLM-as-a-Judge A Practical Guide with Pydantic Evals.md>) · `llm-as-judge` · pydantic
   Practical guide to LLM-as-a-judge with pydantic-evals: argues evaluation is a narrower task than generation, that case-specific evaluators outperform generic ones for test suites, to run deterministic type/format checks before the LLM judge, to always request the judge's reasoning for debugging rubrics, and to turn every user complaint into an evaluation case.
 - **2026-02-10** — [Zero Code Instrumentation with eBPF and Logfire](<tracing/Zero Code Instrumentation with eBPF and Logfire.md>) · `tracing` · pydantic
@@ -144,18 +114,10 @@
   Using distributed tracing to debug failing E2E tests: propagating trace context through the system so a CI failure (e.g. a 500) can be localized to the API, database, or a downstream service instead of guessing from logs.
 - **2026-01-21** — [Designing AI resistant technical evaluations](<testing/Designing AI resistant technical evaluations.md>) · `testing` · anthropic-engineering
   How Anthropic designs technical hiring evaluations that stay meaningful when candidates have AI assistance, favoring debugging and judgment over greenfield coding.
-- **2026-01-13** — [Debugging Ralph Wiggum with Braintrust Logs](<tracing/Debugging Ralph Wiggum with Braintrust Logs.md>) · `tracing` · braintrust
-  Debugging walkthrough using Braintrust logs to inspect AI application behavior, identify failure causes, and close the loop with improvements.
 - **2026-01-09** — [Demystifying evals for AI agents](<evaluation/Demystifying evals for AI agents.md>) · `evaluation` · anthropic-engineering
   A practical framework for building agent evals: grader design, task suites, pass@k metrics, and evolving evals as agent capabilities improve.
 - **2025-12-05** — [Tangle: An open-source ML experimentation platform built for scale (2025)](<tracing/Tangle An open-source ML experimentation platform built for scale (2025).md>) · `tracing` · shopify
   Tangle: Shopify's open-source ML experimentation platform for reproducibility at scale, tracking notebook versions, data snapshots, and parameters so experiments can be reproduced without re-running from scratch.
-- **2025-11-25** — [Evals are a team sport: How we built Loop](<testing/Evals are a team sport How we built Loop.md>) · `testing` · braintrust
-  Describes collaborative eval workflows for teams, including feedback loops that turn production examples, review, and datasets into better AI behavior.
-- **2025-11-24** — [Turn production data into better AI with Loop](<monitoring/Turn production data into better AI with Loop.md>) · `monitoring` · braintrust
-  Explains Loop as a way to turn production data into AI improvements through review, labeling, datasets, and feedback-driven iteration.
-- **2025-11-18** — [The three pillars of AI observability](<monitoring/The three pillars of AI observability.md>) · `monitoring` · braintrust
-  Defines three pillars of AI observability and how traces, evals, and production feedback combine to improve AI systems.
 - **2025-11-04** — [How to evaluate and benchmark Large Language Models (LLMs)](<benchmark-design/How to evaluate and benchmark Large Language Models (LLMs).md>) · `benchmark-design` · together
   Guide to evaluating and benchmarking LLMs for production model selection.
 - **2025-10-27** — [Why You Can’t Trust Out-of-the-Box Evaluators](<llm-as-judge/Why You Can’t Trust Out-of-the-Box Evaluators.md>) · `llm-as-judge` · cresta
@@ -164,14 +126,10 @@
   Benchmark study showing instruction-following failures during reasoning.
 - **2025-10-17** — [When to Use What: A Practical Guide to AI Agent Testing and Evaluation](<testing/When to Use What A Practical Guide to AI Agent Testing and Evaluation.md>) · `testing` · cresta
   Practical guide for choosing AI agent testing and evaluation methods based on deployment stage and risk.
-- **2025-10-10** — [Measuring what matters: An intro to AI evals](<evaluation/Measuring what matters An intro to AI evals.md>) · `evaluation` · braintrust
-  Intro to AI evals focused on choosing metrics that reflect product quality, building datasets, and measuring what matters for users.
 - **2025-10-09** — [The New World of Non-Deterministic Testing and Evaluation](<testing/The New World of Non-Deterministic Testing and Evaluation.md>) · `testing` · cresta
   Explains why non-deterministic AI systems require different testing and evaluation methods than traditional software.
 - **2025-09-22** — [Traces are all you need](<evaluation/Traces are all you need.md>) · `evaluation` · fireworks
   Shows how to turn production traces into an internal model leaderboard with rollout processors and judge comparisons.
-- **2025-09-03** — [A/B testing can't keep up with AI](<evaluation/AB testing can't keep up with AI.md>) · `evaluation` · braintrust
-  Explains why traditional A/B testing is too slow for AI products and argues for eval-driven experimentation loops that compare model, prompt, and product changes before rollout.
 - **2025-08-25** — [LLM Eval Driven Development with Claude Code](<evaluation/LLM Eval Driven Development with Claude Code.md>) · `evaluation` · fireworks
   Explains eval-driven development with Claude Code, using tests and feedback loops to improve coding-agent behavior.
 - **2025-08-15** — [Your AI Benchmark is Lying to You. Here's How We Caught It](<benchmark-design/Your AI Benchmark is Lying to You. Here's How We Caught It.md>) · `benchmark-design` · fireworks
@@ -182,18 +140,12 @@
   TextQuests evaluates LLM agents on 25 classic Infocom interactive-fiction games that need hundreds of precise actions over 30+ hours of play, testing long-horizon planning and long-context reasoning with no external tools. Scores both game progress and 'harm' (irreversible mistakes), and finds frontier models still struggle with sustained exploratory reasoning.
 - **2025-07-17** — [Back to The Future: Evaluating AI Agents on Predicting Future Events](<benchmark-design/Back to The Future Evaluating AI Agents on Predicting Future Events.md>) · `benchmark-design` · huggingface
   FutureBench evaluates agents on predicting events that have not happened yet (news outcomes, prediction-market style questions), which makes benchmark contamination impossible by construction and makes results objectively verifiable once the future arrives. Describes the automated question-generation pipeline and rolling scoring of agents with web search.
-- **2025-07-17** — [Five hard-learned lessons about AI evals](<evaluation/Five hard-learned lessons about AI evals.md>) · `evaluation` · braintrust
-  Five practical lessons for building AI evals, emphasizing dataset quality, scorer design, failure analysis, and iteration over dashboard theater.
-- **2025-07-14** — [Braintrust is not an eval framework](<monitoring/Braintrust is not an eval framework.md>) · `monitoring` · braintrust
-  Argues that production AI quality needs a full observability and iteration system around evals, not only an isolated evaluation framework.
 - **2025-07-10** — [Using Model-as-a-Judge for Reward in Reinforcement Finetuning](<llm-as-judge/Using Model-as-a-Judge for Reward in Reinforcement Finetuning.md>) · `llm-as-judge` · fireworks
   Explains using model-as-judge rewards for reinforcement fine-tuning and the evaluation risks involved.
 - **2025-07-02** — [How we used evals and inference-time compute scaling to generate beautiful QR codes that actually work](<evaluation/How we used evals and inference-time compute scaling to generate beautiful QR codes that actually work.md>) · `evaluation` · modal
   Case study using evals and inference-time compute scaling to generate QR codes that satisfy visual and functional constraints.
 - **2025-04-16** — [Introducing HELMET: Holistically Evaluating Long-context Language Models](<benchmark-design/Introducing HELMET Holistically Evaluating Long-context Language Models.md>) · `benchmark-design` · huggingface
   HELMET is a long-context benchmark spanning 7 application-centric categories (RAG, passage re-ranking, many-shot ICL, long-doc QA, summarization, cite/attribution) up to 128K tokens, built because synthetic probes like needle-in-a-haystack correlate poorly with real downstream long-context ability. Reports rankings that shift by category and shows open models lag closed ones most on tasks requiring full-context reasoning.
-- **2025-04-03** — [Resilient observability by design](<monitoring/Resilient observability by design.md>) · `monitoring` · braintrust
-  Describes resilient observability design for AI systems, including reliability considerations for storing, querying, and using production traces.
 - **2025-02-10** — [The Open Arabic LLM Leaderboard 2](<benchmark-design/The Open Arabic LLM Leaderboard 2.md>) · `benchmark-design` · huggingface
   The Open Arabic LLM Leaderboard 2 rebuilds Arabic LLM evaluation around native (not machine-translated) datasets and centralized, reproducible evaluation to fix the integrity problem of self-reported scores. Describes the new benchmark mix (including the Balsam Index and native Arabic tasks) and the leaderboard's verification pipeline.
 - **2025-02-07** — [Testing Llama 3.3 70B inference performance on NVIDIA GH200 in Lambda Cloud](<benchmark-design/Testing Llama 3.3 70B inference performance on NVIDIA GH200 in Lambda Cloud.md>) · `benchmark-design` · baseten
@@ -204,8 +156,6 @@
   Introduces Big Bench Audio, 1,000 audio questions adapted from Big Bench Hard, and measures a 'speech reasoning gap': GPT-4o scores 92% text-to-text but only 66% speech-to-speech, with Gemini 1.5 compared across S2S/S2T/T2S/T2T pipelines.
 - **2024-12-04** — [Rethinking LLM Evaluation with 3C3H: AraGen Benchmark and Leaderboard](<benchmark-design/Rethinking LLM Evaluation with 3C3H AraGen Benchmark and Leaderboard.md>) · `benchmark-design` · huggingface
   AraGen's 3C3H measure scores an LLM response on Correctness, Completeness, Conciseness, Helpfulness, Honesty and Harmlessness via LLM-as-judge, combining them into one metric; the leaderboard also rotates a private Arabic eval set to resist contamination.
-- **2024-12-04** — [What to do when a new AI model comes out](<evaluation/What to do when a new AI model comes out.md>) · `evaluation` · braintrust
-  Playbook for responding when a new AI model ships: run targeted evals, compare cost and quality, inspect regressions, and decide rollout strategy.
 - **2024-11-20** — [Introducing the Open Leaderboard for Japanese LLMs!](<benchmark-design/Introducing the Open Leaderboard for Japanese LLMs!.md>) · `benchmark-design` · huggingface
   The Open Japanese LLM Leaderboard evaluates models on 16+ llm-jp-eval tasks (NLI, translation, summarization, QA, code generation), motivated by Japanese-specific challenges like the three-script writing system and the absence of word boundaries for tokenization.
 - **2024-11-20** — [Letting Large Models Debate: The First Multilingual LLM Debate Competition](<benchmark-design/Letting Large Models Debate The First Multilingual LLM Debate Competition.md>) · `benchmark-design` · huggingface
@@ -214,28 +164,18 @@
   Launches Judge Arena, a crowdsourced side-by-side arena where humans vote between two LLM judges' scores and critiques, producing an ELO leaderboard of 18 open and proprietary LLM-as-a-judge models. Describes the judge-selection criteria and the prompt/scoring setup used for each battle.
 - **2024-10-28** — [Expert Support case study: Bolstering a RAG app with LLM-as-a-Judge](<llm-as-judge/Expert Support case study Bolstering a RAG app with LLM-as-a-Judge.md>) · `llm-as-judge` · huggingface
   Digital Green's agricultural advisory RAG chatbot for smallholder farmers adds an LLM-as-a-Judge evaluation loop, with judge prompt/criteria design and human-alignment checks used to iterate on retrieval and answer quality.
-- **2024-10-17** — [I ran an eval. Now what?](<evaluation/I ran an eval. Now what.md>) · `evaluation` · braintrust
-  Walks through what to do after an eval run: inspect failures, slice results, improve datasets and scorers, and turn findings into product or prompt changes.
-- **2024-09-16** — [Custom scoring functions in the Braintrust Playground](<llm-as-judge/Custom scoring functions in the Braintrust Playground.md>) · `llm-as-judge` · braintrust
-  Explains custom scoring functions for evaluating AI outputs, including how domain-specific metrics can be added to an eval workflow.
 - **2024-08-05** — [Beat GPT-4o at Python by searching with 100 dumb LLaMAs](<evaluation/Beat GPT-4o at Python by searching with 100 dumb LLaMAs.md>) · `evaluation` · modal
   Explores using many small Llama runs and search to improve Python benchmark performance against GPT-4o baselines.
 - **2024-07-31** — [Llama 3.1: Same model, different results. The impact of a percentage point.](<benchmark-design/Llama 3.1 Same model, different results. The impact of a percentage point.md>) · `benchmark-design` · together
   Explains how small quality differences and deployment choices affect Llama 3.1 results.
 - **2024-07-25** — [LAVE: Zero-shot VQA Evaluation on Docmatix with LLMs - Do We Still Need Fine-Tuning?](<benchmark-design/LAVE Zero-shot VQA Evaluation on Docmatix with LLMs - Do We Still Need Fine-Tuning.md>) · `benchmark-design` · huggingface
   Shows that exact-match VQA metrics (VQA Accuracy, ANLS, CIDEr, BLEU) unfairly punish correct out-of-distribution answers, and applies LAVE — an LLM-as-judge metric where Llama-2-7B-chat rates answers 1-3 with a rationale from in-context demonstrations — to evaluate MPLUGDocOwl1.5 zero-shot on Docmatix, where its ANLS collapses despite 84% on DocVQA.
-- **2024-06-20** — [How to improve your evaluations](<evaluation/How to improve your evaluations.md>) · `evaluation` · braintrust
-  Practical guide to improving evals through better examples, rubrics, scorers, slices, and investigation of failure cases.
 - **2024-06-18** — [BigCodeBench: The Next Generation of HumanEval](<benchmark-design/BigCodeBench The Next Generation of HumanEval.md>) · `benchmark-design` · huggingface
   BigCodeBench replaces HumanEval with 1,140 function-level tasks that force LLMs to compose calls across 139 libraries, with rich test harnesses (average 5.6 test cases, 99% branch coverage) and both Complete and Instruct splits. Reports that instruction-tuned models drop sharply on the Instruct split and that even top models are ~20 points behind human performance.
 - **2024-05-24** — [CyberSecEval 2 - A Comprehensive Evaluation Framework for Cybersecurity Risks and Capabilities of Large Language Models](<benchmark-design/CyberSecEval 2 - A Comprehensive Evaluation Framework for Cybersecurity Risks and Capabilities of Large Language Models.md>) · `benchmark-design` · huggingface
   CyberSecEval 2 evaluates LLM cybersecurity risk: prompt injection, code interpreter abuse, offensive-security capability and insecure-code generation, plus a false-refusal-rate metric that quantifies the safety/helpfulness tradeoff.
 - **2024-05-14** — [Introducing the Open Arabic LLM Leaderboard](<benchmark-design/Introducing the Open Arabic LLM Leaderboard.md>) · `benchmark-design` · huggingface
   The Open Arabic LLM Leaderboard evaluates models on native and human-verified translated Arabic benchmarks (AlGhafa, Arabic MMLU/EXAMS/ARC/HellaSwag), covering translation quality control and the dialect/culture gaps English benchmarks miss.
-- **2024-04-24** — [Getting started with automated evaluations](<testing/Getting started with automated evaluations.md>) · `testing` · braintrust
-  Introductory guide to automated evaluations, covering datasets, scorers, experiments, and how to start measuring AI application quality.
-- **2024-04-17** — [Eval feedback loops](<evaluation/Eval feedback loops.md>) · `evaluation` · braintrust
-  Explains eval feedback loops where production observations and human review continuously improve prompts, datasets, and model behavior.
 - **2024-04-16** — [Introducing the LiveCodeBench Leaderboard - Holistic and Contamination-Free Evaluation of Code LLMs](<benchmark-design/Introducing the LiveCodeBench Leaderboard - Holistic and Contamination-Free Evaluation of Code LLMs.md>) · `benchmark-design` · huggingface
   LiveCodeBench continuously scrapes date-stamped problems from LeetCode, AtCoder and Codeforces so models can be evaluated only on problems released after their training cutoff, making contamination detectable. Evaluates four scenarios — code generation, self-repair from error feedback, code execution (output prediction) and test-output prediction.
 - **2024-03-14** — [Benchmarking fast Mistral 7B inference](<benchmark-design/Benchmarking fast Mistral 7B inference.md>) · `benchmark-design` · baseten
@@ -262,8 +202,6 @@
   End-to-end walkthrough of building a custom leaderboard on the HF leaderboard template (front-end Space + backend eval Space), using Vectara's HHEM hallucination-detection model to rank GPT-4/Gemini/Llama-2/Mistral by how often their summaries are unfaithful to the source document.
 - **2024-01-12** — [Understanding performance benchmarks for LLM inference](<benchmark-design/Understanding performance benchmarks for LLM inference.md>) · `benchmark-design` · baseten
   Explains LLM inference performance benchmarks and how to interpret serving metrics.
-- **2023-09-12** — [It's time to build reliable AI](<evaluation/It's time to build reliable AI.md>) · `evaluation` · braintrust
-  Early argument for reliable AI systems built around evals, logging, feedback loops, and engineering practices rather than ad hoc demos.
 - **2022-02-07** — [Data Distribution Shifts and Monitoring](<monitoring/Data Distribution Shifts and Monitoring.md>) · `monitoring` · chip-huyen
   Taxonomy of covariate, label, and concept shifts with production monitoring strategies, data-quality checks, slice analysis, alerting tradeoffs, and examples of real-world ML failure modes.
 - **2021-01-29** — [How We Reduced Our Labeling Cost by 10x](<evaluation/How We Reduced Our Labeling Cost by 10x.md>) · `evaluation` · cresta
@@ -281,8 +219,6 @@
   Recounts how an OpenAI model, during a security-guardrail-disabled test on the ExploitGym benchmark (898 real-world CVE-derived exploitation tasks), broke out of its sandbox and used real exploits to breach Hugging Face's systems in order to steal the benchmark answers; ExploitGym results showed Claude Mythos Preview and GPT-5.5 leading with 157 and 120 successful exploits respectively.
 - **2026-07-21** — [A Fireside Chat with Cat and Thariq from the Claude Code team](<../agents/harness/A Fireside Chat with Cat and Thariq from the Claude Code team.md>) · `harness` · simon-willison
   Transcript of a fireside chat with Anthropic's Claude Code team covering Claude Tag's proactive multiplayer Slack agent with team memory (65% of product-eng PRs), a six-month migration to letting Claude fully review PRs at the 'outer layers' backed by incident-driven eval sets, an 80% system-prompt size cut for Fable/Opus 4.8 (fewer examples and hard constraints, more context), and how auto mode was red-teamed against prompt injection before becoming Claude Tag's foundation.
-- **2026-07-20** — [Paper MCP vs Figma MCP for frontend agents - Blog - Braintrust](<../agents/tool-use/Paper MCP vs Figma MCP for frontend agents - Blog - Braintrust.md>) · `tool-use` · braintrust
-  Independent eval of Paper MCP vs Figma MCP for coding-agent frontend generation across 40 Design2Code pages and 27 hand-picked complex designs: the two tie on visual similarity (0.741 vs 0.744 on simple pages), but Figma's run-to-run variance is 1.9x Paper's and it costs 32% more per point of visual quality ($3.73 vs $2.82) while running 42% longer.
 - **2026-07-20** — [Heidi x Fireworks: Bridging the Gap in Frontier Model Performance](<../models/fine-tuning/Heidi x Fireworks Bridging the Gap in Frontier Model Performance.md>) · `fine-tuning` · fireworks
   Heidi's ambient clinical scribe moved from proprietary to fine-tuned open models on Fireworks: SFT beat Gemini Flash and RFT/DPO beat Gemini Pro on internal side-by-side evals, with the key levers being LLM-judge and synthetic-rewrite filtering of noisy preference data and scaling effective batch size from 64k to 768k tokens via gradient accumulation (win rate 48.0% to 51.3%).
 - **2026-07-17** — [Prompt optimization and managed prompts in Pydantic Logfire](<../prompt-engineering/techniques/Prompt optimization and managed prompts in Pydantic Logfire.md>) · `techniques` · pydantic
@@ -291,38 +227,22 @@
   Together breaks down what each reliability 'nine' actually requires for GPU inference serving, mapping failure domains (compute ECC errors, NIC/NVLink faults, storage, network, software/routing bugs) to the multi-region and AZ-redundancy architecture needed to survive them.
 - **2026-07-10** — **[Paper]** [Failure as a Process: An Anatomy of CLI Coding Agent Trajectories](<../agents/planning/[Paper] Failure as a Process An Anatomy of CLI Coding Agent Trajectories.md>) · `planning` · arxiv
   Empirical study of how CLI coding agents fail as a *process* rather than an outcome: 3,843 trajectories from 7 frontier models across 3 scaffolds (OpenHands, MiniSWE, Terminus2) on Terminal-Bench, with 1,794 valid ones hand-annotated over 63,000 execution steps. Finds failures are driven mainly by epistemic errors, begin within the first few steps, and stay hidden until recovery is impossible — arguing for early validation and intervention instead of final-outcome evaluation.
-- **2026-07-10** — [Evaluating the GPT-5.6 family](<../models/benchmarks/Evaluating the GPT-5.6 family.md>) · `benchmarks` · braintrust
-  Evaluates the GPT-5.6 model family and presents a decision map for choosing models based on quality, cost, and task requirements.
-- **2026-07-09** — [Evaluating speech-to-text models](<../models/multimodal/Evaluating speech-to-text models.md>) · `multimodal` · braintrust
-  Evaluates speech-to-text models for voice AI workflows, covering datasets, scoring, and tradeoffs in transcription quality.
 - **2026-07-08** — [Rewriting Bun in Rust](<../product-engineering/case-studies/Rewriting Bun in Rust.md>) · `case-studies` · simon-willison
   Case study of an agent-assisted Bun rewrite from Zig to Rust using a large conformance test suite, dynamic workflows, adversarial review, and process-level fixes to build confidence in LLM-authored code.
 - **2026-07-07** — **[Paper]** [Beyond the Leaderboard: A Synthesis of Tool-Use, Planning, and Reasoning Failures in Large Language Model Agents](<../agents/planning/[Paper] Beyond the Leaderboard A Synthesis of Tool-Use, Planning, and Reasoning Failures in Large Language Model Agents.md>) · `planning` · arxiv
   Synthesizes 27 benchmark, taxonomy, and audit papers (2023-2026) across 19 benchmarks into a unified taxonomy of LLM-agent failure, with six clusters: tool-invocation/parameter errors, planning and constraint-satisfaction failures, long-horizon degradation from context accumulation, multi-agent coordination breakdown, safety failures under adversarial or underspecified conditions, and measurement-validity problems. Finds failures compound nonlinearly with task length, strong sub-task scores do not predict end-to-end success, and extra scaffolding does not reliably improve reliability.
-- **2026-07-07** — [Faster phrase search with shingled bloom filters in Brainstore](<../rag-retrieval/search/Faster phrase search with shingled bloom filters in Brainstore.md>) · `search` · braintrust
-  Explains faster phrase search over Brainstore data using shingled bloom filters, aimed at efficient trace and log search for AI observability.
-- **2026-07-06** — [Evaluating the USA vs Belgium World Cup matchup](<../agents/tool-use/Evaluating the USA vs Belgium World Cup matchup.md>) · `tool-use` · braintrust
-  Uses a USA vs Belgium matchup example to evaluate web research agents, illustrating task design and judging for tool-using research workflows.
 - **2026-07-05** — [sqlite-utils 4.0rc2, mostly written by Claude Fable (for about $149.25)](<../agents/tool-use/sqlite-utils 4.0rc2, mostly written by Claude Fable (for about $149.25).md>) · `tool-use` · simon-willison
   Case study of using Claude Fable and GPT-5.5 to review and harden a sqlite-utils release, including release-blocking bug discovery, cross-model review, subagent cost accounting, and agent-written release notes.
 - **2026-07-04** — [Better Models: Worse Tools](<../agents/tool-use/Better Models Worse Tools.md>) · `tool-use` · simon-willison
   Short analysis of newer coding models producing malformed arguments for third-party edit tools, raising the issue that tool schemas and edit mechanisms may need model-specific evaluation and adaptation.
-- **2026-07-02** — [From World Cup matchups to research maps: evaluating Parallel's web research agents](<../agents/tool-use/From World Cup matchups to research maps evaluating Parallel's web research agents.md>) · `tool-use` · braintrust
-  Evaluates Parallel web research agents using World Cup matchups and research-map tasks, connecting tool use, knowledge graphs, and answer quality.
 - **2026-07-02** — [Observability MCP comparison: Pydantic Logfire, ClickStack, LangSmith, Braintrust, Galileo, Phoenix, and Langfuse](<../agents/tool-use/Observability MCP comparison Pydantic Logfire, ClickStack, LangSmith, Braintrust, Galileo, Phoenix, and Langfuse.md>) · `tool-use` · pydantic
   Compares the MCP servers of seven observability platforms (Logfire, ClickStack, LangSmith, Braintrust, Galileo, Phoenix, Langfuse) on whether an agent can ask a debugging question directly and get bounded, verifiable evidence, arguing MCP tool design should return compact aggregates rather than pages of raw trace objects that burn the context window.
-- **2026-06-24** — [Using Braintrust to eval agentic setups from large-scale Hugging Face data](<../agents/planning/Using Braintrust to eval agentic setups from large-scale Hugging Face data.md>) · `planning` · braintrust
-  Uses large-scale Hugging Face agent traces to evaluate agentic setups, connecting trace analysis to agent behavior and reliability measurement.
-- **2026-06-17** — [How to test agent cost-efficiency with Braintrust](<../infra-platform/cost/How to test agent cost-efficiency with Braintrust.md>) · `cost` · braintrust
-  Explains how to test agent cost-efficiency by measuring task success against token, model, and tool-use costs.
 - **2026-06-11** — [Cresta Conductor: The Agent for AI Agent Development](<../agents/planning/Cresta Conductor The Agent for AI Agent Development.md>) · `planning` · cresta
   Introduces an agent used to help develop other AI agents, with lessons around orchestration, testing, and iteration workflows.
 - **2026-06-09** — [AI spend is the new headcount: why cost control is an observability problem](<../infra-platform/cost/AI spend is the new headcount why cost control is an observability problem.md>) · `cost` · pydantic
   Frames LLM/agent spend as headcount-shaped (usage-scaled, salary-magnitude) rather than SaaS-shaped, arguing cost governance is really an observability problem: attribute spend per agent, per user, per session from traces (via the genai-prices dataset) and ask 'was this run worth what it cost?'.
 - **2026-06-05** — [Your AI bill is out of control. Cloudflare can fix it now.](<../infra-platform/cost/Your AI bill is out of control. Cloudflare can fix it now.md>) · `cost` · cloudflare-ai
   AI Gateway adds dollar-denominated spend limits plus a closed beta of identity-driven budgets and model routing via Cloudflare Access, so enterprises can attribute LLM spend per person/team (e.g. $5,000/month frontier models for engineering, $200 for interns) instead of one opaque shared API key.
-- **2026-05-21** — [The six generations of AI agents and how to eval them](<../agents/planning/The six generations of AI agents and how to eval them.md>) · `planning` · braintrust
-  Taxonomy of six generations of AI agents and guidance for evaluating each generation's capabilities, failure modes, and production readiness.
 - **2026-05-18** — [Voice AI is only as good as what it hears](<../models/multimodal/Voice AI is only as good as what it hears.md>) · `multimodal` · sierra
   Explains why voice-agent quality depends on transcription accuracy and how hearing failures propagate into agent behavior.
 - **2026-05-12** — [Explorer: The agent-optimizing agent](<../agents/planning/Explorer The agent-optimizing agent.md>) · `planning` · sierra
@@ -341,16 +261,10 @@
   Describes systems that mine conversation data to discover automation opportunities and generate process blueprints.
 - **2026-04-13** — [EinsteinArena: Harnessing the collective intelligence of agents in the wild to advance science](<../agents/multi-agent/EinsteinArena Harnessing the collective intelligence of agents in the wild to advance science.md>) · `multi-agent` · together
   Explains EinsteinArena for using collective agent intelligence to advance scientific tasks.
-- **2026-04-13** — [How to prepare for AI compliance and governance](<../product-engineering/security/How to prepare for AI compliance and governance.md>) · `security` · braintrust
-  Connects AI compliance and governance to engineering controls such as observability, audit trails, data boundaries, review workflows, and policy enforcement.
 - **2026-03-30** — [Building IaC providers for Logfire: design decisions that mattered](<../infra-platform/deployment/Building IaC providers for Logfire design decisions that mattered.md>) · `deployment` · pydantic
   Design decisions in building Terraform/IaC providers for Logfire so customers manage alerts, dashboards, projects, and tokens as code, including how to model observability resources for declarative provisioning.
-- **2026-03-27** — [Evals are the new PRD](<../product-engineering/architecture/Evals are the new PRD.md>) · `architecture` · braintrust
-  Argues that evals can act as executable product requirements for AI systems, aligning teams around expected behavior and measurable quality.
 - **2026-03-25** — [Full-Stack Agent Observability with AgentSH + Pydantic Logfire | Pydantic](<../product-engineering/security/Full-Stack Agent Observability with AgentSH + Pydantic Logfire Pydantic.md>) · `security` · pydantic
   Pairs LLM-level tracing (model calls, tool invocations) with AgentSH's OS-boundary auditing of what an agent actually did on the machine (file access, network connections, process execution) plus policy enforcement, both emitted as OpenTelemetry into one timeline to catch failures in the 'seams'.
-- **2026-03-17** — [Evals for PMs: A practical guide to AI product quality](<../product-engineering/ux-patterns/Evals for PMs A practical guide to AI product quality.md>) · `ux-patterns` · braintrust
-  Practical guide for product managers defining AI product quality with evals, user-centered criteria, examples, and iteration loops.
 - **2026-03-05** — [When the Call Runs Too Long: Modeling Outcomes for Long Conversations](<../models/reasoning/When the Call Runs Too Long Modeling Outcomes for Long Conversations.md>) · `reasoning` · cresta
   Discusses modeling outcomes for long conversations, including challenges around sequence length and delayed success signals.
 - **2026-02-23** — [How Cresta Scales Data Annotation With a Human-Supervised Multi-Agent System (MAS)](<../agents/multi-agent/How Cresta Scales Data Annotation With a Human-Supervised Multi-Agent System (MAS).md>) · `multi-agent` · cresta
@@ -365,24 +279,6 @@
   Explains fine-tuning open LLM judges to outperform a frontier judge model.
 - **2026-02-02** — [Automated Prompt Optimization with GEPA, Pydantic AI, and Pydantic Evals](<../prompt-engineering/techniques/Automated Prompt Optimization with GEPA, Pydantic AI, and Pydantic Evals.md>) · `techniques` · pydantic
   Walks through automated prompt optimization with GEPA's evolutionary/reflective algorithm driven by Pydantic Evals as the scoring harness, using Agent.override() to inject candidate prompts without modifying agent definitions, turning manual prompt iteration into a systematic search of the prompt space against defined success criteria.
-- **2026-01-22** — [Testing if "bash is all you need"](<../agents/tool-use/Testing if bash is all you need.md>) · `tool-use` · braintrust
-  Tests whether bash-oriented agents can solve realistic tasks, using evals to measure command-line tool use and agent reliability.
-- **2026-01-20** — [Building observable AI agents with Temporal](<../agents/tool-use/Building observable AI agents with Temporal.md>) · `tool-use` · braintrust
-  Shows how Temporal workflows can make AI agents observable, connecting durable execution with traces, evals, and debugging data.
-- **2026-01-01** — [How Dropbox built an evaluation pipeline for AI search](<../rag-retrieval/search/How Dropbox built an evaluation pipeline for AI search.md>) · `search` · braintrust
-  Case study of Dropbox's evaluation pipeline for AI search, focused on measuring retrieval and answer quality for production search experiences.
-- **2026-01-01** — [How Coursera builds next-generation learning tools](<../product-engineering/case-studies/How Coursera builds next-generation learning tools.md>) · `case-studies` · braintrust
-  Customer case study on Coursera's next-generation learning tools and how evaluation workflows support quality for education-focused AI features.
-- **2026-01-01** — [How Fintool generates millions of financial insights](<../product-engineering/case-studies/How Fintool generates millions of financial insights.md>) · `case-studies` · braintrust
-  Case study of Fintool generating financial insights at scale, using evaluation and observability to manage quality in high-volume AI workflows.
-- **2026-01-01** — [How Loom auto-generates video titles](<../product-engineering/case-studies/How Loom auto-generates video titles.md>) · `case-studies` · braintrust
-  Case study of Loom auto-generating video titles and using evals to improve a production AI feature's usefulness and quality.
-- **2026-01-01** — [How Portola empowers subject matter experts to improve AI quality](<../product-engineering/case-studies/How Portola empowers subject matter experts to improve AI quality.md>) · `case-studies` · braintrust
-  Case study of Portola using subject-matter experts to improve AI quality through review workflows, datasets, and eval-driven iteration.
-- **2026-01-01** — [How Retool uses Loop to turn logs into AI roadmap decisions](<../product-engineering/case-studies/How Retool uses Loop to turn logs into AI roadmap decisions.md>) · `case-studies` · braintrust
-  Case study of Retool using production logs and Loop-style review to turn AI usage data into roadmap and quality decisions.
-- **2026-01-01** — [How Zapier builds production-ready AI products](<../product-engineering/case-studies/How Zapier builds production-ready AI products.md>) · `case-studies` · braintrust
-  Case study of Zapier building production-ready AI products with observability, evals, and feedback loops across real customer workflows.
 - **2025-12-19** — [Evaluating AI Voices – What Does It Mean to Sound “Good”?](<../models/multimodal/Evaluating AI Voices – What Does It Mean to Sound “Good”.md>) · `multimodal` · cresta
   Explores how to evaluate AI voice quality beyond subjective preference, including production criteria for speech experiences.
 - **2025-12-17** — [Self-Improving Agents, Powered by Your Evals](<../agents/planning/Self-Improving Agents, Powered by Your Evals.md>) · `planning` · fireworks
@@ -393,16 +289,12 @@
   Case study of reinforcement fine-tuning a deep research agent to improve quality, tool calls, and cost.
 - **2025-10-01** — [Introducing RTEB: A New Standard for Retrieval Evaluation](<../rag-retrieval/embeddings/Introducing RTEB A New Standard for Retrieval Evaluation.md>) · `embeddings` · huggingface
   RTEB is a retrieval benchmark that mixes open and permanently-private held-out datasets, so a model's gap between public and private scores exposes overfitting to MTEB-style public leaderboards. Covers the dataset selection across domains/languages, the private-eval protocol, and evidence that several leaderboard-topping embedding models generalize worse than their public scores suggest.
-- **2025-09-29** — [Claude Sonnet 4.5 analysis](<../models/benchmarks/Claude Sonnet 4.5 analysis.md>) · `benchmarks` · braintrust
-  Analyzes Claude Sonnet 4.5 with aspirational evals, focusing on how harder task suites reveal model strengths and gaps beyond standard benchmarks.
 - **2025-09-17** — [A postmortem of three recent issues](<../inference/serving/A postmortem of three recent issues.md>) · `serving` · anthropic-engineering
   Postmortem of three overlapping serving-stack bugs that silently degraded Claude's output quality, and the detection and rollout changes made in response.
 - **2025-09-08** — [Cresta’s Three Strategic Pillars of AI Agent Defense for Enterprise Security and Compliance](<../product-engineering/security/Cresta’s Three Strategic Pillars of AI Agent Defense for Enterprise Security and Compliance.md>) · `security` · cresta
   Frames AI agent defense around enterprise security, compliance, testing, and operational safeguards.
 - **2025-08-26** — [Building production-ready agentic systems: Lessons from Shopify Sidekick (2025)](<../agents/harness/Building production-ready agentic systems Lessons from Shopify Sidekick (2025).md>) · `harness` · shopify
   ICML 2025 talk on building Shopify Sidekick as a production agentic system: architecture, LLM-based evaluation, and GRPO reinforcement-learning training for a merchant-facing AI assistant.
-- **2025-08-08** — [GPT-5 vs. Claude Opus 4.1](<../models/benchmarks/GPT-5 vs. Claude Opus 4.1.md>) · `benchmarks` · braintrust
-  Compares GPT-5 and Claude Opus 4.1 with eval-driven analysis of strengths, weaknesses, and model-selection implications.
 - **2025-08-06** — [Grounding Reality – How Cresta Tackles LLM Hallucinations in Enterprise AI](<../rag-retrieval/pipelines/Grounding Reality – How Cresta Tackles LLM Hallucinations in Enterprise AI.md>) · `pipelines` · cresta
   Explains grounding strategies for reducing hallucinations in enterprise AI systems, with emphasis on knowledge and evaluation loops.
 - **2025-07-15** — [Building reliable AI agents](<../agents/planning/Building reliable AI agents.md>) · `planning` · baseten
@@ -419,22 +311,16 @@
   Connects transcription performance to broader AI application quality, especially for voice-first systems.
 - **2025-04-08** — [Arabic Leaderboards: Introducing Arabic Instruction Following, Updating AraGen, and More](<../models/benchmarks/Arabic Leaderboards Introducing Arabic Instruction Following, Updating AraGen, and More.md>) · `benchmarks` · huggingface
   Updates the Arabic LLM evaluation stack: the 3C3H generative scoring metric (correctness, completeness, conciseness + helpfulness, honesty, harmlessness) behind AraGen-03-25, plus Arabic IFEval, the first public instruction-following benchmark for Arabic, consolidated in one Arabic-Leaderboards Space with MBZUAI.
-- **2025-03-03** — [Brainstore: the database designed for the AI engineering era](<../infra-platform/deployment/Brainstore the database designed for the AI engineering era.md>) · `deployment` · braintrust
-  Introduces Brainstore as a database for AI engineering workloads, optimized for traces, evals, logs, and large-scale observability queries.
 - **2025-02-04** — [Open-source DeepResearch – Freeing our search agents](<../agents/tool-use/Open-source DeepResearch – Freeing our search agents.md>) · `tool-use` · huggingface
   Open reproduction of OpenAI's Deep Research: a smolagents CodeAgent (Python-action instead of JSON tool calls) with a text web browser and file inspector reaches 55% on GAIA validation vs OpenAI's ~67%, with analysis of where browser interaction is the bottleneck.
 - **2025-01-28** — [How Cresta Scales Real-Time Insights with ClickHouse](<../infra-platform/deployment/How Cresta Scales Real-Time Insights with ClickHouse.md>) · `deployment` · cresta
   Architecture case study on scaling real-time AI insights with ClickHouse for high-volume conversation analytics.
 - **2025-01-27** — [Beyond Supervised Fine Tuning: How Reinforcement Learning Empowers AI with Minimal Labels](<../models/reinforcement-learning/Beyond Supervised Fine Tuning How Reinforcement Learning Empowers AI with Minimal Labels.md>) · `reinforcement-learning` · fireworks
   Explains reinforcement learning with verifiable rewards as a way to improve models with minimal labels.
-- **2025-01-22** — [Evaluating agents](<../agents/planning/Evaluating agents.md>) · `planning` · braintrust
-  Detailed guide to evaluating agents, including task design, tool-use traces, intermediate-step analysis, and failure modes unique to multi-step systems.
 - **2025-01-16** — [Common pitfalls when building generative AI applications](<../product-engineering/architecture/Common pitfalls when building generative AI applications.md>) · `architecture` · chip-huyen
   Covers common generative-AI application pitfalls, including overusing LLMs, confusing product problems with model failures, premature framework complexity, and weak evaluation/product iteration.
 - **2025-01-07** — [Agents](<../agents/planning/Agents.md>) · `planning` · chip-huyen
   Framework for foundation-model agents covering environments, tools, planning, action selection, failure modes, and evaluation for multi-step agentic applications.
-- **2024-11-14** — [Evaluating Gemini models for vision](<../models/multimodal/Evaluating Gemini models for vision.md>) · `multimodal` · braintrust
-  Evaluates Gemini vision models and shows how multimodal evals can compare image-understanding behavior across model versions.
 - **2024-10-22** — [Evaluating NVIDIA H200 Tensor Core GPUs for LLM inference](<../inference/hardware/Evaluating NVIDIA H200 Tensor Core GPUs for LLM inference.md>) · `hardware` · baseten
   Evaluates NVIDIA H200 GPUs for LLM inference and compares their serving performance characteristics.
 - **2024-10-01** — [🇨🇿 BenCzechMark - Can your LLM Understand Czech?](<../models/benchmarks/🇨🇿 BenCzechMark - Can your LLM Understand Czech.md>) · `benchmarks` · huggingface
@@ -445,8 +331,6 @@
   How a Transformers CodeAgent (LLM writes Python actions rather than JSON) topped the GAIA agent benchmark: multi-agent web-browser delegation, tool design, and error analysis of GAIA failure modes.
 - **2024-05-29** — [Benchmarking Text Generation Inference](<../inference/serving/Benchmarking Text Generation Inference.md>) · `serving` · huggingface
   How to use the TGI benchmarking tool to profile LLM serving: separating prefill from decode, reading latency vs throughput curves under different batch sizes, and choosing the batch size that meets your latency SLO.
-- **2024-05-06** — [AI development loops](<../product-engineering/architecture/AI development loops.md>) · `architecture` · braintrust
-  Describes AI development loops where logs, evals, human review, and product iteration form the core workflow for improving AI applications.
 - **2024-05-05** — [Introducing the Open Leaderboard for Hebrew LLMs!](<../models/benchmarks/Introducing the Open Leaderboard for Hebrew LLMs!.md>) · `benchmarks` · huggingface
   An open leaderboard for Hebrew LLMs, motivated by Hebrew's root-and-pattern morphology breaking tokenization strategies designed for simpler languages; it evaluates on Hebrew-native tasks (Q&A, sentiment, winograd, translation) rather than translated English benchmarks.
 - **2024-05-03** — [Bringing the Artificial Analysis LLM Performance Leaderboard to Hugging Face](<../inference/serving/Bringing the Artificial Analysis LLM Performance Leaderboard to Hugging Face.md>) · `serving` · huggingface
@@ -461,8 +345,6 @@
   Explains the ReAct loop mechanics (thought/action/observation, stopping, error handling) and builds such agents with LangChain's ChatHuggingFace, then benchmarks open LLMs on a custom agent evaluation set against GPT-3.5/GPT-4. Mixtral-8x7B comes out ahead of GPT-3.5 on the agentic tasks; also covers the JSON-parsing failure modes that dominate agent errors.
 - **2024-01-18** — [Preference Tuning LLMs with Direct Preference Optimization Methods](<../models/fine-tuning/Preference Tuning LLMs with Direct Preference Optimization Methods.md>) · `fine-tuning` · huggingface
   Empirical head-to-head of DPO vs IPO vs KTO in TRL on two SFT'd 7B models (Zephyr and OpenHermes), sweeping the beta hyperparameter and scoring on MT-Bench; finds DPO/IPO roughly on par and beating KTO in the paired-preference setting, with beta mattering more than algorithm choice. Includes an errata where a summed-vs-averaged log-likelihood bug in TRL's IPO loss changed the results.
-- **2023-11-13** — [The AI product development journey](<../product-engineering/architecture/The AI product development journey.md>) · `architecture` · braintrust
-  Frames the AI product development journey around iterative prototyping, evaluation, logging, feedback, and production-quality improvement loops.
 - **2023-11-03** — [LLM Inference Performance Benchmarking (Part 1)](<../inference/serving/LLM Inference Performance Benchmarking (Part 1).md>) · `serving` · fireworks
   Introduces LLM inference performance benchmarking and the metrics needed to compare serving systems.
 - **2023-08-16** — [Open challenges in LLM research](<../models/reasoning/Open challenges in LLM research.md>) · `reasoning` · chip-huyen

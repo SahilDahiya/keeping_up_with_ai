@@ -1,6 +1,6 @@
 # infra-platform
 
-59 articles.
+55 articles.
 
 - **2026-07-21** — [Devin Outposts on Modal | Modal Blog](<deployment/Devin Outposts on Modal Modal Blog.md>) · `deployment` · modal
   Modal's open-source modal-devin library lets Cognition's Devin coding agent execute in user-controlled Modal Sandboxes (GPU-backed, custom images, snapshot suspend/resume) while its reasoning stays in Cognition's cloud, splitting the agent's control-plane queue from a self-hosted data-plane orchestrator and worker.
@@ -16,8 +16,6 @@
   Temporary Cloudflare Accounts let agents run 'wrangler deploy --temporary' to ship a Worker with zero signup — a 60-minute claimable account with auto-provisioned API token — with Wrangler itself prompting agents about the flag, removing human-built OAuth/dashboard friction from the deploy loop.
 - **2026-06-19** — [Unpacking sandbox startup latency: why started is not ready](<deployment/Unpacking sandbox startup latency why started is not ready.md>) · `deployment` · modal
   Breaks down sandbox startup latency and why ready-state semantics matter for agent and remote-execution workflows.
-- **2026-06-17** — [How to test agent cost-efficiency with Braintrust](<cost/How to test agent cost-efficiency with Braintrust.md>) · `cost` · braintrust
-  Explains how to test agent cost-efficiency by measuring task success against token, model, and tool-use costs.
 - **2026-06-17** — [Bringing more agent harnesses and frameworks to Cloudflare, starting with Flue](<deployment/Bringing more agent harnesses and frameworks to Cloudflare, starting with Flue.md>) · `deployment` · cloudflare-ai
   Describes a three-layer production agent stack — framework (Flue, from the Astro team, built on the Pi harness), harness (Project Think, Pi), and runtime (Cloudflare Agents SDK) — with durable execution, dynamic code execution, and a durable filesystem exposed to any harness.
 - **2026-06-12** — [Rolling deployments for zero-downtime model updates](<deployment/Rolling deployments for zero-downtime model updates.md>) · `deployment` · baseten
@@ -68,8 +66,6 @@
   Shows how linear programming can allocate compute resources under constraints, useful for GPU scheduling and cost control.
 - **2025-03-07** — [LLM Inference on Edge: A Fun and Easy Guide to run LLMs via React Native on your Phone!](<edge/LLM Inference on Edge A Fun and Easy Guide to run LLMs via React Native on your Phone!.md>) · `edge` · huggingface
   End-to-end guide to building a React Native chat app that runs LLMs fully on-device via llama.rn/llama.cpp, covering how to pick mobile-viable models, what the GGUF quantization suffixes (Q2_K, Q4_K_M, Q8_0) actually trade off in size vs quality, and the Expo/native build plumbing.
-- **2025-03-03** — [Brainstore: the database designed for the AI engineering era](<deployment/Brainstore the database designed for the AI engineering era.md>) · `deployment` · braintrust
-  Introduces Brainstore as a database for AI engineering workloads, optimized for traces, evals, logs, and large-scale observability queries.
 - **2025-02-25** — [Understanding Cresta’s Voice Platform - Handling Incoming Traffic with Customer-Specific Subdomains](<deployment/Understanding Cresta’s Voice Platform - Handling Incoming Traffic with Customer-Specific Subdomains.md>) · `deployment` · cresta
   Architecture note on routing incoming voice traffic with customer-specific subdomains in a production voice platform.
 - **2025-02-13** — [1 Billion Classifications](<cost/1 Billion Classifications.md>) · `cost` · huggingface
@@ -100,10 +96,6 @@
   Covers CI/CD practices for AI model deployments, including versioning, release flow, and operational safety.
 - **2024-03-14** — [Lambda on hard mode: Inside Modal's web infrastructure](<deployment/Lambda on hard mode Inside Modal's web infrastructure.md>) · `deployment` · modal
   Deep dive into Modal web infrastructure, including serverless HTTP routing, isolation, and platform architecture.
-- **2023-11-27** — [Open sourcing the AI proxy](<deployment/Open sourcing the AI proxy.md>) · `deployment` · braintrust
-  Open-source AI proxy notes focused on provider routing, logging, credentials, access control, and observability for model calls.
-- **2023-11-20** — [AI proxy: fostering a more open ecosystem](<deployment/AI proxy fostering a more open ecosystem.md>) · `deployment` · braintrust
-  Introduces an AI proxy pattern for routing model calls across providers while centralizing logging, credentials, access control, and production visibility.
 - **2023-02-17** — [Technical deep dive: Truss live reload](<deployment/Technical deep dive Truss live reload.md>) · `deployment` · baseten
   Technical deep dive into Truss live reload and faster model-server development loops.
 - **2023-01-08** — [Self-serve feature platforms: architectures and APIs](<deployment/Self-serve feature platforms architectures and APIs.md>) · `deployment` · chip-huyen
@@ -155,16 +147,10 @@
   Announces the Monetization Gateway: charge agents for any Cloudflare-protected resource (pages, datasets, APIs, MCP tools) with payment verification enforced at the edge, settling sub-cent stablecoin micropayments over the x402 protocol now stewarded by a 25+ member Linux Foundation x402 Foundation.
 - **2026-06-30** — [What’s new in Claude Sonnet 5](<../models/releases/What’s new in Claude Sonnet 5.md>) · `releases` · simon-willison
   Developer-focused notes on Claude Sonnet 5 covering adaptive thinking defaults, removed sampling parameters, million-token context, pricing/tokenizer changes, and comparative tokenization cost across document types.
-- **2026-06-30** — [Using OSS models to save on inference costs without cutting quality](<../inference/serving/Using OSS models to save on inference costs without cutting quality.md>) · `serving` · braintrust
-  Explains using open-source models to reduce inference cost without sacrificing quality, emphasizing eval-driven model selection and serving tradeoffs.
 - **2026-06-25** — [Proxying inference requests in 6ms with Pingora, Envoy, and Spanner](<../inference/serving/Proxying inference requests in 6ms with Pingora, Envoy, and Spanner.md>) · `serving` · modal
   Explains low-latency inference proxying with Pingora, Envoy, and Spanner, including request-routing architecture.
 - **2026-06-22** — [Introducing Modal Auto Endpoints: Optimized inference you actually own](<../inference/serving/Introducing Modal Auto Endpoints Optimized inference you actually own.md>) · `serving` · modal
   Describes auto endpoints for owned inference deployments, including optimized serving configuration and operational control.
-- **2026-06-16** — [How to use Braintrust with any framework or provider](<../evals-observability/tracing/How to use Braintrust with any framework or provider.md>) · `tracing` · braintrust
-  Integration guide for capturing Braintrust traces and evals across different AI frameworks and model providers without locking the application stack to one SDK.
-- **2026-06-04** — [How we made continuous trace intelligence possible at scale](<../evals-observability/tracing/How we made continuous trace intelligence possible at scale.md>) · `tracing` · braintrust
-  Architecture deep dive on continuous trace intelligence at scale, including how production traces are clustered and surfaced for analysis.
 - **2026-05-28** — [Reinforcement learning is an infrastructure problem](<../models/reinforcement-learning/Reinforcement learning is an infrastructure problem.md>) · `reinforcement-learning` · modal
   Argues that reinforcement learning progress depends heavily on infrastructure for scheduling, iteration, and scalable experiments.
 - **2026-05-27** — [Shipping a Trillion Parameters With a Hub Bucket: Delta Weight Sync in TRL](<../models/reinforcement-learning/Shipping a Trillion Parameters With a Hub Bucket Delta Weight Sync in TRL.md>) · `reinforcement-learning` · huggingface
@@ -199,8 +185,6 @@
   Guide to running OpenAI Agents SDK workflows on Modal, including tool execution, deployment, and scalable background compute.
 - **2026-04-08** — [Scaling Managed Agents: Decoupling the brain from the hands](<../product-engineering/architecture/Scaling Managed Agents Decoupling the brain from the hands.md>) · `architecture` · anthropic-engineering
   Architecture of Claude Managed Agents: decoupling the agent loop (the brain) from sandboxed tool execution (the hands) to scale hosted long-running sessions.
-- **2026-04-06** — [How Brainstore works: architecture for AI observability at scale](<../evals-observability/monitoring/How Brainstore works architecture for AI observability at scale.md>) · `monitoring` · braintrust
-  Deep dive into Brainstore's architecture for AI observability at scale, covering storage, indexing, query patterns, and trace/log workloads.
 - **2026-04-02** — [Welcome Gemma 4: Frontier multimodal intelligence on device](<../models/releases/Welcome Gemma 4 Frontier multimodal intelligence on device.md>) · `releases` · huggingface
   Gemma 4 (Apache 2.0, up to 256K context) mixes alternating local sliding-window and global attention layers, dual RoPE configs, MoE (26B total / 4B active, LMArena ~1441) alongside a 31B dense model at ~1452, plus a USM-style conformer audio encoder and a variable-aspect-ratio image encoder with configurable image-token budget.
 - **2026-03-31** — [Baseten Training: an autoresearch substrate](<../models/fine-tuning/Baseten Training an autoresearch substrate.md>) · `fine-tuning` · baseten
@@ -211,8 +195,6 @@
   Explains why fine-tuning bottlenecks often come from data, evaluation, orchestration, and serving rather than algorithms alone.
 - **2026-03-23** — [Frontier RL Is Cheaper Than You Think](<../models/reinforcement-learning/Frontier RL Is Cheaper Than You Think.md>) · `reinforcement-learning` · fireworks
   Argues that frontier reinforcement learning can be cost-effective with the right infrastructure and training-loop design.
-- **2026-03-12** — [Supporting privacy and compliance for EU teams](<../product-engineering/security/Supporting privacy and compliance for EU teams.md>) · `security` · braintrust
-  Covers privacy and compliance requirements for EU AI teams, including data residency, controls, and deployment choices for observability data.
 - **2026-03-10** — [Keep the Tokens Flowing: Lessons from 16 Open-Source RL Libraries](<../models/reinforcement-learning/Keep the Tokens Flowing Lessons from 16 Open-Source RL Libraries.md>) · `reinforcement-learning` · huggingface
   Surveys 16 open-source async RL libraries across 7 axes (orchestration, rollout buffers, weight-sync protocols, staleness handling, partial rollouts, LoRA, distributed backends); the shared pattern is disaggregating inference and training GPU pools so neither idles, with Ray dominating orchestration (8/16) and NCCL broadcast the default weight transfer.
 - **2026-03-09** — [Ulysses Sequence Parallelism: Training with Million-Token Contexts](<../models/training/Ulysses Sequence Parallelism Training with Million-Token Contexts.md>) · `training` · huggingface
@@ -255,8 +237,6 @@
   In TRL's GRPO setup, running vLLM in server mode leaves generation and training GPUs idling in turn; co-locating vLLM in the same process/GPUs as the trainer (sharing memory via a gpu_memory_utilization split and sleep/wake between phases) removes the idle gap, with throughput and GPU-utilization numbers across model sizes and TP configs.
 - **2025-05-13** — [Blazingly fast whisper transcriptions with Inference Endpoints](<../inference/optimization/Blazingly fast whisper transcriptions with Inference Endpoints.md>) · `optimization` · huggingface
   An optimized Whisper deployment on Inference Endpoints built on vLLM, targeting Ada Lovelace GPUs (L4/L40s) to unlock torch.compile JIT kernels, CUDA graphs and a float8 KV cache — with the resulting latency/throughput gains for transcription workloads.
-- **2025-04-03** — [Resilient observability by design](<../evals-observability/monitoring/Resilient observability by design.md>) · `monitoring` · braintrust
-  Describes resilient observability design for AI systems, including reliability considerations for storing, querying, and using production traces.
 - **2025-03-20** — [Build vs. Buy: How Cresta Engineered Its Own Customer Data Access Solution](<../product-engineering/architecture/Build vs. Buy How Cresta Engineered Its Own Customer Data Access Solution.md>) · `architecture` · cresta
   Engineering case study on building a customer data access layer, useful for understanding integration tradeoffs in enterprise AI products.
 - **2025-03-04** — [Understanding Cresta’s Voice Platform - The Voice Stack](<../models/multimodal/Understanding Cresta’s Voice Platform - The Voice Stack.md>) · `multimodal` · cresta

@@ -81,13 +81,9 @@ sources:
     include_prefixes: ["/blog/"]
     tags: [infra, serverless]
 
-  - slug: braintrust
-    name: Braintrust Blog
-    home: https://www.braintrust.dev/blog
-    sitemap: https://www.braintrust.dev/sitemap.xml
-    discovery: [sitemap]
-    include_prefixes: ["/blog/"]
-    tags: [evals]
+  # Braintrust Blog removed 2026-07-27 (user-directed): eval-vendor blog; whole
+  # source dropped and all 71 filed articles purged despite substantial eval
+  # methodology content. Same source-removal pattern as Arize/Langfuse/LangChain.
 
   # Langfuse Blog removed 2026-07-27 (user-directed): observability-vendor blog,
   # mostly own-product / eval-methodology marketing; whole source dropped and all

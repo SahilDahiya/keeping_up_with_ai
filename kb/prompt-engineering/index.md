@@ -79,8 +79,6 @@
   Covers common generative-AI application pitfalls, including overusing LLMs, confusing product problems with model failures, premature framework complexity, and weak evaluation/product iteration.
 - **2024-11-25** — [Long Context Fine-Tuning: A Technical Deep Dive](<../models/fine-tuning/Long Context Fine-Tuning A Technical Deep Dive.md>) · `fine-tuning` · together
   Technical deep dive into long-context fine-tuning.
-- **2024-10-08** — [Functions: flexible AI engineering primitives](<../agents/tool-use/Functions flexible AI engineering primitives.md>) · `tool-use` · braintrust
-  Introduces functions as flexible AI engineering primitives for tool calling, structured behavior, and reusable evaluation or workflow components.
 - **2024-09-05** — [Speculative decoding for high-throughput long-context inference](<../inference/speculative-decoding/Speculative decoding for high-throughput long-context inference.md>) · `speculative-decoding` · together
   Explains speculative decoding for high-throughput long-context inference.
 - **2024-08-29** — [Build Your Own Flight Recommendation System using FastAPI, SerpAPI, and Firefunction](<../agents/tool-use/Build Your Own Flight Recommendation System using FastAPI, SerpAPI, and Firefunction.md>) · `tool-use` · fireworks

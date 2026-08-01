@@ -1,6 +1,6 @@
 # models
 
-184 articles.
+176 articles.
 
 - **2026-07-31** — [Fine-tuning Qwen3-TTS for high-quality voice cloning](<fine-tuning/Fine-tuning Qwen3-TTS for high-quality voice cloning.md>) · `fine-tuning` · baseten
   Baseten details a fine-tuning recipe for Qwen3-TTS voice cloning: an ASR-driven pipeline for building utterance-level (audio, text) pairs, talker/sub-talker cross-entropy loss over 12 RVQ codebook frames/sec, a centroid speaker embedding averaged over 64 clips, and warmup+cosine LR decay, trained in ~1 hour on a single H100 for 8 epochs on 1.5 hours of LJ Speech audio, reaching ~130ms TTFA (vs ~154ms for ICL cloning).
@@ -28,14 +28,8 @@
   Simon Willison reviews Moonshot AI's Kimi K3 (2.8T parameters, open weights promised July 27, 2026), covering its Artificial Analysis benchmark standing (Elo 1547, +732 over K2.6), its $3/$15 per-million-token pricing, and revisits his informal 'pelican riding a bicycle' SVG test as an ad hoc capability check.
 - **2026-07-15** — [Together AI brings Thinking Machines Lab’s new model Inkling on day 0](<architectures/Together AI brings Thinking Machines Lab’s new model Inkling on day 0.md>) · `architectures` · together
   Details Inkling's architecture (975B/40B active MoE with a shared expert sink jointly normalized against routed experts, a learned query-conditioned relative attention bias instead of RoPE, and 'sconv' short causal convolutions on K/V and sublayer outputs) and Together's FlashAttention-4-based kernel adapted to serve its query-conditioned relative attention efficiently.
-- **2026-07-10** — [Evaluating the GPT-5.6 family](<benchmarks/Evaluating the GPT-5.6 family.md>) · `benchmarks` · braintrust
-  Evaluates the GPT-5.6 model family and presents a decision map for choosing models based on quality, cost, and task requirements.
-- **2026-07-09** — [Evaluating speech-to-text models](<multimodal/Evaluating speech-to-text models.md>) · `multimodal` · braintrust
-  Evaluates speech-to-text models for voice AI workflows, covering datasets, scoring, and tradeoffs in transcription quality.
 - **2026-07-09** — [The new GPT-5.6 family: Luna, Terra, Sol](<releases/The new GPT-5.6 family Luna, Terra, Sol.md>) · `releases` · simon-willison
   Notes on the GPT-5.6 Luna, Terra, and Sol release, including pricing, million-token context, agentic benchmark claims, SWE-Bench Pro caveats, programmatic tool calling, subagents, and prompt-cache breakpoints.
-- **2026-06-30** — [GLM-5.2 vs. Opus 4.8 technical report](<benchmarks/GLM-5.2 vs. Opus 4.8 technical report.md>) · `benchmarks` · braintrust
-  Technical report comparing GLM-5.2 and Opus 4.8, including benchmark methodology, long-context retrieval behavior, and model-performance tradeoffs.
 - **2026-06-30** — [What’s new in Claude Sonnet 5](<releases/What’s new in Claude Sonnet 5.md>) · `releases` · simon-willison
   Developer-focused notes on Claude Sonnet 5 covering adaptive thinking defaults, removed sampling parameters, million-token context, pricing/tokenizer changes, and comparative tokenization cost across document types.
 - **2026-06-25** — [Live draft model training for speculative decoding](<fine-tuning/Live draft model training for speculative decoding.md>) · `fine-tuning` · baseten
@@ -132,8 +126,6 @@
   Explains DeepSeek-OCR and why compression can be useful for multimodal model workflows.
 - **2025-10-06** — [LLM Fine-Tuning: Deep Dive & Best Practices](<fine-tuning/LLM Fine-Tuning Deep Dive & Best Practices.md>) · `fine-tuning` · fireworks
   Deep dive into LLM fine-tuning best practices, including data preparation, training strategy, and deployment concerns.
-- **2025-09-29** — [Claude Sonnet 4.5 analysis](<benchmarks/Claude Sonnet 4.5 analysis.md>) · `benchmarks` · braintrust
-  Analyzes Claude Sonnet 4.5 with aspirational evals, focusing on how harder task suites reveal model strengths and gaps beyond standard benchmarks.
 - **2025-09-12** — [Developer notes on the Realtime API | OpenAI Developers](<releases/Developer notes on the Realtime API OpenAI Developers.md>) · `releases` · openai-devs
   Developer notes on the Realtime API GA and the gpt-realtime speech-to-speech model: beta-to-GA interface migration, new marin/cedar voices, and advice to rewrite prompts because instruction-following improved enough that literal instructions are now honored.
 - **2025-09-09** — [mmBERT: ModernBERT goes Multilingual](<training/mmBERT ModernBERT goes Multilingual.md>) · `training` · huggingface
@@ -144,8 +136,6 @@
   Case study fine-tuning small open-source LLMs to beat larger closed models on specialized tasks.
 - **2025-08-15** — [Fine-tuning small open-source LLMs to outperform large closed-source models by 60% on specialized tasks](<fine-tuning/Fine-tuning small open-source LLMs to outperform large closed-source models by 60% on specialized tasks.md>) · `fine-tuning` · baseten
   Case study on fine-tuning small open-source LLMs to beat larger closed models on specialized tasks.
-- **2025-08-08** — [GPT-5 vs. Claude Opus 4.1](<benchmarks/GPT-5 vs. Claude Opus 4.1.md>) · `benchmarks` · braintrust
-  Compares GPT-5 and Claude Opus 4.1 with eval-driven analysis of strengths, weaknesses, and model-selection implications.
 - **2025-08-08** — [Accelerate ND-Parallel: A guide to Efficient Multi-GPU Training](<training/Accelerate ND-Parallel A guide to Efficient Multi-GPU Training.md>) · `training` · huggingface
   Guide to combining FSDP/HSDP with tensor, context and pipeline parallelism (ND parallelism) in HF Accelerate, with config examples for Llama-3.1-8B and guidance on when each axis pays off.
 - **2025-08-01** — [Kimi K2: Architecture, Capabilities & Benchmarks](<reasoning/Kimi K2 Architecture, Capabilities & Benchmarks.md>) · `reasoning` · fireworks
@@ -164,8 +154,6 @@
   Ettin is the first suite of paired encoder-only and decoder-only models (17M-1B params) trained on identical data (2T tokens), architecture and recipe, giving a true apples-to-apples MLM vs causal-LM comparison. The open ModernBERT-style recipe beats ModernBERT on encoder tasks and beats Llama 3.2 1B and SmolLM2 on decoder tasks; also tests cross-objective continued training.
 - **2025-07-15** — [MuonClip and Kimi K2 training stability](<reasoning/MuonClip and Kimi K2 training stability.md>) · `reasoning` · fireworks
   Explains MuonClip as a stability technique for large-scale Kimi-style model training.
-- **2025-07-11** — [Building with Grok 4](<releases/Building with Grok 4.md>) · `releases` · braintrust
-  Notes on building with Grok 4, including model behavior, practical integration considerations, and evaluation needs for new model adoption.
 - **2025-07-08** — [Efficient MultiModal Data Pipeline](<training/Efficient MultiModal Data Pipeline.md>) · `training` · huggingface
   Rebuilds nanoVLM's multimodal data pipeline in five stages to stop GPUs idling on padding: from naive padding to constrained batching and sequence packing with knapsack-style grouping, showing the padding-token waste eliminated at each step.
 - **2025-07-08** — [SmolLM3: smol, multilingual, long-context reasoner](<training/SmolLM3 smol, multilingual, long-context reasoner.md>) · `training` · huggingface
@@ -240,10 +228,6 @@
   Technical deep dive into fine-tuning LLMs for multi-turn conversations.
 - **2024-11-25** — [Long Context Fine-Tuning: A Technical Deep Dive](<fine-tuning/Long Context Fine-Tuning A Technical Deep Dive.md>) · `fine-tuning` · together
   Technical deep dive into long-context fine-tuning.
-- **2024-11-14** — [Evaluating Gemini models for vision](<multimodal/Evaluating Gemini models for vision.md>) · `multimodal` · braintrust
-  Evaluates Gemini vision models and shows how multimodal evals can compare image-understanding behavior across model versions.
-- **2024-11-04** — [Building serverless apps with the OpenAI Realtime API](<multimodal/Building serverless apps with the OpenAI Realtime API.md>) · `multimodal` · braintrust
-  Guide to building serverless apps with the OpenAI Realtime API, focusing on real-time voice interaction architecture and deployment patterns.
 - **2024-10-14** — [Linearizing LLMs with LoLCATs](<reasoning/Linearizing LLMs with LoLCATs.md>) · `reasoning` · together
   Explains LoLCATs for linearizing LLM attention while preserving useful behavior.
 - **2024-10-01** — [🇨🇿 BenCzechMark - Can your LLM Understand Czech?](<benchmarks/🇨🇿 BenCzechMark - Can your LLM Understand Czech.md>) · `benchmarks` · huggingface
@@ -389,8 +373,6 @@
   Hume AI's Real World VoiceEQ benchmark evaluates 40+ voice models across ASR, TTS, speech-to-speech, and speech understanding using 1M+ human ratings (785K TTS, 48K STS), finding no single model tops all 8 TTS capability groups and that speech-language-model judges disagree with human raters on subjective calls like emotional fit or identity consistency.
 - **2026-06-30** — [Multi-token Residual Prediction](<../inference/speculative-decoding/Multi-token Residual Prediction.md>) · `speculative-decoding` · modal
   Explains multi-token residual prediction as an inference acceleration technique for generating multiple tokens per step.
-- **2026-06-30** — [Benchmarking GLM-5.2 vs Opus 4.8 for real-world long-context retrieval](<../rag-retrieval/search/Benchmarking GLM-5.2 vs Opus 4.8 for real-world long-context retrieval.md>) · `search` · braintrust
-  Benchmarks GLM-5.2 against Opus 4.8 on real-world long-context retrieval, focusing on retrieval quality under large-context conditions.
 - **2026-06-24** — [Frontier AI at a fraction of the cost: open-source worker agents with a closed-source advisor.](<../agents/multi-agent/Frontier AI at a fraction of the cost open-source worker agents with a closed-source advisor.md>) · `multi-agent` · fireworks
   Explains a worker-advisor pattern that combines open-source worker agents with closed-source advisors for cost-quality tradeoffs.
 - **2026-06-24** — [Introducing the FFASR Leaderboard: Benchmarking ASR in the Real World](<../evals-observability/benchmark-design/Introducing the FFASR Leaderboard Benchmarking ASR in the Real World.md>) · `benchmark-design` · huggingface
@@ -469,8 +451,6 @@
   Stress test of long-horizon agentic coding: GPT-5.3-Codex at Extra High reasoning ran ~25 hours uninterrupted, consuming ~13M tokens and generating ~30k lines to build a design tool from a blank repo, framed by METR's ~7-month doubling time for agent task horizons.
 - **2026-02-19** — [Consistency diffusion language models: Up to 14x faster inference without sacrificing quality](<../inference/optimization/Consistency diffusion language models Up to 14x faster inference without sacrificing quality.md>) · `optimization` · together
   Explains consistency diffusion language models for faster inference without large quality loss.
-- **2026-02-12** — [The 5 pillars of AI model performance](<../evals-observability/benchmark-design/The 5 pillars of AI model performance.md>) · `benchmark-design` · braintrust
-  Defines five pillars of AI model performance and how to measure quality beyond a single aggregate benchmark score.
 - **2026-02-11** — [How we built the fastest Kimi K2.5 on Artificial Analysis](<../inference/optimization/How we built the fastest Kimi K2.5 on Artificial Analysis.md>) · `optimization` · baseten
   Explains optimizations behind fast Kimi K2.5 serving on Artificial Analysis.
 - **2026-02-06** — [What do LLMs think when you don't tell them what to think about?](<../evals-observability/evaluation/What do LLMs think when you don't tell them what to think about.md>) · `evaluation` · together
@@ -559,8 +539,6 @@
   Introduces speculative decoding and the draft-target model pattern for lower LLM inference latency.
 - **2024-12-04** — [Rethinking LLM Evaluation with 3C3H: AraGen Benchmark and Leaderboard](<../evals-observability/benchmark-design/Rethinking LLM Evaluation with 3C3H AraGen Benchmark and Leaderboard.md>) · `benchmark-design` · huggingface
   AraGen's 3C3H measure scores an LLM response on Correctness, Completeness, Conciseness, Helpfulness, Honesty and Harmlessness via LLM-as-judge, combining them into one metric; the leaderboard also rotates a private Arabic eval set to resist contamination.
-- **2024-12-04** — [What to do when a new AI model comes out](<../evals-observability/evaluation/What to do when a new AI model comes out.md>) · `evaluation` · braintrust
-  Playbook for responding when a new AI model ships: run targeted evals, compare cost and quality, inspect regressions, and decide rollout strategy.
 - **2024-12-03** — [Investing in Performance: Fine-tune small models with LLM insights - a CFM case study](<../product-engineering/case-studies/Investing in Performance Fine-tune small models with LLM insights - a CFM case study.md>) · `case-studies` · huggingface
   CFM (quant hedge fund) case study: use an LLM to label financial NER data, distill that into a compact fine-tuned model, and deploy it on Inference Endpoints — with an F1 and $/hour table showing the fine-tuned small model beating zero-shot LLM accuracy at a fraction of the inference cost.
 - **2024-11-20** — [Faster Text Generation with Self-Speculative Decoding](<../inference/speculative-decoding/Faster Text Generation with Self-Speculative Decoding.md>) · `speculative-decoding` · huggingface

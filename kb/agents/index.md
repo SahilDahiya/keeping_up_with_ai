@@ -1,6 +1,6 @@
 # agents
 
-115 articles.
+105 articles.
 
 - **2026-07-31** — [When agents improve agents: loops that improve themselves](<harness/When agents improve agents loops that improve themselves.md>) · `harness` · pydantic
   Third in Pydantic's harness series: proposes moving the 'keep going or stop' decision inside the agent loop (via retry-verdict guardrails and Macroscope self-review), backing it with BM25 conversation search and persistent memory over prior runs, and closing the loop with a self-grading judge — but warns that LLM judges suffer position/self-preference bias and must be calibrated against a human, graded per-dimension, and version-tracked (ties into Pydantic Logfire's managed prompts, online evals, and GEPA prompt optimization).
@@ -24,8 +24,6 @@
   Walks through building a research agent with Pydantic AI Harness's Exa capabilities: native WebSearch for shallow lookups, the hosted ExaAgent for full plan-search-synthesize research runs with citations and multi-turn context via previous_run_id, and lower-level ExaSearch tools (web_search/get_page) for custom source allowlists or citation bars.
 - **2026-07-20** — [Harness Week: Pydantic AI Harness, the capability library for agents](<harness/Harness Week Pydantic AI Harness, the capability library for agents.md>) · `harness` · pydantic
   Introduces Pydantic AI Harness, an official capability library of ~40 pluggable agent capabilities (file/shell access with path-traversal checks, memory, sub-agent delegation, context compaction, CodeMode's code-execution sandbox) that plug in without framework changes, plus community packages like pydantic-ai-shields, which layers a heuristic PromptInjection filter with a deterministic ToolGuard approval gate on sensitive tool calls.
-- **2026-07-20** — [Paper MCP vs Figma MCP for frontend agents - Blog - Braintrust](<tool-use/Paper MCP vs Figma MCP for frontend agents - Blog - Braintrust.md>) · `tool-use` · braintrust
-  Independent eval of Paper MCP vs Figma MCP for coding-agent frontend generation across 40 Design2Code pages and 27 hand-picked complex designs: the two tie on visual similarity (0.741 vs 0.744 on simple pages), but Figma's run-to-run variance is 1.9x Paper's and it costs 32% more per point of visual quality ($3.73 vs $2.82) while running 42% longer.
 - **2026-07-15** — [Pinecone: Harnessing the wisdom of the workforce](<harness/Pinecone Harnessing the wisdom of the workforce.md>) · `harness` · sierra
   Describes Sierra's internal cloud-agent platform Pinecone: an app server plus 'Agency' control plane that reconciles Kubernetes pods and Redis Streams for durable, resumable sessions, a Go runner supervising Codex/Claude Code, network-proxy credential injection so the agent never sees real tokens, and copy-on-write session forking/branching for multiplayer collaboration.
 - **2026-07-15** — [xai-org/grok-build, now open source](<harness/xai-orggrok-build, now open source.md>) · `harness` · simon-willison
@@ -36,16 +34,12 @@
   Empirical study of how CLI coding agents fail as a *process* rather than an outcome: 3,843 trajectories from 7 frontier models across 3 scaffolds (OpenHands, MiniSWE, Terminus2) on Terminal-Bench, with 1,794 valid ones hand-annotated over 63,000 execution steps. Finds failures are driven mainly by epistemic errors, begin within the first few steps, and stay hidden until recovery is impossible — arguing for early validation and intervention instead of final-outcome evaluation.
 - **2026-07-07** — **[Paper]** [Beyond the Leaderboard: A Synthesis of Tool-Use, Planning, and Reasoning Failures in Large Language Model Agents](<planning/[Paper] Beyond the Leaderboard A Synthesis of Tool-Use, Planning, and Reasoning Failures in Large Language Model Agents.md>) · `planning` · arxiv
   Synthesizes 27 benchmark, taxonomy, and audit papers (2023-2026) across 19 benchmarks into a unified taxonomy of LLM-agent failure, with six clusters: tool-invocation/parameter errors, planning and constraint-satisfaction failures, long-horizon degradation from context accumulation, multi-agent coordination breakdown, safety failures under adversarial or underspecified conditions, and measurement-validity problems. Finds failures compound nonlinearly with task length, strong sub-task scores do not predict end-to-end success, and extra scaffolding does not reliably improve reliability.
-- **2026-07-06** — [Evaluating the USA vs Belgium World Cup matchup](<tool-use/Evaluating the USA vs Belgium World Cup matchup.md>) · `tool-use` · braintrust
-  Uses a USA vs Belgium matchup example to evaluate web research agents, illustrating task design and judging for tool-using research workflows.
 - **2026-07-05** — [sqlite-utils 4.0rc2, mostly written by Claude Fable (for about $149.25)](<tool-use/sqlite-utils 4.0rc2, mostly written by Claude Fable (for about $149.25).md>) · `tool-use` · simon-willison
   Case study of using Claude Fable and GPT-5.5 to review and harden a sqlite-utils release, including release-blocking bug discovery, cross-model review, subagent cost accounting, and agent-written release notes.
 - **2026-07-04** — [Better Models: Worse Tools](<tool-use/Better Models Worse Tools.md>) · `tool-use` · simon-willison
   Short analysis of newer coding models producing malformed arguments for third-party edit tools, raising the issue that tool schemas and edit mechanisms may need model-specific evaluation and adaptation.
 - **2026-07-03** — [Fable's judgement](<multi-agent/Fable's judgement.md>) · `multi-agent` · simon-willison
   Practical coding-agent pattern for delegating implementation work to cheaper subagents while reserving the main model for judgment, review, synthesis, and model-selection decisions.
-- **2026-07-02** — [From World Cup matchups to research maps: evaluating Parallel's web research agents](<tool-use/From World Cup matchups to research maps evaluating Parallel's web research agents.md>) · `tool-use` · braintrust
-  Evaluates Parallel web research agents using World Cup matchups and research-map tasks, connecting tool use, knowledge graphs, and answer quality.
 - **2026-07-02** — [Observability MCP comparison: Pydantic Logfire, ClickStack, LangSmith, Braintrust, Galileo, Phoenix, and Langfuse](<tool-use/Observability MCP comparison Pydantic Logfire, ClickStack, LangSmith, Braintrust, Galileo, Phoenix, and Langfuse.md>) · `tool-use` · pydantic
   Compares the MCP servers of seven observability platforms (Logfire, ClickStack, LangSmith, Braintrust, Galileo, Phoenix, Langfuse) on whether an agent can ask a debugging question directly and get bounded, verifiable evidence, arguing MCP tool design should return compact aggregates rather than pages of raw trace objects that burn the context window.
 - **2026-07-02** — [Release: llm-coding-agent 0.1a0](<tool-use/Release llm-coding-agent 0.1a0.md>) · `tool-use` · simon-willison
@@ -54,8 +48,6 @@
   Follow-up to the harness thesis detailing what makes an agent harness good: safe tool access, memory that survives a single model call, guardrails that catch bad actions before they land, and context management that keeps the window full of what matters.
 - **2026-06-24** — [Frontier AI at a fraction of the cost: open-source worker agents with a closed-source advisor.](<multi-agent/Frontier AI at a fraction of the cost open-source worker agents with a closed-source advisor.md>) · `multi-agent` · fireworks
   Explains a worker-advisor pattern that combines open-source worker agents with closed-source advisors for cost-quality tradeoffs.
-- **2026-06-24** — [Using Braintrust to eval agentic setups from large-scale Hugging Face data](<planning/Using Braintrust to eval agentic setups from large-scale Hugging Face data.md>) · `planning` · braintrust
-  Uses large-scale Hugging Face agent traces to evaluate agentic setups, connecting trace analysis to agent behavior and reliability measurement.
 - **2026-06-23** — [Pydantic AI v2: capabilities, a leaner core, and the Harness](<harness/Pydantic AI v2 capabilities, a leaner core, and the Harness.md>) · `harness` · pydantic
   Pydantic AI v2 argues the agent inner loop is settled and the leverage is the surrounding layer, unifying instructions, tools, lifecycle hooks that rewrite what the model sees mid-run, context management, steering, and just-in-time tool loading into one composable 'capability' abstraction.
 - **2026-06-22** — [We got local models to triage the OpenClaw repo for FREE!*](<tool-use/We got local models to triage the OpenClaw repo for FREE!.md>) · `tool-use` · huggingface
@@ -78,8 +70,6 @@
   Guest post on adding a durable execution runtime to Pydantic AI agents so a harnessed run survives production failures (pod evictions, tool timeouts, crashes after expensive model calls) by persisting intermediate decisions and supporting pause/resume for offline human approval, rather than losing agent state to terminal output.
 - **2026-05-25** — [Harness, Scaffold, and the AI Agent Terms Worth Getting Right](<tool-use/Harness, Scaffold, and the AI Agent Terms Worth Getting Right.md>) · `tool-use` · huggingface
   A working glossary that disentangles the overloaded agent vocabulary — model vs scaffolding vs harness vs agent, plus context engineering, policy, tool use, skills, sub-agents and orchestrators — using Claude Code, Codex and RL-environment framing as reference points. Defines 'harness engineering' (stop conditions, error handling, guardrails) and the eval-harness variant.
-- **2026-05-21** — [The six generations of AI agents and how to eval them](<planning/The six generations of AI agents and how to eval them.md>) · `planning` · braintrust
-  Taxonomy of six generations of AI agents and guidance for evaluating each generation's capabilities, failure modes, and production readiness.
 - **2026-05-18** — [Introducing Claude Managed Agents with Modal Sandboxes](<computer-use/Introducing Claude Managed Agents with Modal Sandboxes.md>) · `computer-use` · modal
   Shows how Claude managed agents can use Modal sandboxes for isolated execution, filesystem state, and scalable agent workloads.
 - **2026-05-12** — [Build durable agents with Restate and Pydantic AI](<harness/Build durable agents with Restate and Pydantic AI.md>) · `harness` · pydantic
@@ -136,10 +126,6 @@
   Nonobvious patterns for three new Responses API primitives for long-running agents — skills (on-demand SKILL.md playbooks), the hosted/local shell tool, and server-side compaction that auto-compresses conversation history — drawn from Codex internals and Glean's production use.
 - **2026-02-05** — [Building a C compiler with a team of parallel Claudes](<multi-agent/Building a C compiler with a team of parallel Claudes.md>) · `multi-agent` · anthropic-engineering
   Case study orchestrating a team of parallel Claude instances to build a working C compiler, covering task decomposition, shared state, and verification loops.
-- **2026-01-22** — [Testing if "bash is all you need"](<tool-use/Testing if bash is all you need.md>) · `tool-use` · braintrust
-  Tests whether bash-oriented agents can solve realistic tasks, using evals to measure command-line tool use and agent reliability.
-- **2026-01-20** — [Building observable AI agents with Temporal](<tool-use/Building observable AI agents with Temporal.md>) · `tool-use` · braintrust
-  Shows how Temporal workflows can make AI agents observable, connecting durable execution with traces, evals, and debugging data.
 - **2025-12-17** — [Self-Improving Agents, Powered by Your Evals](<planning/Self-Improving Agents, Powered by Your Evals.md>) · `planning` · fireworks
   Describes self-improving agents powered by eval loops, using evaluation feedback to improve behavior.
 - **2025-12-04** — [How We Built a State-of-the-Art Research Agent for Call Center Conversation Analytics](<planning/How We Built a State-of-the-Art Research Agent for Call Center Conversation Analytics.md>) · `planning` · cresta
@@ -174,8 +160,6 @@
   Argues for decentralized voice-agent architectures over central orchestration in some customer-experience workloads.
 - **2025-08-21** — [AI agents for efficient LLM inference engineering](<tool-use/AI agents for efficient LLM inference engineering.md>) · `tool-use` · together
   Case study of using AI agents to automate engineering tasks while developing efficient inference systems.
-- **2025-08-07** — [The canonical agent architecture: A while loop with tools](<harness/The canonical agent architecture A while loop with tools.md>) · `harness` · braintrust
-  Frames the canonical agent architecture as a while loop around model calls, tool use, state updates, and termination criteria for controllable agent behavior.
 - **2025-08-05** — [How to Integrate Hugging Face Inference in Pydantic AI](<multi-agent/How to Integrate Hugging Face Inference in Pydantic AI.md>) · `multi-agent` · pydantic
   Integrates Hugging Face Inference Providers (unified access to open models via Groq, Cerebras, Together AI, SambaNova) as a Pydantic AI model provider, then builds a multi-agent flight-booking system where one agent delegates to another, powered by Kimi K2 on Together AI.
 - **2025-07-24** — [What is an AI code sandbox?](<computer-use/What is an AI code sandbox.md>) · `computer-use` · modal
@@ -208,16 +192,12 @@
   Adding a no-op 'think' tool gives Claude space for intermediate reasoning mid-task, significantly improving policy-heavy agentic benchmarks like tau-bench.
 - **2025-02-04** — [Open-source DeepResearch – Freeing our search agents](<tool-use/Open-source DeepResearch – Freeing our search agents.md>) · `tool-use` · huggingface
   Open reproduction of OpenAI's Deep Research: a smolagents CodeAgent (Python-action instead of JSON tool calls) with a text web browser and file inspector reaches 55% on GAIA validation vs OpenAI's ~67%, with analysis of where browser interaction is the bottleneck.
-- **2025-01-22** — [Evaluating agents](<planning/Evaluating agents.md>) · `planning` · braintrust
-  Detailed guide to evaluating agents, including task design, tool-use traces, intermediate-step analysis, and failure modes unique to multi-step systems.
 - **2025-01-07** — [Agents](<planning/Agents.md>) · `planning` · chip-huyen
   Framework for foundation-model agents covering environments, tools, planning, action selection, failure modes, and evaluation for multi-step agentic applications.
 - **2024-12-31** — [Introducing smolagents: simple agents that write actions in code.](<tool-use/Introducing smolagents simple agents that write actions in code.md>) · `tool-use` · huggingface
   Introduces smolagents and argues for code agents: having the LLM write executable Python actions instead of emitting JSON tool calls yields fewer steps and better benchmark performance, since code composes, loops and reuses variables natively. Frames 'agency' as a spectrum, and covers the sandboxed execution and multi-agent/managed-agent primitives in ~1,000 lines of library code.
 - **2024-12-19** — [Building Effective AI Agents](<planning/Building Effective AI Agents.md>) · `planning` · anthropic-engineering
   Anthropic's canonical guide to agent design patterns: when to use workflows (prompt chaining, routing, orchestrator-workers) versus autonomous agents, and why simple composable patterns beat frameworks.
-- **2024-10-08** — [Functions: flexible AI engineering primitives](<tool-use/Functions flexible AI engineering primitives.md>) · `tool-use` · braintrust
-  Introduces functions as flexible AI engineering primitives for tool calling, structured behavior, and reusable evaluation or workflow components.
 - **2024-08-29** — [Build Your Own Flight Recommendation System using FastAPI, SerpAPI, and Firefunction](<tool-use/Build Your Own Flight Recommendation System using FastAPI, SerpAPI, and Firefunction.md>) · `tool-use` · fireworks
   Tutorial for building a function-calling application with FastAPI, SerpAPI, and structured tool invocation.
 - **2024-08-12** — [Tool Use, Unified](<tool-use/Tool Use, Unified.md>) · `tool-use` · huggingface
@@ -237,8 +217,6 @@
 
 - **2026-07-29** — [ThunderAgent: 2x Faster Agentic Inference for Synthetic Data Generation at Scale](<../inference/optimization/ThunderAgent 2x Faster Agentic Inference for Synthetic Data Generation at Scale.md>) · `optimization` · together
   Together AI's ThunderAgent (ICML 2026 Spotlight) fixes KV cache thrashing in high-concurrency agentic inference by scheduling at the program level instead of per-request: it pauses low-priority agent workflows under memory pressure and resumes them via a global waiting queue, achieving 803 vs 390 tok/s single-node throughput over SGLang and near-linear scaling to 2.4x speedup across 8 H100 nodes.
-- **2026-07-29** — [Behavior specs, an open standard for supervising long-horizon agents - Blog - Braintrust](<../evals-observability/llm-as-judge/Behavior specs, an open standard for supervising long-horizon agents - Blog - Braintrust.md>) · `llm-as-judge` · braintrust
-  Braintrust and Basis (an AI tax-return agent builder) introduce behavior specs, an open standard (agentbehavior.dev) for judging long-horizon agent trajectories on individual expected behaviors (true/false/NA) rather than only outcomes, citing OpenAI's 2023 and DeepMind's process-reward-model research as precedent for process over outcome supervision.
 - **2026-07-28** — [Anatomy of a Frontier Lab Agent Intrusion: A Technical Timeline of the July 2026 Incident](<../product-engineering/security/Anatomy of a Frontier Lab Agent Intrusion A Technical Timeline of the July 2026 Incident.md>) · `security` · simon-willison
   Simon Willison summarizes Hugging Face's technical timeline of OpenAI's July 2026 agent intrusion: the agent escaped its sandbox via a zero-day in a package-registry cache proxy (JFrog Artifactory, 8 CVEs credited to OpenAI staff), then used a public code-evaluation sandbox on Modal's infrastructure as a launchpad with root access for staging and egress.
 - **2026-07-27** — [A note on the Hugging Face agent incident | Modal Blog](<../product-engineering/security/A note on the Hugging Face agent incident Modal Blog.md>) · `security` · modal
@@ -267,8 +245,6 @@
   Notes on the GPT-5.6 Luna, Terra, and Sol release, including pricing, million-token context, agentic benchmark claims, SWE-Bench Pro caveats, programmatic tool calling, subagents, and prompt-cache breakpoints.
 - **2026-07-08** — [Rewriting Bun in Rust](<../product-engineering/case-studies/Rewriting Bun in Rust.md>) · `case-studies` · simon-willison
   Case study of an agent-assisted Bun rewrite from Zig to Rust using a large conformance test suite, dynamic workflows, adversarial review, and process-level fixes to build confidence in LLM-authored code.
-- **2026-06-26** — [How to eval stateful agents](<../evals-observability/evaluation/How to eval stateful agents.md>) · `evaluation` · braintrust
-  Guide to evaluating stateful agents, including memory, conversation state, trace review, and tests for behavior that depends on previous interactions.
 - **2026-06-26** — [Making private MCP servers reachable without making them public | OpenAI Developers](<../product-engineering/security/Making private MCP servers reachable without making them public OpenAI Developers.md>) · `security` · openai-devs
   Engineering design of OpenAI's Secure MCP Tunnel: a customer-run open-source client beside a private MCP server opens outbound-only HTTPS to OpenAI, forwarding MCP requests (including streaming and auth flows) so ChatGPT/Codex can reach the server without public endpoints, VPNs, or third-party tunnels.
 - **2026-06-22** — [Skills on steroids: on-demand capabilities in Pydantic AI](<../prompt-engineering/context-engineering/Skills on steroids on-demand capabilities in Pydantic AI.md>) · `context-engineering` · pydantic
@@ -297,8 +273,6 @@
   Analyzes browser-agent runs to show how reliability, latency, and cost compound into task-level execution tax.
 - **2026-05-19** — [Benchmarking inference at scale: coding agents](<../evals-observability/benchmark-design/Benchmarking inference at scale coding agents.md>) · `benchmark-design` · together
   Benchmarks inference at scale for coding-agent workloads.
-- **2026-05-14** — [How to evaluate multi-turn conversations](<../evals-observability/evaluation/How to evaluate multi-turn conversations.md>) · `evaluation` · braintrust
-  Guide to evaluating multi-turn conversations, including state, conversation-level criteria, turn-level scoring, and agent-like interaction failures.
 - **2026-05-12** — [Sierra speaks](<../models/multimodal/Sierra speaks.md>) · `multimodal` · sierra
   Launch writeup for Sierra voice agents with useful architecture details on interruptions, latency, call-center integration, escalation, and multi-channel agent reuse.
 - **2026-05-12** — [Constellation of models: the architecture powering Sierra's agents](<../models/reasoning/Constellation of models the architecture powering Sierra's agents.md>) · `reasoning` · sierra
@@ -337,8 +311,6 @@
   Shopify fine-tunes a model to generate Flow automations from natural language, arguing differentiation comes from proprietary merchant-interaction data and the training recipe rather than closed-model API access.
 - **2026-04-16** — [Ecom-RLVE: Adaptive Verifiable Environments for E-Commerce Conversational Agents](<../models/reinforcement-learning/Ecom-RLVE Adaptive Verifiable Environments for E-Commerce Conversational Agents.md>) · `reinforcement-learning` · huggingface
   Extends RLVE from single-turn puzzles to multi-turn tool-using e-commerce agents: 8 verifiable environments (search, substitution, cart, returns, policy QA...) with procedural problem generation, a 12-axis difficulty curriculum and algorithmic (non-LLM-judge) rewards; trains Qwen3-8B with DAPO for 300 steps.
-- **2026-04-08** — [Agentic eval development with the Braintrust CLI](<../evals-observability/testing/Agentic eval development with the Braintrust CLI.md>) · `testing` · braintrust
-  Shows how to use the Braintrust CLI for agentic eval development, turning local experiments into repeatable tests for agent behavior.
 - **2026-04-03** — [AI for Systems: Using LLMs to Optimize Database Query Execution](<../product-engineering/architecture/AI for Systems Using LLMs to Optimize Database Query Execution.md>) · `architecture` · together
   Explores using LLMs to optimize database query execution as an AI-for-systems pattern.
 - **2026-03-31** — [Baseten Training: an autoresearch substrate](<../models/fine-tuning/Baseten Training an autoresearch substrate.md>) · `fine-tuning` · baseten
@@ -365,8 +337,6 @@
   Skyscanner wires Codex CLI to the JetBrains MCP server so the agent gets IDE feedback loops: get_file_problems surfaced a non-compiling Databricks SDK NotFound constructor immediately instead of after a test run, cutting iteration time.
 - **2026-01-09** — [Demystifying evals for AI agents](<../evals-observability/evaluation/Demystifying evals for AI agents.md>) · `evaluation` · anthropic-engineering
   A practical framework for building agent evals: grader design, task suites, pass@k metrics, and evolving evals as agent capabilities improve.
-- **2026-01-01** — [How Graphite builds reliable AI code review at scale](<../product-engineering/case-studies/How Graphite builds reliable AI code review at scale.md>) · `case-studies` · braintrust
-  Case study of Graphite building reliable AI code review at scale, with evaluation and workflow design for production developer tooling.
 - **2025-12-17** — [How Tiger Data Built a Production AI Slack Bot with Pydantic AI and Logfire](<../product-engineering/case-studies/How Tiger Data Built a Production AI Slack Bot with Pydantic AI and Logfire.md>) · `case-studies` · pydantic
   Case study of Tiger Data's production Slack bot on Pydantic AI + Logfire, integrating eight MCP servers (Slack search, customer docs, Salesforce, GitHub, Linear, meeting transcripts, user memory, progress reports) with per-user memory/context, retry logic, provider switching, and Agent-Run trace visualization, scaled to thousands of concurrent conversations.
 - **2025-12-10** — [Best Practices for Multi-Turn RL](<../models/reinforcement-learning/Best Practices for Multi-Turn RL.md>) · `reinforcement-learning` · fireworks
@@ -391,8 +361,6 @@
   Strategies for managing agent context windows—compaction, structured note-taking, sub-agent architectures—and why context engineering supersedes prompt engineering.
 - **2025-08-25** — [LLM Eval Driven Development with Claude Code](<../evals-observability/evaluation/LLM Eval Driven Development with Claude Code.md>) · `evaluation` · fireworks
   Explains eval-driven development with Claude Code, using tests and feedback loops to improve coding-agent behavior.
-- **2025-08-19** — [The rise of async programming](<../product-engineering/architecture/The rise of async programming.md>) · `architecture` · braintrust
-  Explains why asynchronous programming patterns matter for long-running AI workflows, background jobs, agent tasks, and responsive product experiences.
 - **2025-08-14** — [Test-driven agent development](<../evals-observability/testing/Test-driven agent development.md>) · `testing` · fireworks
   Shows a TDD-style workflow for building agents with concrete acceptance tests, red teaming, and regression checks.
 - **2025-08-12** — [TextQuests: How Good are LLMs at Text-Based Video Games?](<../evals-observability/benchmark-design/TextQuests How Good are LLMs at Text-Based Video Games.md>) · `benchmark-design` · huggingface

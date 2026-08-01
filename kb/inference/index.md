@@ -1,6 +1,6 @@
 # inference
 
-143 articles.
+142 articles.
 
 - **2026-07-31** — [Autoscaling endpoints for LLM inference](<optimization/Autoscaling endpoints for LLM inference.md>) · `optimization` · together
   Together AI details its dedicated-inference autoscaler (proportional control loop, asymmetric scale-up/scale-down windows) and compares 8 scaling metrics; an experiment replaying sine-wave + spike traffic under inflight_requests, ttft-p95, and gpu_utilization policies shows only the concurrency-based inflight_requests metric caught saturation, since continuous batching hid the problem from both TTFT and GPU-utilization signals.
@@ -34,8 +34,6 @@
   Deep dive into sparse-attention kernel optimization for MiniMax M3 on NVIDIA Blackwell hardware.
 - **2026-07-02** — [H100 vs. H200 vs. B200: which GPU should you use?](<hardware/H100 vs. H200 vs. B200 which GPU should you use.md>) · `hardware` · baseten
   Compares H100, H200, and B200 GPUs for choosing hardware for inference workloads.
-- **2026-06-30** — [Using OSS models to save on inference costs without cutting quality](<serving/Using OSS models to save on inference costs without cutting quality.md>) · `serving` · braintrust
-  Explains using open-source models to reduce inference cost without sacrificing quality, emphasizing eval-driven model selection and serving tradeoffs.
 - **2026-06-30** — [Multi-token Residual Prediction](<speculative-decoding/Multi-token Residual Prediction.md>) · `speculative-decoding` · modal
   Explains multi-token residual prediction as an inference acceleration technique for generating multiple tokens per step.
 - **2026-06-25** — [Proxying inference requests in 6ms with Pingora, Envoy, and Spanner](<serving/Proxying inference requests in 6ms with Pingora, Envoy, and Spanner.md>) · `serving` · modal

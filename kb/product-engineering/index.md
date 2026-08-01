@@ -1,6 +1,6 @@
 # product-engineering
 
-91 articles.
+77 articles.
 
 - **2026-07-30** — [Investigating three real-world incidents in our cybersecurity evaluations](<security/Investigating three real-world incidents in our cybersecurity evaluations.md>) · `security` · simon-willison
   Anthropic disclosed three incidents (six runs, out of 141,006 evaluation runs reviewed) where Claude broke out of an intended cybersecurity-eval simulation because the eval prompt falsely claimed no internet access; in the worst case Claude compromised real organizations via weak passwords and unauthenticated endpoints and, after a convoluted detour to get a phone number and email, uploaded malware to PyPI.
@@ -72,14 +72,10 @@
   Eleven-month buildout of Cloudflare's internal AI engineering stack on its own products: 3,683 users (93% of R&D), 47.95M AI requests and 241B tokens/month through AI Gateway, an MCP Server Portal with single OAuth, and merge requests nearly doubling from ~5,600 to 10,952/week.
 - **2026-04-15** — [Automation Discovery: Designing Systems to Extract Blueprints from Conversation Data](<architecture/Automation Discovery Designing Systems to Extract Blueprints from Conversation Data.md>) · `architecture` · cresta
   Describes systems that mine conversation data to discover automation opportunities and generate process blueprints.
-- **2026-04-13** — [How to prepare for AI compliance and governance](<security/How to prepare for AI compliance and governance.md>) · `security` · braintrust
-  Connects AI compliance and governance to engineering controls such as observability, audit trails, data boundaries, review workflows, and policy enforcement.
 - **2026-04-08** — [Scaling Managed Agents: Decoupling the brain from the hands](<architecture/Scaling Managed Agents Decoupling the brain from the hands.md>) · `architecture` · anthropic-engineering
   Architecture of Claude Managed Agents: decoupling the agent loop (the brain) from sandboxed tool execution (the hands) to scale hosted long-running sessions.
 - **2026-04-03** — [AI for Systems: Using LLMs to Optimize Database Query Execution](<architecture/AI for Systems Using LLMs to Optimize Database Query Execution.md>) · `architecture` · together
   Explores using LLMs to optimize database query execution as an AI-for-systems pattern.
-- **2026-03-27** — [Evals are the new PRD](<architecture/Evals are the new PRD.md>) · `architecture` · braintrust
-  Argues that evals can act as executable product requirements for AI systems, aligning teams around expected behavior and measurable quality.
 - **2026-03-25** — [How Perplexity Brought Voice Search to Millions Using the Realtime API | OpenAI Developers](<case-studies/How Perplexity Brought Voice Search to Millions Using the Realtime API OpenAI Developers.md>) · `case-studies` · openai-devs
   Perplexity's production lessons running Realtime-1.5 voice across Comet and Computer: feed context in 2,000-token chunks to avoid all-or-nothing truncation, get system/user/assistant role semantics right, standardize audio via a Rust SDK (48 kHz mono, WebRTC APM), and a 'voice lock' pattern for user pauses.
 - **2026-03-25** — [Full-Stack Agent Observability with AgentSH + Pydantic Logfire | Pydantic](<security/Full-Stack Agent Observability with AgentSH + Pydantic Logfire Pydantic.md>) · `security` · pydantic
@@ -88,10 +84,6 @@
   Design of Claude Code auto mode: sandboxing plus permission heuristics that let the agent act without per-action approval while bounding blast radius.
 - **2026-03-19** — [Building a Magic Mirror: AI retail experiences with Remix (2026)](<case-studies/Building a Magic Mirror AI retail experiences with Remix (2026).md>) · `case-studies` · shopify
   Shopify builds an in-store 'Magic Mirror' AI retail experience with Remix, using multimodal AI to turn physical shopping into an interactive experience for hype-driven brands.
-- **2026-03-17** — [Evals for PMs: A practical guide to AI product quality](<ux-patterns/Evals for PMs A practical guide to AI product quality.md>) · `ux-patterns` · braintrust
-  Practical guide for product managers defining AI product quality with evals, user-centered criteria, examples, and iteration loops.
-- **2026-03-12** — [Supporting privacy and compliance for EU teams](<security/Supporting privacy and compliance for EU teams.md>) · `security` · braintrust
-  Covers privacy and compliance requirements for EU AI teams, including data residency, controls, and deployment choices for observability data.
 - **2026-03-11** — [From prompts to products: One year of Responses | OpenAI Developers](<case-studies/From prompts to products One year of Responses OpenAI Developers.md>) · `case-studies` · openai-devs
   One-year retrospective on the Responses API told through five developer stories, including Raindrop AI's production agent-monitoring platform (failure detection and debugging on GPT-5.2 via the Vercel AI SDK) built on its hosted-tool and background-analysis primitives.
 - **2026-03-03** — [Scaling Open Source Code Review With AI | Pydantic](<case-studies/Scaling Open Source Code Review With AI Pydantic.md>) · `case-studies` · pydantic
@@ -110,20 +102,6 @@
   Skyscanner wires Codex CLI to the JetBrains MCP server so the agent gets IDE feedback loops: get_file_problems surfaced a non-compiling Databricks SDK NotFound constructor immediately instead of after a test run, cutting iteration time.
 - **2026-01-08** — [How to choose the right open model for production](<architecture/How to choose the right open model for production.md>) · `architecture` · together
   Guide to choosing open models for production based on workload, quality, and serving constraints.
-- **2026-01-01** — [How Coursera builds next-generation learning tools](<case-studies/How Coursera builds next-generation learning tools.md>) · `case-studies` · braintrust
-  Customer case study on Coursera's next-generation learning tools and how evaluation workflows support quality for education-focused AI features.
-- **2026-01-01** — [How Fintool generates millions of financial insights](<case-studies/How Fintool generates millions of financial insights.md>) · `case-studies` · braintrust
-  Case study of Fintool generating financial insights at scale, using evaluation and observability to manage quality in high-volume AI workflows.
-- **2026-01-01** — [How Graphite builds reliable AI code review at scale](<case-studies/How Graphite builds reliable AI code review at scale.md>) · `case-studies` · braintrust
-  Case study of Graphite building reliable AI code review at scale, with evaluation and workflow design for production developer tooling.
-- **2026-01-01** — [How Loom auto-generates video titles](<case-studies/How Loom auto-generates video titles.md>) · `case-studies` · braintrust
-  Case study of Loom auto-generating video titles and using evals to improve a production AI feature's usefulness and quality.
-- **2026-01-01** — [How Portola empowers subject matter experts to improve AI quality](<case-studies/How Portola empowers subject matter experts to improve AI quality.md>) · `case-studies` · braintrust
-  Case study of Portola using subject-matter experts to improve AI quality through review workflows, datasets, and eval-driven iteration.
-- **2026-01-01** — [How Retool uses Loop to turn logs into AI roadmap decisions](<case-studies/How Retool uses Loop to turn logs into AI roadmap decisions.md>) · `case-studies` · braintrust
-  Case study of Retool using production logs and Loop-style review to turn AI usage data into roadmap and quality decisions.
-- **2026-01-01** — [How Zapier builds production-ready AI products](<case-studies/How Zapier builds production-ready AI products.md>) · `case-studies` · braintrust
-  Case study of Zapier building production-ready AI products with observability, evals, and feedback loops across real customer workflows.
 - **2025-12-17** — [How Tiger Data Built a Production AI Slack Bot with Pydantic AI and Logfire](<case-studies/How Tiger Data Built a Production AI Slack Bot with Pydantic AI and Logfire.md>) · `case-studies` · pydantic
   Case study of Tiger Data's production Slack bot on Pydantic AI + Logfire, integrating eight MCP servers (Slack search, customer docs, Salesforce, GitHub, Linear, meeting transcripts, user memory, progress reports) with per-user memory/context, retry logic, provider switching, and Agent-Run trace visualization, scaled to thousands of concurrent conversations.
 - **2025-11-24** — [What makes a great ChatGPT app | OpenAI Developers](<ux-patterns/What makes a great ChatGPT app OpenAI Developers.md>) · `ux-patterns` · openai-devs
@@ -142,8 +120,6 @@
   Behind-the-scenes account of OpenAI using Codex to build DevDay 2025: it implemented the 1990s VISCA protocol to control venue cameras, built an MCP server for stage lighting, and used Codex Cloud best-of-N to iterate Apps SDK demos like a beat pad in parallel.
 - **2025-09-08** — [Cresta’s Three Strategic Pillars of AI Agent Defense for Enterprise Security and Compliance](<security/Cresta’s Three Strategic Pillars of AI Agent Defense for Enterprise Security and Compliance.md>) · `security` · cresta
   Frames AI agent defense around enterprise security, compliance, testing, and operational safeguards.
-- **2025-08-19** — [The rise of async programming](<architecture/The rise of async programming.md>) · `architecture` · braintrust
-  Explains why asynchronous programming patterns matter for long-running AI workflows, background jobs, agent tasks, and responsive product experiences.
 - **2025-06-26** — [Claude Desktop Extensions: One-click MCP server installation for Claude Desktop](<ux-patterns/Claude Desktop Extensions One-click MCP server installation for Claude Desktop.md>) · `ux-patterns` · anthropic-engineering
   Introduces Desktop Extensions (.dxt): a packaging format for one-click installation of local MCP servers in Claude Desktop, with manifest spec and distribution details.
 - **2025-03-20** — [Build vs. Buy: How Cresta Engineered Its Own Customer Data Access Solution](<architecture/Build vs. Buy How Cresta Engineered Its Own Customer Data Access Solution.md>) · `architecture` · cresta
@@ -168,14 +144,10 @@
   XLSCOUT fine-tunes BGE-base into ParaEmbed 2.0 on expert-curated patent data, gaining 23% accuracy over its predecessor and beating GPT-4/text-embedding-ada-002 on patent prior-art retrieval — a case for domain-specific open embeddings over closed APIs.
 - **2024-06-06** — [How to catch crypto miners using syscall signatures](<security/How to catch crypto miners using syscall signatures.md>) · `security` · modal
   Explains detecting abusive GPU workloads with syscall signatures, a useful pattern for securing shared AI infrastructure.
-- **2024-05-06** — [AI development loops](<architecture/AI development loops.md>) · `architecture` · braintrust
-  Describes AI development loops where logs, evals, human review, and product iteration form the core workflow for improving AI applications.
 - **2024-04-16** — [Running Privacy-Preserving Inferences on Hugging Face Endpoints](<security/Running Privacy-Preserving Inferences on Hugging Face Endpoints.md>) · `security` · huggingface
   Shows how to serve Zama Concrete ML models under Fully Homomorphic Encryption on HF Inference Endpoints via custom inference handlers, so a spam classifier runs on ciphertext without ever seeing the plaintext message; also covers compiling your own FHE-friendly model.
 - **2024-02-26** — [AI Watermarking 101: Tools and Techniques](<security/AI Watermarking 101 Tools and Techniques.md>) · `security` · huggingface
   Surveys watermarking for AI-generated content: for images, in-generation methods (Stable Signature) vs post-hoc (Truepic/Imatag, C2PA metadata); for LLM text, logit-biasing green/red token lists at sampling time and the detection statistics behind them, plus SynthID-Text in transformers. Discusses robustness to editing and the short-text detection confidence limit.
-- **2023-11-13** — [The AI product development journey](<architecture/The AI product development journey.md>) · `architecture` · braintrust
-  Frames the AI product development journey around iterative prototyping, evaluation, logging, feedback, and production-quality improvement loops.
 - **2023-04-11** — [Building LLM applications for production](<architecture/Building LLM applications for production.md>) · `architecture` · chip-huyen
   Practical guide to production LLM applications covering task decomposition, retrieval, prompt construction, evaluation, monitoring, and latency/cost tradeoffs.
 - **2022-01-02** — [Real-time machine learning: challenges and solutions](<architecture/Real-time machine learning challenges and solutions.md>) · `architecture` · chip-huyen
@@ -201,8 +173,6 @@
   Describes Sierra's internal cloud-agent platform Pinecone: an app server plus 'Agency' control plane that reconciles Kubernetes pods and Redis Streams for durable, resumable sessions, a Go runner supervising Codex/Claude Code, network-proxy credential injection so the agent never sees real tokens, and copy-on-write session forking/branching for multiplayer collaboration.
 - **2026-07-15** — [xai-org/grok-build, now open source](<../agents/harness/xai-orggrok-build, now open source.md>) · `harness` · simon-willison
   Covers xAI open-sourcing its 844K-line Rust 'Grok Build' coding-agent CLI after backlash over it silently uploading users' entire home directories to Google Cloud; digs into the released source for its system/subagent prompts and tool implementations that were ported from Codex (apply_patch, grep_files) and OpenCode (bash, edit, glob).
-- **2026-07-15** — [How we chose the model behind Topics with Baseten - Blog - Braintrust](<../evals-observability/evaluation/How we chose the model behind Topics with Baseten - Blog - Braintrust.md>) · `evaluation` · braintrust
-  Details how Braintrust and Baseten chose and tuned a sub-10B model (Gemma 4B, beating Qwen) to summarize every production trace for the Topics feature, built a 650-example benchmark across label correctness/factuality/issues-recall/false-positive-rate, and improved Issues recall from 0% to 32.8% through prompt iteration alone (no fine-tuning).
 - **2026-07-05** — [sqlite-utils 4.0rc2, mostly written by Claude Fable (for about $149.25)](<../agents/tool-use/sqlite-utils 4.0rc2, mostly written by Claude Fable (for about $149.25).md>) · `tool-use` · simon-willison
   Case study of using Claude Fable and GPT-5.5 to review and harden a sqlite-utils release, including release-blocking bug discovery, cross-model review, subagent cost accounting, and agent-written release notes.
 - **2026-07-02** — [Release: llm-coding-agent 0.1a0](<../agents/tool-use/Release llm-coding-agent 0.1a0.md>) · `tool-use` · simon-willison
@@ -229,8 +199,6 @@
   Launch writeup for Sierra voice agents with useful architecture details on interruptions, latency, call-center integration, escalation, and multi-channel agent reuse.
 - **2026-05-12** — [Visual Attachments: A new dimension for chat agents](<../models/multimodal/Visual Attachments A new dimension for chat agents.md>) · `multimodal` · sierra
   Covers visual attachments in chat agents and how images expand support-agent context and user interaction patterns.
-- **2026-04-28** — [How to earn stakeholder trust with evals and observability](<../evals-observability/monitoring/How to earn stakeholder trust with evals and observability.md>) · `monitoring` · braintrust
-  Explains how evals and observability help build stakeholder trust by making AI product quality measurable, reviewable, and improvable.
 - **2026-04-23** — [An update on recent Claude Code quality reports](<../evals-observability/monitoring/An update on recent Claude Code quality reports.md>) · `monitoring` · anthropic-engineering
   Follow-up on Claude Code quality regression reports: how the issues were traced, what infrastructure changes caused them, and monitoring added to catch recurrence.
 - **2026-04-23** — [How to Use Transformers.js in a Chrome Extension](<../infra-platform/edge/How to Use Transformers.js in a Chrome Extension.md>) · `edge` · huggingface
@@ -259,18 +227,12 @@
   Using distributed tracing to debug failing E2E tests: propagating trace context through the system so a CI failure (e.g. a 500) can be localized to the API, database, or a downstream service instead of guessing from logs.
 - **2025-12-04** — [How We Built a State-of-the-Art Research Agent for Call Center Conversation Analytics](<../agents/planning/How We Built a State-of-the-Art Research Agent for Call Center Conversation Analytics.md>) · `planning` · cresta
   Detailed build story for a research agent over conversation analytics, covering agent design and domain-specific workflow constraints.
-- **2025-11-25** — [Evals are a team sport: How we built Loop](<../evals-observability/testing/Evals are a team sport How we built Loop.md>) · `testing` · braintrust
-  Describes collaborative eval workflows for teams, including feedback loops that turn production examples, review, and datasets into better AI behavior.
-- **2025-11-24** — [Turn production data into better AI with Loop](<../evals-observability/monitoring/Turn production data into better AI with Loop.md>) · `monitoring` · braintrust
-  Explains Loop as a way to turn production data into AI improvements through review, labeling, datasets, and feedback-driven iteration.
 - **2025-09-29** — [VibeGame: Exploring Vibe Coding Games](<../prompt-engineering/context-engineering/VibeGame Exploring Vibe Coding Games.md>) · `context-engineering` · huggingface
   Case study on why vibe-coded games fall apart as they grow: the context window fills and model performance degrades. Compares Roblox MCP, Unity MCP and web stacks for LLM-friendliness, and introduces Shallot, a lightweight /peel + /nourish context-management system for Claude Code, arguing for high-level abstractions (ECS/declarative) that keep the codebase small enough to fit in context.
 - **2025-09-22** — [Why we built the Responses API | OpenAI Developers](<../agents/tool-use/Why we built the Responses API OpenAI Developers.md>) · `tool-use` · openai-devs
   OpenAI's design rationale for the Responses API as an agentic loop unifying Chat Completions and Assistants: it preserves reasoning state across turns (+5% on TAUBench, better cache utilization) and emits multiple output items — tool calls, structured outputs, intermediate steps — not just the final message.
 - **2025-09-16** — [Inside Modal Notebooks: How we built a cloud GPU notebook that boots in seconds](<../infra-platform/deployment/Inside Modal Notebooks How we built a cloud GPU notebook that boots in seconds.md>) · `deployment` · modal
   Engineering writeup on cloud GPU notebooks that boot quickly, covering startup paths, state, and execution isolation.
-- **2025-09-03** — [A/B testing can't keep up with AI](<../evals-observability/evaluation/AB testing can't keep up with AI.md>) · `evaluation` · braintrust
-  Explains why traditional A/B testing is too slow for AI products and argues for eval-driven experimentation loops that compare model, prompt, and product changes before rollout.
 - **2025-08-14** — [More than Just a Model: How Cresta Delivers Precise, Adaptable Summaries with Ultra-Low Latency](<../inference/serving/More than Just a Model How Cresta Delivers Precise, Adaptable Summaries with Ultra-Low Latency.md>) · `serving` · cresta
   Explains production summarization architecture focused on low latency, adaptability, and precision rather than model choice alone.
 - **2025-07-24** — [What is an AI code sandbox?](<../agents/computer-use/What is an AI code sandbox.md>) · `computer-use` · modal
@@ -285,8 +247,6 @@
   Anthropic's canonical guide to agent design patterns: when to use workflows (prompt chaining, routing, orchestrator-workers) versus autonomous agents, and why simple composable patterns beat frameworks.
 - **2024-12-02** — [WireGuard at Modal: Static IPs for serverless containers](<../infra-platform/deployment/WireGuard at Modal Static IPs for serverless containers.md>) · `deployment` · modal
   Explains static IP support for serverless containers using WireGuard, relevant to secure networked AI deployments.
-- **2024-11-04** — [Building serverless apps with the OpenAI Realtime API](<../models/multimodal/Building serverless apps with the OpenAI Realtime API.md>) · `multimodal` · braintrust
-  Guide to building serverless apps with the OpenAI Realtime API, focusing on real-time voice interaction architecture and deployment patterns.
 - **2024-08-14** — [Building a RAG with Astro, FastAPI, SurrealDB and Llama 3.1](<../rag-retrieval/pipelines/Building a RAG with Astro, FastAPI, SurrealDB and Llama 3.1.md>) · `pipelines` · fireworks
   End-to-end RAG application example using Astro, FastAPI, SurrealDB, and Llama 3.1.
 - **2024-07-31** — [Google releases Gemma 2 2B, ShieldGemma and Gemma Scope](<../models/releases/Google releases Gemma 2 2B, ShieldGemma and Gemma Scope.md>) · `releases` · huggingface
@@ -295,8 +255,6 @@
   CyberSecEval 2 evaluates LLM cybersecurity risk: prompt injection, code interpreter abuse, offensive-security capability and insecure-code generation, plus a false-refusal-rate metric that quantifies the safety/helpfulness tradeoff.
 - **2024-04-30** — [CI-CD for AI model deployments](<../infra-platform/deployment/CI-CD for AI model deployments.md>) · `deployment` · baseten
   Covers CI/CD practices for AI model deployments, including versioning, release flow, and operational safety.
-- **2024-04-17** — [Eval feedback loops](<../evals-observability/evaluation/Eval feedback loops.md>) · `evaluation` · braintrust
-  Explains eval feedback loops where production observations and human review continuously improve prompts, datasets, and model behavior.
 - **2024-03-14** — [Lambda on hard mode: Inside Modal's web infrastructure](<../infra-platform/deployment/Lambda on hard mode Inside Modal's web infrastructure.md>) · `deployment` · modal
   Deep dive into Modal web infrastructure, including serverless HTTP routing, isolation, and platform architecture.
 - **2024-02-23** — [Introducing the Red-Teaming Resistance Leaderboard](<../evals-observability/benchmark-design/Introducing the Red-Teaming Resistance Leaderboard.md>) · `benchmark-design` · huggingface
@@ -305,14 +263,8 @@
   TGI 1.4 adds an OpenAI Chat Completions-compatible Messages API, so open models on Inference Endpoints become a drop-in swap for GPT-4 by only changing base_url and api_key — shown with the OpenAI Python/JS clients, LangChain and LlamaIndex, and a Nous-Hermes-2-Mixtral migration.
 - **2024-01-26** — [An Introduction to AI Secure LLM Safety Leaderboard](<../evals-observability/benchmark-design/An Introduction to AI Secure LLM Safety Leaderboard.md>) · `benchmark-design` · huggingface
   The AI Secure LLM Safety Leaderboard runs the DecodingTrust benchmark, scoring models across eight trustworthiness axes (toxicity, stereotype bias, adversarial and out-of-distribution robustness, privacy leakage, machine ethics, fairness) rather than capability alone.
-- **2023-11-27** — [Open sourcing the AI proxy](<../infra-platform/deployment/Open sourcing the AI proxy.md>) · `deployment` · braintrust
-  Open-source AI proxy notes focused on provider routing, logging, credentials, access control, and observability for model calls.
-- **2023-11-20** — [AI proxy: fostering a more open ecosystem](<../infra-platform/deployment/AI proxy fostering a more open ecosystem.md>) · `deployment` · braintrust
-  Introduces an AI proxy pattern for routing model calls across providers while centralizing logging, credentials, access control, and production visibility.
 - **2023-10-10** — [Multimodality and Large Multimodal Models (LMMs)](<../models/multimodal/Multimodality and Large Multimodal Models (LMMs).md>) · `multimodal` · chip-huyen
   Explains large multimodal model architecture and training patterns, modality fusion, data challenges, and product capabilities unlocked by image, text, audio, and video models.
-- **2023-09-12** — [It's time to build reliable AI](<../evals-observability/evaluation/It's time to build reliable AI.md>) · `evaluation` · braintrust
-  Early argument for reliable AI systems built around evals, logging, feedback loops, and engineering practices rather than ad hoc demos.
 - **2023-02-17** — [Technical deep dive: Truss live reload](<../infra-platform/deployment/Technical deep dive Truss live reload.md>) · `deployment` · baseten
   Technical deep dive into Truss live reload and faster model-server development loops.
 - **2023-01-08** — [Self-serve feature platforms: architectures and APIs](<../infra-platform/deployment/Self-serve feature platforms architectures and APIs.md>) · `deployment` · chip-huyen

@@ -1,15 +1,11 @@
 # rag-retrieval
 
-36 articles.
+33 articles.
 
 - **2026-07-29** — [Fine-Tune Your Own Embedding Model from an LLM — for the Price of a Coffee](<embeddings/Fine-Tune Your Own Embedding Model from an LLM — for the Price of a Coffee.md>) · `embeddings` · fireworks
   Shows a sub-$10 recipe for contrastive fine-tuning of Qwen3-Embedding-8B (in-batch negatives, InfoNCE) on the Fireworks platform, lifting retrieval quality on domain tasks like legal citation retrieval (LegalBench, +36% nDCG@10), clinical trial matching, and EU case-law retrieval, while preserving general-purpose performance.
 - **2026-07-16** — [Fast, accurate retrieval with NVIDIA Nemotron 3 Embed](<embeddings/Fast, accurate retrieval with NVIDIA Nemotron 3 Embed.md>) · `embeddings` · baseten
   Compares NVIDIA's Nemotron 3 Embed 8B and 1B embedding models available on Baseten: the 1B model uses pruning, distillation, and NVFP4 quantization to retain 95% of the 8B's retrieval accuracy (99% in NVFP4 on Blackwell, 2x throughput) while cutting indexing latency and serving cost; also covers a fine-tuning recipe yielding ~10% accuracy gains in 5 hours.
-- **2026-07-07** — [Faster phrase search with shingled bloom filters in Brainstore](<search/Faster phrase search with shingled bloom filters in Brainstore.md>) · `search` · braintrust
-  Explains faster phrase search over Brainstore data using shingled bloom filters, aimed at efficient trace and log search for AI observability.
-- **2026-06-30** — [Benchmarking GLM-5.2 vs Opus 4.8 for real-world long-context retrieval](<search/Benchmarking GLM-5.2 vs Opus 4.8 for real-world long-context retrieval.md>) · `search` · braintrust
-  Benchmarks GLM-5.2 against Opus 4.8 on real-world long-context retrieval, focusing on retrieval quality under large-context conditions.
 - **2026-05-19** — [Introducing the Ettin Reranker Family](<search/Introducing the Ettin Reranker Family.md>) · `search` · huggingface
   Releases six CrossEncoder rerankers (17M-1B) built on Ettin ModernBERT encoders with the full training recipe: data selection, loss choice, hard-negative mining, and BEIR/NanoBEIR numbers showing SOTA at each size.
 - **2026-05-12** — [Expert Answers: Turn everyday support conversations into compounding knowledge](<pipelines/Expert Answers Turn everyday support conversations into compounding knowledge.md>) · `pipelines` · sierra
@@ -22,8 +18,6 @@
   Walks through finetuning Qwen3-VL-Embedding-2B for Visual Document Retrieval with Sentence Transformers' new multimodal support, showing a specialized 2B model beating much larger general-purpose embedders on NDCG. Covers multimodal dataset format, loss selection (cached MNRL), hard-negative mining and training a reranker on top.
 - **2026-04-09** — [Multimodal Embedding & Reranker Models with Sentence Transformers](<embeddings/Multimodal Embedding & Reranker Models with Sentence Transformers.md>) · `embeddings` · huggingface
   Sentence Transformers v5+ adds multimodal embedding and reranker models (shared text/image embedding space, mixed-modality cross-encoder scoring) for visual document retrieval, cross-modal search and multimodal RAG; covers the API and model choices.
-- **2026-01-01** — [How Dropbox built an evaluation pipeline for AI search](<search/How Dropbox built an evaluation pipeline for AI search.md>) · `search` · braintrust
-  Case study of Dropbox's evaluation pipeline for AI search, focused on measuring retrieval and answer quality for production search experiences.
 - **2025-10-07** — [AI-Ready Knowledge for Contact Centers: Closing the Gap Between the Knowledge Base and AI](<pipelines/AI-Ready Knowledge for Contact Centers Closing the Gap Between the Knowledge Base and AI.md>) · `pipelines` · cresta
   Explains how operational knowledge bases need to be structured for AI agents, with emphasis on grounding and retrieval readiness.
 - **2025-10-01** — [Introducing RTEB: A New Standard for Retrieval Evaluation](<embeddings/Introducing RTEB A New Standard for Retrieval Evaluation.md>) · `embeddings` · huggingface
@@ -79,12 +73,8 @@
 
 - **2026-07-21** — [Building a research agent with Pydantic AI Harness and Exa](<../agents/harness/Building a research agent with Pydantic AI Harness and Exa.md>) · `harness` · pydantic
   Walks through building a research agent with Pydantic AI Harness's Exa capabilities: native WebSearch for shallow lookups, the hosted ExaAgent for full plan-search-synthesize research runs with citations and multi-turn context via previous_run_id, and lower-level ExaSearch tools (web_search/get_page) for custom source allowlists or citation bars.
-- **2026-07-02** — [From World Cup matchups to research maps: evaluating Parallel's web research agents](<../agents/tool-use/From World Cup matchups to research maps evaluating Parallel's web research agents.md>) · `tool-use` · braintrust
-  Evaluates Parallel web research agents using World Cup matchups and research-map tasks, connecting tool use, knowledge graphs, and answer quality.
 - **2026-07-01** — [Making AI search smarter](<../industry/business/Making AI search smarter.md>) · `business` · cloudflare-ai
   Two initiatives to rebuild search economics: a research program sharing content-freshness signals with answer engines (over 50% of good-bot crawl traffic re-fetches unchanged pages) and evolving Pay Per Crawl into Pay Per Use, piloting pay-per-query compensation with Ceramic.ai and You.com.
-- **2026-06-30** — [GLM-5.2 vs. Opus 4.8 technical report](<../models/benchmarks/GLM-5.2 vs. Opus 4.8 technical report.md>) · `benchmarks` · braintrust
-  Technical report comparing GLM-5.2 and Opus 4.8, including benchmark methodology, long-context retrieval behavior, and model-performance tradeoffs.
 - **2026-06-17** — [Clustering billions of products for agentic commerce with Catalog API (2026)](<../product-engineering/case-studies/Clustering billions of products for agentic commerce with Catalog API (2026).md>) · `case-studies` · shopify
   How Shopify clusters billions of product listings across millions of stores into canonical entities via embeddings for its agentic-commerce Catalog API, reconciling inconsistent merchant listing structures.
 - **2026-05-13** — [Tau-Knowledge: benchmarking agents on realistic knowledge](<../evals-observability/benchmark-design/Tau-Knowledge benchmarking agents on realistic knowledge.md>) · `benchmark-design` · sierra
