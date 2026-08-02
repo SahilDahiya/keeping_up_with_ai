@@ -39,6 +39,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-08-01** — [Kimi K3: The Complete Developer Guide](<../models/releases/Kimi K3 The Complete Developer Guide.md>) · `releases` · together
+  Together AI's developer guide to Moonshot's Kimi K3, a 2.8T-parameter open-weight model using Kimi Delta Attention, Attention Residuals, and a Stable LatentMoE framework (16-of-896 expert routing via Quantile Balancing and Per-Head Muon); covers 1M-context caching, dynamic tool loading, and benchmark results where K3 leads on SWE Marathon and BrowseComp while trailing Claude Fable 5 and GPT 5.6 Sol on some evals.
 - **2026-06-26** — [What makes a good agent harness](<../agents/harness/What makes a good agent harness.md>) · `harness` · pydantic
   Follow-up to the harness thesis detailing what makes an agent harness good: safe tool access, memory that survives a single model call, guardrails that catch bad actions before they land, and context management that keeps the window full of what matters.
 - **2026-06-22** — [We got local models to triage the OpenClaw repo for FREE!*](<../agents/tool-use/We got local models to triage the OpenClaw repo for FREE!.md>) · `tool-use` · huggingface

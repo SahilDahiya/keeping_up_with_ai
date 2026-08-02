@@ -1,7 +1,9 @@
 # together
 
-79 articles.
+80 articles.
 
+- **2026-08-01** — [Kimi K3: The Complete Developer Guide](<../models/releases/Kimi K3 The Complete Developer Guide.md>) · `releases` · together
+  Together AI's developer guide to Moonshot's Kimi K3, a 2.8T-parameter open-weight model using Kimi Delta Attention, Attention Residuals, and a Stable LatentMoE framework (16-of-896 expert routing via Quantile Balancing and Per-Head Muon); covers 1M-context caching, dynamic tool loading, and benchmark results where K3 leads on SWE Marathon and BrowseComp while trailing Claude Fable 5 and GPT 5.6 Sol on some evals.
 - **2026-07-31** — [Autoscaling endpoints for LLM inference](<../inference/optimization/Autoscaling endpoints for LLM inference.md>) · `optimization` · together
   Together AI details its dedicated-inference autoscaler (proportional control loop, asymmetric scale-up/scale-down windows) and compares 8 scaling metrics; an experiment replaying sine-wave + spike traffic under inflight_requests, ttft-p95, and gpu_utilization policies shows only the concurrency-based inflight_requests metric caught saturation, since continuous batching hid the problem from both TTFT and GPU-utilization signals.
 - **2026-07-29** — [ThunderAgent: 2x Faster Agentic Inference for Synthetic Data Generation at Scale](<../inference/optimization/ThunderAgent 2x Faster Agentic Inference for Synthetic Data Generation at Scale.md>) · `optimization` · together

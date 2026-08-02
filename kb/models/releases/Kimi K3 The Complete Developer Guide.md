@@ -1,10 +1,15 @@
 ---
 title: 'Kimi K3: The Complete Developer Guide'
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: models
+subtopic: releases
+secondary_topics:
+- prompt-engineering/context-engineering
+summary: Together AI's developer guide to Moonshot's Kimi K3, a 2.8T-parameter open-weight
+  model using Kimi Delta Attention, Attention Residuals, and a Stable LatentMoE framework
+  (16-of-896 expert routing via Quantile Balancing and Per-Head Muon); covers 1M-context
+  caching, dynamic tool loading, and benchmark results where K3 leads on SWE Marathon
+  and BrowseComp while trailing Claude Fable 5 and GPT 5.6 Sol on some evals.
 triage: null
 skip_reason: null
 source: together
@@ -12,7 +17,7 @@ url: https://www.together.ai/blog/kimi-k3-guide
 author: Zain Hasan; Shobhit Dixit
 published: '2026-08-01'
 fetched: '2026-08-02T06:52:30Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1534
 content_sha256: a868da58a541cd17c0e9afb99c8984a58b8ae95df4095d0ca54ba6f03b5868db

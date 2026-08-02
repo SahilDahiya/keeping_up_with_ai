@@ -1,7 +1,9 @@
 # models
 
-150 articles.
+151 articles.
 
+- **2026-08-01** — [Kimi K3: The Complete Developer Guide](<releases/Kimi K3 The Complete Developer Guide.md>) · `releases` · together
+  Together AI's developer guide to Moonshot's Kimi K3, a 2.8T-parameter open-weight model using Kimi Delta Attention, Attention Residuals, and a Stable LatentMoE framework (16-of-896 expert routing via Quantile Balancing and Per-Head Muon); covers 1M-context caching, dynamic tool loading, and benchmark results where K3 leads on SWE Marathon and BrowseComp while trailing Claude Fable 5 and GPT 5.6 Sol on some evals.
 - **2026-07-31** — [Fine-tuning Qwen3-TTS for high-quality voice cloning](<fine-tuning/Fine-tuning Qwen3-TTS for high-quality voice cloning.md>) · `fine-tuning` · baseten
   Baseten details a fine-tuning recipe for Qwen3-TTS voice cloning: an ASR-driven pipeline for building utterance-level (audio, text) pairs, talker/sub-talker cross-entropy loss over 12 RVQ codebook frames/sec, a centroid speaker embedding averaged over 64 clips, and warmup+cosine LR decay, trained in ~1 hour on a single H100 for 8 epochs on 1.5 hours of LJ Speech audio, reaching ~130ms TTFA (vs ~154ms for ICL cloning).
 - **2026-07-30** — [22,580: GPT-2 to Kimi K3, explained](<architectures/22,580 GPT-2 to Kimi K3, explained.md>) · `architectures` · baseten
