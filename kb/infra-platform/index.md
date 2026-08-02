@@ -1,6 +1,6 @@
 # infra-platform
 
-43 articles.
+39 articles.
 
 - **2026-07-21** — [Devin Outposts on Modal | Modal Blog](<deployment/Devin Outposts on Modal Modal Blog.md>) · `deployment` · modal
   Modal's open-source modal-devin library lets Cognition's Devin coding agent execute in user-controlled Modal Sandboxes (GPU-backed, custom images, snapshot suspend/resume) while its reasoning stays in Cognition's cloud, splitting the agent's control-plane queue from a self-hosted data-plane orchestrator and worker.
@@ -76,18 +76,10 @@
   Covers CI/CD practices for AI model deployments, including versioning, release flow, and operational safety.
 - **2024-03-14** — [Lambda on hard mode: Inside Modal's web infrastructure](<deployment/Lambda on hard mode Inside Modal's web infrastructure.md>) · `deployment` · modal
   Deep dive into Modal web infrastructure, including serverless HTTP routing, isolation, and platform architecture.
-- **2023-01-08** — [Self-serve feature platforms: architectures and APIs](<deployment/Self-serve feature platforms architectures and APIs.md>) · `deployment` · chip-huyen
-  Breaks down self-serve feature-platform architecture and APIs, covering feature definitions, pipelines, storage, discovery, and ergonomics for ML teams that need reusable production features.
 - **2022-12-05** — [Overcoming communication bottlenecks for decentralized training, part 2](<gpu-clusters/Overcoming communication bottlenecks for decentralized training, part 2.md>) · `gpu-clusters` · together
   Continues the decentralized training discussion with techniques for communication-efficient optimization.
 - **2022-11-30** — [Overcoming communication bottlenecks for decentralized training, part 1](<gpu-clusters/Overcoming communication bottlenecks for decentralized training, part 1.md>) · `gpu-clusters` · together
   Explains communication bottlenecks in decentralized foundation-model training.
-- **2022-08-03** — [Introduction to streaming for data scientists](<deployment/Introduction to streaming for data scientists.md>) · `deployment` · chip-huyen
-  Introduces stream processing for ML systems, comparing batch and streaming architectures, event-time semantics, joins, windows, and why streaming underpins real-time features.
-- **2021-09-13** — [Why data scientists shouldn’t need to know Kubernetes](<deployment/Why data scientists shouldn’t need to know Kubernetes.md>) · `deployment` · chip-huyen
-  Argues that data scientists should consume self-serve infrastructure abstractions rather than raw Kubernetes, outlining platform requirements for development, deployment, and operational ownership.
-- **2020-06-22** — [What I learned from looking at 200 machine learning tools](<deployment/What I learned from looking at 200 machine learning tools.md>) · `deployment` · chip-huyen
-  Analyzes 200 machine learning tools and maps the MLOps stack across data pipelines, training, deployment, monitoring, labeling, and orchestration for production ML systems.
 
 ## Also relevant (filed elsewhere)
 
@@ -181,8 +173,6 @@
   Llama 3.2 adds 11B/90B vision models (cross-attention adapter over a frozen text backbone, via the new MllamaForConditionalGeneration) and 1B/3B on-device text models, plus a vision-capable Llama Guard 3 and a 1B Llama Guard for input/output safety classification.
 - **2024-08-13** — [Introduction to ggml](<../inference/kernels/Introduction to ggml.md>) · `kernels` · huggingface
   A hands-on introduction to ggml — the C/C++ tensor library behind llama.cpp, whisper.cpp, ollama and LM Studio — covering its context/graph memory model, GGUF file format, quantized tensor types, and backend dispatch (CPU/CUDA/Metal) via a worked matrix-multiplication example.
-- **2024-07-25** — [Building A Generative AI Platform](<../product-engineering/architecture/Building A Generative AI Platform.md>) · `architecture` · chip-huyen
-  Reference architecture for generative AI platforms covering context construction and RAG, guardrails, gateways and routers, caching, observability, orchestration, and tool/action layers.
 - **2024-07-11** — [Using asynchronous inference in production](<../inference/serving/Using asynchronous inference in production.md>) · `serving` · baseten
   Explains asynchronous inference patterns for production model-serving workloads.
 - **2024-06-13** — [From DeepSpeed to FSDP and Back Again with Hugging Face Accelerate](<../models/training/From DeepSpeed to FSDP and Back Again with Hugging Face Accelerate.md>) · `training` · huggingface
@@ -193,10 +183,6 @@
   Walks through a custom Inference Endpoints handler that chains Whisper-large-v3 ASR, Pyannote diarization and speculative decoding (with a distil-whisper assistant model and SDPA/Flash Attention 2) into one deployable pipeline, including the pre/post-processing needed to align transcript timestamps with speaker turns.
 - **2024-03-28** — [Using fractional H100 GPUs for efficient model serving](<../inference/serving/Using fractional H100 GPUs for efficient model serving.md>) · `serving` · baseten
   Explains fractional H100 usage for efficient model serving and better GPU utilization.
-- **2024-03-14** — [What I learned from looking at 900 most popular open source AI tools](<../industry/trends/What I learned from looking at 900 most popular open source AI tools.md>) · `trends` · chip-huyen
-  Maps 900 open-source AI tools into infrastructure, model-development, and application-development layers, highlighting growth in agents, prompt engineering, vector search, evaluation, and inference tooling.
-- **2024-02-28** — [Predictive Human Preference: From Model Ranking to Model Routing](<../evals-observability/benchmark-design/Predictive Human Preference From Model Ranking to Model Routing.md>) · `benchmark-design` · chip-huyen
-  Describes predictive human preference for model ranking and model routing, using preference models and evaluations to choose among LLMs by quality, cost, and latency.
 - **2024-02-20** — [Why GPU utilization matters for model inference](<../inference/hardware/Why GPU utilization matters for model inference.md>) · `hardware` · baseten
   Explains why GPU utilization is central to inference cost and performance.
 - **2024-02-16** — [Synthetic data: save money, time and carbon with open source](<../models/fine-tuning/Synthetic data save money, time and carbon with open source.md>) · `fine-tuning` · huggingface
@@ -211,9 +197,3 @@
   Compares NVIDIA A10 and A100 GPUs for LLM and Stable Diffusion inference workloads.
 - **2023-04-27** — [Comparing NVIDIA GPUs for AI: T4 vs A10](<../inference/hardware/Comparing NVIDIA GPUs for AI T4 vs A10.md>) · `hardware` · baseten
   Compares NVIDIA T4 and A10 GPUs for AI inference workloads and cost-performance tradeoffs.
-- **2022-01-02** — [Real-time machine learning: challenges and solutions](<../product-engineering/architecture/Real-time machine learning challenges and solutions.md>) · `architecture` · chip-huyen
-  Deep dive on real-time ML systems covering online prediction, feature freshness, stream processing, monitoring, feedback delays, and the tradeoffs needed to serve adaptive models in production.
-- **2020-12-30** — [Machine Learning Tools Landscape v2 (+84 new tools)](<../industry/trends/Machine Learning Tools Landscape v2 (+84 new tools).md>) · `trends` · chip-huyen
-  Updates the MLOps tooling landscape to 284 tools and identifies deployment, monitoring, serving hardware, and regional infrastructure divergence as major production-ML trends.
-- **2020-12-27** — [Machine learning is going real-time](<../product-engineering/architecture/Machine learning is going real-time.md>) · `architecture` · chip-huyen
-  Explains the shift from batch prediction to online ML, covering streaming features, low-latency inference, fresh feedback loops, and the architectural constraints behind real-time applications.

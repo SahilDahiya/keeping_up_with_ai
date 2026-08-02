@@ -77,8 +77,6 @@
   Shows that making a CodeAgent emit its thoughts and code as structured JSON (rather than free-form markdown code blocks) beats both plain CodeAgents and JSON ToolCallingAgents on SmolBench (GAIA, MATH, SimpleQA, Frames), with the gain concentrated in larger models; smaller models can be hurt by the added format constraint.
 - **2025-03-20** — [The "think" tool: Enabling Claude to stop and think](<../agents/tool-use/The think tool Enabling Claude to stop and think.md>) · `tool-use` · anthropic-engineering
   Adding a no-op 'think' tool gives Claude space for intermediate reasoning mid-task, significantly improving policy-heavy agentic benchmarks like tau-bench.
-- **2025-01-16** — [Common pitfalls when building generative AI applications](<../product-engineering/architecture/Common pitfalls when building generative AI applications.md>) · `architecture` · chip-huyen
-  Covers common generative-AI application pitfalls, including overusing LLMs, confusing product problems with model failures, premature framework complexity, and weak evaluation/product iteration.
 - **2024-11-25** — [Long Context Fine-Tuning: A Technical Deep Dive](<../models/fine-tuning/Long Context Fine-Tuning A Technical Deep Dive.md>) · `fine-tuning` · together
   Technical deep dive into long-context fine-tuning.
 - **2024-09-05** — [Speculative decoding for high-throughput long-context inference](<../inference/speculative-decoding/Speculative decoding for high-throughput long-context inference.md>) · `speculative-decoding` · together

@@ -1,6 +1,6 @@
 # agents
 
-82 articles.
+81 articles.
 
 - **2026-07-31** — [When agents improve agents: loops that improve themselves](<harness/When agents improve agents loops that improve themselves.md>) · `harness` · pydantic
   Third in Pydantic's harness series: proposes moving the 'keep going or stop' decision inside the agent loop (via retry-verdict guardrails and Macroscope self-review), backing it with BM25 conversation search and persistent memory over prior runs, and closing the loop with a self-grading judge — but warns that LLM judges suffer position/self-preference bias and must be calibrated against a human, graded per-dimension, and version-tracked (ties into Pydantic Logfire's managed prompts, online evals, and GEPA prompt optimization).
@@ -136,8 +136,6 @@
   Adding a no-op 'think' tool gives Claude space for intermediate reasoning mid-task, significantly improving policy-heavy agentic benchmarks like tau-bench.
 - **2025-02-04** — [Open-source DeepResearch – Freeing our search agents](<tool-use/Open-source DeepResearch – Freeing our search agents.md>) · `tool-use` · huggingface
   Open reproduction of OpenAI's Deep Research: a smolagents CodeAgent (Python-action instead of JSON tool calls) with a text web browser and file inspector reaches 55% on GAIA validation vs OpenAI's ~67%, with analysis of where browser interaction is the bottleneck.
-- **2025-01-07** — [Agents](<planning/Agents.md>) · `planning` · chip-huyen
-  Framework for foundation-model agents covering environments, tools, planning, action selection, failure modes, and evaluation for multi-step agentic applications.
 - **2024-12-31** — [Introducing smolagents: simple agents that write actions in code.](<tool-use/Introducing smolagents simple agents that write actions in code.md>) · `tool-use` · huggingface
   Introduces smolagents and argues for code agents: having the LLM write executable Python actions instead of emitting JSON tool calls yields fewer steps and better benchmark performance, since code composes, loops and reuses variables natively. Frames 'agency' as a spectrum, and covers the sandboxed execution and multi-agent/managed-agent primitives in ~1,000 lines of library code.
 - **2024-12-19** — [Building Effective AI Agents](<planning/Building Effective AI Agents.md>) · `planning` · anthropic-engineering
@@ -311,8 +309,6 @@
   Explains multi-component AI workflows with Chains, including orchestration across model and application steps.
 - **2024-06-23** — [How Cursor built Fast Apply using the Speculative Decoding API](<../inference/speculative-decoding/How Cursor built Fast Apply using the Speculative Decoding API.md>) · `speculative-decoding` · fireworks
   Case study of Cursor Fast Apply using speculative decoding to reduce coding-assistant latency.
-- **2024-03-14** — [What I learned from looking at 900 most popular open source AI tools](<../industry/trends/What I learned from looking at 900 most popular open source AI tools.md>) · `trends` · chip-huyen
-  Maps 900 open-source AI tools into infrastructure, model-development, and application-development layers, highlighting growth in agents, prompt engineering, vector search, evaluation, and inference tooling.
 - **2024-02-20** — [Why do all LLMs need structured output modes?](<../prompt-engineering/structured-output/Why do all LLMs need structured output modes.md>) · `structured-output` · fireworks
   Explains why structured-output modes matter for reliable LLM applications and tool-calling systems.
 - **2024-01-31** — [Function calling and JSON mode](<../prompt-engineering/structured-output/Function calling and JSON mode.md>) · `structured-output` · together

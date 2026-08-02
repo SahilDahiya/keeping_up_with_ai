@@ -1,6 +1,6 @@
 # product-engineering
 
-53 articles.
+48 articles.
 
 - **2026-07-29** — [Agency: Secure, scalable sandboxes for agents](<architecture/Agency Secure, scalable sandboxes for agents.md>) · `architecture` · sierra
   Sierra describes Agency, its Kubernetes-based agent-sandbox orchestration layer powering Pinecone and Ghostwriter: a stateless control plane provisioning per-runner pods with dedicated IAM roles and an LLM proxy for just-in-time key injection, plus a hibernation design that models each runner as a finite state machine restorable from an append-only checkpoint/event log (p50 8ms, p99 40ms round trips) to reclaim compute from the 2-4 orders of magnitude of idle agents.
@@ -80,14 +80,10 @@
   Production case study on building an AI agent from zero to one, with lessons about scope, rollout, and operational constraints.
 - **2025-02-25** — [FastRTC: The Real-Time Communication Library for Python](<architecture/FastRTC The Real-Time Communication Library for Python.md>) · `architecture` · huggingface
   FastRTC builds real-time voice/video AI apps in Python over WebRTC or WebSockets: built-in voice activity detection and turn-taking (ReplyOnPause), automatic Gradio UI, phone-call ingress, and mounting streams onto FastAPI.
-- **2025-01-16** — [Common pitfalls when building generative AI applications](<architecture/Common pitfalls when building generative AI applications.md>) · `architecture` · chip-huyen
-  Covers common generative-AI application pitfalls, including overusing LLMs, confusing product problems with model failures, premature framework complexity, and weak evaluation/product iteration.
 - **2024-12-03** — [Investing in Performance: Fine-tune small models with LLM insights - a CFM case study](<case-studies/Investing in Performance Fine-tune small models with LLM insights - a CFM case study.md>) · `case-studies` · huggingface
   CFM (quant hedge fund) case study: use an LLM to label financial NER data, distill that into a compact fine-tuned model, and deploy it on Inference Endpoints — with an F1 and $/hour table showing the fine-tuned small model beating zero-shot LLM accuracy at a fraction of the inference cost.
 - **2024-08-06** — [Compound AI systems explained](<architecture/Compound AI systems explained.md>) · `architecture` · baseten
   Explains compound AI systems and how multiple models, tools, and control logic combine into applications.
-- **2024-07-25** — [Building A Generative AI Platform](<architecture/Building A Generative AI Platform.md>) · `architecture` · chip-huyen
-  Reference architecture for generative AI platforms covering context construction and RAG, guardrails, gateways and routers, caching, observability, orchestration, and tool/action layers.
 - **2024-07-09** — [Banque des Territoires (CDC Group) x Polyconseil x Hugging Face: Enhancing a Major French Environmental Program with a Sovereign Data Solution](<case-studies/Banque des Territoires (CDC Group) x Polyconseil x Hugging Face Enhancing a Major French Environmental Program with a Sovereign Data Solution.md>) · `case-studies` · huggingface
   Banque des Territoires (CDC) x Polyconseil build a sovereign, on-prem RAG assistant for the EduRénov program using open models (Mistral-7B-Instruct, Sentence Transformers, TGI): retriever/reader architecture, data-sovereignty constraints, and production lessons.
 - **2024-07-02** — [Building multi-component AI workflows at scale with Chains](<architecture/Building multi-component AI workflows at scale with Chains.md>) · `architecture` · baseten
@@ -100,12 +96,6 @@
   Shows how to serve Zama Concrete ML models under Fully Homomorphic Encryption on HF Inference Endpoints via custom inference handlers, so a spam classifier runs on ciphertext without ever seeing the plaintext message; also covers compiling your own FHE-friendly model.
 - **2024-02-26** — [AI Watermarking 101: Tools and Techniques](<security/AI Watermarking 101 Tools and Techniques.md>) · `security` · huggingface
   Surveys watermarking for AI-generated content: for images, in-generation methods (Stable Signature) vs post-hoc (Truepic/Imatag, C2PA metadata); for LLM text, logit-biasing green/red token lists at sampling time and the detection statistics behind them, plus SynthID-Text in transformers. Discusses robustness to editing and the short-text detection confidence limit.
-- **2023-04-11** — [Building LLM applications for production](<architecture/Building LLM applications for production.md>) · `architecture` · chip-huyen
-  Practical guide to production LLM applications covering task decomposition, retrieval, prompt construction, evaluation, monitoring, and latency/cost tradeoffs.
-- **2022-01-02** — [Real-time machine learning: challenges and solutions](<architecture/Real-time machine learning challenges and solutions.md>) · `architecture` · chip-huyen
-  Deep dive on real-time ML systems covering online prediction, feature freshness, stream processing, monitoring, feedback delays, and the tradeoffs needed to serve adaptive models in production.
-- **2020-12-27** — [Machine learning is going real-time](<architecture/Machine learning is going real-time.md>) · `architecture` · chip-huyen
-  Explains the shift from batch prediction to online ML, covering streaming features, low-latency inference, fresh feedback loops, and the architectural constraints behind real-time applications.
 - **2020-06-30** — [3 Key Concepts for Creating AI Product Experiences](<ux-patterns/3 Key Concepts for Creating AI Product Experiences.md>) · `ux-patterns` · cresta
   Covers product-design principles for understandable AI experiences, including how users form trust and interpret system behavior.
 
@@ -187,15 +177,5 @@
   TGI 1.4 adds an OpenAI Chat Completions-compatible Messages API, so open models on Inference Endpoints become a drop-in swap for GPT-4 by only changing base_url and api_key — shown with the OpenAI Python/JS clients, LangChain and LlamaIndex, and a Nous-Hermes-2-Mixtral migration.
 - **2024-01-26** — [An Introduction to AI Secure LLM Safety Leaderboard](<../evals-observability/benchmark-design/An Introduction to AI Secure LLM Safety Leaderboard.md>) · `benchmark-design` · huggingface
   The AI Secure LLM Safety Leaderboard runs the DecodingTrust benchmark, scoring models across eight trustworthiness axes (toxicity, stereotype bias, adversarial and out-of-distribution robustness, privacy leakage, machine ethics, fairness) rather than capability alone.
-- **2023-10-10** — [Multimodality and Large Multimodal Models (LMMs)](<../models/multimodal/Multimodality and Large Multimodal Models (LMMs).md>) · `multimodal` · chip-huyen
-  Explains large multimodal model architecture and training patterns, modality fusion, data challenges, and product capabilities unlocked by image, text, audio, and video models.
-- **2023-01-08** — [Self-serve feature platforms: architectures and APIs](<../infra-platform/deployment/Self-serve feature platforms architectures and APIs.md>) · `deployment` · chip-huyen
-  Breaks down self-serve feature-platform architecture and APIs, covering feature definitions, pipelines, storage, discovery, and ergonomics for ML teams that need reusable production features.
-- **2022-08-03** — [Introduction to streaming for data scientists](<../infra-platform/deployment/Introduction to streaming for data scientists.md>) · `deployment` · chip-huyen
-  Introduces stream processing for ML systems, comparing batch and streaming architectures, event-time semantics, joins, windows, and why streaming underpins real-time features.
-- **2022-02-07** — [Data Distribution Shifts and Monitoring](<../evals-observability/monitoring/Data Distribution Shifts and Monitoring.md>) · `monitoring` · chip-huyen
-  Taxonomy of covariate, label, and concept shifts with production monitoring strategies, data-quality checks, slice analysis, alerting tradeoffs, and examples of real-world ML failure modes.
-- **2021-09-13** — [Why data scientists shouldn’t need to know Kubernetes](<../infra-platform/deployment/Why data scientists shouldn’t need to know Kubernetes.md>) · `deployment` · chip-huyen
-  Argues that data scientists should consume self-serve infrastructure abstractions rather than raw Kubernetes, outlining platform requirements for development, deployment, and operational ownership.
 - **2021-01-29** — [How We Reduced Our Labeling Cost by 10x](<../evals-observability/evaluation/How We Reduced Our Labeling Cost by 10x.md>) · `evaluation` · cresta
   Explains how labeling costs were reduced through process and model-assisted annotation changes, relevant to eval dataset operations.

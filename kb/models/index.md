@@ -1,6 +1,6 @@
 # models
 
-154 articles.
+150 articles.
 
 - **2026-07-31** — [Fine-tuning Qwen3-TTS for high-quality voice cloning](<fine-tuning/Fine-tuning Qwen3-TTS for high-quality voice cloning.md>) · `fine-tuning` · baseten
   Baseten details a fine-tuning recipe for Qwen3-TTS voice cloning: an ASR-driven pipeline for building utterance-level (audio, text) pairs, talker/sub-talker cross-entropy loss over 12 RVQ codebook frames/sec, a centroid speaker embedding averaged over 64 clips, and warmup+cosine LR decay, trained in ~1 hour on a single H100 for 8 epochs on 1.5 hours of LJ Speech audio, reaching ~130ms TTFA (vs ~154ms for ICL cloning).
@@ -280,24 +280,16 @@
   Reproduces Anthropic's Constitutional AI with open models: self-critique/revision against written principles produces an AI-feedback preference dataset used to DPO-align Mistral-7B, yielding the mistral-7b-anthropic model.
 - **2024-01-18** — [Preference Tuning LLMs with Direct Preference Optimization Methods](<fine-tuning/Preference Tuning LLMs with Direct Preference Optimization Methods.md>) · `fine-tuning` · huggingface
   Empirical head-to-head of DPO vs IPO vs KTO in TRL on two SFT'd 7B models (Zephyr and OpenHermes), sweeping the beta hyperparameter and scoring on MT-Bench; finds DPO/IPO roughly on par and beating KTO in the paired-preference setting, with beta mattering more than algorithm choice. Includes an errata where a summed-vs-averaged log-likelihood bug in TRL's IPO loss changed the results.
-- **2024-01-16** — [Generation configurations: temperature, top-k, top-p, and test time compute](<reasoning/Generation configurations temperature, top-k, top-p, and test time compute.md>) · `reasoning` · chip-huyen
-  Explains decoding parameters such as temperature, top-k, top-p, and test-time compute, connecting generation configuration to reliability, diversity, latency, and cost.
 - **2023-12-08** — [StripedHyena-7B and efficient architectures beyond Transformers](<reasoning/StripedHyena-7B and efficient architectures beyond Transformers.md>) · `reasoning` · together
   Introduces StripedHyena-7B and efficient architectures beyond Transformers.
 - **2023-10-30** — [RedPajama-Data-v2: An open dataset with 30 trillion tokens for training large language models](<fine-tuning/RedPajama-Data-v2 An open dataset with 30 trillion tokens for training large language models.md>) · `fine-tuning` · together
   Introduces RedPajama-Data-v2, a large web dataset for training language models.
-- **2023-10-10** — [Multimodality and Large Multimodal Models (LMMs)](<multimodal/Multimodality and Large Multimodal Models (LMMs).md>) · `multimodal` · chip-huyen
-  Explains large multimodal model architecture and training patterns, modality fusion, data challenges, and product capabilities unlocked by image, text, audio, and video models.
-- **2023-08-16** — [Open challenges in LLM research](<reasoning/Open challenges in LLM research.md>) · `reasoning` · chip-huyen
-  Surveys open LLM research problems around hallucination, context length, efficiency, multimodality, agents, evaluation, and post-training behavior that shape engineering constraints.
 - **2023-07-25** — [Monarch Mixer: A new model architecture for increased efficiency](<reasoning/Monarch Mixer A new model architecture for increased efficiency.md>) · `reasoning` · together
   Introduces Monarch Mixer as an efficient model architecture.
 - **2023-07-12** — [Multi-Query Attention is All You Need](<reasoning/Multi-Query Attention is All You Need.md>) · `reasoning` · fireworks
   Explains multi-query attention and why attention variants matter for efficient LLM inference.
 - **2023-06-15** — [Three techniques to adapt LLMs for any use case](<fine-tuning/Three techniques to adapt LLMs for any use case.md>) · `fine-tuning` · baseten
   Explains prompt engineering, fine-tuning, and related techniques for adapting LLMs to use cases.
-- **2023-05-02** — [RLHF: Reinforcement Learning from Human Feedback](<reinforcement-learning/RLHF Reinforcement Learning from Human Feedback.md>) · `reinforcement-learning` · chip-huyen
-  Explains the RLHF pipeline from preference data through reward modeling and policy optimization, including why human feedback changes model behavior and where evaluation matters.
 - **2023-01-23** — [FlashConv: speeding up state space models](<reasoning/FlashConv speeding up state space models.md>) · `reasoning` · together
   Explains FlashConv and efficient state-space model execution.
 - **2022-11-17** — [HELM: benchmarking large language models on the Together Research Computer](<benchmarks/HELM benchmarking large language models on the Together Research Computer.md>) · `benchmarks` · together
@@ -533,8 +525,6 @@
   Accelerates SetFit few-shot text classification inference by 7.8x on Intel Xeon (Sapphire Rapids) using Optimum Intel + OpenVINO post-training quantization to int8, with an accuracy-drop constraint; includes the few-shot accuracy context where SetFit beats 3-shot GPT-3.5/GPT-4 on Banking77.
 - **2024-03-05** — [Introducing ConTextual: How well can your Multimodal model jointly reason over text and image in text-rich scenes?](<../evals-observability/benchmark-design/Introducing ConTextual How well can your Multimodal model jointly reason over text and image in text-rich scenes.md>) · `benchmark-design` · huggingface
   ConTextual is a benchmark and leaderboard for context-sensitive text-rich visual reasoning (reading text in images to answer instructions); uses GPT-4 as judge plus human evaluation, showing a large gap between GPT-4V and open LMMs.
-- **2024-02-28** — [Predictive Human Preference: From Model Ranking to Model Routing](<../evals-observability/benchmark-design/Predictive Human Preference From Model Ranking to Model Routing.md>) · `benchmark-design` · chip-huyen
-  Describes predictive human preference for model ranking and model routing, using preference models and evaluations to choose among LLMs by quality, cost, and latency.
 - **2024-02-22** — [40% faster Stable Diffusion XL inference with NVIDIA TensorRT](<../inference/optimization/40% faster Stable Diffusion XL inference with NVIDIA TensorRT.md>) · `optimization` · baseten
   Explains TensorRT optimization for Stable Diffusion XL inference, including latency and throughput gains.
 - **2024-02-02** — [NPHardEval Leaderboard: Unveiling the Reasoning Abilities of Large Language Models through Complexity Classes and Dynamic Updates](<../evals-observability/benchmark-design/NPHardEval Leaderboard Unveiling the Reasoning Abilities of Large Language Models through Complexity Classes and Dynamic Updates.md>) · `benchmark-design` · huggingface

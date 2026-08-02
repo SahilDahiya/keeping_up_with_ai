@@ -1,6 +1,6 @@
 # evals-observability
 
-100 articles.
+98 articles.
 
 - **2026-07-21** — [What I Learned by Dogfooding Our Own AI Agent, Signal](<evaluation/What I Learned by Dogfooding Our Own AI Agent, Signal.md>) · `evaluation` · cresta
   Cresta dogfooded its Synthetic Customers tool (personas built from real conversation data) against its own website AI agent, Signal, to test the agent against realistic non-happy-path visitors (impatient, adversarial, or channel-switching) instead of idealized test cases.
@@ -176,8 +176,6 @@
   Benchmarks Mistral 7B inference performance and the serving choices that affect throughput and latency.
 - **2024-03-05** — [Introducing ConTextual: How well can your Multimodal model jointly reason over text and image in text-rich scenes?](<benchmark-design/Introducing ConTextual How well can your Multimodal model jointly reason over text and image in text-rich scenes.md>) · `benchmark-design` · huggingface
   ConTextual is a benchmark and leaderboard for context-sensitive text-rich visual reasoning (reading text in images to answer instructions); uses GPT-4 as judge plus human evaluation, showing a large gap between GPT-4V and open LMMs.
-- **2024-02-28** — [Predictive Human Preference: From Model Ranking to Model Routing](<benchmark-design/Predictive Human Preference From Model Ranking to Model Routing.md>) · `benchmark-design` · chip-huyen
-  Describes predictive human preference for model ranking and model routing, using preference models and evaluations to choose among LLMs by quality, cost, and latency.
 - **2024-02-23** — [Introducing the Red-Teaming Resistance Leaderboard](<benchmark-design/Introducing the Red-Teaming Resistance Leaderboard.md>) · `benchmark-design` · huggingface
   The Red-Teaming Resistance Leaderboard scores frontier LLMs on robustness against adversarial prompts drawn from real red-teaming datasets (AdvBench, AART, HarmBench, Beavertails, plus Haize's own attacks), reporting attack success rates per harm category rather than a single safety number.
 - **2024-02-20** — [Introducing the Open Ko-LLM Leaderboard: Leading the Korean LLM Evaluation Ecosystem](<benchmark-design/Introducing the Open Ko-LLM Leaderboard Leading the Korean LLM Evaluation Ecosystem.md>) · `benchmark-design` · huggingface
@@ -198,8 +196,6 @@
   Explains LLM inference performance benchmarks and how to interpret serving metrics.
 - **2023-10-10** — **[Paper]** [SWE-bench: Can Language Models Resolve Real-World GitHub Issues?](<benchmark-design/[Paper] SWE-bench Can Language Models Resolve Real-World GitHub Issues.md>) · `benchmark-design` · arxiv
   A benchmark of 2,294 real GitHub issue+PR task instances across 12 Python repositories where a model must produce a patch that passes the repo's hidden test suite. Exposes how hard real-world software engineering is for LLMs (early frontier models solved only low-single-digit %) and became the canonical agentic-coding eval; ships an execution harness and the widely-used SWE-bench Lite/Verified subsets.
-- **2022-02-07** — [Data Distribution Shifts and Monitoring](<monitoring/Data Distribution Shifts and Monitoring.md>) · `monitoring` · chip-huyen
-  Taxonomy of covariate, label, and concept shifts with production monitoring strategies, data-quality checks, slice analysis, alerting tradeoffs, and examples of real-world ML failure modes.
 - **2021-01-29** — [How We Reduced Our Labeling Cost by 10x](<evaluation/How We Reduced Our Labeling Cost by 10x.md>) · `evaluation` · cresta
   Explains how labeling costs were reduced through process and model-assisted annotation changes, relevant to eval dataset operations.
 
@@ -287,10 +283,6 @@
   Architecture case study on scaling real-time AI insights with ClickHouse for high-volume conversation analytics.
 - **2025-01-27** — [Beyond Supervised Fine Tuning: How Reinforcement Learning Empowers AI with Minimal Labels](<../models/reinforcement-learning/Beyond Supervised Fine Tuning How Reinforcement Learning Empowers AI with Minimal Labels.md>) · `reinforcement-learning` · fireworks
   Explains reinforcement learning with verifiable rewards as a way to improve models with minimal labels.
-- **2025-01-16** — [Common pitfalls when building generative AI applications](<../product-engineering/architecture/Common pitfalls when building generative AI applications.md>) · `architecture` · chip-huyen
-  Covers common generative-AI application pitfalls, including overusing LLMs, confusing product problems with model failures, premature framework complexity, and weak evaluation/product iteration.
-- **2025-01-07** — [Agents](<../agents/planning/Agents.md>) · `planning` · chip-huyen
-  Framework for foundation-model agents covering environments, tools, planning, action selection, failure modes, and evaluation for multi-step agentic applications.
 - **2024-10-22** — [Evaluating NVIDIA H200 Tensor Core GPUs for LLM inference](<../inference/hardware/Evaluating NVIDIA H200 Tensor Core GPUs for LLM inference.md>) · `hardware` · baseten
   Evaluates NVIDIA H200 GPUs for LLM inference and compares their serving performance characteristics.
 - **2024-10-01** — [🇨🇿 BenCzechMark - Can your LLM Understand Czech?](<../models/benchmarks/🇨🇿 BenCzechMark - Can your LLM Understand Czech.md>) · `benchmarks` · huggingface
@@ -321,17 +313,7 @@
   Introduces LLM inference performance benchmarking and the metrics needed to compare serving systems.
 - **2023-10-05** — **[Paper]** [DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines](<../prompt-engineering/techniques/[Paper] DSPy Compiling Declarative Language Model Calls into Self-Improving Pipelines.md>) · `techniques` · arxiv
   Reframes LLM pipelines as declarative modules with typed input/output signatures, compiled by optimizers (teleprompters) that bootstrap few-shot demonstrations and instructions against a metric instead of hand-tuned prompt strings. Compiled DSPy programs on GSM8K and multi-hop QA beat hand-crafted prompt chains and often let small open models rival few-shot GPT-3.5 — the foundational 'programming, not prompting' / prompt-optimization framework.
-- **2023-08-16** — [Open challenges in LLM research](<../models/reasoning/Open challenges in LLM research.md>) · `reasoning` · chip-huyen
-  Surveys open LLM research problems around hallucination, context length, efficiency, multimodality, agents, evaluation, and post-training behavior that shape engineering constraints.
-- **2023-05-02** — [RLHF: Reinforcement Learning from Human Feedback](<../models/reinforcement-learning/RLHF Reinforcement Learning from Human Feedback.md>) · `reinforcement-learning` · chip-huyen
-  Explains the RLHF pipeline from preference data through reward modeling and policy optimization, including why human feedback changes model behavior and where evaluation matters.
-- **2023-04-11** — [Building LLM applications for production](<../product-engineering/architecture/Building LLM applications for production.md>) · `architecture` · chip-huyen
-  Practical guide to production LLM applications covering task decomposition, retrieval, prompt construction, evaluation, monitoring, and latency/cost tradeoffs.
 - **2022-11-17** — [HELM: benchmarking large language models on the Together Research Computer](<../models/benchmarks/HELM benchmarking large language models on the Together Research Computer.md>) · `benchmarks` · together
   Describes HELM benchmarking on the Together Research Computer.
 - **2022-02-10** — [Why Transcription is Vital to Contact Center AI](<../models/multimodal/Why Transcription is Vital to Contact Center AI.md>) · `multimodal` · cresta
   Explains why transcription quality is a core dependency for downstream AI systems that operate on spoken conversations.
-- **2022-01-02** — [Real-time machine learning: challenges and solutions](<../product-engineering/architecture/Real-time machine learning challenges and solutions.md>) · `architecture` · chip-huyen
-  Deep dive on real-time ML systems covering online prediction, feature freshness, stream processing, monitoring, feedback delays, and the tradeoffs needed to serve adaptive models in production.
-- **2020-06-22** — [What I learned from looking at 200 machine learning tools](<../infra-platform/deployment/What I learned from looking at 200 machine learning tools.md>) · `deployment` · chip-huyen
-  Analyzes 200 machine learning tools and maps the MLOps stack across data pipelines, training, deployment, monitoring, labeling, and orchestration for production ML systems.

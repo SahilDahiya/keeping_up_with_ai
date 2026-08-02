@@ -1,6 +1,6 @@
 # inference
 
-125 articles.
+124 articles.
 
 - **2026-07-31** — [Autoscaling endpoints for LLM inference](<optimization/Autoscaling endpoints for LLM inference.md>) · `optimization` · together
   Together AI details its dedicated-inference autoscaler (proportional control loop, asymmetric scale-up/scale-down windows) and compares 8 scaling metrics; an experiment replaying sine-wave + spike traffic under inflight_requests, ttft-p95, and gpu_utilization policies shows only the concurrency-based inflight_requests metric caught saturation, since continuous batching hid the problem from both TTFT and GPU-utilization signals.
@@ -250,8 +250,6 @@
   Introduces FlashAttention-2 and its impact on training and inference speed.
 - **2023-04-27** — [Comparing NVIDIA GPUs for AI: T4 vs A10](<hardware/Comparing NVIDIA GPUs for AI T4 vs A10.md>) · `hardware` · baseten
   Compares NVIDIA T4 and A10 GPUs for AI inference workloads and cost-performance tradeoffs.
-- **2021-09-07** — [A friendly introduction to machine learning compilers and optimizers](<kernels/A friendly introduction to machine learning compilers and optimizers.md>) · `kernels` · chip-huyen
-  Introduces machine-learning compilers and optimizers, explaining graph-level and operator-level optimizations, hardware targets, and why compiler stacks matter for model speed and deployment.
 
 ## Also relevant (filed elsewhere)
 
@@ -375,8 +373,6 @@
   Explains BASED linear-attention language models and the recall-throughput tradeoff.
 - **2024-02-20** — [BitDelta: Your Fine-Tune May Only Be Worth One Bit](<../models/fine-tuning/BitDelta Your Fine-Tune May Only Be Worth One Bit.md>) · `fine-tuning` · together
   Explains BitDelta and how small weight deltas can represent fine-tuned model changes.
-- **2024-01-16** — [Generation configurations: temperature, top-k, top-p, and test time compute](<../models/reasoning/Generation configurations temperature, top-k, top-p, and test time compute.md>) · `reasoning` · chip-huyen
-  Explains decoding parameters such as temperature, top-k, top-p, and test-time compute, connecting generation configuration to reliability, diversity, latency, and cost.
 - **2024-01-12** — [Understanding performance benchmarks for LLM inference](<../evals-observability/benchmark-design/Understanding performance benchmarks for LLM inference.md>) · `benchmark-design` · baseten
   Explains LLM inference performance benchmarks and how to interpret serving metrics.
 - **2023-12-08** — [StripedHyena-7B and efficient architectures beyond Transformers](<../models/reasoning/StripedHyena-7B and efficient architectures beyond Transformers.md>) · `reasoning` · together

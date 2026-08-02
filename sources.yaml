@@ -150,10 +150,7 @@ sources:
   # blog, not a vendor marketing feed — removed by explicit request, not on the
   # promo-rot rationale that drove the vendor purges.
 
-  - slug: chip-huyen
-    name: Chip Huyen's Blog
-    home: https://huyenchip.com/blog/
-    feed: https://huyenchip.com/feed.xml
-    sitemap: https://huyenchip.com/sitemap.xml
-    include_regex: "^/\\d{4}/"
-    tags: [independent, ml-systems]
+  # Chip Huyen's Blog removed 2026-07-27 (user-directed): whole source dropped
+  # and all 19 filed articles purged. NB: an independent high-signal ML-systems
+  # blog (timeless foundational writing), not a vendor marketing feed — removed
+  # by explicit request, not on the promo-rot rationale of the vendor purges.
