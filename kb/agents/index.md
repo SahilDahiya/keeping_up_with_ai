@@ -1,6 +1,6 @@
 # agents
 
-81 articles.
+80 articles.
 
 - **2026-07-31** — [When agents improve agents: loops that improve themselves](<harness/When agents improve agents loops that improve themselves.md>) · `harness` · pydantic
   Third in Pydantic's harness series: proposes moving the 'keep going or stop' decision inside the agent loop (via retry-verdict guardrails and Macroscope self-review), backing it with BM25 conversation search and persistent memory over prior runs, and closing the loop with a self-grading judge — but warns that LLM judges suffer position/self-preference bias and must be calibrated against a human, graded per-dimension, and version-tracked (ties into Pydantic Logfire's managed prompts, online evals, and GEPA prompt optimization).
@@ -150,8 +150,6 @@
   Transformers Agents 2.0 introduces ReAct-style CodeAgent and JsonAgent that iterate on past observations, with a code-writing action format, tool definitions and system prompts, benchmarked against LangChain agents.
 - **2024-05-08** — [Code Generation with Large Language Models - Fireworks AI Take](<tool-use/Code Generation with Large Language Models - Fireworks AI Take.md>) · `tool-use` · fireworks
   Discusses code-generation copilots with LLMs, including model behavior, latency, and developer workflow considerations.
-- **2024-05-06** — **[Paper]** [SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering](<harness/[Paper] SWE-agent Agent-Computer Interfaces Enable Automated Software Engineering.md>) · `harness` · arxiv
-  Introduces the Agent-Computer Interface (ACI) as a first-class design surface: custom, LM-friendly commands for viewing, editing, and navigating files and running tests, with guardrails and concise feedback. Shows the interface — not just the underlying model — drives agent performance, lifting SWE-bench solve rates well above prior scaffolds, and argues interface design deserves as much attention as model choice.
 - **2024-02-01** — **[Paper]** [Executable Code Actions Elicit Better LLM Agents](<tool-use/[Paper] Executable Code Actions Elicit Better LLM Agents.md>) · `tool-use` · arxiv
   Argues LLM agents should act by generating executable Python code rather than JSON tool calls or free text. Consolidating actions into code gives one unified action space where the model composes tools, uses control flow, and revises on execution feedback; across 17 LLMs CodeAct achieves up to ~20% higher success with fewer actions than JSON/text baselines. Releases the CodeActInstruct dataset and the open CodeActAgent — the canonical statement of the code-as-action paradigm.
 - **2024-01-24** — [Open-source LLMs as LangChain Agents](<tool-use/Open-source LLMs as LangChain Agents.md>) · `tool-use` · huggingface
