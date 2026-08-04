@@ -1,7 +1,9 @@
 # baseten
 
-72 articles.
+73 articles.
 
+- **2026-08-03** — [Laguna S 2.1 goes Greek: a repository-scale game transformation](<../agents/tool-use/Laguna S 2.1 goes Greek a repository-scale game transformation.md>) · `tool-use` · baseten
+  Baseten case study: Poolside's Laguna S 2.1 (118B MoE, 8B active params, 1M context), running on Baseten Dedicated Inference, autonomously re-themed the 715-file Hypersomnia C++ codebase from cyberpunk to Ancient Greek in under 99 minutes, orchestrating Step 3.7 Flash, Krea 2 Turbo, and NVIDIA Cosmos 3 Nano as sub-models (modifying 954 sprites and 64 code/config files) while deliberately declining to use the video model when it added no value.
 - **2026-07-31** — [Fine-tuning Qwen3-TTS for high-quality voice cloning](<../models/fine-tuning/Fine-tuning Qwen3-TTS for high-quality voice cloning.md>) · `fine-tuning` · baseten
   Baseten details a fine-tuning recipe for Qwen3-TTS voice cloning: an ASR-driven pipeline for building utterance-level (audio, text) pairs, talker/sub-talker cross-entropy loss over 12 RVQ codebook frames/sec, a centroid speaker embedding averaged over 64 clips, and warmup+cosine LR decay, trained in ~1 hour on a single H100 for 8 epochs on 1.5 hours of LJ Speech audio, reaching ~130ms TTFA (vs ~154ms for ICL cloning).
 - **2026-07-30** — [22,580: GPT-2 to Kimi K3, explained](<../models/architectures/22,580 GPT-2 to Kimi K3, explained.md>) · `architectures` · baseten

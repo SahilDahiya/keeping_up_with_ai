@@ -1,10 +1,16 @@
 ---
 title: 'Laguna S 2.1 goes Greek: a repository-scale game transformation'
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: agents
+subtopic: tool-use
+secondary_topics:
+- product-engineering/case-studies
+summary: 'Baseten case study: Poolside''s Laguna S 2.1 (118B MoE, 8B active params,
+  1M context), running on Baseten Dedicated Inference, autonomously re-themed the
+  715-file Hypersomnia C++ codebase from cyberpunk to Ancient Greek in under 99 minutes,
+  orchestrating Step 3.7 Flash, Krea 2 Turbo, and NVIDIA Cosmos 3 Nano as sub-models
+  (modifying 954 sprites and 64 code/config files) while deliberately declining to
+  use the video model when it added no value.'
 triage: null
 skip_reason: null
 source: baseten
@@ -12,7 +18,7 @@ url: https://www.baseten.co/blog/laguna-s-21-goes-greek/
 author: Albert Lee
 published: '2026-08-03'
 fetched: '2026-08-04T06:50:57Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1353
 content_sha256: 49c228262c4de2433ad782a788c603e6ecc44a4155aa82df50c47e8da768032e
