@@ -2,10 +2,14 @@
 title: 'Bringing Cresta''s AI Agent to Avaya Infinity: Inside a New WebSocket Voice
   Integration'
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: product-engineering
+subtopic: case-studies
+secondary_topics:
+- agents/harness
+summary: Case study on integrating Cresta's voice AI agent with Avaya Infinity's new
+  WebSocket media protocol, covering audio chunk-size tuning (20-200ms) for barge-in
+  latency, timestamp-ordered transcript delivery, and race conditions that silently
+  dropped the final transcript turn during call shutdown.
 triage: null
 skip_reason: null
 source: cresta
@@ -13,7 +17,7 @@ url: https://cresta.com/blog/bringing-crestas-ai-agent-to-avaya-infinity-inside-
 author: Yufeng Huang
 published: '2026-07-31'
 fetched: '2026-08-05T06:52:18Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 2778
 content_sha256: 2fce6bf312575e3d0b5d85a78ec228e7d7ac18a850ec3426c7aef59772058fa8

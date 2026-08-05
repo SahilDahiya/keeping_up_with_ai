@@ -1,10 +1,14 @@
 ---
 title: Bringing serverless functions closer to the speed of wire | Modal Blog
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: inference
+subtopic: optimization
+secondary_topics:
+- infra-platform/deployment
+summary: Modal rewrote its Function I/O plane in Go and deployed it across 4+ regions
+  with a routing_region flag, cutting p50 end-to-end Function Call latency by ~80ms;
+  also covers async offloading of non-critical work, JWT-based auth refresh, and sticking
+  with Redis 7.1 over Valkey/Redis 7.2 after observing CPU spikes under load.
 triage: null
 skip_reason: null
 source: modal
@@ -12,7 +16,7 @@ url: https://modal.com/blog/bringing-serverless-functions-closer-to-the-speed-of
 author: null
 published: '2026-08-04'
 fetched: '2026-08-05T06:52:34Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1190
 content_sha256: ce8669d118cab837c60cc480b487d46d2235afcd8bcfec1bf5b0dd5c94adf163

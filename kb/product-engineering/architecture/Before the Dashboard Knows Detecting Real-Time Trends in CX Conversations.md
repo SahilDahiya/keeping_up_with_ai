@@ -1,10 +1,14 @@
 ---
 title: 'Before the Dashboard Knows: Detecting Real-Time Trends in CX Conversations'
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: product-engineering
+subtopic: architecture
+secondary_topics:
+- evals-observability/monitoring
+summary: 'Details Cresta''s Real-Time Trends system for detecting spikes in CX conversation
+  topics: Rust/PyO3 n-gram extraction over ICU4X and Rayon, ClickHouse AggregatingMergeTree
+  time-series storage at 20-minute buckets, and a z-score-based spike detector refined
+  with candidate pre-filtering and baseline normalization.'
 triage: null
 skip_reason: null
 source: cresta
@@ -12,7 +16,7 @@ url: https://cresta.com/blog/before-the-dashboard-knows-detecting-real-time-tren
 author: Nikolai Glushnev
 published: '2026-07-30'
 fetched: '2026-08-05T06:52:18Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 2822
 content_sha256: 10b6bc12433e5b881b66ef53e94e8d771de24862b1dd927e480190ddc19fa780

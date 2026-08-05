@@ -1,10 +1,14 @@
 ---
 title: Introducing NVIDIA Nemotron 3.5 ASR Streaming
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: models
+subtopic: releases
+secondary_topics:
+- inference/serving
+summary: Baseten benchmarks NVIDIA's Nemotron 3.5 ASR streaming models (a 600M-parameter
+  cache-aware FastConformer-RNNT architecture) on H100s, sustaining 100 concurrent
+  WebSocket streams with 98-138ms finalization latency, 8.84% average WER across 19
+  languages, and 2.32% WER on LibriSpeech Clean for the English-only variant.
 triage: null
 skip_reason: null
 source: baseten
@@ -12,7 +16,7 @@ url: https://www.baseten.co/blog/introducing-nvidia-nemotron-35-asr-streaming/
 author: Ansel Erol; Ian Carrasco
 published: '2026-08-04'
 fetched: '2026-08-05T06:52:25Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 605
 content_sha256: f5ed2aeefc80e8ccce02c6093fde4c6ae15c8bf60cafe455977ea24f9bdddbc9

@@ -1,7 +1,9 @@
 # baseten
 
-73 articles.
+74 articles.
 
+- **2026-08-04** — [Introducing NVIDIA Nemotron 3.5 ASR Streaming](<../models/releases/Introducing NVIDIA Nemotron 3.5 ASR Streaming.md>) · `releases` · baseten
+  Baseten benchmarks NVIDIA's Nemotron 3.5 ASR streaming models (a 600M-parameter cache-aware FastConformer-RNNT architecture) on H100s, sustaining 100 concurrent WebSocket streams with 98-138ms finalization latency, 8.84% average WER across 19 languages, and 2.32% WER on LibriSpeech Clean for the English-only variant.
 - **2026-08-03** — [Laguna S 2.1 goes Greek: a repository-scale game transformation](<../agents/tool-use/Laguna S 2.1 goes Greek a repository-scale game transformation.md>) · `tool-use` · baseten
   Baseten case study: Poolside's Laguna S 2.1 (118B MoE, 8B active params, 1M context), running on Baseten Dedicated Inference, autonomously re-themed the 715-file Hypersomnia C++ codebase from cyberpunk to Ancient Greek in under 99 minutes, orchestrating Step 3.7 Flash, Krea 2 Turbo, and NVIDIA Cosmos 3 Nano as sub-models (modifying 954 sprites and 64 code/config files) while deliberately declining to use the video model when it added no value.
 - **2026-07-31** — [Fine-tuning Qwen3-TTS for high-quality voice cloning](<../models/fine-tuning/Fine-tuning Qwen3-TTS for high-quality voice cloning.md>) · `fine-tuning` · baseten

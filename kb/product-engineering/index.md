@@ -1,7 +1,11 @@
 # product-engineering
 
-48 articles.
+50 articles.
 
+- **2026-07-31** — [Bringing Cresta's AI Agent to Avaya Infinity: Inside a New WebSocket Voice Integration](<case-studies/Bringing Cresta's AI Agent to Avaya Infinity Inside a New WebSocket Voice Integration.md>) · `case-studies` · cresta
+  Case study on integrating Cresta's voice AI agent with Avaya Infinity's new WebSocket media protocol, covering audio chunk-size tuning (20-200ms) for barge-in latency, timestamp-ordered transcript delivery, and race conditions that silently dropped the final transcript turn during call shutdown.
+- **2026-07-30** — [Before the Dashboard Knows: Detecting Real-Time Trends in CX Conversations](<architecture/Before the Dashboard Knows Detecting Real-Time Trends in CX Conversations.md>) · `architecture` · cresta
+  Details Cresta's Real-Time Trends system for detecting spikes in CX conversation topics: Rust/PyO3 n-gram extraction over ICU4X and Rayon, ClickHouse AggregatingMergeTree time-series storage at 20-minute buckets, and a z-score-based spike detector refined with candidate pre-filtering and baseline normalization.
 - **2026-07-29** — [Agency: Secure, scalable sandboxes for agents](<architecture/Agency Secure, scalable sandboxes for agents.md>) · `architecture` · sierra
   Sierra describes Agency, its Kubernetes-based agent-sandbox orchestration layer powering Pinecone and Ghostwriter: a stateless control plane provisioning per-runner pods with dedicated IAM roles and an LLM proxy for just-in-time key injection, plus a hibernation design that models each runner as a finite state machine restorable from an append-only checkpoint/event log (p50 8ms, p99 40ms round trips) to reclaim compute from the 2-4 orders of magnitude of idle agents.
 - **2026-07-23** — [How to choose an AI model: lessons from Notion and Gamma](<case-studies/How to choose an AI model lessons from Notion and Gamma.md>) · `case-studies` · baseten

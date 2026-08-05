@@ -1,7 +1,9 @@
 # models
 
-151 articles.
+152 articles.
 
+- **2026-08-04** — [Introducing NVIDIA Nemotron 3.5 ASR Streaming](<releases/Introducing NVIDIA Nemotron 3.5 ASR Streaming.md>) · `releases` · baseten
+  Baseten benchmarks NVIDIA's Nemotron 3.5 ASR streaming models (a 600M-parameter cache-aware FastConformer-RNNT architecture) on H100s, sustaining 100 concurrent WebSocket streams with 98-138ms finalization latency, 8.84% average WER across 19 languages, and 2.32% WER on LibriSpeech Clean for the English-only variant.
 - **2026-08-01** — [Kimi K3: The Complete Developer Guide](<releases/Kimi K3 The Complete Developer Guide.md>) · `releases` · together
   Together AI's developer guide to Moonshot's Kimi K3, a 2.8T-parameter open-weight model using Kimi Delta Attention, Attention Residuals, and a Stable LatentMoE framework (16-of-896 expert routing via Quantile Balancing and Per-Head Muon); covers 1M-context caching, dynamic tool loading, and benchmark results where K3 leads on SWE Marathon and BrowseComp while trailing Claude Fable 5 and GPT 5.6 Sol on some evals.
 - **2026-07-31** — [Fine-tuning Qwen3-TTS for high-quality voice cloning](<fine-tuning/Fine-tuning Qwen3-TTS for high-quality voice cloning.md>) · `fine-tuning` · baseten

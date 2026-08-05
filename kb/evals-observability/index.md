@@ -1,7 +1,9 @@
 # evals-observability
 
-98 articles.
+99 articles.
 
+- **2026-08-03** — [How Cresta Grades Its Agents: Evaluators in an LLM World](<llm-as-judge/How Cresta Grades Its Agents Evaluators in an LLM World.md>) · `llm-as-judge` · cresta
+  Describes Cresta's LLM-as-judge evaluation system for AI agents: binary, transcript-verifiable requirements converted into LLM evaluators, paired with deterministic checks (e.g., Tool Match), plus a human-in-the-loop calibration loop and separate completeness/accuracy claim-based scoring to distinguish under- and over-claiming.
 - **2026-07-21** — [What I Learned by Dogfooding Our Own AI Agent, Signal](<evaluation/What I Learned by Dogfooding Our Own AI Agent, Signal.md>) · `evaluation` · cresta
   Cresta dogfooded its Synthetic Customers tool (personas built from real conversation data) against its own website AI agent, Signal, to test the agent against realistic non-happy-path visitors (impatient, adversarial, or channel-switching) instead of idealized test cases.
 - **2026-07-16** — [Human annotations for agent runs in Pydantic Logfire](<evaluation/Human annotations for agent runs in Pydantic Logfire.md>) · `evaluation` · pydantic
@@ -203,6 +205,8 @@
 
 - **2026-07-31** — [When agents improve agents: loops that improve themselves](<../agents/harness/When agents improve agents loops that improve themselves.md>) · `harness` · pydantic
   Third in Pydantic's harness series: proposes moving the 'keep going or stop' decision inside the agent loop (via retry-verdict guardrails and Macroscope self-review), backing it with BM25 conversation search and persistent memory over prior runs, and closing the loop with a self-grading judge — but warns that LLM judges suffer position/self-preference bias and must be calibrated against a human, graded per-dimension, and version-tracked (ties into Pydantic Logfire's managed prompts, online evals, and GEPA prompt optimization).
+- **2026-07-30** — [Before the Dashboard Knows: Detecting Real-Time Trends in CX Conversations](<../product-engineering/architecture/Before the Dashboard Knows Detecting Real-Time Trends in CX Conversations.md>) · `architecture` · cresta
+  Details Cresta's Real-Time Trends system for detecting spikes in CX conversation topics: Rust/PyO3 n-gram extraction over ICU4X and Rayon, ClickHouse AggregatingMergeTree time-series storage at 20-minute buckets, and a z-score-based spike detector refined with candidate pre-filtering and baseline normalization.
 - **2026-07-16** — [What does 99.9% uptime mean for inference?](<../inference/serving/What does 99.9% uptime mean for inference.md>) · `serving` · together
   Together breaks down what each reliability 'nine' actually requires for GPU inference serving, mapping failure domains (compute ECC errors, NIC/NVLink faults, storage, network, software/routing bugs) to the multi-region and AZ-redundancy architecture needed to survive them.
 - **2026-07-10** — **[Paper]** [Failure as a Process: An Anatomy of CLI Coding Agent Trajectories](<../agents/planning/[Paper] Failure as a Process An Anatomy of CLI Coding Agent Trajectories.md>) · `planning` · arxiv

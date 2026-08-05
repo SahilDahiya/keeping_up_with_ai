@@ -1,10 +1,13 @@
 ---
 title: 'How Cresta Grades Its Agents: Evaluators in an LLM World'
 kind: blog
-topic: null
-subtopic: null
+topic: evals-observability
+subtopic: llm-as-judge
 secondary_topics: []
-summary: null
+summary: 'Describes Cresta''s LLM-as-judge evaluation system for AI agents: binary,
+  transcript-verifiable requirements converted into LLM evaluators, paired with deterministic
+  checks (e.g., Tool Match), plus a human-in-the-loop calibration loop and separate
+  completeness/accuracy claim-based scoring to distinguish under- and over-claiming.'
 triage: null
 skip_reason: null
 source: cresta
@@ -12,7 +15,7 @@ url: https://cresta.com/blog/how-cresta-grades-its-agents-evaluators-in-an-llm-w
 author: Lillian Zhao
 published: '2026-08-03'
 fetched: '2026-08-05T06:52:22Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 2099
 content_sha256: ec47146761dac47880cf24d1bc0f1aa8ddfaf1cde7524205ff7345ec235866a2

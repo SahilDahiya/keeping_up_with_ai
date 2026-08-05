@@ -1,7 +1,13 @@
 # cresta
 
-42 articles.
+45 articles.
 
+- **2026-08-03** — [How Cresta Grades Its Agents: Evaluators in an LLM World](<../evals-observability/llm-as-judge/How Cresta Grades Its Agents Evaluators in an LLM World.md>) · `llm-as-judge` · cresta
+  Describes Cresta's LLM-as-judge evaluation system for AI agents: binary, transcript-verifiable requirements converted into LLM evaluators, paired with deterministic checks (e.g., Tool Match), plus a human-in-the-loop calibration loop and separate completeness/accuracy claim-based scoring to distinguish under- and over-claiming.
+- **2026-07-31** — [Bringing Cresta's AI Agent to Avaya Infinity: Inside a New WebSocket Voice Integration](<../product-engineering/case-studies/Bringing Cresta's AI Agent to Avaya Infinity Inside a New WebSocket Voice Integration.md>) · `case-studies` · cresta
+  Case study on integrating Cresta's voice AI agent with Avaya Infinity's new WebSocket media protocol, covering audio chunk-size tuning (20-200ms) for barge-in latency, timestamp-ordered transcript delivery, and race conditions that silently dropped the final transcript turn during call shutdown.
+- **2026-07-30** — [Before the Dashboard Knows: Detecting Real-Time Trends in CX Conversations](<../product-engineering/architecture/Before the Dashboard Knows Detecting Real-Time Trends in CX Conversations.md>) · `architecture` · cresta
+  Details Cresta's Real-Time Trends system for detecting spikes in CX conversation topics: Rust/PyO3 n-gram extraction over ICU4X and Rayon, ClickHouse AggregatingMergeTree time-series storage at 20-minute buckets, and a z-score-based spike detector refined with candidate pre-filtering and baseline normalization.
 - **2026-07-21** — [What I Learned by Dogfooding Our Own AI Agent, Signal](<../evals-observability/evaluation/What I Learned by Dogfooding Our Own AI Agent, Signal.md>) · `evaluation` · cresta
   Cresta dogfooded its Synthetic Customers tool (personas built from real conversation data) against its own website AI agent, Signal, to test the agent against realistic non-happy-path visitors (impatient, adversarial, or channel-switching) instead of idealized test cases.
 - **2026-06-12** — [Agent Assist: What It Is, How It Works & How to Choose](<../agents/tool-use/Agent Assist What It Is, How It Works & How to Choose.md>) · `tool-use` · cresta
