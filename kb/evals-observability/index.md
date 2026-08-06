@@ -203,6 +203,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-08-05** — [Sidekick's continual learning loop (2026)](<../models/fine-tuning/Sidekick's continual learning loop (2026).md>) · `fine-tuning` · shopify
+  Shopify's continual learning flywheel for its GraphQL merchant agent: calibrate an LLM judge with Cohen's kappa against expert annotators, use GEPA/ACE and Toloka human review to heal failed production trajectories, then distill them into a smaller model via SFT and GRPO, plus gist-token prompt compression (6k to ~1.5k tokens). The specialized model cut serving cost from an estimated $27M to $1M/year (96%) and reduced end-to-end latency ~38% while beating the frontier baseline.
 - **2026-07-31** — [When agents improve agents: loops that improve themselves](<../agents/harness/When agents improve agents loops that improve themselves.md>) · `harness` · pydantic
   Third in Pydantic's harness series: proposes moving the 'keep going or stop' decision inside the agent loop (via retry-verdict guardrails and Macroscope self-review), backing it with BM25 conversation search and persistent memory over prior runs, and closing the loop with a self-grading judge — but warns that LLM judges suffer position/self-preference bias and must be calibrated against a human, graded per-dimension, and version-tracked (ties into Pydantic Logfire's managed prompts, online evals, and GEPA prompt optimization).
 - **2026-07-30** — [Before the Dashboard Knows: Detecting Real-Time Trends in CX Conversations](<../product-engineering/architecture/Before the Dashboard Knows Detecting Real-Time Trends in CX Conversations.md>) · `architecture` · cresta

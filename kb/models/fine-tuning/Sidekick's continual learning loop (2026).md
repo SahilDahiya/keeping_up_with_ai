@@ -1,10 +1,17 @@
 ---
 title: Sidekick's continual learning loop (2026)
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: models
+subtopic: fine-tuning
+secondary_topics:
+- evals-observability/llm-as-judge
+- agents/harness
+summary: 'Shopify''s continual learning flywheel for its GraphQL merchant agent: calibrate
+  an LLM judge with Cohen''s kappa against expert annotators, use GEPA/ACE and Toloka
+  human review to heal failed production trajectories, then distill them into a smaller
+  model via SFT and GRPO, plus gist-token prompt compression (6k to ~1.5k tokens).
+  The specialized model cut serving cost from an estimated $27M to $1M/year (96%)
+  and reduced end-to-end latency ~38% while beating the frontier baseline.'
 triage: null
 skip_reason: null
 source: shopify
@@ -12,7 +19,7 @@ url: https://shopify.engineering/sidekicks-continual-learning-loop
 author: Andrew McNamara
 published: '2026-08-05'
 fetched: '2026-08-06T06:58:58Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1971
 content_sha256: 3aaba8f18d0ac363f14eeab3cc7078125e87c36c064062b49d784e1fa8e813fb

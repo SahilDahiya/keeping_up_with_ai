@@ -167,6 +167,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-08-05** — [Sidekick's continual learning loop (2026)](<../models/fine-tuning/Sidekick's continual learning loop (2026).md>) · `fine-tuning` · shopify
+  Shopify's continual learning flywheel for its GraphQL merchant agent: calibrate an LLM judge with Cohen's kappa against expert annotators, use GEPA/ACE and Toloka human review to heal failed production trajectories, then distill them into a smaller model via SFT and GRPO, plus gist-token prompt compression (6k to ~1.5k tokens). The specialized model cut serving cost from an estimated $27M to $1M/year (96%) and reduced end-to-end latency ~38% while beating the frontier baseline.
 - **2026-07-31** — [Bringing Cresta's AI Agent to Avaya Infinity: Inside a New WebSocket Voice Integration](<../product-engineering/case-studies/Bringing Cresta's AI Agent to Avaya Infinity Inside a New WebSocket Voice Integration.md>) · `case-studies` · cresta
   Case study on integrating Cresta's voice AI agent with Avaya Infinity's new WebSocket media protocol, covering audio chunk-size tuning (20-200ms) for barge-in latency, timestamp-ordered transcript delivery, and race conditions that silently dropped the final transcript turn during call shutdown.
 - **2026-07-29** — [ThunderAgent: 2x Faster Agentic Inference for Synthetic Data Generation at Scale](<../inference/optimization/ThunderAgent 2x Faster Agentic Inference for Synthetic Data Generation at Scale.md>) · `optimization` · together

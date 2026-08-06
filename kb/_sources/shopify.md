@@ -1,7 +1,9 @@
 # shopify
 
-16 articles.
+17 articles.
 
+- **2026-08-05** — [Sidekick's continual learning loop (2026)](<../models/fine-tuning/Sidekick's continual learning loop (2026).md>) · `fine-tuning` · shopify
+  Shopify's continual learning flywheel for its GraphQL merchant agent: calibrate an LLM judge with Cohen's kappa against expert annotators, use GEPA/ACE and Toloka human review to heal failed production trajectories, then distill them into a smaller model via SFT and GRPO, plus gist-token prompt compression (6k to ~1.5k tokens). The specialized model cut serving cost from an estimated $27M to $1M/year (96%) and reduced end-to-end latency ~38% while beating the frontier baseline.
 - **2026-07-29** — [Building an agentic harness that outlasts the model (2026)](<../agents/harness/Building an agentic harness that outlasts the model (2026).md>) · `harness` · shopify
   Shopify details Dispatch, their Ruby-orchestrated multi-agent security-scanning harness: it partitions a Rails monolith by size/scope, runs parallel Hunter agents per partition backed by shared architecture artifacts, verifies candidate findings with a different model acting as a test oracle, then opens fix PRs -- across 80+ applications and thousands of scans it produced 300+ findings valued at $400k+ in equivalent bug-bounty payouts.
 - **2026-06-17** — [Clustering billions of products for agentic commerce with Catalog API (2026)](<../product-engineering/case-studies/Clustering billions of products for agentic commerce with Catalog API (2026).md>) · `case-studies` · shopify

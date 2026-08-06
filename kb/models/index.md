@@ -1,7 +1,9 @@
 # models
 
-152 articles.
+153 articles.
 
+- **2026-08-05** — [Sidekick's continual learning loop (2026)](<fine-tuning/Sidekick's continual learning loop (2026).md>) · `fine-tuning` · shopify
+  Shopify's continual learning flywheel for its GraphQL merchant agent: calibrate an LLM judge with Cohen's kappa against expert annotators, use GEPA/ACE and Toloka human review to heal failed production trajectories, then distill them into a smaller model via SFT and GRPO, plus gist-token prompt compression (6k to ~1.5k tokens). The specialized model cut serving cost from an estimated $27M to $1M/year (96%) and reduced end-to-end latency ~38% while beating the frontier baseline.
 - **2026-08-04** — [Introducing NVIDIA Nemotron 3.5 ASR Streaming](<releases/Introducing NVIDIA Nemotron 3.5 ASR Streaming.md>) · `releases` · baseten
   Baseten benchmarks NVIDIA's Nemotron 3.5 ASR streaming models (a 600M-parameter cache-aware FastConformer-RNNT architecture) on H100s, sustaining 100 concurrent WebSocket streams with 98-138ms finalization latency, 8.84% average WER across 19 languages, and 2.32% WER on LibriSpeech Clean for the English-only variant.
 - **2026-08-01** — [Kimi K3: The Complete Developer Guide](<releases/Kimi K3 The Complete Developer Guide.md>) · `releases` · together
