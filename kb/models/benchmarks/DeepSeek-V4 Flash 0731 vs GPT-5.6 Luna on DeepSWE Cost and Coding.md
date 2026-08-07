@@ -1,10 +1,15 @@
 ---
 title: 'DeepSeek-V4 Flash 0731 vs GPT-5.6 Luna on DeepSWE: Cost and Coding'
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: models
+subtopic: benchmarks
+secondary_topics:
+- inference/optimization
+summary: 'Benchmarks DeepSeek-V4 Flash 0731 against GPT-5.6 Luna on all 113 DeepSWE
+  coding tasks (900 rollouts): Luna leads pass@1 67.2% vs 53.3% but costs 6x more
+  ($0.61 vs $0.10/rollout); shows a DeepSeek-first cascade that escalates to Luna
+  only on failure solves 78.9% of tasks at $0.385 each, beating Luna alone on both
+  accuracy and cost.'
 triage: null
 skip_reason: null
 source: together
@@ -12,7 +17,7 @@ url: https://www.together.ai/blog/deepseek-v4-flash-0731-vs-gpt-5-6-luna-on-deep
 author: Zain Hasan; Shobhit Dixit
 published: '2026-08-06'
 fetched: '2026-08-07T06:23:42Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1613
 content_sha256: 4a174e9aace4b2baf7c59f7897a61af128b70f1fd392ad49afe77496dc9234cd

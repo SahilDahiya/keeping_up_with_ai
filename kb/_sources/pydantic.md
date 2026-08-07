@@ -1,9 +1,13 @@
 # pydantic
 
-31 articles.
+33 articles.
 
+- **2026-08-06** — [Airbnb's three-layer eval workflow with Pydantic AI and Logfire](<../evals-observability/evaluation/Airbnb's three-layer eval workflow with Pydantic AI and Logfire.md>) · `evaluation` · pydantic
+  Implements Airbnb's published three-layer eval workflow (programmatic checks, narrow LLMJudge rubrics, human-annotation calibration) end-to-end for a support agent using Pydantic AI and Logfire, including code for output validation, trajectory checks, and using Logfire's optimizer to propose the next prompt change from failing traces.
 - **2026-07-31** — [When agents improve agents: loops that improve themselves](<../agents/harness/When agents improve agents loops that improve themselves.md>) · `harness` · pydantic
   Third in Pydantic's harness series: proposes moving the 'keep going or stop' decision inside the agent loop (via retry-verdict guardrails and Macroscope self-review), backing it with BM25 conversation search and persistent memory over prior runs, and closing the loop with a self-grading judge — but warns that LLM judges suffer position/self-preference bias and must be calibrated against a human, graded per-dimension, and version-tracked (ties into Pydantic Logfire's managed prompts, online evals, and GEPA prompt optimization).
+- **2026-07-30** — [Best AI platform for building agents on Kubernetes in 2026 | Pydantic Logfire](<../evals-observability/monitoring/Best AI platform for building agents on Kubernetes in 2026 Pydantic Logfire.md>) · `monitoring` · pydantic
+  Surveys the observability landscape for AI agents running on Kubernetes, contrasting AI-native eval tools (Langfuse, LangSmith, Arize, Braintrust) that are blind to pod/node health with infra incumbents (Datadog, Grafana, New Relic, Elastic) whose LLM tracing is a bolted-on, separately-priced product; details Groundcover's eBPF zero-instrumentation approach versus Pydantic Logfire's OpenTelemetry Collector + k8sattributes processor for correlating OOMKills and CPU throttling with agent traces in one view.
 - **2026-07-28** — [Dynamic Workflows in Pydantic AI: agents that orchestrate agents](<../agents/harness/Dynamic Workflows in Pydantic AI agents that orchestrate agents.md>) · `harness` · pydantic
   Pydantic AI's DynamicWorkflow extends its Code Mode pattern from tool-calls to sub-agents: an orchestrator agent gets a catalog of named agents and writes ordinary Python (async gather, loops, conditionals) to fan out and chain them in a single tool call, illustrated by the Bun-in-Rust port that ran ~50 such workflows with up to 64 Claude agents in parallel.
 - **2026-07-16** — [Human annotations for agent runs in Pydantic Logfire](<../evals-observability/evaluation/Human annotations for agent runs in Pydantic Logfire.md>) · `evaluation` · pydantic

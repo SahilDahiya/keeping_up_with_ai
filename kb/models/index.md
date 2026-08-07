@@ -1,7 +1,9 @@
 # models
 
-153 articles.
+154 articles.
 
+- **2026-08-06** — [DeepSeek-V4 Flash 0731 vs GPT-5.6 Luna on DeepSWE: Cost and Coding](<benchmarks/DeepSeek-V4 Flash 0731 vs GPT-5.6 Luna on DeepSWE Cost and Coding.md>) · `benchmarks` · together
+  Benchmarks DeepSeek-V4 Flash 0731 against GPT-5.6 Luna on all 113 DeepSWE coding tasks (900 rollouts): Luna leads pass@1 67.2% vs 53.3% but costs 6x more ($0.61 vs $0.10/rollout); shows a DeepSeek-first cascade that escalates to Luna only on failure solves 78.9% of tasks at $0.385 each, beating Luna alone on both accuracy and cost.
 - **2026-08-05** — [Sidekick's continual learning loop (2026)](<fine-tuning/Sidekick's continual learning loop (2026).md>) · `fine-tuning` · shopify
   Shopify's continual learning flywheel for its GraphQL merchant agent: calibrate an LLM judge with Cohen's kappa against expert annotators, use GEPA/ACE and Toloka human review to heal failed production trajectories, then distill them into a smaller model via SFT and GRPO, plus gist-token prompt compression (6k to ~1.5k tokens). The specialized model cut serving cost from an estimated $27M to $1M/year (96%) and reduced end-to-end latency ~38% while beating the frontier baseline.
 - **2026-08-04** — [Introducing NVIDIA Nemotron 3.5 ASR Streaming](<releases/Introducing NVIDIA Nemotron 3.5 ASR Streaming.md>) · `releases` · baseten

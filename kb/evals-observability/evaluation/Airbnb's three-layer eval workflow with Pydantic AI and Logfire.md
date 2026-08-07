@@ -1,10 +1,14 @@
 ---
 title: Airbnb's three-layer eval workflow with Pydantic AI and Logfire
 kind: blog
-topic: null
-subtopic: null
+topic: evals-observability
+subtopic: evaluation
 secondary_topics: []
-summary: null
+summary: Implements Airbnb's published three-layer eval workflow (programmatic checks,
+  narrow LLMJudge rubrics, human-annotation calibration) end-to-end for a support
+  agent using Pydantic AI and Logfire, including code for output validation, trajectory
+  checks, and using Logfire's optimizer to propose the next prompt change from failing
+  traces.
 triage: null
 skip_reason: null
 source: pydantic
@@ -12,7 +16,7 @@ url: https://pydantic.dev/articles/three-layer-evals-logfire
 author: Bill Easton
 published: '2026-08-06'
 fetched: '2026-08-07T06:29:22Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 2830
 content_sha256: 3254366e143323cadbc556b72fda8de34f4b59f65b820921364894308aafb26e

@@ -1,10 +1,17 @@
 ---
 title: Best AI platform for building agents on Kubernetes in 2026 | Pydantic Logfire
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: evals-observability
+subtopic: monitoring
+secondary_topics:
+- infra-platform/deployment
+summary: Surveys the observability landscape for AI agents running on Kubernetes,
+  contrasting AI-native eval tools (Langfuse, LangSmith, Arize, Braintrust) that are
+  blind to pod/node health with infra incumbents (Datadog, Grafana, New Relic, Elastic)
+  whose LLM tracing is a bolted-on, separately-priced product; details Groundcover's
+  eBPF zero-instrumentation approach versus Pydantic Logfire's OpenTelemetry Collector
+  + k8sattributes processor for correlating OOMKills and CPU throttling with agent
+  traces in one view.
 triage: null
 skip_reason: null
 source: pydantic
@@ -12,7 +19,7 @@ url: https://pydantic.dev/articles/best-ai-platform-agents-kubernetes
 author: Bill Easton
 published: '2026-07-30'
 fetched: '2026-08-07T06:29:24Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 3088
 content_sha256: 55e8fdbd850382bdb0d71119b69e5be4b2d46708ff92cb7d0bfbfae5f02680ad

@@ -255,6 +255,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-08-06** — [DeepSeek-V4 Flash 0731 vs GPT-5.6 Luna on DeepSWE: Cost and Coding](<../models/benchmarks/DeepSeek-V4 Flash 0731 vs GPT-5.6 Luna on DeepSWE Cost and Coding.md>) · `benchmarks` · together
+  Benchmarks DeepSeek-V4 Flash 0731 against GPT-5.6 Luna on all 113 DeepSWE coding tasks (900 rollouts): Luna leads pass@1 67.2% vs 53.3% but costs 6x more ($0.61 vs $0.10/rollout); shows a DeepSeek-first cascade that escalates to Luna only on failure solves 78.9% of tasks at $0.385 each, beating Luna alone on both accuracy and cost.
 - **2026-08-04** — [Introducing NVIDIA Nemotron 3.5 ASR Streaming](<../models/releases/Introducing NVIDIA Nemotron 3.5 ASR Streaming.md>) · `releases` · baseten
   Baseten benchmarks NVIDIA's Nemotron 3.5 ASR streaming models (a 600M-parameter cache-aware FastConformer-RNNT architecture) on H100s, sustaining 100 concurrent WebSocket streams with 98-138ms finalization latency, 8.84% average WER across 19 languages, and 2.32% WER on LibriSpeech Clean for the English-only variant.
 - **2026-07-31** — [Fine-tuning Qwen3-TTS for high-quality voice cloning](<../models/fine-tuning/Fine-tuning Qwen3-TTS for high-quality voice cloning.md>) · `fine-tuning` · baseten

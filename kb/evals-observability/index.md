@@ -1,9 +1,13 @@
 # evals-observability
 
-99 articles.
+101 articles.
 
+- **2026-08-06** — [Airbnb's three-layer eval workflow with Pydantic AI and Logfire](<evaluation/Airbnb's three-layer eval workflow with Pydantic AI and Logfire.md>) · `evaluation` · pydantic
+  Implements Airbnb's published three-layer eval workflow (programmatic checks, narrow LLMJudge rubrics, human-annotation calibration) end-to-end for a support agent using Pydantic AI and Logfire, including code for output validation, trajectory checks, and using Logfire's optimizer to propose the next prompt change from failing traces.
 - **2026-08-03** — [How Cresta Grades Its Agents: Evaluators in an LLM World](<llm-as-judge/How Cresta Grades Its Agents Evaluators in an LLM World.md>) · `llm-as-judge` · cresta
   Describes Cresta's LLM-as-judge evaluation system for AI agents: binary, transcript-verifiable requirements converted into LLM evaluators, paired with deterministic checks (e.g., Tool Match), plus a human-in-the-loop calibration loop and separate completeness/accuracy claim-based scoring to distinguish under- and over-claiming.
+- **2026-07-30** — [Best AI platform for building agents on Kubernetes in 2026 | Pydantic Logfire](<monitoring/Best AI platform for building agents on Kubernetes in 2026 Pydantic Logfire.md>) · `monitoring` · pydantic
+  Surveys the observability landscape for AI agents running on Kubernetes, contrasting AI-native eval tools (Langfuse, LangSmith, Arize, Braintrust) that are blind to pod/node health with infra incumbents (Datadog, Grafana, New Relic, Elastic) whose LLM tracing is a bolted-on, separately-priced product; details Groundcover's eBPF zero-instrumentation approach versus Pydantic Logfire's OpenTelemetry Collector + k8sattributes processor for correlating OOMKills and CPU throttling with agent traces in one view.
 - **2026-07-21** — [What I Learned by Dogfooding Our Own AI Agent, Signal](<evaluation/What I Learned by Dogfooding Our Own AI Agent, Signal.md>) · `evaluation` · cresta
   Cresta dogfooded its Synthetic Customers tool (personas built from real conversation data) against its own website AI agent, Signal, to test the agent against realistic non-happy-path visitors (impatient, adversarial, or channel-switching) instead of idealized test cases.
 - **2026-07-16** — [Human annotations for agent runs in Pydantic Logfire](<evaluation/Human annotations for agent runs in Pydantic Logfire.md>) · `evaluation` · pydantic

@@ -1,7 +1,9 @@
 # together
 
-80 articles.
+81 articles.
 
+- **2026-08-06** — [DeepSeek-V4 Flash 0731 vs GPT-5.6 Luna on DeepSWE: Cost and Coding](<../models/benchmarks/DeepSeek-V4 Flash 0731 vs GPT-5.6 Luna on DeepSWE Cost and Coding.md>) · `benchmarks` · together
+  Benchmarks DeepSeek-V4 Flash 0731 against GPT-5.6 Luna on all 113 DeepSWE coding tasks (900 rollouts): Luna leads pass@1 67.2% vs 53.3% but costs 6x more ($0.61 vs $0.10/rollout); shows a DeepSeek-first cascade that escalates to Luna only on failure solves 78.9% of tasks at $0.385 each, beating Luna alone on both accuracy and cost.
 - **2026-08-01** — [Kimi K3: The Complete Developer Guide](<../models/releases/Kimi K3 The Complete Developer Guide.md>) · `releases` · together
   Together AI's developer guide to Moonshot's Kimi K3, a 2.8T-parameter open-weight model using Kimi Delta Attention, Attention Residuals, and a Stable LatentMoE framework (16-of-896 expert routing via Quantile Balancing and Per-Head Muon); covers 1M-context caching, dynamic tool loading, and benchmark results where K3 leads on SWE Marathon and BrowseComp while trailing Claude Fable 5 and GPT 5.6 Sol on some evals.
 - **2026-07-31** — [Autoscaling endpoints for LLM inference](<../inference/optimization/Autoscaling endpoints for LLM inference.md>) · `optimization` · together
