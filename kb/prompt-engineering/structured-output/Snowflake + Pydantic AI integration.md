@@ -1,10 +1,15 @@
 ---
 title: Snowflake + Pydantic AI integration
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: prompt-engineering
+subtopic: structured-output
+secondary_topics:
+- agents/tool-use
+summary: 'Walks through Pydantic AI''s new native Snowflake Cortex provider (SnowflakeModel/SnowflakeProvider)
+  via a bioinformatics example: Pydantic schemas validate LLM structured output (Ensembl
+  IDs, nested variant annotations), tool-call parameters for a BLAST search, extended
+  thinking with budget_tokens on Claude, and portability of one schema across snowflake:claude-sonnet-5,
+  gpt-5.4, and llama3.3-70b.'
 triage: null
 skip_reason: null
 source: pydantic
@@ -12,7 +17,7 @@ url: https://pydantic.dev/articles/snowflake-cortex-pydantic-ai
 author: Priya Joseph; Douwe Maan
 published: '2026-08-10'
 fetched: '2026-08-11T06:23:23Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1866
 content_sha256: d75a2cc5b79a6084ceabee64803e81f59eb7a9577becc8eedf7e1f421c281a36

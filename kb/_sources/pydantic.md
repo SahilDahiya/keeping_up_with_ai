@@ -1,7 +1,9 @@
 # pydantic
 
-33 articles.
+34 articles.
 
+- **2026-08-10** — [Snowflake + Pydantic AI integration](<../prompt-engineering/structured-output/Snowflake + Pydantic AI integration.md>) · `structured-output` · pydantic
+  Walks through Pydantic AI's new native Snowflake Cortex provider (SnowflakeModel/SnowflakeProvider) via a bioinformatics example: Pydantic schemas validate LLM structured output (Ensembl IDs, nested variant annotations), tool-call parameters for a BLAST search, extended thinking with budget_tokens on Claude, and portability of one schema across snowflake:claude-sonnet-5, gpt-5.4, and llama3.3-70b.
 - **2026-08-06** — [Airbnb's three-layer eval workflow with Pydantic AI and Logfire](<../evals-observability/evaluation/Airbnb's three-layer eval workflow with Pydantic AI and Logfire.md>) · `evaluation` · pydantic
   Implements Airbnb's published three-layer eval workflow (programmatic checks, narrow LLMJudge rubrics, human-annotation calibration) end-to-end for a support agent using Pydantic AI and Logfire, including code for output validation, trajectory checks, and using Logfire's optimizer to propose the next prompt change from failing traces.
 - **2026-07-31** — [When agents improve agents: loops that improve themselves](<../agents/harness/When agents improve agents loops that improve themselves.md>) · `harness` · pydantic
