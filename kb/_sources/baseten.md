@@ -1,7 +1,9 @@
 # baseten
 
-74 articles.
+75 articles.
 
+- **2026-08-11** — [Introducing NVIDIA Nemotron 3.5 Lightning](<../models/releases/Introducing NVIDIA Nemotron 3.5 Lightning.md>) · `releases` · baseten
+  NVIDIA Nemotron 3.5 Lightning is a 30B MoE model (3B active) distilled from Nemotron 3 Ultra for agentic workloads, achieving ~4x higher throughput and 30% lower task completion time than comparable open models, now available on Baseten Dedicated Inference.
 - **2026-08-04** — [Introducing NVIDIA Nemotron 3.5 ASR Streaming](<../models/releases/Introducing NVIDIA Nemotron 3.5 ASR Streaming.md>) · `releases` · baseten
   Baseten benchmarks NVIDIA's Nemotron 3.5 ASR streaming models (a 600M-parameter cache-aware FastConformer-RNNT architecture) on H100s, sustaining 100 concurrent WebSocket streams with 98-138ms finalization latency, 8.84% average WER across 19 languages, and 2.32% WER on LibriSpeech Clean for the English-only variant.
 - **2026-08-03** — [Laguna S 2.1 goes Greek: a repository-scale game transformation](<../agents/tool-use/Laguna S 2.1 goes Greek a repository-scale game transformation.md>) · `tool-use` · baseten

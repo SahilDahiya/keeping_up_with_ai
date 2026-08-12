@@ -1,6 +1,6 @@
 # infra-platform
 
-39 articles.
+42 articles.
 
 - **2026-07-21** — [Devin Outposts on Modal | Modal Blog](<deployment/Devin Outposts on Modal Modal Blog.md>) · `deployment` · modal
   Modal's open-source modal-devin library lets Cognition's Devin coding agent execute in user-controlled Modal Sandboxes (GPU-backed, custom images, snapshot suspend/resume) while its reasoning stays in Cognition's cloud, splitting the agent's control-plane queue from a self-hosted data-plane orchestrator and worker.
@@ -24,12 +24,18 @@
   Explains load testing for agent systems so conversation serving can scale through traffic surges without quality or latency collapse.
 - **2026-05-12** — [How we achieved truly serverless GPUs](<gpu-clusters/How we achieved truly serverless GPUs.md>) · `gpu-clusters` · modal
   Explains Modal’s serverless GPU architecture, including scheduling, cold starts, isolation, and utilization constraints.
+- **2026-04-23** — [Claude Code pricing: plans, API costs, and how to lower your bill](<cost/Claude Code pricing plans, API costs, and how to lower your bill.md>) · `cost` · fireworks
+  Breaks down Claude Code cost paths (Pro $17/mo, Max 5x/20x, Team Standard/Premium, Enterprise, API) and describes routing Claude Code through Fireworks-hosted open-weight models (GLM 5.2, Kimi K2.7 Code, MiniMax M3) via FireConnect or an OpenAI-compatible harness, recommending evaluation on completion rate and repair time rather than token price alone.
 - **2026-04-23** — [How to Use Transformers.js in a Chrome Extension](<edge/How to Use Transformers.js in a Chrome Extension.md>) · `edge` · huggingface
   Practical guide to running Transformers.js models inside a Chrome Manifest V3 extension: a background service worker hosts the model, a side panel provides the chat UI, and a content script handles page-level actions, with message passing between them. Covers the MV3 gotchas — service-worker lifecycle/termination, model loading and caching, and streaming tokens across the messaging boundary.
 - **2026-04-21** — [Capacity without conflict: A guide to multi-tenant GPU cluster design for AI-native teams](<gpu-clusters/Capacity without conflict A guide to multi-tenant GPU cluster design for AI-native teams.md>) · `gpu-clusters` · together
   Guide to multi-tenant GPU cluster design for avoiding capacity conflicts in AI-native teams.
 - **2026-04-09** — [How the Baseten Delivery Network (BDN) makes cold starts fast](<deployment/How the Baseten Delivery Network (BDN) makes cold starts fast.md>) · `deployment` · baseten
   Deep dive into how the Baseten Delivery Network reduces cold starts for model serving.
+- **2026-03-06** — [Inference Providers vs. API Routers: where do tokens come from?](<deployment/Inference Providers vs. API Routers where do tokens come from.md>) · `deployment` · fireworks
+  Distinguishes inference providers (control the GPUs serving a model) from API routers like OpenRouter (forward requests upstream), explaining that routers can improve tail latency/reliability via failover but cannot beat direct-provider median latency, and have no visibility into KV cache, batch scheduling, or kernel decisions that determine quality.
+- **2026-03-04** — [Best LLM API Providers in 2026: We Reviewed 8 Options](<deployment/Best LLM API Providers in 2026 We Reviewed 8 Options.md>) · `deployment` · fireworks
+  Comparison of 8 LLM inference providers (Fireworks, Groq, Together, OpenRouter, Cerebras, Hugging Face, Baseten, Modal) on criteria beyond price/token: fine-tuning support, model deprecation risk, rate limits, and billing complexity, with per-provider recommendations by use case.
 - **2026-02-24** — [Optimizing Training Workloads for GPU Clusters](<gpu-clusters/Optimizing Training Workloads for GPU Clusters.md>) · `gpu-clusters` · together
   Covers optimization patterns for training workloads on GPU clusters.
 - **2026-02-23** — [Directory Snapshots: Resumable project state for Sandboxes](<deployment/Directory Snapshots Resumable project state for Sandboxes.md>) · `deployment` · modal
@@ -97,6 +103,8 @@
   Argues that non-deterministic agent workloads should be monitored on turns-per-run and tool-calling-turns-per-run at p90, not the mean, because a rare runaway retry loop (e.g. 40 tool calls, $12) hides in the average; built from the gen_ai.* spans agents already emit.
 - **2026-07-02** — [H100 vs. H200 vs. B200: which GPU should you use?](<../inference/hardware/H100 vs. H200 vs. B200 which GPU should you use.md>) · `hardware` · baseten
   Compares H100, H200, and B200 GPUs for choosing hardware for inference workloads.
+- **2026-06-26** — [How Factory Grew Open Model Usage 2-3x in Six Months on Fireworks](<../agents/harness/How Factory Grew Open Model Usage 2-3x in Six Months on Fireworks.md>) · `harness` · fireworks
+  Factory's Droids run any coding model (frontier or open-weight) behind one harness that absorbs per-model differences in reasoning/tracing formats, tool schemas, and git-state handling; open-weight share of Factory's usage grew 2-3x in six months as models closed the capability gap at a fraction of frontier cost.
 - **2026-06-25** — [Proxying inference requests in 6ms with Pingora, Envoy, and Spanner](<../inference/serving/Proxying inference requests in 6ms with Pingora, Envoy, and Spanner.md>) · `serving` · modal
   Explains low-latency inference proxying with Pingora, Envoy, and Spanner, including request-routing architecture.
 - **2026-05-28** — [Reinforcement learning is an infrastructure problem](<../models/reinforcement-learning/Reinforcement learning is an infrastructure problem.md>) · `reinforcement-learning` · modal

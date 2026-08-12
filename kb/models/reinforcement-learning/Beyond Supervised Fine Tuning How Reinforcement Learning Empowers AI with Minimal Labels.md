@@ -1,39 +1,41 @@
 ---
 title: 'Beyond Supervised Fine Tuning: How Reinforcement Learning Empowers AI with
   Minimal Labels'
+kind: blog
 topic: models
 subtopic: reinforcement-learning
-secondary_topics:
-- evals-observability/evaluation
-summary: Explains reinforcement learning with verifiable rewards as a way to improve
-  models with minimal labels.
+secondary_topics: []
+summary: 'Explains GRPO (used in DeepSeek R1-Zero) versus PPO: GRPO removes the co-trained
+  Value Model by using normalized reward across multiple generations of the same prompt
+  as the advantage baseline, cutting compute/memory overhead and easing implementation,
+  with reward-model choice left open to the practitioner.'
+triage: null
+skip_reason: null
 source: fireworks
 url: https://fireworks.ai/blog/reinforcement-learning-with-verifiable-reward
 author: null
 published: '2025-01-27'
-fetched: '2026-07-11T04:16:20Z'
-classifier: codex
-taxonomy_rev: 1
-words: 1390
-content_sha256: 3e32aa0de70c37857e7f3c865953289b57ef6160e1b4e3d265a1ff381bd79d50
-triage: keep
-skip_reason: null
+fetched: '2026-08-12T06:29:47Z'
+classifier: claude
+taxonomy_rev: 2
+words: 1398
+content_sha256: 4c970ce6126dfea13fc19eaf258a60869d478e5322f3f181058bdf223d81ce91
 ---
 
 # Beyond Supervised Fine Tuning: How Reinforcement Learning Empowers AI with Minimal Labels
 
-- DeepSeek R1 employs a streamlined variant of reinforcement learning (RL), significantly reducing training complexity and data collection costs
-- Fireworks AI explored a comparable RL approach, demonstrating its effectiveness on a fully synthetic dataset
-- This emerging class of algorithms makes RL more accessible, establishing it as a valuable complement to supervised fine-tuning in the post-training toolkit
+1. DeepSeek R1 employs a streamlined variant of reinforcement learning (RL), significantly reducing training complexity and data collection costs
+2. Fireworks explored a comparable RL approach, demonstrating its effectiveness on a fully synthetic dataset
+3. This emerging class of algorithms makes RL more accessible, establishing it as a valuable complement to supervised fine-tuning in the post-training toolkit
 
 [DeepSeek R1](https://fireworks.ai/blog/deepseek-r1-deepdive) and DeepSeek R1-Zero are all the rage right now. While DeepSeek R1 is likely a more suitable choice for production, DeepSeek R1-Zero as an exploratory model has also sparked significant interest in the community. For those of you who haven’t read the DeepSeek R1 technical report, the DeepSeek R1-Zero is a model trained without any supervised training data using an algorithm called GRPO (Group Relative Policy Optimization), and it was able to self-evolve to solve complex problems through complex chain of thought.
 
 GRPO is a reinforcement learning algorithm that shares many similarities with the PPO (Proximal Policy Optimization) algorithm that OpenAI famously adopted in their very original GPT3 training. While PPO is effective, there are several downsides that make it harder to adopt in practice. To name a few:
 
-- PPO requires co-training of a Value Model that is used to estimate the rollout baseline in [GAE (Generalized Advantage Estimation)](https://arxiv.org/pdf/1506.02438). Since the Value Model is typically around similar size as the Policy Model, it introduces significant compute and memory burden to the training pipeline
-- PPO typically requires a token level baseline (the output from Value Model). So you will need a value for each token. This further increases the amount of computations and intermediate memory required during training
-- The need for co-training a Value Model also means that there are more parameters to tune, making parameter searching harder
-- There are more implementation details in PPO algorithm to be taken care of because of the complex GAE calculations and Value Model updates
+1. PPO requires co-training of a Value Model that is used to estimate the rollout baseline in [GAE (Generalized Advantage Estimation)](https://arxiv.org/pdf/1506.02438) . Since the Value Model is typically around similar size as the Policy Model, it introduces significant compute and memory burden to the training pipeline
+2. PPO typically requires a token level baseline (the output from Value Model). So you will need a value for each token. This further increases the amount of computations and intermediate memory required during training
+3. The need for co-training a Value Model also means that there are more parameters to tune, making parameter searching harder
+4. There are more implementation details in PPO algorithm to be taken care of because of the complex GAE calculations and Value Model updates
 
 The GRPO algorithm originally introduced in the [DeepSeekMath: Pushing the Limits of Mathematical Reasoning in Open Language Models](https://arxiv.org/pdf/2402.03300) paper aims to tackle the above downsides of PPO. So they got rid of the Value Model, and used the normalized reward for different generations on the same prompt as the baseline to estimate an advantage. Token level reward is also no longer required with the removal of the Value Model. Instead, all the advantage estimations are performed on a sequence level (i.e. on the whole completion). Below is a diagram comparing PPO with GRPO taken from the DeepSeekMath paper mentioned above.
 
@@ -43,9 +45,9 @@ You ask the model to generate multiple responses on the same prompt, and assign 
 
 So what’s interesting here? We notice that the reinforcement learning algorithm itself is only asking for a reward model to assign a score to each generation, and there is absolutely no requirement on what this reward model should be. Some choices you have are:
 
-- **A deep learning model**: you can use a full deep learning model to assign scores to the generations. In LLM training, this reward model could very well be a similar sized LLM
-- **A hardcoded function**: you could also hardcode a function, encoding a set of rules that checks the model generation and assigns a score to it
-- **A combination of the above**
+1. **A deep learning model** : you can use a full deep learning model to assign scores to the generations. In LLM training, this reward model could very well be a similar sized LLM
+2. **A hardcoded function** : you could also hardcode a function, encoding a set of rules that checks the model generation and assigns a score to it
+3. **A combination of the above**
 
 What DeepSeek team did for DeepSeek R1-Zero training is essentially option 2) above, that is, assigning scores to generations purely based on a set of rules. For referential consistency, let’s call this function the **Verifiable Reward Function**. The Verifiable Reward Function could be as simple as: taking a reference answer (if it is given), and the response from the model, and returning a positive score if the response matches with the reference answer, and 0 otherwise.
 
@@ -53,12 +55,12 @@ What DeepSeek team did for DeepSeek R1-Zero training is essentially option 2) ab
 
 The team utilized set rules to measure how good a response is on **verifiable tasks**, i.e. the set of questions where the accuracy/correctness of the responses can be easily verified. In particular, they rewarded the responses based on:
 
-- Whether the response is correct
-- Whether the response is formatted correctly (i.e. putting thinking processes in between predefined tags and then generate the final response)
+1. Whether the response is correct
+2. Whether the response is formatted correctly (i.e. putting thinking processes in between predefined tags and then generate the final response)
 
 It was discovered that as training proceeds, the model learned to solve more and more complex tasks with longer and longer reasoning chains.
 
-Prior to the release of the DeepSeek R1 models and technical report, the Fireworks AI research team also conducted experiments on the effectiveness of the RLVR approach. While we are less interested in tasks such as mathematical problem solving, it would be great to understand how good RL based approaches can be adapted to fine tune models with simple supervision signals to achieve top quality results on constrained task settings, and even beating top of the notch closed source models.
+Prior to the release of the DeepSeek R1 models and technical report, the Fireworks research team also conducted experiments on the effectiveness of the RLVR approach. While we are less interested in tasks such as mathematical problem solving, it would be great to understand how good RL based approaches can be adapted to fine tune models with simple supervision signals to achieve top quality results on constrained task settings, and even beating top of the notch closed source models.
 
 We conducted two experiments on two datasets.
 
@@ -94,13 +96,13 @@ Through our experiments, we’ve demonstrated the effectiveness of Reinforcement
 
 This capability is invaluable for tasks where defining a clear reward function is possible but annotated data is unavailable or expensive to produce. RLVR opens new avenues for rapid model fine-tuning and optimization across diverse domains, from mathematical reasoning to decision-making processes.
 
-At Fireworks AI, we enable organizations to fine-tune models efficiently and cost-effectively. If you’re interested in exploring how RLVR can enhance your AI systems, please reach out to us, and unlock the full potential of your applications.
+At Fireworks, we enable organizations to fine-tune models efficiently and cost-effectively. If you’re interested in exploring how RLVR can enhance your AI systems, please reach out to us, and unlock the full potential of your applications.
 
-[ Fireworks AI](https://fireworks.ai/signup) is an enterprise scale LLM inference engine. Today, several AI-enabled developer experiences built on the Fireworks Inference platform are serving millions of developers.
+[**Fireworks**](https://fireworks.ai/signup) is an enterprise scale LLM inference engine. Today, several AI-enabled developer experiences built on the Fireworks Inference platform are serving millions of developers.
 
 Fireworks lightning fast serving stack enables enterprises to build mission critical Generative AI Applications that are super low latency. With methods like prompt caching, speculative API, we guarantee high throughput performance with low total cost of ownership (TCO) in addition to bringing best of the open-source LLMs on the same day of the launch.
 
-If you have more questions, [ join our community](https://discord.gg/J6ayEBXz) and tag a Fireworks AI team member or 
+If you have more questions, [**join our community**](https://discord.gg/J6ayEBXz) and tag a Fireworks team member or [**drop a note**](https://fireworks.ai/company/contact-us) to discuss building with LLMs from prototype to production.
 
 References
 

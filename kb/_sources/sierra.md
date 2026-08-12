@@ -1,7 +1,9 @@
 # sierra
 
-42 articles.
+43 articles.
 
+- **2026-08-11** — [Teaching agents to navigate janky IVR systems](<../agents/tool-use/Teaching agents to navigate janky IVR systems.md>) · `tool-use` · sierra
+  Details five concrete failure modes voice agents hit navigating IVR phone trees for other companies (response timing during preambles, keyword vs conversational response modes, detecting a human vs hold-music greetings, unpredictable/broken menu trees, and DTMF tone-vs-speech input handling), which raised Sierra agents' IVR success rate from ~50% to 85%.
 - **2026-07-29** — [Agency: Secure, scalable sandboxes for agents](<../product-engineering/architecture/Agency Secure, scalable sandboxes for agents.md>) · `architecture` · sierra
   Sierra describes Agency, its Kubernetes-based agent-sandbox orchestration layer powering Pinecone and Ghostwriter: a stateless control plane provisioning per-runner pods with dedicated IAM roles and an LLM proxy for just-in-time key injection, plus a hibernation design that models each runner as a finite state machine restorable from an append-only checkpoint/event log (p50 8ms, p99 40ms round trips) to reclaim compute from the 2-4 orders of magnitude of idle agents.
 - **2026-07-22** — [Building Sierra’s MCP Gateway: An engineering iceberg](<../product-engineering/security/Building Sierra’s MCP Gateway An engineering iceberg.md>) · `security` · sierra

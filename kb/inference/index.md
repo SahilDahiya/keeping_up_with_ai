@@ -1,6 +1,6 @@
 # inference
 
-125 articles.
+127 articles.
 
 - **2026-08-04** — [Bringing serverless functions closer to the speed of wire | Modal Blog](<optimization/Bringing serverless functions closer to the speed of wire Modal Blog.md>) · `optimization` · modal
   Modal rewrote its Function I/O plane in Go and deployed it across 4+ regions with a routing_region flag, cutting p50 end-to-end Function Call latency by ~80ms; also covers async offloading of non-critical work, JWT-based auth refresh, and sticking with Redis 7.1 over Valkey/Redis 7.2 after observing CPU spikes under load.
@@ -130,6 +130,8 @@
   An optimized Whisper deployment on Inference Endpoints built on vLLM, targeting Ada Lovelace GPUs (L4/L40s) to unlock torch.compile JIT kernels, CUDA graphs and a float8 KV cache — with the resulting latency/throughput gains for transcription workloads.
 - **2025-05-12** — [Boosting DeepSeek-R1 speed with customized speculative decoding](<speculative-decoding/Boosting DeepSeek-R1 speed with customized speculative decoding.md>) · `speculative-decoding` · together
   Shows customized speculative decoding for accelerating DeepSeek-R1 serving.
+- **2025-04-28** — [Optimizing Llama 4 Maverick on Fireworks](<optimization/Optimizing Llama 4 Maverick on Fireworks.md>) · `optimization` · fireworks
+  Details how Fireworks served Llama 4 Maverick within minutes of weight release using FireOptimizer-tuned FP8 quantization, tensor+expert parallelism, a custom FireAttention kernel extended for Maverick's chunked local attention, and a trained speculative-decoding drafter, reaching 145 tok/s on H200 (10-20% faster than the nearest competitor per Artificial Analysis).
 - **2025-04-21** — [Chipmunk: Training-Free Acceleration of Diffusion Transformers with Dynamic Column-Sparse Deltas](<kernels/Chipmunk Training-Free Acceleration of Diffusion Transformers with Dynamic Column-Sparse Deltas.md>) · `kernels` · together
   Describes Chipmunk, a training-free acceleration method for diffusion transformers.
 - **2025-04-18** — [Accelerating inference with NVIDIA B200 GPUs](<hardware/Accelerating inference with NVIDIA B200 GPUs.md>) · `hardware` · baseten
@@ -240,6 +242,8 @@
   Introduces LLM inference performance benchmarking and the metrics needed to compare serving systems.
 - **2023-10-12** — [Flash-Decoding for long-context inference](<kernels/Flash-Decoding for long-context inference.md>) · `kernels` · together
   Introduces Flash-Decoding for efficient long-context inference.
+- **2023-10-11** — [Accelerating Code Completion with Fireworks Fast LLM Inference](<optimization/Accelerating Code Completion with Fireworks Fast LLM Inference.md>) · `optimization` · fireworks
+  Sourcegraph's Cody code-completion integrated Fireworks-served StarCoder, raising Completion Acceptance Rate from 15% to 30% and cutting multi-line latency from 3.4s to 2.4s; Fireworks reports 3.5x+ lower latency than vLLM across batch sizes on 8xA100 via multi-query attention and PyTorch runtime optimizations.
 - **2023-09-15** — [NVIDIA A10 vs A100 GPUs for LLM and Stable Diffusion inference](<hardware/NVIDIA A10 vs A100 GPUs for LLM and Stable Diffusion inference.md>) · `hardware` · baseten
   Compares NVIDIA A10 and A100 GPUs for LLM and Stable Diffusion inference workloads.
 - **2023-09-11** — [Medusa: Simple framework for accelerating LLM generation with multiple decoding heads](<speculative-decoding/Medusa Simple framework for accelerating LLM generation with multiple decoding heads.md>) · `speculative-decoding` · together
@@ -255,6 +259,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-08-11** — [Introducing NVIDIA Nemotron 3.5 Lightning](<../models/releases/Introducing NVIDIA Nemotron 3.5 Lightning.md>) · `releases` · baseten
+  NVIDIA Nemotron 3.5 Lightning is a 30B MoE model (3B active) distilled from Nemotron 3 Ultra for agentic workloads, achieving ~4x higher throughput and 30% lower task completion time than comparable open models, now available on Baseten Dedicated Inference.
 - **2026-08-06** — [DeepSeek-V4 Flash 0731 vs GPT-5.6 Luna on DeepSWE: Cost and Coding](<../models/benchmarks/DeepSeek-V4 Flash 0731 vs GPT-5.6 Luna on DeepSWE Cost and Coding.md>) · `benchmarks` · together
   Benchmarks DeepSeek-V4 Flash 0731 against GPT-5.6 Luna on all 113 DeepSWE coding tasks (900 rollouts): Luna leads pass@1 67.2% vs 53.3% but costs 6x more ($0.61 vs $0.10/rollout); shows a DeepSeek-first cascade that escalates to Luna only on failure solves 78.9% of tasks at $0.385 each, beating Luna alone on both accuracy and cost.
 - **2026-08-04** — [Introducing NVIDIA Nemotron 3.5 ASR Streaming](<../models/releases/Introducing NVIDIA Nemotron 3.5 ASR Streaming.md>) · `releases` · baseten
@@ -263,16 +269,22 @@
   Baseten details a fine-tuning recipe for Qwen3-TTS voice cloning: an ASR-driven pipeline for building utterance-level (audio, text) pairs, talker/sub-talker cross-entropy loss over 12 RVQ codebook frames/sec, a centroid speaker embedding averaged over 64 clips, and warmup+cosine LR decay, trained in ~1 hour on a single H100 for 8 epochs on 1.5 hours of LJ Speech audio, reaching ~130ms TTFA (vs ~154ms for ICL cloning).
 - **2026-07-26** — [Kimi K3 vs GPT-5.6 Sol on DeepSWE: Cost, Coding, and Routing](<../models/benchmarks/Kimi K3 vs GPT-5.6 Sol on DeepSWE Cost, Coding, and Routing.md>) · `benchmarks` · together
   Analyzes 904 graded DeepSWE rollouts comparing Kimi K3 and GPT-5.6 Sol: Sol leads pass@1 72.7% to 68.5%, but Kimi K3 wins pass@4 (89.4% vs 85.8%) at 64% lower cost ($4.65 vs $8.37 per rollout). With only 0.46 task-level correlation between the two models, a Kimi-first cascade that escalates to Sol on test failure covers 108/113 tasks (~85.6%), beating both single models and a perfect one-shot router.
+- **2026-07-20** — [Heidi x Fireworks: Bridging the Gap in Frontier Model Performance](<../models/fine-tuning/Heidi x Fireworks Bridging the Gap in Frontier Model Performance.md>) · `fine-tuning` · fireworks
+  Heidi's clinical-note scribe moved from closed frontier models to a two-stage pipeline (SFT to imitate style, then RFT/DPO for preference-based quality) on Fireworks, cutting latency from 25s to 7s and outperforming Gemini Flash/Pro tiers in side-by-side evals; success depended on high-quality filtered data and larger effective batch sizes.
 - **2026-07-16** — [Fast, accurate retrieval with NVIDIA Nemotron 3 Embed](<../rag-retrieval/embeddings/Fast, accurate retrieval with NVIDIA Nemotron 3 Embed.md>) · `embeddings` · baseten
   Compares NVIDIA's Nemotron 3 Embed 8B and 1B embedding models available on Baseten: the 1B model uses pruning, distillation, and NVFP4 quantization to retain 95% of the 8B's retrieval accuracy (99% in NVFP4 on Blackwell, 2x throughput) while cutting indexing latency and serving cost; also covers a fine-tuning recipe yielding ~10% accuracy gains in 5 hours.
 - **2026-07-15** — [Together AI brings Thinking Machines Lab’s new model Inkling on day 0](<../models/architectures/Together AI brings Thinking Machines Lab’s new model Inkling on day 0.md>) · `architectures` · together
   Details Inkling's architecture (975B/40B active MoE with a shared expert sink jointly normalized against routed experts, a learned query-conditioned relative attention bias instead of RoPE, and 'sconv' short causal convolutions on K/V and sublayer outputs) and Together's FlashAttention-4-based kernel adapted to serve its query-conditioned relative attention efficiently.
 - **2026-07-06** — [How to price serverless GPUs](<../infra-platform/cost/How to price serverless GPUs.md>) · `cost` · modal
   Explains serverless GPU pricing from utilization, scheduling, and workload-shape constraints rather than simple hourly rates.
+- **2026-06-26** — [Fireworks AI](<../models/reinforcement-learning/Fireworks AI.md>) · `reinforcement-learning` · fireworks
+  Cursor's Composer 2, built on Kimi 2.5, is trained via continual pretraining and large-scale RL on long-horizon software engineering tasks; Fireworks provides distributed rollout/inference infra across 3-4 clusters with compressed weight sync, hitting 61.3 CursorBench and 6-10x lower inference cost than comparable frontier coding models.
 - **2026-06-25** — [Live draft model training for speculative decoding](<../models/fine-tuning/Live draft model training for speculative decoding.md>) · `fine-tuning` · baseten
   Describes live draft-model training for speculative decoding systems.
 - **2026-06-23** — [ParallelKernelBench: Frontier LLMs can't write fast multi-GPU kernels (yet)](<../evals-observability/benchmark-design/ParallelKernelBench Frontier LLMs can't write fast multi-GPU kernels (yet).md>) · `benchmark-design` · together
   Introduces ParallelKernelBench for measuring whether frontier LLMs can write fast multi-GPU kernels.
+- **2026-06-12** — [MiniMax M3 is live: long context + native multimodality at 1/20th the price](<../models/architectures/MiniMax M3 is live long context + native multimodality at 120th the price.md>) · `architectures` · fireworks
+  MiniMax M3's extended context comes from MSA (MiniMax Sparse Attention), which pre-filters and blocks KV caches with a 'KV outer gather Q' operator ordering that fetches each block once, delivering >4x speedup over Flash-Sparse-Attention/flash-moba, 95% lower per-token compute, and 9x/15x faster prefill/decode at 1M-token context versus M2.7.
 - **2026-06-12** — [Rolling deployments for zero-downtime model updates](<../infra-platform/deployment/Rolling deployments for zero-downtime model updates.md>) · `deployment` · baseten
   Explains rolling deployments for zero-downtime model updates in production serving systems.
 - **2026-05-29** — [How Together AI built a fast speech-to-text stack](<../models/multimodal/How Together AI built a fast speech-to-text stack.md>) · `multimodal` · together
@@ -307,14 +319,22 @@
   Explains model performance metrics used in production inference, including latency, throughput, and quality signals.
 - **2026-02-05** — [How to run LLM performance benchmarks (and why you should)](<../evals-observability/benchmark-design/How to run LLM performance benchmarks (and why you should).md>) · `benchmark-design` · baseten
   Explains how to run LLM performance benchmarks and which serving metrics matter.
+- **2026-01-26** — [Kimi K2.5 Is Live on Fireworks: Vibe Coding, Agents, and Full-Parameter RFT](<../models/reinforcement-learning/Kimi K2.5 Is Live on Fireworks Vibe Coding, Agents, and Full-Parameter RFT.md>) · `reinforcement-learning` · fireworks
+  Fireworks' full-parameter RL tuning preview for Kimi K2.5 exposes Tinker-API-compatible low-level primitives (forward, forward_backward, optimizer_step) while handling distributed training, cross-region trainer/sampler deployment with seamless weight transfer, and customizable GRPO/reward-shaping loss.
 - **2026-01-26** — [How shredding JSON is giving Logfire 1000x query speedups](<../product-engineering/architecture/How shredding JSON is giving Logfire 1000x query speedups.md>) · `architecture` · pydantic
   How Logfire 'shreds' nested JSON attributes into typed columns in its columnar store for up to 1000x query speedups—turning 30s-timeout queries into sub-second—covering schema inference and dynamic column materialization.
 - **2025-12-28** — [Keeping 20,000 GPUs healthy](<../infra-platform/gpu-clusters/Keeping 20,000 GPUs healthy.md>) · `gpu-clusters` · modal
   Describes operational practices for keeping a large GPU fleet healthy, including failure detection and reliability management.
 - **2025-12-17** — [When Every Word Matters: Engineering Real-Time Multilingual Intelligence for Human Conversations](<../models/multimodal/When Every Word Matters Engineering Real-Time Multilingual Intelligence for Human Conversations.md>) · `multimodal` · cresta
   Engineering guide to real-time multilingual intelligence for conversations, focusing on latency and speech-language quality.
+- **2025-12-15** — [NVIDIA Nemotron 3 Nano on Fireworks: The Engine for Next-Generation AI Agents](<../models/architectures/NVIDIA Nemotron 3 Nano on Fireworks The Engine for Next-Generation AI Agents.md>) · `architectures` · fireworks
+  NVIDIA Nemotron 3 Nano is a 30B MoE (3B active) hybrid Mamba-Transformer with 23 Mamba-2/MoE layers, 6 attention layers, 128 experts (5 active) plus a shared expert, and a token 'thinking budget' to cap reasoning-token generation; a cookbook demonstrates a chunk-then-synthesize strategy for summarizing large source files.
+- **2025-12-02** — [Unlock Advanced Reasoning with NVIDIA Nemotron Nano 2 Models on Fireworks](<../models/architectures/Unlock Advanced Reasoning with NVIDIA Nemotron Nano 2 Models on Fireworks.md>) · `architectures` · fireworks
+  NVIDIA Nemotron Nano 2 uses a hybrid Mamba-Transformer design where only ~8% of layers use quadratic-cost self-attention (placed where long-range links matter) and the rest use constant-cost Mamba-2/FFN blocks, giving transformer-level accuracy with much lower compute and stable memory for long-context reasoning.
 - **2025-11-03** — [Vercel code fixing with open models, speculative decoding, and RFT](<../product-engineering/case-studies/Vercel code fixing with open models, speculative decoding, and RFT.md>) · `case-studies` · fireworks
   Case study of improving Vercel code-fixing outputs with open models, speculative decoding, and reinforcement fine-tuning.
+- **2025-10-27** — [Accelerate your Vision Pipelines with the new NVIDIA Nemotron Nano 2 VL Model on Fireworks](<../models/multimodal/Accelerate your Vision Pipelines with the new NVIDIA Nemotron Nano 2 VL Model on Fireworks.md>) · `multimodal` · fireworks
+  NVIDIA Nemotron Nano2 VL combines the hybrid Mamba-Transformer Nemotron LLM with a CRADIOH-V2 vision encoder and video token compression; in an invoice-processing benchmark on Fireworks it hit 90%+ extraction accuracy on fields like invoice number and date via semantic (not pure-OCR) document understanding.
 - **2025-08-21** — [AI agents for efficient LLM inference engineering](<../agents/tool-use/AI agents for efficient LLM inference engineering.md>) · `tool-use` · together
   Case study of using AI agents to automate engineering tasks while developing efficient inference systems.
 - **2025-07-28** — [Building Voice AI That Actually Works: Balancing Realistic Voices vs. Production-Ready Performance](<../models/multimodal/Building Voice AI That Actually Works Balancing Realistic Voices vs. Production-Ready Performance.md>) · `multimodal` · cresta

@@ -1,7 +1,9 @@
 # cresta
 
-45 articles.
+46 articles.
 
+- **2026-08-07** — [How the Best AI Agents Keep Getting Better](<../evals-observability/evaluation/How the Best AI Agents Keep Getting Better.md>) · `evaluation` · cresta
+  Argues AI agent experimentation needs metrics that reward outcomes plus guardrails that protect against gaming (e.g. containment rising because customers gave up, not because they were helped), given agents are probabilistic, conversational, and evaluated by inferred/judged outcomes.
 - **2026-08-03** — [How Cresta Grades Its Agents: Evaluators in an LLM World](<../evals-observability/llm-as-judge/How Cresta Grades Its Agents Evaluators in an LLM World.md>) · `llm-as-judge` · cresta
   Describes Cresta's LLM-as-judge evaluation system for AI agents: binary, transcript-verifiable requirements converted into LLM evaluators, paired with deterministic checks (e.g., Tool Match), plus a human-in-the-loop calibration loop and separate completeness/accuracy claim-based scoring to distinguish under- and over-claiming.
 - **2026-07-31** — [Bringing Cresta's AI Agent to Avaya Infinity: Inside a New WebSocket Voice Integration](<../product-engineering/case-studies/Bringing Cresta's AI Agent to Avaya Infinity Inside a New WebSocket Voice Integration.md>) · `case-studies` · cresta

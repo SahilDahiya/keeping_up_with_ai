@@ -1,6 +1,6 @@
 # prompt-engineering
 
-18 articles.
+19 articles.
 
 - **2026-08-10** — [Snowflake + Pydantic AI integration](<structured-output/Snowflake + Pydantic AI integration.md>) · `structured-output` · pydantic
   Walks through Pydantic AI's new native Snowflake Cortex provider (SnowflakeModel/SnowflakeProvider) via a bioinformatics example: Pydantic schemas validate LLM structured output (Ensembl IDs, nested variant annotations), tool-call parameters for a BLAST search, extended thinking with budget_tokens on Claude, and portability of one schema across snowflake:claude-sonnet-5, gpt-5.4, and llama3.3-70b.
@@ -34,6 +34,8 @@
   Explains function calling and JSON mode for structured LLM application outputs.
 - **2023-10-05** — **[Paper]** [DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines](<techniques/[Paper] DSPy Compiling Declarative Language Model Calls into Self-Improving Pipelines.md>) · `techniques` · arxiv
   Reframes LLM pipelines as declarative modules with typed input/output signatures, compiled by optimizers (teleprompters) that bootstrap few-shot demonstrations and instructions against a metric instead of hand-tuned prompt strings. Compiled DSPy programs on GSM8K and multi-hop QA beat hand-crafted prompt chains and often let small open models rival few-shot GPT-3.5 — the foundational 'programming, not prompting' / prompt-optimization framework.
+- **2023-09-12** — [Simplifying Code Infilling with Code Llama and Fireworks.ai](<techniques/Simplifying Code Infilling with Code Llama and Fireworks.ai.md>) · `techniques` · fireworks
+  Documents the specific prompt format required for Code Llama infilling (<PRE>{pre}<SUF>{suf}<MID>, sensitive to trailing whitespace) and notes base models outperform instruction-tuned variants for precise infilling control, a common source of silent failures when building code-completion features.
 - **2022-11-22** — **[Paper]** [Program of Thoughts Prompting: Disentangling Computation from Reasoning for Numerical Reasoning Tasks](<techniques/[Paper] Program of Thoughts Prompting Disentangling Computation from Reasoning for Numerical Reasoning Tasks.md>) · `techniques` · arxiv
   Program of Thoughts prompting disentangles reasoning from computation by expressing the reasoning as executable program statements evaluated externally, in contrast to Chain-of-Thought's in-context arithmetic. Yields large gains on numerical, financial, and math word-problem QA and is complementary to PAL in arguing that computation belongs in an interpreter, not the model.
 - **2022-11-18** — **[Paper]** [PAL: Program-aided Language Models](<techniques/[Paper] PAL Program-aided Language Models.md>) · `techniques` · arxiv
@@ -77,6 +79,8 @@
   Introduces Agent Skills: folder-based packages of instructions, scripts, and resources that agents load progressively to gain domain expertise on demand.
 - **2025-07-11** — [Function calling for agentic AI systems](<../agents/tool-use/Function calling for agentic AI systems.md>) · `tool-use` · fireworks
   Explains function calling as the bridge between LLM outputs, external tools, and agentic execution loops.
+- **2025-06-22** — [Unlock Your Tools: Fireworks Adds OpenAI-Response API with MCP Support (Beta)](<../agents/tool-use/Unlock Your Tools Fireworks Adds OpenAI-Response API with MCP Support (Beta).md>) · `tool-use` · fireworks
+  Fireworks' OpenAI-compatible Responses API adds first-class Model Context Protocol (MCP) support, moving the agentic loop (reasoning, tool selection, execution) server-side so any MCP-speaking tool integration is portable across models rather than locked into one vendor's tool-calling format.
 - **2025-05-28** — [CodeAgents + Structure: A Better Way to Execute Actions](<../agents/tool-use/CodeAgents + Structure A Better Way to Execute Actions.md>) · `tool-use` · huggingface
   Shows that making a CodeAgent emit its thoughts and code as structured JSON (rather than free-form markdown code blocks) beats both plain CodeAgents and JSON ToolCallingAgents on SmolBench (GAIA, MATH, SimpleQA, Frames), with the gain concentrated in larger models; smaller models can be hurt by the added format constraint.
 - **2025-03-20** — [The "think" tool: Enabling Claude to stop and think](<../agents/tool-use/The think tool Enabling Claude to stop and think.md>) · `tool-use` · anthropic-engineering
@@ -97,6 +101,8 @@
   Explains Evo and long-context modeling from molecular to genome-scale sequences.
 - **2024-01-11** — [Long context retrieval models with Monarch Mixer](<../rag-retrieval/search/Long context retrieval models with Monarch Mixer.md>) · `search` · together
   Explains long-context retrieval models using Monarch Mixer.
+- **2023-12-20** — [Fireworks Raises the Quality Bar with Function Calling Model and API Release](<../agents/tool-use/Fireworks Raises the Quality Bar with Function Calling Model and API Release.md>) · `tool-use` · fireworks
+  Analyzes the core challenges of function calling at scale: intent detection (when to call vs. answer directly), handling large function sets like the full Stripe SDK, structuring nested/enum parameter values, and using multi-turn conversational context, ahead of Fireworks' alpha function-calling model release.
 - **2023-10-12** — [Flash-Decoding for long-context inference](<../inference/kernels/Flash-Decoding for long-context inference.md>) · `kernels` · together
   Introduces Flash-Decoding for efficient long-context inference.
 - **2023-06-15** — [Three techniques to adapt LLMs for any use case](<../models/fine-tuning/Three techniques to adapt LLMs for any use case.md>) · `fine-tuning` · baseten

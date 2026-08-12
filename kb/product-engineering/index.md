@@ -1,6 +1,6 @@
 # product-engineering
 
-50 articles.
+51 articles.
 
 - **2026-07-31** — [Bringing Cresta's AI Agent to Avaya Infinity: Inside a New WebSocket Voice Integration](<case-studies/Bringing Cresta's AI Agent to Avaya Infinity Inside a New WebSocket Voice Integration.md>) · `case-studies` · cresta
   Case study on integrating Cresta's voice AI agent with Avaya Infinity's new WebSocket media protocol, covering audio chunk-size tuning (20-200ms) for barge-in latency, timestamp-ordered transcript delivery, and race conditions that silently dropped the final transcript turn during call shutdown.
@@ -64,6 +64,8 @@
   Skyscanner wires Codex CLI to the JetBrains MCP server so the agent gets IDE feedback loops: get_file_problems surfaced a non-compiling Databricks SDK NotFound constructor immediately instead of after a test run, cutting iteration time.
 - **2025-11-24** — [What makes a great ChatGPT app | OpenAI Developers](<ux-patterns/What makes a great ChatGPT app OpenAI Developers.md>) · `ux-patterns` · openai-devs
   Design guidance for ChatGPT Apps: instead of porting an existing app's screens and navigation, expose a few narrow 'specific powers' the model can invoke mid-conversation, design for conversational entry points and discovery, and measure whether the app actually improves conversations.
+- **2025-11-09** — [Modernizing Healthcare with AI: How RADPAIR and Fireworks Unlock Smarter Radiology Workflows](<case-studies/Modernizing Healthcare with AI How RADPAIR and Fireworks Unlock Smarter Radiology Workflows.md>) · `case-studies` · fireworks
+  RADPAIR built an open-source AI orchestration standard for radiology (Report Document Schema + Actions and Event Protocol) running fine-tuned models and multi-agent pipelines on Fireworks, cutting report turnaround from 15-20s to 2-5s and reporting ~12% fewer errors across 1,000+ concurrent users.
 - **2025-11-03** — [Vercel code fixing with open models, speculative decoding, and RFT](<case-studies/Vercel code fixing with open models, speculative decoding, and RFT.md>) · `case-studies` · fireworks
   Case study of improving Vercel code-fixing outputs with open models, speculative decoding, and reinforcement fine-tuning.
 - **2025-10-28** — [Voice Cloning with Consent](<security/Voice Cloning with Consent.md>) · `security` · huggingface
@@ -105,6 +107,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-08-11** — [Teaching agents to navigate janky IVR systems](<../agents/tool-use/Teaching agents to navigate janky IVR systems.md>) · `tool-use` · sierra
+  Details five concrete failure modes voice agents hit navigating IVR phone trees for other companies (response timing during preambles, keyword vs conversational response modes, detecting a human vs hold-music greetings, unpredictable/broken menu trees, and DTMF tone-vs-speech input handling), which raised Sierra agents' IVR success rate from ~50% to 85%.
 - **2026-08-03** — [Laguna S 2.1 goes Greek: a repository-scale game transformation](<../agents/tool-use/Laguna S 2.1 goes Greek a repository-scale game transformation.md>) · `tool-use` · baseten
   Baseten case study: Poolside's Laguna S 2.1 (118B MoE, 8B active params, 1M context), running on Baseten Dedicated Inference, autonomously re-themed the 715-file Hypersomnia C++ codebase from cyberpunk to Ancient Greek in under 99 minutes, orchestrating Step 3.7 Flash, Krea 2 Turbo, and NVIDIA Cosmos 3 Nano as sub-models (modifying 954 sprites and 64 code/config files) while deliberately declining to use the video model when it added no value.
 - **2026-07-29** — [Building an agentic harness that outlasts the model (2026)](<../agents/harness/Building an agentic harness that outlasts the model (2026).md>) · `harness` · shopify

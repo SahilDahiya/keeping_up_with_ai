@@ -1,7 +1,9 @@
 # evals-observability
 
-101 articles.
+103 articles.
 
+- **2026-08-07** — [How the Best AI Agents Keep Getting Better](<evaluation/How the Best AI Agents Keep Getting Better.md>) · `evaluation` · cresta
+  Argues AI agent experimentation needs metrics that reward outcomes plus guardrails that protect against gaming (e.g. containment rising because customers gave up, not because they were helped), given agents are probabilistic, conversational, and evaluated by inferred/judged outcomes.
 - **2026-08-06** — [Airbnb's three-layer eval workflow with Pydantic AI and Logfire](<evaluation/Airbnb's three-layer eval workflow with Pydantic AI and Logfire.md>) · `evaluation` · pydantic
   Implements Airbnb's published three-layer eval workflow (programmatic checks, narrow LLMJudge rubrics, human-annotation calibration) end-to-end for a support agent using Pydantic AI and Logfire, including code for output validation, trajectory checks, and using Logfire's optimizer to propose the next prompt change from failing traces.
 - **2026-08-03** — [How Cresta Grades Its Agents: Evaluators in an LLM World](<llm-as-judge/How Cresta Grades Its Agents Evaluators in an LLM World.md>) · `llm-as-judge` · cresta
@@ -138,6 +140,8 @@
   Shows a TDD-style workflow for building agents with concrete acceptance tests, red teaming, and regression checks.
 - **2025-08-12** — [TextQuests: How Good are LLMs at Text-Based Video Games?](<benchmark-design/TextQuests How Good are LLMs at Text-Based Video Games.md>) · `benchmark-design` · huggingface
   TextQuests evaluates LLM agents on 25 classic Infocom interactive-fiction games that need hundreds of precise actions over 30+ hours of play, testing long-horizon planning and long-context reasoning with no external tools. Scores both game progress and 'harm' (irreversible mistakes), and finds frontier models still struggle with sustained exploratory reasoning.
+- **2025-07-30** — [Fireworks AI](<benchmark-design/Fireworks AI.md>) · `benchmark-design` · fireworks
+  Fireworks' Real-World Leaderboard evaluates models on vertical, production-mirroring tasks (ticket classification, e-commerce search, agentic workflows) rather than academic benchmarks, finding Qwen3 Instruct strongest on knowledge-heavy tasks, Qwen3 Coder strong on simple tool-use, and Claude Sonnet 4 still leading complex multi-step agentic work.
 - **2025-07-17** — [Back to The Future: Evaluating AI Agents on Predicting Future Events](<benchmark-design/Back to The Future Evaluating AI Agents on Predicting Future Events.md>) · `benchmark-design` · huggingface
   FutureBench evaluates agents on predicting events that have not happened yet (news outcomes, prediction-market style questions), which makes benchmark contamination impossible by construction and makes results objectively verifiable once the future arrives. Describes the automated question-generation pipeline and rolling scoring of agents with web search.
 - **2025-07-10** — [Using Model-as-a-Judge for Reward in Reinforcement Finetuning](<llm-as-judge/Using Model-as-a-Judge for Reward in Reinforcement Finetuning.md>) · `llm-as-judge` · fireworks
@@ -291,8 +295,6 @@
   Open reproduction of OpenAI's Deep Research: a smolagents CodeAgent (Python-action instead of JSON tool calls) with a text web browser and file inspector reaches 55% on GAIA validation vs OpenAI's ~67%, with analysis of where browser interaction is the bottleneck.
 - **2025-01-28** — [How Cresta Scales Real-Time Insights with ClickHouse](<../infra-platform/deployment/How Cresta Scales Real-Time Insights with ClickHouse.md>) · `deployment` · cresta
   Architecture case study on scaling real-time AI insights with ClickHouse for high-volume conversation analytics.
-- **2025-01-27** — [Beyond Supervised Fine Tuning: How Reinforcement Learning Empowers AI with Minimal Labels](<../models/reinforcement-learning/Beyond Supervised Fine Tuning How Reinforcement Learning Empowers AI with Minimal Labels.md>) · `reinforcement-learning` · fireworks
-  Explains reinforcement learning with verifiable rewards as a way to improve models with minimal labels.
 - **2024-10-22** — [Evaluating NVIDIA H200 Tensor Core GPUs for LLM inference](<../inference/hardware/Evaluating NVIDIA H200 Tensor Core GPUs for LLM inference.md>) · `hardware` · baseten
   Evaluates NVIDIA H200 GPUs for LLM inference and compares their serving performance characteristics.
 - **2024-10-01** — [🇨🇿 BenCzechMark - Can your LLM Understand Czech?](<../models/benchmarks/🇨🇿 BenCzechMark - Can your LLM Understand Czech.md>) · `benchmarks` · huggingface

@@ -1,7 +1,9 @@
 # agents
 
-81 articles.
+88 articles.
 
+- **2026-08-11** — [Teaching agents to navigate janky IVR systems](<tool-use/Teaching agents to navigate janky IVR systems.md>) · `tool-use` · sierra
+  Details five concrete failure modes voice agents hit navigating IVR phone trees for other companies (response timing during preambles, keyword vs conversational response modes, detecting a human vs hold-music greetings, unpredictable/broken menu trees, and DTMF tone-vs-speech input handling), which raised Sierra agents' IVR success rate from ~50% to 85%.
 - **2026-08-03** — [Laguna S 2.1 goes Greek: a repository-scale game transformation](<tool-use/Laguna S 2.1 goes Greek a repository-scale game transformation.md>) · `tool-use` · baseten
   Baseten case study: Poolside's Laguna S 2.1 (118B MoE, 8B active params, 1M context), running on Baseten Dedicated Inference, autonomously re-themed the 715-file Hypersomnia C++ codebase from cyberpunk to Ancient Greek in under 99 minutes, orchestrating Step 3.7 Flash, Krea 2 Turbo, and NVIDIA Cosmos 3 Nano as sub-models (modifying 954 sprites and 64 code/config files) while deliberately declining to use the video model when it added no value.
 - **2026-07-31** — [When agents improve agents: loops that improve themselves](<harness/When agents improve agents loops that improve themselves.md>) · `harness` · pydantic
@@ -22,6 +24,8 @@
   Synthesizes 27 benchmark, taxonomy, and audit papers (2023-2026) across 19 benchmarks into a unified taxonomy of LLM-agent failure, with six clusters: tool-invocation/parameter errors, planning and constraint-satisfaction failures, long-horizon degradation from context accumulation, multi-agent coordination breakdown, safety failures under adversarial or underspecified conditions, and measurement-validity problems. Finds failures compound nonlinearly with task length, strong sub-task scores do not predict end-to-end success, and extra scaffolding does not reliably improve reliability.
 - **2026-07-02** — [Observability MCP comparison: Pydantic Logfire, ClickStack, LangSmith, Braintrust, Galileo, Phoenix, and Langfuse](<tool-use/Observability MCP comparison Pydantic Logfire, ClickStack, LangSmith, Braintrust, Galileo, Phoenix, and Langfuse.md>) · `tool-use` · pydantic
   Compares the MCP servers of seven observability platforms (Logfire, ClickStack, LangSmith, Braintrust, Galileo, Phoenix, Langfuse) on whether an agent can ask a debugging question directly and get bounded, verifiable evidence, arguing MCP tool design should return compact aggregates rather than pages of raw trace objects that burn the context window.
+- **2026-06-26** — [How Factory Grew Open Model Usage 2-3x in Six Months on Fireworks](<harness/How Factory Grew Open Model Usage 2-3x in Six Months on Fireworks.md>) · `harness` · fireworks
+  Factory's Droids run any coding model (frontier or open-weight) behind one harness that absorbs per-model differences in reasoning/tracing formats, tool schemas, and git-state handling; open-weight share of Factory's usage grew 2-3x in six months as models closed the capability gap at a fraction of frontier cost.
 - **2026-06-26** — [What makes a good agent harness](<harness/What makes a good agent harness.md>) · `harness` · pydantic
   Follow-up to the harness thesis detailing what makes an agent harness good: safe tool access, memory that survives a single model call, guardrails that catch bad actions before they land, and context management that keeps the window full of what matters.
 - **2026-06-24** — [Frontier AI at a fraction of the cost: open-source worker agents with a closed-source advisor.](<multi-agent/Frontier AI at a fraction of the cost open-source worker agents with a closed-source advisor.md>) · `multi-agent` · fireworks
@@ -120,6 +124,8 @@
   Explains function calling as the bridge between LLM outputs, external tools, and agentic execution loops.
 - **2025-07-02** — [DeepSWE coding agent trained with scaled RL](<tool-use/DeepSWE coding agent trained with scaled RL.md>) · `tool-use` · together
   Explains DeepSWE, an open-source coding agent trained by scaling reinforcement learning.
+- **2025-06-22** — [Unlock Your Tools: Fireworks Adds OpenAI-Response API with MCP Support (Beta)](<tool-use/Unlock Your Tools Fireworks Adds OpenAI-Response API with MCP Support (Beta).md>) · `tool-use` · fireworks
+  Fireworks' OpenAI-compatible Responses API adds first-class Model Context Protocol (MCP) support, moving the agentic loop (reasoning, tool selection, execution) server-side so any MCP-speaking tool integration is portable across models rather than locked into one vendor's tool-calling format.
 - **2025-06-18** — [Introducing Roast: Structured AI workflows made easy (2025)](<harness/Introducing Roast Structured AI workflows made easy (2025).md>) · `harness` · shopify
   Shopify open-sources Roast, a framework for structured AI workflows, built to grade and optimize unit tests at scale with minimal human intervention after finding ad-hoc AI workflows hard to maintain.
 - **2025-06-13** — [How we built our multi-agent research system](<multi-agent/How we built our multi-agent research system.md>) · `multi-agent` · anthropic-engineering
@@ -128,6 +134,8 @@
   Walkthrough of building an autonomous open data-scientist agent from scratch.
 - **2025-05-28** — [CodeAgents + Structure: A Better Way to Execute Actions](<tool-use/CodeAgents + Structure A Better Way to Execute Actions.md>) · `tool-use` · huggingface
   Shows that making a CodeAgent emit its thoughts and code as structured JSON (rather than free-form markdown code blocks) beats both plain CodeAgents and JSON ToolCallingAgents on SmolBench (GAIA, MATH, SimpleQA, Frames), with the gain concentrated in larger models; smaller models can be hurt by the added format constraint.
+- **2025-05-21** — [Building an open-source Browser Agent on Fireworks](<computer-use/Building an open-source Browser Agent on Fireworks.md>) · `computer-use` · fireworks
+  Technical breakdown of Fireworks BrowserUse: gives an LLM web-browsing ability by combining DOM extraction (interactive element structure), base64 screenshot capture for visual context, viewport/scroll position tracking, and unique indexing of interactive elements so the model can unambiguously reference what to click.
 - **2025-05-19** — [Agentic AI Systems](<planning/Agentic AI Systems.md>) · `planning` · fireworks
   Overview of agentic AI systems, covering planning, tool use, control loops, and production architecture concerns.
 - **2025-04-16** — [Open Deep Research](<tool-use/Open Deep Research.md>) · `tool-use` · together
@@ -142,6 +150,8 @@
   Introduces smolagents and argues for code agents: having the LLM write executable Python actions instead of emitting JSON tool calls yields fewer steps and better benchmark performance, since code composes, loops and reuses variables natively. Frames 'agency' as a spectrum, and covers the sandboxed execution and multi-agent/managed-agent primitives in ~1,000 lines of library code.
 - **2024-12-19** — [Building Effective AI Agents](<planning/Building Effective AI Agents.md>) · `planning` · anthropic-engineering
   Anthropic's canonical guide to agent design patterns: when to use workflows (prompt chaining, routing, orchestrator-workers) versus autonomous agents, and why simple composable patterns beat frameworks.
+- **2024-11-15** — [Fireworks f1: A breakthrough in complex reasoning with Compound AI](<harness/Fireworks f1 A breakthrough in complex reasoning with Compound AI.md>) · `harness` · fireworks
+  Fireworks' f1 is a 'compound AI' model that interleaves generation from multiple open models at the inference layer to handle complex reasoning via declarative prompting, aiming to match or exceed closed frontier models on coding, math, and reasoning benchmarks.
 - **2024-08-12** — [Tool Use, Unified](<tool-use/Tool Use, Unified.md>) · `tool-use` · huggingface
   Explains the unified tool-use API in Transformers chat templates: pass plain Python functions with typed signatures and docstrings and they are auto-converted to JSON schema, then rendered per-model by the model's Jinja chat template — plus the conventions chosen for tool-call and tool-result messages so tool-calling chats are portable across models that disagree on formats.
 - **2024-07-01** — [Our Transformers Code Agent beats the GAIA benchmark 🏅](<tool-use/Our Transformers Code Agent beats the GAIA benchmark 🏅.md>) · `tool-use` · huggingface
@@ -152,10 +162,14 @@
   Transformers Agents 2.0 introduces ReAct-style CodeAgent and JsonAgent that iterate on past observations, with a code-writing action format, tool definitions and system prompts, benchmarked against LangChain agents.
 - **2024-05-08** — [Code Generation with Large Language Models - Fireworks AI Take](<tool-use/Code Generation with Large Language Models - Fireworks AI Take.md>) · `tool-use` · fireworks
   Discusses code-generation copilots with LLMs, including model behavior, latency, and developer workflow considerations.
+- **2024-05-06** — [Doomed to Code: How we Teamed Up with Fireworks at MistralAI Hackathon to Conquer the Shores of Hell](<computer-use/Doomed to Code How we Teamed Up with Fireworks at MistralAI Hackathon to Conquer the Shores of Hell.md>) · `computer-use` · fireworks
+  Hackathon writeup on getting text-only Mistral-7B to play Doom by representing the game screen as text (bounding boxes of detected objects) rather than using vision models, working around the lack of native multimodal input to give a text LLM real-time game-state awareness.
 - **2024-02-01** — **[Paper]** [Executable Code Actions Elicit Better LLM Agents](<tool-use/[Paper] Executable Code Actions Elicit Better LLM Agents.md>) · `tool-use` · arxiv
   Argues LLM agents should act by generating executable Python code rather than JSON tool calls or free text. Consolidating actions into code gives one unified action space where the model composes tools, uses control flow, and revises on execution feedback; across 17 LLMs CodeAct achieves up to ~20% higher success with fewer actions than JSON/text baselines. Releases the CodeActInstruct dataset and the open CodeActAgent — the canonical statement of the code-as-action paradigm.
 - **2024-01-24** — [Open-source LLMs as LangChain Agents](<tool-use/Open-source LLMs as LangChain Agents.md>) · `tool-use` · huggingface
   Explains the ReAct loop mechanics (thought/action/observation, stopping, error handling) and builds such agents with LangChain's ChatHuggingFace, then benchmarks open LLMs on a custom agent evaluation set against GPT-3.5/GPT-4. Mixtral-8x7B comes out ahead of GPT-3.5 on the agentic tasks; also covers the JSON-parsing failure modes that dominate agent errors.
+- **2023-12-20** — [Fireworks Raises the Quality Bar with Function Calling Model and API Release](<tool-use/Fireworks Raises the Quality Bar with Function Calling Model and API Release.md>) · `tool-use` · fireworks
+  Analyzes the core challenges of function calling at scale: intent detection (when to call vs. answer directly), handling large function sets like the full Stripe SDK, structuring nested/enum parameter values, and using multi-turn conversational context, ahead of Fireworks' alpha function-calling model release.
 - **2023-10-12** — **[Paper]** [MemGPT: Towards LLMs as Operating Systems](<memory-context/[Paper] MemGPT Towards LLMs as Operating Systems.md>) · `memory-context` · arxiv
   Treats the LLM as an operating system managing a tiered memory hierarchy: a fixed-size in-context 'main memory' plus external storage, with the model issuing function calls to page information in and out and to interrupt/resume itself. Enables coherent unbounded conversations and long-document analysis beyond the context window, and introduces self-editing working context that survives eviction — the anchor reference for durable agent state.
 - **2023-05-25** — **[Paper]** [Voyager: An Open-Ended Embodied Agent with Large Language Models](<planning/[Paper] Voyager An Open-Ended Embodied Agent with Large Language Models.md>) · `planning` · arxiv
@@ -167,6 +181,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-08-10** — [Fireworks AI](<../models/architectures/Fireworks AI.md>) · `architectures` · fireworks
+  Meta's Muse Glimmer is a 30B dense agentic model (52 layers, GQA with 32 query/2 KV heads, SwiGLU) using sliding-window attention over 2,048 tokens with a global attention layer every fourth layer, keeping the KV cache small enough to serve long-context, multi-step tool-calling agents economically at high concurrency.
 - **2026-08-10** — [Snowflake + Pydantic AI integration](<../prompt-engineering/structured-output/Snowflake + Pydantic AI integration.md>) · `structured-output` · pydantic
   Walks through Pydantic AI's new native Snowflake Cortex provider (SnowflakeModel/SnowflakeProvider) via a bioinformatics example: Pydantic schemas validate LLM structured output (Ensembl IDs, nested variant annotations), tool-call parameters for a BLAST search, extended thinking with budget_tokens on Claude, and portability of one schema across snowflake:claude-sonnet-5, gpt-5.4, and llama3.3-70b.
 - **2026-08-05** — [Sidekick's continual learning loop (2026)](<../models/fine-tuning/Sidekick's continual learning loop (2026).md>) · `fine-tuning` · shopify
@@ -195,6 +211,8 @@
   Breaks down sandbox startup latency and why ready-state semantics matter for agent and remote-execution workflows.
 - **2026-06-15** — [Agents are the new services in Pydantic Logfire](<../evals-observability/monitoring/Agents are the new services in Pydantic Logfire.md>) · `monitoring` · pydantic
   Argues agents need service-style observability reinvented for their shape: non-deterministic execution paths, per-request token cost, models silently swapped or throttled under you, and a data plane that is now a compliance plane (user-typed PII in prompts). Contrasts AI-observability vendors (LangSmith, Langfuse, Arize) with infra vendors (Datadog, Grafana) and pitches a unified RED-metrics/topology/SLO view over a single trace ID.
+- **2026-06-12** — [Kimi K2.7 Code on Fireworks: Better Agents, Lower Cost per Task, Available Day-0 | Fireworks](<../models/reasoning/Kimi K2.7 Code on Fireworks Better Agents, Lower Cost per Task, Available Day-0 Fireworks.md>) · `reasoning` · fireworks
+  Kimi K2.7 Code uses roughly 30% fewer reasoning tokens than K2.6 while scoring higher on coding evals (+21.8% Kimi Code Bench v2, +11% Program Bench), illustrating that reasoning-token economy, not just raw benchmark score, matters for agentic coding workloads that fire off dozens of model calls per task.
 - **2026-06-09** — [The Data Comes First: Mining Real Conversations for Test Coverage](<../evals-observability/testing/The Data Comes First Mining Real Conversations for Test Coverage.md>) · `testing` · cresta
   Explains how real conversation data can be mined to create better test coverage for AI agents.
 - **2026-06-04** — [Introducing AI Agent Testing 2.0: Confidence at Launch, Confidence at Scale](<../evals-observability/testing/Introducing AI Agent Testing 2.0 Confidence at Launch, Confidence at Scale.md>) · `testing` · cresta
@@ -253,6 +271,8 @@
   Design of Claude Code auto mode: sandboxing plus permission heuristics that let the agent act without per-action approval while bounding blast radius.
 - **2026-03-11** — [From prompts to products: One year of Responses | OpenAI Developers](<../product-engineering/case-studies/From prompts to products One year of Responses OpenAI Developers.md>) · `case-studies` · openai-devs
   One-year retrospective on the Responses API told through five developer stories, including Raindrop AI's production agent-monitoring platform (failure detection and debugging on GPT-5.2 via the Vercel AI SDK) built on its hosted-tool and background-analysis primitives.
+- **2026-03-02** — [Best LLMs for coding: 2026 roundup](<../models/benchmarks/Best LLMs for coding 2026 roundup.md>) · `benchmarks` · fireworks
+  2026 coding-model roundup comparing GPT-5.5, Claude Opus 4.7, Kimi K2.6, DeepSeek V4-Pro/Flash, gpt-oss-120B and others on AA Coding Index, SWE-Bench Verified, context window, price, and license, with guidance on open vs closed model tradeoffs for production coding workloads.
 - **2026-02-27** — [2,000 robots walk into a shop: Simulated A/B testing (2026)](<../evals-observability/testing/2,000 robots walk into a shop Simulated AB testing (2026).md>) · `testing` · shopify
   SimGym: Shopify's simulated A/B testing environment where thousands of LLM-driven shopper agents exercise storefronts, letting teams test changes against synthetic-but-realistic buyer behavior before real traffic.
 - **2026-02-23** — [Directory Snapshots: Resumable project state for Sandboxes](<../infra-platform/deployment/Directory Snapshots Resumable project state for Sandboxes.md>) · `deployment` · modal
@@ -273,6 +293,10 @@
   Covers best practices for multi-turn reinforcement learning, including environment design and reward structure.
 - **2025-11-20** — [Eval Protocol: RL on your agents, in any environment](<../models/reinforcement-learning/Eval Protocol RL on your agents, in any environment.md>) · `reinforcement-learning` · fireworks
   Describes using Eval Protocol to run reinforcement learning on agents in task environments.
+- **2025-11-09** — [Modernizing Healthcare with AI: How RADPAIR and Fireworks Unlock Smarter Radiology Workflows](<../product-engineering/case-studies/Modernizing Healthcare with AI How RADPAIR and Fireworks Unlock Smarter Radiology Workflows.md>) · `case-studies` · fireworks
+  RADPAIR built an open-source AI orchestration standard for radiology (Report Document Schema + Actions and Event Protocol) running fine-tuned models and multi-agent pipelines on Fireworks, cutting report turnaround from 15-20s to 2-5s and reporting ~12% fewer errors across 1,000+ concurrent users.
+- **2025-10-31** — [Genspark’s Deep Research Agent Outperforms a Frontier Closed Model in Quality and Tool Calls using Fireworks RFT, Achieving a 50% Cost Reduction](<../models/reinforcement-learning/Genspark’s Deep Research Agent Outperforms a Frontier Closed Model in Quality and Tool Calls using Fireworks RFT, Achieving a 50% Cost Reduction.md>) · `reinforcement-learning` · fireworks
+  Genspark used Fireworks' Reinforcement Fine-Tuning on a 1T-parameter Kimi K2 Mixture-of-Agents deep-research system, achieving 12% better quality and 33% more tool calls than a SOTA closed model at 50% lower cost within one month, moving beyond what prompt engineering on a proprietary model could achieve.
 - **2025-10-20** — [Making Claude Code more secure and autonomous with sandboxing](<../product-engineering/security/Making Claude Code more secure and autonomous with sandboxing.md>) · `security` · anthropic-engineering
   Introduces sandboxed bash execution and filesystem/network isolation in Claude Code, reducing permission prompts while containing what the agent can touch.
 - **2025-10-17** — [When to Use What: A Practical Guide to AI Agent Testing and Evaluation](<../evals-observability/testing/When to Use What A Practical Guide to AI Agent Testing and Evaluation.md>) · `testing` · cresta
@@ -289,12 +313,16 @@
   Shows a TDD-style workflow for building agents with concrete acceptance tests, red teaming, and regression checks.
 - **2025-08-12** — [TextQuests: How Good are LLMs at Text-Based Video Games?](<../evals-observability/benchmark-design/TextQuests How Good are LLMs at Text-Based Video Games.md>) · `benchmark-design` · huggingface
   TextQuests evaluates LLM agents on 25 classic Infocom interactive-fiction games that need hundreds of precise actions over 30+ hours of play, testing long-horizon planning and long-context reasoning with no external tools. Scores both game progress and 'harm' (irreversible mistakes), and finds frontier models still struggle with sustained exploratory reasoning.
+- **2025-08-05** — [Introducing OpenAI gpt-oss (20b & 120b)](<../models/releases/Introducing OpenAI gpt-oss (20b & 120b).md>) · `releases` · fireworks
+  Deep dive on OpenAI's first open-weight release since GPT-2 (gpt-oss-20b/120b): standard MoE transformer architecture with adjustable low/mid/high reasoning levels and built-in tool support, with gpt-oss-120b surpassing o3-mini and approaching o4-mini on benchmarks despite being 6x smaller than typical frontier scale, driven mainly by post-training data and RL rather than architecture.
 - **2025-07-17** — [Back to The Future: Evaluating AI Agents on Predicting Future Events](<../evals-observability/benchmark-design/Back to The Future Evaluating AI Agents on Predicting Future Events.md>) · `benchmark-design` · huggingface
   FutureBench evaluates agents on predicting events that have not happened yet (news outcomes, prediction-market style questions), which makes benchmark contamination impossible by construction and makes results objectively verifiable once the future arrives. Describes the automated question-generation pipeline and rolling scoring of agents with web search.
 - **2025-06-26** — [Claude Desktop Extensions: One-click MCP server installation for Claude Desktop](<../product-engineering/ux-patterns/Claude Desktop Extensions One-click MCP server installation for Claude Desktop.md>) · `ux-patterns` · anthropic-engineering
   Introduces Desktop Extensions (.dxt): a packaging format for one-click installation of local MCP servers in Claude Desktop, with manifest spec and distribution details.
 - **2025-05-28** — [Mixture-of-Agents Alignment for post-training](<../models/fine-tuning/Mixture-of-Agents Alignment for post-training.md>) · `fine-tuning` · together
   Explains Mixture-of-Agents Alignment for improving post-training with collective model intelligence.
+- **2025-05-06** — [Qwen 3 on Fireworks: Controllable Chain-of-Thought and Tool Calling at Frontier Scale](<../models/reasoning/Qwen 3 on Fireworks Controllable Chain-of-Thought and Tool Calling at Frontier Scale.md>) · `reasoning` · fireworks
+  Qwen 3 235B-A22B (128-expert MoE, 22B active) streams an explicit chain-of-thought trace alongside a structured tool call in the same completion, toggleable via reasoning_effort or /think //no_think tags, with recommended sampling params differing between thinking and non-thinking modes.
 - **2025-03-18** — [Our Own Zero to One: Lessons Learned in Building The Brinks Home AI Agent](<../product-engineering/case-studies/Our Own Zero to One Lessons Learned in Building The Brinks Home AI Agent.md>) · `case-studies` · cresta
   Production case study on building an AI agent from zero to one, with lessons about scope, rollout, and operational constraints.
 - **2025-02-04** — [DABStep: Data Agent Benchmark for Multi-step Reasoning](<../evals-observability/benchmark-design/DABStep Data Agent Benchmark for Multi-step Reasoning.md>) · `benchmark-design` · huggingface
