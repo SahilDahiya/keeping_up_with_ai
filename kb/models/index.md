@@ -1,7 +1,9 @@
 # models
 
-171 articles.
+172 articles.
 
+- **2026-08-12** — [Can open models carry readable silent signals before they speak? Reproducing J-Lens Readouts on Kimi K3 & Qwen3.5-9B](<reasoning/Can open models carry readable silent signals before they speak Reproducing J-Lens Readouts on Kimi K3 & Qwen3.5-9B.md>) · `reasoning` · fireworks
+  Reproduces Anthropic's J-Lens (Jacobian Lens) probe, originally from the global workspace study, on two open models (Kimi K3 and Qwen3.5-9B) to test whether they carry readable internal vocabulary signals before generating output. Using focus-instruction experiments (e.g. arithmetic vs. citrus framing) with identical visible outputs, the probe recovered topic-consistent vocabulary in the top-10 predictions at most sampled layers/positions without leakage between conditions.
 - **2026-08-11** — [Introducing NVIDIA Nemotron 3.5 Lightning](<releases/Introducing NVIDIA Nemotron 3.5 Lightning.md>) · `releases` · baseten
   NVIDIA Nemotron 3.5 Lightning is a 30B MoE model (3B active) distilled from Nemotron 3 Ultra for agentic workloads, achieving ~4x higher throughput and 30% lower task completion time than comparable open models, now available on Baseten Dedicated Inference.
 - **2026-08-10** — [Fireworks AI](<architectures/Fireworks AI.md>) · `architectures` · fireworks

@@ -211,6 +211,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-08-12** — [Can open models carry readable silent signals before they speak? Reproducing J-Lens Readouts on Kimi K3 & Qwen3.5-9B](<../models/reasoning/Can open models carry readable silent signals before they speak Reproducing J-Lens Readouts on Kimi K3 & Qwen3.5-9B.md>) · `reasoning` · fireworks
+  Reproduces Anthropic's J-Lens (Jacobian Lens) probe, originally from the global workspace study, on two open models (Kimi K3 and Qwen3.5-9B) to test whether they carry readable internal vocabulary signals before generating output. Using focus-instruction experiments (e.g. arithmetic vs. citrus framing) with identical visible outputs, the probe recovered topic-consistent vocabulary in the top-10 predictions at most sampled layers/positions without leakage between conditions.
 - **2026-08-05** — [Sidekick's continual learning loop (2026)](<../models/fine-tuning/Sidekick's continual learning loop (2026).md>) · `fine-tuning` · shopify
   Shopify's continual learning flywheel for its GraphQL merchant agent: calibrate an LLM judge with Cohen's kappa against expert annotators, use GEPA/ACE and Toloka human review to heal failed production trajectories, then distill them into a smaller model via SFT and GRPO, plus gist-token prompt compression (6k to ~1.5k tokens). The specialized model cut serving cost from an estimated $27M to $1M/year (96%) and reduced end-to-end latency ~38% while beating the frontier baseline.
 - **2026-07-31** — [When agents improve agents: loops that improve themselves](<../agents/harness/When agents improve agents loops that improve themselves.md>) · `harness` · pydantic

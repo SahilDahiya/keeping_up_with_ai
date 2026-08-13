@@ -1,7 +1,9 @@
 # fireworks
 
-84 articles.
+85 articles.
 
+- **2026-08-12** — [Can open models carry readable silent signals before they speak? Reproducing J-Lens Readouts on Kimi K3 & Qwen3.5-9B](<../models/reasoning/Can open models carry readable silent signals before they speak Reproducing J-Lens Readouts on Kimi K3 & Qwen3.5-9B.md>) · `reasoning` · fireworks
+  Reproduces Anthropic's J-Lens (Jacobian Lens) probe, originally from the global workspace study, on two open models (Kimi K3 and Qwen3.5-9B) to test whether they carry readable internal vocabulary signals before generating output. Using focus-instruction experiments (e.g. arithmetic vs. citrus framing) with identical visible outputs, the probe recovered topic-consistent vocabulary in the top-10 predictions at most sampled layers/positions without leakage between conditions.
 - **2026-08-10** — [Fireworks AI](<../models/architectures/Fireworks AI.md>) · `architectures` · fireworks
   Meta's Muse Glimmer is a 30B dense agentic model (52 layers, GQA with 32 query/2 KV heads, SwiGLU) using sliding-window attention over 2,048 tokens with a global attention layer every fourth layer, keeping the KV cache small enough to serve long-context, multi-step tool-calling agents economically at high concurrency.
 - **2026-07-30** — [Three Tests to Run Before You Switch from LoRA to FullFT](<../models/fine-tuning/Three Tests to Run Before You Switch from LoRA to FullFT.md>) · `fine-tuning` · fireworks

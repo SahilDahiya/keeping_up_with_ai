@@ -2,10 +2,16 @@
 title: Can open models carry readable silent signals before they speak? Reproducing
   J-Lens Readouts on Kimi K3 & Qwen3.5-9B
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: models
+subtopic: reasoning
+secondary_topics:
+- evals-observability/evaluation
+summary: Reproduces Anthropic's J-Lens (Jacobian Lens) probe, originally from the
+  global workspace study, on two open models (Kimi K3 and Qwen3.5-9B) to test whether
+  they carry readable internal vocabulary signals before generating output. Using
+  focus-instruction experiments (e.g. arithmetic vs. citrus framing) with identical
+  visible outputs, the probe recovered topic-consistent vocabulary in the top-10 predictions
+  at most sampled layers/positions without leakage between conditions.
 triage: null
 skip_reason: null
 source: fireworks
@@ -13,7 +19,7 @@ url: https://fireworks.ai/blog/J-Lens-Kimi-K3-Qwen
 author: null
 published: '2026-08-12'
 fetched: '2026-08-13T06:29:54Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1977
 content_sha256: d0279790b91a0b036175d91824aa9c1b6fad36ae891f50fbd0dd795090e66516
