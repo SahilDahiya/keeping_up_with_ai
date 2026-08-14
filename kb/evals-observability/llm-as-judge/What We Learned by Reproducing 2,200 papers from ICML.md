@@ -1,10 +1,16 @@
 ---
 title: What We Learned by Reproducing 2,200 papers from ICML
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: evals-observability
+subtopic: llm-as-judge
+secondary_topics:
+- agents/tool-use
+summary: Hugging Face's ICML 2026 Open Reproductions hackathon had 1,221 participants
+  use coding agents (Claude Code, Codex, Cursor) to reproduce 2,226 accepted papers,
+  scored by an automated GLM-5.2 Logbook Judge (verified/falsified/toy/inconclusive)
+  instructed to distrust self-reported verdicts; 23% of examined papers had a claim
+  falsified after adversarial re-verification, and the results argue agents still
+  need human steering for scale-dependent reasoning and perceptual judgment calls.
 triage: null
 skip_reason: null
 source: huggingface
@@ -12,7 +18,7 @@ url: https://huggingface.co/blog/icml-2026-open-reproductions
 author: Abubakar Abid
 published: '2026-08-13'
 fetched: '2026-08-14T06:33:38Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1809
 content_sha256: 15924c24a205e8f5da3652627298bf11493359399cb09ad5ec62bf2997ef12f1

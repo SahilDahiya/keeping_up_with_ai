@@ -349,6 +349,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-08-14** — [Inference engineering for DeepSeek V4 Pro 0813](<../inference/optimization/Inference engineering for DeepSeek V4 Pro 0813.md>) · `optimization` · baseten
+  Baseten details the inference engineering behind serving DeepSeek V4 Pro 0813 (1.7T params, MXFP4 weights) day-zero: retuned parallelism, KV cache allocation, and prefill-decode worker ratios for longer agentic-coding sequences, plus speculative decoding via the model's built-in DSpark speculator for higher throughput.
 - **2026-07-29** — [Fine-Tune Your Own Embedding Model from an LLM — for the Price of a Coffee](<../rag-retrieval/embeddings/Fine-Tune Your Own Embedding Model from an LLM — for the Price of a Coffee.md>) · `embeddings` · fireworks
   Shows a sub-$10 recipe for contrastive fine-tuning of Qwen3-Embedding-8B (in-batch negatives, InfoNCE) on the Fireworks platform, lifting retrieval quality on domain tasks like legal citation retrieval (LegalBench, +36% nDCG@10), clinical trial matching, and EU case-law retrieval, while preserving general-purpose performance.
 - **2026-07-27** — [How to build a day-0 API for Kimi K3](<../inference/serving/How to build a day-0 API for Kimi K3.md>) · `serving` · baseten

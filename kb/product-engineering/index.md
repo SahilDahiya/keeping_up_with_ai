@@ -1,7 +1,9 @@
 # product-engineering
 
-51 articles.
+52 articles.
 
+- **2026-08-13** — [Defense in depth in the age of agents](<security/Defense in depth in the age of agents.md>) · `security` · sierra
+  Sierra describes its layered guardrail architecture for goal-driven customer-service agents: grounding content, natural-language policies, supervisor models that audit conversations in real time, and deterministic guards (e.g. gating account-modification tools until authentication) that can't be talked out of enforcing hard limits, backed by continuous red-team evaluation and live threat/agent monitoring.
 - **2026-07-31** — [Bringing Cresta's AI Agent to Avaya Infinity: Inside a New WebSocket Voice Integration](<case-studies/Bringing Cresta's AI Agent to Avaya Infinity Inside a New WebSocket Voice Integration.md>) · `case-studies` · cresta
   Case study on integrating Cresta's voice AI agent with Avaya Infinity's new WebSocket media protocol, covering audio chunk-size tuning (20-200ms) for barge-in latency, timestamp-ordered transcript delivery, and race conditions that silently dropped the final transcript turn during call shutdown.
 - **2026-07-30** — [Before the Dashboard Knows: Detecting Real-Time Trends in CX Conversations](<architecture/Before the Dashboard Knows Detecting Real-Time Trends in CX Conversations.md>) · `architecture` · cresta

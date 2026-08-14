@@ -1,7 +1,9 @@
 # huggingface
 
-159 articles.
+160 articles.
 
+- **2026-08-13** — [What We Learned by Reproducing 2,200 papers from ICML](<../evals-observability/llm-as-judge/What We Learned by Reproducing 2,200 papers from ICML.md>) · `llm-as-judge` · huggingface
+  Hugging Face's ICML 2026 Open Reproductions hackathon had 1,221 participants use coding agents (Claude Code, Codex, Cursor) to reproduce 2,226 accepted papers, scored by an automated GLM-5.2 Logbook Judge (verified/falsified/toy/inconclusive) instructed to distrust self-reported verdicts; 23% of examined papers had a claim falsified after adversarial re-verification, and the results argue agents still need human steering for scale-dependent reasoning and perceptual judgment calls.
 - **2026-07-23** — [Bringing Nunchaku 4-bit Diffusion Inference to Diffusers](<../inference/quantization/Bringing Nunchaku 4-bit Diffusion Inference to Diffusers.md>) · `quantization` · huggingface
   Diffusers now natively loads Nunchaku's SVDQuant W4A4 checkpoints via from_pretrained() and the Hugging Face `kernels` package, requiring no local CUDA compilation; unlike weight-only quantization, SVDQuant runs transformer layers in 4-bit weights and activations, cutting both memory and denoising-loop latency.
 - **2026-07-15** — [Introducing Real World VoiceEQ: Measuring the human quality of voice AI](<../evals-observability/benchmark-design/Introducing Real World VoiceEQ Measuring the human quality of voice AI.md>) · `benchmark-design` · huggingface

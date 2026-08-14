@@ -1,7 +1,9 @@
 # agents
 
-88 articles.
+89 articles.
 
+- **2026-08-13** — [StackOne is now a Pydantic AI capability](<harness/StackOne is now a Pydantic AI capability.md>) · `harness` · pydantic
+  Pydantic AI Harness's new StackOne capability exposes hundreds of SaaS connectors (Workday, Salesforce, Zendesk) to an agent via a search-then-execute tool pair that queries the action catalog at runtime instead of serializing it into the prompt, keeping context flat regardless of catalog size, plus an 'individual' mode for exact per-action tool schemas and required approval gating for write actions.
 - **2026-08-11** — [Teaching agents to navigate janky IVR systems](<tool-use/Teaching agents to navigate janky IVR systems.md>) · `tool-use` · sierra
   Details five concrete failure modes voice agents hit navigating IVR phone trees for other companies (response timing during preambles, keyword vs conversational response modes, detecting a human vs hold-music greetings, unpredictable/broken menu trees, and DTMF tone-vs-speech input handling), which raised Sierra agents' IVR success rate from ~50% to 85%.
 - **2026-08-03** — [Laguna S 2.1 goes Greek: a repository-scale game transformation](<tool-use/Laguna S 2.1 goes Greek a repository-scale game transformation.md>) · `tool-use` · baseten
@@ -181,6 +183,10 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-08-13** — [What We Learned by Reproducing 2,200 papers from ICML](<../evals-observability/llm-as-judge/What We Learned by Reproducing 2,200 papers from ICML.md>) · `llm-as-judge` · huggingface
+  Hugging Face's ICML 2026 Open Reproductions hackathon had 1,221 participants use coding agents (Claude Code, Codex, Cursor) to reproduce 2,226 accepted papers, scored by an automated GLM-5.2 Logbook Judge (verified/falsified/toy/inconclusive) instructed to distrust self-reported verdicts; 23% of examined papers had a claim falsified after adversarial re-verification, and the results argue agents still need human steering for scale-dependent reasoning and perceptual judgment calls.
+- **2026-08-13** — [Defense in depth in the age of agents](<../product-engineering/security/Defense in depth in the age of agents.md>) · `security` · sierra
+  Sierra describes its layered guardrail architecture for goal-driven customer-service agents: grounding content, natural-language policies, supervisor models that audit conversations in real time, and deterministic guards (e.g. gating account-modification tools until authentication) that can't be talked out of enforcing hard limits, backed by continuous red-team evaluation and live threat/agent monitoring.
 - **2026-08-10** — [Fireworks AI](<../models/architectures/Fireworks AI.md>) · `architectures` · fireworks
   Meta's Muse Glimmer is a 30B dense agentic model (52 layers, GQA with 32 query/2 KV heads, SwiGLU) using sliding-window attention over 2,048 tokens with a global attention layer every fourth layer, keeping the KV cache small enough to serve long-context, multi-step tool-calling agents economically at high concurrency.
 - **2026-08-10** — [Snowflake + Pydantic AI integration](<../prompt-engineering/structured-output/Snowflake + Pydantic AI integration.md>) · `structured-output` · pydantic

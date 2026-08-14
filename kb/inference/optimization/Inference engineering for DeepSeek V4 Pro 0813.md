@@ -1,10 +1,14 @@
 ---
 title: Inference engineering for DeepSeek V4 Pro 0813
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: inference
+subtopic: optimization
+secondary_topics:
+- models/releases
+summary: 'Baseten details the inference engineering behind serving DeepSeek V4 Pro
+  0813 (1.7T params, MXFP4 weights) day-zero: retuned parallelism, KV cache allocation,
+  and prefill-decode worker ratios for longer agentic-coding sequences, plus speculative
+  decoding via the model''s built-in DSpark speculator for higher throughput.'
 triage: null
 skip_reason: null
 source: baseten
@@ -12,7 +16,7 @@ url: https://www.baseten.co/blog/inference-engineering-for-deepseek-v4-pro-0813/
 author: Model Performance Team
 published: '2026-08-14'
 fetched: '2026-08-14T06:27:59Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 657
 content_sha256: 39b2dff9a1cdd3239a05ca02d6cb5106cb499947436554870f136028ac2c6a1a

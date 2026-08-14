@@ -1,10 +1,16 @@
 ---
 title: Defense in depth in the age of agents
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: product-engineering
+subtopic: security
+secondary_topics:
+- evals-observability/monitoring
+- agents/harness
+summary: 'Sierra describes its layered guardrail architecture for goal-driven customer-service
+  agents: grounding content, natural-language policies, supervisor models that audit
+  conversations in real time, and deterministic guards (e.g. gating account-modification
+  tools until authentication) that can''t be talked out of enforcing hard limits,
+  backed by continuous red-team evaluation and live threat/agent monitoring.'
 triage: null
 skip_reason: null
 source: sierra
@@ -12,7 +18,7 @@ url: https://sierra.ai/blog/defense-in-depth-in-the-age-of-agents
 author: George Davis
 published: '2026-08-13'
 fetched: '2026-08-14T06:27:53Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 903
 content_sha256: 1c9f237f5e75ca7233e521d39c153c48ee33dca018e43d787ec70afbcf41d68f

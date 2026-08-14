@@ -1,7 +1,9 @@
 # evals-observability
 
-103 articles.
+104 articles.
 
+- **2026-08-13** — [What We Learned by Reproducing 2,200 papers from ICML](<llm-as-judge/What We Learned by Reproducing 2,200 papers from ICML.md>) · `llm-as-judge` · huggingface
+  Hugging Face's ICML 2026 Open Reproductions hackathon had 1,221 participants use coding agents (Claude Code, Codex, Cursor) to reproduce 2,226 accepted papers, scored by an automated GLM-5.2 Logbook Judge (verified/falsified/toy/inconclusive) instructed to distrust self-reported verdicts; 23% of examined papers had a claim falsified after adversarial re-verification, and the results argue agents still need human steering for scale-dependent reasoning and perceptual judgment calls.
 - **2026-08-07** — [How the Best AI Agents Keep Getting Better](<evaluation/How the Best AI Agents Keep Getting Better.md>) · `evaluation` · cresta
   Argues AI agent experimentation needs metrics that reward outcomes plus guardrails that protect against gaming (e.g. containment rising because customers gave up, not because they were helped), given agents are probabilistic, conversational, and evaluated by inferred/judged outcomes.
 - **2026-08-06** — [Airbnb's three-layer eval workflow with Pydantic AI and Logfire](<evaluation/Airbnb's three-layer eval workflow with Pydantic AI and Logfire.md>) · `evaluation` · pydantic
@@ -211,6 +213,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-08-13** — [Defense in depth in the age of agents](<../product-engineering/security/Defense in depth in the age of agents.md>) · `security` · sierra
+  Sierra describes its layered guardrail architecture for goal-driven customer-service agents: grounding content, natural-language policies, supervisor models that audit conversations in real time, and deterministic guards (e.g. gating account-modification tools until authentication) that can't be talked out of enforcing hard limits, backed by continuous red-team evaluation and live threat/agent monitoring.
 - **2026-08-12** — [Can open models carry readable silent signals before they speak? Reproducing J-Lens Readouts on Kimi K3 & Qwen3.5-9B](<../models/reasoning/Can open models carry readable silent signals before they speak Reproducing J-Lens Readouts on Kimi K3 & Qwen3.5-9B.md>) · `reasoning` · fireworks
   Reproduces Anthropic's J-Lens (Jacobian Lens) probe, originally from the global workspace study, on two open models (Kimi K3 and Qwen3.5-9B) to test whether they carry readable internal vocabulary signals before generating output. Using focus-instruction experiments (e.g. arithmetic vs. citrus framing) with identical visible outputs, the probe recovered topic-consistent vocabulary in the top-10 predictions at most sampled layers/positions without leakage between conditions.
 - **2026-08-05** — [Sidekick's continual learning loop (2026)](<../models/fine-tuning/Sidekick's continual learning loop (2026).md>) · `fine-tuning` · shopify

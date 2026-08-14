@@ -1,7 +1,9 @@
 # baseten
 
-75 articles.
+76 articles.
 
+- **2026-08-14** — [Inference engineering for DeepSeek V4 Pro 0813](<../inference/optimization/Inference engineering for DeepSeek V4 Pro 0813.md>) · `optimization` · baseten
+  Baseten details the inference engineering behind serving DeepSeek V4 Pro 0813 (1.7T params, MXFP4 weights) day-zero: retuned parallelism, KV cache allocation, and prefill-decode worker ratios for longer agentic-coding sequences, plus speculative decoding via the model's built-in DSpark speculator for higher throughput.
 - **2026-08-11** — [Introducing NVIDIA Nemotron 3.5 Lightning](<../models/releases/Introducing NVIDIA Nemotron 3.5 Lightning.md>) · `releases` · baseten
   NVIDIA Nemotron 3.5 Lightning is a 30B MoE model (3B active) distilled from Nemotron 3 Ultra for agentic workloads, achieving ~4x higher throughput and 30% lower task completion time than comparable open models, now available on Baseten Dedicated Inference.
 - **2026-08-04** — [Introducing NVIDIA Nemotron 3.5 ASR Streaming](<../models/releases/Introducing NVIDIA Nemotron 3.5 ASR Streaming.md>) · `releases` · baseten

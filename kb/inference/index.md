@@ -1,7 +1,9 @@
 # inference
 
-127 articles.
+128 articles.
 
+- **2026-08-14** — [Inference engineering for DeepSeek V4 Pro 0813](<optimization/Inference engineering for DeepSeek V4 Pro 0813.md>) · `optimization` · baseten
+  Baseten details the inference engineering behind serving DeepSeek V4 Pro 0813 (1.7T params, MXFP4 weights) day-zero: retuned parallelism, KV cache allocation, and prefill-decode worker ratios for longer agentic-coding sequences, plus speculative decoding via the model's built-in DSpark speculator for higher throughput.
 - **2026-08-04** — [Bringing serverless functions closer to the speed of wire | Modal Blog](<optimization/Bringing serverless functions closer to the speed of wire Modal Blog.md>) · `optimization` · modal
   Modal rewrote its Function I/O plane in Go and deployed it across 4+ regions with a routing_region flag, cutting p50 end-to-end Function Call latency by ~80ms; also covers async offloading of non-critical work, JWT-based auth refresh, and sticking with Redis 7.1 over Valkey/Redis 7.2 after observing CPU spikes under load.
 - **2026-07-31** — [Autoscaling endpoints for LLM inference](<optimization/Autoscaling endpoints for LLM inference.md>) · `optimization` · together

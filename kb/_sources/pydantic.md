@@ -1,7 +1,9 @@
 # pydantic
 
-34 articles.
+35 articles.
 
+- **2026-08-13** — [StackOne is now a Pydantic AI capability](<../agents/harness/StackOne is now a Pydantic AI capability.md>) · `harness` · pydantic
+  Pydantic AI Harness's new StackOne capability exposes hundreds of SaaS connectors (Workday, Salesforce, Zendesk) to an agent via a search-then-execute tool pair that queries the action catalog at runtime instead of serializing it into the prompt, keeping context flat regardless of catalog size, plus an 'individual' mode for exact per-action tool schemas and required approval gating for write actions.
 - **2026-08-10** — [Snowflake + Pydantic AI integration](<../prompt-engineering/structured-output/Snowflake + Pydantic AI integration.md>) · `structured-output` · pydantic
   Walks through Pydantic AI's new native Snowflake Cortex provider (SnowflakeModel/SnowflakeProvider) via a bioinformatics example: Pydantic schemas validate LLM structured output (Ensembl IDs, nested variant annotations), tool-call parameters for a BLAST search, extended thinking with budget_tokens on Claude, and portability of one schema across snowflake:claude-sonnet-5, gpt-5.4, and llama3.3-70b.
 - **2026-08-06** — [Airbnb's three-layer eval workflow with Pydantic AI and Logfire](<../evals-observability/evaluation/Airbnb's three-layer eval workflow with Pydantic AI and Logfire.md>) · `evaluation` · pydantic

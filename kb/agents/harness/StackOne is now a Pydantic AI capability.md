@@ -1,10 +1,15 @@
 ---
 title: StackOne is now a Pydantic AI capability
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: agents
+subtopic: harness
+secondary_topics:
+- prompt-engineering/context-engineering
+summary: Pydantic AI Harness's new StackOne capability exposes hundreds of SaaS connectors
+  (Workday, Salesforce, Zendesk) to an agent via a search-then-execute tool pair that
+  queries the action catalog at runtime instead of serializing it into the prompt,
+  keeping context flat regardless of catalog size, plus an 'individual' mode for exact
+  per-action tool schemas and required approval gating for write actions.
 triage: null
 skip_reason: null
 source: pydantic
@@ -12,7 +17,7 @@ url: https://pydantic.dev/articles/stackone-pydantic-ai-harness
 author: Laís Carvalho
 published: '2026-08-13'
 fetched: '2026-08-14T06:33:44Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1418
 content_sha256: 1f5c5f51f24e67f843a78af32feb08c077419c79fcd9a3d34105e9af454e4a4d
