@@ -1,10 +1,18 @@
 ---
 title: 'State of Open Models: Summer 2026 Observations'
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: industry
+subtopic: trends
+secondary_topics:
+- models/releases
+summary: 'Data-driven analysis of Hugging Face Hub activity for H1 2026: Chinese labs
+  (Moonshot, MiniMax, Z.ai) now ship the largest open models (up to 2.78T params)
+  while US labs stay under 130B outside NVIDIA''s Nemotron 3 Ultra (561B); Qwen leads
+  with 151,448 derivatives and 2,045M downloads via broad-coverage licensing (Apache
+  2.0/MIT even at trillion-parameter scale); llama.cpp/GGUF adoption (+464% repos)
+  lets trillion-parameter MoE models run locally; and a new agent-usage dataset shows
+  Claude Code and Codex swinging between 6% and 68% of coding-agent Hub traffic month
+  to month.'
 triage: null
 skip_reason: null
 source: huggingface
@@ -12,7 +20,7 @@ url: https://huggingface.co/blog/state-of-open-models-summer-2026
 author: Adina Yakefu; Apolinário; Irene Solaiman
 published: '2026-08-14'
 fetched: '2026-08-15T06:11:49Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 2753
 content_sha256: 8fb8d2f9befa2c0e5c3e2ff93ec559115ef5fa4d9f2abb7533ce5ecfe7a08b63

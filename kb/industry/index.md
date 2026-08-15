@@ -1,7 +1,9 @@
 # industry
 
-3 articles.
+4 articles.
 
+- **2026-08-14** — [State of Open Models: Summer 2026 Observations](<trends/State of Open Models Summer 2026 Observations.md>) · `trends` · huggingface
+  Data-driven analysis of Hugging Face Hub activity for H1 2026: Chinese labs (Moonshot, MiniMax, Z.ai) now ship the largest open models (up to 2.78T params) while US labs stay under 130B outside NVIDIA's Nemotron 3 Ultra (561B); Qwen leads with 151,448 derivatives and 2,045M downloads via broad-coverage licensing (Apache 2.0/MIT even at trillion-parameter scale); llama.cpp/GGUF adoption (+464% repos) lets trillion-parameter MoE models run locally; and a new agent-usage dataset shows Claude Code and Codex swinging between 6% and 68% of coding-agent Hub traffic month to month.
 - **2025-12-30** — [OpenAI for Developers in 2025](<trends/OpenAI for Developers in 2025.md>) · `trends` · openai-devs
   Year-in-review of OpenAI's 2025 developer platform: reasoning converging from separate o1/o3/o4-mini lines into unified flagship models, multimodal I/O becoming default, agent building blocks (Responses API, Agents SDK, AgentKit), and GPT-5.2-Codex for long-horizon coding.
 - **2025-07-04** — [Augmented commerce: Machine learning at Shopify (2025)](<trends/Augmented commerce Machine learning at Shopify (2025).md>) · `trends` · shopify
