@@ -1,10 +1,17 @@
 ---
 title: A/B test models in production
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: infra-platform
+subtopic: deployment
+secondary_topics:
+- evals-observability/evaluation
+- inference/serving
+summary: 'Explains Together AI''s endpoint-level A/B testing for production model
+  traffic: one control plus up to 20 variants with fixed percentage splits independent
+  of replica autoscaling, etag-guarded ramping, sampling-key-based cohort stickiness,
+  and promote-then-delete rollout to end an experiment. Walks through a live run ramping
+  95/5 to 80/20 to 50/50 and shows observed traffic shares matching the configured
+  percents.'
 triage: null
 skip_reason: null
 source: together
@@ -12,7 +19,7 @@ url: https://www.together.ai/blog/a-b-test-models-in-production
 author: Zain Hasan; Zarni Phyo; Nikitha Suryadevara; Ted Cui
 published: '2026-08-17'
 fetched: '2026-08-18T06:08:03Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1712
 content_sha256: 54b1cd8214eac772b2c7c2d108b47480e926af207abdbf84b18e2f1b0176acce
