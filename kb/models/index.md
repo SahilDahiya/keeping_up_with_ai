@@ -1,7 +1,11 @@
 # models
 
-172 articles.
+174 articles.
 
+- **2026-08-18** — [DeepSeek V4 Pro 0813 vs GPT-5.6 Sol on DeepSWE: Cost, Coding, and Routing](<benchmarks/DeepSeek V4 Pro 0813 vs GPT-5.6 Sol on DeepSWE Cost, Coding, and Routing.md>) · `benchmarks` · together
+  Benchmarks DeepSeek V4 Pro 0813 against GPT-5.6 Sol on 113 DeepSWE coding tasks (904 rollouts): Sol wins pass@1 (72.7% vs 62.8%) but Pro's pass@4 (88.5% vs 85.8%) overtakes it at 1/35th the per-rollout cost, and a Pro-first-escalate-to-Sol cascade solves 83.0% of tasks at $3.35 each versus Sol alone at 72.7% for $8.37, though Sol's failures regress passing tests more often (20% vs 11%).
+- **2026-08-17** — [DeepSeek V4 Pro 0813 vs Claude Fable 5 on DeepSWE: Cost, Coding, and Routing](<benchmarks/DeepSeek V4 Pro 0813 vs Claude Fable 5 on DeepSWE Cost, Coding, and Routing.md>) · `benchmarks` · together
+  Benchmarks DeepSeek V4 Pro 0813 against Claude Fable 5 on 113 DeepSWE coding tasks (904 rollouts): Fable leads pass@1 (69.7% vs 62.8%) but Pro catches up by pass@4 (88.5% vs 84.1%) at 1/90th the per-rollout cost, and a Pro-first-escalate-to-Fable cascade solves 82.7% of tasks at $8.28 each, beating Fable alone (69.7% at $21.63) and even a perfect oracle router (78.8%).
 - **2026-08-12** — [Can open models carry readable silent signals before they speak? Reproducing J-Lens Readouts on Kimi K3 & Qwen3.5-9B](<reasoning/Can open models carry readable silent signals before they speak Reproducing J-Lens Readouts on Kimi K3 & Qwen3.5-9B.md>) · `reasoning` · fireworks
   Reproduces Anthropic's J-Lens (Jacobian Lens) probe, originally from the global workspace study, on two open models (Kimi K3 and Qwen3.5-9B) to test whether they carry readable internal vocabulary signals before generating output. Using focus-instruction experiments (e.g. arithmetic vs. citrus framing) with identical visible outputs, the probe recovered topic-consistent vocabulary in the top-10 predictions at most sampled layers/positions without leakage between conditions.
 - **2026-08-11** — [Introducing NVIDIA Nemotron 3.5 Lightning](<releases/Introducing NVIDIA Nemotron 3.5 Lightning.md>) · `releases` · baseten
@@ -349,6 +353,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-08-18** — [Multi-Vector (Late Interaction) Embedding Models with Sentence Transformers](<../rag-retrieval/embeddings/Multi-Vector (Late Interaction) Embedding Models with Sentence Transformers.md>) · `embeddings` · huggingface
+  Introduces Sentence Transformers' MultiVectorEncoder for ColBERT-style late-interaction retrieval, explaining MaxSim scoring versus dense bi-encoders and cross-encoders, and walking through loading, encoding, ColPali-style visual document retrieval, and index-size tradeoffs (e.g. LateOn's 608k token vectors at 311.5MB raw vs 92MB with fast-plaid/PLAID compression).
 - **2026-08-14** — [Inference engineering for DeepSeek V4 Pro 0813](<../inference/optimization/Inference engineering for DeepSeek V4 Pro 0813.md>) · `optimization` · baseten
   Baseten details the inference engineering behind serving DeepSeek V4 Pro 0813 (1.7T params, MXFP4 weights) day-zero: retuned parallelism, KV cache allocation, and prefill-decode worker ratios for longer agentic-coding sequences, plus speculative decoding via the model's built-in DSpark speculator for higher throughput.
 - **2026-08-14** — [State of Open Models: Summer 2026 Observations](<../industry/trends/State of Open Models Summer 2026 Observations.md>) · `trends` · huggingface

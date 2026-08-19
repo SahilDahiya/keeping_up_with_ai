@@ -1,10 +1,14 @@
 ---
 title: Feature flags for production AI
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: infra-platform
+subtopic: deployment
+secondary_topics:
+- evals-observability/evaluation
+summary: Shows how to use Pydantic Logfire's typed managed variables as feature flags
+  for production AI systems, letting teams target and A/B test models, prompts, and
+  tool policies (with UsageLimits caps) without redeploying, and tying each resolved
+  variant to OpenTelemetry traces and dashboards.
 triage: null
 skip_reason: null
 source: pydantic
@@ -12,7 +16,7 @@ url: https://pydantic.dev/articles/feature-flags-for-production-ai
 author: Jameson Lee
 published: '2026-08-18'
 fetched: '2026-08-19T06:14:02Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1567
 content_sha256: df3b0e65e4c86a0ae38ecb1c4befc36964515dd4daf70d103f2d7bcff861b106

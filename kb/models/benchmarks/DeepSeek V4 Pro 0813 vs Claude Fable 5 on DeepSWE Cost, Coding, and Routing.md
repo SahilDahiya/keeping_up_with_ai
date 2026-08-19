@@ -1,10 +1,15 @@
 ---
 title: 'DeepSeek V4 Pro 0813 vs Claude Fable 5 on DeepSWE: Cost, Coding, and Routing'
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: models
+subtopic: benchmarks
+secondary_topics:
+- inference/optimization
+summary: 'Benchmarks DeepSeek V4 Pro 0813 against Claude Fable 5 on 113 DeepSWE coding
+  tasks (904 rollouts): Fable leads pass@1 (69.7% vs 62.8%) but Pro catches up by
+  pass@4 (88.5% vs 84.1%) at 1/90th the per-rollout cost, and a Pro-first-escalate-to-Fable
+  cascade solves 82.7% of tasks at $8.28 each, beating Fable alone (69.7% at $21.63)
+  and even a perfect oracle router (78.8%).'
 triage: null
 skip_reason: null
 source: together
@@ -12,7 +17,7 @@ url: https://www.together.ai/blog/deepseek-v4-pro-0813-vs-claude-fable-5-on-deep
 author: Zain Hasan; Shobhit Dixit
 published: '2026-08-17'
 fetched: '2026-08-19T06:08:22Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1502
 content_sha256: 841ab849ca2ba75c06041908e523695ee0fd5d49422d12153df9ec8188ffc45c

@@ -1,10 +1,15 @@
 ---
 title: Multi-Vector (Late Interaction) Embedding Models with Sentence Transformers
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: rag-retrieval
+subtopic: embeddings
+secondary_topics:
+- models/multimodal
+summary: Introduces Sentence Transformers' MultiVectorEncoder for ColBERT-style late-interaction
+  retrieval, explaining MaxSim scoring versus dense bi-encoders and cross-encoders,
+  and walking through loading, encoding, ColPali-style visual document retrieval,
+  and index-size tradeoffs (e.g. LateOn's 608k token vectors at 311.5MB raw vs 92MB
+  with fast-plaid/PLAID compression).
 triage: null
 skip_reason: null
 source: huggingface
@@ -12,7 +17,7 @@ url: https://huggingface.co/blog/multi-vector-encoder
 author: Tom Aarsen; Antoine Chaffin; Raphael Sourty
 published: '2026-08-18'
 fetched: '2026-08-19T06:13:56Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 8019
 content_sha256: c62f4e74eaf7a84d24abedbbe84e332d3637a4ccb7a48c50f1ff0711f6580e1f

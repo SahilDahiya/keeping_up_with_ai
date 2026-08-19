@@ -1,7 +1,11 @@
 # together
 
-82 articles.
+84 articles.
 
+- **2026-08-18** — [DeepSeek V4 Pro 0813 vs GPT-5.6 Sol on DeepSWE: Cost, Coding, and Routing](<../models/benchmarks/DeepSeek V4 Pro 0813 vs GPT-5.6 Sol on DeepSWE Cost, Coding, and Routing.md>) · `benchmarks` · together
+  Benchmarks DeepSeek V4 Pro 0813 against GPT-5.6 Sol on 113 DeepSWE coding tasks (904 rollouts): Sol wins pass@1 (72.7% vs 62.8%) but Pro's pass@4 (88.5% vs 85.8%) overtakes it at 1/35th the per-rollout cost, and a Pro-first-escalate-to-Sol cascade solves 83.0% of tasks at $3.35 each versus Sol alone at 72.7% for $8.37, though Sol's failures regress passing tests more often (20% vs 11%).
+- **2026-08-17** — [DeepSeek V4 Pro 0813 vs Claude Fable 5 on DeepSWE: Cost, Coding, and Routing](<../models/benchmarks/DeepSeek V4 Pro 0813 vs Claude Fable 5 on DeepSWE Cost, Coding, and Routing.md>) · `benchmarks` · together
+  Benchmarks DeepSeek V4 Pro 0813 against Claude Fable 5 on 113 DeepSWE coding tasks (904 rollouts): Fable leads pass@1 (69.7% vs 62.8%) but Pro catches up by pass@4 (88.5% vs 84.1%) at 1/90th the per-rollout cost, and a Pro-first-escalate-to-Fable cascade solves 82.7% of tasks at $8.28 each, beating Fable alone (69.7% at $21.63) and even a perfect oracle router (78.8%).
 - **2026-08-17** — [A/B test models in production](<../infra-platform/deployment/AB test models in production.md>) · `deployment` · together
   Explains Together AI's endpoint-level A/B testing for production model traffic: one control plus up to 20 variants with fixed percentage splits independent of replica autoscaling, etag-guarded ramping, sampling-key-based cohort stickiness, and promote-then-delete rollout to end an experiment. Walks through a live run ramping 95/5 to 80/20 to 50/50 and shows observed traffic shares matching the configured percents.
 - **2026-08-06** — [DeepSeek-V4 Flash 0731 vs GPT-5.6 Luna on DeepSWE: Cost and Coding](<../models/benchmarks/DeepSeek-V4 Flash 0731 vs GPT-5.6 Luna on DeepSWE Cost and Coding.md>) · `benchmarks` · together

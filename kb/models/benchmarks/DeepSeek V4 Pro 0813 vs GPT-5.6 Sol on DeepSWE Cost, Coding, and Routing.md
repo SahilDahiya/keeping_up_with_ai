@@ -1,10 +1,15 @@
 ---
 title: 'DeepSeek V4 Pro 0813 vs GPT-5.6 Sol on DeepSWE: Cost, Coding, and Routing'
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: models
+subtopic: benchmarks
+secondary_topics:
+- inference/optimization
+summary: 'Benchmarks DeepSeek V4 Pro 0813 against GPT-5.6 Sol on 113 DeepSWE coding
+  tasks (904 rollouts): Sol wins pass@1 (72.7% vs 62.8%) but Pro''s pass@4 (88.5%
+  vs 85.8%) overtakes it at 1/35th the per-rollout cost, and a Pro-first-escalate-to-Sol
+  cascade solves 83.0% of tasks at $3.35 each versus Sol alone at 72.7% for $8.37,
+  though Sol''s failures regress passing tests more often (20% vs 11%).'
 triage: null
 skip_reason: null
 source: together
@@ -12,7 +17,7 @@ url: https://www.together.ai/blog/deepseek-v4-pro-0813-vs-gpt-5-6-sol-on-deepswe
 author: Zain Hasan; Shobhit Dixit
 published: '2026-08-18'
 fetched: '2026-08-19T06:08:20Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1515
 content_sha256: 87885060722ccfa4c3205c6b8f808fde7221fef3c34b3a044fecca40cc91c7f0

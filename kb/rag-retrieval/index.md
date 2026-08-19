@@ -1,7 +1,9 @@
 # rag-retrieval
 
-31 articles.
+32 articles.
 
+- **2026-08-18** — [Multi-Vector (Late Interaction) Embedding Models with Sentence Transformers](<embeddings/Multi-Vector (Late Interaction) Embedding Models with Sentence Transformers.md>) · `embeddings` · huggingface
+  Introduces Sentence Transformers' MultiVectorEncoder for ColBERT-style late-interaction retrieval, explaining MaxSim scoring versus dense bi-encoders and cross-encoders, and walking through loading, encoding, ColPali-style visual document retrieval, and index-size tradeoffs (e.g. LateOn's 608k token vectors at 311.5MB raw vs 92MB with fast-plaid/PLAID compression).
 - **2026-07-29** — [Fine-Tune Your Own Embedding Model from an LLM — for the Price of a Coffee](<embeddings/Fine-Tune Your Own Embedding Model from an LLM — for the Price of a Coffee.md>) · `embeddings` · fireworks
   Shows a sub-$10 recipe for contrastive fine-tuning of Qwen3-Embedding-8B (in-batch negatives, InfoNCE) on the Fireworks platform, lifting retrieval quality on domain tasks like legal citation retrieval (LegalBench, +36% nDCG@10), clinical trial matching, and EU case-law retrieval, while preserving general-purpose performance.
 - **2026-07-16** — [Fast, accurate retrieval with NVIDIA Nemotron 3 Embed](<embeddings/Fast, accurate retrieval with NVIDIA Nemotron 3 Embed.md>) · `embeddings` · baseten

@@ -1,7 +1,9 @@
 # pydantic
 
-35 articles.
+36 articles.
 
+- **2026-08-18** — [Feature flags for production AI](<../infra-platform/deployment/Feature flags for production AI.md>) · `deployment` · pydantic
+  Shows how to use Pydantic Logfire's typed managed variables as feature flags for production AI systems, letting teams target and A/B test models, prompts, and tool policies (with UsageLimits caps) without redeploying, and tying each resolved variant to OpenTelemetry traces and dashboards.
 - **2026-08-13** — [StackOne is now a Pydantic AI capability](<../agents/harness/StackOne is now a Pydantic AI capability.md>) · `harness` · pydantic
   Pydantic AI Harness's new StackOne capability exposes hundreds of SaaS connectors (Workday, Salesforce, Zendesk) to an agent via a search-then-execute tool pair that queries the action catalog at runtime instead of serializing it into the prompt, keeping context flat regardless of catalog size, plus an 'individual' mode for exact per-action tool schemas and required approval gating for write actions.
 - **2026-08-10** — [Snowflake + Pydantic AI integration](<../prompt-engineering/structured-output/Snowflake + Pydantic AI integration.md>) · `structured-output` · pydantic
