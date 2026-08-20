@@ -1,6 +1,6 @@
 # prompt-engineering
 
-19 articles.
+20 articles.
 
 - **2026-08-10** — [Snowflake + Pydantic AI integration](<structured-output/Snowflake + Pydantic AI integration.md>) · `structured-output` · pydantic
   Walks through Pydantic AI's new native Snowflake Cortex provider (SnowflakeModel/SnowflakeProvider) via a bioinformatics example: Pydantic schemas validate LLM structured output (Ensembl IDs, nested variant annotations), tool-call parameters for a BLAST search, extended thinking with budget_tokens on Claude, and portability of one schema across snowflake:claude-sonnet-5, gpt-5.4, and llama3.3-70b.
@@ -36,6 +36,8 @@
   Reframes LLM pipelines as declarative modules with typed input/output signatures, compiled by optimizers (teleprompters) that bootstrap few-shot demonstrations and instructions against a metric instead of hand-tuned prompt strings. Compiled DSPy programs on GSM8K and multi-hop QA beat hand-crafted prompt chains and often let small open models rival few-shot GPT-3.5 — the foundational 'programming, not prompting' / prompt-optimization framework.
 - **2023-09-12** — [Simplifying Code Infilling with Code Llama and Fireworks.ai](<techniques/Simplifying Code Infilling with Code Llama and Fireworks.ai.md>) · `techniques` · fireworks
   Documents the specific prompt format required for Code Llama infilling (<PRE>{pre}<SUF>{suf}<MID>, sensitive to trailing whitespace) and notes base models outperform instruction-tuned variants for precise infilling control, a common source of silent failures when building code-completion features.
+- **2023-06-15** — [How to Use ChatGPT to Diagnose Revenue Opportunities](<techniques/How to Use ChatGPT to Diagnose Revenue Opportunities.md>) · `techniques` · cresta
+  Shows the actual structured prompt used to summarize retention calls into numbered fields (did the visitor ask to cancel, and why), then explains why GPT-4 is too slow and expensive at millions of conversations per month. Cresta's answer is a system that batches GPT-4, clusters the resulting summaries semantically to surface themes, and folds human feedback back in.
 - **2022-11-22** — **[Paper]** [Program of Thoughts Prompting: Disentangling Computation from Reasoning for Numerical Reasoning Tasks](<techniques/[Paper] Program of Thoughts Prompting Disentangling Computation from Reasoning for Numerical Reasoning Tasks.md>) · `techniques` · arxiv
   Program of Thoughts prompting disentangles reasoning from computation by expressing the reasoning as executable program statements evaluated externally, in contrast to Chain-of-Thought's in-context arithmetic. Yields large gains on numerical, financial, and math word-problem QA and is complementary to PAL in arguing that computation belongs in an interpreter, not the model.
 - **2022-11-18** — **[Paper]** [PAL: Program-aided Language Models](<techniques/[Paper] PAL Program-aided Language Models.md>) · `techniques` · arxiv
@@ -105,7 +107,11 @@
   Explains long-context retrieval models using Monarch Mixer.
 - **2023-12-20** — [Fireworks Raises the Quality Bar with Function Calling Model and API Release](<../agents/tool-use/Fireworks Raises the Quality Bar with Function Calling Model and API Release.md>) · `tool-use` · fireworks
   Analyzes the core challenges of function calling at scale: intent detection (when to call vs. answer directly), handling large function sets like the full Stripe SDK, structuring nested/enum parameter values, and using multi-turn conversational context, ahead of Fireworks' alpha function-calling model release.
+- **2023-11-10** — [How Custom Summarization Saves Hours of After-Call Work](<../models/fine-tuning/How Custom Summarization Saves Hours of After-Call Work.md>) · `fine-tuning` · cresta
+  Argues prompting alone cannot control output topics, style, or domain terminology for call summarization, so Cresta fine-tunes smaller domain models (Ocean-1 based) with supervised fine-tuning plus RLHF fed by agent edits. Reports 5x or better latency improvement over a gpt-3.5-turbo baseline at comparable quality, with ACW down to ~30 seconds.
 - **2023-10-12** — [Flash-Decoding for long-context inference](<../inference/kernels/Flash-Decoding for long-context inference.md>) · `kernels` · together
   Introduces Flash-Decoding for efficient long-context inference.
 - **2023-06-15** — [Three techniques to adapt LLMs for any use case](<../models/fine-tuning/Three techniques to adapt LLMs for any use case.md>) · `fine-tuning` · baseten
   Explains prompt engineering, fine-tuning, and related techniques for adapting LLMs to use cases.
+- **2023-05-04** — [The Emerging Stack of Generative AI](<../product-engineering/architecture/The Emerging Stack of Generative AI.md>) · `architecture` · cresta
+  Lays out the LLM != AI System != AI Product distinction with a worked example chaining several GPT-4 calls (name extraction, scoring, recommendation) against a Salesforce CRM lookup and purchase history as real-time context. Argues for vertically integrated stacks where UI feedback propagates backwards into knowledge, system, and eventually RLHF on the model itself.

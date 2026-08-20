@@ -1,6 +1,6 @@
 # product-engineering
 
-52 articles.
+58 articles.
 
 - **2026-08-13** — [Defense in depth in the age of agents](<security/Defense in depth in the age of agents.md>) · `security` · sierra
   Sierra describes its layered guardrail architecture for goal-driven customer-service agents: grounding content, natural-language policies, supervisor models that audit conversations in real time, and deterministic guards (e.g. gating account-modification tools until authentication) that can't be talked out of enforcing hard limits, backed by continuous red-team evaluation and live threat/agent monitoring.
@@ -12,6 +12,8 @@
   Sierra describes Agency, its Kubernetes-based agent-sandbox orchestration layer powering Pinecone and Ghostwriter: a stateless control plane provisioning per-runner pods with dedicated IAM roles and an LLM proxy for just-in-time key injection, plus a hibernation design that models each runner as a finite state machine restorable from an append-only checkpoint/event log (p50 8ms, p99 40ms round trips) to reclaim compute from the 2-4 orders of magnitude of idle agents.
 - **2026-07-23** — [How to choose an AI model: lessons from Notion and Gamma](<case-studies/How to choose an AI model lessons from Notion and Gamma.md>) · `case-studies` · baseten
   Panel takeaways from Notion and Gamma on production model selection: harnesses shouldn't be model-agnostic, model switching pays for itself via A/B testing against real users, pick models per-workflow using cost-per-capability-per-second, and open-weight models plus targeted RL now compete with closed frontier models on many workloads.
+- **2026-07-23** — [Cresta's Compass AI: Better Enterprise Discoverability](<ux-patterns/Cresta's Compass AI Better Enterprise Discoverability.md>) · `ux-patterns` · cresta
+  Rethinks enterprise navigation around an embedded support agent: instead of answering 'where is this feature', Compass answers 'what is the next step toward my goal' and carries context as users move between Insights, Opera automations, and quality management. Notes building an agent inside your own product differs from shipping one to customers, though the requirements/evals/iterate loop stays the same.
 - **2026-07-22** — [Building Sierra’s MCP Gateway: An engineering iceberg](<security/Building Sierra’s MCP Gateway An engineering iceberg.md>) · `security` · sierra
   Lessons from building Sierra's internal MCP gateway: a 'grab the lock' single-owner model for coordination, coding agents that cheat verification (reading tokens directly, falling back to curl) requiring weaker consumer agents for smoke tests, and a three-pass deterministic-plus-two-model pipeline that blocks cross-customer data access with an audit log.
 - **2026-07-10** — [AI-pilling our company: lessons learned](<case-studies/AI-pilling our company lessons learned.md>) · `case-studies` · sierra
@@ -74,6 +76,8 @@
   Proposes a 'voice consent gate': before any voice cloning runs, the speaker must record a spoken consent phrase, which is verified with ASR (and speaker verification) against the same audio used for cloning — a concrete, implementable design pattern (with a demo Space and code) for making consent a hard gate rather than a checkbox.
 - **2025-10-27** — [Using Codex for education at Dagster Labs | OpenAI Developers](<case-studies/Using Codex for education at Dagster Labs OpenAI Developers.md>) · `case-studies` · openai-devs
   Dagster Labs describes using Codex to accelerate documentation work — writing docs, translating content across mediums, and measuring doc completeness — and finds a well-structured CONTRIBUTING.md doubles as high-leverage scaffolding for the agent.
+- **2025-10-23** — [The Contact Center Is the New Security Perimeter | Cresta](<security/The Contact Center Is the New Security Perimeter Cresta.md>) · `security` · cresta
+  Documents contact centers and helpdesks as a live attack surface with named incidents: Coinbase's 2024/25 bribery of overseas support agents affecting 69,461 customers, RAC staff convicted over 29,500 crash records, and Octo Tempest/Scattered Spider systematically vishing helpdesks for MFA resets. Cites Verizon's 2025 DBIR finding third-party involvement in breaches doubled from 15% to 30%.
 - **2025-10-20** — [Making Claude Code more secure and autonomous with sandboxing](<security/Making Claude Code more secure and autonomous with sandboxing.md>) · `security` · anthropic-engineering
   Introduces sandboxed bash execution and filesystem/network isolation in Claude Code, reducing permission prompts while containing what the agent can touch.
 - **2025-10-10** — [How Codex ran OpenAI DevDay 2025](<case-studies/How Codex ran OpenAI DevDay 2025.md>) · `case-studies` · openai-devs
@@ -104,6 +108,14 @@
   Shows how to serve Zama Concrete ML models under Fully Homomorphic Encryption on HF Inference Endpoints via custom inference handlers, so a spam classifier runs on ciphertext without ever seeing the plaintext message; also covers compiling your own FHE-friendly model.
 - **2024-02-26** — [AI Watermarking 101: Tools and Techniques](<security/AI Watermarking 101 Tools and Techniques.md>) · `security` · huggingface
   Surveys watermarking for AI-generated content: for images, in-generation methods (Stable Signature) vs post-hoc (Truepic/Imatag, C2PA metadata); for LLM text, logit-biasing green/red token lists at sampling time and the detection statistics behind them, plus SynthID-Text in transformers. Discusses robustness to editing and the short-text detection confidence limit.
+- **2023-05-04** — [The Emerging Stack of Generative AI](<architecture/The Emerging Stack of Generative AI.md>) · `architecture` · cresta
+  Lays out the LLM != AI System != AI Product distinction with a worked example chaining several GPT-4 calls (name extraction, scoring, recommendation) against a Salesforce CRM lookup and purchase history as real-time context. Argues for vertically integrated stacks where UI feedback propagates backwards into knowledge, system, and eventually RLHF on the model itself.
+- **2022-01-06** — [How Cresta Understands Conversations](<architecture/How Cresta Understands Conversations.md>) · `architecture` · cresta
+  Walks through the three NLP layers behind real-time agent coaching: rule-based keyword matching (cheap but breaks on ambiguity), deep-learning semantic understanding that reads intent from word order and relationships, and context tracking across both speakers. Uses a concrete 'I need to ask my spouse' example where keyword matching misreads a buying signal as an objection.
+- **2021-06-25** — [Inside Cresta's Platform: Auth, APIs, and Scaling](<architecture/Inside Cresta's Platform Auth, APIs, and Scaling.md>) · `architecture` · cresta
+  Cresta's platform re-architecture into four layers (client, edge orchestration, service/platform including ML services, and infra), motivated by supporting third-party API consumers alongside the first-party web app. Covers microservice scaffolding that unifies logging, config, CI/CD and testing, plus migrating auth and config off Netlify lambdas into dedicated services.
+- **2021-03-16** — [Scaling Behavior Change Across 1,000 People](<architecture/Scaling Behavior Change Across 1,000 People.md>) · `architecture` · cresta
+  Cresta's Behavioral Engine runs BERT, GPT-2 and T5 models over 40,000 live chats a day to detect decision points (price objections, package questions) and fire real-time coaching hints. Reports scaling hint volume 5x while cutting cost per hint, over 2 million hints delivered, and per-chat rather than sampled analytics.
 - **2020-06-30** — [3 Key Concepts for Creating AI Product Experiences](<ux-patterns/3 Key Concepts for Creating AI Product Experiences.md>) · `ux-patterns` · cresta
   Covers product-design principles for understandable AI experiences, including how users form trust and interpret system behavior.
 
@@ -167,6 +179,8 @@
   Engineering writeup on cloud GPU notebooks that boot quickly, covering startup paths, state, and execution isolation.
 - **2025-08-14** — [More than Just a Model: How Cresta Delivers Precise, Adaptable Summaries with Ultra-Low Latency](<../inference/serving/More than Just a Model How Cresta Delivers Precise, Adaptable Summaries with Ultra-Low Latency.md>) · `serving` · cresta
   Explains production summarization architecture focused on low latency, adaptability, and precision rather than model choice alone.
+- **2025-08-07** — [Beyond Multi-Channel: A Guide to Omnichannel AI Agents](<../agents/memory-context/Beyond Multi-Channel A Guide to Omnichannel AI Agents.md>) · `memory-context` · cresta
+  On carrying conversation context across SMS, chat and voice so customers do not restate themselves after a channel switch, using a fraud-alert example that breaks across three channels. Argues agents should be channel-aware, adapting register and length to each medium rather than reusing one script everywhere.
 - **2025-07-16** — [Leveraging multimodal LLMs for Shopify’s global catalogue: Recap of expo talk at ICLR 2025](<../models/multimodal/Leveraging multimodal LLMs for Shopify’s global catalogue Recap of expo talk at ICLR 2025.md>) · `multimodal` · shopify
   Shopify uses multimodal LLMs to standardize product data across its global catalogue, producing the high-quality structured attributes that agent-driven shopping ('show me sustainable running shoes') depends on.
 - **2025-07-04** — [Augmented commerce: Machine learning at Shopify (2025)](<../industry/trends/Augmented commerce Machine learning at Shopify (2025).md>) · `trends` · shopify
@@ -175,6 +189,8 @@
   Anthropic's canonical guide to agent design patterns: when to use workflows (prompt chaining, routing, orchestrator-workers) versus autonomous agents, and why simple composable patterns beat frameworks.
 - **2024-12-02** — [WireGuard at Modal: Static IPs for serverless containers](<../infra-platform/deployment/WireGuard at Modal Static IPs for serverless containers.md>) · `deployment` · modal
   Explains static IP support for serverless containers using WireGuard, relevant to secure networked AI deployments.
+- **2024-10-29** — [Announcing Cresta Voice Virtual Agent: What Sets It Apart](<../agents/harness/Announcing Cresta Voice Virtual Agent What Sets It Apart.md>) · `harness` · cresta
+  Frames voice agents as a choice between rigid flow-based bots that cannot handle diverse intents and purely generative agents that hallucinate in public ways, and proposes a hybrid architecture pairing LLM generation with deterministic systems enforcing business rules. Cites Metrigy finding 40.6% of customers actively avoid virtual agents.
 - **2024-07-31** — [Google releases Gemma 2 2B, ShieldGemma and Gemma Scope](<../models/releases/Google releases Gemma 2 2B, ShieldGemma and Gemma Scope.md>) · `releases` · huggingface
   Google's July 2024 Gemma drop: Gemma 2 2B distilled from larger models for on-device use, ShieldGemma safety classifiers for filtering app inputs/outputs, and Gemma Scope sparse autoencoders for interpretability.
 - **2024-05-24** — [CyberSecEval 2 - A Comprehensive Evaluation Framework for Cybersecurity Risks and Capabilities of Large Language Models](<../evals-observability/benchmark-design/CyberSecEval 2 - A Comprehensive Evaluation Framework for Cybersecurity Risks and Capabilities of Large Language Models.md>) · `benchmark-design` · huggingface
@@ -189,5 +205,7 @@
   TGI 1.4 adds an OpenAI Chat Completions-compatible Messages API, so open models on Inference Endpoints become a drop-in swap for GPT-4 by only changing base_url and api_key — shown with the OpenAI Python/JS clients, LangChain and LlamaIndex, and a Nous-Hermes-2-Mixtral migration.
 - **2024-01-26** — [An Introduction to AI Secure LLM Safety Leaderboard](<../evals-observability/benchmark-design/An Introduction to AI Secure LLM Safety Leaderboard.md>) · `benchmark-design` · huggingface
   The AI Secure LLM Safety Leaderboard runs the DecodingTrust benchmark, scoring models across eight trustworthiness axes (toxicity, stereotype bias, adversarial and out-of-distribution robustness, privacy leakage, machine ethics, fairness) rather than capability alone.
+- **2023-06-15** — [How to Use ChatGPT to Diagnose Revenue Opportunities](<../prompt-engineering/techniques/How to Use ChatGPT to Diagnose Revenue Opportunities.md>) · `techniques` · cresta
+  Shows the actual structured prompt used to summarize retention calls into numbered fields (did the visitor ask to cancel, and why), then explains why GPT-4 is too slow and expensive at millions of conversations per month. Cresta's answer is a system that batches GPT-4, clusters the resulting summaries semantically to surface themes, and folds human feedback back in.
 - **2021-01-29** — [How We Reduced Our Labeling Cost by 10x](<../evals-observability/evaluation/How We Reduced Our Labeling Cost by 10x.md>) · `evaluation` · cresta
   Explains how labeling costs were reduced through process and model-assisted annotation changes, relevant to eval dataset operations.

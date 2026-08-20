@@ -1,6 +1,6 @@
 # rag-retrieval
 
-32 articles.
+34 articles.
 
 - **2026-08-18** — [Multi-Vector (Late Interaction) Embedding Models with Sentence Transformers](<embeddings/Multi-Vector (Late Interaction) Embedding Models with Sentence Transformers.md>) · `embeddings` · huggingface
   Introduces Sentence Transformers' MultiVectorEncoder for ColBERT-style late-interaction retrieval, explaining MaxSim scoring versus dense bi-encoders and cross-encoders, and walking through loading, encoding, ColPali-style visual document retrieval, and index-size tradeoffs (e.g. LateOn's 608k token vectors at 311.5MB raw vs 92MB with fast-plaid/PLAID compression).
@@ -20,6 +20,8 @@
   Walks through finetuning Qwen3-VL-Embedding-2B for Visual Document Retrieval with Sentence Transformers' new multimodal support, showing a specialized 2B model beating much larger general-purpose embedders on NDCG. Covers multimodal dataset format, loss selection (cached MNRL), hard-negative mining and training a reranker on top.
 - **2026-04-09** — [Multimodal Embedding & Reranker Models with Sentence Transformers](<embeddings/Multimodal Embedding & Reranker Models with Sentence Transformers.md>) · `embeddings` · huggingface
   Sentence Transformers v5+ adds multimodal embedding and reranker models (shared text/image embedding space, mixed-modality cross-encoder scoring) for visual document retrieval, cross-modal search and multimodal RAG; covers the API and model choices.
+- **2026-03-17** — [Introducing Cresta Knowledge Agent](<pipelines/Introducing Cresta Knowledge Agent.md>) · `pipelines` · cresta
+  An agentic retrieval assistant that grounds answers in three sources at once: intent inferred from the live conversation, on-screen CRM state read from the agent's browser (loyalty tier, account status, ticket type), and policy documentation. Delivers cited answers unprompted through a persistent sidebar that follows the agent across browser tabs.
 - **2025-10-07** — [AI-Ready Knowledge for Contact Centers: Closing the Gap Between the Knowledge Base and AI](<pipelines/AI-Ready Knowledge for Contact Centers Closing the Gap Between the Knowledge Base and AI.md>) · `pipelines` · cresta
   Explains how operational knowledge bases need to be structured for AI agents, with emphasis on grounding and retrieval readiness.
 - **2025-10-01** — [Introducing RTEB: A New Standard for Retrieval Evaluation](<embeddings/Introducing RTEB A New Standard for Retrieval Evaluation.md>) · `embeddings` · huggingface
@@ -38,6 +40,8 @@
   Deep dive into BEI, a high-throughput embedding, reranker, and classifier inference system.
 - **2025-03-26** — [Training and Finetuning Reranker Models with Sentence Transformers](<search/Training and Finetuning Reranker Models with Sentence Transformers.md>) · `search` · huggingface
   Full guide to training cross-encoder reranker models with Sentence Transformers v4: dataset formats, losses (BinaryCrossEntropy, CachedMultipleNegativesRanking, ListNet), hard-negative mining, and evaluation, with a fine-tune that beats much larger general rerankers on the target domain.
+- **2025-01-21** — [Your Contact Center Knowledge Base May Be Failing You](<pipelines/Your Contact Center Knowledge Base May Be Failing You.md>) · `pipelines` · cresta
+  A measurement methodology for knowledge-base coverage: cluster the most frequent real customer questions, then check whether each has a supporting entry. Found laggard organizations at 10-12% coverage (roughly 90% of common calls unsupported) versus leaders near 70%, with laggards holding fewer than 100 documents against leaders' thousands.
 - **2025-01-15** — [Train 400x faster Static Embedding Models with Sentence Transformers](<embeddings/Train 400x faster Static Embedding Models with Sentence Transformers.md>) · `embeddings` · huggingface
   Trains static (token-embedding-lookup, no transformer forward pass) retrieval and similarity models with Sentence Transformers that run 100x-400x faster on CPU than all-mpnet-base-v2 while keeping ~85% of quality; details the recipe: contrastive MNRL loss with large batch sizes, hard-negative mining, Matryoshka dimensionality reduction, and dataset selection.
 - **2025-01-10** — [Visual Document Retrieval Goes Multilingual](<embeddings/Visual Document Retrieval Goes Multilingual.md>) · `embeddings` · huggingface
@@ -69,6 +73,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-07-29** — [Cresta Insights: One System to Understand Your CX](<../agents/planning/Cresta Insights One System to Understand Your CX.md>) · `planning` · cresta
+  AI Analyst is recast from a question-answering tool into a research agent that builds and autonomously executes a multi-step plan: scoping data, running analyses, checking whether findings are meaningful, and deciding what step to take next. Also replaces hand-maintained keyword categories in Topic Discovery and adds Real-Time Trends.
 - **2026-06-17** — [Clustering billions of products for agentic commerce with Catalog API (2026)](<../product-engineering/case-studies/Clustering billions of products for agentic commerce with Catalog API (2026).md>) · `case-studies` · shopify
   How Shopify clusters billions of product listings across millions of stores into canonical entities via embeddings for its agentic-commerce Catalog API, reconciling inconsistent merchant listing structures.
 - **2026-05-13** — [Tau-Knowledge: benchmarking agents on realistic knowledge](<../evals-observability/benchmark-design/Tau-Knowledge benchmarking agents on realistic knowledge.md>) · `benchmark-design` · sierra

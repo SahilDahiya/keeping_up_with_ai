@@ -411,6 +411,8 @@
   Explains LLM inference performance benchmarks and how to interpret serving metrics.
 - **2023-12-08** — [StripedHyena-7B and efficient architectures beyond Transformers](<../models/reasoning/StripedHyena-7B and efficient architectures beyond Transformers.md>) · `reasoning` · together
   Introduces StripedHyena-7B and efficient architectures beyond Transformers.
+- **2023-11-10** — [How Custom Summarization Saves Hours of After-Call Work](<../models/fine-tuning/How Custom Summarization Saves Hours of After-Call Work.md>) · `fine-tuning` · cresta
+  Argues prompting alone cannot control output topics, style, or domain terminology for call summarization, so Cresta fine-tunes smaller domain models (Ocean-1 based) with supervised fine-tuning plus RLHF fed by agent edits. Reports 5x or better latency improvement over a gpt-3.5-turbo baseline at comparable quality, with ACW down to ~30 seconds.
 - **2023-11-02** — [Deployment and inference for open source text embedding models](<../rag-retrieval/embeddings/Deployment and inference for open source text embedding models.md>) · `embeddings` · baseten
   Covers deployment and inference patterns for open-source text embedding models.
 - **2023-07-25** — [Monarch Mixer: A new model architecture for increased efficiency](<../models/reasoning/Monarch Mixer A new model architecture for increased efficiency.md>) · `reasoning` · together
@@ -419,3 +421,5 @@
   Explains multi-query attention and why attention variants matter for efficient LLM inference.
 - **2023-01-23** — [FlashConv: speeding up state space models](<../models/reasoning/FlashConv speeding up state space models.md>) · `reasoning` · together
   Explains FlashConv and efficient state-space model execution.
+- **2021-03-16** — [Scaling Behavior Change Across 1,000 People](<../product-engineering/architecture/Scaling Behavior Change Across 1,000 People.md>) · `architecture` · cresta
+  Cresta's Behavioral Engine runs BERT, GPT-2 and T5 models over 40,000 live chats a day to detect decision points (price objections, package questions) and fire real-time coaching hints. Reports scaling hint volume 5x while cutting cost per hint, over 2 million hints delivered, and per-chat rather than sampled analytics.

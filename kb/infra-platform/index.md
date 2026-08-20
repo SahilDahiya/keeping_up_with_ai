@@ -213,3 +213,5 @@
   Compares NVIDIA A10 and A100 GPUs for LLM and Stable Diffusion inference workloads.
 - **2023-04-27** — [Comparing NVIDIA GPUs for AI: T4 vs A10](<../inference/hardware/Comparing NVIDIA GPUs for AI T4 vs A10.md>) · `hardware` · baseten
   Compares NVIDIA T4 and A10 GPUs for AI inference workloads and cost-performance tradeoffs.
+- **2021-06-25** — [Inside Cresta's Platform: Auth, APIs, and Scaling](<../product-engineering/architecture/Inside Cresta's Platform Auth, APIs, and Scaling.md>) · `architecture` · cresta
+  Cresta's platform re-architecture into four layers (client, edge orchestration, service/platform including ML services, and infra), motivated by supporting third-party API consumers alongside the first-party web app. Covers microservice scaffolding that unifies logging, config, CI/CD and testing, plus migrating auth and config off Netlify lambdas into dedicated services.

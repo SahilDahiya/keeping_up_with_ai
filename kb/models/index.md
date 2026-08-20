@@ -1,11 +1,13 @@
 # models
 
-174 articles.
+179 articles.
 
 - **2026-08-18** — [DeepSeek V4 Pro 0813 vs GPT-5.6 Sol on DeepSWE: Cost, Coding, and Routing](<benchmarks/DeepSeek V4 Pro 0813 vs GPT-5.6 Sol on DeepSWE Cost, Coding, and Routing.md>) · `benchmarks` · together
   Benchmarks DeepSeek V4 Pro 0813 against GPT-5.6 Sol on 113 DeepSWE coding tasks (904 rollouts): Sol wins pass@1 (72.7% vs 62.8%) but Pro's pass@4 (88.5% vs 85.8%) overtakes it at 1/35th the per-rollout cost, and a Pro-first-escalate-to-Sol cascade solves 83.0% of tasks at $3.35 each versus Sol alone at 72.7% for $8.37, though Sol's failures regress passing tests more often (20% vs 11%).
 - **2026-08-17** — [DeepSeek V4 Pro 0813 vs Claude Fable 5 on DeepSWE: Cost, Coding, and Routing](<benchmarks/DeepSeek V4 Pro 0813 vs Claude Fable 5 on DeepSWE Cost, Coding, and Routing.md>) · `benchmarks` · together
   Benchmarks DeepSeek V4 Pro 0813 against Claude Fable 5 on 113 DeepSWE coding tasks (904 rollouts): Fable leads pass@1 (69.7% vs 62.8%) but Pro catches up by pass@4 (88.5% vs 84.1%) at 1/90th the per-rollout cost, and a Pro-first-escalate-to-Fable cascade solves 82.7% of tasks at $8.28 each, beating Fable alone (69.7% at $21.63) and even a perfect oracle router (78.8%).
+- **2026-08-12** — [Your Brand, Any Language: The New Frontier of Voice Agent Localization](<multimodal/Your Brand, Any Language The New Frontier of Voice Agent Localization.md>) · `multimodal` · cresta
+  Describes a TTS 'arena' where candidate voices compete in tightly controlled pairwise comparisons scored by multiple stakeholders on prosody, expressiveness and authenticity before reaching production. Localized voice clones used to be disqualified on residual source-language accent; recent TTS models now top the internal leaderboard, implying they have learned to separate speaker identity (timbre, pacing, pitch contours) from language phonology.
 - **2026-08-12** — [Can open models carry readable silent signals before they speak? Reproducing J-Lens Readouts on Kimi K3 & Qwen3.5-9B](<reasoning/Can open models carry readable silent signals before they speak Reproducing J-Lens Readouts on Kimi K3 & Qwen3.5-9B.md>) · `reasoning` · fireworks
   Reproduces Anthropic's J-Lens (Jacobian Lens) probe, originally from the global workspace study, on two open models (Kimi K3 and Qwen3.5-9B) to test whether they carry readable internal vocabulary signals before generating output. Using focus-instruction experiments (e.g. arithmetic vs. citrus framing) with identical visible outputs, the probe recovered topic-consistent vocabulary in the top-10 predictions at most sampled layers/positions without leakage between conditions.
 - **2026-08-11** — [Introducing NVIDIA Nemotron 3.5 Lightning](<releases/Introducing NVIDIA Nemotron 3.5 Lightning.md>) · `releases` · baseten
@@ -110,6 +112,8 @@
   Shopify's generative recommender treats a buyer's cross-storefront event history as a sequence and predicts the next action, a sequence-modeling approach to commerce recommendations over months-long journeys.
 - **2026-02-23** — [How speech models fail where it matters the most and what to do about it](<multimodal/How speech models fail where it matters the most and what to do about it.md>) · `multimodal` · together
   Analyzes speech model failure modes that matter for production applications.
+- **2026-02-10** — [Creating a Natural-Sounding Text-to-Speech Voice](<multimodal/Creating a Natural-Sounding Text-to-Speech Voice.md>) · `multimodal` · cresta
+  Contrasts end-to-end voice-to-voice agents (cost scales with call length) against the cheaper 'stitched' STT to turn-detection to LLM to TTS pipeline Cresta runs in production, then details a five-step professional voice-cloning process from ~5 hours of studio speech. Notes telephony's 300-3400 Hz band strips the presence that makes web demos sound better than real calls.
 - **2026-02-02** — [Fine-tuning open LLM judges to outperform GPT-5.2](<reinforcement-learning/Fine-tuning open LLM judges to outperform GPT-5.2.md>) · `reinforcement-learning` · together
   Explains fine-tuning open LLM judges to outperform a frontier judge model.
 - **2026-01-26** — [Kimi K2.5 Is Live on Fireworks: Vibe Coding, Agents, and Full-Parameter RFT](<reinforcement-learning/Kimi K2.5 Is Live on Fireworks Vibe Coding, Agents, and Full-Parameter RFT.md>) · `reinforcement-learning` · fireworks
@@ -264,6 +268,8 @@
   How NuminaMath 7B won the first AIMO Progress Prize (29/50 on the private set): two-stage SFT of DeepSeekMath-Base — first on chain-of-thought math data, then on a tool-integrated reasoning dataset where the model writes and executes Python — plus self-consistency decoding over majority-voted candidates and vLLM + 8-bit quantization to fit the 2xT4 Kaggle time budget.
 - **2024-07-10** — [Preference Optimization for Vision Language Models](<fine-tuning/Preference Optimization for Vision Language Models.md>) · `fine-tuning` · huggingface
   Walks through direct preference optimization (DPO) for vision language models using TRL's new VLM support, fine-tuning Idefics2-8B on the RLAIF-V preference dataset to reduce hallucination. Covers preference-data format, the reference-model/beta setup, LoRA + 4-bit config and the memory considerations for VLM DPO.
+- **2024-07-01** — [Why Transcription Accuracy Is Crucial for Contact Centers](<fine-tuning/Why Transcription Accuracy Is Crucial for Contact Centers.md>) · `fine-tuning` · cresta
+  Details fine-tuning end-to-end ASR base models on hand-annotated customer audio: 2-3 weeks of human transcription plus 1-2 weeks of training, roughly 4-6 weeks total. Reports base-model WER under 11% streaming and under 9% pre-recorded, custom models under 9% and 8% respectively, with Slot Error Rate on customer keywords cut by close to 30%.
 - **2024-06-27** — [Welcome Gemma 2 - Google’s new open LLM](<releases/Welcome Gemma 2 - Google’s new open LLM.md>) · `releases` · huggingface
   Google's Gemma 2 (9B/27B, 8K context, 13T/8T training tokens) introduces interleaved sliding-window and full attention, logit soft-capping, and knowledge distillation from a larger teacher for the 9B model, plus WARP-style model merging. Explains why soft-capping must be disabled to use Flash Attention 2, and covers transformers/TRL fine-tuning support.
 - **2024-06-24** — [Fine-tuning Florence-2 - Microsoft's Cutting-edge Vision Language Models](<fine-tuning/Fine-tuning Florence-2 - Microsoft's Cutting-edge Vision Language Models.md>) · `fine-tuning` · huggingface
@@ -330,8 +336,12 @@
   Empirical head-to-head of DPO vs IPO vs KTO in TRL on two SFT'd 7B models (Zephyr and OpenHermes), sweeping the beta hyperparameter and scoring on MT-Bench; finds DPO/IPO roughly on par and beating KTO in the paired-preference setting, with beta mattering more than algorithm choice. Includes an errata where a summed-vs-averaged log-likelihood bug in TRL's IPO loss changed the results.
 - **2023-12-08** — [StripedHyena-7B and efficient architectures beyond Transformers](<reasoning/StripedHyena-7B and efficient architectures beyond Transformers.md>) · `reasoning` · together
   Introduces StripedHyena-7B and efficient architectures beyond Transformers.
+- **2023-11-10** — [How Custom Summarization Saves Hours of After-Call Work](<fine-tuning/How Custom Summarization Saves Hours of After-Call Work.md>) · `fine-tuning` · cresta
+  Argues prompting alone cannot control output topics, style, or domain terminology for call summarization, so Cresta fine-tunes smaller domain models (Ocean-1 based) with supervised fine-tuning plus RLHF fed by agent edits. Reports 5x or better latency improvement over a gpt-3.5-turbo baseline at comparable quality, with ACW down to ~30 seconds.
 - **2023-10-30** — [RedPajama-Data-v2: An open dataset with 30 trillion tokens for training large language models](<fine-tuning/RedPajama-Data-v2 An open dataset with 30 trillion tokens for training large language models.md>) · `fine-tuning` · together
   Introduces RedPajama-Data-v2, a large web dataset for training language models.
+- **2023-07-27** — [Does One LLM Fit All? Public vs. Domain vs. Fine-Tuned](<fine-tuning/Does One LLM Fit All Public vs. Domain vs. Fine-Tuned.md>) · `fine-tuning` · cresta
+  Compares public LLMs (ChatGPT, Bard), domain models, and fine-tuned models for enterprise deployment: public models offer fast time-to-value and prompt-based self-serve but carry cost, latency, and an accuracy ceiling from training on public data rather than ground truth. Fine-tunes right-size the model per task and learn continuously from feedback, at the price of training effort and per-use-case deployment.
 - **2023-07-25** — [Monarch Mixer: A new model architecture for increased efficiency](<reasoning/Monarch Mixer A new model architecture for increased efficiency.md>) · `reasoning` · together
   Introduces Monarch Mixer as an efficient model architecture.
 - **2023-07-12** — [Multi-Query Attention is All You Need](<reasoning/Multi-Query Attention is All You Need.md>) · `reasoning` · fireworks

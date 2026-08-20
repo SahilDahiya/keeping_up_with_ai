@@ -1,6 +1,6 @@
 # evals-observability
 
-104 articles.
+106 articles.
 
 - **2026-08-13** — [What We Learned by Reproducing 2,200 papers from ICML](<llm-as-judge/What We Learned by Reproducing 2,200 papers from ICML.md>) · `llm-as-judge` · huggingface
   Hugging Face's ICML 2026 Open Reproductions hackathon had 1,221 participants use coding agents (Claude Code, Codex, Cursor) to reproduce 2,226 accepted papers, scored by an automated GLM-5.2 Logbook Judge (verified/falsified/toy/inconclusive) instructed to distrust self-reported verdicts; 23% of examined papers had a claim falsified after adversarial re-verification, and the results argue agents still need human steering for scale-dependent reasoning and perceptual judgment calls.
@@ -132,6 +132,8 @@
   Practical guide for choosing AI agent testing and evaluation methods based on deployment stage and risk.
 - **2025-10-09** — [The New World of Non-Deterministic Testing and Evaluation](<testing/The New World of Non-Deterministic Testing and Evaluation.md>) · `testing` · cresta
   Explains why non-deterministic AI systems require different testing and evaluation methods than traditional software.
+- **2025-09-30** — [Automated AI Agent Testing: Deploy with Confidence | Cresta](<evaluation/Automated AI Agent Testing Deploy with Confidence Cresta.md>) · `evaluation` · cresta
+  Describes an AI-agent test suite built from expert-aligned LLM judges (a Hallucination Detection judge checking answers trace to approved sources, a Golden Response judge checking semantic equivalence), simulated virtual customers drawn from millions of real conversations, and modular logic-based plus judge-based evaluators. Claims 30% better test coverage than human testing, 10-15x more tests executed, and 25-35% faster releases.
 - **2025-09-22** — [Traces are all you need](<evaluation/Traces are all you need.md>) · `evaluation` · fireworks
   Shows how to turn production traces into an internal model leaderboard with rollout processors and judge comparisons.
 - **2025-08-25** — [LLM Eval Driven Development with Claude Code](<evaluation/LLM Eval Driven Development with Claude Code.md>) · `evaluation` · fireworks
@@ -150,6 +152,8 @@
   Explains using model-as-judge rewards for reinforcement fine-tuning and the evaluation risks involved.
 - **2025-07-02** — [How we used evals and inference-time compute scaling to generate beautiful QR codes that actually work](<evaluation/How we used evals and inference-time compute scaling to generate beautiful QR codes that actually work.md>) · `evaluation` · modal
   Case study using evals and inference-time compute scaling to generate QR codes that satisfy visual and functional constraints.
+- **2025-04-30** — [Introducing Conversation Intelligence for AI Agents](<evaluation/Introducing Conversation Intelligence for AI Agents.md>) · `evaluation` · cresta
+  Makes the case for evaluating AI agents with the same behavioral quality management used on human agents, since both show response variance, and for comparing them on shared criteria like resolution rate, CSAT and sentiment. Cites Metrigy that fewer than 20% of AI-handled conversations reach successful resolution, and supports ingesting third-party bot transcripts.
 - **2025-04-16** — [Introducing HELMET: Holistically Evaluating Long-context Language Models](<benchmark-design/Introducing HELMET Holistically Evaluating Long-context Language Models.md>) · `benchmark-design` · huggingface
   HELMET is a long-context benchmark spanning 7 application-centric categories (RAG, passage re-ranking, many-shot ICL, long-doc QA, summarization, cite/attribution) up to 128K tokens, built because synthetic probes like needle-in-a-haystack correlate poorly with real downstream long-context ability. Reports rankings that shift by category and shows open models lag closed ones most on tasks requiring full-context reasoning.
 - **2025-02-10** — [The Open Arabic LLM Leaderboard 2](<benchmark-design/The Open Arabic LLM Leaderboard 2.md>) · `benchmark-design` · huggingface
@@ -219,6 +223,8 @@
   Explains Together AI's endpoint-level A/B testing for production model traffic: one control plus up to 20 variants with fixed percentage splits independent of replica autoscaling, etag-guarded ramping, sampling-key-based cohort stickiness, and promote-then-delete rollout to end an experiment. Walks through a live run ramping 95/5 to 80/20 to 50/50 and shows observed traffic shares matching the configured percents.
 - **2026-08-13** — [Defense in depth in the age of agents](<../product-engineering/security/Defense in depth in the age of agents.md>) · `security` · sierra
   Sierra describes its layered guardrail architecture for goal-driven customer-service agents: grounding content, natural-language policies, supervisor models that audit conversations in real time, and deterministic guards (e.g. gating account-modification tools until authentication) that can't be talked out of enforcing hard limits, backed by continuous red-team evaluation and live threat/agent monitoring.
+- **2026-08-12** — [Your Brand, Any Language: The New Frontier of Voice Agent Localization](<../models/multimodal/Your Brand, Any Language The New Frontier of Voice Agent Localization.md>) · `multimodal` · cresta
+  Describes a TTS 'arena' where candidate voices compete in tightly controlled pairwise comparisons scored by multiple stakeholders on prosody, expressiveness and authenticity before reaching production. Localized voice clones used to be disqualified on residual source-language accent; recent TTS models now top the internal leaderboard, implying they have learned to separate speaker identity (timbre, pacing, pitch contours) from language phonology.
 - **2026-08-12** — [Can open models carry readable silent signals before they speak? Reproducing J-Lens Readouts on Kimi K3 & Qwen3.5-9B](<../models/reasoning/Can open models carry readable silent signals before they speak Reproducing J-Lens Readouts on Kimi K3 & Qwen3.5-9B.md>) · `reasoning` · fireworks
   Reproduces Anthropic's J-Lens (Jacobian Lens) probe, originally from the global workspace study, on two open models (Kimi K3 and Qwen3.5-9B) to test whether they carry readable internal vocabulary signals before generating output. Using focus-instruction experiments (e.g. arithmetic vs. citrus framing) with identical visible outputs, the probe recovered topic-consistent vocabulary in the top-10 predictions at most sampled layers/positions without leakage between conditions.
 - **2026-08-05** — [Sidekick's continual learning loop (2026)](<../models/fine-tuning/Sidekick's continual learning loop (2026).md>) · `fine-tuning` · shopify
@@ -275,6 +281,8 @@
   Explores how to evaluate AI voice quality beyond subjective preference, including production criteria for speech experiences.
 - **2025-12-17** — [Self-Improving Agents, Powered by Your Evals](<../agents/planning/Self-Improving Agents, Powered by Your Evals.md>) · `planning` · fireworks
   Describes self-improving agents powered by eval loops, using evaluation feedback to improve behavior.
+- **2025-12-09** — [Cresta Agent Operations Center for Human and AI Agents](<../agents/harness/Cresta Agent Operations Center for Human and AI Agents.md>) · `harness` · cresta
+  A human-oversight layer for AI agents in production: supervisors are alerted by negative sentiment, compliance triggers, or low model confidence, the AI agent can itself request help on out-of-knowledge-base or exception requests, and escalation hands off to a human with full conversation context preserved. Names the emerging 'AI Supervisor' role.
 - **2025-11-20** — [Eval Protocol: RL on your agents, in any environment](<../models/reinforcement-learning/Eval Protocol RL on your agents, in any environment.md>) · `reinforcement-learning` · fireworks
   Describes using Eval Protocol to run reinforcement learning on agents in task environments.
 - **2025-10-01** — [Introducing RTEB: A New Standard for Retrieval Evaluation](<../rag-retrieval/embeddings/Introducing RTEB A New Standard for Retrieval Evaluation.md>) · `embeddings` · huggingface
@@ -313,6 +321,8 @@
   Details precise and interpretable quantization evaluation for understanding quality and performance tradeoffs.
 - **2024-07-01** — [Our Transformers Code Agent beats the GAIA benchmark 🏅](<../agents/tool-use/Our Transformers Code Agent beats the GAIA benchmark 🏅.md>) · `tool-use` · huggingface
   How a Transformers CodeAgent (LLM writes Python actions rather than JSON) topped the GAIA agent benchmark: multi-agent web-browser delegation, tool design, and error analysis of GAIA failure modes.
+- **2024-07-01** — [Why Transcription Accuracy Is Crucial for Contact Centers](<../models/fine-tuning/Why Transcription Accuracy Is Crucial for Contact Centers.md>) · `fine-tuning` · cresta
+  Details fine-tuning end-to-end ASR base models on hand-annotated customer audio: 2-3 weeks of human transcription plus 1-2 weeks of training, roughly 4-6 weeks total. Reports base-model WER under 11% streaming and under 9% pre-recorded, custom models under 9% and 8% respectively, with Slot Error Rate on customer keywords cut by close to 30%.
 - **2024-05-29** — [Benchmarking Text Generation Inference](<../inference/serving/Benchmarking Text Generation Inference.md>) · `serving` · huggingface
   How to use the TGI benchmarking tool to profile LLM serving: separating prefill from decode, reading latency vs throughput curves under different batch sizes, and choosing the batch size that meets your latency SLO.
 - **2024-05-05** — [Introducing the Open Leaderboard for Hebrew LLMs!](<../models/benchmarks/Introducing the Open Leaderboard for Hebrew LLMs!.md>) · `benchmarks` · huggingface

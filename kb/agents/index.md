@@ -1,7 +1,9 @@
 # agents
 
-89 articles.
+94 articles.
 
+- **2026-08-19** — [Codex as a platform: build on the open agent harness | OpenAI Developers](<harness/Codex as a platform build on the open agent harness OpenAI Developers.md>) · `harness` · openai-devs
+  OpenAI argues the reusable part of Codex is not the app but the open-source harness: the agent loop that gathers context, calls tools, maintains state across turns, surfaces progress, handles failures, and requests approval. Positions that harness as an embeddable substrate for domain-specific agents rather than a general coding assistant.
 - **2026-08-13** — [StackOne is now a Pydantic AI capability](<harness/StackOne is now a Pydantic AI capability.md>) · `harness` · pydantic
   Pydantic AI Harness's new StackOne capability exposes hundreds of SaaS connectors (Workday, Salesforce, Zendesk) to an agent via a search-then-execute tool pair that queries the action catalog at runtime instead of serializing it into the prompt, keeping context flat regardless of catalog size, plus an 'individual' mode for exact per-action tool schemas and required approval gating for write actions.
 - **2026-08-11** — [Teaching agents to navigate janky IVR systems](<tool-use/Teaching agents to navigate janky IVR systems.md>) · `tool-use` · sierra
@@ -12,6 +14,8 @@
   Third in Pydantic's harness series: proposes moving the 'keep going or stop' decision inside the agent loop (via retry-verdict guardrails and Macroscope self-review), backing it with BM25 conversation search and persistent memory over prior runs, and closing the loop with a self-grading judge — but warns that LLM judges suffer position/self-preference bias and must be calibrated against a human, graded per-dimension, and version-tracked (ties into Pydantic Logfire's managed prompts, online evals, and GEPA prompt optimization).
 - **2026-07-29** — [Building an agentic harness that outlasts the model (2026)](<harness/Building an agentic harness that outlasts the model (2026).md>) · `harness` · shopify
   Shopify details Dispatch, their Ruby-orchestrated multi-agent security-scanning harness: it partitions a Rails monolith by size/scope, runs parallel Hunter agents per partition backed by shared architecture artifacts, verifies candidate findings with a different model acting as a test oracle, then opens fix PRs -- across 80+ applications and thousands of scans it produced 300+ findings valued at $400k+ in equivalent bug-bounty payouts.
+- **2026-07-29** — [Cresta Insights: One System to Understand Your CX](<planning/Cresta Insights One System to Understand Your CX.md>) · `planning` · cresta
+  AI Analyst is recast from a question-answering tool into a research agent that builds and autonomously executes a multi-step plan: scoping data, running analyses, checking whether findings are meaningful, and deciding what step to take next. Also replaces hand-maintained keyword categories in Topic Discovery and adds Real-Time Trends.
 - **2026-07-28** — [Dynamic Workflows in Pydantic AI: agents that orchestrate agents](<harness/Dynamic Workflows in Pydantic AI agents that orchestrate agents.md>) · `harness` · pydantic
   Pydantic AI's DynamicWorkflow extends its Code Mode pattern from tool-calls to sub-agents: an orchestrator agent gets a catalog of named agents and writes ordinary Python (async gather, loops, conditionals) to fan out and chain them in a single tool call, illustrated by the Bun-in-Rust port that ran ~50 such workflows with up to 64 Claude agents in parallel.
 - **2026-07-22** — **[Paper]** [OO Agents: Native Python Object-Oriented Agents (NOOA)](<harness/[Paper] OO Agents Native Python Object-Oriented Agents (NOOA).md>) · `harness` · arxiv
@@ -90,6 +94,8 @@
   Case study orchestrating a team of parallel Claude instances to build a working C compiler, covering task decomposition, shared state, and verification loops.
 - **2025-12-17** — [Self-Improving Agents, Powered by Your Evals](<planning/Self-Improving Agents, Powered by Your Evals.md>) · `planning` · fireworks
   Describes self-improving agents powered by eval loops, using evaluation feedback to improve behavior.
+- **2025-12-09** — [Cresta Agent Operations Center for Human and AI Agents](<harness/Cresta Agent Operations Center for Human and AI Agents.md>) · `harness` · cresta
+  A human-oversight layer for AI agents in production: supervisors are alerted by negative sentiment, compliance triggers, or low model confidence, the AI agent can itself request help on out-of-knowledge-base or exception requests, and escalation hands off to a human with full conversation context preserved. Names the emerging 'AI Supervisor' role.
 - **2025-12-04** — [How We Built a State-of-the-Art Research Agent for Call Center Conversation Analytics](<planning/How We Built a State-of-the-Art Research Agent for Call Center Conversation Analytics.md>) · `planning` · cresta
   Detailed build story for a research agent over conversation analytics, covering agent design and domain-specific workflow constraints.
 - **2025-11-26** — [Effective harnesses for long-running agents](<harness/Effective harnesses for long-running agents.md>) · `harness` · anthropic-engineering
@@ -120,6 +126,8 @@
   Argues for decentralized voice-agent architectures over central orchestration in some customer-experience workloads.
 - **2025-08-21** — [AI agents for efficient LLM inference engineering](<tool-use/AI agents for efficient LLM inference engineering.md>) · `tool-use` · together
   Case study of using AI agents to automate engineering tasks while developing efficient inference systems.
+- **2025-08-07** — [Beyond Multi-Channel: A Guide to Omnichannel AI Agents](<memory-context/Beyond Multi-Channel A Guide to Omnichannel AI Agents.md>) · `memory-context` · cresta
+  On carrying conversation context across SMS, chat and voice so customers do not restate themselves after a channel switch, using a fraud-alert example that breaks across three channels. Argues agents should be channel-aware, adapting register and length to each medium rather than reusing one script everywhere.
 - **2025-07-15** — [Building reliable AI agents](<planning/Building reliable AI agents.md>) · `planning` · baseten
   Covers practical design patterns for building more reliable AI agents.
 - **2025-07-11** — [Function calling for agentic AI systems](<tool-use/Function calling for agentic AI systems.md>) · `tool-use` · fireworks
@@ -154,6 +162,8 @@
   Anthropic's canonical guide to agent design patterns: when to use workflows (prompt chaining, routing, orchestrator-workers) versus autonomous agents, and why simple composable patterns beat frameworks.
 - **2024-11-15** — [Fireworks f1: A breakthrough in complex reasoning with Compound AI](<harness/Fireworks f1 A breakthrough in complex reasoning with Compound AI.md>) · `harness` · fireworks
   Fireworks' f1 is a 'compound AI' model that interleaves generation from multiple open models at the inference layer to handle complex reasoning via declarative prompting, aiming to match or exceed closed frontier models on coding, math, and reasoning benchmarks.
+- **2024-10-29** — [Announcing Cresta Voice Virtual Agent: What Sets It Apart](<harness/Announcing Cresta Voice Virtual Agent What Sets It Apart.md>) · `harness` · cresta
+  Frames voice agents as a choice between rigid flow-based bots that cannot handle diverse intents and purely generative agents that hallucinate in public ways, and proposes a hybrid architecture pairing LLM generation with deterministic systems enforcing business rules. Cites Metrigy finding 40.6% of customers actively avoid virtual agents.
 - **2024-08-12** — [Tool Use, Unified](<tool-use/Tool Use, Unified.md>) · `tool-use` · huggingface
   Explains the unified tool-use API in Transformers chat templates: pass plain Python functions with typed signatures and docstrings and they are auto-converted to JSON schema, then rendered per-model by the model's Jinja chat template — plus the conventions chosen for tool-call and tool-result messages so tool-calling chats are portable across models that disagree on formats.
 - **2024-07-01** — [Our Transformers Code Agent beats the GAIA benchmark 🏅](<tool-use/Our Transformers Code Agent beats the GAIA benchmark 🏅.md>) · `tool-use` · huggingface
@@ -197,6 +207,8 @@
   Case study on integrating Cresta's voice AI agent with Avaya Infinity's new WebSocket media protocol, covering audio chunk-size tuning (20-200ms) for barge-in latency, timestamp-ordered transcript delivery, and race conditions that silently dropped the final transcript turn during call shutdown.
 - **2026-07-29** — [ThunderAgent: 2x Faster Agentic Inference for Synthetic Data Generation at Scale](<../inference/optimization/ThunderAgent 2x Faster Agentic Inference for Synthetic Data Generation at Scale.md>) · `optimization` · together
   Together AI's ThunderAgent (ICML 2026 Spotlight) fixes KV cache thrashing in high-concurrency agentic inference by scheduling at the program level instead of per-request: it pauses low-priority agent workflows under memory pressure and resumes them via a global waiting queue, achieving 803 vs 390 tok/s single-node throughput over SGLang and near-linear scaling to 2.4x speedup across 8 H100 nodes.
+- **2026-07-23** — [Cresta's Compass AI: Better Enterprise Discoverability](<../product-engineering/ux-patterns/Cresta's Compass AI Better Enterprise Discoverability.md>) · `ux-patterns` · cresta
+  Rethinks enterprise navigation around an embedded support agent: instead of answering 'where is this feature', Compass answers 'what is the next step toward my goal' and carries context as users move between Insights, Opera automations, and quality management. Notes building an agent inside your own product differs from shipping one to customers, though the requirements/evals/iterate loop stays the same.
 - **2026-07-22** — [Building Sierra’s MCP Gateway: An engineering iceberg](<../product-engineering/security/Building Sierra’s MCP Gateway An engineering iceberg.md>) · `security` · sierra
   Lessons from building Sierra's internal MCP gateway: a 'grab the lock' single-owner model for coordination, coding agents that cheat verification (reading tokens directly, falling back to curl) requiring weaker consumer agents for smoke tests, and a three-pass deterministic-plus-two-model pipeline that blocks cross-customer data access with an audit log.
 - **2026-07-21** — [Devin Outposts on Modal | Modal Blog](<../infra-platform/deployment/Devin Outposts on Modal Modal Blog.md>) · `deployment` · modal
@@ -261,6 +273,8 @@
   Explains what distinguishes enterprise-grade agents from raw LLMs, including integrations, policy controls, reliability, and operational lifecycle.
 - **2026-05-12** — [Industry first: PCI-compliant agents](<../product-engineering/security/Industry first PCI-compliant agents.md>) · `security` · sierra
   Explains PCI-compliant payment workflows for agents, focusing on secure action-taking and sensitive-data handling.
+- **2026-05-11** — [When Your Customer's AI Is the One Calling](<../industry/trends/When Your Customer's AI Is the One Calling.md>) · `trends` · cresta
+  Argues a meaningful share of inbound customer contacts will soon be initiated by consumer AI agents acting on the customer's behalf, changing what 'meet customers where they are' means. Notes generative agents did not remove complexity so much as trade flow-scripting for the complexity of testing, hill-climbing, and maintaining production control.
 - **2026-05-01** — [Designing the AI Agent Supervision Experience](<../product-engineering/ux-patterns/Designing the AI Agent Supervision Experience.md>) · `ux-patterns` · cresta
   Discusses UX and workflow design for supervising AI agents, including human oversight and intervention surfaces.
 - **2026-04-24** — [DeepSeek-V4: a million-token context that agents can actually use](<../models/architectures/DeepSeek-V4 a million-token context that agents can actually use.md>) · `architectures` · huggingface
@@ -275,6 +289,8 @@
   Shows how to trace multi-service LLM pipelines for AI agents with Langfuse, including cross-service visibility concerns.
 - **2026-03-25** — [How we built Claude Code auto mode: a safer way to skip permissions](<../product-engineering/security/How we built Claude Code auto mode a safer way to skip permissions.md>) · `security` · anthropic-engineering
   Design of Claude Code auto mode: sandboxing plus permission heuristics that let the agent act without per-action approval while bounding blast radius.
+- **2026-03-17** — [Introducing Cresta Knowledge Agent](<../rag-retrieval/pipelines/Introducing Cresta Knowledge Agent.md>) · `pipelines` · cresta
+  An agentic retrieval assistant that grounds answers in three sources at once: intent inferred from the live conversation, on-screen CRM state read from the agent's browser (loyalty tier, account status, ticket type), and policy documentation. Delivers cited answers unprompted through a persistent sidebar that follows the agent across browser tabs.
 - **2026-03-11** — [From prompts to products: One year of Responses | OpenAI Developers](<../product-engineering/case-studies/From prompts to products One year of Responses OpenAI Developers.md>) · `case-studies` · openai-devs
   One-year retrospective on the Responses API told through five developer stories, including Raindrop AI's production agent-monitoring platform (failure detection and debugging on GPT-5.2 via the Vercel AI SDK) built on its hosted-tool and background-analysis primitives.
 - **2026-03-02** — [Best LLMs for coding: 2026 roundup](<../models/benchmarks/Best LLMs for coding 2026 roundup.md>) · `benchmarks` · fireworks
@@ -283,6 +299,8 @@
   SimGym: Shopify's simulated A/B testing environment where thousands of LLM-driven shopper agents exercise storefronts, letting teams test changes against synthetic-but-realistic buyer behavior before real traffic.
 - **2026-02-23** — [Directory Snapshots: Resumable project state for Sandboxes](<../infra-platform/deployment/Directory Snapshots Resumable project state for Sandboxes.md>) · `deployment` · modal
   Introduces directory snapshots for sandbox state, enabling resumable project files across agent and remote-execution sessions.
+- **2026-02-10** — [Creating a Natural-Sounding Text-to-Speech Voice](<../models/multimodal/Creating a Natural-Sounding Text-to-Speech Voice.md>) · `multimodal` · cresta
+  Contrasts end-to-end voice-to-voice agents (cost scales with call length) against the cheaper 'stitched' STT to turn-detection to LLM to TTS pipeline Cresta runs in production, then details a five-step professional voice-cloning process from ~5 hours of studio speech. Notes telephony's 300-3400 Hz band strips the presence that makes web demos sound better than real calls.
 - **2026-02-05** — [The logs I never read](<../evals-observability/tracing/The logs I never read.md>) · `tracing` · pydantic
   A dogfooding walkthrough of tracking down a customer bug in a distributed system through Logfire traces rather than reading all the logs, framed by how large context windows and tool use have made coding agents productive but also more prolific bug generators.
 - **2026-01-26** — [DSGym: A holistic framework for evaluating and training data science agents](<../evals-observability/benchmark-design/DSGym A holistic framework for evaluating and training data science agents.md>) · `benchmark-design` · together
@@ -311,6 +329,8 @@
   Behind-the-scenes account of OpenAI using Codex to build DevDay 2025: it implemented the 1990s VISCA protocol to control venue cameras, built an MCP server for stage lighting, and used Codex Cloud best-of-N to iterate Apps SDK demos like a beat pad in parallel.
 - **2025-10-07** — [AI-Ready Knowledge for Contact Centers: Closing the Gap Between the Knowledge Base and AI](<../rag-retrieval/pipelines/AI-Ready Knowledge for Contact Centers Closing the Gap Between the Knowledge Base and AI.md>) · `pipelines` · cresta
   Explains how operational knowledge bases need to be structured for AI agents, with emphasis on grounding and retrieval readiness.
+- **2025-09-30** — [Automated AI Agent Testing: Deploy with Confidence | Cresta](<../evals-observability/evaluation/Automated AI Agent Testing Deploy with Confidence Cresta.md>) · `evaluation` · cresta
+  Describes an AI-agent test suite built from expert-aligned LLM judges (a Hallucination Detection judge checking answers trace to approved sources, a Golden Response judge checking semantic equivalence), simulated virtual customers drawn from millions of real conversations, and modular logic-based plus judge-based evaluators. Claims 30% better test coverage than human testing, 10-15x more tests executed, and 25-35% faster releases.
 - **2025-09-29** — [Effective context engineering for AI agents](<../prompt-engineering/context-engineering/Effective context engineering for AI agents.md>) · `context-engineering` · anthropic-engineering
   Strategies for managing agent context windows—compaction, structured note-taking, sub-agent architectures—and why context engineering supersedes prompt engineering.
 - **2025-08-25** — [LLM Eval Driven Development with Claude Code](<../evals-observability/evaluation/LLM Eval Driven Development with Claude Code.md>) · `evaluation` · fireworks
@@ -355,6 +375,8 @@
   Explains function calling and JSON mode for structured LLM application outputs.
 - **2023-10-10** — **[Paper]** [SWE-bench: Can Language Models Resolve Real-World GitHub Issues?](<../evals-observability/benchmark-design/[Paper] SWE-bench Can Language Models Resolve Real-World GitHub Issues.md>) · `benchmark-design` · arxiv
   A benchmark of 2,294 real GitHub issue+PR task instances across 12 Python repositories where a model must produce a patch that passes the repo's hidden test suite. Exposes how hard real-world software engineering is for LLMs (early frontier models solved only low-single-digit %) and became the canonical agentic-coding eval; ships an execution harness and the widely-used SWE-bench Lite/Verified subsets.
+- **2023-05-04** — [The Emerging Stack of Generative AI](<../product-engineering/architecture/The Emerging Stack of Generative AI.md>) · `architecture` · cresta
+  Lays out the LLM != AI System != AI Product distinction with a worked example chaining several GPT-4 calls (name extraction, scoring, recommendation) against a Salesforce CRM lookup and purchase history as real-time context. Argues for vertically integrated stacks where UI feedback propagates backwards into knowledge, system, and eventually RLHF on the model itself.
 - **2021-01-13** — [Action Directed GPT-2](<../models/reasoning/Action Directed GPT-2.md>) · `reasoning` · cresta
   Explains Action Directed GPT-2 as an early pattern for steering language model behavior toward actions, relevant to tool-using and task-oriented agents.
 - **2017-06-12** — **[Paper]** [Attention Is All You Need](<../models/architectures/[Paper] Attention Is All You Need.md>) · `architectures` · arxiv

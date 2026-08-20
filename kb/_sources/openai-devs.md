@@ -1,7 +1,9 @@
 # openai-devs
 
-20 articles.
+21 articles.
 
+- **2026-08-19** — [Codex as a platform: build on the open agent harness | OpenAI Developers](<../agents/harness/Codex as a platform build on the open agent harness OpenAI Developers.md>) · `harness` · openai-devs
+  OpenAI argues the reusable part of Codex is not the app but the open-source harness: the agent loop that gathers context, calls tools, maintains state across turns, surfaces progress, handles failures, and requests approval. Positions that harness as an embeddable substrate for domain-specific agents rather than a general coding assistant.
 - **2026-07-20** — [Custom Code Review rules for Codex | OpenAI Developers](<../prompt-engineering/context-engineering/Custom Code Review rules for Codex OpenAI Developers.md>) · `context-engineering` · openai-devs
   Codex Code Review can now apply custom repository rules written in AGENTS.md (preserving API contracts, keeping customer data out of logs, avoiding breaking renames) so the review agent catches team-specific issues that used to depend on tribal reviewer knowledge, citing the specific rule behind each finding.
 - **2026-06-26** — [Making private MCP servers reachable without making them public | OpenAI Developers](<../product-engineering/security/Making private MCP servers reachable without making them public OpenAI Developers.md>) · `security` · openai-devs
