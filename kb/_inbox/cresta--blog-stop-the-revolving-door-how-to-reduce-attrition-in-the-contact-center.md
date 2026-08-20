@@ -1,0 +1,41 @@
+---
+title: How to Reduce Attrition in the Contact Center
+kind: blog
+topic: null
+subtopic: null
+secondary_topics: []
+summary: null
+triage: null
+skip_reason: null
+source: cresta
+url: https://cresta.com/blog/stop-the-revolving-door-how-to-reduce-attrition-in-the-contact-center
+author: Nicky Budd-Thanos
+published: '2023-02-24'
+fetched: '2026-08-20T06:14:45Z'
+classifier: null
+taxonomy_rev: 2
+words: 1230
+content_sha256: cf80f16bf36f3892ef73ca5959a8dbfe040cf98dfa3d384c06f0a906f4f3fc09
+---
+
+# How to Reduce Attrition in the Contact Center
+
+It’s no secret that one of the biggest challenges facing the contact center today is a hiring problem. Historically, contact centers have seen average annual attrition rates around 30-45%, but in the last few years, data shows that attrition has jumped to as high as ~80%.The ability to quickly hire, ramp, and also retain agents is becoming harder and harder. To better understand the state of agent attrition and how the agent lifecycle has evolved over the last few years, we looked at data from over 6,000 agents across nearly 4 million conversations. In today’s post, we’re taking a close look at the agent life cycle and some of the concrete steps contact centers can take to grow and maintain great agent talent.
+
+**Download the** **full Cresta Insights Report** **on agent attrition and ramp time - as well as actionable strategies that contact centers can take to improve both metrics.**
+
+### Stage one: Agent orientation and ramp
+
+When an agent joins a contact center, they follow a standard flow, starting with the first stage of their time at a company: onboarding and ramp time. This initial stage encompasses the time from the first day of orientation, up until the time that the agent is considered fully proficient. During this time, there is an incredible amount of knowledge absorption through training and coaching, learning the ins and outs of the product offerings, and getting up to speed. This is obviously an incredibly important stage, because if an agent is not properly enabled with the necessary tools, training, and support, it’s highly unlikely that they will be successful in their role, and ultimately unlikely that they will be satisfied in the role. “One thing that I saw in the contact center world is that if we could keep people through that initial three or four month ramp phase, they were much more likely to stay longer term. But if they were unsupported during that critical phase, we were more likely to lose them to attrition or churn and that’s a very expensive problem to solve,” Brittany Bell, Cresta Customer Success Manager and former contact center executive, shared. While this is an incredible amount of information for a new hire to take in, this stage quickly gives way to stage two, what we call the agent performance phase.
+
+### Stage two: Agent performance
+
+In this second phase, the goal is to help agents upskill themselves, to become as effective, efficient, and self-reliant as possible. As a contact center, this is where it is critical to set clear necessary requirements for the agent to be successful, to advance to the next level. Without these clear and concise guidelines and structure, it can be incredibly easy for agents to lose interest and engagement - a reason that much of attrition, the ‘revolving door dilemma’, lies in this second stage of the agent lifecycle. On average, contact center agents take three months to ramp, but the average tenure for an agent is only 14 months. And at the conclusion of that 14 months, we see an average annual agent turnover of 84%, a number that has actually only steadily increased over the last two years. The issue of agent attrition in the contact center really comes into focus when looking at these numbers. It takes three months to get a new agent fully productive, but a mere 11 months later, they’re out the door, meaning that over a fifth of their time is spent solely on the onboarding process. This is clearly a very pressing and ultimately very expensive problem, and the fight for talent is only becoming even more competitive. So how to address? Let’s dive in.
+
+### Strategies to overcome attrition
+
+The primary strategy to better engage and retain talent is consistent and repeated training and coaching. When contact center leaders are able to provide an amazing employee experience through thoughtfully designed training material, it allows for relationship building between the manager and the agents. In a contact center where customer volume and expectations are at an all-time high, forcing agents to drink from the fire hose is not a sustainable way to train and coach. Managers should be thinking about not only the information they are sharing, but also the appropriate sequencing: how to deliver the right information to new agents at the right time. Another obvious solution - albeit not always feasible - is to incentivize through increased pay, especially with offerings like tenure or sign-on bonuses as a way to attract top talent and keep through the ramp phase. Many organizations are also looking toward gamification as a way to differentiate themselves, engage employees, and retain talent beyond the average tenure. This approach gives employees opportunities to learn, grow, and even create some friendly competition and team-building.The reality is that all of these strategies require not only capital investment, but also the investment of time and resources. Once a benefit has been introduced to a team, it can then be exceptionally difficult to take away benefits - and doing so is likely to result in even further attrition. One of the best investment decisions contact centers can make to ensure that these strategies stick and are worth the cost? Deploying technology that enhances, rather than replaces, the humans working hard to deliver value to the customer and the business.
+
+### The role of technology
+
+Real-time intelligence is a category of technology that allows teams to extract insights from every customer conversation, evaluate these insights, use them to inform training, and then scale that training across agents. Cresta’s real-time [Agent Assist](https://cresta.com/product/agent-assist/) enables agents in real time on every conversation, delivering recommendations on what to say, proven behaviors to follow, and suggested answers to customer questions. This not only alleviates the pressure on agents, particularly newer ones, but also creates continuous training and coaching moments. Rather than interfacing with their manager a handful of times a month on a random selection of calls, agents receive tidbits of information on every single conversation, allowing for a regular feedback loop and opportunity to upskill themselves. Powered by our real-time AI, our customers are able to change the standard coaching and training model, and scale it across their organizations in truly impactful ways. From the manager's perspective, they’re able to immediately identify problem areas, as analyzed by the real-time intelligence, and use that to inform their approach with coaching individual agents. This allows for a truly two-pronged approach, that not only improves agent coaching through AI but also improves manager efficacy and visibility.  When agents have access to consistent and real-time feedback on every single interaction, they have the ability to quickly learn and improve, especially during that critical early onboarding phase. We’ve found that the agents who are using [Cresta](https://cresta.com/) most often tend to have much higher performance. Across our study of 6,000 agents, we saw about 35% higher performance against KPIs, and a 32% increase in consistency.To dive even further into the macro trends impacting agent attrition and how it can be remedied, [check out the conversation](https://www.youtube.com/watch?v=QuYyLWEA6c4&t=217s) between Cresta’s Brittany Bell, industry veteran and former contact center executive, and Osman Javed (previously product marketing at Cresta). To see Cresta in action and understand the impact it can make in your contact center, [schedule a personalized demo today](https://cresta.com/demo/)! **Additional Reading & Content:::** Download our Insights Report: [Reducing Ramp Time & Agent Attrition in Contact Centers](https://cresta.com/reports/reducing-ramp-time/)
