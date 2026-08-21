@@ -1,7 +1,9 @@
 # inference
 
-128 articles.
+129 articles.
 
+- **2026-08-19** — [Gisting: Compressing LLM Agent context to ↑ throughput and ↓ cost (2026)](<optimization/Gisting Compressing LLM Agent context to ↑ throughput and ↓ cost (2026).md>) · `optimization` · shopify
+  Shopify's Sidekick GraphQL agent uses gisting -- training special 'gist' token embeddings via knowledge distillation -- to compress its ~6,000-token system prompt to ~1,500 gist tokens (4:1), cutting median TTFT from 438ms to 354ms and end-to-end latency from 6.8s to 4.2s while raising throughput from 20.2 to 23.4 QPS at 350 RPM, reducing the GPUs needed to serve the agent.
 - **2026-08-14** — [Inference engineering for DeepSeek V4 Pro 0813](<optimization/Inference engineering for DeepSeek V4 Pro 0813.md>) · `optimization` · baseten
   Baseten details the inference engineering behind serving DeepSeek V4 Pro 0813 (1.7T params, MXFP4 weights) day-zero: retuned parallelism, KV cache allocation, and prefill-decode worker ratios for longer agentic-coding sequences, plus speculative decoding via the model's built-in DSpark speculator for higher throughput.
 - **2026-08-04** — [Bringing serverless functions closer to the speed of wire | Modal Blog](<optimization/Bringing serverless functions closer to the speed of wire Modal Blog.md>) · `optimization` · modal

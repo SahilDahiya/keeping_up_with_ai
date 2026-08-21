@@ -1,10 +1,16 @@
 ---
 title: 'Gisting: Compressing LLM Agent context to ↑ throughput and ↓ cost (2026)'
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: inference
+subtopic: optimization
+secondary_topics:
+- prompt-engineering/context-engineering
+- models/fine-tuning
+summary: Shopify's Sidekick GraphQL agent uses gisting -- training special 'gist'
+  token embeddings via knowledge distillation -- to compress its ~6,000-token system
+  prompt to ~1,500 gist tokens (4:1), cutting median TTFT from 438ms to 354ms and
+  end-to-end latency from 6.8s to 4.2s while raising throughput from 20.2 to 23.4
+  QPS at 350 RPM, reducing the GPUs needed to serve the agent.
 triage: null
 skip_reason: null
 source: shopify
@@ -12,7 +18,7 @@ url: https://shopify.engineering/gisting
 author: Cody Mazza-Anthony
 published: '2026-08-19'
 fetched: '2026-08-21T06:14:40Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1110
 content_sha256: aa92f1854afc9b511c0ef412ed5e22a2bfec163c45c479613df79bd1a3a73a7b

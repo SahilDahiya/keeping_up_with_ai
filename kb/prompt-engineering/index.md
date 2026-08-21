@@ -45,6 +45,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-08-19** — [Gisting: Compressing LLM Agent context to ↑ throughput and ↓ cost (2026)](<../inference/optimization/Gisting Compressing LLM Agent context to ↑ throughput and ↓ cost (2026).md>) · `optimization` · shopify
+  Shopify's Sidekick GraphQL agent uses gisting -- training special 'gist' token embeddings via knowledge distillation -- to compress its ~6,000-token system prompt to ~1,500 gist tokens (4:1), cutting median TTFT from 438ms to 354ms and end-to-end latency from 6.8s to 4.2s while raising throughput from 20.2 to 23.4 QPS at 350 RPM, reducing the GPUs needed to serve the agent.
 - **2026-08-13** — [StackOne is now a Pydantic AI capability](<../agents/harness/StackOne is now a Pydantic AI capability.md>) · `harness` · pydantic
   Pydantic AI Harness's new StackOne capability exposes hundreds of SaaS connectors (Workday, Salesforce, Zendesk) to an agent via a search-then-execute tool pair that queries the action catalog at runtime instead of serializing it into the prompt, keeping context flat regardless of catalog size, plus an 'individual' mode for exact per-action tool schemas and required approval gating for write actions.
 - **2026-08-01** — [Kimi K3: The Complete Developer Guide](<../models/releases/Kimi K3 The Complete Developer Guide.md>) · `releases` · together

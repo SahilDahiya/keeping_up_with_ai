@@ -193,6 +193,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-08-20** — [Release governance: guardrails for agents at scale](<../infra-platform/deployment/Release governance guardrails for agents at scale.md>) · `deployment` · sierra
+  Sierra describes release governance for its agent platform: Agent Checks (a linter flagging missing tools, conflicting instructions, and weak authentication on sensitive lookups), Simulations as pre-production quality gates, merge approval workflows with a dedicated Reviewer role, and split-traffic canary releases backed by immutable, instantly rollback-able snapshots.
 - **2026-08-13** — [What We Learned by Reproducing 2,200 papers from ICML](<../evals-observability/llm-as-judge/What We Learned by Reproducing 2,200 papers from ICML.md>) · `llm-as-judge` · huggingface
   Hugging Face's ICML 2026 Open Reproductions hackathon had 1,221 participants use coding agents (Claude Code, Codex, Cursor) to reproduce 2,226 accepted papers, scored by an automated GLM-5.2 Logbook Judge (verified/falsified/toy/inconclusive) instructed to distrust self-reported verdicts; 23% of examined papers had a claim falsified after adversarial re-verification, and the results argue agents still need human steering for scale-dependent reasoning and perceptual judgment calls.
 - **2026-08-13** — [Defense in depth in the age of agents](<../product-engineering/security/Defense in depth in the age of agents.md>) · `security` · sierra

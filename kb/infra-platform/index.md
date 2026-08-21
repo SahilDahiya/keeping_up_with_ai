@@ -1,7 +1,9 @@
 # infra-platform
 
-44 articles.
+45 articles.
 
+- **2026-08-20** — [Release governance: guardrails for agents at scale](<deployment/Release governance guardrails for agents at scale.md>) · `deployment` · sierra
+  Sierra describes release governance for its agent platform: Agent Checks (a linter flagging missing tools, conflicting instructions, and weak authentication on sensitive lookups), Simulations as pre-production quality gates, merge approval workflows with a dedicated Reviewer role, and split-traffic canary releases backed by immutable, instantly rollback-able snapshots.
 - **2026-08-18** — [Feature flags for production AI](<deployment/Feature flags for production AI.md>) · `deployment` · pydantic
   Shows how to use Pydantic Logfire's typed managed variables as feature flags for production AI systems, letting teams target and A/B test models, prompts, and tool policies (with UsageLimits caps) without redeploying, and tying each resolved variant to OpenTelemetry traces and dashboards.
 - **2026-08-17** — [A/B test models in production](<deployment/AB test models in production.md>) · `deployment` · together

@@ -1,7 +1,9 @@
 # sierra
 
-44 articles.
+45 articles.
 
+- **2026-08-20** — [Release governance: guardrails for agents at scale](<../infra-platform/deployment/Release governance guardrails for agents at scale.md>) · `deployment` · sierra
+  Sierra describes release governance for its agent platform: Agent Checks (a linter flagging missing tools, conflicting instructions, and weak authentication on sensitive lookups), Simulations as pre-production quality gates, merge approval workflows with a dedicated Reviewer role, and split-traffic canary releases backed by immutable, instantly rollback-able snapshots.
 - **2026-08-13** — [Defense in depth in the age of agents](<../product-engineering/security/Defense in depth in the age of agents.md>) · `security` · sierra
   Sierra describes its layered guardrail architecture for goal-driven customer-service agents: grounding content, natural-language policies, supervisor models that audit conversations in real time, and deterministic guards (e.g. gating account-modification tools until authentication) that can't be talked out of enforcing hard limits, backed by continuous red-team evaluation and live threat/agent monitoring.
 - **2026-08-11** — [Teaching agents to navigate janky IVR systems](<../agents/tool-use/Teaching agents to navigate janky IVR systems.md>) · `tool-use` · sierra

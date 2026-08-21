@@ -1,7 +1,9 @@
 # shopify
 
-17 articles.
+18 articles.
 
+- **2026-08-19** — [Gisting: Compressing LLM Agent context to ↑ throughput and ↓ cost (2026)](<../inference/optimization/Gisting Compressing LLM Agent context to ↑ throughput and ↓ cost (2026).md>) · `optimization` · shopify
+  Shopify's Sidekick GraphQL agent uses gisting -- training special 'gist' token embeddings via knowledge distillation -- to compress its ~6,000-token system prompt to ~1,500 gist tokens (4:1), cutting median TTFT from 438ms to 354ms and end-to-end latency from 6.8s to 4.2s while raising throughput from 20.2 to 23.4 QPS at 350 RPM, reducing the GPUs needed to serve the agent.
 - **2026-08-05** — [Sidekick's continual learning loop (2026)](<../models/fine-tuning/Sidekick's continual learning loop (2026).md>) · `fine-tuning` · shopify
   Shopify's continual learning flywheel for its GraphQL merchant agent: calibrate an LLM judge with Cohen's kappa against expert annotators, use GEPA/ACE and Toloka human review to heal failed production trajectories, then distill them into a smaller model via SFT and GRPO, plus gist-token prompt compression (6k to ~1.5k tokens). The specialized model cut serving cost from an estimated $27M to $1M/year (96%) and reduced end-to-end latency ~38% while beating the frontier baseline.
 - **2026-07-29** — [Building an agentic harness that outlasts the model (2026)](<../agents/harness/Building an agentic harness that outlasts the model (2026).md>) · `harness` · shopify

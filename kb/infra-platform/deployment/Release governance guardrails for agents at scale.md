@@ -1,10 +1,16 @@
 ---
 title: 'Release governance: guardrails for agents at scale'
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: infra-platform
+subtopic: deployment
+secondary_topics:
+- evals-observability/testing
+- agents/harness
+summary: 'Sierra describes release governance for its agent platform: Agent Checks
+  (a linter flagging missing tools, conflicting instructions, and weak authentication
+  on sensitive lookups), Simulations as pre-production quality gates, merge approval
+  workflows with a dedicated Reviewer role, and split-traffic canary releases backed
+  by immutable, instantly rollback-able snapshots.'
 triage: null
 skip_reason: null
 source: sierra
@@ -12,7 +18,7 @@ url: https://sierra.ai/blog/release-governance-guardrails-for-agents-at-scale
 author: Sachi Shah
 published: '2026-08-20'
 fetched: '2026-08-21T06:09:00Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 738
 content_sha256: 5a15bd4e6f05ca70cfd70f1c34ea3d7d8481c38b4fce9a4342c483f202c48304
