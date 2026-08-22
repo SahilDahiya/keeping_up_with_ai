@@ -1,10 +1,16 @@
 ---
 title: Measuring benchmark optimization in speech recognition
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: evals-observability
+subtopic: benchmark-design
+secondary_topics:
+- models/multimodal
+summary: 'Hugging Face introduces a consensus-disagreement probe and a masked-number
+  probe to detect benchmark overfitting ("benchmaxxing") in ASR: testing 11 open-source
+  models on VoxPopuli/LibriSpeech, they find top scorers like cohere-transcribe-03-2026
+  and nvidia/canary-qwen-2.5b reproduce erroneous reference transcripts (e.g. dropping
+  an audible "Thank you") or hallucinate silenced numbers, flagging errors in 40%
+  of VoxPopuli test clips.'
 triage: null
 skip_reason: null
 source: huggingface
@@ -13,7 +19,7 @@ author: Theo Lebryk; Eric Bezzam; Alice; David Ayllon; Jakub Piotr Cłapa; Jens 
   Panagiotis Tzirakis
 published: '2026-08-21'
 fetched: '2026-08-22T06:12:03Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 2523
 content_sha256: 29f99429dd46ee122bd0580d33b7910312f57aa098c965a053fc9e165bef95c8

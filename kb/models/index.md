@@ -1,7 +1,11 @@
 # models
 
-179 articles.
+181 articles.
 
+- **2026-08-21** — [GLM-5.3 vs. Claude Fable 5 on DeepSWE: Cost, Coding, and Routing](<benchmarks/GLM-5.3 vs. Claude Fable 5 on DeepSWE Cost, Coding, and Routing.md>) · `benchmarks` · together
+  On 113 DeepSWE coding tasks (904 rollouts), GLM-5.3 and Claude Fable 5 tie on pass@1 (69.0% vs 69.7%) but GLM-5.3 wins pass@2 (81.1% vs 77.1%) and pass@4 (87.6% vs 84.1%) while costing 5.4x less per rollout ($3.99 vs $21.63), yielding 17 vs 3 solves per $100 spent.
+- **2026-08-21** — [GLM-5.3 vs. GPT-5.6 Sol on DeepSWE: Cost, Coding, and Routing](<benchmarks/GLM-5.3 vs. GPT-5.6 Sol on DeepSWE Cost, Coding, and Routing.md>) · `benchmarks` · together
+  On 113 DeepSWE tasks, GPT-5.6 Sol edges GLM-5.3 on pass@1 (72.7% vs 69.0%) but GLM-5.3 ties or leads at pass@2/pass@4 (87.6% vs 85.8%) at 2.1x lower cost ($3.99 vs $8.37/rollout); cascading GLM-5.3 first and escalating to Sol on test failure solves 85.9% of tasks at $6.61 each, beating either model alone.
 - **2026-08-18** — [DeepSeek V4 Pro 0813 vs GPT-5.6 Sol on DeepSWE: Cost, Coding, and Routing](<benchmarks/DeepSeek V4 Pro 0813 vs GPT-5.6 Sol on DeepSWE Cost, Coding, and Routing.md>) · `benchmarks` · together
   Benchmarks DeepSeek V4 Pro 0813 against GPT-5.6 Sol on 113 DeepSWE coding tasks (904 rollouts): Sol wins pass@1 (72.7% vs 62.8%) but Pro's pass@4 (88.5% vs 85.8%) overtakes it at 1/35th the per-rollout cost, and a Pro-first-escalate-to-Sol cascade solves 83.0% of tasks at $3.35 each versus Sol alone at 72.7% for $8.37, though Sol's failures regress passing tests more often (20% vs 11%).
 - **2026-08-17** — [DeepSeek V4 Pro 0813 vs Claude Fable 5 on DeepSWE: Cost, Coding, and Routing](<benchmarks/DeepSeek V4 Pro 0813 vs Claude Fable 5 on DeepSWE Cost, Coding, and Routing.md>) · `benchmarks` · together
@@ -363,6 +367,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-08-21** — [Measuring benchmark optimization in speech recognition](<../evals-observability/benchmark-design/Measuring benchmark optimization in speech recognition.md>) · `benchmark-design` · huggingface
+  Hugging Face introduces a consensus-disagreement probe and a masked-number probe to detect benchmark overfitting ("benchmaxxing") in ASR: testing 11 open-source models on VoxPopuli/LibriSpeech, they find top scorers like cohere-transcribe-03-2026 and nvidia/canary-qwen-2.5b reproduce erroneous reference transcripts (e.g. dropping an audible "Thank you") or hallucinate silenced numbers, flagging errors in 40% of VoxPopuli test clips.
 - **2026-08-19** — [Gisting: Compressing LLM Agent context to ↑ throughput and ↓ cost (2026)](<../inference/optimization/Gisting Compressing LLM Agent context to ↑ throughput and ↓ cost (2026).md>) · `optimization` · shopify
   Shopify's Sidekick GraphQL agent uses gisting -- training special 'gist' token embeddings via knowledge distillation -- to compress its ~6,000-token system prompt to ~1,500 gist tokens (4:1), cutting median TTFT from 438ms to 354ms and end-to-end latency from 6.8s to 4.2s while raising throughput from 20.2 to 23.4 QPS at 350 RPM, reducing the GPUs needed to serve the agent.
 - **2026-08-18** — [Multi-Vector (Late Interaction) Embedding Models with Sentence Transformers](<../rag-retrieval/embeddings/Multi-Vector (Late Interaction) Embedding Models with Sentence Transformers.md>) · `embeddings` · huggingface

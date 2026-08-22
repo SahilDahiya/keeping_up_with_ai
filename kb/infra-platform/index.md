@@ -95,6 +95,10 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-08-21** — [GLM-5.3 vs. Claude Fable 5 on DeepSWE: Cost, Coding, and Routing](<../models/benchmarks/GLM-5.3 vs. Claude Fable 5 on DeepSWE Cost, Coding, and Routing.md>) · `benchmarks` · together
+  On 113 DeepSWE coding tasks (904 rollouts), GLM-5.3 and Claude Fable 5 tie on pass@1 (69.0% vs 69.7%) but GLM-5.3 wins pass@2 (81.1% vs 77.1%) and pass@4 (87.6% vs 84.1%) while costing 5.4x less per rollout ($3.99 vs $21.63), yielding 17 vs 3 solves per $100 spent.
+- **2026-08-21** — [GLM-5.3 vs. GPT-5.6 Sol on DeepSWE: Cost, Coding, and Routing](<../models/benchmarks/GLM-5.3 vs. GPT-5.6 Sol on DeepSWE Cost, Coding, and Routing.md>) · `benchmarks` · together
+  On 113 DeepSWE tasks, GPT-5.6 Sol edges GLM-5.3 on pass@1 (72.7% vs 69.0%) but GLM-5.3 ties or leads at pass@2/pass@4 (87.6% vs 85.8%) at 2.1x lower cost ($3.99 vs $8.37/rollout); cascading GLM-5.3 first and escalating to Sol on test failure solves 85.9% of tasks at $6.61 each, beating either model alone.
 - **2026-08-04** — [Bringing serverless functions closer to the speed of wire | Modal Blog](<../inference/optimization/Bringing serverless functions closer to the speed of wire Modal Blog.md>) · `optimization` · modal
   Modal rewrote its Function I/O plane in Go and deployed it across 4+ regions with a routing_region flag, cutting p50 end-to-end Function Call latency by ~80ms; also covers async offloading of non-critical work, JWT-based auth refresh, and sticking with Redis 7.1 over Valkey/Redis 7.2 after observing CPU spikes under load.
 - **2026-07-31** — [Autoscaling endpoints for LLM inference](<../inference/optimization/Autoscaling endpoints for LLM inference.md>) · `optimization` · together

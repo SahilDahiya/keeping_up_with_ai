@@ -1,10 +1,14 @@
 ---
 title: 'GLM-5.3 vs. GPT-5.6 Sol on DeepSWE: Cost, Coding, and Routing'
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: models
+subtopic: benchmarks
+secondary_topics:
+- infra-platform/cost
+summary: On 113 DeepSWE tasks, GPT-5.6 Sol edges GLM-5.3 on pass@1 (72.7% vs 69.0%)
+  but GLM-5.3 ties or leads at pass@2/pass@4 (87.6% vs 85.8%) at 2.1x lower cost ($3.99
+  vs $8.37/rollout); cascading GLM-5.3 first and escalating to Sol on test failure
+  solves 85.9% of tasks at $6.61 each, beating either model alone.
 triage: null
 skip_reason: null
 source: together
@@ -12,7 +16,7 @@ url: https://www.together.ai/blog/glm-5-3-vs-gpt-5-6-sol-on-deepswe-cost-coding-
 author: Zain Hasan; Shobhit Dixit
 published: '2026-08-21'
 fetched: '2026-08-22T06:06:26Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1711
 content_sha256: c29701091345fcbfdd6ea5d437c5a07f829cc88c1ce31a6ffdbb7ce9eec6236a

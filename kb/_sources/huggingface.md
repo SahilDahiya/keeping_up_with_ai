@@ -1,7 +1,9 @@
 # huggingface
 
-162 articles.
+163 articles.
 
+- **2026-08-21** — [Measuring benchmark optimization in speech recognition](<../evals-observability/benchmark-design/Measuring benchmark optimization in speech recognition.md>) · `benchmark-design` · huggingface
+  Hugging Face introduces a consensus-disagreement probe and a masked-number probe to detect benchmark overfitting ("benchmaxxing") in ASR: testing 11 open-source models on VoxPopuli/LibriSpeech, they find top scorers like cohere-transcribe-03-2026 and nvidia/canary-qwen-2.5b reproduce erroneous reference transcripts (e.g. dropping an audible "Thank you") or hallucinate silenced numbers, flagging errors in 40% of VoxPopuli test clips.
 - **2026-08-18** — [Multi-Vector (Late Interaction) Embedding Models with Sentence Transformers](<../rag-retrieval/embeddings/Multi-Vector (Late Interaction) Embedding Models with Sentence Transformers.md>) · `embeddings` · huggingface
   Introduces Sentence Transformers' MultiVectorEncoder for ColBERT-style late-interaction retrieval, explaining MaxSim scoring versus dense bi-encoders and cross-encoders, and walking through loading, encoding, ColPali-style visual document retrieval, and index-size tradeoffs (e.g. LateOn's 608k token vectors at 311.5MB raw vs 92MB with fast-plaid/PLAID compression).
 - **2026-08-14** — [State of Open Models: Summer 2026 Observations](<../industry/trends/State of Open Models Summer 2026 Observations.md>) · `trends` · huggingface

@@ -1,7 +1,9 @@
 # evals-observability
 
-106 articles.
+107 articles.
 
+- **2026-08-21** — [Measuring benchmark optimization in speech recognition](<benchmark-design/Measuring benchmark optimization in speech recognition.md>) · `benchmark-design` · huggingface
+  Hugging Face introduces a consensus-disagreement probe and a masked-number probe to detect benchmark overfitting ("benchmaxxing") in ASR: testing 11 open-source models on VoxPopuli/LibriSpeech, they find top scorers like cohere-transcribe-03-2026 and nvidia/canary-qwen-2.5b reproduce erroneous reference transcripts (e.g. dropping an audible "Thank you") or hallucinate silenced numbers, flagging errors in 40% of VoxPopuli test clips.
 - **2026-08-13** — [What We Learned by Reproducing 2,200 papers from ICML](<llm-as-judge/What We Learned by Reproducing 2,200 papers from ICML.md>) · `llm-as-judge` · huggingface
   Hugging Face's ICML 2026 Open Reproductions hackathon had 1,221 participants use coding agents (Claude Code, Codex, Cursor) to reproduce 2,226 accepted papers, scored by an automated GLM-5.2 Logbook Judge (verified/falsified/toy/inconclusive) instructed to distrust self-reported verdicts; 23% of examined papers had a claim falsified after adversarial re-verification, and the results argue agents still need human steering for scale-dependent reasoning and perceptual judgment calls.
 - **2026-08-07** — [How the Best AI Agents Keep Getting Better](<evaluation/How the Best AI Agents Keep Getting Better.md>) · `evaluation` · cresta

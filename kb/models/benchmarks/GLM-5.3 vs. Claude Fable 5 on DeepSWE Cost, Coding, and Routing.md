@@ -1,10 +1,14 @@
 ---
 title: 'GLM-5.3 vs. Claude Fable 5 on DeepSWE: Cost, Coding, and Routing'
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: models
+subtopic: benchmarks
+secondary_topics:
+- infra-platform/cost
+summary: On 113 DeepSWE coding tasks (904 rollouts), GLM-5.3 and Claude Fable 5 tie
+  on pass@1 (69.0% vs 69.7%) but GLM-5.3 wins pass@2 (81.1% vs 77.1%) and pass@4 (87.6%
+  vs 84.1%) while costing 5.4x less per rollout ($3.99 vs $21.63), yielding 17 vs
+  3 solves per $100 spent.
 triage: null
 skip_reason: null
 source: together
@@ -12,7 +16,7 @@ url: https://www.together.ai/blog/glm-5-3-vs-claude-fable-5-on-deepswe-cost-codi
 author: Zain Hasan; Shobhit Dixit
 published: '2026-08-21'
 fetched: '2026-08-22T06:06:28Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1789
 content_sha256: 117c1c151bf17221cbbf0be2a9032c3ffc6bae65bb460dba376448c1b45f89e1
