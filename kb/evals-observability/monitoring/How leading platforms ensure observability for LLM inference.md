@@ -1,10 +1,15 @@
 ---
 title: How leading platforms ensure observability for LLM inference
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: evals-observability
+subtopic: monitoring
+secondary_topics:
+- inference/serving
+summary: 'Explains LLM inference observability through three lenses: metrics (TTFT,
+  TPOT, TPS, end-to-end latency, KV cache hit rate), build/deploy/serving logs keyed
+  by request_id, and distributed traces that break a single request into API Gateway,
+  Service Mesh, Activator, Queue, and Server stages to pinpoint cold-start and queue-backup
+  latency.'
 triage: null
 skip_reason: null
 source: baseten
@@ -12,7 +17,7 @@ url: https://www.baseten.co/blog/how-leading-platforms-ensure-observability-for-
 author: Chloe Florit
 published: '2026-08-24'
 fetched: '2026-08-25T06:08:39Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1934
 content_sha256: a0315507d4eaa3910cdde7430685c79c1f5e1de763cbd2ceb4eb1ef5f3139b98

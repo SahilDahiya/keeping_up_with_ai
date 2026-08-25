@@ -1,10 +1,14 @@
 ---
 title: How to run any open model inside DeepSeek Harness
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: agents
+subtopic: harness
+secondary_topics:
+- inference/serving
+summary: Describes DeepSeek Harness (DSH) as a plugin-based meta-harness where models,
+  tools, sandboxes, and sub-agent harnesses (Claude Code, Codex) are swappable components
+  with an append-only, fork-and-replay event log, and walks through wiring open models
+  like Kimi K3, GLM 5.2, and DeepSeek V4 Pro into it via Baseten Model APIs.
 triage: null
 skip_reason: null
 source: baseten
@@ -12,7 +16,7 @@ url: https://www.baseten.co/blog/how-to-run-any-open-model-inside-deepseek-harne
 author: Alex Ker
 published: '2026-08-25'
 fetched: '2026-08-25T06:08:37Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 555
 content_sha256: 9e5f46826cf0871e7ebc5632f34d8084f1025ada94b39b807137f048de30209d

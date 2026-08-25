@@ -1,7 +1,9 @@
 # agents
 
-94 articles.
+95 articles.
 
+- **2026-08-25** — [How to run any open model inside DeepSeek Harness](<harness/How to run any open model inside DeepSeek Harness.md>) · `harness` · baseten
+  Describes DeepSeek Harness (DSH) as a plugin-based meta-harness where models, tools, sandboxes, and sub-agent harnesses (Claude Code, Codex) are swappable components with an append-only, fork-and-replay event log, and walks through wiring open models like Kimi K3, GLM 5.2, and DeepSeek V4 Pro into it via Baseten Model APIs.
 - **2026-08-19** — [Codex as a platform: build on the open agent harness | OpenAI Developers](<harness/Codex as a platform build on the open agent harness OpenAI Developers.md>) · `harness` · openai-devs
   OpenAI argues the reusable part of Codex is not the app but the open-source harness: the agent loop that gathers context, calls tools, maintains state across turns, surfaces progress, handles failures, and requests approval. Positions that harness as an embeddable substrate for domain-specific agents rather than a general coding assistant.
 - **2026-08-13** — [StackOne is now a Pydantic AI capability](<harness/StackOne is now a Pydantic AI capability.md>) · `harness` · pydantic

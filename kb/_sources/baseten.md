@@ -1,7 +1,11 @@
 # baseten
 
-76 articles.
+78 articles.
 
+- **2026-08-25** — [How to run any open model inside DeepSeek Harness](<../agents/harness/How to run any open model inside DeepSeek Harness.md>) · `harness` · baseten
+  Describes DeepSeek Harness (DSH) as a plugin-based meta-harness where models, tools, sandboxes, and sub-agent harnesses (Claude Code, Codex) are swappable components with an append-only, fork-and-replay event log, and walks through wiring open models like Kimi K3, GLM 5.2, and DeepSeek V4 Pro into it via Baseten Model APIs.
+- **2026-08-24** — [How leading platforms ensure observability for LLM inference](<../evals-observability/monitoring/How leading platforms ensure observability for LLM inference.md>) · `monitoring` · baseten
+  Explains LLM inference observability through three lenses: metrics (TTFT, TPOT, TPS, end-to-end latency, KV cache hit rate), build/deploy/serving logs keyed by request_id, and distributed traces that break a single request into API Gateway, Service Mesh, Activator, Queue, and Server stages to pinpoint cold-start and queue-backup latency.
 - **2026-08-14** — [Inference engineering for DeepSeek V4 Pro 0813](<../inference/optimization/Inference engineering for DeepSeek V4 Pro 0813.md>) · `optimization` · baseten
   Baseten details the inference engineering behind serving DeepSeek V4 Pro 0813 (1.7T params, MXFP4 weights) day-zero: retuned parallelism, KV cache allocation, and prefill-decode worker ratios for longer agentic-coding sequences, plus speculative decoding via the model's built-in DSpark speculator for higher throughput.
 - **2026-08-11** — [Introducing NVIDIA Nemotron 3.5 Lightning](<../models/releases/Introducing NVIDIA Nemotron 3.5 Lightning.md>) · `releases` · baseten
