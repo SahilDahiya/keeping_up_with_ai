@@ -1,7 +1,9 @@
 # agents
 
-95 articles.
+96 articles.
 
+- **2026-08-25** — [Automating repetitive work at OpenAI with Codex](<harness/Automating repetitive work at OpenAI with Codex.md>) · `harness` · openai-devs
+  Describes Runme, an internal OpenAI notebook-based harness built with Codex that curates workflow context, enforces review/approval checkpoints before an agent acts, and feeds learnings from past runs into future ones for repetitive engineering tasks like cluster provisioning and model evaluation.
 - **2026-08-25** — [How to run any open model inside DeepSeek Harness](<harness/How to run any open model inside DeepSeek Harness.md>) · `harness` · baseten
   Describes DeepSeek Harness (DSH) as a plugin-based meta-harness where models, tools, sandboxes, and sub-agent harnesses (Claude Code, Codex) are swappable components with an append-only, fork-and-replay event log, and walks through wiring open models like Kimi K3, GLM 5.2, and DeepSeek V4 Pro into it via Baseten Model APIs.
 - **2026-08-19** — [Codex as a platform: build on the open agent harness | OpenAI Developers](<harness/Codex as a platform build on the open agent harness OpenAI Developers.md>) · `harness` · openai-devs
@@ -195,6 +197,10 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-08-26** — [DeepSeek V4 Pro: Tops SWE-Bench & Cuts Cost per Task by 3x vs. Fable 5](<../models/benchmarks/DeepSeek V4 Pro Tops SWE-Bench & Cuts Cost per Task by 3x vs. Fable 5.md>) · `benchmarks` · fireworks
+  Benchmarks DeepSeek V4 Pro 0813 against Kimi K3 and Fable 5 on SWE-Bench Verified, LiveCodeBench v6, Aider Polyglot, and Terminal-Bench 2.1, finding it tops two of four families at roughly a third of Fable 5's per-task cost, though it trails badly on Java (48.9% vs 74.5%), arguing for dynamic routing across specialist models.
+- **2026-08-26** — [Fireworks AI](<../models/benchmarks/Fireworks AI.md>) · `benchmarks` · fireworks
+  Benchmarks DeepSeek V4 Pro 0813 against Kimi K3, GPT-5.5, and Claude Opus 4.8 on CyberGym (840 real-vulnerability security tasks graded by exploit execution), finding zero refusals and half the cost-per-success of the best closed model, while Opus 4.8 entered validation on only 10% of tasks.
 - **2026-08-20** — [Release governance: guardrails for agents at scale](<../infra-platform/deployment/Release governance guardrails for agents at scale.md>) · `deployment` · sierra
   Sierra describes release governance for its agent platform: Agent Checks (a linter flagging missing tools, conflicting instructions, and weak authentication on sensitive lookups), Simulations as pre-production quality gates, merge approval workflows with a dedicated Reviewer role, and split-traffic canary releases backed by immutable, instantly rollback-able snapshots.
 - **2026-08-13** — [What We Learned by Reproducing 2,200 papers from ICML](<../evals-observability/llm-as-judge/What We Learned by Reproducing 2,200 papers from ICML.md>) · `llm-as-judge` · huggingface

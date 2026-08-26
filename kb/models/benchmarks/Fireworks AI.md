@@ -1,10 +1,15 @@
 ---
 title: Fireworks AI
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: models
+subtopic: benchmarks
+secondary_topics:
+- agents/tool-use
+- evals-observability/evaluation
+summary: Benchmarks DeepSeek V4 Pro 0813 against Kimi K3, GPT-5.5, and Claude Opus
+  4.8 on CyberGym (840 real-vulnerability security tasks graded by exploit execution),
+  finding zero refusals and half the cost-per-success of the best closed model, while
+  Opus 4.8 entered validation on only 10% of tasks.
 triage: null
 skip_reason: null
 source: fireworks
@@ -12,7 +17,7 @@ url: https://fireworks.ai/blog/DeepSeek-V4-Pro-Security
 author: null
 published: '2026-08-26'
 fetched: '2026-08-26T06:09:44Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1078
 content_sha256: 35e950eb3866b649be7d4fc8ae37bdee0f24abbb045e16150fc542e47faea3c4

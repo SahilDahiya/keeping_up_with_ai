@@ -95,6 +95,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-08-25** — [The two AI gateway patterns in production inference](<../product-engineering/architecture/The two AI gateway patterns in production inference.md>) · `architecture` · baseten
+  Distinguishes two AI gateway architectures — access gateways for application-side multi-provider routing vs. serving gateways for model owners exposing their own models to customers — and traces how a serving gateway handles identity, routing, tenant protection, metering, and auditable request logs.
 - **2026-08-21** — [GLM-5.3 vs. Claude Fable 5 on DeepSWE: Cost, Coding, and Routing](<../models/benchmarks/GLM-5.3 vs. Claude Fable 5 on DeepSWE Cost, Coding, and Routing.md>) · `benchmarks` · together
   On 113 DeepSWE coding tasks (904 rollouts), GLM-5.3 and Claude Fable 5 tie on pass@1 (69.0% vs 69.7%) but GLM-5.3 wins pass@2 (81.1% vs 77.1%) and pass@4 (87.6% vs 84.1%) while costing 5.4x less per rollout ($3.99 vs $21.63), yielding 17 vs 3 solves per $100 spent.
 - **2026-08-21** — [GLM-5.3 vs. GPT-5.6 Sol on DeepSWE: Cost, Coding, and Routing](<../models/benchmarks/GLM-5.3 vs. GPT-5.6 Sol on DeepSWE Cost, Coding, and Routing.md>) · `benchmarks` · together

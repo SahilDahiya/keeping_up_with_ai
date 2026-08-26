@@ -1,7 +1,9 @@
 # product-engineering
 
-58 articles.
+59 articles.
 
+- **2026-08-25** — [The two AI gateway patterns in production inference](<architecture/The two AI gateway patterns in production inference.md>) · `architecture` · baseten
+  Distinguishes two AI gateway architectures — access gateways for application-side multi-provider routing vs. serving gateways for model owners exposing their own models to customers — and traces how a serving gateway handles identity, routing, tenant protection, metering, and auditable request logs.
 - **2026-08-13** — [Defense in depth in the age of agents](<security/Defense in depth in the age of agents.md>) · `security` · sierra
   Sierra describes its layered guardrail architecture for goal-driven customer-service agents: grounding content, natural-language policies, supervisor models that audit conversations in real time, and deterministic guards (e.g. gating account-modification tools until authentication) that can't be talked out of enforcing hard limits, backed by continuous red-team evaluation and live threat/agent monitoring.
 - **2026-07-31** — [Bringing Cresta's AI Agent to Avaya Infinity: Inside a New WebSocket Voice Integration](<case-studies/Bringing Cresta's AI Agent to Avaya Infinity Inside a New WebSocket Voice Integration.md>) · `case-studies` · cresta

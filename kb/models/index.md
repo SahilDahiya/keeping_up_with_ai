@@ -1,7 +1,11 @@
 # models
 
-181 articles.
+183 articles.
 
+- **2026-08-26** — [DeepSeek V4 Pro: Tops SWE-Bench & Cuts Cost per Task by 3x vs. Fable 5](<benchmarks/DeepSeek V4 Pro Tops SWE-Bench & Cuts Cost per Task by 3x vs. Fable 5.md>) · `benchmarks` · fireworks
+  Benchmarks DeepSeek V4 Pro 0813 against Kimi K3 and Fable 5 on SWE-Bench Verified, LiveCodeBench v6, Aider Polyglot, and Terminal-Bench 2.1, finding it tops two of four families at roughly a third of Fable 5's per-task cost, though it trails badly on Java (48.9% vs 74.5%), arguing for dynamic routing across specialist models.
+- **2026-08-26** — [Fireworks AI](<benchmarks/Fireworks AI.md>) · `benchmarks` · fireworks
+  Benchmarks DeepSeek V4 Pro 0813 against Kimi K3, GPT-5.5, and Claude Opus 4.8 on CyberGym (840 real-vulnerability security tasks graded by exploit execution), finding zero refusals and half the cost-per-success of the best closed model, while Opus 4.8 entered validation on only 10% of tasks.
 - **2026-08-21** — [GLM-5.3 vs. Claude Fable 5 on DeepSWE: Cost, Coding, and Routing](<benchmarks/GLM-5.3 vs. Claude Fable 5 on DeepSWE Cost, Coding, and Routing.md>) · `benchmarks` · together
   On 113 DeepSWE coding tasks (904 rollouts), GLM-5.3 and Claude Fable 5 tie on pass@1 (69.0% vs 69.7%) but GLM-5.3 wins pass@2 (81.1% vs 77.1%) and pass@4 (87.6% vs 84.1%) while costing 5.4x less per rollout ($3.99 vs $21.63), yielding 17 vs 3 solves per $100 spent.
 - **2026-08-21** — [GLM-5.3 vs. GPT-5.6 Sol on DeepSWE: Cost, Coding, and Routing](<benchmarks/GLM-5.3 vs. GPT-5.6 Sol on DeepSWE Cost, Coding, and Routing.md>) · `benchmarks` · together

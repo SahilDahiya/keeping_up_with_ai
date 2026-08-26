@@ -1,10 +1,14 @@
 ---
 title: Automating repetitive work at OpenAI with Codex
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: agents
+subtopic: harness
+secondary_topics:
+- evals-observability/evaluation
+summary: Describes Runme, an internal OpenAI notebook-based harness built with Codex
+  that curates workflow context, enforces review/approval checkpoints before an agent
+  acts, and feeds learnings from past runs into future ones for repetitive engineering
+  tasks like cluster provisioning and model evaluation.
 triage: null
 skip_reason: null
 source: openai-devs
@@ -12,7 +16,7 @@ url: https://developers.openai.com/blog/automating-repetitive-work-at-openai-wit
 author: null
 published: '2026-08-25'
 fetched: '2026-08-26T06:09:38Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1017
 content_sha256: 47d8acf97fb6e7f21ff6411ac31ce653b5ae80ae82fb32f06dfb92998154af3a

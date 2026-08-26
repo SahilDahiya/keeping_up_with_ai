@@ -1,10 +1,15 @@
 ---
 title: 'DeepSeek V4 Pro: Tops SWE-Bench & Cuts Cost per Task by 3x vs. Fable 5'
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: models
+subtopic: benchmarks
+secondary_topics:
+- inference/optimization
+- agents/tool-use
+summary: Benchmarks DeepSeek V4 Pro 0813 against Kimi K3 and Fable 5 on SWE-Bench
+  Verified, LiveCodeBench v6, Aider Polyglot, and Terminal-Bench 2.1, finding it tops
+  two of four families at roughly a third of Fable 5's per-task cost, though it trails
+  badly on Java (48.9% vs 74.5%), arguing for dynamic routing across specialist models.
 triage: null
 skip_reason: null
 source: fireworks
@@ -12,7 +17,7 @@ url: https://fireworks.ai/blog/DeepSeekV4Pro-Fable5
 author: null
 published: '2026-08-26'
 fetched: '2026-08-26T06:09:42Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 937
 content_sha256: 93675a29b1ec71f636d083e441b5499a3b38c3b9d7753fee71865cf93ac71527

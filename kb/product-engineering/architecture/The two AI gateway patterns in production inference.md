@@ -1,10 +1,15 @@
 ---
 title: The two AI gateway patterns in production inference
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: product-engineering
+subtopic: architecture
+secondary_topics:
+- inference/serving
+- infra-platform/cost
+summary: Distinguishes two AI gateway architectures — access gateways for application-side
+  multi-provider routing vs. serving gateways for model owners exposing their own
+  models to customers — and traces how a serving gateway handles identity, routing,
+  tenant protection, metering, and auditable request logs.
 triage: null
 skip_reason: null
 source: baseten
@@ -12,7 +17,7 @@ url: https://www.baseten.co/blog/ai-gateways-production-inference/
 author: Amit Gambhir
 published: '2026-08-25'
 fetched: '2026-08-26T06:09:32Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 2432
 content_sha256: b0f0e89df8a718e111c3d72c3350add292e15543a0349e154830e7ad873b1f0e

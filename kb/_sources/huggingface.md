@@ -1,7 +1,9 @@
 # huggingface
 
-163 articles.
+164 articles.
 
+- **2026-08-21** — [How Hugging Face Inference Endpoints, Jobs, and Buckets Power Search on Papers with Code](<../rag-retrieval/search/How Hugging Face Inference Endpoints, Jobs, and Buckets Power Search on Papers with Code.md>) · `search` · huggingface
+  Details the hybrid search architecture behind Papers with Code: an offline Jobs pipeline embeds papers with Qwen3-Embedding into a versioned pgvector contract (HNSW, 0.9955 Recall@20 at 256 dims), while online queries fuse lexical and semantic branches via weighted RRF and fall back to full-text search if the Inference Endpoint is cold or unhealthy.
 - **2026-08-21** — [Measuring benchmark optimization in speech recognition](<../evals-observability/benchmark-design/Measuring benchmark optimization in speech recognition.md>) · `benchmark-design` · huggingface
   Hugging Face introduces a consensus-disagreement probe and a masked-number probe to detect benchmark overfitting ("benchmaxxing") in ASR: testing 11 open-source models on VoxPopuli/LibriSpeech, they find top scorers like cohere-transcribe-03-2026 and nvidia/canary-qwen-2.5b reproduce erroneous reference transcripts (e.g. dropping an audible "Thank you") or hallucinate silenced numbers, flagging errors in 40% of VoxPopuli test clips.
 - **2026-08-18** — [Multi-Vector (Late Interaction) Embedding Models with Sentence Transformers](<../rag-retrieval/embeddings/Multi-Vector (Late Interaction) Embedding Models with Sentence Transformers.md>) · `embeddings` · huggingface

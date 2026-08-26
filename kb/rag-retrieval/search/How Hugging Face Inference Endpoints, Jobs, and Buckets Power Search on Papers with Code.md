@@ -2,10 +2,15 @@
 title: How Hugging Face Inference Endpoints, Jobs, and Buckets Power Search on Papers
   with Code
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: rag-retrieval
+subtopic: search
+secondary_topics:
+- inference/serving
+summary: 'Details the hybrid search architecture behind Papers with Code: an offline
+  Jobs pipeline embeds papers with Qwen3-Embedding into a versioned pgvector contract
+  (HNSW, 0.9955 Recall@20 at 256 dims), while online queries fuse lexical and semantic
+  branches via weighted RRF and fall back to full-text search if the Inference Endpoint
+  is cold or unhealthy.'
 triage: null
 skip_reason: null
 source: huggingface
@@ -13,7 +18,7 @@ url: https://huggingface.co/blog/pwc-search
 author: Niels Rogge
 published: '2026-08-21'
 fetched: '2026-08-26T06:15:19Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1816
 content_sha256: 2edeac0618c62d230780b11601b21084b3395902a8ac4203d9b8af10635ba487

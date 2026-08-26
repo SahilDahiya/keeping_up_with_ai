@@ -1,7 +1,9 @@
 # openai-devs
 
-21 articles.
+22 articles.
 
+- **2026-08-25** — [Automating repetitive work at OpenAI with Codex](<../agents/harness/Automating repetitive work at OpenAI with Codex.md>) · `harness` · openai-devs
+  Describes Runme, an internal OpenAI notebook-based harness built with Codex that curates workflow context, enforces review/approval checkpoints before an agent acts, and feeds learnings from past runs into future ones for repetitive engineering tasks like cluster provisioning and model evaluation.
 - **2026-08-19** — [Codex as a platform: build on the open agent harness | OpenAI Developers](<../agents/harness/Codex as a platform build on the open agent harness OpenAI Developers.md>) · `harness` · openai-devs
   OpenAI argues the reusable part of Codex is not the app but the open-source harness: the agent loop that gathers context, calls tools, maintains state across turns, surfaces progress, handles failures, and requests approval. Positions that harness as an embeddable substrate for domain-specific agents rather than a general coding assistant.
 - **2026-07-20** — [Custom Code Review rules for Codex | OpenAI Developers](<../prompt-engineering/context-engineering/Custom Code Review rules for Codex OpenAI Developers.md>) · `context-engineering` · openai-devs

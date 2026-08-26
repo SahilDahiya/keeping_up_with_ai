@@ -1,7 +1,9 @@
 # rag-retrieval
 
-34 articles.
+35 articles.
 
+- **2026-08-21** — [How Hugging Face Inference Endpoints, Jobs, and Buckets Power Search on Papers with Code](<search/How Hugging Face Inference Endpoints, Jobs, and Buckets Power Search on Papers with Code.md>) · `search` · huggingface
+  Details the hybrid search architecture behind Papers with Code: an offline Jobs pipeline embeds papers with Qwen3-Embedding into a versioned pgvector contract (HNSW, 0.9955 Recall@20 at 256 dims), while online queries fuse lexical and semantic branches via weighted RRF and fall back to full-text search if the Inference Endpoint is cold or unhealthy.
 - **2026-08-18** — [Multi-Vector (Late Interaction) Embedding Models with Sentence Transformers](<embeddings/Multi-Vector (Late Interaction) Embedding Models with Sentence Transformers.md>) · `embeddings` · huggingface
   Introduces Sentence Transformers' MultiVectorEncoder for ColBERT-style late-interaction retrieval, explaining MaxSim scoring versus dense bi-encoders and cross-encoders, and walking through loading, encoding, ColPali-style visual document retrieval, and index-size tradeoffs (e.g. LateOn's 608k token vectors at 311.5MB raw vs 92MB with fast-plaid/PLAID compression).
 - **2026-07-29** — [Fine-Tune Your Own Embedding Model from an LLM — for the Price of a Coffee](<embeddings/Fine-Tune Your Own Embedding Model from an LLM — for the Price of a Coffee.md>) · `embeddings` · fireworks

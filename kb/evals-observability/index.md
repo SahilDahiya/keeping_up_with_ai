@@ -221,6 +221,10 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-08-26** — [Fireworks AI](<../models/benchmarks/Fireworks AI.md>) · `benchmarks` · fireworks
+  Benchmarks DeepSeek V4 Pro 0813 against Kimi K3, GPT-5.5, and Claude Opus 4.8 on CyberGym (840 real-vulnerability security tasks graded by exploit execution), finding zero refusals and half the cost-per-success of the best closed model, while Opus 4.8 entered validation on only 10% of tasks.
+- **2026-08-25** — [Automating repetitive work at OpenAI with Codex](<../agents/harness/Automating repetitive work at OpenAI with Codex.md>) · `harness` · openai-devs
+  Describes Runme, an internal OpenAI notebook-based harness built with Codex that curates workflow context, enforces review/approval checkpoints before an agent acts, and feeds learnings from past runs into future ones for repetitive engineering tasks like cluster provisioning and model evaluation.
 - **2026-08-20** — [Release governance: guardrails for agents at scale](<../infra-platform/deployment/Release governance guardrails for agents at scale.md>) · `deployment` · sierra
   Sierra describes release governance for its agent platform: Agent Checks (a linter flagging missing tools, conflicting instructions, and weak authentication on sensitive lookups), Simulations as pre-production quality gates, merge approval workflows with a dedicated Reviewer role, and split-traffic canary releases backed by immutable, instantly rollback-able snapshots.
 - **2026-08-18** — [Feature flags for production AI](<../infra-platform/deployment/Feature flags for production AI.md>) · `deployment` · pydantic
