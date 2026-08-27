@@ -1,10 +1,16 @@
 ---
 title: Post-training Kimi K3 with Harvey for long-horizon legal work
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: models
+subtopic: reinforcement-learning
+secondary_topics:
+- inference/serving
+summary: Harvey and Fireworks post-trained a Kimi K3 base into "Tenet" using asynchronous
+  reinforcement learning on the Fireworks Training API, nearly doubling all-pass rate
+  on the Legal Agent Benchmark (19.7% vs 10.8% for base Kimi K3) at roughly flat cost
+  ($5.92 vs $5.62/task); gains transferred to unseen agentic benchmarks (Mercor Apex
+  Agents, Crosby Redline Bench) with no regression on legal-knowledge benchmarks like
+  LegalBench, CUAD, and MAUD.
 triage: null
 skip_reason: null
 source: fireworks
@@ -12,7 +18,7 @@ url: https://fireworks.ai/blog/post-training-kimi-k3-with-harvey-for-long-horizo
 author: null
 published: '2026-08-26'
 fetched: '2026-08-27T09:02:28Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 725
 content_sha256: c5b016a30a6dc4342f5fc795a5b5f8a9ff90681c85f7d15e232a4fdf4d3bb840

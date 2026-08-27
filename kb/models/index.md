@@ -1,11 +1,13 @@
 # models
 
-183 articles.
+184 articles.
 
 - **2026-08-26** — [DeepSeek V4 Pro: Tops SWE-Bench & Cuts Cost per Task by 3x vs. Fable 5](<benchmarks/DeepSeek V4 Pro Tops SWE-Bench & Cuts Cost per Task by 3x vs. Fable 5.md>) · `benchmarks` · fireworks
   Benchmarks DeepSeek V4 Pro 0813 against Kimi K3 and Fable 5 on SWE-Bench Verified, LiveCodeBench v6, Aider Polyglot, and Terminal-Bench 2.1, finding it tops two of four families at roughly a third of Fable 5's per-task cost, though it trails badly on Java (48.9% vs 74.5%), arguing for dynamic routing across specialist models.
 - **2026-08-26** — [Fireworks AI](<benchmarks/Fireworks AI.md>) · `benchmarks` · fireworks
   Benchmarks DeepSeek V4 Pro 0813 against Kimi K3, GPT-5.5, and Claude Opus 4.8 on CyberGym (840 real-vulnerability security tasks graded by exploit execution), finding zero refusals and half the cost-per-success of the best closed model, while Opus 4.8 entered validation on only 10% of tasks.
+- **2026-08-26** — [Post-training Kimi K3 with Harvey for long-horizon legal work](<reinforcement-learning/Post-training Kimi K3 with Harvey for long-horizon legal work.md>) · `reinforcement-learning` · fireworks
+  Harvey and Fireworks post-trained a Kimi K3 base into "Tenet" using asynchronous reinforcement learning on the Fireworks Training API, nearly doubling all-pass rate on the Legal Agent Benchmark (19.7% vs 10.8% for base Kimi K3) at roughly flat cost ($5.92 vs $5.62/task); gains transferred to unseen agentic benchmarks (Mercor Apex Agents, Crosby Redline Bench) with no regression on legal-knowledge benchmarks like LegalBench, CUAD, and MAUD.
 - **2026-08-21** — [GLM-5.3 vs. Claude Fable 5 on DeepSWE: Cost, Coding, and Routing](<benchmarks/GLM-5.3 vs. Claude Fable 5 on DeepSWE Cost, Coding, and Routing.md>) · `benchmarks` · together
   On 113 DeepSWE coding tasks (904 rollouts), GLM-5.3 and Claude Fable 5 tie on pass@1 (69.0% vs 69.7%) but GLM-5.3 wins pass@2 (81.1% vs 77.1%) and pass@4 (87.6% vs 84.1%) while costing 5.4x less per rollout ($3.99 vs $21.63), yielding 17 vs 3 solves per $100 spent.
 - **2026-08-21** — [GLM-5.3 vs. GPT-5.6 Sol on DeepSWE: Cost, Coding, and Routing](<benchmarks/GLM-5.3 vs. GPT-5.6 Sol on DeepSWE Cost, Coding, and Routing.md>) · `benchmarks` · together
@@ -371,6 +373,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-08-26** — [Training and Finetuning Multi-Vector Embedding Models with Sentence Transformers](<../rag-retrieval/embeddings/Training and Finetuning Multi-Vector Embedding Models with Sentence Transformers.md>) · `embeddings` · huggingface
+  Walks through finetuning ColBERT-style multi-vector (late-interaction) embedding models using Sentence Transformers' new MultiVectorEncoder, covering datasets, loss functions, training arguments, and evaluators, and shows a model finetuned in 14.5 hours on a single RTX 3090 beating general-purpose dense, sparse, lexical, and multi-vector retrievers on a medical retrieval benchmark (MIRIAD NDCG@10).
 - **2026-08-21** — [Measuring benchmark optimization in speech recognition](<../evals-observability/benchmark-design/Measuring benchmark optimization in speech recognition.md>) · `benchmark-design` · huggingface
   Hugging Face introduces a consensus-disagreement probe and a masked-number probe to detect benchmark overfitting ("benchmaxxing") in ASR: testing 11 open-source models on VoxPopuli/LibriSpeech, they find top scorers like cohere-transcribe-03-2026 and nvidia/canary-qwen-2.5b reproduce erroneous reference transcripts (e.g. dropping an audible "Thank you") or hallucinate silenced numbers, flagging errors in 40% of VoxPopuli test clips.
 - **2026-08-19** — [Gisting: Compressing LLM Agent context to ↑ throughput and ↓ cost (2026)](<../inference/optimization/Gisting Compressing LLM Agent context to ↑ throughput and ↓ cost (2026).md>) · `optimization` · shopify

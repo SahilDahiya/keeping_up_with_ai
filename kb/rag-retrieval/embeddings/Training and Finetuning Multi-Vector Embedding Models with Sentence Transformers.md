@@ -1,10 +1,15 @@
 ---
 title: Training and Finetuning Multi-Vector Embedding Models with Sentence Transformers
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: rag-retrieval
+subtopic: embeddings
+secondary_topics:
+- models/fine-tuning
+summary: Walks through finetuning ColBERT-style multi-vector (late-interaction) embedding
+  models using Sentence Transformers' new MultiVectorEncoder, covering datasets, loss
+  functions, training arguments, and evaluators, and shows a model finetuned in 14.5
+  hours on a single RTX 3090 beating general-purpose dense, sparse, lexical, and multi-vector
+  retrievers on a medical retrieval benchmark (MIRIAD NDCG@10).
 triage: null
 skip_reason: null
 source: huggingface
@@ -12,7 +17,7 @@ url: https://huggingface.co/blog/train-multi-vector-encoder
 author: Tom Aarsen
 published: '2026-08-26'
 fetched: '2026-08-27T09:08:03Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 5113
 content_sha256: 28314b5e115f9604e63f479c0c00eb406636d84621108dc9621b107d9abee328

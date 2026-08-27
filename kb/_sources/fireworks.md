@@ -1,11 +1,13 @@
 # fireworks
 
-87 articles.
+88 articles.
 
 - **2026-08-26** — [DeepSeek V4 Pro: Tops SWE-Bench & Cuts Cost per Task by 3x vs. Fable 5](<../models/benchmarks/DeepSeek V4 Pro Tops SWE-Bench & Cuts Cost per Task by 3x vs. Fable 5.md>) · `benchmarks` · fireworks
   Benchmarks DeepSeek V4 Pro 0813 against Kimi K3 and Fable 5 on SWE-Bench Verified, LiveCodeBench v6, Aider Polyglot, and Terminal-Bench 2.1, finding it tops two of four families at roughly a third of Fable 5's per-task cost, though it trails badly on Java (48.9% vs 74.5%), arguing for dynamic routing across specialist models.
 - **2026-08-26** — [Fireworks AI](<../models/benchmarks/Fireworks AI.md>) · `benchmarks` · fireworks
   Benchmarks DeepSeek V4 Pro 0813 against Kimi K3, GPT-5.5, and Claude Opus 4.8 on CyberGym (840 real-vulnerability security tasks graded by exploit execution), finding zero refusals and half the cost-per-success of the best closed model, while Opus 4.8 entered validation on only 10% of tasks.
+- **2026-08-26** — [Post-training Kimi K3 with Harvey for long-horizon legal work](<../models/reinforcement-learning/Post-training Kimi K3 with Harvey for long-horizon legal work.md>) · `reinforcement-learning` · fireworks
+  Harvey and Fireworks post-trained a Kimi K3 base into "Tenet" using asynchronous reinforcement learning on the Fireworks Training API, nearly doubling all-pass rate on the Legal Agent Benchmark (19.7% vs 10.8% for base Kimi K3) at roughly flat cost ($5.92 vs $5.62/task); gains transferred to unseen agentic benchmarks (Mercor Apex Agents, Crosby Redline Bench) with no regression on legal-knowledge benchmarks like LegalBench, CUAD, and MAUD.
 - **2026-08-12** — [Can open models carry readable silent signals before they speak? Reproducing J-Lens Readouts on Kimi K3 & Qwen3.5-9B](<../models/reasoning/Can open models carry readable silent signals before they speak Reproducing J-Lens Readouts on Kimi K3 & Qwen3.5-9B.md>) · `reasoning` · fireworks
   Reproduces Anthropic's J-Lens (Jacobian Lens) probe, originally from the global workspace study, on two open models (Kimi K3 and Qwen3.5-9B) to test whether they carry readable internal vocabulary signals before generating output. Using focus-instruction experiments (e.g. arithmetic vs. citrus framing) with identical visible outputs, the probe recovered topic-consistent vocabulary in the top-10 predictions at most sampled layers/positions without leakage between conditions.
 - **2026-08-10** — [Fireworks AI](<../models/architectures/Fireworks AI.md>) · `architectures` · fireworks
