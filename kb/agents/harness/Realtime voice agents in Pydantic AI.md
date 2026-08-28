@@ -1,10 +1,16 @@
 ---
 title: Realtime voice agents in Pydantic AI
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: agents
+subtopic: harness
+secondary_topics:
+- evals-observability/tracing
+summary: Pydantic AI extends its provider-agnostic Agent object to realtime speech-to-speech
+  voice (OpenAI Realtime, Azure OpenAI, Gemini Live, xAI Grok Voice) behind one RealtimeModel
+  interface, reusing the same server-side tools, typed message history, and OpenTelemetry/Logfire
+  tracing as text agents; voice and text runs can hand off via shared message_history,
+  and calls can route through the Pydantic AI Gateway for unified spend limits since
+  realtime audio is billed per-minute or per audio-token.
 triage: null
 skip_reason: null
 source: pydantic
@@ -12,7 +18,7 @@ url: https://pydantic.dev/articles/pydantic-ai-voice-agent
 author: Douwe Maan
 published: '2026-08-26'
 fetched: '2026-08-28T09:12:03Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1209
 content_sha256: 3b425ae040341803a454042196d2183673424f458e6390fd504fcd97d091b450

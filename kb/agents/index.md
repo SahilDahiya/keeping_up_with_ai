@@ -1,7 +1,9 @@
 # agents
 
-96 articles.
+97 articles.
 
+- **2026-08-26** — [Realtime voice agents in Pydantic AI](<harness/Realtime voice agents in Pydantic AI.md>) · `harness` · pydantic
+  Pydantic AI extends its provider-agnostic Agent object to realtime speech-to-speech voice (OpenAI Realtime, Azure OpenAI, Gemini Live, xAI Grok Voice) behind one RealtimeModel interface, reusing the same server-side tools, typed message history, and OpenTelemetry/Logfire tracing as text agents; voice and text runs can hand off via shared message_history, and calls can route through the Pydantic AI Gateway for unified spend limits since realtime audio is billed per-minute or per audio-token.
 - **2026-08-25** — [Automating repetitive work at OpenAI with Codex](<harness/Automating repetitive work at OpenAI with Codex.md>) · `harness` · openai-devs
   Describes Runme, an internal OpenAI notebook-based harness built with Codex that curates workflow context, enforces review/approval checkpoints before an agent acts, and feeds learnings from past runs into future ones for repetitive engineering tasks like cluster provisioning and model evaluation.
 - **2026-08-25** — [How to run any open model inside DeepSeek Harness](<harness/How to run any open model inside DeepSeek Harness.md>) · `harness` · baseten

@@ -1,7 +1,9 @@
 # pydantic
 
-36 articles.
+37 articles.
 
+- **2026-08-26** — [Realtime voice agents in Pydantic AI](<../agents/harness/Realtime voice agents in Pydantic AI.md>) · `harness` · pydantic
+  Pydantic AI extends its provider-agnostic Agent object to realtime speech-to-speech voice (OpenAI Realtime, Azure OpenAI, Gemini Live, xAI Grok Voice) behind one RealtimeModel interface, reusing the same server-side tools, typed message history, and OpenTelemetry/Logfire tracing as text agents; voice and text runs can hand off via shared message_history, and calls can route through the Pydantic AI Gateway for unified spend limits since realtime audio is billed per-minute or per audio-token.
 - **2026-08-18** — [Feature flags for production AI](<../infra-platform/deployment/Feature flags for production AI.md>) · `deployment` · pydantic
   Shows how to use Pydantic Logfire's typed managed variables as feature flags for production AI systems, letting teams target and A/B test models, prompts, and tool policies (with UsageLimits caps) without redeploying, and tying each resolved variant to OpenTelemetry traces and dashboards.
 - **2026-08-13** — [StackOne is now a Pydantic AI capability](<../agents/harness/StackOne is now a Pydantic AI capability.md>) · `harness` · pydantic

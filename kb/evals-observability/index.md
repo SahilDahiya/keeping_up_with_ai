@@ -221,6 +221,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-08-26** — [Realtime voice agents in Pydantic AI](<../agents/harness/Realtime voice agents in Pydantic AI.md>) · `harness` · pydantic
+  Pydantic AI extends its provider-agnostic Agent object to realtime speech-to-speech voice (OpenAI Realtime, Azure OpenAI, Gemini Live, xAI Grok Voice) behind one RealtimeModel interface, reusing the same server-side tools, typed message history, and OpenTelemetry/Logfire tracing as text agents; voice and text runs can hand off via shared message_history, and calls can route through the Pydantic AI Gateway for unified spend limits since realtime audio is billed per-minute or per audio-token.
 - **2026-08-26** — [Fireworks AI](<../models/benchmarks/Fireworks AI.md>) · `benchmarks` · fireworks
   Benchmarks DeepSeek V4 Pro 0813 against Kimi K3, GPT-5.5, and Claude Opus 4.8 on CyberGym (840 real-vulnerability security tasks graded by exploit execution), finding zero refusals and half the cost-per-success of the best closed model, while Opus 4.8 entered validation on only 10% of tasks.
 - **2026-08-25** — [Automating repetitive work at OpenAI with Codex](<../agents/harness/Automating repetitive work at OpenAI with Codex.md>) · `harness` · openai-devs
