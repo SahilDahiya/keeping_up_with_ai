@@ -1,7 +1,11 @@
 # baseten
 
-79 articles.
+81 articles.
 
+- **2026-08-29** — [Agentic kernels in production](<../inference/kernels/Agentic kernels in production.md>) · `kernels` · baseten
+  Baseten built a self-improving agentic framework that profiles production diffusion-model serving (Qwen-Image, FLUX.2 on B300 GPUs with SGLang), then generates, benchmarks, and ships GPU kernel optimizations like pre-packed FP8 scales directly into the serving stack, cutting end-to-end latency 42.3% on Qwen-Image, 15.2% on FLUX.2, and lifting throughput 5.5% on MiniMax M3.
+- **2026-08-28** — [GLM 5.3: Scaling with post-training, intuitively explained](<../models/reinforcement-learning/GLM 5.3 Scaling with post-training, intuitively explained.md>) · `reinforcement-learning` · baseten
+  Explains how GLM-5.3 improved over 50% on the identical GLM-5.2 base purely through scaled RL post-training: agent-generated environments verified by reward-hacking-resistant checks, SAO (Single-Rollout Asynchronous Optimization) with trajectory compaction for stable long-horizon RL, and a slime-based pipeline pairing SGLang rollout generation with Megatron training; also covers GLM 5.2's Multi-head Latent Attention, DeepSeek Sparse Attention, MTP speculative decoding, and the IndexShare optimization that cuts indexer FLOPs 2.9x.
 - **2026-08-25** — [How to run any open model inside DeepSeek Harness](<../agents/harness/How to run any open model inside DeepSeek Harness.md>) · `harness` · baseten
   Describes DeepSeek Harness (DSH) as a plugin-based meta-harness where models, tools, sandboxes, and sub-agent harnesses (Claude Code, Codex) are swappable components with an append-only, fork-and-replay event log, and walks through wiring open models like Kimi K3, GLM 5.2, and DeepSeek V4 Pro into it via Baseten Model APIs.
 - **2026-08-25** — [The two AI gateway patterns in production inference](<../product-engineering/architecture/The two AI gateway patterns in production inference.md>) · `architecture` · baseten

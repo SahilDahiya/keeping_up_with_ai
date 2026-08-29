@@ -95,6 +95,12 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-08-26** — [Best Prompt Management Tools 2026 | Pydantic Logfire](<../prompt-engineering/techniques/Best Prompt Management Tools 2026 Pydantic Logfire.md>) · `techniques` · pydantic
+  Compares prompt management tools (Langfuse, LangSmith, Braintrust, PromptLayer, Agenta, Helicone, Pydantic Logfire) on how a saved prompt version reaches production: server-side vs. application-code A/B splitting, percentage rollout and targeting, and whether the serving version is recorded on the run's trace.
+- **2026-08-26** — [Best Langfuse Alternatives in 2026 | Pydantic Logfire](<../evals-observability/tracing/Best Langfuse Alternatives in 2026 Pydantic Logfire.md>) · `tracing` · pydantic
+  Compares Langfuse against LangSmith, Braintrust, Arize Phoenix, Helicone, Laminar, and Confident AI for LLM tracing, detailing concrete gaps: Langfuse's OTLP endpoint accepts traces but not logs/metrics, its billing meters traces/observations/scores together, and nine governance features (RBAC, audit logs, data masking) require an enterprise license key.
+- **2026-08-26** — [Best OpenTelemetry Backends in 2026 | Pydantic Logfire](<../evals-observability/tracing/Best OpenTelemetry Backends in 2026 Pydantic Logfire.md>) · `tracing` · pydantic
+  Compares OTLP-native observability backends (including Pydantic Logfire) on cross-signal querying, high-cardinality tolerance, self-hosting, and how each handles OpenTelemetry's still-evolving GenAI semantic conventions for model names, token counts, and tool calls in LLM/agent request paths.
 - **2026-08-25** — [The two AI gateway patterns in production inference](<../product-engineering/architecture/The two AI gateway patterns in production inference.md>) · `architecture` · baseten
   Distinguishes two AI gateway architectures — access gateways for application-side multi-provider routing vs. serving gateways for model owners exposing their own models to customers — and traces how a serving gateway handles identity, routing, tenant protection, metering, and auditable request logs.
 - **2026-08-21** — [GLM-5.3 vs. Claude Fable 5 on DeepSWE: Cost, Coding, and Routing](<../models/benchmarks/GLM-5.3 vs. Claude Fable 5 on DeepSWE Cost, Coding, and Routing.md>) · `benchmarks` · together

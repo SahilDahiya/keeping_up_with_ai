@@ -1,10 +1,17 @@
 ---
 title: 'GLM 5.3: Scaling with post-training, intuitively explained'
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: models
+subtopic: reinforcement-learning
+secondary_topics:
+- inference/speculative-decoding
+summary: 'Explains how GLM-5.3 improved over 50% on the identical GLM-5.2 base purely
+  through scaled RL post-training: agent-generated environments verified by reward-hacking-resistant
+  checks, SAO (Single-Rollout Asynchronous Optimization) with trajectory compaction
+  for stable long-horizon RL, and a slime-based pipeline pairing SGLang rollout generation
+  with Megatron training; also covers GLM 5.2''s Multi-head Latent Attention, DeepSeek
+  Sparse Attention, MTP speculative decoding, and the IndexShare optimization that
+  cuts indexer FLOPs 2.9x.'
 triage: null
 skip_reason: null
 source: baseten
@@ -12,7 +19,7 @@ url: https://www.baseten.co/blog/glm-53/
 author: Chloe Florit; Alex Ker
 published: '2026-08-28'
 fetched: '2026-08-29T06:09:10Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1988
 content_sha256: 6a24fcc26b06625dba0cbca6467f5810b80e9ae87ff178391a105f0598143163

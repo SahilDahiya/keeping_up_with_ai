@@ -1,9 +1,17 @@
 # pydantic
 
-37 articles.
+41 articles.
 
 - **2026-08-26** — [Realtime voice agents in Pydantic AI](<../agents/harness/Realtime voice agents in Pydantic AI.md>) · `harness` · pydantic
   Pydantic AI extends its provider-agnostic Agent object to realtime speech-to-speech voice (OpenAI Realtime, Azure OpenAI, Gemini Live, xAI Grok Voice) behind one RealtimeModel interface, reusing the same server-side tools, typed message history, and OpenTelemetry/Logfire tracing as text agents; voice and text runs can hand off via shared message_history, and calls can route through the Pydantic AI Gateway for unified spend limits since realtime audio is billed per-minute or per audio-token.
+- **2026-08-26** — [Best Prompt Management Tools 2026 | Pydantic Logfire](<../prompt-engineering/techniques/Best Prompt Management Tools 2026 Pydantic Logfire.md>) · `techniques` · pydantic
+  Compares prompt management tools (Langfuse, LangSmith, Braintrust, PromptLayer, Agenta, Helicone, Pydantic Logfire) on how a saved prompt version reaches production: server-side vs. application-code A/B splitting, percentage rollout and targeting, and whether the serving version is recorded on the run's trace.
+- **2026-08-26** — [Best LLM Evaluation Tools 2026 | Pydantic Logfire](<../evals-observability/evaluation/Best LLM Evaluation Tools 2026 Pydantic Logfire.md>) · `evaluation` · pydantic
+  Compares Braintrust, Langfuse, LangSmith, Arize Phoenix, Confident AI, and Galileo as LLM evaluation platforms, focused on whether eval scores stay linked to the production trace that produced them and how each vendor meters evaluation runs (per-score, per-trace, or per-GB of span storage).
+- **2026-08-26** — [Best Langfuse Alternatives in 2026 | Pydantic Logfire](<../evals-observability/tracing/Best Langfuse Alternatives in 2026 Pydantic Logfire.md>) · `tracing` · pydantic
+  Compares Langfuse against LangSmith, Braintrust, Arize Phoenix, Helicone, Laminar, and Confident AI for LLM tracing, detailing concrete gaps: Langfuse's OTLP endpoint accepts traces but not logs/metrics, its billing meters traces/observations/scores together, and nine governance features (RBAC, audit logs, data masking) require an enterprise license key.
+- **2026-08-26** — [Best OpenTelemetry Backends in 2026 | Pydantic Logfire](<../evals-observability/tracing/Best OpenTelemetry Backends in 2026 Pydantic Logfire.md>) · `tracing` · pydantic
+  Compares OTLP-native observability backends (including Pydantic Logfire) on cross-signal querying, high-cardinality tolerance, self-hosting, and how each handles OpenTelemetry's still-evolving GenAI semantic conventions for model names, token counts, and tool calls in LLM/agent request paths.
 - **2026-08-18** — [Feature flags for production AI](<../infra-platform/deployment/Feature flags for production AI.md>) · `deployment` · pydantic
   Shows how to use Pydantic Logfire's typed managed variables as feature flags for production AI systems, letting teams target and A/B test models, prompts, and tool policies (with UsageLimits caps) without redeploying, and tying each resolved variant to OpenTelemetry traces and dashboards.
 - **2026-08-13** — [StackOne is now a Pydantic AI capability](<../agents/harness/StackOne is now a Pydantic AI capability.md>) · `harness` · pydantic

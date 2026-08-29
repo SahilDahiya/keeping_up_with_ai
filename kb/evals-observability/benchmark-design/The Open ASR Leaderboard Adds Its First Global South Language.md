@@ -1,10 +1,14 @@
 ---
 title: The Open ASR Leaderboard Adds Its First Global South Language
 kind: blog
-topic: null
-subtopic: null
+topic: evals-observability
+subtopic: benchmark-design
 secondary_topics: []
-summary: null
+summary: Adds Hindi as the Open ASR Leaderboard's first Indic language via two new
+  evaluation sets, Monsoon en-IN and hi-IN, built across nine variation axes (geography,
+  device, accent, speech rate) with speaker-disjoint public/private splits (4,888
+  speakers) and lattice-based reference transcripts for Hindi's orthographic variation,
+  to surface demographic WER disparities that aggregate benchmark scores hide.
 triage: null
 skip_reason: null
 source: huggingface
@@ -13,7 +17,7 @@ author: Eric Bezzam; Shobhit Banga; Manas Dhir; Bhaskar Singh; Manmeet Kaur; Aad
   Pareek; Walecha; Sagar Jain; Hanuman Sidh; Vanshika Chhabra
 published: '2026-08-28'
 fetched: '2026-08-29T06:15:05Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 3013
 content_sha256: ac127d76b37b2ee2897168c0841d0e52d87ff59b9977b50ec4a1e424e7cba5d4

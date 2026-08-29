@@ -1,10 +1,14 @@
 ---
 title: Best Prompt Management Tools 2026 | Pydantic Logfire
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: prompt-engineering
+subtopic: techniques
+secondary_topics:
+- infra-platform/deployment
+summary: 'Compares prompt management tools (Langfuse, LangSmith, Braintrust, PromptLayer,
+  Agenta, Helicone, Pydantic Logfire) on how a saved prompt version reaches production:
+  server-side vs. application-code A/B splitting, percentage rollout and targeting,
+  and whether the serving version is recorded on the run''s trace.'
 triage: null
 skip_reason: null
 source: pydantic
@@ -12,7 +16,7 @@ url: https://pydantic.dev/articles/best-prompt-management-tools
 author: Bill Easton
 published: '2026-08-26'
 fetched: '2026-08-29T06:15:17Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 3402
 content_sha256: 944185fefd7c89dc79c204cdc676e8161ee0b252b528cc5c0fb7665048069d05

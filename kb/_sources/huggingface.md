@@ -1,7 +1,9 @@
 # huggingface
 
-165 articles.
+166 articles.
 
+- **2026-08-28** — [The Open ASR Leaderboard Adds Its First Global South Language](<../evals-observability/benchmark-design/The Open ASR Leaderboard Adds Its First Global South Language.md>) · `benchmark-design` · huggingface
+  Adds Hindi as the Open ASR Leaderboard's first Indic language via two new evaluation sets, Monsoon en-IN and hi-IN, built across nine variation axes (geography, device, accent, speech rate) with speaker-disjoint public/private splits (4,888 speakers) and lattice-based reference transcripts for Hindi's orthographic variation, to surface demographic WER disparities that aggregate benchmark scores hide.
 - **2026-08-26** — [Training and Finetuning Multi-Vector Embedding Models with Sentence Transformers](<../rag-retrieval/embeddings/Training and Finetuning Multi-Vector Embedding Models with Sentence Transformers.md>) · `embeddings` · huggingface
   Walks through finetuning ColBERT-style multi-vector (late-interaction) embedding models using Sentence Transformers' new MultiVectorEncoder, covering datasets, loss functions, training arguments, and evaluators, and shows a model finetuned in 14.5 hours on a single RTX 3090 beating general-purpose dense, sparse, lexical, and multi-vector retrievers on a medical retrieval benchmark (MIRIAD NDCG@10).
 - **2026-08-21** — [How Hugging Face Inference Endpoints, Jobs, and Buckets Power Search on Papers with Code](<../rag-retrieval/search/How Hugging Face Inference Endpoints, Jobs, and Buckets Power Search on Papers with Code.md>) · `search` · huggingface

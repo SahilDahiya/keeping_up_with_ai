@@ -1,7 +1,9 @@
 # inference
 
-129 articles.
+130 articles.
 
+- **2026-08-29** — [Agentic kernels in production](<kernels/Agentic kernels in production.md>) · `kernels` · baseten
+  Baseten built a self-improving agentic framework that profiles production diffusion-model serving (Qwen-Image, FLUX.2 on B300 GPUs with SGLang), then generates, benchmarks, and ships GPU kernel optimizations like pre-packed FP8 scales directly into the serving stack, cutting end-to-end latency 42.3% on Qwen-Image, 15.2% on FLUX.2, and lifting throughput 5.5% on MiniMax M3.
 - **2026-08-19** — [Gisting: Compressing LLM Agent context to ↑ throughput and ↓ cost (2026)](<optimization/Gisting Compressing LLM Agent context to ↑ throughput and ↓ cost (2026).md>) · `optimization` · shopify
   Shopify's Sidekick GraphQL agent uses gisting -- training special 'gist' token embeddings via knowledge distillation -- to compress its ~6,000-token system prompt to ~1,500 gist tokens (4:1), cutting median TTFT from 438ms to 354ms and end-to-end latency from 6.8s to 4.2s while raising throughput from 20.2 to 23.4 QPS at 350 RPM, reducing the GPUs needed to serve the agent.
 - **2026-08-14** — [Inference engineering for DeepSeek V4 Pro 0813](<optimization/Inference engineering for DeepSeek V4 Pro 0813.md>) · `optimization` · baseten
@@ -263,6 +265,10 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-08-28** — [GLM-5.3 vs. GLM-5.3 Flash on DeepSWE: Cost, Coding, and Routing](<../models/benchmarks/GLM-5.3 vs. GLM-5.3 Flash on DeepSWE Cost, Coding, and Routing.md>) · `benchmarks` · together
+  Benchmarks GLM-5.3 against its distilled GLM-5.3 Flash sibling on 900 DeepSWE rollouts: a Flash-first, escalate-on-test-failure cascade solves 80.9% of tasks at $1.70 vs. the full model's 69.0% at $3.99, showing distillation mainly cost first-try reliability (recoverable via retries) rather than ceiling capability, at 17x lower per-rollout price.
+- **2026-08-28** — [GLM 5.3: Scaling with post-training, intuitively explained](<../models/reinforcement-learning/GLM 5.3 Scaling with post-training, intuitively explained.md>) · `reinforcement-learning` · baseten
+  Explains how GLM-5.3 improved over 50% on the identical GLM-5.2 base purely through scaled RL post-training: agent-generated environments verified by reward-hacking-resistant checks, SAO (Single-Rollout Asynchronous Optimization) with trajectory compaction for stable long-horizon RL, and a slime-based pipeline pairing SGLang rollout generation with Megatron training; also covers GLM 5.2's Multi-head Latent Attention, DeepSeek Sparse Attention, MTP speculative decoding, and the IndexShare optimization that cuts indexer FLOPs 2.9x.
 - **2026-08-26** — [DeepSeek V4 Pro: Tops SWE-Bench & Cuts Cost per Task by 3x vs. Fable 5](<../models/benchmarks/DeepSeek V4 Pro Tops SWE-Bench & Cuts Cost per Task by 3x vs. Fable 5.md>) · `benchmarks` · fireworks
   Benchmarks DeepSeek V4 Pro 0813 against Kimi K3 and Fable 5 on SWE-Bench Verified, LiveCodeBench v6, Aider Polyglot, and Terminal-Bench 2.1, finding it tops two of four families at roughly a third of Fable 5's per-task cost, though it trails badly on Java (48.9% vs 74.5%), arguing for dynamic routing across specialist models.
 - **2026-08-26** — [Post-training Kimi K3 with Harvey for long-horizon legal work](<../models/reinforcement-learning/Post-training Kimi K3 with Harvey for long-horizon legal work.md>) · `reinforcement-learning` · fireworks

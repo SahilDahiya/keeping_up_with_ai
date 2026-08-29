@@ -1,10 +1,15 @@
 ---
 title: 'GLM-5.3 vs. GLM-5.3 Flash on DeepSWE: Cost, Coding, and Routing'
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: models
+subtopic: benchmarks
+secondary_topics:
+- inference/optimization
+summary: 'Benchmarks GLM-5.3 against its distilled GLM-5.3 Flash sibling on 900 DeepSWE
+  rollouts: a Flash-first, escalate-on-test-failure cascade solves 80.9% of tasks
+  at $1.70 vs. the full model''s 69.0% at $3.99, showing distillation mainly cost
+  first-try reliability (recoverable via retries) rather than ceiling capability,
+  at 17x lower per-rollout price.'
 triage: null
 skip_reason: null
 source: together
@@ -12,7 +17,7 @@ url: https://www.together.ai/blog/glm-5-3-vs-glm-5-3-flash-on-deepswe-cost-codin
 author: Zain Hasan; Shobhit Dixit
 published: '2026-08-28'
 fetched: '2026-08-29T06:09:19Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 2303
 content_sha256: f9dc87a0719a87b123201e955a7a0c9d1285ec8dd3557ab3081e57475573f06b

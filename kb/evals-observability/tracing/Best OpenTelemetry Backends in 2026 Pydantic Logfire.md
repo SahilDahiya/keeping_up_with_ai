@@ -1,10 +1,14 @@
 ---
 title: Best OpenTelemetry Backends in 2026 | Pydantic Logfire
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: evals-observability
+subtopic: tracing
+secondary_topics:
+- infra-platform/cost
+summary: Compares OTLP-native observability backends (including Pydantic Logfire)
+  on cross-signal querying, high-cardinality tolerance, self-hosting, and how each
+  handles OpenTelemetry's still-evolving GenAI semantic conventions for model names,
+  token counts, and tool calls in LLM/agent request paths.
 triage: null
 skip_reason: null
 source: pydantic
@@ -12,7 +16,7 @@ url: https://pydantic.dev/articles/best-opentelemetry-backends
 author: Bill Easton
 published: '2026-08-26'
 fetched: '2026-08-29T06:15:15Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1905
 content_sha256: bef2c82218fa091118d0d495e07b3b052ae6d30add33561847f791ceb9be9afb

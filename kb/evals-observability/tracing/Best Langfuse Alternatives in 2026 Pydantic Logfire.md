@@ -1,10 +1,15 @@
 ---
 title: Best Langfuse Alternatives in 2026 | Pydantic Logfire
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: evals-observability
+subtopic: tracing
+secondary_topics:
+- infra-platform/cost
+summary: 'Compares Langfuse against LangSmith, Braintrust, Arize Phoenix, Helicone,
+  Laminar, and Confident AI for LLM tracing, detailing concrete gaps: Langfuse''s
+  OTLP endpoint accepts traces but not logs/metrics, its billing meters traces/observations/scores
+  together, and nine governance features (RBAC, audit logs, data masking) require
+  an enterprise license key.'
 triage: null
 skip_reason: null
 source: pydantic
@@ -12,7 +17,7 @@ url: https://pydantic.dev/articles/best-langfuse-alternatives
 author: Bill Easton
 published: '2026-08-26'
 fetched: '2026-08-29T06:15:11Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 3200
 content_sha256: d05f3397ed6ca53d73f79b313570f7b231bcab0bdcf7aa2750508d63aa80e016

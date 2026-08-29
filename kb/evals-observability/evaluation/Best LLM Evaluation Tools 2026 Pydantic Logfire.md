@@ -1,10 +1,13 @@
 ---
 title: Best LLM Evaluation Tools 2026 | Pydantic Logfire
 kind: blog
-topic: null
-subtopic: null
+topic: evals-observability
+subtopic: evaluation
 secondary_topics: []
-summary: null
+summary: Compares Braintrust, Langfuse, LangSmith, Arize Phoenix, Confident AI, and
+  Galileo as LLM evaluation platforms, focused on whether eval scores stay linked
+  to the production trace that produced them and how each vendor meters evaluation
+  runs (per-score, per-trace, or per-GB of span storage).
 triage: null
 skip_reason: null
 source: pydantic
@@ -12,7 +15,7 @@ url: https://pydantic.dev/articles/best-llm-evaluation-tools
 author: Bill Easton
 published: '2026-08-26'
 fetched: '2026-08-29T06:15:13Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 3313
 content_sha256: 5f5a26330e3561522984ee589dcad0ff2c6910723e7a8cb0192350c6493faf90

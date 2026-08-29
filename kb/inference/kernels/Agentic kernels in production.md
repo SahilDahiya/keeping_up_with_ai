@@ -1,10 +1,15 @@
 ---
 title: Agentic kernels in production
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: inference
+subtopic: kernels
+secondary_topics:
+- agents/harness
+summary: Baseten built a self-improving agentic framework that profiles production
+  diffusion-model serving (Qwen-Image, FLUX.2 on B300 GPUs with SGLang), then generates,
+  benchmarks, and ships GPU kernel optimizations like pre-packed FP8 scales directly
+  into the serving stack, cutting end-to-end latency 42.3% on Qwen-Image, 15.2% on
+  FLUX.2, and lifting throughput 5.5% on MiniMax M3.
 triage: null
 skip_reason: null
 source: baseten
@@ -12,7 +17,7 @@ url: https://www.baseten.co/blog/agentic-kernels-in-production/
 author: Brian Li; Faraz Shahsavan; Pankaj Gupta
 published: '2026-08-29'
 fetched: '2026-08-29T06:09:08Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 2000
 content_sha256: 7280cc991ab44c9619d7146a6f81f278e0def18bd5ebb2d0e9c96c3268fe2907

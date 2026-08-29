@@ -1,7 +1,15 @@
 # evals-observability
 
-108 articles.
+112 articles.
 
+- **2026-08-28** — [The Open ASR Leaderboard Adds Its First Global South Language](<benchmark-design/The Open ASR Leaderboard Adds Its First Global South Language.md>) · `benchmark-design` · huggingface
+  Adds Hindi as the Open ASR Leaderboard's first Indic language via two new evaluation sets, Monsoon en-IN and hi-IN, built across nine variation axes (geography, device, accent, speech rate) with speaker-disjoint public/private splits (4,888 speakers) and lattice-based reference transcripts for Hindi's orthographic variation, to surface demographic WER disparities that aggregate benchmark scores hide.
+- **2026-08-26** — [Best LLM Evaluation Tools 2026 | Pydantic Logfire](<evaluation/Best LLM Evaluation Tools 2026 Pydantic Logfire.md>) · `evaluation` · pydantic
+  Compares Braintrust, Langfuse, LangSmith, Arize Phoenix, Confident AI, and Galileo as LLM evaluation platforms, focused on whether eval scores stay linked to the production trace that produced them and how each vendor meters evaluation runs (per-score, per-trace, or per-GB of span storage).
+- **2026-08-26** — [Best Langfuse Alternatives in 2026 | Pydantic Logfire](<tracing/Best Langfuse Alternatives in 2026 Pydantic Logfire.md>) · `tracing` · pydantic
+  Compares Langfuse against LangSmith, Braintrust, Arize Phoenix, Helicone, Laminar, and Confident AI for LLM tracing, detailing concrete gaps: Langfuse's OTLP endpoint accepts traces but not logs/metrics, its billing meters traces/observations/scores together, and nine governance features (RBAC, audit logs, data masking) require an enterprise license key.
+- **2026-08-26** — [Best OpenTelemetry Backends in 2026 | Pydantic Logfire](<tracing/Best OpenTelemetry Backends in 2026 Pydantic Logfire.md>) · `tracing` · pydantic
+  Compares OTLP-native observability backends (including Pydantic Logfire) on cross-signal querying, high-cardinality tolerance, self-hosting, and how each handles OpenTelemetry's still-evolving GenAI semantic conventions for model names, token counts, and tool calls in LLM/agent request paths.
 - **2026-08-24** — [How leading platforms ensure observability for LLM inference](<monitoring/How leading platforms ensure observability for LLM inference.md>) · `monitoring` · baseten
   Explains LLM inference observability through three lenses: metrics (TTFT, TPOT, TPS, end-to-end latency, KV cache hit rate), build/deploy/serving logs keyed by request_id, and distributed traces that break a single request into API Gateway, Service Mesh, Activator, Queue, and Server stages to pinpoint cold-start and queue-backup latency.
 - **2026-08-21** — [Measuring benchmark optimization in speech recognition](<benchmark-design/Measuring benchmark optimization in speech recognition.md>) · `benchmark-design` · huggingface

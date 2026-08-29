@@ -1,7 +1,11 @@
 # models
 
-184 articles.
+186 articles.
 
+- **2026-08-28** — [GLM-5.3 vs. GLM-5.3 Flash on DeepSWE: Cost, Coding, and Routing](<benchmarks/GLM-5.3 vs. GLM-5.3 Flash on DeepSWE Cost, Coding, and Routing.md>) · `benchmarks` · together
+  Benchmarks GLM-5.3 against its distilled GLM-5.3 Flash sibling on 900 DeepSWE rollouts: a Flash-first, escalate-on-test-failure cascade solves 80.9% of tasks at $1.70 vs. the full model's 69.0% at $3.99, showing distillation mainly cost first-try reliability (recoverable via retries) rather than ceiling capability, at 17x lower per-rollout price.
+- **2026-08-28** — [GLM 5.3: Scaling with post-training, intuitively explained](<reinforcement-learning/GLM 5.3 Scaling with post-training, intuitively explained.md>) · `reinforcement-learning` · baseten
+  Explains how GLM-5.3 improved over 50% on the identical GLM-5.2 base purely through scaled RL post-training: agent-generated environments verified by reward-hacking-resistant checks, SAO (Single-Rollout Asynchronous Optimization) with trajectory compaction for stable long-horizon RL, and a slime-based pipeline pairing SGLang rollout generation with Megatron training; also covers GLM 5.2's Multi-head Latent Attention, DeepSeek Sparse Attention, MTP speculative decoding, and the IndexShare optimization that cuts indexer FLOPs 2.9x.
 - **2026-08-26** — [DeepSeek V4 Pro: Tops SWE-Bench & Cuts Cost per Task by 3x vs. Fable 5](<benchmarks/DeepSeek V4 Pro Tops SWE-Bench & Cuts Cost per Task by 3x vs. Fable 5.md>) · `benchmarks` · fireworks
   Benchmarks DeepSeek V4 Pro 0813 against Kimi K3 and Fable 5 on SWE-Bench Verified, LiveCodeBench v6, Aider Polyglot, and Terminal-Bench 2.1, finding it tops two of four families at roughly a third of Fable 5's per-task cost, though it trails badly on Java (48.9% vs 74.5%), arguing for dynamic routing across specialist models.
 - **2026-08-26** — [Fireworks AI](<benchmarks/Fireworks AI.md>) · `benchmarks` · fireworks
