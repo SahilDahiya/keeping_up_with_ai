@@ -1,10 +1,16 @@
 ---
 title: Why Pay for Every Question Twice? Precomputing Answers for Real-Time RAG
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: rag-retrieval
+subtopic: pipelines
+secondary_topics:
+- inference/optimization
+summary: Cresta's Precomputed Answer Engine (PAE) precomputes Q&A pairs for a contact-center
+  RAG system using lexical matching plus a two-stage embedding-retrieval + LLM-verification
+  semantic match, falling back to the full retrieve-rank-generate pipeline on a miss;
+  in production it hits ~40% of queries at ~0.7s latency with >80% strict quality
+  pass rates, and continuously refreshes the cache to track usage and knowledge-base
+  drift.
 triage: null
 skip_reason: null
 source: cresta
@@ -12,7 +18,7 @@ url: https://cresta.com/blog/why-pay-for-every-question-twice-precomputing-answe
 author: Ethan Jiang
 published: '2026-08-26'
 fetched: '2026-08-31T06:13:05Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1439
 content_sha256: b9fb1f146573fd991107899eaf088846205960be054dc5105b96c501744ea9d8

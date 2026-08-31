@@ -1,7 +1,9 @@
 # cresta
 
-67 articles.
+68 articles.
 
+- **2026-08-26** — [Why Pay for Every Question Twice? Precomputing Answers for Real-Time RAG](<../rag-retrieval/pipelines/Why Pay for Every Question Twice Precomputing Answers for Real-Time RAG.md>) · `pipelines` · cresta
+  Cresta's Precomputed Answer Engine (PAE) precomputes Q&A pairs for a contact-center RAG system using lexical matching plus a two-stage embedding-retrieval + LLM-verification semantic match, falling back to the full retrieve-rank-generate pipeline on a miss; in production it hits ~40% of queries at ~0.7s latency with >80% strict quality pass rates, and continuously refreshes the cache to track usage and knowledge-base drift.
 - **2026-08-12** — [Your Brand, Any Language: The New Frontier of Voice Agent Localization](<../models/multimodal/Your Brand, Any Language The New Frontier of Voice Agent Localization.md>) · `multimodal` · cresta
   Describes a TTS 'arena' where candidate voices compete in tightly controlled pairwise comparisons scored by multiple stakeholders on prosody, expressiveness and authenticity before reaching production. Localized voice clones used to be disqualified on residual source-language accent; recent TTS models now top the internal leaderboard, implying they have learned to separate speaker identity (timbre, pacing, pitch contours) from language phonology.
 - **2026-08-07** — [How the Best AI Agents Keep Getting Better](<../evals-observability/evaluation/How the Best AI Agents Keep Getting Better.md>) · `evaluation` · cresta

@@ -1,9 +1,11 @@
 # rag-retrieval
 
-36 articles.
+37 articles.
 
 - **2026-08-26** — [Training and Finetuning Multi-Vector Embedding Models with Sentence Transformers](<embeddings/Training and Finetuning Multi-Vector Embedding Models with Sentence Transformers.md>) · `embeddings` · huggingface
   Walks through finetuning ColBERT-style multi-vector (late-interaction) embedding models using Sentence Transformers' new MultiVectorEncoder, covering datasets, loss functions, training arguments, and evaluators, and shows a model finetuned in 14.5 hours on a single RTX 3090 beating general-purpose dense, sparse, lexical, and multi-vector retrievers on a medical retrieval benchmark (MIRIAD NDCG@10).
+- **2026-08-26** — [Why Pay for Every Question Twice? Precomputing Answers for Real-Time RAG](<pipelines/Why Pay for Every Question Twice Precomputing Answers for Real-Time RAG.md>) · `pipelines` · cresta
+  Cresta's Precomputed Answer Engine (PAE) precomputes Q&A pairs for a contact-center RAG system using lexical matching plus a two-stage embedding-retrieval + LLM-verification semantic match, falling back to the full retrieve-rank-generate pipeline on a miss; in production it hits ~40% of queries at ~0.7s latency with >80% strict quality pass rates, and continuously refreshes the cache to track usage and knowledge-base drift.
 - **2026-08-21** — [How Hugging Face Inference Endpoints, Jobs, and Buckets Power Search on Papers with Code](<search/How Hugging Face Inference Endpoints, Jobs, and Buckets Power Search on Papers with Code.md>) · `search` · huggingface
   Details the hybrid search architecture behind Papers with Code: an offline Jobs pipeline embeds papers with Qwen3-Embedding into a versioned pgvector contract (HNSW, 0.9955 Recall@20 at 256 dims), while online queries fuse lexical and semantic branches via weighted RRF and fall back to full-text search if the Inference Endpoint is cold or unhealthy.
 - **2026-08-18** — [Multi-Vector (Late Interaction) Embedding Models with Sentence Transformers](<embeddings/Multi-Vector (Late Interaction) Embedding Models with Sentence Transformers.md>) · `embeddings` · huggingface
