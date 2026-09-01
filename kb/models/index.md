@@ -1,7 +1,9 @@
 # models
 
-186 articles.
+187 articles.
 
+- **2026-08-31** — [Training API now generally available | Fireworks](<reinforcement-learning/Training API now generally available Fireworks.md>) · `reinforcement-learning` · fireworks
+  Fireworks details the infrastructure behind its now-GA Training API and Fireworks Lab: aligning numerical formats (BF16, block-wise FP8, NVFP4) and kernels between trainer and rollout engines, Router Replay to keep MoE expert selection consistent across rollout and backward pass, asynchronous RL that overlaps rollout generation with training, and XOR-diff plus zstd weight compression that cuts hot-load transmission bandwidth up to 10x.
 - **2026-08-28** — [GLM-5.3 vs. GLM-5.3 Flash on DeepSWE: Cost, Coding, and Routing](<benchmarks/GLM-5.3 vs. GLM-5.3 Flash on DeepSWE Cost, Coding, and Routing.md>) · `benchmarks` · together
   Benchmarks GLM-5.3 against its distilled GLM-5.3 Flash sibling on 900 DeepSWE rollouts: a Flash-first, escalate-on-test-failure cascade solves 80.9% of tasks at $1.70 vs. the full model's 69.0% at $3.99, showing distillation mainly cost first-try reliability (recoverable via retries) rather than ceiling capability, at 17x lower per-rollout price.
 - **2026-08-28** — [GLM 5.3: Scaling with post-training, intuitively explained](<reinforcement-learning/GLM 5.3 Scaling with post-training, intuitively explained.md>) · `reinforcement-learning` · baseten

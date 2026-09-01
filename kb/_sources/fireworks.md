@@ -1,7 +1,9 @@
 # fireworks
 
-88 articles.
+89 articles.
 
+- **2026-08-31** — [Training API now generally available | Fireworks](<../models/reinforcement-learning/Training API now generally available Fireworks.md>) · `reinforcement-learning` · fireworks
+  Fireworks details the infrastructure behind its now-GA Training API and Fireworks Lab: aligning numerical formats (BF16, block-wise FP8, NVFP4) and kernels between trainer and rollout engines, Router Replay to keep MoE expert selection consistent across rollout and backward pass, asynchronous RL that overlaps rollout generation with training, and XOR-diff plus zstd weight compression that cuts hot-load transmission bandwidth up to 10x.
 - **2026-08-26** — [DeepSeek V4 Pro: Tops SWE-Bench & Cuts Cost per Task by 3x vs. Fable 5](<../models/benchmarks/DeepSeek V4 Pro Tops SWE-Bench & Cuts Cost per Task by 3x vs. Fable 5.md>) · `benchmarks` · fireworks
   Benchmarks DeepSeek V4 Pro 0813 against Kimi K3 and Fable 5 on SWE-Bench Verified, LiveCodeBench v6, Aider Polyglot, and Terminal-Bench 2.1, finding it tops two of four families at roughly a third of Fable 5's per-task cost, though it trails badly on Java (48.9% vs 74.5%), arguing for dynamic routing across specialist models.
 - **2026-08-26** — [Fireworks AI](<../models/benchmarks/Fireworks AI.md>) · `benchmarks` · fireworks

@@ -1,10 +1,16 @@
 ---
 title: Training API now generally available | Fireworks
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: models
+subtopic: reinforcement-learning
+secondary_topics:
+- infra-platform/gpu-clusters
+summary: 'Fireworks details the infrastructure behind its now-GA Training API and
+  Fireworks Lab: aligning numerical formats (BF16, block-wise FP8, NVFP4) and kernels
+  between trainer and rollout engines, Router Replay to keep MoE expert selection
+  consistent across rollout and backward pass, asynchronous RL that overlaps rollout
+  generation with training, and XOR-diff plus zstd weight compression that cuts hot-load
+  transmission bandwidth up to 10x.'
 triage: null
 skip_reason: null
 source: fireworks
@@ -12,7 +18,7 @@ url: https://fireworks.ai/blog/train-past-the-frontier-training-api-now-generall
 author: null
 published: '2026-08-31'
 fetched: '2026-09-01T06:11:06Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1530
 content_sha256: 8ac183afcf2d599cb4052bf0d27e9e6582c111868f5ff9bf560cc9811223eddc

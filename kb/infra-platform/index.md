@@ -95,6 +95,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-08-31** — [Training API now generally available | Fireworks](<../models/reinforcement-learning/Training API now generally available Fireworks.md>) · `reinforcement-learning` · fireworks
+  Fireworks details the infrastructure behind its now-GA Training API and Fireworks Lab: aligning numerical formats (BF16, block-wise FP8, NVFP4) and kernels between trainer and rollout engines, Router Replay to keep MoE expert selection consistent across rollout and backward pass, asynchronous RL that overlaps rollout generation with training, and XOR-diff plus zstd weight compression that cuts hot-load transmission bandwidth up to 10x.
 - **2026-08-26** — [Best Prompt Management Tools 2026 | Pydantic Logfire](<../prompt-engineering/techniques/Best Prompt Management Tools 2026 Pydantic Logfire.md>) · `techniques` · pydantic
   Compares prompt management tools (Langfuse, LangSmith, Braintrust, PromptLayer, Agenta, Helicone, Pydantic Logfire) on how a saved prompt version reaches production: server-side vs. application-code A/B splitting, percentage rollout and targeting, and whether the serving version is recorded on the run's trace.
 - **2026-08-26** — [Best Langfuse Alternatives in 2026 | Pydantic Logfire](<../evals-observability/tracing/Best Langfuse Alternatives in 2026 Pydantic Logfire.md>) · `tracing` · pydantic
