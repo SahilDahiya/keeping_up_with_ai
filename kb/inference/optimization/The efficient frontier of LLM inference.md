@@ -1,10 +1,13 @@
 ---
 title: The efficient frontier of LLM inference
 kind: blog
-topic: null
-subtopic: null
+topic: inference
+subtopic: optimization
 secondary_topics: []
-summary: null
+summary: Surveys LLM inference engineering as tradeoffs (batch sizing; tensor/expert/attention-data
+  parallelism; quantization to MXFP4/NVFP4) versus techniques that push the whole
+  frontier out (CUDA kernel optimization, EAGLE-3/DSpark/DFlash speculative decoding,
+  prefill/decode disaggregation).
 triage: null
 skip_reason: null
 source: baseten
@@ -12,7 +15,7 @@ url: https://www.baseten.co/blog/the-efficient-frontier-of-llm-inference/
 author: Philip Kiely
 published: '2026-09-02'
 fetched: '2026-09-02T06:12:47Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1174
 content_sha256: eda944d2b5133f0da2e997ddda5aaf3ea3f96f2ee48255db762ea2fa74daabf9

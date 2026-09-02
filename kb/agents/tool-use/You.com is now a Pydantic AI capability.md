@@ -1,10 +1,16 @@
 ---
 title: You.com is now a Pydantic AI capability
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: agents
+subtopic: tool-use
+secondary_topics:
+- rag-retrieval/search
+- prompt-engineering/context-engineering
+summary: Walks through wiring You.com's YouSearch/YouResearch web-search and research
+  APIs into Pydantic AI Harness as agent capabilities, covering context-cost controls
+  (num_results, extraction_mode, max_text_chars, freshness), ModelRetry vs. hard-fail
+  error semantics, structured output_schema requirements, and keeping source citations
+  in tool-return metadata instead of the model's context.
 triage: null
 skip_reason: null
 source: pydantic
@@ -12,7 +18,7 @@ url: https://pydantic.dev/articles/youdotcom-pydantic-ai-harness
 author: Laís Carvalho
 published: '2026-09-01'
 fetched: '2026-09-02T06:18:28Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 2489
 content_sha256: 969363140a0cef5bebbcdc1babd58f2d2e460f9e1f964f6fd6bda33173b86f87

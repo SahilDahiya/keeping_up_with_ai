@@ -1,7 +1,9 @@
 # inference
 
-130 articles.
+131 articles.
 
+- **2026-09-02** — [The efficient frontier of LLM inference](<optimization/The efficient frontier of LLM inference.md>) · `optimization` · baseten
+  Surveys LLM inference engineering as tradeoffs (batch sizing; tensor/expert/attention-data parallelism; quantization to MXFP4/NVFP4) versus techniques that push the whole frontier out (CUDA kernel optimization, EAGLE-3/DSpark/DFlash speculative decoding, prefill/decode disaggregation).
 - **2026-08-29** — [Agentic kernels in production](<kernels/Agentic kernels in production.md>) · `kernels` · baseten
   Baseten built a self-improving agentic framework that profiles production diffusion-model serving (Qwen-Image, FLUX.2 on B300 GPUs with SGLang), then generates, benchmarks, and ships GPU kernel optimizations like pre-packed FP8 scales directly into the serving stack, cutting end-to-end latency 42.3% on Qwen-Image, 15.2% on FLUX.2, and lifting throughput 5.5% on MiniMax M3.
 - **2026-08-19** — [Gisting: Compressing LLM Agent context to ↑ throughput and ↓ cost (2026)](<optimization/Gisting Compressing LLM Agent context to ↑ throughput and ↓ cost (2026).md>) · `optimization` · shopify

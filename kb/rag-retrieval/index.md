@@ -79,6 +79,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-09-01** — [You.com is now a Pydantic AI capability](<../agents/tool-use/You.com is now a Pydantic AI capability.md>) · `tool-use` · pydantic
+  Walks through wiring You.com's YouSearch/YouResearch web-search and research APIs into Pydantic AI Harness as agent capabilities, covering context-cost controls (num_results, extraction_mode, max_text_chars, freshness), ModelRetry vs. hard-fail error semantics, structured output_schema requirements, and keeping source citations in tool-return metadata instead of the model's context.
 - **2026-07-29** — [Cresta Insights: One System to Understand Your CX](<../agents/planning/Cresta Insights One System to Understand Your CX.md>) · `planning` · cresta
   AI Analyst is recast from a question-answering tool into a research agent that builds and autonomously executes a multi-step plan: scoping data, running analyses, checking whether findings are meaningful, and deciding what step to take next. Also replaces hand-maintained keyword categories in Topic Discovery and adds Real-Time Trends.
 - **2026-06-17** — [Clustering billions of products for agentic commerce with Catalog API (2026)](<../product-engineering/case-studies/Clustering billions of products for agentic commerce with Catalog API (2026).md>) · `case-studies` · shopify

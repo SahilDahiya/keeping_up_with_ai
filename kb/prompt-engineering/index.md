@@ -47,6 +47,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-09-01** — [You.com is now a Pydantic AI capability](<../agents/tool-use/You.com is now a Pydantic AI capability.md>) · `tool-use` · pydantic
+  Walks through wiring You.com's YouSearch/YouResearch web-search and research APIs into Pydantic AI Harness as agent capabilities, covering context-cost controls (num_results, extraction_mode, max_text_chars, freshness), ModelRetry vs. hard-fail error semantics, structured output_schema requirements, and keeping source citations in tool-return metadata instead of the model's context.
 - **2026-08-19** — [Gisting: Compressing LLM Agent context to ↑ throughput and ↓ cost (2026)](<../inference/optimization/Gisting Compressing LLM Agent context to ↑ throughput and ↓ cost (2026).md>) · `optimization` · shopify
   Shopify's Sidekick GraphQL agent uses gisting -- training special 'gist' token embeddings via knowledge distillation -- to compress its ~6,000-token system prompt to ~1,500 gist tokens (4:1), cutting median TTFT from 438ms to 354ms and end-to-end latency from 6.8s to 4.2s while raising throughput from 20.2 to 23.4 QPS at 350 RPM, reducing the GPUs needed to serve the agent.
 - **2026-08-13** — [StackOne is now a Pydantic AI capability](<../agents/harness/StackOne is now a Pydantic AI capability.md>) · `harness` · pydantic
