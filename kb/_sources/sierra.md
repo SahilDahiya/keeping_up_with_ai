@@ -1,7 +1,9 @@
 # sierra
 
-45 articles.
+46 articles.
 
+- **2026-09-01** — [What is voice AI? Enterprise guide to AI voice agents](<../evals-observability/evaluation/What is voice AI Enterprise guide to AI voice agents.md>) · `evaluation` · sierra
+  Argues enterprise voice AI agents must be evaluated end-to-end rather than on voice quality alone, laying out seven call-readiness tests (latency, turn-taking, hearing, context, action, guardrails, handoff) and citing Sierra's tau-voice benchmark (278 grounded tasks) and Voice Sims for realistic multi-condition testing.
 - **2026-08-20** — [Release governance: guardrails for agents at scale](<../infra-platform/deployment/Release governance guardrails for agents at scale.md>) · `deployment` · sierra
   Sierra describes release governance for its agent platform: Agent Checks (a linter flagging missing tools, conflicting instructions, and weak authentication on sensitive lookups), Simulations as pre-production quality gates, merge approval workflows with a dedicated Reviewer role, and split-traffic canary releases backed by immutable, instantly rollback-able snapshots.
 - **2026-08-13** — [Defense in depth in the age of agents](<../product-engineering/security/Defense in depth in the age of agents.md>) · `security` · sierra

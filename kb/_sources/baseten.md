@@ -1,7 +1,9 @@
 # baseten
 
-82 articles.
+83 articles.
 
+- **2026-09-02** — [Best open-source models for post-training](<../models/fine-tuning/Best open-source models for post-training.md>) · `fine-tuning` · baseten
+  Ranks open-source models for post-training by cost tier based on active parameters, total parameters, and KV cache size: DeepSeek-V4-Flash for long-context cost-sensitive work, GLM-5.2 for fast async RL, Kimi K2.6/K2.7 Code for stable fine-tuning, Nemotron-3-Super-120B for native-FP4 efficiency, and Qwen3.6-35B-A3B as the cheap safe default.
 - **2026-09-02** — [The efficient frontier of LLM inference](<../inference/optimization/The efficient frontier of LLM inference.md>) · `optimization` · baseten
   Surveys LLM inference engineering as tradeoffs (batch sizing; tensor/expert/attention-data parallelism; quantization to MXFP4/NVFP4) versus techniques that push the whole frontier out (CUDA kernel optimization, EAGLE-3/DSpark/DFlash speculative decoding, prefill/decode disaggregation).
 - **2026-08-29** — [Agentic kernels in production](<../inference/kernels/Agentic kernels in production.md>) · `kernels` · baseten

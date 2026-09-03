@@ -1,7 +1,9 @@
 # product-engineering
 
-59 articles.
+60 articles.
 
+- **2026-09-02** — [How Botika runs full-stack generative AI on Modal | Modal Blog](<case-studies/How Botika runs full-stack generative AI on Modal Modal Blog.md>) · `case-studies` · modal
+  Case study on Botika running a full-stack generative AI operation on Modal: a 100TB image data pipeline with under 1% error rate and no orchestrator, multi-node training with RDMA networking for proprietary 4K image-generation foundation models, and an RL infrastructure (reward servers, iterative reward modeling, rollouts) built from Modal primitives in under a day.
 - **2026-08-25** — [The two AI gateway patterns in production inference](<architecture/The two AI gateway patterns in production inference.md>) · `architecture` · baseten
   Distinguishes two AI gateway architectures — access gateways for application-side multi-provider routing vs. serving gateways for model owners exposing their own models to customers — and traces how a serving gateway handles identity, routing, tenant protection, metering, and auditable request logs.
 - **2026-08-13** — [Defense in depth in the age of agents](<security/Defense in depth in the age of agents.md>) · `security` · sierra
@@ -123,6 +125,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-09-01** — [What is voice AI? Enterprise guide to AI voice agents](<../evals-observability/evaluation/What is voice AI Enterprise guide to AI voice agents.md>) · `evaluation` · sierra
+  Argues enterprise voice AI agents must be evaluated end-to-end rather than on voice quality alone, laying out seven call-readiness tests (latency, turn-taking, hearing, context, action, guardrails, handoff) and citing Sierra's tau-voice benchmark (278 grounded tasks) and Voice Sims for realistic multi-condition testing.
 - **2026-08-11** — [Teaching agents to navigate janky IVR systems](<../agents/tool-use/Teaching agents to navigate janky IVR systems.md>) · `tool-use` · sierra
   Details five concrete failure modes voice agents hit navigating IVR phone trees for other companies (response timing during preambles, keyword vs conversational response modes, detecting a human vs hold-music greetings, unpredictable/broken menu trees, and DTMF tone-vs-speech input handling), which raised Sierra agents' IVR success rate from ~50% to 85%.
 - **2026-08-03** — [Laguna S 2.1 goes Greek: a repository-scale game transformation](<../agents/tool-use/Laguna S 2.1 goes Greek a repository-scale game transformation.md>) · `tool-use` · baseten

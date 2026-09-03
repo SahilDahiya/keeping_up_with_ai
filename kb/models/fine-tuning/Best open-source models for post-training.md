@@ -1,10 +1,16 @@
 ---
 title: Best open-source models for post-training
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: models
+subtopic: fine-tuning
+secondary_topics:
+- inference/optimization
+- inference/hardware
+summary: 'Ranks open-source models for post-training by cost tier based on active
+  parameters, total parameters, and KV cache size: DeepSeek-V4-Flash for long-context
+  cost-sensitive work, GLM-5.2 for fast async RL, Kimi K2.6/K2.7 Code for stable fine-tuning,
+  Nemotron-3-Super-120B for native-FP4 efficiency, and Qwen3.6-35B-A3B as the cheap
+  safe default.'
 triage: null
 skip_reason: null
 source: baseten
@@ -12,7 +18,7 @@ url: https://www.baseten.co/blog/best-open-source-models-for-post-training/
 author: Chloe Florit
 published: '2026-09-02'
 fetched: '2026-09-03T06:11:00Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1739
 content_sha256: 37866338983e4ffed49ddb14d0cea74dfd8516edf68b79fd3ba8cf17aba61096

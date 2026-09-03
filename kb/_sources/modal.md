@@ -1,7 +1,9 @@
 # modal
 
-36 articles.
+37 articles.
 
+- **2026-09-02** — [How Botika runs full-stack generative AI on Modal | Modal Blog](<../product-engineering/case-studies/How Botika runs full-stack generative AI on Modal Modal Blog.md>) · `case-studies` · modal
+  Case study on Botika running a full-stack generative AI operation on Modal: a 100TB image data pipeline with under 1% error rate and no orchestrator, multi-node training with RDMA networking for proprietary 4K image-generation foundation models, and an RL infrastructure (reward servers, iterative reward modeling, rollouts) built from Modal primitives in under a day.
 - **2026-08-04** — [Bringing serverless functions closer to the speed of wire | Modal Blog](<../inference/optimization/Bringing serverless functions closer to the speed of wire Modal Blog.md>) · `optimization` · modal
   Modal rewrote its Function I/O plane in Go and deployed it across 4+ regions with a routing_region flag, cutting p50 end-to-end Function Call latency by ~80ms; also covers async offloading of non-critical work, JWT-based auth refresh, and sticking with Redis 7.1 over Valkey/Redis 7.2 after observing CPU spikes under load.
 - **2026-07-27** — [Kimi K3 by Moonshot now available on Modal | Modal Blog](<../inference/speculative-decoding/Kimi K3 by Moonshot now available on Modal Modal Blog.md>) · `speculative-decoding` · modal

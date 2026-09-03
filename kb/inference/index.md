@@ -267,6 +267,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-09-02** — [Best open-source models for post-training](<../models/fine-tuning/Best open-source models for post-training.md>) · `fine-tuning` · baseten
+  Ranks open-source models for post-training by cost tier based on active parameters, total parameters, and KV cache size: DeepSeek-V4-Flash for long-context cost-sensitive work, GLM-5.2 for fast async RL, Kimi K2.6/K2.7 Code for stable fine-tuning, Nemotron-3-Super-120B for native-FP4 efficiency, and Qwen3.6-35B-A3B as the cheap safe default.
 - **2026-08-28** — [GLM-5.3 vs. GLM-5.3 Flash on DeepSWE: Cost, Coding, and Routing](<../models/benchmarks/GLM-5.3 vs. GLM-5.3 Flash on DeepSWE Cost, Coding, and Routing.md>) · `benchmarks` · together
   Benchmarks GLM-5.3 against its distilled GLM-5.3 Flash sibling on 900 DeepSWE rollouts: a Flash-first, escalate-on-test-failure cascade solves 80.9% of tasks at $1.70 vs. the full model's 69.0% at $3.99, showing distillation mainly cost first-try reliability (recoverable via retries) rather than ceiling capability, at 17x lower per-rollout price.
 - **2026-08-28** — [GLM 5.3: Scaling with post-training, intuitively explained](<../models/reinforcement-learning/GLM 5.3 Scaling with post-training, intuitively explained.md>) · `reinforcement-learning` · baseten

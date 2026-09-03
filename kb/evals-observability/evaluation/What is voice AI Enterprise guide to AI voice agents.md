@@ -1,10 +1,14 @@
 ---
 title: What is voice AI? Enterprise guide to AI voice agents
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: evals-observability
+subtopic: evaluation
+secondary_topics:
+- product-engineering/ux-patterns
+summary: Argues enterprise voice AI agents must be evaluated end-to-end rather than
+  on voice quality alone, laying out seven call-readiness tests (latency, turn-taking,
+  hearing, context, action, guardrails, handoff) and citing Sierra's tau-voice benchmark
+  (278 grounded tasks) and Voice Sims for realistic multi-condition testing.
 triage: null
 skip_reason: null
 source: sierra
@@ -12,7 +16,7 @@ url: https://sierra.ai/blog/what-is-voice-ai
 author: Jonathan Costet
 published: '2026-09-01'
 fetched: '2026-09-03T06:10:56Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1938
 content_sha256: ffc8160fe7fce058af583a92a9d3dcf6d1113f381f880cc17b47bc73cfdb79ff

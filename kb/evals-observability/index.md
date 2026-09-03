@@ -1,7 +1,9 @@
 # evals-observability
 
-112 articles.
+113 articles.
 
+- **2026-09-01** — [What is voice AI? Enterprise guide to AI voice agents](<evaluation/What is voice AI Enterprise guide to AI voice agents.md>) · `evaluation` · sierra
+  Argues enterprise voice AI agents must be evaluated end-to-end rather than on voice quality alone, laying out seven call-readiness tests (latency, turn-taking, hearing, context, action, guardrails, handoff) and citing Sierra's tau-voice benchmark (278 grounded tasks) and Voice Sims for realistic multi-condition testing.
 - **2026-08-28** — [The Open ASR Leaderboard Adds Its First Global South Language](<benchmark-design/The Open ASR Leaderboard Adds Its First Global South Language.md>) · `benchmark-design` · huggingface
   Adds Hindi as the Open ASR Leaderboard's first Indic language via two new evaluation sets, Monsoon en-IN and hi-IN, built across nine variation axes (geography, device, accent, speech rate) with speaker-disjoint public/private splits (4,888 speakers) and lattice-based reference transcripts for Hindi's orthographic variation, to surface demographic WER disparities that aggregate benchmark scores hide.
 - **2026-08-26** — [Best LLM Evaluation Tools 2026 | Pydantic Logfire](<evaluation/Best LLM Evaluation Tools 2026 Pydantic Logfire.md>) · `evaluation` · pydantic

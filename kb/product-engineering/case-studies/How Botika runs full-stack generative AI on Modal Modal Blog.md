@@ -1,10 +1,16 @@
 ---
 title: How Botika runs full-stack generative AI on Modal | Modal Blog
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: product-engineering
+subtopic: case-studies
+secondary_topics:
+- infra-platform/gpu-clusters
+- models/reinforcement-learning
+summary: 'Case study on Botika running a full-stack generative AI operation on Modal:
+  a 100TB image data pipeline with under 1% error rate and no orchestrator, multi-node
+  training with RDMA networking for proprietary 4K image-generation foundation models,
+  and an RL infrastructure (reward servers, iterative reward modeling, rollouts) built
+  from Modal primitives in under a day.'
 triage: null
 skip_reason: null
 source: modal
@@ -12,7 +18,7 @@ url: https://modal.com/blog/botika-case-study
 author: null
 published: '2026-09-02'
 fetched: '2026-09-03T06:11:10Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 916
 content_sha256: b004f6878c6426bd237538149ae21b91e3d1a03a4855d171d900c3d09fc6f6a5
