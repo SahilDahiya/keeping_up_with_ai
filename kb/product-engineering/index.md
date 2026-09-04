@@ -1,9 +1,11 @@
 # product-engineering
 
-60 articles.
+61 articles.
 
 - **2026-09-02** — [How Botika runs full-stack generative AI on Modal | Modal Blog](<case-studies/How Botika runs full-stack generative AI on Modal Modal Blog.md>) · `case-studies` · modal
   Case study on Botika running a full-stack generative AI operation on Modal: a 100TB image data pipeline with under 1% error rate and no orchestrator, multi-node training with RDMA networking for proprietary 4K image-generation foundation models, and an RL infrastructure (reward servers, iterative reward modeling, rollouts) built from Modal primitives in under a day.
+- **2026-09-02** — [How River takes security work from a fix to merge (2026)](<security/How River takes security work from a fix to merge (2026).md>) · `security` · shopify
+  Describes River, Shopify's Slack-based AI agent that runs dependency and application vulnerability remediation end-to-end—validating its work ledger against live repo/PR/tracker state, updating patches, and re-checking HEAD before closing—cutting the dependency backlog ~70% in 11 days and raising freshness-gated security merges from ~10% to 80%.
 - **2026-08-25** — [The two AI gateway patterns in production inference](<architecture/The two AI gateway patterns in production inference.md>) · `architecture` · baseten
   Distinguishes two AI gateway architectures — access gateways for application-side multi-provider routing vs. serving gateways for model owners exposing their own models to customers — and traces how a serving gateway handles identity, routing, tenant protection, metering, and auditable request logs.
 - **2026-08-13** — [Defense in depth in the age of agents](<security/Defense in depth in the age of agents.md>) · `security` · sierra

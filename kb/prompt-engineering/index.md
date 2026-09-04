@@ -47,6 +47,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-09-03** — [Fine-tuning a 350M Model for Better Structured Outputs in 100 GRPO Steps](<../models/reinforcement-learning/Fine-tuning a 350M Model for Better Structured Outputs in 100 GRPO Steps.md>) · `reinforcement-learning` · huggingface
+  Fine-tunes LiquidAI's LFM2.5-350M with GRPO via the TRL library on ~500 samples over 100 steps (runnable on a free-tier Colab/Kaggle GPU), raising structured-output schema compliance on the IFStruct benchmark from 22.6% to 29.7%.
 - **2026-09-01** — [You.com is now a Pydantic AI capability](<../agents/tool-use/You.com is now a Pydantic AI capability.md>) · `tool-use` · pydantic
   Walks through wiring You.com's YouSearch/YouResearch web-search and research APIs into Pydantic AI Harness as agent capabilities, covering context-cost controls (num_results, extraction_mode, max_text_chars, freshness), ModelRetry vs. hard-fail error semantics, structured output_schema requirements, and keeping source citations in tool-return metadata instead of the model's context.
 - **2026-08-19** — [Gisting: Compressing LLM Agent context to ↑ throughput and ↓ cost (2026)](<../inference/optimization/Gisting Compressing LLM Agent context to ↑ throughput and ↓ cost (2026).md>) · `optimization` · shopify

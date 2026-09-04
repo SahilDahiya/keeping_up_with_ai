@@ -1,7 +1,13 @@
 # huggingface
 
-166 articles.
+169 articles.
 
+- **2026-09-03** — [Give Your Coding Agents a Memory You Own](<../agents/memory-context/Give Your Coding Agents a Memory You Own.md>) · `memory-context` · huggingface
+  Introduces funes, a local-first durable memory layer for coding agents (Claude Code, Codex, pi, Hermes) that indexes, retrieves, and ranks past agent session traces so an agent can `recall` prior decisions and their provenance instead of losing context across sessions.
+- **2026-09-03** — [Fine-tuning a 350M Model for Better Structured Outputs in 100 GRPO Steps](<../models/reinforcement-learning/Fine-tuning a 350M Model for Better Structured Outputs in 100 GRPO Steps.md>) · `reinforcement-learning` · huggingface
+  Fine-tunes LiquidAI's LFM2.5-350M with GRPO via the TRL library on ~500 samples over 100 steps (runnable on a free-tier Colab/Kaggle GPU), raising structured-output schema compliance on the IFStruct benchmark from 22.6% to 29.7%.
+- **2026-09-03** — [Training a coding model to paint watercolours with TRL and OpenEnv](<../models/reinforcement-learning/Training a coding model to paint watercolours with TRL and OpenEnv.md>) · `reinforcement-learning` · huggingface
+  Reproduces an RL recipe that trains Qwen3.5-35B-A3B (LoRA) with TRL and OpenEnv environments hosted as HF Spaces/Jobs to write p5.brush JavaScript that paints watercolours, comparing three reward mixes end-to-end on the Hub.
 - **2026-08-28** — [The Open ASR Leaderboard Adds Its First Global South Language](<../evals-observability/benchmark-design/The Open ASR Leaderboard Adds Its First Global South Language.md>) · `benchmark-design` · huggingface
   Adds Hindi as the Open ASR Leaderboard's first Indic language via two new evaluation sets, Monsoon en-IN and hi-IN, built across nine variation axes (geography, device, accent, speech rate) with speaker-disjoint public/private splits (4,888 speakers) and lattice-based reference transcripts for Hindi's orthographic variation, to surface demographic WER disparities that aggregate benchmark scores hide.
 - **2026-08-26** — [Training and Finetuning Multi-Vector Embedding Models with Sentence Transformers](<../rag-retrieval/embeddings/Training and Finetuning Multi-Vector Embedding Models with Sentence Transformers.md>) · `embeddings` · huggingface

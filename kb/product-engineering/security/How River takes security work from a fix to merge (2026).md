@@ -1,10 +1,15 @@
 ---
 title: How River takes security work from a fix to merge (2026)
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: product-engineering
+subtopic: security
+secondary_topics:
+- agents/harness
+summary: Describes River, Shopify's Slack-based AI agent that runs dependency and
+  application vulnerability remediation end-to-end—validating its work ledger against
+  live repo/PR/tracker state, updating patches, and re-checking HEAD before closing—cutting
+  the dependency backlog ~70% in 11 days and raising freshness-gated security merges
+  from ~10% to 80%.
 triage: null
 skip_reason: null
 source: shopify
@@ -12,7 +17,7 @@ url: https://shopify.engineering/river-vulnerability-remediation
 author: Erin Son
 published: '2026-09-02'
 fetched: '2026-09-04T06:16:08Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 2021
 content_sha256: 3686288992ef5ebcdfadd37e034d237964e4767b6dda813cefe15c9c9317a0c7

@@ -1,7 +1,9 @@
 # agents
 
-98 articles.
+99 articles.
 
+- **2026-09-03** — [Give Your Coding Agents a Memory You Own](<memory-context/Give Your Coding Agents a Memory You Own.md>) · `memory-context` · huggingface
+  Introduces funes, a local-first durable memory layer for coding agents (Claude Code, Codex, pi, Hermes) that indexes, retrieves, and ranks past agent session traces so an agent can `recall` prior decisions and their provenance instead of losing context across sessions.
 - **2026-09-01** — [You.com is now a Pydantic AI capability](<tool-use/You.com is now a Pydantic AI capability.md>) · `tool-use` · pydantic
   Walks through wiring You.com's YouSearch/YouResearch web-search and research APIs into Pydantic AI Harness as agent capabilities, covering context-cost controls (num_results, extraction_mode, max_text_chars, freshness), ModelRetry vs. hard-fail error semantics, structured output_schema requirements, and keeping source citations in tool-return metadata instead of the model's context.
 - **2026-08-26** — [Realtime voice agents in Pydantic AI](<harness/Realtime voice agents in Pydantic AI.md>) · `harness` · pydantic
@@ -201,6 +203,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-09-02** — [How River takes security work from a fix to merge (2026)](<../product-engineering/security/How River takes security work from a fix to merge (2026).md>) · `security` · shopify
+  Describes River, Shopify's Slack-based AI agent that runs dependency and application vulnerability remediation end-to-end—validating its work ledger against live repo/PR/tracker state, updating patches, and re-checking HEAD before closing—cutting the dependency backlog ~70% in 11 days and raising freshness-gated security merges from ~10% to 80%.
 - **2026-08-29** — [Agentic kernels in production](<../inference/kernels/Agentic kernels in production.md>) · `kernels` · baseten
   Baseten built a self-improving agentic framework that profiles production diffusion-model serving (Qwen-Image, FLUX.2 on B300 GPUs with SGLang), then generates, benchmarks, and ships GPU kernel optimizations like pre-packed FP8 scales directly into the serving stack, cutting end-to-end latency 42.3% on Qwen-Image, 15.2% on FLUX.2, and lifting throughput 5.5% on MiniMax M3.
 - **2026-08-26** — [DeepSeek V4 Pro: Tops SWE-Bench & Cuts Cost per Task by 3x vs. Fable 5](<../models/benchmarks/DeepSeek V4 Pro Tops SWE-Bench & Cuts Cost per Task by 3x vs. Fable 5.md>) · `benchmarks` · fireworks

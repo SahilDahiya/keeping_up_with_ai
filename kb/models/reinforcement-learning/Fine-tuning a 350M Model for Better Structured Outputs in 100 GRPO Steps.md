@@ -1,10 +1,13 @@
 ---
 title: Fine-tuning a 350M Model for Better Structured Outputs in 100 GRPO Steps
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: models
+subtopic: reinforcement-learning
+secondary_topics:
+- prompt-engineering/structured-output
+summary: Fine-tunes LiquidAI's LFM2.5-350M with GRPO via the TRL library on ~500 samples
+  over 100 steps (runnable on a free-tier Colab/Kaggle GPU), raising structured-output
+  schema compliance on the IFStruct benchmark from 22.6% to 29.7%.
 triage: null
 skip_reason: null
 source: huggingface
@@ -12,7 +15,7 @@ url: https://huggingface.co/blog/grpo-with-trl-ifstruct
 author: Leonie Monigatti; Ben Burtenshaw; Sergio Paniego
 published: '2026-09-03'
 fetched: '2026-09-04T06:15:50Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 470
 content_sha256: f96896d974ff38ac8d22eea6c1f0f9c9a16a5b8092c18b943963bc78198b3e3a

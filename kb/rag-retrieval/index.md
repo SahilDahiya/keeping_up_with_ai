@@ -79,6 +79,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-09-03** — [Give Your Coding Agents a Memory You Own](<../agents/memory-context/Give Your Coding Agents a Memory You Own.md>) · `memory-context` · huggingface
+  Introduces funes, a local-first durable memory layer for coding agents (Claude Code, Codex, pi, Hermes) that indexes, retrieves, and ranks past agent session traces so an agent can `recall` prior decisions and their provenance instead of losing context across sessions.
 - **2026-09-01** — [You.com is now a Pydantic AI capability](<../agents/tool-use/You.com is now a Pydantic AI capability.md>) · `tool-use` · pydantic
   Walks through wiring You.com's YouSearch/YouResearch web-search and research APIs into Pydantic AI Harness as agent capabilities, covering context-cost controls (num_results, extraction_mode, max_text_chars, freshness), ModelRetry vs. hard-fail error semantics, structured output_schema requirements, and keeping source citations in tool-return metadata instead of the model's context.
 - **2026-07-29** — [Cresta Insights: One System to Understand Your CX](<../agents/planning/Cresta Insights One System to Understand Your CX.md>) · `planning` · cresta

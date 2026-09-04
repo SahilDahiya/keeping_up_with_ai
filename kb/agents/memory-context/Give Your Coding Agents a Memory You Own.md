@@ -1,10 +1,14 @@
 ---
 title: Give Your Coding Agents a Memory You Own
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: agents
+subtopic: memory-context
+secondary_topics:
+- rag-retrieval/pipelines
+summary: Introduces funes, a local-first durable memory layer for coding agents (Claude
+  Code, Codex, pi, Hermes) that indexes, retrieves, and ranks past agent session traces
+  so an agent can `recall` prior decisions and their provenance instead of losing
+  context across sessions.
 triage: null
 skip_reason: null
 source: huggingface
@@ -12,7 +16,7 @@ url: https://huggingface.co/blog/funes
 author: David Corvoysier
 published: '2026-09-03'
 fetched: '2026-09-04T06:15:56Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1600
 content_sha256: c593437e054edbade8e1ffea450e551e52fede670d29e95ef26a7e8fcaabfbeb

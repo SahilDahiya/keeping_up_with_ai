@@ -1,7 +1,11 @@
 # models
 
-188 articles.
+190 articles.
 
+- **2026-09-03** — [Fine-tuning a 350M Model for Better Structured Outputs in 100 GRPO Steps](<reinforcement-learning/Fine-tuning a 350M Model for Better Structured Outputs in 100 GRPO Steps.md>) · `reinforcement-learning` · huggingface
+  Fine-tunes LiquidAI's LFM2.5-350M with GRPO via the TRL library on ~500 samples over 100 steps (runnable on a free-tier Colab/Kaggle GPU), raising structured-output schema compliance on the IFStruct benchmark from 22.6% to 29.7%.
+- **2026-09-03** — [Training a coding model to paint watercolours with TRL and OpenEnv](<reinforcement-learning/Training a coding model to paint watercolours with TRL and OpenEnv.md>) · `reinforcement-learning` · huggingface
+  Reproduces an RL recipe that trains Qwen3.5-35B-A3B (LoRA) with TRL and OpenEnv environments hosted as HF Spaces/Jobs to write p5.brush JavaScript that paints watercolours, comparing three reward mixes end-to-end on the Hub.
 - **2026-09-02** — [Best open-source models for post-training](<fine-tuning/Best open-source models for post-training.md>) · `fine-tuning` · baseten
   Ranks open-source models for post-training by cost tier based on active parameters, total parameters, and KV cache size: DeepSeek-V4-Flash for long-context cost-sensitive work, GLM-5.2 for fast async RL, Kimi K2.6/K2.7 Code for stable fine-tuning, Nemotron-3-Super-120B for native-FP4 efficiency, and Qwen3.6-35B-A3B as the cheap safe default.
 - **2026-08-31** — [Training API now generally available | Fireworks](<reinforcement-learning/Training API now generally available Fireworks.md>) · `reinforcement-learning` · fireworks

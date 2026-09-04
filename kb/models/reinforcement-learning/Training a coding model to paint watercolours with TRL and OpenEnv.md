@@ -1,10 +1,12 @@
 ---
 title: Training a coding model to paint watercolours with TRL and OpenEnv
 kind: blog
-topic: null
-subtopic: null
+topic: models
+subtopic: reinforcement-learning
 secondary_topics: []
-summary: null
+summary: Reproduces an RL recipe that trains Qwen3.5-35B-A3B (LoRA) with TRL and OpenEnv
+  environments hosted as HF Spaces/Jobs to write p5.brush JavaScript that paints watercolours,
+  comparing three reward mixes end-to-end on the Hub.
 triage: null
 skip_reason: null
 source: huggingface
@@ -12,7 +14,7 @@ url: https://huggingface.co/blog/train-to-paint-with-code
 author: Sergio Paniego
 published: '2026-09-03'
 fetched: '2026-09-04T06:16:02Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 4677
 content_sha256: ebed0345d6018ad14e2e8b2cd2b4748483c5c12fb3e4163dd6b7c94979c51950
