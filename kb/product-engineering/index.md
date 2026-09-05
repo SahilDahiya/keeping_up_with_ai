@@ -1,7 +1,9 @@
 # product-engineering
 
-61 articles.
+62 articles.
 
+- **2026-09-03** — [Part I: Replacing FinServ IVRs with an AI Agent: A 3-Phase Playbook](<case-studies/Part I Replacing FinServ IVRs with an AI Agent A 3-Phase Playbook.md>) · `case-studies` · cresta
+  Cresta's playbook for replacing financial-services IVR phone trees with an AI agent: how to measure call containment honestly (exclude after-hours artifacts, don't count abandoned calls as containment, watch composition not just the headline number), and why phased, blast-radius-limited rollouts with shadow testing and UAT beat a single big-bang launch, typically lifting containment from a 20-30% IVR baseline to ~40% after replacement and 60-85% in later phases.
 - **2026-09-02** — [How Botika runs full-stack generative AI on Modal | Modal Blog](<case-studies/How Botika runs full-stack generative AI on Modal Modal Blog.md>) · `case-studies` · modal
   Case study on Botika running a full-stack generative AI operation on Modal: a 100TB image data pipeline with under 1% error rate and no orchestrator, multi-node training with RDMA networking for proprietary 4K image-generation foundation models, and an RL infrastructure (reward servers, iterative reward modeling, rollouts) built from Modal primitives in under a day.
 - **2026-09-02** — [How River takes security work from a fix to merge (2026)](<security/How River takes security work from a fix to merge (2026).md>) · `security` · shopify
@@ -127,6 +129,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-09-04** — [Building games with Astra | OpenAI Developers](<../agents/tool-use/Building games with Astra OpenAI Developers.md>) · `tool-use` · openai-devs
+  Walks through building Void Explorer, a TypeScript/Three.js WebGPU space game, with OpenAI's Astra coding agent: a floating-origin coordinate system and quadtree LOD terrain streamed from Web Workers, plus measured optimization work (indexed meshes cut transferred terrain data from ~35MB to ~15MB; a stabilized LOD scheduler cut discarded terrain jobs from 6,074 to 13 during a simulated descent; a ship-model swap cut draw calls from 119 to 77 and average frame time from 251ms to 199ms). Also covers exposing a debug state interface and named Playwright test scenes so the agent could reproduce bugs and verify performance regressions on its own.
 - **2026-09-01** — [What is voice AI? Enterprise guide to AI voice agents](<../evals-observability/evaluation/What is voice AI Enterprise guide to AI voice agents.md>) · `evaluation` · sierra
   Argues enterprise voice AI agents must be evaluated end-to-end rather than on voice quality alone, laying out seven call-readiness tests (latency, turn-taking, hearing, context, action, guardrails, handoff) and citing Sierra's tau-voice benchmark (278 grounded tasks) and Voice Sims for realistic multi-condition testing.
 - **2026-08-11** — [Teaching agents to navigate janky IVR systems](<../agents/tool-use/Teaching agents to navigate janky IVR systems.md>) · `tool-use` · sierra

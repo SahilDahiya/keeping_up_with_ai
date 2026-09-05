@@ -1,10 +1,19 @@
 ---
 title: Building games with Astra | OpenAI Developers
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: agents
+subtopic: tool-use
+secondary_topics:
+- product-engineering/case-studies
+summary: 'Walks through building Void Explorer, a TypeScript/Three.js WebGPU space
+  game, with OpenAI''s Astra coding agent: a floating-origin coordinate system and
+  quadtree LOD terrain streamed from Web Workers, plus measured optimization work
+  (indexed meshes cut transferred terrain data from ~35MB to ~15MB; a stabilized LOD
+  scheduler cut discarded terrain jobs from 6,074 to 13 during a simulated descent;
+  a ship-model swap cut draw calls from 119 to 77 and average frame time from 251ms
+  to 199ms). Also covers exposing a debug state interface and named Playwright test
+  scenes so the agent could reproduce bugs and verify performance regressions on its
+  own.'
 triage: null
 skip_reason: null
 source: openai-devs
@@ -12,7 +21,7 @@ url: https://developers.openai.com/blog/how-to-build-games-with-astra/
 author: null
 published: '2026-09-04'
 fetched: '2026-09-05T06:08:58Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 3135
 content_sha256: 9189395aecb424db262b064f14bc30abff0df5c0bd801596c05d433aa9866294

@@ -1,10 +1,16 @@
 ---
 title: 'Part I: Replacing FinServ IVRs with an AI Agent: A 3-Phase Playbook'
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: product-engineering
+subtopic: case-studies
+secondary_topics:
+- evals-observability/monitoring
+summary: 'Cresta''s playbook for replacing financial-services IVR phone trees with
+  an AI agent: how to measure call containment honestly (exclude after-hours artifacts,
+  don''t count abandoned calls as containment, watch composition not just the headline
+  number), and why phased, blast-radius-limited rollouts with shadow testing and UAT
+  beat a single big-bang launch, typically lifting containment from a 20-30% IVR baseline
+  to ~40% after replacement and 60-85% in later phases.'
 triage: null
 skip_reason: null
 source: cresta
@@ -12,7 +18,7 @@ url: https://cresta.com/blog/part-i-replacing-finserv-ivrs-with-an-ai-agent-a-3-
 author: Randy Young
 published: '2026-09-03'
 fetched: '2026-09-05T06:08:49Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 829
 content_sha256: 2655b00844677f075001d810724dea998536d8f81253b2e2cd209ff86dd47245

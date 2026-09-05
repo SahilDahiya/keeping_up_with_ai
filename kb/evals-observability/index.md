@@ -231,6 +231,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-09-03** — [Part I: Replacing FinServ IVRs with an AI Agent: A 3-Phase Playbook](<../product-engineering/case-studies/Part I Replacing FinServ IVRs with an AI Agent A 3-Phase Playbook.md>) · `case-studies` · cresta
+  Cresta's playbook for replacing financial-services IVR phone trees with an AI agent: how to measure call containment honestly (exclude after-hours artifacts, don't count abandoned calls as containment, watch composition not just the headline number), and why phased, blast-radius-limited rollouts with shadow testing and UAT beat a single big-bang launch, typically lifting containment from a 20-30% IVR baseline to ~40% after replacement and 60-85% in later phases.
 - **2026-08-26** — [Realtime voice agents in Pydantic AI](<../agents/harness/Realtime voice agents in Pydantic AI.md>) · `harness` · pydantic
   Pydantic AI extends its provider-agnostic Agent object to realtime speech-to-speech voice (OpenAI Realtime, Azure OpenAI, Gemini Live, xAI Grok Voice) behind one RealtimeModel interface, reusing the same server-side tools, typed message history, and OpenTelemetry/Logfire tracing as text agents; voice and text runs can hand off via shared message_history, and calls can route through the Pydantic AI Gateway for unified spend limits since realtime audio is billed per-minute or per audio-token.
 - **2026-08-26** — [Fireworks AI](<../models/benchmarks/Fireworks AI.md>) · `benchmarks` · fireworks

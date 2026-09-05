@@ -1,7 +1,9 @@
 # cresta
 
-68 articles.
+69 articles.
 
+- **2026-09-03** — [Part I: Replacing FinServ IVRs with an AI Agent: A 3-Phase Playbook](<../product-engineering/case-studies/Part I Replacing FinServ IVRs with an AI Agent A 3-Phase Playbook.md>) · `case-studies` · cresta
+  Cresta's playbook for replacing financial-services IVR phone trees with an AI agent: how to measure call containment honestly (exclude after-hours artifacts, don't count abandoned calls as containment, watch composition not just the headline number), and why phased, blast-radius-limited rollouts with shadow testing and UAT beat a single big-bang launch, typically lifting containment from a 20-30% IVR baseline to ~40% after replacement and 60-85% in later phases.
 - **2026-08-26** — [Why Pay for Every Question Twice? Precomputing Answers for Real-Time RAG](<../rag-retrieval/pipelines/Why Pay for Every Question Twice Precomputing Answers for Real-Time RAG.md>) · `pipelines` · cresta
   Cresta's Precomputed Answer Engine (PAE) precomputes Q&A pairs for a contact-center RAG system using lexical matching plus a two-stage embedding-retrieval + LLM-verification semantic match, falling back to the full retrieve-rank-generate pipeline on a miss; in production it hits ~40% of queries at ~0.7s latency with >80% strict quality pass rates, and continuously refreshes the cache to track usage and knowledge-base drift.
 - **2026-08-12** — [Your Brand, Any Language: The New Frontier of Voice Agent Localization](<../models/multimodal/Your Brand, Any Language The New Frontier of Voice Agent Localization.md>) · `multimodal` · cresta

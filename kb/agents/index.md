@@ -1,11 +1,15 @@
 # agents
 
-99 articles.
+101 articles.
 
+- **2026-09-04** — [Building games with Astra | OpenAI Developers](<tool-use/Building games with Astra OpenAI Developers.md>) · `tool-use` · openai-devs
+  Walks through building Void Explorer, a TypeScript/Three.js WebGPU space game, with OpenAI's Astra coding agent: a floating-origin coordinate system and quadtree LOD terrain streamed from Web Workers, plus measured optimization work (indexed meshes cut transferred terrain data from ~35MB to ~15MB; a stabilized LOD scheduler cut discarded terrain jobs from 6,074 to 13 during a simulated descent; a ship-model swap cut draw calls from 119 to 77 and average frame time from 251ms to 199ms). Also covers exposing a debug state interface and named Playwright test scenes so the agent could reproduce bugs and verify performance regressions on its own.
 - **2026-09-03** — [Give Your Coding Agents a Memory You Own](<memory-context/Give Your Coding Agents a Memory You Own.md>) · `memory-context` · huggingface
   Introduces funes, a local-first durable memory layer for coding agents (Claude Code, Codex, pi, Hermes) that indexes, retrieves, and ranks past agent session traces so an agent can `recall` prior decisions and their provenance instead of losing context across sessions.
 - **2026-09-01** — [You.com is now a Pydantic AI capability](<tool-use/You.com is now a Pydantic AI capability.md>) · `tool-use` · pydantic
   Walks through wiring You.com's YouSearch/YouResearch web-search and research APIs into Pydantic AI Harness as agent capabilities, covering context-cost controls (num_results, extraction_mode, max_text_chars, freshness), ModelRetry vs. hard-fail error semantics, structured output_schema requirements, and keeping source citations in tool-return metadata instead of the model's context.
+- **2026-08-26** — [Linguistic drift at the frontier | Pydantic](<harness/Linguistic drift at the frontier Pydantic.md>) · `harness` · pydantic
+  Uses GitHub PR and README analysis to show Claude models (starting with Opus 4.6) seeding a vocabulary tic -- using 'seam' for any interface/boundary -- that then propagates across other frontier models (GPT, DeepSeek, Qwen, GLM) as human-written code carrying the term becomes training/context data; quantifies it with a log-odds-ratio-over-Dirichlet-prior classifier on 4,319 pre-2025 vs. 1,047 2026 GitHub READMEs. Introduces vocabguard, an open-source Pydantic AI 'Capability' that hooks into an agent's structured-output fields, tool arguments, and text output to detect and rewrite drifted vocabulary before it reaches users.
 - **2026-08-26** — [Realtime voice agents in Pydantic AI](<harness/Realtime voice agents in Pydantic AI.md>) · `harness` · pydantic
   Pydantic AI extends its provider-agnostic Agent object to realtime speech-to-speech voice (OpenAI Realtime, Azure OpenAI, Gemini Live, xAI Grok Voice) behind one RealtimeModel interface, reusing the same server-side tools, typed message history, and OpenTelemetry/Logfire tracing as text agents; voice and text runs can hand off via shared message_history, and calls can route through the Pydantic AI Gateway for unified spend limits since realtime audio is billed per-minute or per audio-token.
 - **2026-08-25** — [Automating repetitive work at OpenAI with Codex](<harness/Automating repetitive work at OpenAI with Codex.md>) · `harness` · openai-devs

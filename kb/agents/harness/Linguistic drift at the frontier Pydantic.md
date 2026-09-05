@@ -1,10 +1,18 @@
 ---
 title: Linguistic drift at the frontier | Pydantic
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: agents
+subtopic: harness
+secondary_topics:
+- prompt-engineering/structured-output
+summary: Uses GitHub PR and README analysis to show Claude models (starting with Opus
+  4.6) seeding a vocabulary tic -- using 'seam' for any interface/boundary -- that
+  then propagates across other frontier models (GPT, DeepSeek, Qwen, GLM) as human-written
+  code carrying the term becomes training/context data; quantifies it with a log-odds-ratio-over-Dirichlet-prior
+  classifier on 4,319 pre-2025 vs. 1,047 2026 GitHub READMEs. Introduces vocabguard,
+  an open-source Pydantic AI 'Capability' that hooks into an agent's structured-output
+  fields, tool arguments, and text output to detect and rewrite drifted vocabulary
+  before it reaches users.
 triage: null
 skip_reason: null
 source: pydantic
@@ -12,7 +20,7 @@ url: https://pydantic.dev/articles/linguistic-drift-at-the-frontier
 author: Michael Pfaffenberger
 published: '2026-08-26'
 fetched: '2026-09-05T06:14:38Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 2384
 content_sha256: 1bfdfd53e529d47a7ddbc1c6a8df2fc49d8517b94b097dc35ec46b41eef8d3e5
