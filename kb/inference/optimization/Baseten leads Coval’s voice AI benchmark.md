@@ -1,10 +1,15 @@
 ---
 title: Baseten leads Coval’s voice AI benchmark
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: inference
+subtopic: optimization
+secondary_topics:
+- evals-observability/benchmark-design
+summary: Baseten's STT deployment (Qwen3 ASR 1.7B Streaming) tops Coval's voice AI
+  benchmark, running ~5x faster than OpenAI's while posting the lowest WER; argues
+  voice AI benchmarks must measure the full turn (STT, LLM, TTS, VAD, orchestration,
+  autoscaling) rather than a single model's throughput, since p95 latency and infrastructure
+  placement matter as much as model choice.
 triage: null
 skip_reason: null
 source: baseten
@@ -12,7 +17,7 @@ url: https://www.baseten.co/blog/baseten-leads-covals-voice-ai-benchmark/
 author: Alina Weinstein
 published: '2026-09-08'
 fetched: '2026-09-09T06:10:13Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 863
 content_sha256: c12f8a4903819b2632ab4643030f0e8152f3f5500d4ba3530a826132f38ada16

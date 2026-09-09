@@ -1,10 +1,16 @@
 ---
 title: Optimizing delta weight syncs for managed rollouts
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: inference
+subtopic: optimization
+secondary_topics:
+- models/reinforcement-learning
+summary: Baseten details how it syncs delta weights (XOR of serialized policy bytes,
+  zstd-compressed) to independent rollout GPU clusters for frontier RL training in
+  under 40s with 6s of request pause; a custom decoder reads zstd's own literal/sequence
+  commands to skip materializing the full 716.56 GiB logical output (compressed to
+  1.55 GiB for a GLM-5.3 fixture), and batching sparse updates by destination cut
+  the vLLM pause/load/resume interval from 12s to 6s.
 triage: null
 skip_reason: null
 source: baseten
@@ -12,7 +18,7 @@ url: https://www.baseten.co/blog/optimizing-delta-weight-syncs-for-managed-rollo
 author: Paras Stefanopoulos
 published: '2026-09-08'
 fetched: '2026-09-09T06:10:11Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1729
 content_sha256: c70cdbf7129ad80872c0d31cf2fac65536be6331f49fa01dd5ba0abdb579fa75

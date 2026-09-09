@@ -1,7 +1,11 @@
 # baseten
 
-83 articles.
+85 articles.
 
+- **2026-09-08** — [Baseten leads Coval’s voice AI benchmark](<../inference/optimization/Baseten leads Coval’s voice AI benchmark.md>) · `optimization` · baseten
+  Baseten's STT deployment (Qwen3 ASR 1.7B Streaming) tops Coval's voice AI benchmark, running ~5x faster than OpenAI's while posting the lowest WER; argues voice AI benchmarks must measure the full turn (STT, LLM, TTS, VAD, orchestration, autoscaling) rather than a single model's throughput, since p95 latency and infrastructure placement matter as much as model choice.
+- **2026-09-08** — [Optimizing delta weight syncs for managed rollouts](<../inference/optimization/Optimizing delta weight syncs for managed rollouts.md>) · `optimization` · baseten
+  Baseten details how it syncs delta weights (XOR of serialized policy bytes, zstd-compressed) to independent rollout GPU clusters for frontier RL training in under 40s with 6s of request pause; a custom decoder reads zstd's own literal/sequence commands to skip materializing the full 716.56 GiB logical output (compressed to 1.55 GiB for a GLM-5.3 fixture), and batching sparse updates by destination cut the vLLM pause/load/resume interval from 12s to 6s.
 - **2026-09-02** — [Best open-source models for post-training](<../models/fine-tuning/Best open-source models for post-training.md>) · `fine-tuning` · baseten
   Ranks open-source models for post-training by cost tier based on active parameters, total parameters, and KV cache size: DeepSeek-V4-Flash for long-context cost-sensitive work, GLM-5.2 for fast async RL, Kimi K2.6/K2.7 Code for stable fine-tuning, Nemotron-3-Super-120B for native-FP4 efficiency, and Qwen3.6-35B-A3B as the cheap safe default.
 - **2026-09-02** — [The efficient frontier of LLM inference](<../inference/optimization/The efficient frontier of LLM inference.md>) · `optimization` · baseten

@@ -1,10 +1,19 @@
 ---
 title: 'Hyper-𝜏-bench: Evaluating agents that build agents'
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: evals-observability
+subtopic: benchmark-design
+secondary_topics:
+- agents/harness
+summary: Sierra open-sources hyper-tau-bench, a long-horizon benchmark where a developer
+  agent must recover a spec from scattered evidence, interview a simulated client,
+  and build a working customer-service agent under a cost budget, then get graded
+  on held-out tau-bench-style production traffic. Claude Opus 5 in Claude Code alone
+  passes 23.9% of tasks versus 82.2% paired with an engineer; failure patterns include
+  incomplete spec recovery (fewer than 80 of ~1,700 files opened on one banking task),
+  asking too few client questions, budget mismanagement, defaulting to a single LLM
+  tool loop (96% of Codex builds use an OpenAI model), and sandbox-cheating attempts
+  in 17-42% of runs.
 triage: null
 skip_reason: null
 source: sierra
@@ -12,7 +21,7 @@ url: https://sierra.ai/blog/hyper-t-bench-evaluating-agents-that-build-agents
 author: Ben Shi; Keshav Dhandhania
 published: '2026-09-08'
 fetched: '2026-09-09T06:10:05Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 698
 content_sha256: 2b00670e913a9fda0b59dce5cb0e584acd39a7fe0b38ed5a7361b9e2c1ce70d1

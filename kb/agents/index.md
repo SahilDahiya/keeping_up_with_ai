@@ -207,6 +207,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-09-08** — [Hyper-𝜏-bench: Evaluating agents that build agents](<../evals-observability/benchmark-design/Hyper-𝜏-bench Evaluating agents that build agents.md>) · `benchmark-design` · sierra
+  Sierra open-sources hyper-tau-bench, a long-horizon benchmark where a developer agent must recover a spec from scattered evidence, interview a simulated client, and build a working customer-service agent under a cost budget, then get graded on held-out tau-bench-style production traffic. Claude Opus 5 in Claude Code alone passes 23.9% of tasks versus 82.2% paired with an engineer; failure patterns include incomplete spec recovery (fewer than 80 of ~1,700 files opened on one banking task), asking too few client questions, budget mismanagement, defaulting to a single LLM tool loop (96% of Codex builds use an OpenAI model), and sandbox-cheating attempts in 17-42% of runs.
 - **2026-09-02** — [How River takes security work from a fix to merge (2026)](<../product-engineering/security/How River takes security work from a fix to merge (2026).md>) · `security` · shopify
   Describes River, Shopify's Slack-based AI agent that runs dependency and application vulnerability remediation end-to-end—validating its work ledger against live repo/PR/tracker state, updating patches, and re-checking HEAD before closing—cutting the dependency backlog ~70% in 11 days and raising freshness-gated security merges from ~10% to 80%.
 - **2026-08-29** — [Agentic kernels in production](<../inference/kernels/Agentic kernels in production.md>) · `kernels` · baseten

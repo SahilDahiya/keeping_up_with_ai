@@ -385,6 +385,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-09-08** — [Optimizing delta weight syncs for managed rollouts](<../inference/optimization/Optimizing delta weight syncs for managed rollouts.md>) · `optimization` · baseten
+  Baseten details how it syncs delta weights (XOR of serialized policy bytes, zstd-compressed) to independent rollout GPU clusters for frontier RL training in under 40s with 6s of request pause; a custom decoder reads zstd's own literal/sequence commands to skip materializing the full 716.56 GiB logical output (compressed to 1.55 GiB for a GLM-5.3 fixture), and batching sparse updates by destination cut the vLLM pause/load/resume interval from 12s to 6s.
 - **2026-09-02** — [How Botika runs full-stack generative AI on Modal | Modal Blog](<../product-engineering/case-studies/How Botika runs full-stack generative AI on Modal Modal Blog.md>) · `case-studies` · modal
   Case study on Botika running a full-stack generative AI operation on Modal: a 100TB image data pipeline with under 1% error rate and no orchestrator, multi-node training with RDMA networking for proprietary 4K image-generation foundation models, and an RL infrastructure (reward servers, iterative reward modeling, rollouts) built from Modal primitives in under a day.
 - **2026-08-26** — [Training and Finetuning Multi-Vector Embedding Models with Sentence Transformers](<../rag-retrieval/embeddings/Training and Finetuning Multi-Vector Embedding Models with Sentence Transformers.md>) · `embeddings` · huggingface

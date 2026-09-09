@@ -1,7 +1,11 @@
 # inference
 
-131 articles.
+133 articles.
 
+- **2026-09-08** — [Baseten leads Coval’s voice AI benchmark](<optimization/Baseten leads Coval’s voice AI benchmark.md>) · `optimization` · baseten
+  Baseten's STT deployment (Qwen3 ASR 1.7B Streaming) tops Coval's voice AI benchmark, running ~5x faster than OpenAI's while posting the lowest WER; argues voice AI benchmarks must measure the full turn (STT, LLM, TTS, VAD, orchestration, autoscaling) rather than a single model's throughput, since p95 latency and infrastructure placement matter as much as model choice.
+- **2026-09-08** — [Optimizing delta weight syncs for managed rollouts](<optimization/Optimizing delta weight syncs for managed rollouts.md>) · `optimization` · baseten
+  Baseten details how it syncs delta weights (XOR of serialized policy bytes, zstd-compressed) to independent rollout GPU clusters for frontier RL training in under 40s with 6s of request pause; a custom decoder reads zstd's own literal/sequence commands to skip materializing the full 716.56 GiB logical output (compressed to 1.55 GiB for a GLM-5.3 fixture), and batching sparse updates by destination cut the vLLM pause/load/resume interval from 12s to 6s.
 - **2026-09-02** — [The efficient frontier of LLM inference](<optimization/The efficient frontier of LLM inference.md>) · `optimization` · baseten
   Surveys LLM inference engineering as tradeoffs (batch sizing; tensor/expert/attention-data parallelism; quantization to MXFP4/NVFP4) versus techniques that push the whole frontier out (CUDA kernel optimization, EAGLE-3/DSpark/DFlash speculative decoding, prefill/decode disaggregation).
 - **2026-08-29** — [Agentic kernels in production](<kernels/Agentic kernels in production.md>) · `kernels` · baseten

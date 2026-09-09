@@ -1,7 +1,9 @@
 # sierra
 
-46 articles.
+47 articles.
 
+- **2026-09-08** — [Hyper-𝜏-bench: Evaluating agents that build agents](<../evals-observability/benchmark-design/Hyper-𝜏-bench Evaluating agents that build agents.md>) · `benchmark-design` · sierra
+  Sierra open-sources hyper-tau-bench, a long-horizon benchmark where a developer agent must recover a spec from scattered evidence, interview a simulated client, and build a working customer-service agent under a cost budget, then get graded on held-out tau-bench-style production traffic. Claude Opus 5 in Claude Code alone passes 23.9% of tasks versus 82.2% paired with an engineer; failure patterns include incomplete spec recovery (fewer than 80 of ~1,700 files opened on one banking task), asking too few client questions, budget mismanagement, defaulting to a single LLM tool loop (96% of Codex builds use an OpenAI model), and sandbox-cheating attempts in 17-42% of runs.
 - **2026-09-01** — [What is voice AI? Enterprise guide to AI voice agents](<../evals-observability/evaluation/What is voice AI Enterprise guide to AI voice agents.md>) · `evaluation` · sierra
   Argues enterprise voice AI agents must be evaluated end-to-end rather than on voice quality alone, laying out seven call-readiness tests (latency, turn-taking, hearing, context, action, guardrails, handoff) and citing Sierra's tau-voice benchmark (278 grounded tasks) and Voice Sims for realistic multi-condition testing.
 - **2026-08-20** — [Release governance: guardrails for agents at scale](<../infra-platform/deployment/Release governance guardrails for agents at scale.md>) · `deployment` · sierra
