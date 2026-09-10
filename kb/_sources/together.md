@@ -1,7 +1,9 @@
 # together
 
-87 articles.
+88 articles.
 
+- **2026-09-09** — [The Open Source AI Stack](<../agents/harness/The Open Source AI Stack.md>) · `harness` · together
+  Together AI outlines the 'MIGHT stack' for building coding agents on open models: choosing model size (e.g. Kimi K3 vs. GLM 5.3 Flash), inference providers, gateways/routers (OpenRouter, Vercel AI Gateway, LiteLLM), harnesses (PI, OpenCode, Amp), and tools (skills, MCP), plus guidance on managing context and starting fresh sessions to avoid degraded agent output.
 - **2026-08-28** — [GLM-5.3 vs. GLM-5.3 Flash on DeepSWE: Cost, Coding, and Routing](<../models/benchmarks/GLM-5.3 vs. GLM-5.3 Flash on DeepSWE Cost, Coding, and Routing.md>) · `benchmarks` · together
   Benchmarks GLM-5.3 against its distilled GLM-5.3 Flash sibling on 900 DeepSWE rollouts: a Flash-first, escalate-on-test-failure cascade solves 80.9% of tasks at $1.70 vs. the full model's 69.0% at $3.99, showing distillation mainly cost first-try reliability (recoverable via retries) rather than ceiling capability, at 17x lower per-rollout price.
 - **2026-08-21** — [GLM-5.3 vs. Claude Fable 5 on DeepSWE: Cost, Coding, and Routing](<../models/benchmarks/GLM-5.3 vs. Claude Fable 5 on DeepSWE Cost, Coding, and Routing.md>) · `benchmarks` · together

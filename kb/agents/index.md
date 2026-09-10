@@ -1,7 +1,9 @@
 # agents
 
-101 articles.
+102 articles.
 
+- **2026-09-09** — [The Open Source AI Stack](<harness/The Open Source AI Stack.md>) · `harness` · together
+  Together AI outlines the 'MIGHT stack' for building coding agents on open models: choosing model size (e.g. Kimi K3 vs. GLM 5.3 Flash), inference providers, gateways/routers (OpenRouter, Vercel AI Gateway, LiteLLM), harnesses (PI, OpenCode, Amp), and tools (skills, MCP), plus guidance on managing context and starting fresh sessions to avoid degraded agent output.
 - **2026-09-04** — [Building games with Astra | OpenAI Developers](<tool-use/Building games with Astra OpenAI Developers.md>) · `tool-use` · openai-devs
   Walks through building Void Explorer, a TypeScript/Three.js WebGPU space game, with OpenAI's Astra coding agent: a floating-origin coordinate system and quadtree LOD terrain streamed from Web Workers, plus measured optimization work (indexed meshes cut transferred terrain data from ~35MB to ~15MB; a stabilized LOD scheduler cut discarded terrain jobs from 6,074 to 13 during a simulated descent; a ship-model swap cut draw calls from 119 to 77 and average frame time from 251ms to 199ms). Also covers exposing a debug state interface and named Playwright test scenes so the agent could reproduce bugs and verify performance regressions on its own.
 - **2026-09-03** — [Give Your Coding Agents a Memory You Own](<memory-context/Give Your Coding Agents a Memory You Own.md>) · `memory-context` · huggingface

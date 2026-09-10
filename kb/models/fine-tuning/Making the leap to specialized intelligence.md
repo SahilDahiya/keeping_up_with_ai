@@ -1,10 +1,16 @@
 ---
 title: Making the leap to specialized intelligence
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: models
+subtopic: fine-tuning
+secondary_topics:
+- evals-observability/evaluation
+summary: Fireworks maps the progression from prompt/context/harness engineering on
+  rented frontier models to owning 'specialized intelligence' via fine-tuning, covering
+  patterns like classification/extraction adaptation, style tuning, distillation,
+  and RL for agents, then demonstrates fine-tuning Kimi K3 on the UIPad computer-use
+  benchmark via Fireworks' Serverless Training API to beat GPT 5.6 Sol after just
+  3 hours of training.
 triage: null
 skip_reason: null
 source: fireworks
@@ -12,7 +18,7 @@ url: https://fireworks.ai/blog/making-the-leap-to-specialized-intelligence
 author: Sinan Ozdemir
 published: '2026-09-09'
 fetched: '2026-09-10T06:10:53Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 2733
 content_sha256: f1732ece343cfd8ab4c7e4273cfe661f38d3da393b464b4a99eed69d08eb69f4

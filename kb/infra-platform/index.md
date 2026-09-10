@@ -95,6 +95,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-09-09** — [The Open Source AI Stack](<../agents/harness/The Open Source AI Stack.md>) · `harness` · together
+  Together AI outlines the 'MIGHT stack' for building coding agents on open models: choosing model size (e.g. Kimi K3 vs. GLM 5.3 Flash), inference providers, gateways/routers (OpenRouter, Vercel AI Gateway, LiteLLM), harnesses (PI, OpenCode, Amp), and tools (skills, MCP), plus guidance on managing context and starting fresh sessions to avoid degraded agent output.
 - **2026-09-02** — [How Botika runs full-stack generative AI on Modal | Modal Blog](<../product-engineering/case-studies/How Botika runs full-stack generative AI on Modal Modal Blog.md>) · `case-studies` · modal
   Case study on Botika running a full-stack generative AI operation on Modal: a 100TB image data pipeline with under 1% error rate and no orchestrator, multi-node training with RDMA networking for proprietary 4K image-generation foundation models, and an RL infrastructure (reward servers, iterative reward modeling, rollouts) built from Modal primitives in under a day.
 - **2026-08-31** — [Training API now generally available | Fireworks](<../models/reinforcement-learning/Training API now generally available Fireworks.md>) · `reinforcement-learning` · fireworks

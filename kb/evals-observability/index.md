@@ -233,6 +233,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-09-09** — [Making the leap to specialized intelligence](<../models/fine-tuning/Making the leap to specialized intelligence.md>) · `fine-tuning` · fireworks
+  Fireworks maps the progression from prompt/context/harness engineering on rented frontier models to owning 'specialized intelligence' via fine-tuning, covering patterns like classification/extraction adaptation, style tuning, distillation, and RL for agents, then demonstrates fine-tuning Kimi K3 on the UIPad computer-use benchmark via Fireworks' Serverless Training API to beat GPT 5.6 Sol after just 3 hours of training.
 - **2026-09-08** — [Baseten leads Coval’s voice AI benchmark](<../inference/optimization/Baseten leads Coval’s voice AI benchmark.md>) · `optimization` · baseten
   Baseten's STT deployment (Qwen3 ASR 1.7B Streaming) tops Coval's voice AI benchmark, running ~5x faster than OpenAI's while posting the lowest WER; argues voice AI benchmarks must measure the full turn (STT, LLM, TTS, VAD, orchestration, autoscaling) rather than a single model's throughput, since p95 latency and infrastructure placement matter as much as model choice.
 - **2026-09-03** — [Part I: Replacing FinServ IVRs with an AI Agent: A 3-Phase Playbook](<../product-engineering/case-studies/Part I Replacing FinServ IVRs with an AI Agent A 3-Phase Playbook.md>) · `case-studies` · cresta

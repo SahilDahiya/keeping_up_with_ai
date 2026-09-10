@@ -1,7 +1,9 @@
 # models
 
-190 articles.
+191 articles.
 
+- **2026-09-09** — [Making the leap to specialized intelligence](<fine-tuning/Making the leap to specialized intelligence.md>) · `fine-tuning` · fireworks
+  Fireworks maps the progression from prompt/context/harness engineering on rented frontier models to owning 'specialized intelligence' via fine-tuning, covering patterns like classification/extraction adaptation, style tuning, distillation, and RL for agents, then demonstrates fine-tuning Kimi K3 on the UIPad computer-use benchmark via Fireworks' Serverless Training API to beat GPT 5.6 Sol after just 3 hours of training.
 - **2026-09-03** — [Fine-tuning a 350M Model for Better Structured Outputs in 100 GRPO Steps](<reinforcement-learning/Fine-tuning a 350M Model for Better Structured Outputs in 100 GRPO Steps.md>) · `reinforcement-learning` · huggingface
   Fine-tunes LiquidAI's LFM2.5-350M with GRPO via the TRL library on ~500 samples over 100 steps (runnable on a free-tier Colab/Kaggle GPU), raising structured-output schema compliance on the IFStruct benchmark from 22.6% to 29.7%.
 - **2026-09-03** — [Training a coding model to paint watercolours with TRL and OpenEnv](<reinforcement-learning/Training a coding model to paint watercolours with TRL and OpenEnv.md>) · `reinforcement-learning` · huggingface

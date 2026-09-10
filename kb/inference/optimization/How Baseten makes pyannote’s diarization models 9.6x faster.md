@@ -1,10 +1,15 @@
 ---
 title: How Baseten makes pyannote’s diarization models 9.6x faster
 kind: blog
-topic: null
-subtopic: null
+topic: inference
+subtopic: optimization
 secondary_topics: []
-summary: null
+summary: Baseten sped up pyannote's Community-1 and Precision-2 speaker diarization
+  models with mixed-precision quantization (FP8/BF16/FP32/FP64 per pipeline stage),
+  an indexing strategy that pre-merges near-duplicate embeddings before clustering,
+  and batching/scheduling tuning, cutting Community-1's long-audio latency up to 9.6x
+  and boosting Precision-2 throughput 3.2x with only a 0.5% DER penalty, enabling
+  20 hours of audio to diarize in 2 minutes on one GPU.
 triage: null
 skip_reason: null
 source: baseten
@@ -12,7 +17,7 @@ url: https://www.baseten.co/blog/how-baseten-makes-pyannotes-diarization-models-
 author: Matte Lim; Ansel Erol
 published: '2026-09-09'
 fetched: '2026-09-10T06:10:47Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1456
 content_sha256: e08d38c4391decf7912a0824ce87d06474e7d8f04e8ebecf635cbe5524f76741

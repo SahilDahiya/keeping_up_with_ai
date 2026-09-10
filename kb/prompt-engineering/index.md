@@ -47,6 +47,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-09-09** — [The Open Source AI Stack](<../agents/harness/The Open Source AI Stack.md>) · `harness` · together
+  Together AI outlines the 'MIGHT stack' for building coding agents on open models: choosing model size (e.g. Kimi K3 vs. GLM 5.3 Flash), inference providers, gateways/routers (OpenRouter, Vercel AI Gateway, LiteLLM), harnesses (PI, OpenCode, Amp), and tools (skills, MCP), plus guidance on managing context and starting fresh sessions to avoid degraded agent output.
 - **2026-09-03** — [Fine-tuning a 350M Model for Better Structured Outputs in 100 GRPO Steps](<../models/reinforcement-learning/Fine-tuning a 350M Model for Better Structured Outputs in 100 GRPO Steps.md>) · `reinforcement-learning` · huggingface
   Fine-tunes LiquidAI's LFM2.5-350M with GRPO via the TRL library on ~500 samples over 100 steps (runnable on a free-tier Colab/Kaggle GPU), raising structured-output schema compliance on the IFStruct benchmark from 22.6% to 29.7%.
 - **2026-09-01** — [You.com is now a Pydantic AI capability](<../agents/tool-use/You.com is now a Pydantic AI capability.md>) · `tool-use` · pydantic

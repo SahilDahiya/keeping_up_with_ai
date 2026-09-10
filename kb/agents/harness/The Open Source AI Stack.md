@@ -1,10 +1,16 @@
 ---
 title: The Open Source AI Stack
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: agents
+subtopic: harness
+secondary_topics:
+- infra-platform/deployment
+- prompt-engineering/context-engineering
+summary: 'Together AI outlines the ''MIGHT stack'' for building coding agents on open
+  models: choosing model size (e.g. Kimi K3 vs. GLM 5.3 Flash), inference providers,
+  gateways/routers (OpenRouter, Vercel AI Gateway, LiteLLM), harnesses (PI, OpenCode,
+  Amp), and tools (skills, MCP), plus guidance on managing context and starting fresh
+  sessions to avoid degraded agent output.'
 triage: null
 skip_reason: null
 source: together
@@ -12,7 +18,7 @@ url: https://www.together.ai/blog/the-open-source-ai-stack
 author: Hassan El Mghari
 published: '2026-09-09'
 fetched: '2026-09-10T06:10:55Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 3149
 content_sha256: 8b6a351fd03b46954f08a944ab6a4a3bc28c096d58f2ae5359fe8dcd7ab759fa

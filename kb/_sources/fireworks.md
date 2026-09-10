@@ -1,7 +1,9 @@
 # fireworks
 
-89 articles.
+90 articles.
 
+- **2026-09-09** — [Making the leap to specialized intelligence](<../models/fine-tuning/Making the leap to specialized intelligence.md>) · `fine-tuning` · fireworks
+  Fireworks maps the progression from prompt/context/harness engineering on rented frontier models to owning 'specialized intelligence' via fine-tuning, covering patterns like classification/extraction adaptation, style tuning, distillation, and RL for agents, then demonstrates fine-tuning Kimi K3 on the UIPad computer-use benchmark via Fireworks' Serverless Training API to beat GPT 5.6 Sol after just 3 hours of training.
 - **2026-08-31** — [Training API now generally available | Fireworks](<../models/reinforcement-learning/Training API now generally available Fireworks.md>) · `reinforcement-learning` · fireworks
   Fireworks details the infrastructure behind its now-GA Training API and Fireworks Lab: aligning numerical formats (BF16, block-wise FP8, NVFP4) and kernels between trainer and rollout engines, Router Replay to keep MoE expert selection consistent across rollout and backward pass, asynchronous RL that overlaps rollout generation with training, and XOR-diff plus zstd weight compression that cuts hot-load transmission bandwidth up to 10x.
 - **2026-08-26** — [DeepSeek V4 Pro: Tops SWE-Bench & Cuts Cost per Task by 3x vs. Fable 5](<../models/benchmarks/DeepSeek V4 Pro Tops SWE-Bench & Cuts Cost per Task by 3x vs. Fable 5.md>) · `benchmarks` · fireworks

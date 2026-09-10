@@ -1,7 +1,9 @@
 # inference
 
-133 articles.
+134 articles.
 
+- **2026-09-09** — [How Baseten makes pyannote’s diarization models 9.6x faster](<optimization/How Baseten makes pyannote’s diarization models 9.6x faster.md>) · `optimization` · baseten
+  Baseten sped up pyannote's Community-1 and Precision-2 speaker diarization models with mixed-precision quantization (FP8/BF16/FP32/FP64 per pipeline stage), an indexing strategy that pre-merges near-duplicate embeddings before clustering, and batching/scheduling tuning, cutting Community-1's long-audio latency up to 9.6x and boosting Precision-2 throughput 3.2x with only a 0.5% DER penalty, enabling 20 hours of audio to diarize in 2 minutes on one GPU.
 - **2026-09-08** — [Baseten leads Coval’s voice AI benchmark](<optimization/Baseten leads Coval’s voice AI benchmark.md>) · `optimization` · baseten
   Baseten's STT deployment (Qwen3 ASR 1.7B Streaming) tops Coval's voice AI benchmark, running ~5x faster than OpenAI's while posting the lowest WER; argues voice AI benchmarks must measure the full turn (STT, LLM, TTS, VAD, orchestration, autoscaling) rather than a single model's throughput, since p95 latency and infrastructure placement matter as much as model choice.
 - **2026-09-08** — [Optimizing delta weight syncs for managed rollouts](<optimization/Optimizing delta weight syncs for managed rollouts.md>) · `optimization` · baseten
