@@ -1,10 +1,15 @@
 ---
 title: 'Gen-1 Slides: Opus 5-level decks at a fraction of the cost'
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: models
+subtopic: reinforcement-learning
+secondary_topics:
+- evals-observability/evaluation
+summary: Fireworks Lab and Genspark post-trained the open-weight MiniMax M3 into Gen-1
+  Slides using staged RL (SFT warmup, then short-to-long context curricula) to match
+  Opus 5's deck quality at about 1/17 its input-token price, cutting low-rated decks
+  from 18% to 3.6%; a key fix was catching a tokenization mismatch between the inference
+  sampler and trainer that biased gradients on 100,000+-token trajectories.
 triage: null
 skip_reason: null
 source: fireworks
@@ -12,7 +17,7 @@ url: https://fireworks.ai/blog/gen-1-slides-opus-5-level-decks-at-a-fraction-of-
 author: null
 published: '2026-09-10'
 fetched: '2026-09-11T06:11:31Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1561
 content_sha256: ae208a3fce982d2e73bcfec87fefc5e713c4eb7dbab5e073c87d2319703ea85e

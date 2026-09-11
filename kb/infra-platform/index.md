@@ -1,7 +1,9 @@
 # infra-platform
 
-45 articles.
+46 articles.
 
+- **2026-09-10** — [Introducing preemptible compute: the same compute, half the price](<gpu-clusters/Introducing preemptible compute the same compute, half the price.md>) · `gpu-clusters` · together
+  Together GPU Clusters adds preemptible Kubernetes nodes billed sub-hourly at a flat 50% of on-demand price, with a 5-minute SIGTERM drain window for reclamation; aimed at checkpointable/retryable work like ablations, evals, and batch inference, while coordinators and user-facing replicas stay on standard nodes.
 - **2026-08-20** — [Release governance: guardrails for agents at scale](<deployment/Release governance guardrails for agents at scale.md>) · `deployment` · sierra
   Sierra describes release governance for its agent platform: Agent Checks (a linter flagging missing tools, conflicting instructions, and weak authentication on sensitive lookups), Simulations as pre-production quality gates, merge approval workflows with a dedicated Reviewer role, and split-traffic canary releases backed by immutable, instantly rollback-able snapshots.
 - **2026-08-18** — [Feature flags for production AI](<deployment/Feature flags for production AI.md>) · `deployment` · pydantic
@@ -95,6 +97,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-09-09** — [Durable Pydantic AI agents on AWS Lambda](<../agents/harness/Durable Pydantic AI agents on AWS Lambda.md>) · `harness` · pydantic
+  Pydantic AI Harness adds AWSLambdaDurability, which checkpoints every model request, tool call, and MCP call as an AWS Lambda durable-functions step so a retried invocation resumes from where it left off instead of re-running the whole agent loop, avoiding duplicated side effects like double refunds after a mid-run timeout.
 - **2026-09-09** — [The Open Source AI Stack](<../agents/harness/The Open Source AI Stack.md>) · `harness` · together
   Together AI outlines the 'MIGHT stack' for building coding agents on open models: choosing model size (e.g. Kimi K3 vs. GLM 5.3 Flash), inference providers, gateways/routers (OpenRouter, Vercel AI Gateway, LiteLLM), harnesses (PI, OpenCode, Amp), and tools (skills, MCP), plus guidance on managing context and starting fresh sessions to avoid degraded agent output.
 - **2026-09-02** — [How Botika runs full-stack generative AI on Modal | Modal Blog](<../product-engineering/case-studies/How Botika runs full-stack generative AI on Modal Modal Blog.md>) · `case-studies` · modal

@@ -1,7 +1,11 @@
 # together
 
-88 articles.
+90 articles.
 
+- **2026-09-10** — [To Infinity and Beyond: ThunderKittens Now on NVIDIA Vera Rubin NVL72!](<../inference/kernels/To Infinity and Beyond ThunderKittens Now on NVIDIA Vera Rubin NVL72!.md>) · `kernels` · together
+  Together's kernels team ports ThunderKittens NVFP4/FP8 GEMM kernels to NVIDIA Vera Rubin NVL72, exploiting the doubled-K tensor-core step and expanded 576-column tensor memory to push past the ~42-44% of roofline achieved by naively reusing Blackwell kernels, reaching over 22 PFLOPS and competitive with cuBLAS and CuTe DSL.
+- **2026-09-10** — [Introducing preemptible compute: the same compute, half the price](<../infra-platform/gpu-clusters/Introducing preemptible compute the same compute, half the price.md>) · `gpu-clusters` · together
+  Together GPU Clusters adds preemptible Kubernetes nodes billed sub-hourly at a flat 50% of on-demand price, with a 5-minute SIGTERM drain window for reclamation; aimed at checkpointable/retryable work like ablations, evals, and batch inference, while coordinators and user-facing replicas stay on standard nodes.
 - **2026-09-09** — [The Open Source AI Stack](<../agents/harness/The Open Source AI Stack.md>) · `harness` · together
   Together AI outlines the 'MIGHT stack' for building coding agents on open models: choosing model size (e.g. Kimi K3 vs. GLM 5.3 Flash), inference providers, gateways/routers (OpenRouter, Vercel AI Gateway, LiteLLM), harnesses (PI, OpenCode, Amp), and tools (skills, MCP), plus guidance on managing context and starting fresh sessions to avoid degraded agent output.
 - **2026-08-28** — [GLM-5.3 vs. GLM-5.3 Flash on DeepSWE: Cost, Coding, and Routing](<../models/benchmarks/GLM-5.3 vs. GLM-5.3 Flash on DeepSWE Cost, Coding, and Routing.md>) · `benchmarks` · together

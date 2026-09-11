@@ -1,7 +1,9 @@
 # pydantic
 
-43 articles.
+44 articles.
 
+- **2026-09-09** — [Durable Pydantic AI agents on AWS Lambda](<../agents/harness/Durable Pydantic AI agents on AWS Lambda.md>) · `harness` · pydantic
+  Pydantic AI Harness adds AWSLambdaDurability, which checkpoints every model request, tool call, and MCP call as an AWS Lambda durable-functions step so a retried invocation resumes from where it left off instead of re-running the whole agent loop, avoiding duplicated side effects like double refunds after a mid-run timeout.
 - **2026-09-01** — [You.com is now a Pydantic AI capability](<../agents/tool-use/You.com is now a Pydantic AI capability.md>) · `tool-use` · pydantic
   Walks through wiring You.com's YouSearch/YouResearch web-search and research APIs into Pydantic AI Harness as agent capabilities, covering context-cost controls (num_results, extraction_mode, max_text_chars, freshness), ModelRetry vs. hard-fail error semantics, structured output_schema requirements, and keeping source citations in tool-return metadata instead of the model's context.
 - **2026-08-26** — [Linguistic drift at the frontier | Pydantic](<../agents/harness/Linguistic drift at the frontier Pydantic.md>) · `harness` · pydantic

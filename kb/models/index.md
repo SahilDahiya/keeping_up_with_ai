@@ -1,7 +1,9 @@
 # models
 
-191 articles.
+192 articles.
 
+- **2026-09-10** — [Gen-1 Slides: Opus 5-level decks at a fraction of the cost](<reinforcement-learning/Gen-1 Slides Opus 5-level decks at a fraction of the cost.md>) · `reinforcement-learning` · fireworks
+  Fireworks Lab and Genspark post-trained the open-weight MiniMax M3 into Gen-1 Slides using staged RL (SFT warmup, then short-to-long context curricula) to match Opus 5's deck quality at about 1/17 its input-token price, cutting low-rated decks from 18% to 3.6%; a key fix was catching a tokenization mismatch between the inference sampler and trainer that biased gradients on 100,000+-token trajectories.
 - **2026-09-09** — [Making the leap to specialized intelligence](<fine-tuning/Making the leap to specialized intelligence.md>) · `fine-tuning` · fireworks
   Fireworks maps the progression from prompt/context/harness engineering on rented frontier models to owning 'specialized intelligence' via fine-tuning, covering patterns like classification/extraction adaptation, style tuning, distillation, and RL for agents, then demonstrates fine-tuning Kimi K3 on the UIPad computer-use benchmark via Fireworks' Serverless Training API to beat GPT 5.6 Sol after just 3 hours of training.
 - **2026-09-03** — [Fine-tuning a 350M Model for Better Structured Outputs in 100 GRPO Steps](<reinforcement-learning/Fine-tuning a 350M Model for Better Structured Outputs in 100 GRPO Steps.md>) · `reinforcement-learning` · huggingface

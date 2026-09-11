@@ -1,10 +1,13 @@
 ---
 title: 'Introducing preemptible compute: the same compute, half the price'
 kind: blog
-topic: null
-subtopic: null
+topic: infra-platform
+subtopic: gpu-clusters
 secondary_topics: []
-summary: null
+summary: Together GPU Clusters adds preemptible Kubernetes nodes billed sub-hourly
+  at a flat 50% of on-demand price, with a 5-minute SIGTERM drain window for reclamation;
+  aimed at checkpointable/retryable work like ablations, evals, and batch inference,
+  while coordinators and user-facing replicas stay on standard nodes.
 triage: null
 skip_reason: null
 source: together
@@ -12,7 +15,7 @@ url: https://www.together.ai/blog/introducing-preemptible-compute-the-same-compu
 author: Pavneet Ahluwalia; Varun Chakravarthy
 published: '2026-09-10'
 fetched: '2026-09-11T06:11:33Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 807
 content_sha256: bbdfc9b64ab351aa622c7c11c76f366e5ac84907ed90dd27b71aabbe7c5ebfae

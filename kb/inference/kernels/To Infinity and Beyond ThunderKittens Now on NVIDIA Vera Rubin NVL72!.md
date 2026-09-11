@@ -1,10 +1,13 @@
 ---
 title: 'To Infinity and Beyond: ThunderKittens Now on NVIDIA Vera Rubin NVL72!'
 kind: blog
-topic: null
-subtopic: null
+topic: inference
+subtopic: kernels
 secondary_topics: []
-summary: null
+summary: Together's kernels team ports ThunderKittens NVFP4/FP8 GEMM kernels to NVIDIA
+  Vera Rubin NVL72, exploiting the doubled-K tensor-core step and expanded 576-column
+  tensor memory to push past the ~42-44% of roofline achieved by naively reusing Blackwell
+  kernels, reaching over 22 PFLOPS and competitive with cuBLAS and CuTe DSL.
 triage: null
 skip_reason: null
 source: together
@@ -12,7 +15,7 @@ url: https://www.together.ai/blog/to-infinity-and-beyond-thunderkittens-now-on-n
 author: Dylan Lim; Xinyi Li; Sonny Li; Peter Wu; Dan Fu; Simran Arora
 published: '2026-09-10'
 fetched: '2026-09-11T06:11:35Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 2204
 content_sha256: 139a412ef4ed5a44bc5568f3c69376128f1db8258cd45142befa10c80c4bd683

@@ -1,7 +1,9 @@
 # agents
 
-102 articles.
+103 articles.
 
+- **2026-09-09** — [Durable Pydantic AI agents on AWS Lambda](<harness/Durable Pydantic AI agents on AWS Lambda.md>) · `harness` · pydantic
+  Pydantic AI Harness adds AWSLambdaDurability, which checkpoints every model request, tool call, and MCP call as an AWS Lambda durable-functions step so a retried invocation resumes from where it left off instead of re-running the whole agent loop, avoiding duplicated side effects like double refunds after a mid-run timeout.
 - **2026-09-09** — [The Open Source AI Stack](<harness/The Open Source AI Stack.md>) · `harness` · together
   Together AI outlines the 'MIGHT stack' for building coding agents on open models: choosing model size (e.g. Kimi K3 vs. GLM 5.3 Flash), inference providers, gateways/routers (OpenRouter, Vercel AI Gateway, LiteLLM), harnesses (PI, OpenCode, Amp), and tools (skills, MCP), plus guidance on managing context and starting fresh sessions to avoid degraded agent output.
 - **2026-09-04** — [Building games with Astra | OpenAI Developers](<tool-use/Building games with Astra OpenAI Developers.md>) · `tool-use` · openai-devs

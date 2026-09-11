@@ -1,7 +1,9 @@
 # inference
 
-134 articles.
+135 articles.
 
+- **2026-09-10** — [To Infinity and Beyond: ThunderKittens Now on NVIDIA Vera Rubin NVL72!](<kernels/To Infinity and Beyond ThunderKittens Now on NVIDIA Vera Rubin NVL72!.md>) · `kernels` · together
+  Together's kernels team ports ThunderKittens NVFP4/FP8 GEMM kernels to NVIDIA Vera Rubin NVL72, exploiting the doubled-K tensor-core step and expanded 576-column tensor memory to push past the ~42-44% of roofline achieved by naively reusing Blackwell kernels, reaching over 22 PFLOPS and competitive with cuBLAS and CuTe DSL.
 - **2026-09-09** — [How Baseten makes pyannote’s diarization models 9.6x faster](<optimization/How Baseten makes pyannote’s diarization models 9.6x faster.md>) · `optimization` · baseten
   Baseten sped up pyannote's Community-1 and Precision-2 speaker diarization models with mixed-precision quantization (FP8/BF16/FP32/FP64 per pipeline stage), an indexing strategy that pre-merges near-duplicate embeddings before clustering, and batching/scheduling tuning, cutting Community-1's long-audio latency up to 9.6x and boosting Precision-2 throughput 3.2x with only a 0.5% DER penalty, enabling 20 hours of audio to diarize in 2 minutes on one GPU.
 - **2026-09-08** — [Baseten leads Coval’s voice AI benchmark](<optimization/Baseten leads Coval’s voice AI benchmark.md>) · `optimization` · baseten

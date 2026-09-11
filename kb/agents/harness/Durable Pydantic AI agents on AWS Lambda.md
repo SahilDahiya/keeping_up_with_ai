@@ -1,10 +1,14 @@
 ---
 title: Durable Pydantic AI agents on AWS Lambda
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: agents
+subtopic: harness
+secondary_topics:
+- infra-platform/deployment
+summary: Pydantic AI Harness adds AWSLambdaDurability, which checkpoints every model
+  request, tool call, and MCP call as an AWS Lambda durable-functions step so a retried
+  invocation resumes from where it left off instead of re-running the whole agent
+  loop, avoiding duplicated side effects like double refunds after a mid-run timeout.
 triage: null
 skip_reason: null
 source: pydantic
@@ -12,7 +16,7 @@ url: https://pydantic.dev/articles/harness-aws-lambda
 author: Laís Carvalho
 published: '2026-09-09'
 fetched: '2026-09-11T06:17:27Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1701
 content_sha256: 5ce50c33dd6395ced4a86fd472c1d42dfa5b6275c87e45abc41087d7fd0cfd6b
