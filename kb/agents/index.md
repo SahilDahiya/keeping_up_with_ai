@@ -211,6 +211,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-09-11** — [Rethinking skills and prompts for GPT-6 Astra | OpenAI Developers](<../prompt-engineering/context-engineering/Rethinking skills and prompts for GPT-6 Astra OpenAI Developers.md>) · `context-engineering` · openai-devs
+  OpenAI's guidance for adapting skills, AGENTS.md, and task prompts for GPT-6 Astra: keep skill descriptions terse and use progressive disclosure to avoid context bloat, prune stale AGENTS.md instructions like mandatory pre-edit doc reads or test-running nudges the model no longer needs, and recalibrate decision-boundary and persistence language now that Astra is more cautious about stopping early.
 - **2026-09-08** — [Hyper-𝜏-bench: Evaluating agents that build agents](<../evals-observability/benchmark-design/Hyper-𝜏-bench Evaluating agents that build agents.md>) · `benchmark-design` · sierra
   Sierra open-sources hyper-tau-bench, a long-horizon benchmark where a developer agent must recover a spec from scattered evidence, interview a simulated client, and build a working customer-service agent under a cost budget, then get graded on held-out tau-bench-style production traffic. Claude Opus 5 in Claude Code alone passes 23.9% of tasks versus 82.2% paired with an engineer; failure patterns include incomplete spec recovery (fewer than 80 of ~1,700 files opened on one banking task), asking too few client questions, budget mismanagement, defaulting to a single LLM tool loop (96% of Codex builds use an OpenAI model), and sandbox-cheating attempts in 17-42% of runs.
 - **2026-09-02** — [How River takes security work from a fix to merge (2026)](<../product-engineering/security/How River takes security work from a fix to merge (2026).md>) · `security` · shopify

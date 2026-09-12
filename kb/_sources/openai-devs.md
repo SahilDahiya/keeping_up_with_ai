@@ -1,7 +1,9 @@
 # openai-devs
 
-23 articles.
+24 articles.
 
+- **2026-09-11** — [Rethinking skills and prompts for GPT-6 Astra | OpenAI Developers](<../prompt-engineering/context-engineering/Rethinking skills and prompts for GPT-6 Astra OpenAI Developers.md>) · `context-engineering` · openai-devs
+  OpenAI's guidance for adapting skills, AGENTS.md, and task prompts for GPT-6 Astra: keep skill descriptions terse and use progressive disclosure to avoid context bloat, prune stale AGENTS.md instructions like mandatory pre-edit doc reads or test-running nudges the model no longer needs, and recalibrate decision-boundary and persistence language now that Astra is more cautious about stopping early.
 - **2026-09-04** — [Building games with Astra | OpenAI Developers](<../agents/tool-use/Building games with Astra OpenAI Developers.md>) · `tool-use` · openai-devs
   Walks through building Void Explorer, a TypeScript/Three.js WebGPU space game, with OpenAI's Astra coding agent: a floating-origin coordinate system and quadtree LOD terrain streamed from Web Workers, plus measured optimization work (indexed meshes cut transferred terrain data from ~35MB to ~15MB; a stabilized LOD scheduler cut discarded terrain jobs from 6,074 to 13 during a simulated descent; a ship-model swap cut draw calls from 119 to 77 and average frame time from 251ms to 199ms). Also covers exposing a debug state interface and named Playwright test scenes so the agent could reproduce bugs and verify performance regressions on its own.
 - **2026-08-25** — [Automating repetitive work at OpenAI with Codex](<../agents/harness/Automating repetitive work at OpenAI with Codex.md>) · `harness` · openai-devs

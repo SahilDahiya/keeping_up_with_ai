@@ -97,6 +97,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-09-11** — [Together AI expands fine-tuning service with more models, live metrics, and finer controls](<../models/fine-tuning/Together AI expands fine-tuning service with more models, live metrics, and finer controls.md>) · `fine-tuning` · together
+  Together Fine-Tuning adds Expert LoRA (adapters on MoE expert layers instead of just attention), which recalled 89% of 200 injected facts vs 15% for attention-only adapters and won MMLU-Pro 75.3% to 71.5%, plus early stopping on validation-loss plateau, arbitrary batch sizes via gradient accumulation, tokenized-dataset previews, per-example sample weights, and training price cuts of 30-70%.
 - **2026-09-09** — [Durable Pydantic AI agents on AWS Lambda](<../agents/harness/Durable Pydantic AI agents on AWS Lambda.md>) · `harness` · pydantic
   Pydantic AI Harness adds AWSLambdaDurability, which checkpoints every model request, tool call, and MCP call as an AWS Lambda durable-functions step so a retried invocation resumes from where it left off instead of re-running the whole agent loop, avoiding duplicated side effects like double refunds after a mid-run timeout.
 - **2026-09-09** — [The Open Source AI Stack](<../agents/harness/The Open Source AI Stack.md>) · `harness` · together

@@ -2,10 +2,15 @@
 title: Together AI expands fine-tuning service with more models, live metrics, and
   finer controls
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: models
+subtopic: fine-tuning
+secondary_topics:
+- infra-platform/cost
+summary: Together Fine-Tuning adds Expert LoRA (adapters on MoE expert layers instead
+  of just attention), which recalled 89% of 200 injected facts vs 15% for attention-only
+  adapters and won MMLU-Pro 75.3% to 71.5%, plus early stopping on validation-loss
+  plateau, arbitrary batch sizes via gradient accumulation, tokenized-dataset previews,
+  per-example sample weights, and training price cuts of 30-70%.
 triage: null
 skip_reason: null
 source: together
@@ -15,7 +20,7 @@ author: Artem Chumachenko; Egor Timofeev; Jasmine Li; Ruslan Khaidurov; Nikita S
   Gleb Vazhenin; Sonny Khan; Adee Feiner; Jen Wu; Max Ryabinin
 published: '2026-09-11'
 fetched: '2026-09-12T06:09:05Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 2211
 content_sha256: 3136418ce8955fab1666143b90a6b9f65049e840dbe198f89d845cc576987960

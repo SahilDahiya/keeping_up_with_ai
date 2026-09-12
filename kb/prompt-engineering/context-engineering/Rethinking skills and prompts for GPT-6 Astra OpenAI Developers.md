@@ -1,10 +1,15 @@
 ---
 title: Rethinking skills and prompts for GPT-6 Astra | OpenAI Developers
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: prompt-engineering
+subtopic: context-engineering
+secondary_topics:
+- agents/harness
+summary: 'OpenAI''s guidance for adapting skills, AGENTS.md, and task prompts for
+  GPT-6 Astra: keep skill descriptions terse and use progressive disclosure to avoid
+  context bloat, prune stale AGENTS.md instructions like mandatory pre-edit doc reads
+  or test-running nudges the model no longer needs, and recalibrate decision-boundary
+  and persistence language now that Astra is more cautious about stopping early.'
 triage: null
 skip_reason: null
 source: openai-devs
@@ -12,7 +17,7 @@ url: https://developers.openai.com/blog/rethinking-skills-and-prompts-for-gpt-6-
 author: null
 published: '2026-09-11'
 fetched: '2026-09-12T06:09:02Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1032
 content_sha256: 889d88998520e46618c1e52b66036e6e24d82959062a3940ffd8b5d9ce8f251d

@@ -1,7 +1,11 @@
 # models
 
-192 articles.
+194 articles.
 
+- **2026-09-11** — [DeepSeek-V4.1-Flash: more efficient prefill for coding agents](<architectures/DeepSeek-V4.1-Flash more efficient prefill for coding agents.md>) · `architectures` · baseten
+  DeepSeek-V4.1-Flash introduces a Causal Encoder-Decoder architecture that splits its 40 layers into a 20-layer encoder and 20-layer decoder, activating only 8B params for prefill vs 16B for decode, and combines this with Compressed Sparse Attention 2 and FP4 KV caching to cut the global KV cache to a quarter of V4-Flash's size.
+- **2026-09-11** — [Together AI expands fine-tuning service with more models, live metrics, and finer controls](<fine-tuning/Together AI expands fine-tuning service with more models, live metrics, and finer controls.md>) · `fine-tuning` · together
+  Together Fine-Tuning adds Expert LoRA (adapters on MoE expert layers instead of just attention), which recalled 89% of 200 injected facts vs 15% for attention-only adapters and won MMLU-Pro 75.3% to 71.5%, plus early stopping on validation-loss plateau, arbitrary batch sizes via gradient accumulation, tokenized-dataset previews, per-example sample weights, and training price cuts of 30-70%.
 - **2026-09-10** — [Gen-1 Slides: Opus 5-level decks at a fraction of the cost](<reinforcement-learning/Gen-1 Slides Opus 5-level decks at a fraction of the cost.md>) · `reinforcement-learning` · fireworks
   Fireworks Lab and Genspark post-trained the open-weight MiniMax M3 into Gen-1 Slides using staged RL (SFT warmup, then short-to-long context curricula) to match Opus 5's deck quality at about 1/17 its input-token price, cutting low-rated decks from 18% to 3.6%; a key fix was catching a tokenization mismatch between the inference sampler and trainer that biased gradients on 100,000+-token trajectories.
 - **2026-09-09** — [Making the leap to specialized intelligence](<fine-tuning/Making the leap to specialized intelligence.md>) · `fine-tuning` · fireworks

@@ -1,10 +1,15 @@
 ---
 title: 'DeepSeek-V4.1-Flash: more efficient prefill for coding agents'
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: models
+subtopic: architectures
+secondary_topics:
+- inference/optimization
+summary: DeepSeek-V4.1-Flash introduces a Causal Encoder-Decoder architecture that
+  splits its 40 layers into a 20-layer encoder and 20-layer decoder, activating only
+  8B params for prefill vs 16B for decode, and combines this with Compressed Sparse
+  Attention 2 and FP4 KV caching to cut the global KV cache to a quarter of V4-Flash's
+  size.
 triage: null
 skip_reason: null
 source: baseten
@@ -12,7 +17,7 @@ url: https://www.baseten.co/blog/deepseek-v41-flash-more-efficient-prefill-for-c
 author: Albert Lee; Kenzie Amack; Marylise Tauzia
 published: '2026-09-11'
 fetched: '2026-09-12T06:08:55Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 906
 content_sha256: 456917e590ee7831a0cedddebb555a798c4e50c7cac8996a8eb9b2f72eeb7bdb

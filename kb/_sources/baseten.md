@@ -1,7 +1,9 @@
 # baseten
 
-86 articles.
+87 articles.
 
+- **2026-09-11** — [DeepSeek-V4.1-Flash: more efficient prefill for coding agents](<../models/architectures/DeepSeek-V4.1-Flash more efficient prefill for coding agents.md>) · `architectures` · baseten
+  DeepSeek-V4.1-Flash introduces a Causal Encoder-Decoder architecture that splits its 40 layers into a 20-layer encoder and 20-layer decoder, activating only 8B params for prefill vs 16B for decode, and combines this with Compressed Sparse Attention 2 and FP4 KV caching to cut the global KV cache to a quarter of V4-Flash's size.
 - **2026-09-09** — [How Baseten makes pyannote’s diarization models 9.6x faster](<../inference/optimization/How Baseten makes pyannote’s diarization models 9.6x faster.md>) · `optimization` · baseten
   Baseten sped up pyannote's Community-1 and Precision-2 speaker diarization models with mixed-precision quantization (FP8/BF16/FP32/FP64 per pipeline stage), an indexing strategy that pre-merges near-duplicate embeddings before clustering, and batching/scheduling tuning, cutting Community-1's long-audio latency up to 9.6x and boosting Precision-2 throughput 3.2x with only a 0.5% DER penalty, enabling 20 hours of audio to diarize in 2 minutes on one GPU.
 - **2026-09-08** — [Baseten leads Coval’s voice AI benchmark](<../inference/optimization/Baseten leads Coval’s voice AI benchmark.md>) · `optimization` · baseten

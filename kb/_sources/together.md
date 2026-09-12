@@ -1,7 +1,9 @@
 # together
 
-90 articles.
+91 articles.
 
+- **2026-09-11** — [Together AI expands fine-tuning service with more models, live metrics, and finer controls](<../models/fine-tuning/Together AI expands fine-tuning service with more models, live metrics, and finer controls.md>) · `fine-tuning` · together
+  Together Fine-Tuning adds Expert LoRA (adapters on MoE expert layers instead of just attention), which recalled 89% of 200 injected facts vs 15% for attention-only adapters and won MMLU-Pro 75.3% to 71.5%, plus early stopping on validation-loss plateau, arbitrary batch sizes via gradient accumulation, tokenized-dataset previews, per-example sample weights, and training price cuts of 30-70%.
 - **2026-09-10** — [To Infinity and Beyond: ThunderKittens Now on NVIDIA Vera Rubin NVL72!](<../inference/kernels/To Infinity and Beyond ThunderKittens Now on NVIDIA Vera Rubin NVL72!.md>) · `kernels` · together
   Together's kernels team ports ThunderKittens NVFP4/FP8 GEMM kernels to NVIDIA Vera Rubin NVL72, exploiting the doubled-K tensor-core step and expanded 576-column tensor memory to push past the ~42-44% of roofline achieved by naively reusing Blackwell kernels, reaching over 22 PFLOPS and competitive with cuBLAS and CuTe DSL.
 - **2026-09-10** — [Introducing preemptible compute: the same compute, half the price](<../infra-platform/gpu-clusters/Introducing preemptible compute the same compute, half the price.md>) · `gpu-clusters` · together

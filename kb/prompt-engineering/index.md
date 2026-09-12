@@ -1,7 +1,9 @@
 # prompt-engineering
 
-21 articles.
+22 articles.
 
+- **2026-09-11** — [Rethinking skills and prompts for GPT-6 Astra | OpenAI Developers](<context-engineering/Rethinking skills and prompts for GPT-6 Astra OpenAI Developers.md>) · `context-engineering` · openai-devs
+  OpenAI's guidance for adapting skills, AGENTS.md, and task prompts for GPT-6 Astra: keep skill descriptions terse and use progressive disclosure to avoid context bloat, prune stale AGENTS.md instructions like mandatory pre-edit doc reads or test-running nudges the model no longer needs, and recalibrate decision-boundary and persistence language now that Astra is more cautious about stopping early.
 - **2026-08-26** — [Best Prompt Management Tools 2026 | Pydantic Logfire](<techniques/Best Prompt Management Tools 2026 Pydantic Logfire.md>) · `techniques` · pydantic
   Compares prompt management tools (Langfuse, LangSmith, Braintrust, PromptLayer, Agenta, Helicone, Pydantic Logfire) on how a saved prompt version reaches production: server-side vs. application-code A/B splitting, percentage rollout and targeting, and whether the serving version is recorded on the run's trace.
 - **2026-08-10** — [Snowflake + Pydantic AI integration](<structured-output/Snowflake + Pydantic AI integration.md>) · `structured-output` · pydantic
