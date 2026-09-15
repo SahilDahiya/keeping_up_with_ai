@@ -275,8 +275,12 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-09-14** — [DeepSeek-V4.1-Flash on Fireworks: Astra-level DeepSWE at 1/15th the cost](<../models/benchmarks/DeepSeek-V4.1-Flash on Fireworks Astra-level DeepSWE at 115th the cost.md>) · `benchmarks` · fireworks
+  Fireworks benchmarks DeepSeek-V4.1-Flash (552B MoE with an encoder/decoder split activation budget) against GPT-6 Astra, Gemini 3.8 Flash, and Claude Opus 5 on DeepSWE, Terminal-Bench 2.1, and HLE, finding comparable coding accuracy (74.34% DeepSWE pass@1) at 1/15th the cost ($0.43/task) thanks to a KV cache overhaul that cuts HBM 4x and holds a 99.6% cache-hit rate; an oracle router combining it with Astra beats Astra alone on HLE.
 - **2026-09-11** — [DeepSeek-V4.1-Flash: more efficient prefill for coding agents](<../models/architectures/DeepSeek-V4.1-Flash more efficient prefill for coding agents.md>) · `architectures` · baseten
   DeepSeek-V4.1-Flash introduces a Causal Encoder-Decoder architecture that splits its 40 layers into a 20-layer encoder and 20-layer decoder, activating only 8B params for prefill vs 16B for decode, and combines this with Compressed Sparse Attention 2 and FP4 KV caching to cut the global KV cache to a quarter of V4-Flash's size.
+- **2026-09-10** — [Async GRPO with LoRA across HF Jobs: a bucket, a proxy, and no NCCL](<../models/reinforcement-learning/Async GRPO with LoRA across HF Jobs a bucket, a proxy, and no NCCL.md>) · `reinforcement-learning` · huggingface
+  Hugging Face runs TRL v1.14's AsyncGRPOTrainer with LoRA-only weight sync across separate HF Jobs: a trainer and two vLLM replicas share adapters through a mounted Storage Bucket instead of NCCL, and a custom proxy routes GRPO rollouts by KV-cache prefix affinity and broadcasts adapter loads, cutting a 500-step run from 3h27m to 53min.
 - **2026-09-02** — [Best open-source models for post-training](<../models/fine-tuning/Best open-source models for post-training.md>) · `fine-tuning` · baseten
   Ranks open-source models for post-training by cost tier based on active parameters, total parameters, and KV cache size: DeepSeek-V4-Flash for long-context cost-sensitive work, GLM-5.2 for fast async RL, Kimi K2.6/K2.7 Code for stable fine-tuning, Nemotron-3-Super-120B for native-FP4 efficiency, and Qwen3.6-35B-A3B as the cheap safe default.
 - **2026-08-28** — [GLM-5.3 vs. GLM-5.3 Flash on DeepSWE: Cost, Coding, and Routing](<../models/benchmarks/GLM-5.3 vs. GLM-5.3 Flash on DeepSWE Cost, Coding, and Routing.md>) · `benchmarks` · together

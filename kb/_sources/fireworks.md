@@ -1,7 +1,9 @@
 # fireworks
 
-91 articles.
+92 articles.
 
+- **2026-09-14** — [DeepSeek-V4.1-Flash on Fireworks: Astra-level DeepSWE at 1/15th the cost](<../models/benchmarks/DeepSeek-V4.1-Flash on Fireworks Astra-level DeepSWE at 115th the cost.md>) · `benchmarks` · fireworks
+  Fireworks benchmarks DeepSeek-V4.1-Flash (552B MoE with an encoder/decoder split activation budget) against GPT-6 Astra, Gemini 3.8 Flash, and Claude Opus 5 on DeepSWE, Terminal-Bench 2.1, and HLE, finding comparable coding accuracy (74.34% DeepSWE pass@1) at 1/15th the cost ($0.43/task) thanks to a KV cache overhaul that cuts HBM 4x and holds a 99.6% cache-hit rate; an oracle router combining it with Astra beats Astra alone on HLE.
 - **2026-09-10** — [Gen-1 Slides: Opus 5-level decks at a fraction of the cost](<../models/reinforcement-learning/Gen-1 Slides Opus 5-level decks at a fraction of the cost.md>) · `reinforcement-learning` · fireworks
   Fireworks Lab and Genspark post-trained the open-weight MiniMax M3 into Gen-1 Slides using staged RL (SFT warmup, then short-to-long context curricula) to match Opus 5's deck quality at about 1/17 its input-token price, cutting low-rated decks from 18% to 3.6%; a key fix was catching a tokenization mismatch between the inference sampler and trainer that biased gradients on 100,000+-token trajectories.
 - **2026-09-09** — [Making the leap to specialized intelligence](<../models/fine-tuning/Making the leap to specialized intelligence.md>) · `fine-tuning` · fireworks

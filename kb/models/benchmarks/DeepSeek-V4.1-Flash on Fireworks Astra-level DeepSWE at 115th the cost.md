@@ -1,10 +1,17 @@
 ---
 title: 'DeepSeek-V4.1-Flash on Fireworks: Astra-level DeepSWE at 1/15th the cost'
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: models
+subtopic: benchmarks
+secondary_topics:
+- inference/optimization
+- infra-platform/cost
+summary: Fireworks benchmarks DeepSeek-V4.1-Flash (552B MoE with an encoder/decoder
+  split activation budget) against GPT-6 Astra, Gemini 3.8 Flash, and Claude Opus
+  5 on DeepSWE, Terminal-Bench 2.1, and HLE, finding comparable coding accuracy (74.34%
+  DeepSWE pass@1) at 1/15th the cost ($0.43/task) thanks to a KV cache overhaul that
+  cuts HBM 4x and holds a 99.6% cache-hit rate; an oracle router combining it with
+  Astra beats Astra alone on HLE.
 triage: null
 skip_reason: null
 source: fireworks
@@ -12,7 +19,7 @@ url: https://fireworks.ai/blog/DeepSeek-V4.1-Flash-Astra
 author: null
 published: '2026-09-14'
 fetched: '2026-09-15T06:10:39Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1263
 content_sha256: 1dae52e008008580120225754815a1bc5f38f543eb297c138263fbaca8531078

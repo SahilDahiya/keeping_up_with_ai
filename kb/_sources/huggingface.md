@@ -1,7 +1,9 @@
 # huggingface
 
-169 articles.
+170 articles.
 
+- **2026-09-10** — [Async GRPO with LoRA across HF Jobs: a bucket, a proxy, and no NCCL](<../models/reinforcement-learning/Async GRPO with LoRA across HF Jobs a bucket, a proxy, and no NCCL.md>) · `reinforcement-learning` · huggingface
+  Hugging Face runs TRL v1.14's AsyncGRPOTrainer with LoRA-only weight sync across separate HF Jobs: a trainer and two vLLM replicas share adapters through a mounted Storage Bucket instead of NCCL, and a custom proxy routes GRPO rollouts by KV-cache prefix affinity and broadcasts adapter loads, cutting a 500-step run from 3h27m to 53min.
 - **2026-09-03** — [Give Your Coding Agents a Memory You Own](<../agents/memory-context/Give Your Coding Agents a Memory You Own.md>) · `memory-context` · huggingface
   Introduces funes, a local-first durable memory layer for coding agents (Claude Code, Codex, pi, Hermes) that indexes, retrieves, and ranks past agent session traces so an agent can `recall` prior decisions and their provenance instead of losing context across sessions.
 - **2026-09-03** — [Fine-tuning a 350M Model for Better Structured Outputs in 100 GRPO Steps](<../models/reinforcement-learning/Fine-tuning a 350M Model for Better Structured Outputs in 100 GRPO Steps.md>) · `reinforcement-learning` · huggingface

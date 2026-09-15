@@ -1,10 +1,16 @@
 ---
 title: 'Async GRPO with LoRA across HF Jobs: a bucket, a proxy, and no NCCL'
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: models
+subtopic: reinforcement-learning
+secondary_topics:
+- inference/serving
+- infra-platform/deployment
+summary: 'Hugging Face runs TRL v1.14''s AsyncGRPOTrainer with LoRA-only weight sync
+  across separate HF Jobs: a trainer and two vLLM replicas share adapters through
+  a mounted Storage Bucket instead of NCCL, and a custom proxy routes GRPO rollouts
+  by KV-cache prefix affinity and broadcasts adapter loads, cutting a 500-step run
+  from 3h27m to 53min.'
 triage: null
 skip_reason: null
 source: huggingface
@@ -12,7 +18,7 @@ url: https://huggingface.co/blog/asyncgrpo-lora-hfjobs
 author: Amine Dirhoussi; Quentin Gallouédec; Kashif Rasul; Sergio Paniego
 published: '2026-09-10'
 fetched: '2026-09-15T06:16:26Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 6061
 content_sha256: e6a32a926ab575bb15fde4f8b3bd9e54198adfe69342e21b1eff95dfe4d4c3d0
