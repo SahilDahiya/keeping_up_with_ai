@@ -1,7 +1,9 @@
 # evals-observability
 
-114 articles.
+115 articles.
 
+- **2026-09-16** — [From Better Evaluators to Better Agents: Building Compliance Intelligence with CompliBench](<benchmark-design/From Better Evaluators to Better Agents Building Compliance Intelligence with CompliBench.md>) · `benchmark-design` · cresta
+  Introduces CompliBench, a synthetic-data pipeline that uses controllable compliance-violation injection and three specialized agents (customer, workflow tracker, assistant) to generate 318 labeled multi-turn enterprise conversations across airline, healthcare, and insurance domains; finds GPT-5 stays below 50% and Gemini reaches only the mid-50% range on conversation-level compliance accuracy despite strong per-turn guideline identification.
 - **2026-09-08** — [Hyper-𝜏-bench: Evaluating agents that build agents](<benchmark-design/Hyper-𝜏-bench Evaluating agents that build agents.md>) · `benchmark-design` · sierra
   Sierra open-sources hyper-tau-bench, a long-horizon benchmark where a developer agent must recover a spec from scattered evidence, interview a simulated client, and build a working customer-service agent under a cost budget, then get graded on held-out tau-bench-style production traffic. Claude Opus 5 in Claude Code alone passes 23.9% of tasks versus 82.2% paired with an engineer; failure patterns include incomplete spec recovery (fewer than 80 of ~1,700 files opened on one banking task), asking too few client questions, budget mismanagement, defaulting to a single LLM tool loop (96% of Codex builds use an OpenAI model), and sandbox-cheating attempts in 17-42% of runs.
 - **2026-09-01** — [What is voice AI? Enterprise guide to AI voice agents](<evaluation/What is voice AI Enterprise guide to AI voice agents.md>) · `evaluation` · sierra
@@ -233,6 +235,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-09-16** — [Migrating from closed to open source models, Together](<../infra-platform/deployment/Migrating from closed to open source models, Together.md>) · `deployment` · together
+  Together AI's Discover-Evaluate-Adapt-Decide-Production playbook for migrating production LLM workloads from closed to open-source models: replaying real production traffic instead of generic benchmarks (FrontierCode, tau-bench, LMArena) for evaluation, adaptation levers ranked by effort (prompt engineering, inference settings, harness/context engineering, fine-tuning), and canary rollouts starting at 10% of traffic, with customers reporting up to 70% cost reduction.
 - **2026-09-10** — [Gen-1 Slides: Opus 5-level decks at a fraction of the cost](<../models/reinforcement-learning/Gen-1 Slides Opus 5-level decks at a fraction of the cost.md>) · `reinforcement-learning` · fireworks
   Fireworks Lab and Genspark post-trained the open-weight MiniMax M3 into Gen-1 Slides using staged RL (SFT warmup, then short-to-long context curricula) to match Opus 5's deck quality at about 1/17 its input-token price, cutting low-rated decks from 18% to 3.6%; a key fix was catching a tokenization mismatch between the inference sampler and trainer that biased gradients on 100,000+-token trajectories.
 - **2026-09-09** — [Making the leap to specialized intelligence](<../models/fine-tuning/Making the leap to specialized intelligence.md>) · `fine-tuning` · fireworks

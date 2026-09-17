@@ -2,10 +2,16 @@
 title: 'From Better Evaluators to Better Agents: Building Compliance Intelligence
   with CompliBench'
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: evals-observability
+subtopic: benchmark-design
+secondary_topics:
+- agents/multi-agent
+summary: Introduces CompliBench, a synthetic-data pipeline that uses controllable
+  compliance-violation injection and three specialized agents (customer, workflow
+  tracker, assistant) to generate 318 labeled multi-turn enterprise conversations
+  across airline, healthcare, and insurance domains; finds GPT-5 stays below 50% and
+  Gemini reaches only the mid-50% range on conversation-level compliance accuracy
+  despite strong per-turn guideline identification.
 triage: null
 skip_reason: null
 source: cresta
@@ -13,7 +19,7 @@ url: https://cresta.com/blog/from-better-evaluators-to-better-agents-building-co
 author: Duo Ding
 published: '2026-09-16'
 fetched: '2026-09-17T06:10:19Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 2091
 content_sha256: 6197325787624e900f25c6594b213c60934c3e5e7e6784fd0fa830d08e751d33

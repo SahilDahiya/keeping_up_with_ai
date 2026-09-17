@@ -1,7 +1,9 @@
 # agents
 
-103 articles.
+104 articles.
 
+- **2026-09-16** — [Introducing Baseten Hosted Tools](<harness/Introducing Baseten Hosted Tools.md>) · `harness` · baseten
+  Baseten's new Hosted Tools run the agentic tool-use loop server-side, co-located with model inference, instead of round-tripping through the client; the company reports a 15% end-to-end latency reduction versus client-side tool loops and launches web search with Exa, Keenable, Parallel, and You.com as the first hosted tool.
 - **2026-09-09** — [Durable Pydantic AI agents on AWS Lambda](<harness/Durable Pydantic AI agents on AWS Lambda.md>) · `harness` · pydantic
   Pydantic AI Harness adds AWSLambdaDurability, which checkpoints every model request, tool call, and MCP call as an AWS Lambda durable-functions step so a retried invocation resumes from where it left off instead of re-running the whole agent loop, avoiding duplicated side effects like double refunds after a mid-run timeout.
 - **2026-09-09** — [The Open Source AI Stack](<harness/The Open Source AI Stack.md>) · `harness` · together
@@ -211,6 +213,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-09-16** — [From Better Evaluators to Better Agents: Building Compliance Intelligence with CompliBench](<../evals-observability/benchmark-design/From Better Evaluators to Better Agents Building Compliance Intelligence with CompliBench.md>) · `benchmark-design` · cresta
+  Introduces CompliBench, a synthetic-data pipeline that uses controllable compliance-violation injection and three specialized agents (customer, workflow tracker, assistant) to generate 318 labeled multi-turn enterprise conversations across airline, healthcare, and insurance domains; finds GPT-5 stays below 50% and Gemini reaches only the mid-50% range on conversation-level compliance accuracy despite strong per-turn guideline identification.
 - **2026-09-11** — [Rethinking skills and prompts for GPT-6 Astra | OpenAI Developers](<../prompt-engineering/context-engineering/Rethinking skills and prompts for GPT-6 Astra OpenAI Developers.md>) · `context-engineering` · openai-devs
   OpenAI's guidance for adapting skills, AGENTS.md, and task prompts for GPT-6 Astra: keep skill descriptions terse and use progressive disclosure to avoid context bloat, prune stale AGENTS.md instructions like mandatory pre-edit doc reads or test-running nudges the model no longer needs, and recalibrate decision-boundary and persistence language now that Astra is more cautious about stopping early.
 - **2026-09-08** — [Hyper-𝜏-bench: Evaluating agents that build agents](<../evals-observability/benchmark-design/Hyper-𝜏-bench Evaluating agents that build agents.md>) · `benchmark-design` · sierra

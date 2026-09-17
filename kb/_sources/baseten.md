@@ -1,7 +1,9 @@
 # baseten
 
-87 articles.
+88 articles.
 
+- **2026-09-16** — [Introducing Baseten Hosted Tools](<../agents/harness/Introducing Baseten Hosted Tools.md>) · `harness` · baseten
+  Baseten's new Hosted Tools run the agentic tool-use loop server-side, co-located with model inference, instead of round-tripping through the client; the company reports a 15% end-to-end latency reduction versus client-side tool loops and launches web search with Exa, Keenable, Parallel, and You.com as the first hosted tool.
 - **2026-09-11** — [DeepSeek-V4.1-Flash: more efficient prefill for coding agents](<../models/architectures/DeepSeek-V4.1-Flash more efficient prefill for coding agents.md>) · `architectures` · baseten
   DeepSeek-V4.1-Flash introduces a Causal Encoder-Decoder architecture that splits its 40 layers into a 20-layer encoder and 20-layer decoder, activating only 8B params for prefill vs 16B for decode, and combines this with Compressed Sparse Attention 2 and FP4 KV caching to cut the global KV cache to a quarter of V4-Flash's size.
 - **2026-09-09** — [How Baseten makes pyannote’s diarization models 9.6x faster](<../inference/optimization/How Baseten makes pyannote’s diarization models 9.6x faster.md>) · `optimization` · baseten

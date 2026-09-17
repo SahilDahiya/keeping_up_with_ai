@@ -1,10 +1,16 @@
 ---
 title: Migrating from closed to open source models, Together
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: infra-platform
+subtopic: deployment
+secondary_topics:
+- evals-observability/evaluation
+summary: 'Together AI''s Discover-Evaluate-Adapt-Decide-Production playbook for migrating
+  production LLM workloads from closed to open-source models: replaying real production
+  traffic instead of generic benchmarks (FrontierCode, tau-bench, LMArena) for evaluation,
+  adaptation levers ranked by effort (prompt engineering, inference settings, harness/context
+  engineering, fine-tuning), and canary rollouts starting at 10% of traffic, with
+  customers reporting up to 70% cost reduction.'
 triage: null
 skip_reason: null
 source: together
@@ -12,7 +18,7 @@ url: https://www.together.ai/blog/migrating-from-closed-to-open-source-models
 author: Kareem Abdol-Hamid; Zain Hasan; Sonny Khan
 published: '2026-09-16'
 fetched: '2026-09-17T06:10:28Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1881
 content_sha256: 77307834961631965cb80e1738059fc698700a7dc93fe6d00b01c98b674e9337

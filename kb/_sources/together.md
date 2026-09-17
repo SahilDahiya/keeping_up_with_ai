@@ -1,7 +1,9 @@
 # together
 
-91 articles.
+92 articles.
 
+- **2026-09-16** — [Migrating from closed to open source models, Together](<../infra-platform/deployment/Migrating from closed to open source models, Together.md>) · `deployment` · together
+  Together AI's Discover-Evaluate-Adapt-Decide-Production playbook for migrating production LLM workloads from closed to open-source models: replaying real production traffic instead of generic benchmarks (FrontierCode, tau-bench, LMArena) for evaluation, adaptation levers ranked by effort (prompt engineering, inference settings, harness/context engineering, fine-tuning), and canary rollouts starting at 10% of traffic, with customers reporting up to 70% cost reduction.
 - **2026-09-11** — [Together AI expands fine-tuning service with more models, live metrics, and finer controls](<../models/fine-tuning/Together AI expands fine-tuning service with more models, live metrics, and finer controls.md>) · `fine-tuning` · together
   Together Fine-Tuning adds Expert LoRA (adapters on MoE expert layers instead of just attention), which recalled 89% of 200 injected facts vs 15% for attention-only adapters and won MMLU-Pro 75.3% to 71.5%, plus early stopping on validation-loss plateau, arbitrary batch sizes via gradient accumulation, tokenized-dataset previews, per-example sample weights, and training price cuts of 30-70%.
 - **2026-09-10** — [To Infinity and Beyond: ThunderKittens Now on NVIDIA Vera Rubin NVL72!](<../inference/kernels/To Infinity and Beyond ThunderKittens Now on NVIDIA Vera Rubin NVL72!.md>) · `kernels` · together

@@ -1,7 +1,9 @@
 # infra-platform
 
-46 articles.
+47 articles.
 
+- **2026-09-16** — [Migrating from closed to open source models, Together](<deployment/Migrating from closed to open source models, Together.md>) · `deployment` · together
+  Together AI's Discover-Evaluate-Adapt-Decide-Production playbook for migrating production LLM workloads from closed to open-source models: replaying real production traffic instead of generic benchmarks (FrontierCode, tau-bench, LMArena) for evaluation, adaptation levers ranked by effort (prompt engineering, inference settings, harness/context engineering, fine-tuning), and canary rollouts starting at 10% of traffic, with customers reporting up to 70% cost reduction.
 - **2026-09-10** — [Introducing preemptible compute: the same compute, half the price](<gpu-clusters/Introducing preemptible compute the same compute, half the price.md>) · `gpu-clusters` · together
   Together GPU Clusters adds preemptible Kubernetes nodes billed sub-hourly at a flat 50% of on-demand price, with a 5-minute SIGTERM drain window for reclamation; aimed at checkpointable/retryable work like ablations, evals, and batch inference, while coordinators and user-facing replicas stay on standard nodes.
 - **2026-08-20** — [Release governance: guardrails for agents at scale](<deployment/Release governance guardrails for agents at scale.md>) · `deployment` · sierra

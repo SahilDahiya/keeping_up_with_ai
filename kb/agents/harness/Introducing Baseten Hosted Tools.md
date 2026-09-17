@@ -1,10 +1,14 @@
 ---
 title: Introducing Baseten Hosted Tools
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: agents
+subtopic: harness
+secondary_topics:
+- inference/serving
+summary: Baseten's new Hosted Tools run the agentic tool-use loop server-side, co-located
+  with model inference, instead of round-tripping through the client; the company
+  reports a 15% end-to-end latency reduction versus client-side tool loops and launches
+  web search with Exa, Keenable, Parallel, and You.com as the first hosted tool.
 triage: null
 skip_reason: null
 source: baseten
@@ -12,7 +16,7 @@ url: https://www.baseten.co/blog/introducing-baseten-hosted-tools/
 author: Sai Maddali; Marius Killinger; Marylise Tauzia
 published: '2026-09-16'
 fetched: '2026-09-17T06:10:21Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1441
 content_sha256: b91c5390c2779945e8137415b2b84cfe8319e5e6689f4457bf319cff0b701827

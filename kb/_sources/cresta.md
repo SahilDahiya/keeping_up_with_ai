@@ -1,7 +1,9 @@
 # cresta
 
-69 articles.
+70 articles.
 
+- **2026-09-16** — [From Better Evaluators to Better Agents: Building Compliance Intelligence with CompliBench](<../evals-observability/benchmark-design/From Better Evaluators to Better Agents Building Compliance Intelligence with CompliBench.md>) · `benchmark-design` · cresta
+  Introduces CompliBench, a synthetic-data pipeline that uses controllable compliance-violation injection and three specialized agents (customer, workflow tracker, assistant) to generate 318 labeled multi-turn enterprise conversations across airline, healthcare, and insurance domains; finds GPT-5 stays below 50% and Gemini reaches only the mid-50% range on conversation-level compliance accuracy despite strong per-turn guideline identification.
 - **2026-09-03** — [Part I: Replacing FinServ IVRs with an AI Agent: A 3-Phase Playbook](<../product-engineering/case-studies/Part I Replacing FinServ IVRs with an AI Agent A 3-Phase Playbook.md>) · `case-studies` · cresta
   Cresta's playbook for replacing financial-services IVR phone trees with an AI agent: how to measure call containment honestly (exclude after-hours artifacts, don't count abandoned calls as containment, watch composition not just the headline number), and why phased, blast-radius-limited rollouts with shadow testing and UAT beat a single big-bang launch, typically lifting containment from a 20-30% IVR baseline to ~40% after replacement and 60-85% in later phases.
 - **2026-08-26** — [Why Pay for Every Question Twice? Precomputing Answers for Real-Time RAG](<../rag-retrieval/pipelines/Why Pay for Every Question Twice Precomputing Answers for Real-Time RAG.md>) · `pipelines` · cresta
