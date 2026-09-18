@@ -213,6 +213,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-09-17** — [Phylo brings frontier AI to more scientists with open models on Fireworks](<../infra-platform/deployment/Phylo brings frontier AI to more scientists with open models on Fireworks.md>) · `deployment` · fireworks
+  Case study of Phylo's Biomni Lab, a long-horizon biology research agent making hundreds of tool calls over hours or days: switching its model-agnostic default routing to open-weight frontier models on Fireworks serverless (gated by Phylo's internal BiomniBench evals for quality/latency/cost) cut inference spend 60% while usage doubled month-on-month and roughly halved time-to-first-token.
 - **2026-09-16** — [From Better Evaluators to Better Agents: Building Compliance Intelligence with CompliBench](<../evals-observability/benchmark-design/From Better Evaluators to Better Agents Building Compliance Intelligence with CompliBench.md>) · `benchmark-design` · cresta
   Introduces CompliBench, a synthetic-data pipeline that uses controllable compliance-violation injection and three specialized agents (customer, workflow tracker, assistant) to generate 318 labeled multi-turn enterprise conversations across airline, healthcare, and insurance domains; finds GPT-5 stays below 50% and Gemini reaches only the mid-50% range on conversation-level compliance accuracy despite strong per-turn guideline identification.
 - **2026-09-11** — [Rethinking skills and prompts for GPT-6 Astra | OpenAI Developers](<../prompt-engineering/context-engineering/Rethinking skills and prompts for GPT-6 Astra OpenAI Developers.md>) · `context-engineering` · openai-devs

@@ -1,10 +1,16 @@
 ---
 title: Phylo brings frontier AI to more scientists with open models on Fireworks
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: infra-platform
+subtopic: deployment
+secondary_topics:
+- evals-observability/evaluation
+- agents/harness
+summary: 'Case study of Phylo''s Biomni Lab, a long-horizon biology research agent
+  making hundreds of tool calls over hours or days: switching its model-agnostic default
+  routing to open-weight frontier models on Fireworks serverless (gated by Phylo''s
+  internal BiomniBench evals for quality/latency/cost) cut inference spend 60% while
+  usage doubled month-on-month and roughly halved time-to-first-token.'
 triage: null
 skip_reason: null
 source: fireworks
@@ -12,7 +18,7 @@ url: https://fireworks.ai/blog/phylo-brings-frontier-ai-to-more-scientists-with-
 author: null
 published: '2026-09-17'
 fetched: '2026-09-18T06:10:08Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1812
 content_sha256: df92fb11ea21b950cbbe6c3077221290d8f887d20f257332a3178f1ddf5c9986

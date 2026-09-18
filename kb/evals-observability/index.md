@@ -235,6 +235,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-09-17** — [Phylo brings frontier AI to more scientists with open models on Fireworks](<../infra-platform/deployment/Phylo brings frontier AI to more scientists with open models on Fireworks.md>) · `deployment` · fireworks
+  Case study of Phylo's Biomni Lab, a long-horizon biology research agent making hundreds of tool calls over hours or days: switching its model-agnostic default routing to open-weight frontier models on Fireworks serverless (gated by Phylo's internal BiomniBench evals for quality/latency/cost) cut inference spend 60% while usage doubled month-on-month and roughly halved time-to-first-token.
 - **2026-09-16** — [Migrating from closed to open source models, Together](<../infra-platform/deployment/Migrating from closed to open source models, Together.md>) · `deployment` · together
   Together AI's Discover-Evaluate-Adapt-Decide-Production playbook for migrating production LLM workloads from closed to open-source models: replaying real production traffic instead of generic benchmarks (FrontierCode, tau-bench, LMArena) for evaluation, adaptation levers ranked by effort (prompt engineering, inference settings, harness/context engineering, fine-tuning), and canary rollouts starting at 10% of traffic, with customers reporting up to 70% cost reduction.
 - **2026-09-10** — [Gen-1 Slides: Opus 5-level decks at a fraction of the cost](<../models/reinforcement-learning/Gen-1 Slides Opus 5-level decks at a fraction of the cost.md>) · `reinforcement-learning` · fireworks

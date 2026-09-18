@@ -1,7 +1,9 @@
 # fireworks
 
-92 articles.
+93 articles.
 
+- **2026-09-17** — [Phylo brings frontier AI to more scientists with open models on Fireworks](<../infra-platform/deployment/Phylo brings frontier AI to more scientists with open models on Fireworks.md>) · `deployment` · fireworks
+  Case study of Phylo's Biomni Lab, a long-horizon biology research agent making hundreds of tool calls over hours or days: switching its model-agnostic default routing to open-weight frontier models on Fireworks serverless (gated by Phylo's internal BiomniBench evals for quality/latency/cost) cut inference spend 60% while usage doubled month-on-month and roughly halved time-to-first-token.
 - **2026-09-14** — [DeepSeek-V4.1-Flash on Fireworks: Astra-level DeepSWE at 1/15th the cost](<../models/benchmarks/DeepSeek-V4.1-Flash on Fireworks Astra-level DeepSWE at 115th the cost.md>) · `benchmarks` · fireworks
   Fireworks benchmarks DeepSeek-V4.1-Flash (552B MoE with an encoder/decoder split activation budget) against GPT-6 Astra, Gemini 3.8 Flash, and Claude Opus 5 on DeepSWE, Terminal-Bench 2.1, and HLE, finding comparable coding accuracy (74.34% DeepSWE pass@1) at 1/15th the cost ($0.43/task) thanks to a KV cache overhaul that cuts HBM 4x and holds a 99.6% cache-hit rate; an oracle router combining it with Astra beats Astra alone on HLE.
 - **2026-09-10** — [Gen-1 Slides: Opus 5-level decks at a fraction of the cost](<../models/reinforcement-learning/Gen-1 Slides Opus 5-level decks at a fraction of the cost.md>) · `reinforcement-learning` · fireworks
