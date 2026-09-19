@@ -1,10 +1,16 @@
 ---
 title: How a global fintech scaled coding agent traffic with Dedicated Model Inference
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: inference
+subtopic: optimization
+secondary_topics:
+- infra-platform/deployment
+summary: A fintech running coding-agent traffic on GLM-5.2 (MoE) via Together's Dedicated
+  Model Inference hit prefill/KV-cache exhaustion and multi-minute queuing after a
+  replica reshape; self-serve endpoint control let them fix it same-day by restoring
+  cache-session-aware routing over cache-aware-by-hash and widening max-inflight-per-worker,
+  while a metrics API traced a 192s slow request to a 2.3M-token prefill backlog rather
+  than compute cost.
 triage: null
 skip_reason: null
 source: together
@@ -12,7 +18,7 @@ url: https://www.together.ai/blog/global-fintech-scales-coding-agent-traffic-wit
 author: Ankit Goyal
 published: '2026-09-18'
 fetched: '2026-09-19T06:09:34Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1441
 content_sha256: 121b234f825b8a42acaa977948ac38605befba2e45cfa403f4462b64a5edd1fd

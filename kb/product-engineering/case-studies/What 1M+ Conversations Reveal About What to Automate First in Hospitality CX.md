@@ -1,10 +1,16 @@
 ---
 title: What 1M+ Conversations Reveal About What to Automate First in Hospitality CX
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: product-engineering
+subtopic: case-studies
+secondary_topics:
+- infra-platform/deployment
+summary: Cresta analyzed 1M+ travel/hospitality contact-center conversations to build
+  an 'Automation Readiness' score combining resolution rate, handle time, flow structure
+  (5-7 phases, 14-16 steps), deviation rate, and tool complexity (1-3 tools), finding
+  high deviation rates often reflect off-topic chatter or transfers rather than broken
+  workflows, and that the highest-volume automation candidate (Booking & Reservation
+  Changes, ~45% of volume) differs from the highest-scoring one (Seat & Cabin Management).
 triage: null
 skip_reason: null
 source: cresta
@@ -12,7 +18,7 @@ url: https://cresta.com/blog/what-1m-conversations-reveal-about-what-to-automate
 author: Ping Wu
 published: '2026-09-17'
 fetched: '2026-09-19T06:09:27Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 2462
 content_sha256: be58964bbd22bbac15d44547e1cf2ddcc747d9248ec5ef08ba39aa5d1f0b7172

@@ -1,7 +1,9 @@
 # together
 
-92 articles.
+93 articles.
 
+- **2026-09-18** — [How a global fintech scaled coding agent traffic with Dedicated Model Inference](<../inference/optimization/How a global fintech scaled coding agent traffic with Dedicated Model Inference.md>) · `optimization` · together
+  A fintech running coding-agent traffic on GLM-5.2 (MoE) via Together's Dedicated Model Inference hit prefill/KV-cache exhaustion and multi-minute queuing after a replica reshape; self-serve endpoint control let them fix it same-day by restoring cache-session-aware routing over cache-aware-by-hash and widening max-inflight-per-worker, while a metrics API traced a 192s slow request to a 2.3M-token prefill backlog rather than compute cost.
 - **2026-09-16** — [Migrating from closed to open source models, Together](<../infra-platform/deployment/Migrating from closed to open source models, Together.md>) · `deployment` · together
   Together AI's Discover-Evaluate-Adapt-Decide-Production playbook for migrating production LLM workloads from closed to open-source models: replaying real production traffic instead of generic benchmarks (FrontierCode, tau-bench, LMArena) for evaluation, adaptation levers ranked by effort (prompt engineering, inference settings, harness/context engineering, fine-tuning), and canary rollouts starting at 10% of traffic, with customers reporting up to 70% cost reduction.
 - **2026-09-11** — [Together AI expands fine-tuning service with more models, live metrics, and finer controls](<../models/fine-tuning/Together AI expands fine-tuning service with more models, live metrics, and finer controls.md>) · `fine-tuning` · together

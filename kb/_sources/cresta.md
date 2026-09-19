@@ -1,7 +1,9 @@
 # cresta
 
-70 articles.
+71 articles.
 
+- **2026-09-17** — [What 1M+ Conversations Reveal About What to Automate First in Hospitality CX](<../product-engineering/case-studies/What 1M+ Conversations Reveal About What to Automate First in Hospitality CX.md>) · `case-studies` · cresta
+  Cresta analyzed 1M+ travel/hospitality contact-center conversations to build an 'Automation Readiness' score combining resolution rate, handle time, flow structure (5-7 phases, 14-16 steps), deviation rate, and tool complexity (1-3 tools), finding high deviation rates often reflect off-topic chatter or transfers rather than broken workflows, and that the highest-volume automation candidate (Booking & Reservation Changes, ~45% of volume) differs from the highest-scoring one (Seat & Cabin Management).
 - **2026-09-16** — [From Better Evaluators to Better Agents: Building Compliance Intelligence with CompliBench](<../evals-observability/benchmark-design/From Better Evaluators to Better Agents Building Compliance Intelligence with CompliBench.md>) · `benchmark-design` · cresta
   Introduces CompliBench, a synthetic-data pipeline that uses controllable compliance-violation injection and three specialized agents (customer, workflow tracker, assistant) to generate 318 labeled multi-turn enterprise conversations across airline, healthcare, and insurance domains; finds GPT-5 stays below 50% and Gemini reaches only the mid-50% range on conversation-level compliance accuracy despite strong per-turn guideline identification.
 - **2026-09-03** — [Part I: Replacing FinServ IVRs with an AI Agent: A 3-Phase Playbook](<../product-engineering/case-studies/Part I Replacing FinServ IVRs with an AI Agent A 3-Phase Playbook.md>) · `case-studies` · cresta

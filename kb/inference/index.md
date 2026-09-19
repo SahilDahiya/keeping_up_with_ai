@@ -1,7 +1,9 @@
 # inference
 
-135 articles.
+136 articles.
 
+- **2026-09-18** — [How a global fintech scaled coding agent traffic with Dedicated Model Inference](<optimization/How a global fintech scaled coding agent traffic with Dedicated Model Inference.md>) · `optimization` · together
+  A fintech running coding-agent traffic on GLM-5.2 (MoE) via Together's Dedicated Model Inference hit prefill/KV-cache exhaustion and multi-minute queuing after a replica reshape; self-serve endpoint control let them fix it same-day by restoring cache-session-aware routing over cache-aware-by-hash and widening max-inflight-per-worker, while a metrics API traced a 192s slow request to a 2.3M-token prefill backlog rather than compute cost.
 - **2026-09-10** — [To Infinity and Beyond: ThunderKittens Now on NVIDIA Vera Rubin NVL72!](<kernels/To Infinity and Beyond ThunderKittens Now on NVIDIA Vera Rubin NVL72!.md>) · `kernels` · together
   Together's kernels team ports ThunderKittens NVFP4/FP8 GEMM kernels to NVIDIA Vera Rubin NVL72, exploiting the doubled-K tensor-core step and expanded 576-column tensor memory to push past the ~42-44% of roofline achieved by naively reusing Blackwell kernels, reaching over 22 PFLOPS and competitive with cuBLAS and CuTe DSL.
 - **2026-09-09** — [How Baseten makes pyannote’s diarization models 9.6x faster](<optimization/How Baseten makes pyannote’s diarization models 9.6x faster.md>) · `optimization` · baseten

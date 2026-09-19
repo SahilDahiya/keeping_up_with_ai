@@ -1,7 +1,9 @@
 # product-engineering
 
-62 articles.
+63 articles.
 
+- **2026-09-17** — [What 1M+ Conversations Reveal About What to Automate First in Hospitality CX](<case-studies/What 1M+ Conversations Reveal About What to Automate First in Hospitality CX.md>) · `case-studies` · cresta
+  Cresta analyzed 1M+ travel/hospitality contact-center conversations to build an 'Automation Readiness' score combining resolution rate, handle time, flow structure (5-7 phases, 14-16 steps), deviation rate, and tool complexity (1-3 tools), finding high deviation rates often reflect off-topic chatter or transfers rather than broken workflows, and that the highest-volume automation candidate (Booking & Reservation Changes, ~45% of volume) differs from the highest-scoring one (Seat & Cabin Management).
 - **2026-09-03** — [Part I: Replacing FinServ IVRs with an AI Agent: A 3-Phase Playbook](<case-studies/Part I Replacing FinServ IVRs with an AI Agent A 3-Phase Playbook.md>) · `case-studies` · cresta
   Cresta's playbook for replacing financial-services IVR phone trees with an AI agent: how to measure call containment honestly (exclude after-hours artifacts, don't count abandoned calls as containment, watch composition not just the headline number), and why phased, blast-radius-limited rollouts with shadow testing and UAT beat a single big-bang launch, typically lifting containment from a 20-30% IVR baseline to ~40% after replacement and 60-85% in later phases.
 - **2026-09-02** — [How Botika runs full-stack generative AI on Modal | Modal Blog](<case-studies/How Botika runs full-stack generative AI on Modal Modal Blog.md>) · `case-studies` · modal
