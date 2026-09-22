@@ -2,10 +2,14 @@
 title: FireFunction V1 - Fireworks’ GPT-4-level function calling model - 4x faster
   than GPT-4 and open weights
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: agents
+subtopic: tool-use
+secondary_topics:
+- models/benchmarks
+summary: Releases FireFunction-v1, a Mixtral-based open-weights function-calling model,
+  detailing its structured-output/JSON-mode design, a forced-function-call 'any' tool_choice
+  option, and Nexus OTX/VT benchmark results showing near-GPT-4 accuracy (87.88% vs
+  87.88% on 5-function tasks) at ~4x lower latency.
 triage: null
 skip_reason: null
 source: fireworks
@@ -13,7 +17,7 @@ url: https://fireworks.ai/blog/firefunction-v1-gpt-4-level-function-calling
 author: null
 published: '2024-02-20'
 fetched: '2026-09-22T06:11:10Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1378
 content_sha256: 66dc2537b3c0f73c6e19e6923099cecf188f3cae80714dc2224fb8608e030ca7

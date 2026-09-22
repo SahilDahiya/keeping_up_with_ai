@@ -1,10 +1,15 @@
 ---
 title: Building Enterprise-Scale RAG Systems with Fireworks and MongoDB Atlas
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: rag-retrieval
+subtopic: pipelines
+secondary_topics:
+- product-engineering/case-studies
+summary: Walks through an open-source enterprise RAG architecture combining Fireworks
+  (inference plus Whisper V3 Turbo audio transcription) with MongoDB Atlas vector
+  storage, covering multi-format document processing, chunking, batched embedding
+  generation, and metadata-preserving retrieval over earnings calls and financial
+  reports.
 triage: null
 skip_reason: null
 source: fireworks
@@ -12,7 +17,7 @@ url: https://fireworks.ai/blog/rag-system-mongodb-atlas
 author: null
 published: '2025-04-09'
 fetched: '2026-09-22T06:11:26Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1224
 content_sha256: a8817ea0c976708fc68da78470fc7be0e7b563c108ab9f98e697cac0d2bffab7

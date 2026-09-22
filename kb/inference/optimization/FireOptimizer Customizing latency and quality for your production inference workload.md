@@ -2,10 +2,13 @@
 title: 'FireOptimizer: Customizing latency and quality for your production inference
   workload'
 kind: blog
-topic: null
-subtopic: null
+topic: inference
+subtopic: optimization
 secondary_topics: []
-summary: null
+summary: Introduces FireOptimizer, Fireworks' adaptation engine that auto-tunes hardware,
+  model, and software layers of the serving stack per workload, headlined by an adaptive
+  speculative-execution feature that delivers up to 3x latency improvements by tailoring
+  draft strategies to each customer's traffic.
 triage: null
 skip_reason: null
 source: fireworks
@@ -13,7 +16,7 @@ url: https://fireworks.ai/blog/fireoptimizer
 author: null
 published: '2024-08-30'
 fetched: '2026-09-22T06:10:36Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1669
 content_sha256: 6b1e5ed1ce0360dbb7bf6286177641688053b4beda5e9df3fa2ea2c407c07878

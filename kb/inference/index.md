@@ -1,7 +1,9 @@
 # inference
 
-136 articles.
+138 articles.
 
+- **2026-09-21** — [The frontier isn’t a model. It’s a router.](<optimization/The frontier isn’t a model. It’s a router.md>) · `optimization` · fireworks
+  Analyzes an oracle router over 18 coding models on the DeepSWE agentic benchmark, showing that picking the best model per task rather than a single best model (GPT-6 Astra at 74.1%) reaches 97.6% pass rate at under a third of the cost ($1.88 vs $6.52 per task).
 - **2026-09-18** — [How a global fintech scaled coding agent traffic with Dedicated Model Inference](<optimization/How a global fintech scaled coding agent traffic with Dedicated Model Inference.md>) · `optimization` · together
   A fintech running coding-agent traffic on GLM-5.2 (MoE) via Together's Dedicated Model Inference hit prefill/KV-cache exhaustion and multi-minute queuing after a replica reshape; self-serve endpoint control let them fix it same-day by restoring cache-session-aware routing over cache-aware-by-hash and widening max-inflight-per-worker, while a metrics API traced a 192s slow request to a 2.3M-token prefill backlog rather than compute cost.
 - **2026-09-10** — [To Infinity and Beyond: ThunderKittens Now on NVIDIA Vera Rubin NVL72!](<kernels/To Infinity and Beyond ThunderKittens Now on NVIDIA Vera Rubin NVL72!.md>) · `kernels` · together
@@ -184,6 +186,8 @@
   Explains dynamic batching for Whisper transcription workloads and how batching improves throughput without changing model behavior.
 - **2024-09-05** — [Speculative decoding for high-throughput long-context inference](<speculative-decoding/Speculative decoding for high-throughput long-context inference.md>) · `speculative-decoding` · together
   Explains speculative decoding for high-throughput long-context inference.
+- **2024-08-30** — [FireOptimizer: Customizing latency and quality for your production inference workload](<optimization/FireOptimizer Customizing latency and quality for your production inference workload.md>) · `optimization` · fireworks
+  Introduces FireOptimizer, Fireworks' adaptation engine that auto-tunes hardware, model, and software layers of the serving stack per workload, headlined by an adaptive speculative-execution feature that delivers up to 3x latency improvements by tailoring draft strategies to each customer's traffic.
 - **2024-08-28** — [TEAL: Training-Free Activation Sparsity in Large Language Models](<optimization/TEAL Training-Free Activation Sparsity in Large Language Models.md>) · `optimization` · together
   Explains TEAL, a training-free activation sparsity method for large language models.
 - **2024-08-20** — [How to double tokens per second for Llama 3 with Medusa](<speculative-decoding/How to double tokens per second for Llama 3 with Medusa.md>) · `speculative-decoding` · baseten
@@ -335,6 +339,8 @@
   Describes live draft-model training for speculative decoding systems.
 - **2026-06-23** — [ParallelKernelBench: Frontier LLMs can't write fast multi-GPU kernels (yet)](<../evals-observability/benchmark-design/ParallelKernelBench Frontier LLMs can't write fast multi-GPU kernels (yet).md>) · `benchmark-design` · together
   Introduces ParallelKernelBench for measuring whether frontier LLMs can write fast multi-GPU kernels.
+- **2026-06-16** — [GLM 5.2 is live on Fireworks inference, day zero.](<../models/benchmarks/GLM 5.2 is live on Fireworks inference, day zero.md>) · `benchmarks` · fireworks
+  Independently reproduces Z.ai's GLM 5.2 launch benchmarks on Fireworks' own GPUs and inference engine (91.4% GPQA-Diamond vs the reported 91.2%), and explains the difference between running an inference-provider-hosted model directly versus via an API router.
 - **2026-06-12** — [MiniMax M3 is live: long context + native multimodality at 1/20th the price](<../models/architectures/MiniMax M3 is live long context + native multimodality at 120th the price.md>) · `architectures` · fireworks
   MiniMax M3's extended context comes from MSA (MiniMax Sparse Attention), which pre-filters and blocks KV caches with a 'KV outer gather Q' operator ordering that fetches each block once, delivering >4x speedup over Flash-Sparse-Attention/flash-moba, 95% lower per-token compute, and 9x/15x faster prefill/decode at 1M-token context versus M2.7.
 - **2026-06-12** — [Rolling deployments for zero-downtime model updates](<../infra-platform/deployment/Rolling deployments for zero-downtime model updates.md>) · `deployment` · baseten

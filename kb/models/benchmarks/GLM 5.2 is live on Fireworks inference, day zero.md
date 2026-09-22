@@ -1,10 +1,14 @@
 ---
 title: GLM 5.2 is live on Fireworks inference, day zero.
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: models
+subtopic: benchmarks
+secondary_topics:
+- inference/serving
+summary: Independently reproduces Z.ai's GLM 5.2 launch benchmarks on Fireworks' own
+  GPUs and inference engine (91.4% GPQA-Diamond vs the reported 91.2%), and explains
+  the difference between running an inference-provider-hosted model directly versus
+  via an API router.
 triage: null
 skip_reason: null
 source: fireworks
@@ -12,7 +16,7 @@ url: https://fireworks.ai/blog/glm-5p2
 author: null
 published: '2026-06-16'
 fetched: '2026-09-22T06:10:54Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1036
 content_sha256: 234eb5e8d3930fa95df45cc9868f13b529c650bb57ec47b1ea51d826c0211eae

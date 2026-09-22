@@ -1,10 +1,13 @@
 ---
 title: Frontier-lab training infrastructure, now as a service
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: models
+subtopic: reinforcement-learning
+secondary_topics:
+- infra-platform/gpu-clusters
+summary: Details the batch-invariance and end-to-end zero-KLD infrastructure needed
+  to keep an RL trainer and rollout engine numerically identical on large MoE models,
+  and announces it as a managed training-as-a-service offering starting with GLM 5.2.
 triage: null
 skip_reason: null
 source: fireworks
@@ -12,7 +15,7 @@ url: https://fireworks.ai/blog/frontier-lab-training-infrastructure-as-a-service
 author: null
 published: '2026-06-24'
 fetched: '2026-09-22T06:12:28Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1842
 content_sha256: 749a581495c70cf7e3ca6d18b8497396d123a9eb33200979b044f7f6b8837e43

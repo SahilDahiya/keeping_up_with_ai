@@ -1,6 +1,6 @@
 # models
 
-196 articles.
+198 articles.
 
 - **2026-09-14** — [DeepSeek-V4.1-Flash on Fireworks: Astra-level DeepSWE at 1/15th the cost](<benchmarks/DeepSeek-V4.1-Flash on Fireworks Astra-level DeepSWE at 115th the cost.md>) · `benchmarks` · fireworks
   Fireworks benchmarks DeepSeek-V4.1-Flash (552B MoE with an encoder/decoder split activation budget) against GPT-6 Astra, Gemini 3.8 Flash, and Claude Opus 5 on DeepSWE, Terminal-Bench 2.1, and HLE, finding comparable coding accuracy (74.34% DeepSWE pass@1) at 1/15th the cost ($0.43/task) thanks to a KV cache overhaul that cuts HBM 4x and holds a 99.6% cache-hit rate; an oracle router combining it with Astra beats Astra alone on HLE.
@@ -78,8 +78,12 @@
   Cursor's Composer 2, built on Kimi 2.5, is trained via continual pretraining and large-scale RL on long-horizon software engineering tasks; Fireworks provides distributed rollout/inference infra across 3-4 clusters with compressed weight sync, hitting 61.3 CursorBench and 6-10x lower inference cost than comparable frontier coding models.
 - **2026-06-25** — [Live draft model training for speculative decoding](<fine-tuning/Live draft model training for speculative decoding.md>) · `fine-tuning` · baseten
   Describes live draft-model training for speculative decoding systems.
+- **2026-06-24** — [Frontier-lab training infrastructure, now as a service](<reinforcement-learning/Frontier-lab training infrastructure, now as a service.md>) · `reinforcement-learning` · fireworks
+  Details the batch-invariance and end-to-end zero-KLD infrastructure needed to keep an RL trainer and rollout engine numerically identical on large MoE models, and announces it as a managed training-as-a-service offering starting with GLM 5.2.
 - **2026-06-18** — [Beyond LoRA: Can you beat the most popular fine-tuning technique?](<fine-tuning/Beyond LoRA Can you beat the most popular fine-tuning technique.md>) · `fine-tuning` · huggingface
   Benchmarks PEFT methods beyond LoRA (LoHa, LoKr, OFT, BOFT, VeRA, FourierFT, prompt tuning, adapters) on a common task using the MetaMathQA benchmark suite in the PEFT repo, comparing accuracy, memory and checkpoint size to show when LoRA is and isn't the right default.
+- **2026-06-16** — [GLM 5.2 is live on Fireworks inference, day zero.](<benchmarks/GLM 5.2 is live on Fireworks inference, day zero.md>) · `benchmarks` · fireworks
+  Independently reproduces Z.ai's GLM 5.2 launch benchmarks on Fireworks' own GPUs and inference engine (91.4% GPQA-Diamond vs the reported 91.2%), and explains the difference between running an inference-provider-hosted model directly versus via an API router.
 - **2026-06-12** — [MiniMax M3 is live: long context + native multimodality at 1/20th the price](<architectures/MiniMax M3 is live long context + native multimodality at 120th the price.md>) · `architectures` · fireworks
   MiniMax M3's extended context comes from MSA (MiniMax Sparse Attention), which pre-filters and blocks KV caches with a 'KV outer gather Q' operator ordering that fetches each block once, delivering >4x speedup over Flash-Sparse-Attention/flash-moba, 95% lower per-token compute, and 9x/15x faster prefill/decode at 1M-token context versus M2.7.
 - **2026-06-12** — [Kimi K2.7 Code on Fireworks: Better Agents, Lower Cost per Task, Available Day-0 | Fireworks](<reasoning/Kimi K2.7 Code on Fireworks Better Agents, Lower Cost per Task, Available Day-0 Fireworks.md>) · `reasoning` · fireworks
@@ -163,7 +167,7 @@
 - **2025-12-15** — [Updates for developers building with voice | OpenAI Developers](<releases/Updates for developers building with voice OpenAI Developers.md>) · `releases` · openai-devs
   Release notes for four December 2025 audio model snapshots (gpt-4o-mini-transcribe, gpt-4o-mini-tts, gpt-realtime-mini, gpt-audio-mini): lower word-error rates on noisy audio, fewer hallucinations during silence, better tool calling in the minis, and broader Custom Voices access at unchanged pricing.
 - **2025-12-10** — [Best Practices for Multi-Turn RL](<reinforcement-learning/Best Practices for Multi-Turn RL.md>) · `reinforcement-learning` · fireworks
-  Covers best practices for multi-turn reinforcement learning, including environment design and reward structure.
+  Explains why multi-turn tool-use agents need full RL rather than SFT-on-golden-traces or per-step decomposition, and lays out a trajectory-generator/inference-service/environment/trainer training loop plus reward-design recipes for long-horizon, tool-heavy tasks.
 - **2025-12-05** — [DeepSeek V3.2's path to GPT-5-level performance: sparse attention, RL at scale, and context reuse](<reasoning/DeepSeek V3.2's path to GPT-5-level performance sparse attention, RL at scale, and context reuse.md>) · `reasoning` · baseten
   Explains DeepSeek V3.2 architecture and training choices including sparse attention, RL, and context reuse.
 - **2025-12-04** — [Fine-tuning LLMs as classifiers](<fine-tuning/Fine-tuning LLMs as classifiers.md>) · `fine-tuning` · fireworks
@@ -397,6 +401,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-09-21** — [The frontier isn’t a model. It’s a router.](<../inference/optimization/The frontier isn’t a model. It’s a router.md>) · `optimization` · fireworks
+  Analyzes an oracle router over 18 coding models on the DeepSWE agentic benchmark, showing that picking the best model per task rather than a single best model (GPT-6 Astra at 74.1%) reaches 97.6% pass rate at under a third of the cost ($1.88 vs $6.52 per task).
 - **2026-09-08** — [Optimizing delta weight syncs for managed rollouts](<../inference/optimization/Optimizing delta weight syncs for managed rollouts.md>) · `optimization` · baseten
   Baseten details how it syncs delta weights (XOR of serialized policy bytes, zstd-compressed) to independent rollout GPU clusters for frontier RL training in under 40s with 6s of request pause; a custom decoder reads zstd's own literal/sequence commands to skip materializing the full 716.56 GiB logical output (compressed to 1.55 GiB for a GLM-5.3 fixture), and batching sparse updates by destination cut the vLLM pause/load/resume interval from 12s to 6s.
 - **2026-09-02** — [How Botika runs full-stack generative AI on Modal | Modal Blog](<../product-engineering/case-studies/How Botika runs full-stack generative AI on Modal Modal Blog.md>) · `case-studies` · modal
@@ -629,6 +635,8 @@
   Introduces SpecExec for massively parallel speculative decoding on consumer devices.
 - **2024-06-18** — [BigCodeBench: The Next Generation of HumanEval](<../evals-observability/benchmark-design/BigCodeBench The Next Generation of HumanEval.md>) · `benchmark-design` · huggingface
   BigCodeBench replaces HumanEval with 1,140 function-level tasks that force LLMs to compose calls across 139 libraries, with rich test harnesses (average 5.6 test cases, 99% branch coverage) and both Complete and Instruct splits. Reports that instruction-tuned models drop sharply on the Instruct split and that even top models are ~20 points behind human performance.
+- **2024-06-17** — [Firefunction-v2: Function calling capability on par with GPT4o at 2.5x the speed and 10% of the cost=](<../agents/tool-use/Firefunction-v2 Function calling capability on par with GPT4o at 2.5x the speed and 10% of the cost=.md>) · `tool-use` · fireworks
+  Releases Firefunction-v2, a Llama-3-70B-based function-calling model tuned for multi-turn conversation and parallel function calling, reporting 0.81 vs GPT-4o's 0.80 on a public benchmark medley at 180 tok/sec versus GPT-4o's 69 tok/sec and roughly a tenth of the cost.
 - **2024-06-11** — [Together MoA collective intelligence of open-source models](<../agents/multi-agent/Together MoA collective intelligence of open-source models.md>) · `multi-agent` · together
   Explains Mixture-of-Agents for improving model outputs through collective open-source model reasoning.
 - **2024-05-28** — [Training and Finetuning Embedding Models with Sentence Transformers](<../rag-retrieval/embeddings/Training and Finetuning Embedding Models with Sentence Transformers.md>) · `embeddings` · huggingface
@@ -645,6 +653,8 @@
   ConTextual is a benchmark and leaderboard for context-sensitive text-rich visual reasoning (reading text in images to answer instructions); uses GPT-4 as judge plus human evaluation, showing a large gap between GPT-4V and open LMMs.
 - **2024-02-22** — [40% faster Stable Diffusion XL inference with NVIDIA TensorRT](<../inference/optimization/40% faster Stable Diffusion XL inference with NVIDIA TensorRT.md>) · `optimization` · baseten
   Explains TensorRT optimization for Stable Diffusion XL inference, including latency and throughput gains.
+- **2024-02-20** — [FireFunction V1 - Fireworks’ GPT-4-level function calling model - 4x faster than GPT-4 and open weights](<../agents/tool-use/FireFunction V1 - Fireworks’ GPT-4-level function calling model - 4x faster than GPT-4 and open weights.md>) · `tool-use` · fireworks
+  Releases FireFunction-v1, a Mixtral-based open-weights function-calling model, detailing its structured-output/JSON-mode design, a forced-function-call 'any' tool_choice option, and Nexus OTX/VT benchmark results showing near-GPT-4 accuracy (87.88% vs 87.88% on 5-function tasks) at ~4x lower latency.
 - **2024-02-02** — [NPHardEval Leaderboard: Unveiling the Reasoning Abilities of Large Language Models through Complexity Classes and Dynamic Updates](<../evals-observability/benchmark-design/NPHardEval Leaderboard Unveiling the Reasoning Abilities of Large Language Models through Complexity Classes and Dynamic Updates.md>) · `benchmark-design` · huggingface
   NPHardEval grounds LLM reasoning evaluation in computational complexity classes: 900 auto-generated algorithmic questions (3 P, 3 NP-complete, 3 NP-hard tasks x 10 difficulty levels), refreshed monthly to defeat overfitting, scored by weighted accuracy and failure rate.
 - **2024-01-31** — [Introduction to quantizing ML models](<../inference/quantization/Introduction to quantizing ML models.md>) · `quantization` · baseten

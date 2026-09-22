@@ -1,10 +1,14 @@
 ---
 title: The frontier isn’t a model. It’s a router.
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: inference
+subtopic: optimization
+secondary_topics:
+- models/benchmarks
+summary: Analyzes an oracle router over 18 coding models on the DeepSWE agentic benchmark,
+  showing that picking the best model per task rather than a single best model (GPT-6
+  Astra at 74.1%) reaches 97.6% pass rate at under a third of the cost ($1.88 vs $6.52
+  per task).
 triage: null
 skip_reason: null
 source: fireworks
@@ -12,7 +16,7 @@ url: https://fireworks.ai/blog/the-frontier-isnt-a-model-its-a-router
 author: null
 published: '2026-09-21'
 fetched: '2026-09-22T06:10:28Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1275
 content_sha256: 1147654436da8035a49f1631cbcbe65b6e72c15534cdc80024d44d3434033fb0

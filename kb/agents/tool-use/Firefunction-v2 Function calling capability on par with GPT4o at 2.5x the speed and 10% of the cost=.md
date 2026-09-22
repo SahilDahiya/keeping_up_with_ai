@@ -2,10 +2,14 @@
 title: 'Firefunction-v2: Function calling capability on par with GPT4o at 2.5x the
   speed and 10% of the cost='
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: agents
+subtopic: tool-use
+secondary_topics:
+- models/benchmarks
+summary: Releases Firefunction-v2, a Llama-3-70B-based function-calling model tuned
+  for multi-turn conversation and parallel function calling, reporting 0.81 vs GPT-4o's
+  0.80 on a public benchmark medley at 180 tok/sec versus GPT-4o's 69 tok/sec and
+  roughly a tenth of the cost.
 triage: null
 skip_reason: null
 source: fireworks
@@ -13,7 +17,7 @@ url: https://fireworks.ai/blog/firefunction-v2-launch-post
 author: null
 published: '2024-06-17'
 fetched: '2026-09-22T06:11:52Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1753
 content_sha256: e33ee7c3884e9d9588324f696181206fe7cc3598017f2ce6bfa45b0b63058620

@@ -149,6 +149,8 @@
   Factory's Droids run any coding model (frontier or open-weight) behind one harness that absorbs per-model differences in reasoning/tracing formats, tool schemas, and git-state handling; open-weight share of Factory's usage grew 2-3x in six months as models closed the capability gap at a fraction of frontier cost.
 - **2026-06-25** — [Proxying inference requests in 6ms with Pingora, Envoy, and Spanner](<../inference/serving/Proxying inference requests in 6ms with Pingora, Envoy, and Spanner.md>) · `serving` · modal
   Explains low-latency inference proxying with Pingora, Envoy, and Spanner, including request-routing architecture.
+- **2026-06-24** — [Frontier-lab training infrastructure, now as a service](<../models/reinforcement-learning/Frontier-lab training infrastructure, now as a service.md>) · `reinforcement-learning` · fireworks
+  Details the batch-invariance and end-to-end zero-KLD infrastructure needed to keep an RL trainer and rollout engine numerically identical on large MoE models, and announces it as a managed training-as-a-service offering starting with GLM 5.2.
 - **2026-05-28** — [Reinforcement learning is an infrastructure problem](<../models/reinforcement-learning/Reinforcement learning is an infrastructure problem.md>) · `reinforcement-learning` · modal
   Argues that reinforcement learning progress depends heavily on infrastructure for scheduling, iteration, and scalable experiments.
 - **2026-05-27** — [Shipping a Trillion Parameters With a Hub Bucket: Delta Weight Sync in TRL](<../models/reinforcement-learning/Shipping a Trillion Parameters With a Hub Bucket Delta Weight Sync in TRL.md>) · `reinforcement-learning` · huggingface

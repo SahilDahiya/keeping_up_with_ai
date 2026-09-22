@@ -1,22 +1,24 @@
 ---
 title: Best Practices for Multi-Turn RL
+kind: blog
 topic: models
 subtopic: reinforcement-learning
 secondary_topics:
-- agents/planning
-summary: Covers best practices for multi-turn reinforcement learning, including environment
-  design and reward structure.
+- agents/tool-use
+summary: Explains why multi-turn tool-use agents need full RL rather than SFT-on-golden-traces
+  or per-step decomposition, and lays out a trajectory-generator/inference-service/environment/trainer
+  training loop plus reward-design recipes for long-horizon, tool-heavy tasks.
+triage: null
+skip_reason: null
 source: fireworks
 url: https://fireworks.ai/blog/best-practices-for-multi-turn-RL
 author: null
 published: '2025-12-10'
-fetched: '2026-07-11T04:18:06Z'
-classifier: codex
-taxonomy_rev: 1
-words: 2609
-content_sha256: 4012abdf5b0089199647ec7dab2018339a1cf79e1924bb1446489960cb2d2450
-triage: keep
-skip_reason: null
+fetched: '2026-09-22T06:12:22Z'
+classifier: claude
+taxonomy_rev: 2
+words: 2579
+content_sha256: 692320f2b203b77f9a2ea97ea4a17134d9eec22c048716d879e7ea183d7d3eb0
 ---
 
 # Best Practices for Multi-Turn RL
@@ -26,16 +28,6 @@ Faster Proposal Assistance
 Sub-second first-token latency
 
 Increase in Engagement
-
-- Introduction
-- From Single-Turn to Multi-Turn
-- Why RL Beats SFT for Multi-Turn Agents
-- Anatomy of a Multi-Turn RL System
-- Reward Design: Partial vs Trajectory-Level
-- Building a Reward Function that Survives Contact with Reality
-- Practical Recipes: Making Multi-Turn RL Work
-- Case Study: A Deep Research Agent
-- Summary
 
 How to train LLM agents that can reliably plan, call tools, and recover from their own mistakes.
 
@@ -53,12 +45,12 @@ This post lays out how to think about multi-turn RL for sequential tool use, how
 
 Before we talk about training, it’s worth contrasting the single-turn and multi-turn settings.
 
-| Feature | Single Turn | Multi Turn |
+| Feature | Single Turn | Multi Turn | 
 |---|---|---|
-| Interaction space | Interaction space Small, fairly predictable (e.g., “call one API once”) | Combinatorial explosion of tool sequences and arguments |
-| Credit assignment | Trivial: the one call was right or wrong | Hard: final failure may come from any earlier decision |
-| Training method | SFT usually works quite well | SFT struggles; RL is typically needed |
-| Example | “Use search once and answer” | “Perform deep research with many calls, cross-checks, and revisions” |
+| Interaction space | Interaction space Small, fairly predictable (e.g., “call one API once”) | Combinatorial explosion of tool sequences and arguments | 
+| Credit assignment | Trivial: the one call was right or wrong | Hard: final failure may come from any earlier decision | 
+| Training method | SFT usually works quite well | SFT struggles; RL is typically needed | 
+| Example | “Use search once and answer” | “Perform deep research with many calls, cross-checks, and revisions” | 
 
 A common workaround is to approximate multi-turn tasks by decomposing them into single-turn subproblems – for example, treat each retrieval call as an independent “episode” with its own label (“did we retrieve a relevant document?”). This is viable only if you can define good partial rewards on each step.
 
@@ -125,9 +117,9 @@ Part of making multi-turn RL work in practice is stabilizing the environment: pi
 Rewards are applied to trajectories to score their quality. They can be specified in several ways, including:
 
 - •Programmatic function – for example, a Python function that parses the trajectory and evaluates whether the tool calls are correct.
-- •Model-based reward – either- •a general-purpose model, prompt-tuned to judge trajectory quality, or
-- •a specialized reward model trained explicitly for reward attribution.
-
+- •Model-based reward – either
+  - •a general-purpose model, prompt-tuned to judge trajectory quality, or
+  - •a specialized reward model trained explicitly for reward attribution.
 
 Given batches of trajectories and associated rewards, the trainer performs policy gradient updates with some form of KL-regularization to avoid catastrophic drift from the base model.
 
@@ -154,8 +146,8 @@ This yields dense signal, which is good for exploration and sample efficiency: t
 
 However, partial rewards come with serious downsides:
 
-- •**Myopia**: the agent optimizes for the proxy (“pass unit tests”) rather than the real goal (“solve the user’s problem”).
-- •**Reward hacking**: the agent exploits loopholes - e.g., overfitting to trivial tests, spamming retrieval calls that look “good” according to the shaping term.
+- •**Myopia** : the agent optimizes for the proxy (“pass unit tests”) rather than the real goal (“solve the user’s problem”).
+- •**Reward hacking** : the agent exploits loopholes - e.g., overfitting to trivial tests, spamming retrieval calls that look “good” according to the shaping term.
 
 At the other extreme, we assign reward only at the end:
 
@@ -169,32 +161,32 @@ The downside is that the signal is sparse and high-variance:
 - •Many trajectories have the same zero or negative reward.
 - •Credit assignment over long horizons is difficult; learning can be slow.
 
-- •**Signal density:**partial rewards are dense; trajectory-level are sparse.
-- •**Alignment:**trajectory-level is best aligned to the actual objective.
-- •**Robustness:**partial rewards are more hackable; trajectory-level less so.
-- •**Engineering overhead:**partial rewards require crafting proxies at each step; trajectory-level “only” needs a reliable success metric.
+- •**Signal density:** partial rewards are dense; trajectory-level are sparse.
+- •**Alignment:** trajectory-level is best aligned to the actual objective.
+- •**Robustness:** partial rewards are more hackable; trajectory-level less so.
+- •**Engineering overhead:** partial rewards require crafting proxies at each step; trajectory-level “only” needs a reliable success metric.
 
 In real-world deployments, trajectory-level rewards tend to be more practical, precisely because defining robust partial rewards across a complex multi-turn workflow is extremely difficult. It is already a non-trivial challenge to define “success” at the end; doing so at every intermediate step can quickly become intractable.
 
 A useful pattern is:
 
-- Start with a pure episodic signal: success vs failure, possibly with a small step penalty.
-- Once that is working, optionally layer in light shaping terms that you have high confidence in.
+1. Start with a pure episodic signal: success vs failure, possibly with a small step penalty.
+2. Once that is working, optionally layer in light shaping terms that you have high confidence in.
 
 Given the above, a pragmatic reward function for a multi-turn agent often looks like a weighted sum of a few components:
 
-- **Final outcome**(dominant term)- •Large positive reward for success, large negative for failure (e.g., +1.0 / −1.0).
-- •Anchors the agent to the real goal; everything else is secondary.
-
-- **Step penalty**- •Small negative per step (e.g., −0.05).
-- •Encourages efficiency, avoids infinite loops, and discourages pathological “stalling” behaviors.
-
-- **Tool call validity**- •Penalty for syntactically invalid or semantically absurd tool calls (e.g., −0.2 per error).
-- •Teaches the model the “rules of the game” without needing to explicitly label each failure.
-
-- **Progress shaping (optional, advanced)**- •Small positive rewards for clearly helpful intermediate results (e.g., returning a relevant evidence chunk, successfully executing a query that moves the task forward).
-- •Can speed up learning but carries an elevated risk of reward hacking.
-
+1. **Final outcome** (dominant term)
+  - •Large positive reward for success, large negative for failure (e.g., +1.0 / −1.0).
+  - •Anchors the agent to the real goal; everything else is secondary.
+2. **Step penalty**
+  - •Small negative per step (e.g., −0.05).
+  - •Encourages efficiency, avoids infinite loops, and discourages pathological “stalling” behaviors.
+3. **Tool call validity**
+  - •Penalty for syntactically invalid or semantically absurd tool calls (e.g., −0.2 per error).
+  - •Teaches the model the “rules of the game” without needing to explicitly label each failure.
+4. **Progress shaping (optional, advanced)**
+  - •Small positive rewards for clearly helpful intermediate results (e.g., returning a relevant evidence chunk, successfully executing a query that moves the task forward).
+  - •Can speed up learning but carries an elevated risk of reward hacking.
 
 A critical design principle is: The final outcome reward must dominate. If an intermediate metric – like “successful search call” – is rewarded too heavily, the agent may converge to a degenerate policy: repeatedly call search in ways that look locally good to the heuristic, without ever finishing the task.
 
@@ -212,15 +204,15 @@ You need a base model that has **non-trivial zero-shot success** on the task—o
 
 If your current model is below that threshold, you have two options:
 
-- •Move to a **larger or better pre-trained model**, or
-- •Use **SFT**on curated trajectories to lift the baseline before applying RL.
+- •Move to a **larger or better pre-trained model** , or
+- •Use **SFT** on curated trajectories to lift the baseline before applying RL.
 
 When running RL for many thousands of updates, **the final checkpoint is often not the best**. RL can over-optimize for quirks of the training distribution or reward function.
 
 A better practice is to:
 
-- •Periodically evaluate checkpoints on a **held-out episodic benchmark**that matches your deployment distribution.
-- •Select the snapshot with the highest **trajectory-level success rate**, not the lowest training loss or highest shaping reward.
+- •Periodically evaluate checkpoints on a **held-out episodic benchmark** that matches your deployment distribution.
+- •Select the snapshot with the highest **trajectory-level success rate** , not the lowest training loss or highest shaping reward.
 
 Many mysterious RL failures are actually **environment failures**:
 
@@ -230,8 +222,8 @@ Many mysterious RL failures are actually **environment failures**:
 
 To mitigate this:
 
-- •**Pin versions**of all tools, models, and dependencies during training.
-- •**Cache tool responses**whenever possible, especially for static queries.
+- •**Pin versions** of all tools, models, and dependencies during training.
+- •**Cache tool responses** whenever possible, especially for static queries.
 - •Standardize error handling and timeouts so that failures are predictable.
 
 Exploration is crucial: the agent must try sufficiently diverse trajectories to find successful ones.
@@ -265,11 +257,11 @@ dominate overall performance. Algorithm choice is second-order.
 
 To make this concrete, consider training a **deep research agent**: given a complex query (“Summarize the current state of X and compare approaches A, B, C”), the agent:
 
-- Issues multiple search queries.
-- Retrieves candidate documents.
-- Skims and filters them.
-- Cross-checks facts.
-- Synthesizes a structured answer.
+1. Issues multiple search queries.
+2. Retrieves candidate documents.
+3. Skims and filters them.
+4. Cross-checks facts.
+5. Synthesizes a structured answer.
 
 Training such an agent with multi-turn RL yields a learning curve like the one shown in the plot above: starting from a baseline performance somewhere around 0.5 reward, steadily climbing, and eventually surpassing a frontier model baseline (shown as a dashed red line). The improvement is asymptotically monotonic but noisy: there are plateaus and small regressions as the policy explores and the reward landscape shifts.
 
@@ -277,11 +269,11 @@ This illustrates the main value proposition of multi-turn RL for tool use: you c
 
 If you’re thinking about building multi-turn, tool-using agents, here are the main lessons:
 
-- **Use RL or SFT + RL, not SFT alone.**SFT gives you reasonable behavior; RL makes it robust and adaptive in open-ended environments.
-- **Favor trajectory-level rewards with minimal shaping.**It’s easier to define “success or failure” at the end than reliably judge every intermediate step – and much harder to hack.
-- **Invest in environment engineering.**Most “RL bugs” are actually environment or integration bugs. Make tool usage deterministic where possible, pin versions, and log everything.
-- **Start with a strong base model.**Aim for ~20% zero-shot success before RL; if you’re far below that, fix the model or data first.
-- **Prod parity**: keep the training environment close to production (or plug into production when feasible).
-- **Expect complexity.**A production-grade multi-turn RL system is a distributed system plus an ML training stack. Hosted providers that specialize in this can abstract away much of the infrastructure and algorithmic complexity.
+1. **Use RL or SFT + RL, not SFT alone.** SFT gives you reasonable behavior; RL makes it robust and adaptive in open-ended environments.
+2. **Favor trajectory-level rewards with minimal shaping.** It’s easier to define “success or failure” at the end than reliably judge every intermediate step – and much harder to hack.
+3. **Invest in environment engineering.** Most “RL bugs” are actually environment or integration bugs. Make tool usage deterministic where possible, pin versions, and log everything.
+4. **Start with a strong base model.** Aim for ~20% zero-shot success before RL; if you’re far below that, fix the model or data first.
+5. **Prod parity** : keep the training environment close to production (or plug into production when feasible).
+6. **Expect complexity.** A production-grade multi-turn RL system is a distributed system plus an ML training stack. Hosted providers that specialize in this can abstract away much of the infrastructure and algorithmic complexity.
 
 We are still early in understanding the full design space of long-horizon LLM agents. But the pattern is already clear: as we move from “models that answer questions” toward agents that act, multi-turn RL for sequential tool use will be one of the central levers for pushing capabilities forward.

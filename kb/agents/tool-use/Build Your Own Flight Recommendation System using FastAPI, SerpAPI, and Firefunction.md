@@ -1,10 +1,13 @@
 ---
 title: Build Your Own Flight Recommendation System using FastAPI, SerpAPI, and Firefunction
 kind: blog
-topic: null
-subtopic: null
+topic: agents
+subtopic: tool-use
 secondary_topics: []
-summary: null
+summary: Tutorial building a flight-recommendation agent that uses Firefunction-v2
+  to extract structured flight parameters (IATA codes, dates) from natural-language
+  queries and dispatch them as tool calls to the SerpApi Google Flights endpoint,
+  wired up with FastAPI and Next.js.
 triage: null
 skip_reason: null
 source: fireworks
@@ -12,7 +15,7 @@ url: https://fireworks.ai/blog/function-call-vercel-fastapi-serp
 author: null
 published: '2024-08-29'
 fetched: '2026-09-22T06:11:42Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1685
 content_sha256: 1c889ab52e5a059833b2ff14bd9a2e6c32e4c0070012ad7e5fd960df602c9f39

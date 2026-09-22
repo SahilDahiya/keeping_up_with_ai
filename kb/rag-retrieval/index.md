@@ -1,6 +1,6 @@
 # rag-retrieval
 
-37 articles.
+39 articles.
 
 - **2026-08-26** — [Training and Finetuning Multi-Vector Embedding Models with Sentence Transformers](<embeddings/Training and Finetuning Multi-Vector Embedding Models with Sentence Transformers.md>) · `embeddings` · huggingface
   Walks through finetuning ColBERT-style multi-vector (late-interaction) embedding models using Sentence Transformers' new MultiVectorEncoder, covering datasets, loss functions, training arguments, and evaluators, and shows a model finetuned in 14.5 hours on a single RTX 3090 beating general-purpose dense, sparse, lexical, and multi-vector retrievers on a medical retrieval benchmark (MIRIAD NDCG@10).
@@ -42,6 +42,8 @@
   End-to-end guide to training SPLADE-style sparse embedding models with Sentence Transformers: the model/loss/evaluator/trainer components, FLOPS regularization to control sparsity, distillation from a cross-encoder, and NanoBEIR results plus the retrieval-cost tradeoff versus dense vectors.
 - **2025-06-12** — [Your client code matters: 12x higher embedding throughput with Python and Rust](<embeddings/Your client code matters 12x higher embedding throughput with Python and Rust.md>) · `embeddings` · baseten
   Shows how client implementation choices in Python and Rust affect embedding throughput.
+- **2025-04-09** — [Building Enterprise-Scale RAG Systems with Fireworks and MongoDB Atlas](<pipelines/Building Enterprise-Scale RAG Systems with Fireworks and MongoDB Atlas.md>) · `pipelines` · fireworks
+  Walks through an open-source enterprise RAG architecture combining Fireworks (inference plus Whisper V3 Turbo audio transcription) with MongoDB Atlas vector storage, covering multi-format document processing, chunking, batched embedding generation, and metadata-preserving retrieval over earnings calls and financial reports.
 - **2025-03-27** — [How we built BEI: high-throughput embedding, reranker, and classifier inference](<embeddings/How we built BEI high-throughput embedding, reranker, and classifier inference.md>) · `embeddings` · baseten
   Deep dive into BEI, a high-throughput embedding, reranker, and classifier inference system.
 - **2025-03-26** — [Training and Finetuning Reranker Models with Sentence Transformers](<search/Training and Finetuning Reranker Models with Sentence Transformers.md>) · `search` · huggingface
@@ -56,6 +58,8 @@
   Builds a multimodal document RAG pipeline with Llama 3.2 Vision and ColQwen2.
 - **2024-09-19** — [Contextual Retrieval in AI Systems](<pipelines/Contextual Retrieval in AI Systems.md>) · `pipelines` · anthropic-engineering
   Introduces contextual retrieval: prepending chunk-situating context before embedding and BM25 indexing, cutting retrieval failure rates by 49% (67% with reranking).
+- **2024-08-14** — [Building a RAG with Astro, FastAPI, SurrealDB and Llama 3.1](<pipelines/Building a RAG with Astro, FastAPI, SurrealDB and Llama 3.1.md>) · `pipelines` · fireworks
+  Tutorial building a RAG chatbot with SurrealDB as the vector store, FastAPI backend, and Astro frontend, serving responses from Fireworks-hosted Llama 3.1 405B and covering the end-to-end flow of embedding user-supplied knowledge and streaming context-augmented answers.
 - **2024-07-16** — [How we leveraged distilabel to create an Argilla 2.0 Chatbot](<pipelines/How we leveraged distilabel to create an Argilla 2.0 Chatbot.md>) · `pipelines` · huggingface
   End-to-end build of a docs chatbot: distilabel generates synthetic query/answer pairs from Argilla 2.0 documentation, which fine-tunes a bge-base Matryoshka embedding model used in a retrieval + Gradio chat pipeline.
 - **2024-06-24** — [Building a personalized code assistant with open-source LLMs using RAG Fine-tuning](<pipelines/Building a personalized code assistant with open-source LLMs using RAG Fine-tuning.md>) · `pipelines` · together

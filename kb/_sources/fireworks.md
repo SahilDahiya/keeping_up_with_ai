@@ -1,7 +1,9 @@
 # fireworks
 
-93 articles.
+102 articles.
 
+- **2026-09-21** — [The frontier isn’t a model. It’s a router.](<../inference/optimization/The frontier isn’t a model. It’s a router.md>) · `optimization` · fireworks
+  Analyzes an oracle router over 18 coding models on the DeepSWE agentic benchmark, showing that picking the best model per task rather than a single best model (GPT-6 Astra at 74.1%) reaches 97.6% pass rate at under a third of the cost ($1.88 vs $6.52 per task).
 - **2026-09-17** — [Phylo brings frontier AI to more scientists with open models on Fireworks](<../infra-platform/deployment/Phylo brings frontier AI to more scientists with open models on Fireworks.md>) · `deployment` · fireworks
   Case study of Phylo's Biomni Lab, a long-horizon biology research agent making hundreds of tool calls over hours or days: switching its model-agnostic default routing to open-weight frontier models on Fireworks serverless (gated by Phylo's internal BiomniBench evals for quality/latency/cost) cut inference spend 60% while usage doubled month-on-month and roughly halved time-to-first-token.
 - **2026-09-14** — [DeepSeek-V4.1-Flash on Fireworks: Astra-level DeepSWE at 1/15th the cost](<../models/benchmarks/DeepSeek-V4.1-Flash on Fireworks Astra-level DeepSWE at 115th the cost.md>) · `benchmarks` · fireworks
@@ -40,6 +42,10 @@
   Cursor's Composer 2, built on Kimi 2.5, is trained via continual pretraining and large-scale RL on long-horizon software engineering tasks; Fireworks provides distributed rollout/inference infra across 3-4 clusters with compressed weight sync, hitting 61.3 CursorBench and 6-10x lower inference cost than comparable frontier coding models.
 - **2026-06-24** — [Frontier AI at a fraction of the cost: open-source worker agents with a closed-source advisor.](<../agents/multi-agent/Frontier AI at a fraction of the cost open-source worker agents with a closed-source advisor.md>) · `multi-agent` · fireworks
   Explains a worker-advisor pattern that combines open-source worker agents with closed-source advisors for cost-quality tradeoffs.
+- **2026-06-24** — [Frontier-lab training infrastructure, now as a service](<../models/reinforcement-learning/Frontier-lab training infrastructure, now as a service.md>) · `reinforcement-learning` · fireworks
+  Details the batch-invariance and end-to-end zero-KLD infrastructure needed to keep an RL trainer and rollout engine numerically identical on large MoE models, and announces it as a managed training-as-a-service offering starting with GLM 5.2.
+- **2026-06-16** — [GLM 5.2 is live on Fireworks inference, day zero.](<../models/benchmarks/GLM 5.2 is live on Fireworks inference, day zero.md>) · `benchmarks` · fireworks
+  Independently reproduces Z.ai's GLM 5.2 launch benchmarks on Fireworks' own GPUs and inference engine (91.4% GPQA-Diamond vs the reported 91.2%), and explains the difference between running an inference-provider-hosted model directly versus via an API router.
 - **2026-06-12** — [MiniMax M3 is live: long context + native multimodality at 1/20th the price](<../models/architectures/MiniMax M3 is live long context + native multimodality at 120th the price.md>) · `architectures` · fireworks
   MiniMax M3's extended context comes from MSA (MiniMax Sparse Attention), which pre-filters and blocks KV caches with a 'KV outer gather Q' operator ordering that fetches each block once, delivering >4x speedup over Flash-Sparse-Attention/flash-moba, 95% lower per-token compute, and 9x/15x faster prefill/decode at 1M-token context versus M2.7.
 - **2026-06-12** — [Kimi K2.7 Code on Fireworks: Better Agents, Lower Cost per Task, Available Day-0 | Fireworks](<../models/reasoning/Kimi K2.7 Code on Fireworks Better Agents, Lower Cost per Task, Available Day-0 Fireworks.md>) · `reasoning` · fireworks
@@ -81,7 +87,7 @@
 - **2025-12-15** — [NVIDIA Nemotron 3 Nano on Fireworks: The Engine for Next-Generation AI Agents](<../models/architectures/NVIDIA Nemotron 3 Nano on Fireworks The Engine for Next-Generation AI Agents.md>) · `architectures` · fireworks
   NVIDIA Nemotron 3 Nano is a 30B MoE (3B active) hybrid Mamba-Transformer with 23 Mamba-2/MoE layers, 6 attention layers, 128 experts (5 active) plus a shared expert, and a token 'thinking budget' to cap reasoning-token generation; a cookbook demonstrates a chunk-then-synthesize strategy for summarizing large source files.
 - **2025-12-10** — [Best Practices for Multi-Turn RL](<../models/reinforcement-learning/Best Practices for Multi-Turn RL.md>) · `reinforcement-learning` · fireworks
-  Covers best practices for multi-turn reinforcement learning, including environment design and reward structure.
+  Explains why multi-turn tool-use agents need full RL rather than SFT-on-golden-traces or per-step decomposition, and lays out a trajectory-generator/inference-service/environment/trainer training loop plus reward-design recipes for long-horizon, tool-heavy tasks.
 - **2025-12-04** — [Fine-tuning LLMs as classifiers](<../models/fine-tuning/Fine-tuning LLMs as classifiers.md>) · `fine-tuning` · fireworks
   Shows how to adapt generative LLMs for classification tasks while preserving probability outputs and efficient serving.
 - **2025-12-02** — [Unlock Advanced Reasoning with NVIDIA Nemotron Nano 2 Models on Fireworks](<../models/architectures/Unlock Advanced Reasoning with NVIDIA Nemotron Nano 2 Models on Fireworks.md>) · `architectures` · fireworks
@@ -144,6 +150,8 @@
   Qwen 3 235B-A22B (128-expert MoE, 22B active) streams an explicit chain-of-thought trace alongside a structured tool call in the same completion, toggleable via reasoning_effort or /think //no_think tags, with recommended sampling params differing between thinking and non-thinking modes.
 - **2025-04-28** — [Optimizing Llama 4 Maverick on Fireworks](<../inference/optimization/Optimizing Llama 4 Maverick on Fireworks.md>) · `optimization` · fireworks
   Details how Fireworks served Llama 4 Maverick within minutes of weight release using FireOptimizer-tuned FP8 quantization, tensor+expert parallelism, a custom FireAttention kernel extended for Maverick's chunked local attention, and a trained speculative-decoding drafter, reaching 145 tok/s on H200 (10-20% faster than the nearest competitor per Artificial Analysis).
+- **2025-04-09** — [Building Enterprise-Scale RAG Systems with Fireworks and MongoDB Atlas](<../rag-retrieval/pipelines/Building Enterprise-Scale RAG Systems with Fireworks and MongoDB Atlas.md>) · `pipelines` · fireworks
+  Walks through an open-source enterprise RAG architecture combining Fireworks (inference plus Whisper V3 Turbo audio transcription) with MongoDB Atlas vector storage, covering multi-format document processing, chunking, batched embedding generation, and metadata-preserving retrieval over earnings calls and financial reports.
 - **2025-03-12** — [Fine-Tuning DeepSeek v3 & R1 to optimize quality, latency, & cost](<../models/fine-tuning/Fine-Tuning DeepSeek v3 & R1 to optimize quality, latency, & cost.md>) · `fine-tuning` · fireworks
   Guide to fine-tuning DeepSeek V3 and R1 models while balancing quality, latency, and cost.
 - **2025-02-07** — [DeepSeek v3 and R1 Model Architecture: Why it's powerful and economical](<../models/reasoning/DeepSeek v3 and R1 Model Architecture Why it's powerful and economical.md>) · `reasoning` · fireworks
@@ -160,18 +168,28 @@
   Describes FireAttention V3 and optimizations that make AMD GPUs more viable for inference workloads.
 - **2024-09-18** — [Multi-LoRA: Personalize AI at scale and deliver the best experience for each customer and use case, with 100x cost-efficiency](<../models/fine-tuning/Multi-LoRA Personalize AI at scale and deliver the best experience for each customer and use case, with 100x cost-efficiency.md>) · `fine-tuning` · fireworks
   Explains Multi-LoRA serving for personalized models at scale with better cost efficiency.
+- **2024-08-30** — [FireOptimizer: Customizing latency and quality for your production inference workload](<../inference/optimization/FireOptimizer Customizing latency and quality for your production inference workload.md>) · `optimization` · fireworks
+  Introduces FireOptimizer, Fireworks' adaptation engine that auto-tunes hardware, model, and software layers of the serving stack per workload, headlined by an adaptive speculative-execution feature that delivers up to 3x latency improvements by tailoring draft strategies to each customer's traffic.
+- **2024-08-29** — [Build Your Own Flight Recommendation System using FastAPI, SerpAPI, and Firefunction](<../agents/tool-use/Build Your Own Flight Recommendation System using FastAPI, SerpAPI, and Firefunction.md>) · `tool-use` · fireworks
+  Tutorial building a flight-recommendation agent that uses Firefunction-v2 to extract structured flight parameters (IATA codes, dates) from natural-language queries and dispatch them as tool calls to the SerpApi Google Flights endpoint, wired up with FastAPI and Next.js.
+- **2024-08-14** — [Building a RAG with Astro, FastAPI, SurrealDB and Llama 3.1](<../rag-retrieval/pipelines/Building a RAG with Astro, FastAPI, SurrealDB and Llama 3.1.md>) · `pipelines` · fireworks
+  Tutorial building a RAG chatbot with SurrealDB as the vector store, FastAPI backend, and Astro frontend, serving responses from Fireworks-hosted Llama 3.1 405B and covering the end-to-end flow of embedding user-supplied knowledge and streaming context-augmented answers.
 - **2024-08-01** — [How Fireworks evaluates quantization precisely and interpretably](<../inference/quantization/How Fireworks evaluates quantization precisely and interpretably.md>) · `quantization` · fireworks
   Details precise and interpretable quantization evaluation for understanding quality and performance tradeoffs.
 - **2024-06-23** — [How Cursor built Fast Apply using the Speculative Decoding API](<../inference/speculative-decoding/How Cursor built Fast Apply using the Speculative Decoding API.md>) · `speculative-decoding` · fireworks
   Case study of Cursor Fast Apply using speculative decoding to reduce coding-assistant latency.
 - **2024-06-20** — [FireAttention V2: 12x faster to make Long Contexts practical for Online Inference](<../inference/kernels/FireAttention V2 12x faster to make Long Contexts practical for Online Inference.md>) · `kernels` · fireworks
   Explains FireAttention V2 and the serving optimizations that make long-context inference more practical.
+- **2024-06-17** — [Firefunction-v2: Function calling capability on par with GPT4o at 2.5x the speed and 10% of the cost=](<../agents/tool-use/Firefunction-v2 Function calling capability on par with GPT4o at 2.5x the speed and 10% of the cost=.md>) · `tool-use` · fireworks
+  Releases Firefunction-v2, a Llama-3-70B-based function-calling model tuned for multi-turn conversation and parallel function calling, reporting 0.81 vs GPT-4o's 0.80 on a public benchmark medley at 180 tok/sec versus GPT-4o's 69 tok/sec and roughly a tenth of the cost.
 - **2024-06-03** — [GPUs on-demand: Not serverless, not reserved, but some third thing](<../infra-platform/gpu-clusters/GPUs on-demand Not serverless, not reserved, but some third thing.md>) · `gpu-clusters` · fireworks
   Explains on-demand GPU infrastructure as a middle ground between serverless and reserved capacity.
 - **2024-05-08** — [Code Generation with Large Language Models - Fireworks AI Take](<../agents/tool-use/Code Generation with Large Language Models - Fireworks AI Take.md>) · `tool-use` · fireworks
   Discusses code-generation copilots with LLMs, including model behavior, latency, and developer workflow considerations.
 - **2024-05-06** — [Doomed to Code: How we Teamed Up with Fireworks at MistralAI Hackathon to Conquer the Shores of Hell](<../agents/computer-use/Doomed to Code How we Teamed Up with Fireworks at MistralAI Hackathon to Conquer the Shores of Hell.md>) · `computer-use` · fireworks
   Hackathon writeup on getting text-only Mistral-7B to play Doom by representing the game screen as text (bounding boxes of detected objects) rather than using vision models, working around the lack of native multimodal input to give a text LLM real-time game-state awareness.
+- **2024-02-20** — [FireFunction V1 - Fireworks’ GPT-4-level function calling model - 4x faster than GPT-4 and open weights](<../agents/tool-use/FireFunction V1 - Fireworks’ GPT-4-level function calling model - 4x faster than GPT-4 and open weights.md>) · `tool-use` · fireworks
+  Releases FireFunction-v1, a Mixtral-based open-weights function-calling model, detailing its structured-output/JSON-mode design, a forced-function-call 'any' tool_choice option, and Nexus OTX/VT benchmark results showing near-GPT-4 accuracy (87.88% vs 87.88% on 5-function tasks) at ~4x lower latency.
 - **2024-02-20** — [Why do all LLMs need structured output modes?](<../prompt-engineering/structured-output/Why do all LLMs need structured output modes.md>) · `structured-output` · fireworks
   Explains why structured-output modes matter for reliable LLM applications and tool-calling systems.
 - **2024-01-08** — [FireAttention: serving open models faster with quantization](<../inference/quantization/FireAttention serving open models faster with quantization.md>) · `quantization` · fireworks

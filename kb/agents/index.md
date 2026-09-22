@@ -1,6 +1,6 @@
 # agents
 
-104 articles.
+107 articles.
 
 - **2026-09-16** — [Introducing Baseten Hosted Tools](<harness/Introducing Baseten Hosted Tools.md>) · `harness` · baseten
   Baseten's new Hosted Tools run the agentic tool-use loop server-side, co-located with model inference, instead of round-tripping through the client; the company reports a 15% end-to-end latency reduction versus client-side tool loops and launches web search with Exa, Keenable, Parallel, and You.com as the first hosted tool.
@@ -184,10 +184,14 @@
   Fireworks' f1 is a 'compound AI' model that interleaves generation from multiple open models at the inference layer to handle complex reasoning via declarative prompting, aiming to match or exceed closed frontier models on coding, math, and reasoning benchmarks.
 - **2024-10-29** — [Announcing Cresta Voice Virtual Agent: What Sets It Apart](<harness/Announcing Cresta Voice Virtual Agent What Sets It Apart.md>) · `harness` · cresta
   Frames voice agents as a choice between rigid flow-based bots that cannot handle diverse intents and purely generative agents that hallucinate in public ways, and proposes a hybrid architecture pairing LLM generation with deterministic systems enforcing business rules. Cites Metrigy finding 40.6% of customers actively avoid virtual agents.
+- **2024-08-29** — [Build Your Own Flight Recommendation System using FastAPI, SerpAPI, and Firefunction](<tool-use/Build Your Own Flight Recommendation System using FastAPI, SerpAPI, and Firefunction.md>) · `tool-use` · fireworks
+  Tutorial building a flight-recommendation agent that uses Firefunction-v2 to extract structured flight parameters (IATA codes, dates) from natural-language queries and dispatch them as tool calls to the SerpApi Google Flights endpoint, wired up with FastAPI and Next.js.
 - **2024-08-12** — [Tool Use, Unified](<tool-use/Tool Use, Unified.md>) · `tool-use` · huggingface
   Explains the unified tool-use API in Transformers chat templates: pass plain Python functions with typed signatures and docstrings and they are auto-converted to JSON schema, then rendered per-model by the model's Jinja chat template — plus the conventions chosen for tool-call and tool-result messages so tool-calling chats are portable across models that disagree on formats.
 - **2024-07-01** — [Our Transformers Code Agent beats the GAIA benchmark 🏅](<tool-use/Our Transformers Code Agent beats the GAIA benchmark 🏅.md>) · `tool-use` · huggingface
   How a Transformers CodeAgent (LLM writes Python actions rather than JSON) topped the GAIA agent benchmark: multi-agent web-browser delegation, tool design, and error analysis of GAIA failure modes.
+- **2024-06-17** — [Firefunction-v2: Function calling capability on par with GPT4o at 2.5x the speed and 10% of the cost=](<tool-use/Firefunction-v2 Function calling capability on par with GPT4o at 2.5x the speed and 10% of the cost=.md>) · `tool-use` · fireworks
+  Releases Firefunction-v2, a Llama-3-70B-based function-calling model tuned for multi-turn conversation and parallel function calling, reporting 0.81 vs GPT-4o's 0.80 on a public benchmark medley at 180 tok/sec versus GPT-4o's 69 tok/sec and roughly a tenth of the cost.
 - **2024-06-11** — [Together MoA collective intelligence of open-source models](<multi-agent/Together MoA collective intelligence of open-source models.md>) · `multi-agent` · together
   Explains Mixture-of-Agents for improving model outputs through collective open-source model reasoning.
 - **2024-05-13** — [License to Call: Introducing Transformers Agents 2.0](<tool-use/License to Call Introducing Transformers Agents 2.0.md>) · `tool-use` · huggingface
@@ -196,6 +200,8 @@
   Discusses code-generation copilots with LLMs, including model behavior, latency, and developer workflow considerations.
 - **2024-05-06** — [Doomed to Code: How we Teamed Up with Fireworks at MistralAI Hackathon to Conquer the Shores of Hell](<computer-use/Doomed to Code How we Teamed Up with Fireworks at MistralAI Hackathon to Conquer the Shores of Hell.md>) · `computer-use` · fireworks
   Hackathon writeup on getting text-only Mistral-7B to play Doom by representing the game screen as text (bounding boxes of detected objects) rather than using vision models, working around the lack of native multimodal input to give a text LLM real-time game-state awareness.
+- **2024-02-20** — [FireFunction V1 - Fireworks’ GPT-4-level function calling model - 4x faster than GPT-4 and open weights](<tool-use/FireFunction V1 - Fireworks’ GPT-4-level function calling model - 4x faster than GPT-4 and open weights.md>) · `tool-use` · fireworks
+  Releases FireFunction-v1, a Mixtral-based open-weights function-calling model, detailing its structured-output/JSON-mode design, a forced-function-call 'any' tool_choice option, and Nexus OTX/VT benchmark results showing near-GPT-4 accuracy (87.88% vs 87.88% on 5-function tasks) at ~4x lower latency.
 - **2024-02-01** — **[Paper]** [Executable Code Actions Elicit Better LLM Agents](<tool-use/[Paper] Executable Code Actions Elicit Better LLM Agents.md>) · `tool-use` · arxiv
   Argues LLM agents should act by generating executable Python code rather than JSON tool calls or free text. Consolidating actions into code gives one unified action space where the model composes tools, uses control flow, and revises on execution feedback; across 17 LLMs CodeAct achieves up to ~20% higher success with fewer actions than JSON/text baselines. Releases the CodeActInstruct dataset and the open CodeActAgent — the canonical statement of the code-as-action paradigm.
 - **2024-01-24** — [Open-source LLMs as LangChain Agents](<tool-use/Open-source LLMs as LangChain Agents.md>) · `tool-use` · huggingface
@@ -352,7 +358,7 @@
 - **2026-01-09** — [Demystifying evals for AI agents](<../evals-observability/evaluation/Demystifying evals for AI agents.md>) · `evaluation` · anthropic-engineering
   A practical framework for building agent evals: grader design, task suites, pass@k metrics, and evolving evals as agent capabilities improve.
 - **2025-12-10** — [Best Practices for Multi-Turn RL](<../models/reinforcement-learning/Best Practices for Multi-Turn RL.md>) · `reinforcement-learning` · fireworks
-  Covers best practices for multi-turn reinforcement learning, including environment design and reward structure.
+  Explains why multi-turn tool-use agents need full RL rather than SFT-on-golden-traces or per-step decomposition, and lays out a trajectory-generator/inference-service/environment/trainer training loop plus reward-design recipes for long-horizon, tool-heavy tasks.
 - **2025-11-20** — [Eval Protocol: RL on your agents, in any environment](<../models/reinforcement-learning/Eval Protocol RL on your agents, in any environment.md>) · `reinforcement-learning` · fireworks
   Describes using Eval Protocol to run reinforcement learning on agents in task environments.
 - **2025-11-09** — [Modernizing Healthcare with AI: How RADPAIR and Fireworks Unlock Smarter Radiology Workflows](<../product-engineering/case-studies/Modernizing Healthcare with AI How RADPAIR and Fireworks Unlock Smarter Radiology Workflows.md>) · `case-studies` · fireworks

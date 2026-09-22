@@ -1,10 +1,14 @@
 ---
 title: Building a RAG with Astro, FastAPI, SurrealDB and Llama 3.1
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: rag-retrieval
+subtopic: pipelines
+secondary_topics:
+- product-engineering/architecture
+summary: Tutorial building a RAG chatbot with SurrealDB as the vector store, FastAPI
+  backend, and Astro frontend, serving responses from Fireworks-hosted Llama 3.1 405B
+  and covering the end-to-end flow of embedding user-supplied knowledge and streaming
+  context-augmented answers.
 triage: null
 skip_reason: null
 source: fireworks
@@ -12,7 +16,7 @@ url: https://fireworks.ai/blog/rag-with-astro-fastapi-surrealdb-tailwind
 author: null
 published: '2024-08-14'
 fetched: '2026-09-22T06:11:55Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1974
 content_sha256: 0b4b7250a02661b60cef6bc30e75a956485889857f840a6c994edec039b60db7
