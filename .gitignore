@@ -226,3 +226,4 @@ uv.lock
 # daily scrape job (GitHub Actions, stages articles here) and the classify
 # routine (scheduled cloud agent, fresh checkout — it can only see what is
 # committed). It empties again as soon as articles are filed.
+.venv312/
