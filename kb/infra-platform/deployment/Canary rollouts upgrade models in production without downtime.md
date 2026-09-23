@@ -1,10 +1,17 @@
 ---
 title: 'Canary rollouts: upgrade models in production without downtime'
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: infra-platform
+subtopic: deployment
+secondary_topics:
+- evals-observability/monitoring
+summary: Together AI details its canary/blue-green/rolling rollout engine for swapping
+  production model deployments, covering the step state machine (scale target, health
+  gate, traffic shift, propagation wait, source drain, metric gate), regression vs.
+  threshold metric checks on router latency/error rate/inflight requests, and timing-window
+  math; a live Qwen2.5-7B to Qwen3.5-9B canary catches a 137% p95 latency regression
+  (1,740ms vs. 734ms) at 10% traffic and reverses cleanly with 6,800 requests and
+  zero errors.
 triage: null
 skip_reason: null
 source: together
@@ -12,7 +19,7 @@ url: https://www.together.ai/blog/canary-rollouts-upgrade-models-in-production-w
 author: Siddhant Bharti; Zarni Phyo; Zain Hasan; Nikitha Suryadevara; Ted Cui
 published: '2026-09-22'
 fetched: '2026-09-23T06:12:51Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 2925
 content_sha256: 7014e91824b69539df67aeed6879a4c9971e409e617a010e1af51e39362c0ed7

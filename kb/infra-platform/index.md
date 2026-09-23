@@ -1,7 +1,9 @@
 # infra-platform
 
-48 articles.
+49 articles.
 
+- **2026-09-22** — [Canary rollouts: upgrade models in production without downtime](<deployment/Canary rollouts upgrade models in production without downtime.md>) · `deployment` · together
+  Together AI details its canary/blue-green/rolling rollout engine for swapping production model deployments, covering the step state machine (scale target, health gate, traffic shift, propagation wait, source drain, metric gate), regression vs. threshold metric checks on router latency/error rate/inflight requests, and timing-window math; a live Qwen2.5-7B to Qwen3.5-9B canary catches a 137% p95 latency regression (1,740ms vs. 734ms) at 10% traffic and reverses cleanly with 6,800 requests and zero errors.
 - **2026-09-17** — [Phylo brings frontier AI to more scientists with open models on Fireworks](<deployment/Phylo brings frontier AI to more scientists with open models on Fireworks.md>) · `deployment` · fireworks
   Case study of Phylo's Biomni Lab, a long-horizon biology research agent making hundreds of tool calls over hours or days: switching its model-agnostic default routing to open-weight frontier models on Fireworks serverless (gated by Phylo's internal BiomniBench evals for quality/latency/cost) cut inference spend 60% while usage doubled month-on-month and roughly halved time-to-first-token.
 - **2026-09-16** — [Migrating from closed to open source models, Together](<deployment/Migrating from closed to open source models, Together.md>) · `deployment` · together

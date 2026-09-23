@@ -1,10 +1,18 @@
 ---
 title: Introducing The Specialized Intelligence Index
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: evals-observability
+subtopic: benchmark-design
+secondary_topics:
+- models/benchmarks
+summary: Fireworks launches the Specialized Intelligence Index, a benchmark hub across
+  7 domains (healthcare, legal, cybersecurity, finance, customer support, productivity,
+  software) built from practitioner-authored real-work evals like Harvey's LAB, Doximity's
+  BedsideBench, and Traversal's ORCA-Bench, and lays out a 5-step methodology (define
+  the job, reflect the work, set acceptance criteria, validate the grader, test generalization)
+  for building benchmarks that predict business outcomes rather than just leaderboard
+  scores, citing METR's finding that maintainer PR-acceptance scores ran 24.2 points
+  below SWE-bench Verified scores.
 triage: null
 skip_reason: null
 source: fireworks
@@ -12,7 +20,7 @@ url: https://fireworks.ai/blog/introducing-the-specialized-intelligence-index
 author: null
 published: '2026-09-22'
 fetched: '2026-09-23T06:11:43Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1662
 content_sha256: 5275abaf9f151f45adbb4dabe5a5bb4c5522540e1198b9c3689d4c0c541bc983

@@ -1,7 +1,9 @@
 # fireworks
 
-102 articles.
+103 articles.
 
+- **2026-09-22** — [Introducing The Specialized Intelligence Index](<../evals-observability/benchmark-design/Introducing The Specialized Intelligence Index.md>) · `benchmark-design` · fireworks
+  Fireworks launches the Specialized Intelligence Index, a benchmark hub across 7 domains (healthcare, legal, cybersecurity, finance, customer support, productivity, software) built from practitioner-authored real-work evals like Harvey's LAB, Doximity's BedsideBench, and Traversal's ORCA-Bench, and lays out a 5-step methodology (define the job, reflect the work, set acceptance criteria, validate the grader, test generalization) for building benchmarks that predict business outcomes rather than just leaderboard scores, citing METR's finding that maintainer PR-acceptance scores ran 24.2 points below SWE-bench Verified scores.
 - **2026-09-21** — [The frontier isn’t a model. It’s a router.](<../inference/optimization/The frontier isn’t a model. It’s a router.md>) · `optimization` · fireworks
   Analyzes an oracle router over 18 coding models on the DeepSWE agentic benchmark, showing that picking the best model per task rather than a single best model (GPT-6 Astra at 74.1%) reaches 97.6% pass rate at under a third of the cost ($1.88 vs $6.52 per task).
 - **2026-09-17** — [Phylo brings frontier AI to more scientists with open models on Fireworks](<../infra-platform/deployment/Phylo brings frontier AI to more scientists with open models on Fireworks.md>) · `deployment` · fireworks

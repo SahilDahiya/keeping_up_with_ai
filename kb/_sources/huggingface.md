@@ -1,7 +1,9 @@
 # huggingface
 
-170 articles.
+171 articles.
 
+- **2026-09-22** — [How UK AISI and EvalEval Are Making Benchmark Results Reproducible](<../evals-observability/benchmark-design/How UK AISI and EvalEval Are Making Benchmark Results Reproducible.md>) · `benchmark-design` · huggingface
+  UK AISI is publishing verified, reproducible results through EvalEval's Evaluation Cards platform and Every Eval Ever schema, releasing transcript-level results and configs for HealthBench, FrontierMath, Humanity's Last Exam, SWE-Bench Pro, and Terminal-Bench 2.0 across six frontier models (Claude Opus 4/4.5/4.6, GPT-5/5.2/5.4), accompanying AISI's paper on how inference-time compute and evaluation protocol shape benchmark scores.
 - **2026-09-10** — [Async GRPO with LoRA across HF Jobs: a bucket, a proxy, and no NCCL](<../models/reinforcement-learning/Async GRPO with LoRA across HF Jobs a bucket, a proxy, and no NCCL.md>) · `reinforcement-learning` · huggingface
   Hugging Face runs TRL v1.14's AsyncGRPOTrainer with LoRA-only weight sync across separate HF Jobs: a trainer and two vLLM replicas share adapters through a mounted Storage Bucket instead of NCCL, and a custom proxy routes GRPO rollouts by KV-cache prefix affinity and broadcasts adapter loads, cutting a 500-step run from 3h27m to 53min.
 - **2026-09-03** — [Give Your Coding Agents a Memory You Own](<../agents/memory-context/Give Your Coding Agents a Memory You Own.md>) · `memory-context` · huggingface

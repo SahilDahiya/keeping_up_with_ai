@@ -1,7 +1,9 @@
 # together
 
-93 articles.
+94 articles.
 
+- **2026-09-22** — [Canary rollouts: upgrade models in production without downtime](<../infra-platform/deployment/Canary rollouts upgrade models in production without downtime.md>) · `deployment` · together
+  Together AI details its canary/blue-green/rolling rollout engine for swapping production model deployments, covering the step state machine (scale target, health gate, traffic shift, propagation wait, source drain, metric gate), regression vs. threshold metric checks on router latency/error rate/inflight requests, and timing-window math; a live Qwen2.5-7B to Qwen3.5-9B canary catches a 137% p95 latency regression (1,740ms vs. 734ms) at 10% traffic and reverses cleanly with 6,800 requests and zero errors.
 - **2026-09-18** — [How a global fintech scaled coding agent traffic with Dedicated Model Inference](<../inference/optimization/How a global fintech scaled coding agent traffic with Dedicated Model Inference.md>) · `optimization` · together
   A fintech running coding-agent traffic on GLM-5.2 (MoE) via Together's Dedicated Model Inference hit prefill/KV-cache exhaustion and multi-minute queuing after a replica reshape; self-serve endpoint control let them fix it same-day by restoring cache-session-aware routing over cache-aware-by-hash and widening max-inflight-per-worker, while a metrics API traced a 192s slow request to a 2.3M-token prefill backlog rather than compute cost.
 - **2026-09-16** — [Migrating from closed to open source models, Together](<../infra-platform/deployment/Migrating from closed to open source models, Together.md>) · `deployment` · together

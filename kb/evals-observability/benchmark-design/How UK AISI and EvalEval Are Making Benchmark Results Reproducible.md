@@ -1,10 +1,16 @@
 ---
 title: How UK AISI and EvalEval Are Making Benchmark Results Reproducible
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: evals-observability
+subtopic: benchmark-design
+secondary_topics:
+- models/benchmarks
+summary: UK AISI is publishing verified, reproducible results through EvalEval's Evaluation
+  Cards platform and Every Eval Ever schema, releasing transcript-level results and
+  configs for HealthBench, FrontierMath, Humanity's Last Exam, SWE-Bench Pro, and
+  Terminal-Bench 2.0 across six frontier models (Claude Opus 4/4.5/4.6, GPT-5/5.2/5.4),
+  accompanying AISI's paper on how inference-time compute and evaluation protocol
+  shape benchmark scores.
 triage: null
 skip_reason: null
 source: huggingface
@@ -13,7 +19,7 @@ author: Avijit Ghosh; Jenny Chim; Deep Joshi; Srishti; Matt Kennedy; Irene Solai
   Jessica McFadyen; Lynn Tan; Coz
 published: '2026-09-22'
 fetched: '2026-09-23T06:18:38Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 806
 content_sha256: 7d82baab98e355f6700907ef5560aae8941613d8d7fe0d386f16e9bb74425528
