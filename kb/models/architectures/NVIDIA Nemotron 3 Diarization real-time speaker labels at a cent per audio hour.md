@@ -2,10 +2,15 @@
 title: 'NVIDIA Nemotron 3 Diarization: real-time speaker labels at a cent per audio
   hour'
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: models
+subtopic: architectures
+secondary_topics:
+- inference/serving
+summary: NVIDIA Nemotron 3 Diarization is a ~100M-parameter streaming transformer
+  built on Streaming Sortformer that labels up to 8 speakers per 320ms chunk using
+  an arrival-order speaker cache and FIFO frame buffer instead of embeddings or clustering,
+  hitting 9.8% DER on AISHELL-4 at the low-latency profile (vs 27.2% for its predecessor)
+  and sustaining 500+ concurrent hour-long streams on an RTX PRO 6000.
 triage: null
 skip_reason: null
 source: baseten
@@ -13,7 +18,7 @@ url: https://www.baseten.co/blog/nvidia-nemotron-3-diarization/
 author: Ansel Erol
 published: '2026-09-23'
 fetched: '2026-09-24T06:10:31Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1226
 content_sha256: 9aa635625c17963d0adf4531906176ff1393c264c2d910396030741e6f492fb3

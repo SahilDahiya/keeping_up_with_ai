@@ -1,7 +1,9 @@
 # pydantic
 
-44 articles.
+45 articles.
 
+- **2026-09-23** — [Cheap AI scoring with Jev and Pydantic Evals](<../evals-observability/llm-as-judge/Cheap AI scoring with Jev and Pydantic Evals.md>) · `llm-as-judge` · pydantic
+  Shows how to wire TypeSafe's Jev classifier ($0.042 per million input tokens, no output charge) into Pydantic AI 2.46's built-in judge support and Pydantic Evals, logging results to Logfire; at 1M evaluations with 3 results each this costs about $42 in Jev inference plus $20 in Logfire telemetry, versus Braintrust Pro's $4,500 marginal fee for the same volume.
 - **2026-09-09** — [Durable Pydantic AI agents on AWS Lambda](<../agents/harness/Durable Pydantic AI agents on AWS Lambda.md>) · `harness` · pydantic
   Pydantic AI Harness adds AWSLambdaDurability, which checkpoints every model request, tool call, and MCP call as an AWS Lambda durable-functions step so a retried invocation resumes from where it left off instead of re-running the whole agent loop, avoiding duplicated side effects like double refunds after a mid-run timeout.
 - **2026-09-01** — [You.com is now a Pydantic AI capability](<../agents/tool-use/You.com is now a Pydantic AI capability.md>) · `tool-use` · pydantic

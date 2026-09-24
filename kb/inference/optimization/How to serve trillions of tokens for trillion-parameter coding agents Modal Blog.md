@@ -2,10 +2,14 @@
 title: How to serve trillions of tokens for trillion-parameter coding agents | Modal
   Blog
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: inference
+subtopic: optimization
+secondary_topics:
+- models/architectures
+summary: Modal details the performance engineering behind serving Moonshot's Kimi
+  K2.6 for coding agents at trillion-token scale, explaining how they scaled per-replica
+  decode throughput 2.8x per user and 5.6x across concurrent users by tuning the interactivity-vs-throughput
+  tradeoff on tensor-core GPU hardware.
 triage: null
 skip_reason: null
 source: modal
@@ -13,7 +17,7 @@ url: https://modal.com/blog/trillion-tokens-trillion-parameters
 author: null
 published: '2026-09-23'
 fetched: '2026-09-24T06:10:50Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 7315
 content_sha256: 3400e0301ec595e9fe2b0f226ab5e296d6f4c23c2cb46223db51916098a660c3

@@ -1,7 +1,9 @@
 # product-engineering
 
-63 articles.
+64 articles.
 
+- **2026-09-23** — [Bringing my LED display to life with GPT-Live-1 and Codex | OpenAI Developers](<case-studies/Bringing my LED display to life with GPT-Live-1 and Codex OpenAI Developers.md>) · `case-studies` · openai-devs
+  An OpenAI engineer documents building a voice-controlled LED wall display on a Raspberry Pi, splitting the system into a GPT-Live-1 full-duplex voice service (WebRTC echo cancellation, wake/sleep handling) and a separate renderer service that streams sanitized weather/calendar/transit frames over DDP, with Codex assisting throughout on hardware bring-up, the HUB75/ESP32 panel controller, and the migration off a laptop.
 - **2026-09-17** — [What 1M+ Conversations Reveal About What to Automate First in Hospitality CX](<case-studies/What 1M+ Conversations Reveal About What to Automate First in Hospitality CX.md>) · `case-studies` · cresta
   Cresta analyzed 1M+ travel/hospitality contact-center conversations to build an 'Automation Readiness' score combining resolution rate, handle time, flow structure (5-7 phases, 14-16 steps), deviation rate, and tool complexity (1-3 tools), finding high deviation rates often reflect off-topic chatter or transfers rather than broken workflows, and that the highest-volume automation candidate (Booking & Reservation Changes, ~45% of volume) differs from the highest-scoring one (Seat & Cabin Management).
 - **2026-09-03** — [Part I: Replacing FinServ IVRs with an AI Agent: A 3-Phase Playbook](<case-studies/Part I Replacing FinServ IVRs with an AI Agent A 3-Phase Playbook.md>) · `case-studies` · cresta

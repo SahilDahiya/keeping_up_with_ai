@@ -1,10 +1,15 @@
 ---
 title: Introducing Ember-1
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: models
+subtopic: reasoning
+secondary_topics:
+- infra-platform/cost
+summary: Fireworks' Ember-1, trained from Kimi K3 with on-policy learning from task
+  and environment feedback across coding, math, and agentic tool-use tasks, cuts reasoning-token
+  usage by 35-50% on seven benchmarks and two customers' production traffic while
+  matching or beating K3-max quality, including a new Pareto frontier on Doximity's
+  physician-validated Bedside Bench.
 triage: null
 skip_reason: null
 source: fireworks
@@ -12,7 +17,7 @@ url: https://fireworks.ai/blog/ember-1
 author: null
 published: '2026-09-23'
 fetched: '2026-09-24T06:10:43Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1449
 content_sha256: 979fb513b1fc7d5ed70115f388fc13d3df682a2196acdd2a2b99bab0507b3efa

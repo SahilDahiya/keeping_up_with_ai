@@ -1,10 +1,15 @@
 ---
 title: 'Every byte counts: ARCv3 and the case for cross-region RL'
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: models
+subtopic: reinforcement-learning
+secondary_topics:
+- infra-platform/gpu-clusters
+summary: Fireworks' ARCv3 compressor exploits the fact that only ~2% of a model's
+  BF16 weights change between RL training steps, mostly via mantissa-only shifts,
+  to losslessly shrink trainer-to-rollout weight-update deltas to ~0.19% of full checkpoint
+  size (down from 0.36% in ARCv2, nearly 50% smaller across 1,000 production deltas),
+  making cross-region RL rollout fleets practical without one co-located cluster.
 triage: null
 skip_reason: null
 source: fireworks
@@ -12,7 +17,7 @@ url: https://fireworks.ai/blog/arcv3-and-the-case-for-cross-region-rl
 author: null
 published: '2026-09-23'
 fetched: '2026-09-24T06:10:39Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1307
 content_sha256: 20472b3234be77e88490c964e7341d5ee1a902668864303688127d9c8b8801ff

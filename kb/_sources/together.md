@@ -1,7 +1,9 @@
 # together
 
-94 articles.
+95 articles.
 
+- **2026-09-23** — [How to train your own Jev for $17](<../models/fine-tuning/How to train your own Jev for $17.md>) · `fine-tuning` · together
+  Together shows how to fine-tune your own Jev-style structured classifier for about $17 using the open-source tev1 repo, demonstrated by training together/Tev1-4B-experimental on Qwen3.5 4B and deploying it as a serverless API endpoint.
 - **2026-09-22** — [Canary rollouts: upgrade models in production without downtime](<../infra-platform/deployment/Canary rollouts upgrade models in production without downtime.md>) · `deployment` · together
   Together AI details its canary/blue-green/rolling rollout engine for swapping production model deployments, covering the step state machine (scale target, health gate, traffic shift, propagation wait, source drain, metric gate), regression vs. threshold metric checks on router latency/error rate/inflight requests, and timing-window math; a live Qwen2.5-7B to Qwen3.5-9B canary catches a 137% p95 latency regression (1,740ms vs. 734ms) at 10% traffic and reverses cleanly with 6,800 requests and zero errors.
 - **2026-09-18** — [How a global fintech scaled coding agent traffic with Dedicated Model Inference](<../inference/optimization/How a global fintech scaled coding agent traffic with Dedicated Model Inference.md>) · `optimization` · together

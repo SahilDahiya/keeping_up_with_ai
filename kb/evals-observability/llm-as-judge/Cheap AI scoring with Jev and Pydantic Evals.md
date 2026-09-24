@@ -1,10 +1,15 @@
 ---
 title: Cheap AI scoring with Jev and Pydantic Evals
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: evals-observability
+subtopic: llm-as-judge
+secondary_topics:
+- infra-platform/cost
+summary: Shows how to wire TypeSafe's Jev classifier ($0.042 per million input tokens,
+  no output charge) into Pydantic AI 2.46's built-in judge support and Pydantic Evals,
+  logging results to Logfire; at 1M evaluations with 3 results each this costs about
+  $42 in Jev inference plus $20 in Logfire telemetry, versus Braintrust Pro's $4,500
+  marginal fee for the same volume.
 triage: null
 skip_reason: null
 source: pydantic
@@ -12,7 +17,7 @@ url: https://pydantic.dev/articles/jev-evals
 author: David Montague
 published: '2026-09-23'
 fetched: '2026-09-24T06:16:33Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 2464
 content_sha256: daaaa5b9a3b778e12052cfafc326858768c241d33e57dc4fa97a6bc27cb78498

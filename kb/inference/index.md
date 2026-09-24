@@ -1,7 +1,9 @@
 # inference
 
-138 articles.
+139 articles.
 
+- **2026-09-23** — [How to serve trillions of tokens for trillion-parameter coding agents | Modal Blog](<optimization/How to serve trillions of tokens for trillion-parameter coding agents Modal Blog.md>) · `optimization` · modal
+  Modal details the performance engineering behind serving Moonshot's Kimi K2.6 for coding agents at trillion-token scale, explaining how they scaled per-replica decode throughput 2.8x per user and 5.6x across concurrent users by tuning the interactivity-vs-throughput tradeoff on tensor-core GPU hardware.
 - **2026-09-21** — [The frontier isn’t a model. It’s a router.](<optimization/The frontier isn’t a model. It’s a router.md>) · `optimization` · fireworks
   Analyzes an oracle router over 18 coding models on the DeepSWE agentic benchmark, showing that picking the best model per task rather than a single best model (GPT-6 Astra at 74.1%) reaches 97.6% pass rate at under a third of the cost ($1.88 vs $6.52 per task).
 - **2026-09-18** — [How a global fintech scaled coding agent traffic with Dedicated Model Inference](<optimization/How a global fintech scaled coding agent traffic with Dedicated Model Inference.md>) · `optimization` · together
@@ -281,6 +283,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-09-23** — [NVIDIA Nemotron 3 Diarization: real-time speaker labels at a cent per audio hour](<../models/architectures/NVIDIA Nemotron 3 Diarization real-time speaker labels at a cent per audio hour.md>) · `architectures` · baseten
+  NVIDIA Nemotron 3 Diarization is a ~100M-parameter streaming transformer built on Streaming Sortformer that labels up to 8 speakers per 320ms chunk using an arrival-order speaker cache and FIFO frame buffer instead of embeddings or clustering, hitting 9.8% DER on AISHELL-4 at the low-latency profile (vs 27.2% for its predecessor) and sustaining 500+ concurrent hour-long streams on an RTX PRO 6000.
 - **2026-09-16** — [Introducing Baseten Hosted Tools](<../agents/harness/Introducing Baseten Hosted Tools.md>) · `harness` · baseten
   Baseten's new Hosted Tools run the agentic tool-use loop server-side, co-located with model inference, instead of round-tripping through the client; the company reports a 15% end-to-end latency reduction versus client-side tool loops and launches web search with Exa, Keenable, Parallel, and You.com as the first hosted tool.
 - **2026-09-14** — [DeepSeek-V4.1-Flash on Fireworks: Astra-level DeepSWE at 1/15th the cost](<../models/benchmarks/DeepSeek-V4.1-Flash on Fireworks Astra-level DeepSWE at 115th the cost.md>) · `benchmarks` · fireworks

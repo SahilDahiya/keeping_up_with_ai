@@ -1,7 +1,9 @@
 # openai-devs
 
-24 articles.
+25 articles.
 
+- **2026-09-23** — [Bringing my LED display to life with GPT-Live-1 and Codex | OpenAI Developers](<../product-engineering/case-studies/Bringing my LED display to life with GPT-Live-1 and Codex OpenAI Developers.md>) · `case-studies` · openai-devs
+  An OpenAI engineer documents building a voice-controlled LED wall display on a Raspberry Pi, splitting the system into a GPT-Live-1 full-duplex voice service (WebRTC echo cancellation, wake/sleep handling) and a separate renderer service that streams sanitized weather/calendar/transit frames over DDP, with Codex assisting throughout on hardware bring-up, the HUB75/ESP32 panel controller, and the migration off a laptop.
 - **2026-09-11** — [Rethinking skills and prompts for GPT-6 Astra | OpenAI Developers](<../prompt-engineering/context-engineering/Rethinking skills and prompts for GPT-6 Astra OpenAI Developers.md>) · `context-engineering` · openai-devs
   OpenAI's guidance for adapting skills, AGENTS.md, and task prompts for GPT-6 Astra: keep skill descriptions terse and use progressive disclosure to avoid context bloat, prune stale AGENTS.md instructions like mandatory pre-edit doc reads or test-running nudges the model no longer needs, and recalibrate decision-boundary and persistence language now that Astra is more cautious about stopping early.
 - **2026-09-04** — [Building games with Astra | OpenAI Developers](<../agents/tool-use/Building games with Astra OpenAI Developers.md>) · `tool-use` · openai-devs

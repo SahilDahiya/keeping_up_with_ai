@@ -1,7 +1,15 @@
 # models
 
-198 articles.
+202 articles.
 
+- **2026-09-23** — [NVIDIA Nemotron 3 Diarization: real-time speaker labels at a cent per audio hour](<architectures/NVIDIA Nemotron 3 Diarization real-time speaker labels at a cent per audio hour.md>) · `architectures` · baseten
+  NVIDIA Nemotron 3 Diarization is a ~100M-parameter streaming transformer built on Streaming Sortformer that labels up to 8 speakers per 320ms chunk using an arrival-order speaker cache and FIFO frame buffer instead of embeddings or clustering, hitting 9.8% DER on AISHELL-4 at the low-latency profile (vs 27.2% for its predecessor) and sustaining 500+ concurrent hour-long streams on an RTX PRO 6000.
+- **2026-09-23** — [How to train your own Jev for $17](<fine-tuning/How to train your own Jev for $17.md>) · `fine-tuning` · together
+  Together shows how to fine-tune your own Jev-style structured classifier for about $17 using the open-source tev1 repo, demonstrated by training together/Tev1-4B-experimental on Qwen3.5 4B and deploying it as a serverless API endpoint.
+- **2026-09-23** — [Introducing Ember-1](<reasoning/Introducing Ember-1.md>) · `reasoning` · fireworks
+  Fireworks' Ember-1, trained from Kimi K3 with on-policy learning from task and environment feedback across coding, math, and agentic tool-use tasks, cuts reasoning-token usage by 35-50% on seven benchmarks and two customers' production traffic while matching or beating K3-max quality, including a new Pareto frontier on Doximity's physician-validated Bedside Bench.
+- **2026-09-23** — [Every byte counts: ARCv3 and the case for cross-region RL](<reinforcement-learning/Every byte counts ARCv3 and the case for cross-region RL.md>) · `reinforcement-learning` · fireworks
+  Fireworks' ARCv3 compressor exploits the fact that only ~2% of a model's BF16 weights change between RL training steps, mostly via mantissa-only shifts, to losslessly shrink trainer-to-rollout weight-update deltas to ~0.19% of full checkpoint size (down from 0.36% in ARCv2, nearly 50% smaller across 1,000 production deltas), making cross-region RL rollout fleets practical without one co-located cluster.
 - **2026-09-14** — [DeepSeek-V4.1-Flash on Fireworks: Astra-level DeepSWE at 1/15th the cost](<benchmarks/DeepSeek-V4.1-Flash on Fireworks Astra-level DeepSWE at 115th the cost.md>) · `benchmarks` · fireworks
   Fireworks benchmarks DeepSeek-V4.1-Flash (552B MoE with an encoder/decoder split activation budget) against GPT-6 Astra, Gemini 3.8 Flash, and Claude Opus 5 on DeepSWE, Terminal-Bench 2.1, and HLE, finding comparable coding accuracy (74.34% DeepSWE pass@1) at 1/15th the cost ($0.43/task) thanks to a KV cache overhaul that cuts HBM 4x and holds a 99.6% cache-hit rate; an oracle router combining it with Astra beats Astra alone on HLE.
 - **2026-09-11** — [DeepSeek-V4.1-Flash: more efficient prefill for coding agents](<architectures/DeepSeek-V4.1-Flash more efficient prefill for coding agents.md>) · `architectures` · baseten
@@ -401,6 +409,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-09-23** — [How to serve trillions of tokens for trillion-parameter coding agents | Modal Blog](<../inference/optimization/How to serve trillions of tokens for trillion-parameter coding agents Modal Blog.md>) · `optimization` · modal
+  Modal details the performance engineering behind serving Moonshot's Kimi K2.6 for coding agents at trillion-token scale, explaining how they scaled per-replica decode throughput 2.8x per user and 5.6x across concurrent users by tuning the interactivity-vs-throughput tradeoff on tensor-core GPU hardware.
 - **2026-09-22** — [How UK AISI and EvalEval Are Making Benchmark Results Reproducible](<../evals-observability/benchmark-design/How UK AISI and EvalEval Are Making Benchmark Results Reproducible.md>) · `benchmark-design` · huggingface
   UK AISI is publishing verified, reproducible results through EvalEval's Evaluation Cards platform and Every Eval Ever schema, releasing transcript-level results and configs for HealthBench, FrontierMath, Humanity's Last Exam, SWE-Bench Pro, and Terminal-Bench 2.0 across six frontier models (Claude Opus 4/4.5/4.6, GPT-5/5.2/5.4), accompanying AISI's paper on how inference-time compute and evaluation protocol shape benchmark scores.
 - **2026-09-22** — [Introducing The Specialized Intelligence Index](<../evals-observability/benchmark-design/Introducing The Specialized Intelligence Index.md>) · `benchmark-design` · fireworks

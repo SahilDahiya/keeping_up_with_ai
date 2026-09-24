@@ -1,10 +1,13 @@
 ---
 title: How to train your own Jev for $17
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: models
+subtopic: fine-tuning
+secondary_topics:
+- evals-observability/llm-as-judge
+summary: Together shows how to fine-tune your own Jev-style structured classifier
+  for about $17 using the open-source tev1 repo, demonstrated by training together/Tev1-4B-experimental
+  on Qwen3.5 4B and deploying it as a serverless API endpoint.
 triage: null
 skip_reason: null
 source: together
@@ -12,7 +15,7 @@ url: https://www.together.ai/blog/how-to-train-your-own-jev
 author: Hassan El Mghari
 published: '2026-09-23'
 fetched: '2026-09-24T06:10:45Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1178
 content_sha256: fe7941a1055849e47f1c34bbfeb54076f8fc728acf1a2d7972c70323c7d10340

@@ -1,7 +1,11 @@
 # fireworks
 
-103 articles.
+105 articles.
 
+- **2026-09-23** — [Introducing Ember-1](<../models/reasoning/Introducing Ember-1.md>) · `reasoning` · fireworks
+  Fireworks' Ember-1, trained from Kimi K3 with on-policy learning from task and environment feedback across coding, math, and agentic tool-use tasks, cuts reasoning-token usage by 35-50% on seven benchmarks and two customers' production traffic while matching or beating K3-max quality, including a new Pareto frontier on Doximity's physician-validated Bedside Bench.
+- **2026-09-23** — [Every byte counts: ARCv3 and the case for cross-region RL](<../models/reinforcement-learning/Every byte counts ARCv3 and the case for cross-region RL.md>) · `reinforcement-learning` · fireworks
+  Fireworks' ARCv3 compressor exploits the fact that only ~2% of a model's BF16 weights change between RL training steps, mostly via mantissa-only shifts, to losslessly shrink trainer-to-rollout weight-update deltas to ~0.19% of full checkpoint size (down from 0.36% in ARCv2, nearly 50% smaller across 1,000 production deltas), making cross-region RL rollout fleets practical without one co-located cluster.
 - **2026-09-22** — [Introducing The Specialized Intelligence Index](<../evals-observability/benchmark-design/Introducing The Specialized Intelligence Index.md>) · `benchmark-design` · fireworks
   Fireworks launches the Specialized Intelligence Index, a benchmark hub across 7 domains (healthcare, legal, cybersecurity, finance, customer support, productivity, software) built from practitioner-authored real-work evals like Harvey's LAB, Doximity's BedsideBench, and Traversal's ORCA-Bench, and lays out a 5-step methodology (define the job, reflect the work, set acceptance criteria, validate the grader, test generalization) for building benchmarks that predict business outcomes rather than just leaderboard scores, citing METR's finding that maintainer PR-acceptance scores ran 24.2 points below SWE-bench Verified scores.
 - **2026-09-21** — [The frontier isn’t a model. It’s a router.](<../inference/optimization/The frontier isn’t a model. It’s a router.md>) · `optimization` · fireworks

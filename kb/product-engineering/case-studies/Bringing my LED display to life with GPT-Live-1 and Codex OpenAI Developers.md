@@ -1,10 +1,16 @@
 ---
 title: Bringing my LED display to life with GPT-Live-1 and Codex | OpenAI Developers
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: product-engineering
+subtopic: case-studies
+secondary_topics:
+- agents/tool-use
+summary: An OpenAI engineer documents building a voice-controlled LED wall display
+  on a Raspberry Pi, splitting the system into a GPT-Live-1 full-duplex voice service
+  (WebRTC echo cancellation, wake/sleep handling) and a separate renderer service
+  that streams sanitized weather/calendar/transit frames over DDP, with Codex assisting
+  throughout on hardware bring-up, the HUB75/ESP32 panel controller, and the migration
+  off a laptop.
 triage: null
 skip_reason: null
 source: openai-devs
@@ -12,7 +18,7 @@ url: https://developers.openai.com/blog/bringing-my-led-display-to-life/
 author: null
 published: '2026-09-23'
 fetched: '2026-09-24T06:10:37Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1561
 content_sha256: aec1266c3480729f2c4aa597741a7816ab5bd4ceb2b7395bb5d76f5fbbf1c3a5

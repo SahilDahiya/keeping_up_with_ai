@@ -1,7 +1,9 @@
 # evals-observability
 
-117 articles.
+118 articles.
 
+- **2026-09-23** — [Cheap AI scoring with Jev and Pydantic Evals](<llm-as-judge/Cheap AI scoring with Jev and Pydantic Evals.md>) · `llm-as-judge` · pydantic
+  Shows how to wire TypeSafe's Jev classifier ($0.042 per million input tokens, no output charge) into Pydantic AI 2.46's built-in judge support and Pydantic Evals, logging results to Logfire; at 1M evaluations with 3 results each this costs about $42 in Jev inference plus $20 in Logfire telemetry, versus Braintrust Pro's $4,500 marginal fee for the same volume.
 - **2026-09-22** — [How UK AISI and EvalEval Are Making Benchmark Results Reproducible](<benchmark-design/How UK AISI and EvalEval Are Making Benchmark Results Reproducible.md>) · `benchmark-design` · huggingface
   UK AISI is publishing verified, reproducible results through EvalEval's Evaluation Cards platform and Every Eval Ever schema, releasing transcript-level results and configs for HealthBench, FrontierMath, Humanity's Last Exam, SWE-Bench Pro, and Terminal-Bench 2.0 across six frontier models (Claude Opus 4/4.5/4.6, GPT-5/5.2/5.4), accompanying AISI's paper on how inference-time compute and evaluation protocol shape benchmark scores.
 - **2026-09-22** — [Introducing The Specialized Intelligence Index](<benchmark-design/Introducing The Specialized Intelligence Index.md>) · `benchmark-design` · fireworks
@@ -239,6 +241,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-09-23** — [How to train your own Jev for $17](<../models/fine-tuning/How to train your own Jev for $17.md>) · `fine-tuning` · together
+  Together shows how to fine-tune your own Jev-style structured classifier for about $17 using the open-source tev1 repo, demonstrated by training together/Tev1-4B-experimental on Qwen3.5 4B and deploying it as a serverless API endpoint.
 - **2026-09-22** — [Canary rollouts: upgrade models in production without downtime](<../infra-platform/deployment/Canary rollouts upgrade models in production without downtime.md>) · `deployment` · together
   Together AI details its canary/blue-green/rolling rollout engine for swapping production model deployments, covering the step state machine (scale target, health gate, traffic shift, propagation wait, source drain, metric gate), regression vs. threshold metric checks on router latency/error rate/inflight requests, and timing-window math; a live Qwen2.5-7B to Qwen3.5-9B canary catches a 137% p95 latency regression (1,740ms vs. 734ms) at 10% traffic and reverses cleanly with 6,800 requests and zero errors.
 - **2026-09-17** — [Phylo brings frontier AI to more scientists with open models on Fireworks](<../infra-platform/deployment/Phylo brings frontier AI to more scientists with open models on Fireworks.md>) · `deployment` · fireworks
