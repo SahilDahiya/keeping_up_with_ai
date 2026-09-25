@@ -1,10 +1,14 @@
 ---
 title: Fine-tune on your LangSmith traces with Baseten Loops
 kind: blog
-topic: null
-subtopic: null
+topic: models
+subtopic: fine-tuning
 secondary_topics: []
-summary: null
+summary: Describes LangSmith Fine-Tuning (the smithtune CLI), which turns successful
+  LangSmith agent traces into a supervised fine-tuning dataset, trains it via the
+  Baseten Loops SDK on dedicated GPUs in the user's own workspace, and deploys the
+  evaluated checkpoint straight to a Baseten Dedicated Inference endpoint without
+  moving weights out of the workspace.
 triage: null
 skip_reason: null
 source: baseten
@@ -12,7 +16,7 @@ url: https://www.baseten.co/blog/fine-tune-on-your-langsmith-traces-with-baseten
 author: Mudith Jayasekara; Aaron Ellis-Bloor; Vivek Trivedy; Jake Broekhuizen
 published: '2026-09-24'
 fetched: '2026-09-25T06:10:28Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 386
 content_sha256: 04e1092f6c0911fc5f830340c86cb5a68e733eb7dc2d952e307873c022f825a3

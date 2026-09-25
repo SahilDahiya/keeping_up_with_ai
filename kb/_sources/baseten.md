@@ -1,7 +1,9 @@
 # baseten
 
-89 articles.
+90 articles.
 
+- **2026-09-24** — [Fine-tune on your LangSmith traces with Baseten Loops](<../models/fine-tuning/Fine-tune on your LangSmith traces with Baseten Loops.md>) · `fine-tuning` · baseten
+  Describes LangSmith Fine-Tuning (the smithtune CLI), which turns successful LangSmith agent traces into a supervised fine-tuning dataset, trains it via the Baseten Loops SDK on dedicated GPUs in the user's own workspace, and deploys the evaluated checkpoint straight to a Baseten Dedicated Inference endpoint without moving weights out of the workspace.
 - **2026-09-23** — [NVIDIA Nemotron 3 Diarization: real-time speaker labels at a cent per audio hour](<../models/architectures/NVIDIA Nemotron 3 Diarization real-time speaker labels at a cent per audio hour.md>) · `architectures` · baseten
   NVIDIA Nemotron 3 Diarization is a ~100M-parameter streaming transformer built on Streaming Sortformer that labels up to 8 speakers per 320ms chunk using an arrival-order speaker cache and FIFO frame buffer instead of embeddings or clustering, hitting 9.8% DER on AISHELL-4 at the low-latency profile (vs 27.2% for its predecessor) and sustaining 500+ concurrent hour-long streams on an RTX PRO 6000.
 - **2026-09-16** — [Introducing Baseten Hosted Tools](<../agents/harness/Introducing Baseten Hosted Tools.md>) · `harness` · baseten
