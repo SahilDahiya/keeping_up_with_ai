@@ -219,6 +219,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-09-25** — [Part II: Replacing FinServ IVRs with an AI Agent: Where the Compounding Happens](<../product-engineering/case-studies/Part II Replacing FinServ IVRs with an AI Agent Where the Compounding Happens.md>) · `case-studies` · cresta
+  Case study on scaling an AI agent that replaced FinServ IVR call handling: warns that per-agent Average Handle Time rises as the AI automates easy balance/payment calls, leaving only hard cases for humans, so the real success metric is total human minutes handled and containment volume; also covers staffing around billing-cycle-driven call spikes (e.g. a Saturday cycle close compressing into a Monday surge).
 - **2026-09-23** — [Bringing my LED display to life with GPT-Live-1 and Codex | OpenAI Developers](<../product-engineering/case-studies/Bringing my LED display to life with GPT-Live-1 and Codex OpenAI Developers.md>) · `case-studies` · openai-devs
   An OpenAI engineer documents building a voice-controlled LED wall display on a Raspberry Pi, splitting the system into a GPT-Live-1 full-duplex voice service (WebRTC echo cancellation, wake/sleep handling) and a separate renderer service that streams sanitized weather/calendar/transit frames over DDP, with Codex assisting throughout on hardware bring-up, the HUB75/ESP32 panel controller, and the migration off a laptop.
 - **2026-09-17** — [Phylo brings frontier AI to more scientists with open models on Fireworks](<../infra-platform/deployment/Phylo brings frontier AI to more scientists with open models on Fireworks.md>) · `deployment` · fireworks

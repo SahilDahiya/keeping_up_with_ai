@@ -1,7 +1,9 @@
 # cresta
 
-71 articles.
+72 articles.
 
+- **2026-09-25** — [Part II: Replacing FinServ IVRs with an AI Agent: Where the Compounding Happens](<../product-engineering/case-studies/Part II Replacing FinServ IVRs with an AI Agent Where the Compounding Happens.md>) · `case-studies` · cresta
+  Case study on scaling an AI agent that replaced FinServ IVR call handling: warns that per-agent Average Handle Time rises as the AI automates easy balance/payment calls, leaving only hard cases for humans, so the real success metric is total human minutes handled and containment volume; also covers staffing around billing-cycle-driven call spikes (e.g. a Saturday cycle close compressing into a Monday surge).
 - **2026-09-17** — [What 1M+ Conversations Reveal About What to Automate First in Hospitality CX](<../product-engineering/case-studies/What 1M+ Conversations Reveal About What to Automate First in Hospitality CX.md>) · `case-studies` · cresta
   Cresta analyzed 1M+ travel/hospitality contact-center conversations to build an 'Automation Readiness' score combining resolution rate, handle time, flow structure (5-7 phases, 14-16 steps), deviation rate, and tool complexity (1-3 tools), finding high deviation rates often reflect off-topic chatter or transfers rather than broken workflows, and that the highest-volume automation candidate (Booking & Reservation Changes, ~45% of volume) differs from the highest-scoring one (Seat & Cabin Management).
 - **2026-09-16** — [From Better Evaluators to Better Agents: Building Compliance Intelligence with CompliBench](<../evals-observability/benchmark-design/From Better Evaluators to Better Agents Building Compliance Intelligence with CompliBench.md>) · `benchmark-design` · cresta

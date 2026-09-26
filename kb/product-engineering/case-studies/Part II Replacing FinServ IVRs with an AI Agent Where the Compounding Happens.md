@@ -1,10 +1,15 @@
 ---
 title: 'Part II: Replacing FinServ IVRs with an AI Agent: Where the Compounding Happens'
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: product-engineering
+subtopic: case-studies
+secondary_topics:
+- agents/tool-use
+summary: 'Case study on scaling an AI agent that replaced FinServ IVR call handling:
+  warns that per-agent Average Handle Time rises as the AI automates easy balance/payment
+  calls, leaving only hard cases for humans, so the real success metric is total human
+  minutes handled and containment volume; also covers staffing around billing-cycle-driven
+  call spikes (e.g. a Saturday cycle close compressing into a Monday surge).'
 triage: null
 skip_reason: null
 source: cresta
@@ -12,7 +17,7 @@ url: https://cresta.com/blog/part-ii-replacing-finserv-ivrs-with-an-ai-agent-whe
 author: Randy Young
 published: '2026-09-25'
 fetched: '2026-09-26T06:09:36Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1778
 content_sha256: a1e99b915ee13cd4f2068b07a038c8e901d209bd8483b1dee19525c000b25a9f
