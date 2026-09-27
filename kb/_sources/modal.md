@@ -1,7 +1,9 @@
 # modal
 
-38 articles.
+39 articles.
 
+- **2026-09-24** — [Hitting a billion tokens per minute on one GPU by combining a query planner and an inference engine | Modal Blog](<../inference/optimization/Hitting a billion tokens per minute on one GPU by combining a query planner and an inference engine Modal Blog.md>) · `optimization` · modal
+  Modal built Quail, a query-aware inference engine that combines a query planner with an LLM inference engine for AI-SQL style batch workloads, hitting over 1 billion tokens/minute on a single H100 (>10x vLLM baseline) and 1.84x faster on their new quail-bench AI-SQL benchmark, at under 6 cents per billion tokens.
 - **2026-09-23** — [How to serve trillions of tokens for trillion-parameter coding agents | Modal Blog](<../inference/optimization/How to serve trillions of tokens for trillion-parameter coding agents Modal Blog.md>) · `optimization` · modal
   Modal details the performance engineering behind serving Moonshot's Kimi K2.6 for coding agents at trillion-token scale, explaining how they scaled per-replica decode throughput 2.8x per user and 5.6x across concurrent users by tuning the interactivity-vs-throughput tradeoff on tensor-core GPU hardware.
 - **2026-09-02** — [How Botika runs full-stack generative AI on Modal | Modal Blog](<../product-engineering/case-studies/How Botika runs full-stack generative AI on Modal Modal Blog.md>) · `case-studies` · modal

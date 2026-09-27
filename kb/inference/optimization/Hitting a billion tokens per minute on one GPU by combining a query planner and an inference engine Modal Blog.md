@@ -2,10 +2,14 @@
 title: Hitting a billion tokens per minute on one GPU by combining a query planner
   and an inference engine | Modal Blog
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: inference
+subtopic: optimization
+secondary_topics:
+- infra-platform/cost
+summary: Modal built Quail, a query-aware inference engine that combines a query planner
+  with an LLM inference engine for AI-SQL style batch workloads, hitting over 1 billion
+  tokens/minute on a single H100 (>10x vLLM baseline) and 1.84x faster on their new
+  quail-bench AI-SQL benchmark, at under 6 cents per billion tokens.
 triage: null
 skip_reason: null
 source: modal
@@ -13,7 +17,7 @@ url: https://modal.com/blog/quail-billion-tpm
 author: null
 published: '2026-09-24'
 fetched: '2026-09-27T06:10:09Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 4191
 content_sha256: fbdb9b45ee9634610f851d5bc7f67b2de87368462378b20c250a632ea2b64f06

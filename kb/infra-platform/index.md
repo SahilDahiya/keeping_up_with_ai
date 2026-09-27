@@ -103,6 +103,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-09-24** — [Hitting a billion tokens per minute on one GPU by combining a query planner and an inference engine | Modal Blog](<../inference/optimization/Hitting a billion tokens per minute on one GPU by combining a query planner and an inference engine Modal Blog.md>) · `optimization` · modal
+  Modal built Quail, a query-aware inference engine that combines a query planner with an LLM inference engine for AI-SQL style batch workloads, hitting over 1 billion tokens/minute on a single H100 (>10x vLLM baseline) and 1.84x faster on their new quail-bench AI-SQL benchmark, at under 6 cents per billion tokens.
 - **2026-09-23** — [Introducing Ember-1](<../models/reasoning/Introducing Ember-1.md>) · `reasoning` · fireworks
   Fireworks' Ember-1, trained from Kimi K3 with on-policy learning from task and environment feedback across coding, math, and agentic tool-use tasks, cuts reasoning-token usage by 35-50% on seven benchmarks and two customers' production traffic while matching or beating K3-max quality, including a new Pareto frontier on Doximity's physician-validated Bedside Bench.
 - **2026-09-23** — [Every byte counts: ARCv3 and the case for cross-region RL](<../models/reinforcement-learning/Every byte counts ARCv3 and the case for cross-region RL.md>) · `reinforcement-learning` · fireworks
