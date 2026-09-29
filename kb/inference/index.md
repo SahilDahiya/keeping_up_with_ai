@@ -1,7 +1,9 @@
 # inference
 
-140 articles.
+141 articles.
 
+- **2026-09-28** — [Introducing FireRouter with Opus](<optimization/Introducing FireRouter with Opus.md>) · `optimization` · fireworks
+  Fireworks' FireRouter with Opus is a cache-aware router that dynamically picks between Claude Opus 5.5, GLM 5.3, and GLM 5.3 Flash per turn by weighing model quality against cost and prompt-cache-loss risk; internal A/B testing on coding traffic showed a 57% cost reduction ($15.36 to $6.63 per session) at 98.1% of Opus-only accuracy, with cache hit rate dropping only slightly from 97.8% to 94.2%.
 - **2026-09-24** — [Hitting a billion tokens per minute on one GPU by combining a query planner and an inference engine | Modal Blog](<optimization/Hitting a billion tokens per minute on one GPU by combining a query planner and an inference engine Modal Blog.md>) · `optimization` · modal
   Modal built Quail, a query-aware inference engine that combines a query planner with an LLM inference engine for AI-SQL style batch workloads, hitting over 1 billion tokens/minute on a single H100 (>10x vLLM baseline) and 1.84x faster on their new quail-bench AI-SQL benchmark, at under 6 cents per billion tokens.
 - **2026-09-23** — [How to serve trillions of tokens for trillion-parameter coding agents | Modal Blog](<optimization/How to serve trillions of tokens for trillion-parameter coding agents Modal Blog.md>) · `optimization` · modal

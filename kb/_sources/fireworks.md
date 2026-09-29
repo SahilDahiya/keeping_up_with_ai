@@ -1,7 +1,9 @@
 # fireworks
 
-105 articles.
+106 articles.
 
+- **2026-09-28** — [Introducing FireRouter with Opus](<../inference/optimization/Introducing FireRouter with Opus.md>) · `optimization` · fireworks
+  Fireworks' FireRouter with Opus is a cache-aware router that dynamically picks between Claude Opus 5.5, GLM 5.3, and GLM 5.3 Flash per turn by weighing model quality against cost and prompt-cache-loss risk; internal A/B testing on coding traffic showed a 57% cost reduction ($15.36 to $6.63 per session) at 98.1% of Opus-only accuracy, with cache hit rate dropping only slightly from 97.8% to 94.2%.
 - **2026-09-23** — [Introducing Ember-1](<../models/reasoning/Introducing Ember-1.md>) · `reasoning` · fireworks
   Fireworks' Ember-1, trained from Kimi K3 with on-policy learning from task and environment feedback across coding, math, and agentic tool-use tasks, cuts reasoning-token usage by 35-50% on seven benchmarks and two customers' production traffic while matching or beating K3-max quality, including a new Pareto frontier on Doximity's physician-validated Bedside Bench.
 - **2026-09-23** — [Every byte counts: ARCv3 and the case for cross-region RL](<../models/reinforcement-learning/Every byte counts ARCv3 and the case for cross-region RL.md>) · `reinforcement-learning` · fireworks

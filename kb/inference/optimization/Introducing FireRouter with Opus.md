@@ -1,10 +1,15 @@
 ---
 title: Introducing FireRouter with Opus
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: inference
+subtopic: optimization
+secondary_topics:
+- infra-platform/cost
+summary: Fireworks' FireRouter with Opus is a cache-aware router that dynamically
+  picks between Claude Opus 5.5, GLM 5.3, and GLM 5.3 Flash per turn by weighing model
+  quality against cost and prompt-cache-loss risk; internal A/B testing on coding
+  traffic showed a 57% cost reduction ($15.36 to $6.63 per session) at 98.1% of Opus-only
+  accuracy, with cache hit rate dropping only slightly from 97.8% to 94.2%.
 triage: null
 skip_reason: null
 source: fireworks
@@ -12,7 +17,7 @@ url: https://fireworks.ai/blog/introducing-firerouter-with-opus
 author: null
 published: '2026-09-28'
 fetched: '2026-09-29T06:10:55Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 434
 content_sha256: 85caa2a277eb2377909d23778b66d2e090f33ba49f847fafb0478de65d53d850

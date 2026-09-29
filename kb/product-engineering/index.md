@@ -135,6 +135,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-09-28** — [Securing the open frontier with NVIDIA OpenShell and Blaxel sandboxes](<../agents/harness/Securing the open frontier with NVIDIA OpenShell and Blaxel sandboxes.md>) · `harness` · baseten
+  Baseten's Blaxel introduces Carbon, a fourth-generation microVM sandbox for agent execution: every sandbox gets its own dedicated IPv6 address, adds kernel capabilities for runtime policy enforcement (integrating with NVIDIA's OpenShell), and supports manual snapshotting and forking so a quarantined agent can be rolled back to its last known-good state within milliseconds.
 - **2026-09-04** — [Building games with Astra | OpenAI Developers](<../agents/tool-use/Building games with Astra OpenAI Developers.md>) · `tool-use` · openai-devs
   Walks through building Void Explorer, a TypeScript/Three.js WebGPU space game, with OpenAI's Astra coding agent: a floating-origin coordinate system and quadtree LOD terrain streamed from Web Workers, plus measured optimization work (indexed meshes cut transferred terrain data from ~35MB to ~15MB; a stabilized LOD scheduler cut discarded terrain jobs from 6,074 to 13 during a simulated descent; a ship-model swap cut draw calls from 119 to 77 and average frame time from 251ms to 199ms). Also covers exposing a debug state interface and named Playwright test scenes so the agent could reproduce bugs and verify performance regressions on its own.
 - **2026-09-01** — [What is voice AI? Enterprise guide to AI voice agents](<../evals-observability/evaluation/What is voice AI Enterprise guide to AI voice agents.md>) · `evaluation` · sierra

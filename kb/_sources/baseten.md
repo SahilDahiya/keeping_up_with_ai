@@ -1,7 +1,9 @@
 # baseten
 
-90 articles.
+91 articles.
 
+- **2026-09-28** — [Securing the open frontier with NVIDIA OpenShell and Blaxel sandboxes](<../agents/harness/Securing the open frontier with NVIDIA OpenShell and Blaxel sandboxes.md>) · `harness` · baseten
+  Baseten's Blaxel introduces Carbon, a fourth-generation microVM sandbox for agent execution: every sandbox gets its own dedicated IPv6 address, adds kernel capabilities for runtime policy enforcement (integrating with NVIDIA's OpenShell), and supports manual snapshotting and forking so a quarantined agent can be rolled back to its last known-good state within milliseconds.
 - **2026-09-24** — [Fine-tune on your LangSmith traces with Baseten Loops](<../models/fine-tuning/Fine-tune on your LangSmith traces with Baseten Loops.md>) · `fine-tuning` · baseten
   Describes LangSmith Fine-Tuning (the smithtune CLI), which turns successful LangSmith agent traces into a supervised fine-tuning dataset, trains it via the Baseten Loops SDK on dedicated GPUs in the user's own workspace, and deploys the evaluated checkpoint straight to a Baseten Dedicated Inference endpoint without moving weights out of the workspace.
 - **2026-09-23** — [NVIDIA Nemotron 3 Diarization: real-time speaker labels at a cent per audio hour](<../models/architectures/NVIDIA Nemotron 3 Diarization real-time speaker labels at a cent per audio hour.md>) · `architectures` · baseten

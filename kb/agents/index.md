@@ -1,7 +1,9 @@
 # agents
 
-107 articles.
+108 articles.
 
+- **2026-09-28** — [Securing the open frontier with NVIDIA OpenShell and Blaxel sandboxes](<harness/Securing the open frontier with NVIDIA OpenShell and Blaxel sandboxes.md>) · `harness` · baseten
+  Baseten's Blaxel introduces Carbon, a fourth-generation microVM sandbox for agent execution: every sandbox gets its own dedicated IPv6 address, adds kernel capabilities for runtime policy enforcement (integrating with NVIDIA's OpenShell), and supports manual snapshotting and forking so a quarantined agent can be rolled back to its last known-good state within milliseconds.
 - **2026-09-16** — [Introducing Baseten Hosted Tools](<harness/Introducing Baseten Hosted Tools.md>) · `harness` · baseten
   Baseten's new Hosted Tools run the agentic tool-use loop server-side, co-located with model inference, instead of round-tripping through the client; the company reports a 15% end-to-end latency reduction versus client-side tool loops and launches web search with Exa, Keenable, Parallel, and You.com as the first hosted tool.
 - **2026-09-09** — [Durable Pydantic AI agents on AWS Lambda](<harness/Durable Pydantic AI agents on AWS Lambda.md>) · `harness` · pydantic

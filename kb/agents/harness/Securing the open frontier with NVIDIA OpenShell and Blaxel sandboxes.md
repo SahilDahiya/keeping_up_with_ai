@@ -1,10 +1,15 @@
 ---
 title: Securing the open frontier with NVIDIA OpenShell and Blaxel sandboxes
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: agents
+subtopic: harness
+secondary_topics:
+- product-engineering/security
+summary: 'Baseten''s Blaxel introduces Carbon, a fourth-generation microVM sandbox
+  for agent execution: every sandbox gets its own dedicated IPv6 address, adds kernel
+  capabilities for runtime policy enforcement (integrating with NVIDIA''s OpenShell),
+  and supports manual snapshotting and forking so a quarantined agent can be rolled
+  back to its last known-good state within milliseconds.'
 triage: null
 skip_reason: null
 source: baseten
@@ -12,7 +17,7 @@ url: https://www.baseten.co/blog/announcing-carbon/
 author: Nicolas Lecomte
 published: '2026-09-28'
 fetched: '2026-09-29T06:10:46Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 584
 content_sha256: ed75eda114d352318756d1828ae275693f1f7022b8187b8ee9eda3e43f332ef5
