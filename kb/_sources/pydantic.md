@@ -1,7 +1,9 @@
 # pydantic
 
-45 articles.
+46 articles.
 
+- **2026-09-29** — [Pydantic AI agents on Jev, traced in Logfire](<../evals-observability/tracing/Pydantic AI agents on Jev, traced in Logfire.md>) · `tracing` · pydantic
+  Pydantic AI 2.50.0 adds a DecisionModel base class so agents can run classification-style steps (bool/Literal/rubric outputs) on TypeSafe's Jev model instead of an LLM, and a new 'decide' span records each question, answer probability, and routing decision, which Logfire's Live view now renders as a Classifier output panel.
 - **2026-09-23** — [Cheap AI scoring with Jev and Pydantic Evals](<../evals-observability/llm-as-judge/Cheap AI scoring with Jev and Pydantic Evals.md>) · `llm-as-judge` · pydantic
   Shows how to wire TypeSafe's Jev classifier ($0.042 per million input tokens, no output charge) into Pydantic AI 2.46's built-in judge support and Pydantic Evals, logging results to Logfire; at 1M evaluations with 3 results each this costs about $42 in Jev inference plus $20 in Logfire telemetry, versus Braintrust Pro's $4,500 marginal fee for the same volume.
 - **2026-09-09** — [Durable Pydantic AI agents on AWS Lambda](<../agents/harness/Durable Pydantic AI agents on AWS Lambda.md>) · `harness` · pydantic

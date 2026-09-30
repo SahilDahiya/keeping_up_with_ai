@@ -1,10 +1,15 @@
 ---
 title: Fireworks AI
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: inference
+subtopic: optimization
+secondary_topics:
+- infra-platform/gpu-clusters
+summary: Fireworks describes its GLOBAL multi-region deployment option, which moves
+  capacity scheduling off the inference hot path so a single deployment can draw GPU
+  capacity from multiple regions/clouds instead of being capped by one region's node
+  pool; a 7-day production study reported request success rising from 99.269% (single-region)
+  to 99.992% (multi-region).
 triage: null
 skip_reason: null
 source: fireworks
@@ -12,7 +17,7 @@ url: https://fireworks.ai/blog/multi-region-deployment
 author: null
 published: '2026-09-28'
 fetched: '2026-09-30T06:10:49Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 878
 content_sha256: df46e4c0c4dd080ee168179a38cf11e3066e3098fd98075d17344536baf4e164

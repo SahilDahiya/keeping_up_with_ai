@@ -1,10 +1,14 @@
 ---
 title: Pydantic AI agents on Jev, traced in Logfire
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: evals-observability
+subtopic: tracing
+secondary_topics:
+- prompt-engineering/structured-output
+summary: Pydantic AI 2.50.0 adds a DecisionModel base class so agents can run classification-style
+  steps (bool/Literal/rubric outputs) on TypeSafe's Jev model instead of an LLM, and
+  a new 'decide' span records each question, answer probability, and routing decision,
+  which Logfire's Live view now renders as a Classifier output panel.
 triage: null
 skip_reason: null
 source: pydantic
@@ -12,7 +16,7 @@ url: https://pydantic.dev/articles/jev-pydantic-ai-live-view
 author: Marcelo Trylesinski
 published: '2026-09-29'
 fetched: '2026-09-30T06:16:35Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 840
 content_sha256: 02d0d3d7b4aacfa25c84b01805405df5a88f868e466453b55d943fa402bc0fa4

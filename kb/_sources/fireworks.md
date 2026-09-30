@@ -1,7 +1,9 @@
 # fireworks
 
-106 articles.
+107 articles.
 
+- **2026-09-28** — [Fireworks AI](<../inference/optimization/Fireworks AI.md>) · `optimization` · fireworks
+  Fireworks describes its GLOBAL multi-region deployment option, which moves capacity scheduling off the inference hot path so a single deployment can draw GPU capacity from multiple regions/clouds instead of being capped by one region's node pool; a 7-day production study reported request success rising from 99.269% (single-region) to 99.992% (multi-region).
 - **2026-09-28** — [Introducing FireRouter with Opus](<../inference/optimization/Introducing FireRouter with Opus.md>) · `optimization` · fireworks
   Fireworks' FireRouter with Opus is a cache-aware router that dynamically picks between Claude Opus 5.5, GLM 5.3, and GLM 5.3 Flash per turn by weighing model quality against cost and prompt-cache-loss risk; internal A/B testing on coding traffic showed a 57% cost reduction ($15.36 to $6.63 per session) at 98.1% of Opus-only accuracy, with cache hit rate dropping only slightly from 97.8% to 94.2%.
 - **2026-09-23** — [Introducing Ember-1](<../models/reasoning/Introducing Ember-1.md>) · `reasoning` · fireworks
