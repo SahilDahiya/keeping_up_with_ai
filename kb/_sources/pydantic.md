@@ -1,7 +1,9 @@
 # pydantic
 
-46 articles.
+47 articles.
 
+- **2026-09-30** — [Debug production from Cursor with the Logfire MCP server](<../evals-observability/tracing/Debug production from Cursor with the Logfire MCP server.md>) · `tracing` · pydantic
+  Pydantic's hosted Logfire MCP server exposes OpenTelemetry traces, logs, and metrics (51 tools total, with the SQL-based query_run accounting for over 99% of calls) to coding agents in Cursor, Claude Code, and Codex, letting them query production trace data directly during debugging instead of guessing from source code alone.
 - **2026-09-29** — [Pydantic AI agents on Jev, traced in Logfire](<../evals-observability/tracing/Pydantic AI agents on Jev, traced in Logfire.md>) · `tracing` · pydantic
   Pydantic AI 2.50.0 adds a DecisionModel base class so agents can run classification-style steps (bool/Literal/rubric outputs) on TypeSafe's Jev model instead of an LLM, and a new 'decide' span records each question, answer probability, and routing decision, which Logfire's Live view now renders as a Classifier output panel.
 - **2026-09-23** — [Cheap AI scoring with Jev and Pydantic Evals](<../evals-observability/llm-as-judge/Cheap AI scoring with Jev and Pydantic Evals.md>) · `llm-as-judge` · pydantic

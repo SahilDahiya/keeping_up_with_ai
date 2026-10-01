@@ -2,10 +2,15 @@
 title: 'Open TTS Leaderboard: Scalable Evaluation for Multilingual Text-to-Speech
   and Voice Cloning'
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: evals-observability
+subtopic: benchmark-design
+secondary_topics:
+- models/benchmarks
+summary: Hugging Face's Open TTS Leaderboard replaces slow arena-style voting with
+  objective metrics (WER/CER via Qwen3 ASR, RTFx/TTFA speed on H200, WavLM speaker-similarity
+  cosine scores) to rank TTS models like Kokoro-82M, Supertonic-3, and Fun-CosyVoice3
+  in hours instead of the weeks arenas take, while keeping a 'Listen' tab for human
+  comparison.
 triage: null
 skip_reason: null
 source: huggingface
@@ -13,7 +18,7 @@ url: https://huggingface.co/blog/open-tts-leaderboard
 author: Eric Bezzam; Steven Zheng; Eustache Le Bihan; Mrfakename
 published: '2026-09-30'
 fetched: '2026-10-01T06:17:00Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1211
 content_sha256: 4af94e38c40b78118f2ca83d8f4988097df6b5362ea2ac73675267365387515e

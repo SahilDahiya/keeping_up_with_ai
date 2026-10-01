@@ -221,6 +221,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-09-30** — [Debug production from Cursor with the Logfire MCP server](<../evals-observability/tracing/Debug production from Cursor with the Logfire MCP server.md>) · `tracing` · pydantic
+  Pydantic's hosted Logfire MCP server exposes OpenTelemetry traces, logs, and metrics (51 tools total, with the SQL-based query_run accounting for over 99% of calls) to coding agents in Cursor, Claude Code, and Codex, letting them query production trace data directly during debugging instead of guessing from source code alone.
 - **2026-09-25** — [Part II: Replacing FinServ IVRs with an AI Agent: Where the Compounding Happens](<../product-engineering/case-studies/Part II Replacing FinServ IVRs with an AI Agent Where the Compounding Happens.md>) · `case-studies` · cresta
   Case study on scaling an AI agent that replaced FinServ IVR call handling: warns that per-agent Average Handle Time rises as the AI automates easy balance/payment calls, leaving only hard cases for humans, so the real success metric is total human minutes handled and containment volume; also covers staffing around billing-cycle-driven call spikes (e.g. a Saturday cycle close compressing into a Monday surge).
 - **2026-09-23** — [Bringing my LED display to life with GPT-Live-1 and Codex | OpenAI Developers](<../product-engineering/case-studies/Bringing my LED display to life with GPT-Live-1 and Codex OpenAI Developers.md>) · `case-studies` · openai-devs

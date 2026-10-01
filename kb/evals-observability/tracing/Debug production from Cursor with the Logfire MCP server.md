@@ -1,10 +1,15 @@
 ---
 title: Debug production from Cursor with the Logfire MCP server
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: evals-observability
+subtopic: tracing
+secondary_topics:
+- agents/tool-use
+summary: Pydantic's hosted Logfire MCP server exposes OpenTelemetry traces, logs,
+  and metrics (51 tools total, with the SQL-based query_run accounting for over 99%
+  of calls) to coding agents in Cursor, Claude Code, and Codex, letting them query
+  production trace data directly during debugging instead of guessing from source
+  code alone.
 triage: null
 skip_reason: null
 source: pydantic
@@ -12,7 +17,7 @@ url: https://pydantic.dev/articles/debugging-production-with-logfire-mcp-and-cur
 author: Laís Carvalho
 published: '2026-09-30'
 fetched: '2026-10-01T06:17:05Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 2635
 content_sha256: 0494c136f6ef25db6d9b133752b044a6a0927e61b5127f9ade2d87f229cefcfa

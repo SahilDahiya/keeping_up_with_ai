@@ -1,7 +1,9 @@
 # huggingface
 
-171 articles.
+172 articles.
 
+- **2026-09-30** — [Open TTS Leaderboard: Scalable Evaluation for Multilingual Text-to-Speech and Voice Cloning](<../evals-observability/benchmark-design/Open TTS Leaderboard Scalable Evaluation for Multilingual Text-to-Speech and Voice Cloning.md>) · `benchmark-design` · huggingface
+  Hugging Face's Open TTS Leaderboard replaces slow arena-style voting with objective metrics (WER/CER via Qwen3 ASR, RTFx/TTFA speed on H200, WavLM speaker-similarity cosine scores) to rank TTS models like Kokoro-82M, Supertonic-3, and Fun-CosyVoice3 in hours instead of the weeks arenas take, while keeping a 'Listen' tab for human comparison.
 - **2026-09-22** — [How UK AISI and EvalEval Are Making Benchmark Results Reproducible](<../evals-observability/benchmark-design/How UK AISI and EvalEval Are Making Benchmark Results Reproducible.md>) · `benchmark-design` · huggingface
   UK AISI is publishing verified, reproducible results through EvalEval's Evaluation Cards platform and Every Eval Ever schema, releasing transcript-level results and configs for HealthBench, FrontierMath, Humanity's Last Exam, SWE-Bench Pro, and Terminal-Bench 2.0 across six frontier models (Claude Opus 4/4.5/4.6, GPT-5/5.2/5.4), accompanying AISI's paper on how inference-time compute and evaluation protocol shape benchmark scores.
 - **2026-09-10** — [Async GRPO with LoRA across HF Jobs: a bucket, a proxy, and no NCCL](<../models/reinforcement-learning/Async GRPO with LoRA across HF Jobs a bucket, a proxy, and no NCCL.md>) · `reinforcement-learning` · huggingface
