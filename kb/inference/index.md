@@ -289,6 +289,10 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-10-01** — [Modal Clusters are generally available](<../infra-platform/gpu-clusters/Modal Clusters are generally available.md>) · `gpu-clusters` · modal
+  Modal Clusters reach GA via a `@modal.clustered` decorator, offering gang-scheduled multi-node GPU jobs with RDMA at up to 6.4 Tbps; cites GLM 4.7 weight sync (~717GB BF16, under 2s over RDMA vs ~2min over 50Gbps TCP) and PD-disaggregated KV-cache transfer for Llama 3.1 70B as motivating workloads.
+- **2026-09-30** — [Reinforcement learning: Why alignment of numerics and MoE routing matter](<../models/reinforcement-learning/Reinforcement learning Why alignment of numerics and MoE routing matter.md>) · `reinforcement-learning` · fireworks
+  Fireworks traces RL training instability to numerical mismatches between trainer and rollout engines: a GLM 5.2 run's reward collapsed from 0.9 to under 0.2 around step 20 without alignment (zero-KL and stable reward with it), and a Qwen3.5-MoE run diverged by k3=0.296 (300x their 0.001-equivalence threshold) due to precision differences in combining expert outputs.
 - **2026-09-23** — [NVIDIA Nemotron 3 Diarization: real-time speaker labels at a cent per audio hour](<../models/architectures/NVIDIA Nemotron 3 Diarization real-time speaker labels at a cent per audio hour.md>) · `architectures` · baseten
   NVIDIA Nemotron 3 Diarization is a ~100M-parameter streaming transformer built on Streaming Sortformer that labels up to 8 speakers per 320ms chunk using an arrival-order speaker cache and FIFO frame buffer instead of embeddings or clustering, hitting 9.8% DER on AISHELL-4 at the low-latency profile (vs 27.2% for its predecessor) and sustaining 500+ concurrent hour-long streams on an RTX PRO 6000.
 - **2026-09-16** — [Introducing Baseten Hosted Tools](<../agents/harness/Introducing Baseten Hosted Tools.md>) · `harness` · baseten

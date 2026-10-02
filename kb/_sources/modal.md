@@ -1,7 +1,13 @@
 # modal
 
-39 articles.
+42 articles.
 
+- **2026-10-01** — [VM Sandboxes: Full computers for agents | Modal Blog](<../infra-platform/deployment/VM Sandboxes Full computers for agents Modal Blog.md>) · `deployment` · modal
+  Modal ships VM Sandboxes, a Cloud Hypervisor-based runtime giving agents a full Linux VM (Docker-in-Docker, kernel access) while keeping the existing Sandbox API and sub-second cold starts; covers customer use at Linear (cgroups/network namespaces for Coding Sessions) after 20M+ VMs launched in early access.
+- **2026-10-01** — [Modal Clusters are generally available](<../infra-platform/gpu-clusters/Modal Clusters are generally available.md>) · `gpu-clusters` · modal
+  Modal Clusters reach GA via a `@modal.clustered` decorator, offering gang-scheduled multi-node GPU jobs with RDMA at up to 6.4 Tbps; cites GLM 4.7 weight sync (~717GB BF16, under 2s over RDMA vs ~2min over 50Gbps TCP) and PD-disaggregated KV-cache transfer for Llama 3.1 70B as motivating workloads.
+- **2026-10-01** — [Sidecars: A low-latency trust boundary for Sandboxes | Modal Blog](<../product-engineering/security/Sidecars A low-latency trust boundary for Sandboxes Modal Blog.md>) · `security` · modal
+  Modal introduces Sidecars, isolated containers running alongside a main Sandbox on the same host to separate trusted harness/credential logic from untrusted agent-generated code without the network-call latency of separate Sandboxes, claiming 3x faster cross-boundary communication.
 - **2026-09-24** — [Hitting a billion tokens per minute on one GPU by combining a query planner and an inference engine | Modal Blog](<../inference/optimization/Hitting a billion tokens per minute on one GPU by combining a query planner and an inference engine Modal Blog.md>) · `optimization` · modal
   Modal built Quail, a query-aware inference engine that combines a query planner with an LLM inference engine for AI-SQL style batch workloads, hitting over 1 billion tokens/minute on a single H100 (>10x vLLM baseline) and 1.84x faster on their new quail-bench AI-SQL benchmark, at under 6 cents per billion tokens.
 - **2026-09-23** — [How to serve trillions of tokens for trillion-parameter coding agents | Modal Blog](<../inference/optimization/How to serve trillions of tokens for trillion-parameter coding agents Modal Blog.md>) · `optimization` · modal

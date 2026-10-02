@@ -1,7 +1,9 @@
 # fireworks
 
-107 articles.
+108 articles.
 
+- **2026-09-30** — [Reinforcement learning: Why alignment of numerics and MoE routing matter](<../models/reinforcement-learning/Reinforcement learning Why alignment of numerics and MoE routing matter.md>) · `reinforcement-learning` · fireworks
+  Fireworks traces RL training instability to numerical mismatches between trainer and rollout engines: a GLM 5.2 run's reward collapsed from 0.9 to under 0.2 around step 20 without alignment (zero-KL and stable reward with it), and a Qwen3.5-MoE run diverged by k3=0.296 (300x their 0.001-equivalence threshold) due to precision differences in combining expert outputs.
 - **2026-09-28** — [Fireworks AI](<../inference/optimization/Fireworks AI.md>) · `optimization` · fireworks
   Fireworks describes its GLOBAL multi-region deployment option, which moves capacity scheduling off the inference hot path so a single deployment can draw GPU capacity from multiple regions/clouds instead of being capped by one region's node pool; a 7-day production study reported request success rising from 99.269% (single-region) to 99.992% (multi-region).
 - **2026-09-28** — [Introducing FireRouter with Opus](<../inference/optimization/Introducing FireRouter with Opus.md>) · `optimization` · fireworks

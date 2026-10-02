@@ -1,7 +1,9 @@
 # product-engineering
 
-65 articles.
+66 articles.
 
+- **2026-10-01** — [Sidecars: A low-latency trust boundary for Sandboxes | Modal Blog](<security/Sidecars A low-latency trust boundary for Sandboxes Modal Blog.md>) · `security` · modal
+  Modal introduces Sidecars, isolated containers running alongside a main Sandbox on the same host to separate trusted harness/credential logic from untrusted agent-generated code without the network-call latency of separate Sandboxes, claiming 3x faster cross-boundary communication.
 - **2026-09-25** — [Part II: Replacing FinServ IVRs with an AI Agent: Where the Compounding Happens](<case-studies/Part II Replacing FinServ IVRs with an AI Agent Where the Compounding Happens.md>) · `case-studies` · cresta
   Case study on scaling an AI agent that replaced FinServ IVR call handling: warns that per-agent Average Handle Time rises as the AI automates easy balance/payment calls, leaving only hard cases for humans, so the real success metric is total human minutes handled and containment volume; also covers staffing around billing-cycle-driven call spikes (e.g. a Saturday cycle close compressing into a Monday surge).
 - **2026-09-23** — [Bringing my LED display to life with GPT-Live-1 and Codex | OpenAI Developers](<case-studies/Bringing my LED display to life with GPT-Live-1 and Codex OpenAI Developers.md>) · `case-studies` · openai-devs
@@ -135,6 +137,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-10-01** — [VM Sandboxes: Full computers for agents | Modal Blog](<../infra-platform/deployment/VM Sandboxes Full computers for agents Modal Blog.md>) · `deployment` · modal
+  Modal ships VM Sandboxes, a Cloud Hypervisor-based runtime giving agents a full Linux VM (Docker-in-Docker, kernel access) while keeping the existing Sandbox API and sub-second cold starts; covers customer use at Linear (cgroups/network namespaces for Coding Sessions) after 20M+ VMs launched in early access.
 - **2026-09-28** — [Securing the open frontier with NVIDIA OpenShell and Blaxel sandboxes](<../agents/harness/Securing the open frontier with NVIDIA OpenShell and Blaxel sandboxes.md>) · `harness` · baseten
   Baseten's Blaxel introduces Carbon, a fourth-generation microVM sandbox for agent execution: every sandbox gets its own dedicated IPv6 address, adds kernel capabilities for runtime policy enforcement (integrating with NVIDIA's OpenShell), and supports manual snapshotting and forking so a quarantined agent can be rolled back to its last known-good state within milliseconds.
 - **2026-09-04** — [Building games with Astra | OpenAI Developers](<../agents/tool-use/Building games with Astra OpenAI Developers.md>) · `tool-use` · openai-devs

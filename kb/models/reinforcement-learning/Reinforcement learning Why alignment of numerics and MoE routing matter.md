@@ -1,10 +1,15 @@
 ---
 title: 'Reinforcement learning: Why alignment of numerics and MoE routing matter'
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: models
+subtopic: reinforcement-learning
+secondary_topics:
+- inference/kernels
+summary: 'Fireworks traces RL training instability to numerical mismatches between
+  trainer and rollout engines: a GLM 5.2 run''s reward collapsed from 0.9 to under
+  0.2 around step 20 without alignment (zero-KL and stable reward with it), and a
+  Qwen3.5-MoE run diverged by k3=0.296 (300x their 0.001-equivalence threshold) due
+  to precision differences in combining expert outputs.'
 triage: null
 skip_reason: null
 source: fireworks
@@ -12,7 +17,7 @@ url: https://fireworks.ai/blog/reinforcement-learning-why-alignment-of-numerics-
 author: null
 published: '2026-09-30'
 fetched: '2026-10-02T06:10:54Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1148
 content_sha256: 5c1549b1bf24b5ba8bb28aadb78bd8a028854ad3e9939157729e197b8e2bca90

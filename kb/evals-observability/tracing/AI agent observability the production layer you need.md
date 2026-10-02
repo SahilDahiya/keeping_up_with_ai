@@ -1,10 +1,15 @@
 ---
 title: 'AI agent observability: the production layer you need'
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: evals-observability
+subtopic: tracing
+secondary_topics:
+- agents/harness
+summary: 'Argues agent observability needs five things beyond traditional APM or LLM-only
+  tracing: agentic-loop spans, one correlated full-stack trace, per-step cost/latency,
+  session correlation across multi-agent handoffs, and an OpenTelemetry-based foundation
+  (citing OTel''s new GenAI semantic conventions); demos with Pydantic Logfire instrumented
+  at the entry point with no agent-code changes.'
 triage: null
 skip_reason: null
 source: pydantic
@@ -12,7 +17,7 @@ url: https://pydantic.dev/articles/agent-observability-layer
 author: Antoni Kozelski
 published: '2026-10-01'
 fetched: '2026-10-02T06:16:48Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1157
 content_sha256: 3564e37d03f0eac6389e2a96a271376e621379797daa58a8414a355994a60953

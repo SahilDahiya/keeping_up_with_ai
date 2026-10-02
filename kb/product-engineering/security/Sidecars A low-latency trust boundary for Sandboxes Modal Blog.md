@@ -1,10 +1,15 @@
 ---
 title: 'Sidecars: A low-latency trust boundary for Sandboxes | Modal Blog'
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: product-engineering
+subtopic: security
+secondary_topics:
+- agents/harness
+- agents/computer-use
+summary: Modal introduces Sidecars, isolated containers running alongside a main Sandbox
+  on the same host to separate trusted harness/credential logic from untrusted agent-generated
+  code without the network-call latency of separate Sandboxes, claiming 3x faster
+  cross-boundary communication.
 triage: null
 skip_reason: null
 source: modal
@@ -12,7 +17,7 @@ url: https://modal.com/blog/introducing-sandbox-sidecars-trust-boundary
 author: null
 published: '2026-10-01'
 fetched: '2026-10-02T06:11:05Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1398
 content_sha256: 2269d3c97af6c953501f44d2d97c820ccf5d3445e92f5c64455de62d15f9154b

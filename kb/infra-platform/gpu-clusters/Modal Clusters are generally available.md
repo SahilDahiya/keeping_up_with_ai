@@ -1,10 +1,14 @@
 ---
 title: Modal Clusters are generally available
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: infra-platform
+subtopic: gpu-clusters
+secondary_topics:
+- inference/serving
+summary: Modal Clusters reach GA via a `@modal.clustered` decorator, offering gang-scheduled
+  multi-node GPU jobs with RDMA at up to 6.4 Tbps; cites GLM 4.7 weight sync (~717GB
+  BF16, under 2s over RDMA vs ~2min over 50Gbps TCP) and PD-disaggregated KV-cache
+  transfer for Llama 3.1 70B as motivating workloads.
 triage: null
 skip_reason: null
 source: modal
@@ -12,7 +16,7 @@ url: https://modal.com/blog/modal-clusters-generally-available
 author: null
 published: '2026-10-01'
 fetched: '2026-10-02T06:10:59Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1298
 content_sha256: c417dd7c9c339385aab2d4d6ecbbe68f8d2bcaa36b5a70b73f210abdb3c0c9d2

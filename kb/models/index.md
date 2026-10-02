@@ -1,7 +1,9 @@
 # models
 
-203 articles.
+204 articles.
 
+- **2026-09-30** — [Reinforcement learning: Why alignment of numerics and MoE routing matter](<reinforcement-learning/Reinforcement learning Why alignment of numerics and MoE routing matter.md>) · `reinforcement-learning` · fireworks
+  Fireworks traces RL training instability to numerical mismatches between trainer and rollout engines: a GLM 5.2 run's reward collapsed from 0.9 to under 0.2 around step 20 without alignment (zero-KL and stable reward with it), and a Qwen3.5-MoE run diverged by k3=0.296 (300x their 0.001-equivalence threshold) due to precision differences in combining expert outputs.
 - **2026-09-24** — [Fine-tune on your LangSmith traces with Baseten Loops](<fine-tuning/Fine-tune on your LangSmith traces with Baseten Loops.md>) · `fine-tuning` · baseten
   Describes LangSmith Fine-Tuning (the smithtune CLI), which turns successful LangSmith agent traces into a supervised fine-tuning dataset, trains it via the Baseten Loops SDK on dedicated GPUs in the user's own workspace, and deploys the evaluated checkpoint straight to a Baseten Dedicated Inference endpoint without moving weights out of the workspace.
 - **2026-09-23** — [NVIDIA Nemotron 3 Diarization: real-time speaker labels at a cent per audio hour](<architectures/NVIDIA Nemotron 3 Diarization real-time speaker labels at a cent per audio hour.md>) · `architectures` · baseten

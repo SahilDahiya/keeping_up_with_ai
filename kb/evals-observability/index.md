@@ -1,7 +1,9 @@
 # evals-observability
 
-121 articles.
+122 articles.
 
+- **2026-10-01** — [AI agent observability: the production layer you need](<tracing/AI agent observability the production layer you need.md>) · `tracing` · pydantic
+  Argues agent observability needs five things beyond traditional APM or LLM-only tracing: agentic-loop spans, one correlated full-stack trace, per-step cost/latency, session correlation across multi-agent handoffs, and an OpenTelemetry-based foundation (citing OTel's new GenAI semantic conventions); demos with Pydantic Logfire instrumented at the entry point with no agent-code changes.
 - **2026-09-30** — [Open TTS Leaderboard: Scalable Evaluation for Multilingual Text-to-Speech and Voice Cloning](<benchmark-design/Open TTS Leaderboard Scalable Evaluation for Multilingual Text-to-Speech and Voice Cloning.md>) · `benchmark-design` · huggingface
   Hugging Face's Open TTS Leaderboard replaces slow arena-style voting with objective metrics (WER/CER via Qwen3 ASR, RTFx/TTFA speed on H200, WavLM speaker-similarity cosine scores) to rank TTS models like Kokoro-82M, Supertonic-3, and Fun-CosyVoice3 in hours instead of the weeks arenas take, while keeping a 'Listen' tab for human comparison.
 - **2026-09-30** — [Debug production from Cursor with the Logfire MCP server](<tracing/Debug production from Cursor with the Logfire MCP server.md>) · `tracing` · pydantic

@@ -1,10 +1,15 @@
 ---
 title: 'VM Sandboxes: Full computers for agents | Modal Blog'
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: infra-platform
+subtopic: deployment
+secondary_topics:
+- agents/computer-use
+- product-engineering/case-studies
+summary: Modal ships VM Sandboxes, a Cloud Hypervisor-based runtime giving agents
+  a full Linux VM (Docker-in-Docker, kernel access) while keeping the existing Sandbox
+  API and sub-second cold starts; covers customer use at Linear (cgroups/network namespaces
+  for Coding Sessions) after 20M+ VMs launched in early access.
 triage: null
 skip_reason: null
 source: modal
@@ -12,7 +17,7 @@ url: https://modal.com/blog/vm-sandboxes-agent-computers
 author: null
 published: '2026-10-01'
 fetched: '2026-10-02T06:11:01Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1001
 content_sha256: b5e7d7d94b23c67d5b5b5405c30bcab14e061c2636e92b3c143c9e6d69981678

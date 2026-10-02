@@ -221,6 +221,12 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-10-01** — [AI agent observability: the production layer you need](<../evals-observability/tracing/AI agent observability the production layer you need.md>) · `tracing` · pydantic
+  Argues agent observability needs five things beyond traditional APM or LLM-only tracing: agentic-loop spans, one correlated full-stack trace, per-step cost/latency, session correlation across multi-agent handoffs, and an OpenTelemetry-based foundation (citing OTel's new GenAI semantic conventions); demos with Pydantic Logfire instrumented at the entry point with no agent-code changes.
+- **2026-10-01** — [VM Sandboxes: Full computers for agents | Modal Blog](<../infra-platform/deployment/VM Sandboxes Full computers for agents Modal Blog.md>) · `deployment` · modal
+  Modal ships VM Sandboxes, a Cloud Hypervisor-based runtime giving agents a full Linux VM (Docker-in-Docker, kernel access) while keeping the existing Sandbox API and sub-second cold starts; covers customer use at Linear (cgroups/network namespaces for Coding Sessions) after 20M+ VMs launched in early access.
+- **2026-10-01** — [Sidecars: A low-latency trust boundary for Sandboxes | Modal Blog](<../product-engineering/security/Sidecars A low-latency trust boundary for Sandboxes Modal Blog.md>) · `security` · modal
+  Modal introduces Sidecars, isolated containers running alongside a main Sandbox on the same host to separate trusted harness/credential logic from untrusted agent-generated code without the network-call latency of separate Sandboxes, claiming 3x faster cross-boundary communication.
 - **2026-09-30** — [Debug production from Cursor with the Logfire MCP server](<../evals-observability/tracing/Debug production from Cursor with the Logfire MCP server.md>) · `tracing` · pydantic
   Pydantic's hosted Logfire MCP server exposes OpenTelemetry traces, logs, and metrics (51 tools total, with the SQL-based query_run accounting for over 99% of calls) to coding agents in Cursor, Claude Code, and Codex, letting them query production trace data directly during debugging instead of guessing from source code alone.
 - **2026-09-25** — [Part II: Replacing FinServ IVRs with an AI Agent: Where the Compounding Happens](<../product-engineering/case-studies/Part II Replacing FinServ IVRs with an AI Agent Where the Compounding Happens.md>) · `case-studies` · cresta

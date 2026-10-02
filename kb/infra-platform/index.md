@@ -1,7 +1,11 @@
 # infra-platform
 
-49 articles.
+51 articles.
 
+- **2026-10-01** — [VM Sandboxes: Full computers for agents | Modal Blog](<deployment/VM Sandboxes Full computers for agents Modal Blog.md>) · `deployment` · modal
+  Modal ships VM Sandboxes, a Cloud Hypervisor-based runtime giving agents a full Linux VM (Docker-in-Docker, kernel access) while keeping the existing Sandbox API and sub-second cold starts; covers customer use at Linear (cgroups/network namespaces for Coding Sessions) after 20M+ VMs launched in early access.
+- **2026-10-01** — [Modal Clusters are generally available](<gpu-clusters/Modal Clusters are generally available.md>) · `gpu-clusters` · modal
+  Modal Clusters reach GA via a `@modal.clustered` decorator, offering gang-scheduled multi-node GPU jobs with RDMA at up to 6.4 Tbps; cites GLM 4.7 weight sync (~717GB BF16, under 2s over RDMA vs ~2min over 50Gbps TCP) and PD-disaggregated KV-cache transfer for Llama 3.1 70B as motivating workloads.
 - **2026-09-22** — [Canary rollouts: upgrade models in production without downtime](<deployment/Canary rollouts upgrade models in production without downtime.md>) · `deployment` · together
   Together AI details its canary/blue-green/rolling rollout engine for swapping production model deployments, covering the step state machine (scale target, health gate, traffic shift, propagation wait, source drain, metric gate), regression vs. threshold metric checks on router latency/error rate/inflight requests, and timing-window math; a live Qwen2.5-7B to Qwen3.5-9B canary catches a 137% p95 latency regression (1,740ms vs. 734ms) at 10% traffic and reverses cleanly with 6,800 requests and zero errors.
 - **2026-09-17** — [Phylo brings frontier AI to more scientists with open models on Fireworks](<deployment/Phylo brings frontier AI to more scientists with open models on Fireworks.md>) · `deployment` · fireworks
