@@ -1,7 +1,9 @@
 # baseten
 
-91 articles.
+92 articles.
 
+- **2026-10-02** — [Agentic inference optimization: 50-90% faster engines](<../inference/optimization/Agentic inference optimization 50-90% faster engines.md>) · `optimization` · baseten
+  Baseten let Claude Code (Fable 5) run ~1 week autonomously under the MetaInfer framework to generate a custom inference engine (VibeQwen) for Qwen-3.6-35B-A3B NVFP4 on a B200, beating a tuned vLLM 0.25.1 by 90% single-stream decode TPS and 2.3x faster TTFT; a second agent-built engine (Sammie) for SAM 3.1 hit 91 img/s, 50% faster than Meta's reference server.
 - **2026-09-28** — [Securing the open frontier with NVIDIA OpenShell and Blaxel sandboxes](<../agents/harness/Securing the open frontier with NVIDIA OpenShell and Blaxel sandboxes.md>) · `harness` · baseten
   Baseten's Blaxel introduces Carbon, a fourth-generation microVM sandbox for agent execution: every sandbox gets its own dedicated IPv6 address, adds kernel capabilities for runtime policy enforcement (integrating with NVIDIA's OpenShell), and supports manual snapshotting and forking so a quarantined agent can be rolled back to its last known-good state within milliseconds.
 - **2026-09-24** — [Fine-tune on your LangSmith traces with Baseten Loops](<../models/fine-tuning/Fine-tune on your LangSmith traces with Baseten Loops.md>) · `fine-tuning` · baseten

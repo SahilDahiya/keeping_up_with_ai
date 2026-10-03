@@ -1,7 +1,9 @@
 # inference
 
-142 articles.
+143 articles.
 
+- **2026-10-02** — [Agentic inference optimization: 50-90% faster engines](<optimization/Agentic inference optimization 50-90% faster engines.md>) · `optimization` · baseten
+  Baseten let Claude Code (Fable 5) run ~1 week autonomously under the MetaInfer framework to generate a custom inference engine (VibeQwen) for Qwen-3.6-35B-A3B NVFP4 on a B200, beating a tuned vLLM 0.25.1 by 90% single-stream decode TPS and 2.3x faster TTFT; a second agent-built engine (Sammie) for SAM 3.1 hit 91 img/s, 50% faster than Meta's reference server.
 - **2026-09-28** — [Fireworks AI](<optimization/Fireworks AI.md>) · `optimization` · fireworks
   Fireworks describes its GLOBAL multi-region deployment option, which moves capacity scheduling off the inference hot path so a single deployment can draw GPU capacity from multiple regions/clouds instead of being capped by one region's node pool; a 7-day production study reported request success rising from 99.269% (single-region) to 99.992% (multi-region).
 - **2026-09-28** — [Introducing FireRouter with Opus](<optimization/Introducing FireRouter with Opus.md>) · `optimization` · fireworks

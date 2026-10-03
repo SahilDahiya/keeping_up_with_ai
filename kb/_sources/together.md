@@ -1,6 +1,6 @@
 # together
 
-95 articles.
+96 articles.
 
 - **2026-09-23** — [How to train your own Jev for $17](<../models/fine-tuning/How to train your own Jev for $17.md>) · `fine-tuning` · together
   Together shows how to fine-tune your own Jev-style structured classifier for about $17 using the open-source tev1 repo, demonstrated by training together/Tev1-4B-experimental on Qwen3.5 4B and deploying it as a serverless API endpoint.
@@ -76,6 +76,8 @@
   Covers FlashAttention-4 algorithm and kernel co-design for asymmetric hardware scaling.
 - **2026-03-04** — [Cache-aware prefill-decode disaggregation for long-context LLM serving](<../inference/serving/Cache-aware prefill-decode disaggregation for long-context LLM serving.md>) · `serving` · together
   Explains cache-aware prefill/decode disaggregation for faster long-context LLM serving.
+- **2026-02-25** — [CoderForge-Preview: SOTA open dataset for training efficient coding agents](<../models/fine-tuning/CoderForge-Preview SOTA open dataset for training efficient coding agents.md>) · `fine-tuning` · together
+  Together AI releases CoderForge-Preview, 258K test-verified coding-agent trajectories (155K pass/103K fail across 51K tasks, 1,655 repos) generated with Qwen3-Coder-480B via the OpenHands scaffold (bash exec, str_replace_editor, think, finish tools); SFT fine-tuning Qwen-3 32B on the data lifts SWE-Bench Verified to 59.4% pass@1 (78.56% pass@16), #1 among open-data models ≤32B.
 - **2026-02-24** — [Optimizing Training Workloads for GPU Clusters](<../infra-platform/gpu-clusters/Optimizing Training Workloads for GPU Clusters.md>) · `gpu-clusters` · together
   Covers optimization patterns for training workloads on GPU clusters.
 - **2026-02-23** — [How speech models fail where it matters the most and what to do about it](<../models/multimodal/How speech models fail where it matters the most and what to do about it.md>) · `multimodal` · together

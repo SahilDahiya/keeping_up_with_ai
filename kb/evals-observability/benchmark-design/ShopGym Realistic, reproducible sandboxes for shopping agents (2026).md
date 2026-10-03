@@ -1,10 +1,16 @@
 ---
 title: 'ShopGym: Realistic, reproducible sandboxes for shopping agents (2026)'
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: evals-observability
+subtopic: benchmark-design
+secondary_topics:
+- agents/tool-use
+summary: Shopify's ShopGym turns live storefronts into anonymized, resettable sandbox
+  shops (via multi-agent ShopArena, with execution-verification loops and a browser-based
+  visual-verification agent) and auto-generates shopping tasks across seven skill
+  categories via ShopGuru; validated on 224 tasks across six sandbox shops, showing
+  synthetic-shop agent performance correlates with performance on the live stores
+  they mirror.
 triage: null
 skip_reason: null
 source: shopify
@@ -12,7 +18,7 @@ url: https://shopify.engineering/shopgym
 author: Mingyu Zhao
 published: '2026-10-01'
 fetched: '2026-10-03T06:18:21Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1280
 content_sha256: 68ce981aeccfb429b3185402f895b345668010b9ca9be1590988c15c668e66b7

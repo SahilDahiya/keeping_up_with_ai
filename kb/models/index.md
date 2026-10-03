@@ -1,6 +1,6 @@
 # models
 
-204 articles.
+205 articles.
 
 - **2026-09-30** — [Reinforcement learning: Why alignment of numerics and MoE routing matter](<reinforcement-learning/Reinforcement learning Why alignment of numerics and MoE routing matter.md>) · `reinforcement-learning` · fireworks
   Fireworks traces RL training instability to numerical mismatches between trainer and rollout engines: a GLM 5.2 run's reward collapsed from 0.9 to under 0.2 around step 20 without alignment (zero-KL and stable reward with it), and a Qwen3.5-MoE run diverged by k3=0.296 (300x their 0.001-equivalence threshold) due to precision differences in combining expert outputs.
@@ -160,6 +160,8 @@
   Surveys DeepSeek model variants with production caveats around serving, reasoning behavior, and deployment tradeoffs.
 - **2026-02-25** — [The generative recommender behind Shopify's commerce engine (2026)](<architectures/The generative recommender behind Shopify's commerce engine (2026).md>) · `architectures` · shopify
   Shopify's generative recommender treats a buyer's cross-storefront event history as a sequence and predicts the next action, a sequence-modeling approach to commerce recommendations over months-long journeys.
+- **2026-02-25** — [CoderForge-Preview: SOTA open dataset for training efficient coding agents](<fine-tuning/CoderForge-Preview SOTA open dataset for training efficient coding agents.md>) · `fine-tuning` · together
+  Together AI releases CoderForge-Preview, 258K test-verified coding-agent trajectories (155K pass/103K fail across 51K tasks, 1,655 repos) generated with Qwen3-Coder-480B via the OpenHands scaffold (bash exec, str_replace_editor, think, finish tools); SFT fine-tuning Qwen-3 32B on the data lifts SWE-Bench Verified to 59.4% pass@1 (78.56% pass@16), #1 among open-data models ≤32B.
 - **2026-02-23** — [How speech models fail where it matters the most and what to do about it](<multimodal/How speech models fail where it matters the most and what to do about it.md>) · `multimodal` · together
   Analyzes speech model failure modes that matter for production applications.
 - **2026-02-10** — [Creating a Natural-Sounding Text-to-Speech Voice](<multimodal/Creating a Natural-Sounding Text-to-Speech Voice.md>) · `multimodal` · cresta

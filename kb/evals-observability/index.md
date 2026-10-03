@@ -1,7 +1,9 @@
 # evals-observability
 
-122 articles.
+123 articles.
 
+- **2026-10-01** — [ShopGym: Realistic, reproducible sandboxes for shopping agents (2026)](<benchmark-design/ShopGym Realistic, reproducible sandboxes for shopping agents (2026).md>) · `benchmark-design` · shopify
+  Shopify's ShopGym turns live storefronts into anonymized, resettable sandbox shops (via multi-agent ShopArena, with execution-verification loops and a browser-based visual-verification agent) and auto-generates shopping tasks across seven skill categories via ShopGuru; validated on 224 tasks across six sandbox shops, showing synthetic-shop agent performance correlates with performance on the live stores they mirror.
 - **2026-10-01** — [AI agent observability: the production layer you need](<tracing/AI agent observability the production layer you need.md>) · `tracing` · pydantic
   Argues agent observability needs five things beyond traditional APM or LLM-only tracing: agentic-loop spans, one correlated full-stack trace, per-step cost/latency, session correlation across multi-agent handoffs, and an OpenTelemetry-based foundation (citing OTel's new GenAI semantic conventions); demos with Pydantic Logfire instrumented at the entry point with no agent-code changes.
 - **2026-09-30** — [Open TTS Leaderboard: Scalable Evaluation for Multilingual Text-to-Speech and Voice Cloning](<benchmark-design/Open TTS Leaderboard Scalable Evaluation for Multilingual Text-to-Speech and Voice Cloning.md>) · `benchmark-design` · huggingface

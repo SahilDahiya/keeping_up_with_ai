@@ -1,7 +1,9 @@
 # shopify
 
-19 articles.
+20 articles.
 
+- **2026-10-01** — [ShopGym: Realistic, reproducible sandboxes for shopping agents (2026)](<../evals-observability/benchmark-design/ShopGym Realistic, reproducible sandboxes for shopping agents (2026).md>) · `benchmark-design` · shopify
+  Shopify's ShopGym turns live storefronts into anonymized, resettable sandbox shops (via multi-agent ShopArena, with execution-verification loops and a browser-based visual-verification agent) and auto-generates shopping tasks across seven skill categories via ShopGuru; validated on 224 tasks across six sandbox shops, showing synthetic-shop agent performance correlates with performance on the live stores they mirror.
 - **2026-09-02** — [How River takes security work from a fix to merge (2026)](<../product-engineering/security/How River takes security work from a fix to merge (2026).md>) · `security` · shopify
   Describes River, Shopify's Slack-based AI agent that runs dependency and application vulnerability remediation end-to-end—validating its work ledger against live repo/PR/tracker state, updating patches, and re-checking HEAD before closing—cutting the dependency backlog ~70% in 11 days and raising freshness-gated security merges from ~10% to 80%.
 - **2026-08-19** — [Gisting: Compressing LLM Agent context to ↑ throughput and ↓ cost (2026)](<../inference/optimization/Gisting Compressing LLM Agent context to ↑ throughput and ↓ cost (2026).md>) · `optimization` · shopify

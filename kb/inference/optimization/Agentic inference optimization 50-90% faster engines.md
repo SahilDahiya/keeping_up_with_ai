@@ -1,10 +1,15 @@
 ---
 title: 'Agentic inference optimization: 50-90% faster engines'
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: inference
+subtopic: optimization
+secondary_topics:
+- agents/harness
+summary: Baseten let Claude Code (Fable 5) run ~1 week autonomously under the MetaInfer
+  framework to generate a custom inference engine (VibeQwen) for Qwen-3.6-35B-A3B
+  NVFP4 on a B200, beating a tuned vLLM 0.25.1 by 90% single-stream decode TPS and
+  2.3x faster TTFT; a second agent-built engine (Sammie) for SAM 3.1 hit 91 img/s,
+  50% faster than Meta's reference server.
 triage: null
 skip_reason: null
 source: baseten
@@ -12,7 +17,7 @@ url: https://www.baseten.co/blog/agentic-inference-optimization-faster-than-sota
 author: Shawn Rushefsky
 published: '2026-10-02'
 fetched: '2026-10-03T06:12:29Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 2013
 content_sha256: 4da3ca611abf9dd4f9e1324ad665e844e0c6c183f29950e407a49bd8a1520c8f

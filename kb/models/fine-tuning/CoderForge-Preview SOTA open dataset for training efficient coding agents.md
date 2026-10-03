@@ -1,10 +1,15 @@
 ---
 title: 'CoderForge-Preview: SOTA open dataset for training efficient coding agents'
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: models
+subtopic: fine-tuning
+secondary_topics:
+- agents/tool-use
+summary: 'Together AI releases CoderForge-Preview, 258K test-verified coding-agent
+  trajectories (155K pass/103K fail across 51K tasks, 1,655 repos) generated with
+  Qwen3-Coder-480B via the OpenHands scaffold (bash exec, str_replace_editor, think,
+  finish tools); SFT fine-tuning Qwen-3 32B on the data lifts SWE-Bench Verified to
+  59.4% pass@1 (78.56% pass@16), #1 among open-data models ≤32B.'
 triage: null
 skip_reason: null
 source: together
@@ -15,7 +20,7 @@ author: Alpay Ariyak; Junda Zhang; Junxiong Wang; Shang Zhu; Federico Bianchi; S
   Qingyang Wu Project Core Leads
 published: '2026-02-25'
 fetched: '2026-10-03T06:12:36Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 3377
 content_sha256: 224b538a61257021035a76763cfeb7c3a8149376250a751409f6f698b386d8ae

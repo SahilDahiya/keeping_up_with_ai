@@ -221,6 +221,10 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-10-02** — [Agentic inference optimization: 50-90% faster engines](<../inference/optimization/Agentic inference optimization 50-90% faster engines.md>) · `optimization` · baseten
+  Baseten let Claude Code (Fable 5) run ~1 week autonomously under the MetaInfer framework to generate a custom inference engine (VibeQwen) for Qwen-3.6-35B-A3B NVFP4 on a B200, beating a tuned vLLM 0.25.1 by 90% single-stream decode TPS and 2.3x faster TTFT; a second agent-built engine (Sammie) for SAM 3.1 hit 91 img/s, 50% faster than Meta's reference server.
+- **2026-10-01** — [ShopGym: Realistic, reproducible sandboxes for shopping agents (2026)](<../evals-observability/benchmark-design/ShopGym Realistic, reproducible sandboxes for shopping agents (2026).md>) · `benchmark-design` · shopify
+  Shopify's ShopGym turns live storefronts into anonymized, resettable sandbox shops (via multi-agent ShopArena, with execution-verification loops and a browser-based visual-verification agent) and auto-generates shopping tasks across seven skill categories via ShopGuru; validated on 224 tasks across six sandbox shops, showing synthetic-shop agent performance correlates with performance on the live stores they mirror.
 - **2026-10-01** — [AI agent observability: the production layer you need](<../evals-observability/tracing/AI agent observability the production layer you need.md>) · `tracing` · pydantic
   Argues agent observability needs five things beyond traditional APM or LLM-only tracing: agentic-loop spans, one correlated full-stack trace, per-step cost/latency, session correlation across multi-agent handoffs, and an OpenTelemetry-based foundation (citing OTel's new GenAI semantic conventions); demos with Pydantic Logfire instrumented at the entry point with no agent-code changes.
 - **2026-10-01** — [VM Sandboxes: Full computers for agents | Modal Blog](<../infra-platform/deployment/VM Sandboxes Full computers for agents Modal Blog.md>) · `deployment` · modal
@@ -355,6 +359,8 @@
   2026 coding-model roundup comparing GPT-5.5, Claude Opus 4.7, Kimi K2.6, DeepSeek V4-Pro/Flash, gpt-oss-120B and others on AA Coding Index, SWE-Bench Verified, context window, price, and license, with guidance on open vs closed model tradeoffs for production coding workloads.
 - **2026-02-27** — [2,000 robots walk into a shop: Simulated A/B testing (2026)](<../evals-observability/testing/2,000 robots walk into a shop Simulated AB testing (2026).md>) · `testing` · shopify
   SimGym: Shopify's simulated A/B testing environment where thousands of LLM-driven shopper agents exercise storefronts, letting teams test changes against synthetic-but-realistic buyer behavior before real traffic.
+- **2026-02-25** — [CoderForge-Preview: SOTA open dataset for training efficient coding agents](<../models/fine-tuning/CoderForge-Preview SOTA open dataset for training efficient coding agents.md>) · `fine-tuning` · together
+  Together AI releases CoderForge-Preview, 258K test-verified coding-agent trajectories (155K pass/103K fail across 51K tasks, 1,655 repos) generated with Qwen3-Coder-480B via the OpenHands scaffold (bash exec, str_replace_editor, think, finish tools); SFT fine-tuning Qwen-3 32B on the data lifts SWE-Bench Verified to 59.4% pass@1 (78.56% pass@16), #1 among open-data models ≤32B.
 - **2026-02-23** — [Directory Snapshots: Resumable project state for Sandboxes](<../infra-platform/deployment/Directory Snapshots Resumable project state for Sandboxes.md>) · `deployment` · modal
   Introduces directory snapshots for sandbox state, enabling resumable project files across agent and remote-execution sessions.
 - **2026-02-10** — [Creating a Natural-Sounding Text-to-Speech Voice](<../models/multimodal/Creating a Natural-Sounding Text-to-Speech Voice.md>) · `multimodal` · cresta
