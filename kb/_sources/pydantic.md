@@ -1,7 +1,9 @@
 # pydantic
 
-48 articles.
+49 articles.
 
+- **2026-10-05** — [Pydantic AI vs Claude Agent SDK: Who owns the agent?](<../agents/harness/Pydantic AI vs Claude Agent SDK Who owns the agent.md>) · `harness` · pydantic
+  Contrasts Claude Agent SDK, which wraps a Claude Code subprocess with its own shell/file tools/skills/agent loop and an unpublished system prompt that can change on upgrade, against Pydantic AI's compose-your-own-harness model (capabilities like LocalWorkspace/ModalSandbox/Coder added one at a time), and argues the latter suits apps that aren't themselves coding agents.
 - **2026-10-01** — [AI agent observability: the production layer you need](<../evals-observability/tracing/AI agent observability the production layer you need.md>) · `tracing` · pydantic
   Argues agent observability needs five things beyond traditional APM or LLM-only tracing: agentic-loop spans, one correlated full-stack trace, per-step cost/latency, session correlation across multi-agent handoffs, and an OpenTelemetry-based foundation (citing OTel's new GenAI semantic conventions); demos with Pydantic Logfire instrumented at the entry point with no agent-code changes.
 - **2026-09-30** — [Debug production from Cursor with the Logfire MCP server](<../evals-observability/tracing/Debug production from Cursor with the Logfire MCP server.md>) · `tracing` · pydantic

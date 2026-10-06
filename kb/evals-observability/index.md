@@ -251,6 +251,10 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-10-05** — [Pydantic AI vs Claude Agent SDK: Who owns the agent?](<../agents/harness/Pydantic AI vs Claude Agent SDK Who owns the agent.md>) · `harness` · pydantic
+  Contrasts Claude Agent SDK, which wraps a Claude Code subprocess with its own shell/file tools/skills/agent loop and an unpublished system prompt that can change on upgrade, against Pydantic AI's compose-your-own-harness model (capabilities like LocalWorkspace/ModalSandbox/Coder added one at a time), and argues the latter suits apps that aren't themselves coding agents.
+- **2026-09-28** — [Welcome RL Environments to the hub](<../models/reinforcement-learning/Welcome RL Environments to the hub.md>) · `reinforcement-learning` · huggingface
+  Hugging Face ships an `rl-environment` dataset tag and filter so RL training/eval environments (tasksets + runtimes) can be hosted on the Hub and loaded by any compatible framework, rather than siloed in per-framework registries; shows the same terminal-bench-2.1 taskset run via Harbor, verifiers v1, and OpenEnv.
 - **2026-09-23** — [How to train your own Jev for $17](<../models/fine-tuning/How to train your own Jev for $17.md>) · `fine-tuning` · together
   Together shows how to fine-tune your own Jev-style structured classifier for about $17 using the open-source tev1 repo, demonstrated by training together/Tev1-4B-experimental on Qwen3.5 4B and deploying it as a serverless API endpoint.
 - **2026-09-22** — [Canary rollouts: upgrade models in production without downtime](<../infra-platform/deployment/Canary rollouts upgrade models in production without downtime.md>) · `deployment` · together

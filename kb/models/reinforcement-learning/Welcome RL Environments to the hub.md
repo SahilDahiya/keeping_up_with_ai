@@ -1,10 +1,15 @@
 ---
 title: Welcome RL Environments to the hub
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: models
+subtopic: reinforcement-learning
+secondary_topics:
+- agents/tool-use
+- evals-observability/benchmark-design
+summary: Hugging Face ships an `rl-environment` dataset tag and filter so RL training/eval
+  environments (tasksets + runtimes) can be hosted on the Hub and loaded by any compatible
+  framework, rather than siloed in per-framework registries; shows the same terminal-bench-2.1
+  taskset run via Harbor, verifiers v1, and OpenEnv.
 triage: null
 skip_reason: null
 source: huggingface
@@ -13,7 +18,7 @@ author: Ben Burtenshaw; Adithya S K; Florian; Ryan Marten; Merve; Quentin Lhoest
   Julien Chaumond
 published: '2026-09-28'
 fetched: '2026-10-06T06:16:29Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1421
 content_sha256: 904e8dbd7cf6188eaee58299decce987f30d70e0583eaeeb28b0af8321e74d0f

@@ -1,10 +1,16 @@
 ---
 title: 'Pydantic AI vs Claude Agent SDK: Who owns the agent?'
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: agents
+subtopic: harness
+secondary_topics:
+- evals-observability/evaluation
+- evals-observability/tracing
+summary: Contrasts Claude Agent SDK, which wraps a Claude Code subprocess with its
+  own shell/file tools/skills/agent loop and an unpublished system prompt that can
+  change on upgrade, against Pydantic AI's compose-your-own-harness model (capabilities
+  like LocalWorkspace/ModalSandbox/Coder added one at a time), and argues the latter
+  suits apps that aren't themselves coding agents.
 triage: null
 skip_reason: null
 source: pydantic
@@ -12,7 +18,7 @@ url: https://pydantic.dev/articles/pydantic-ai-vs-claude-agent-sdk
 author: Aditya Vardhan
 published: '2026-10-05'
 fetched: '2026-10-06T06:16:35Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1464
 content_sha256: a085cd94ab3a0f91df2031bb4e0dd46fc45d2f47392063cb4fb404df19b4f5d9

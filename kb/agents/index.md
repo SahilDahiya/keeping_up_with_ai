@@ -1,7 +1,9 @@
 # agents
 
-108 articles.
+109 articles.
 
+- **2026-10-05** — [Pydantic AI vs Claude Agent SDK: Who owns the agent?](<harness/Pydantic AI vs Claude Agent SDK Who owns the agent.md>) · `harness` · pydantic
+  Contrasts Claude Agent SDK, which wraps a Claude Code subprocess with its own shell/file tools/skills/agent loop and an unpublished system prompt that can change on upgrade, against Pydantic AI's compose-your-own-harness model (capabilities like LocalWorkspace/ModalSandbox/Coder added one at a time), and argues the latter suits apps that aren't themselves coding agents.
 - **2026-09-28** — [Securing the open frontier with NVIDIA OpenShell and Blaxel sandboxes](<harness/Securing the open frontier with NVIDIA OpenShell and Blaxel sandboxes.md>) · `harness` · baseten
   Baseten's Blaxel introduces Carbon, a fourth-generation microVM sandbox for agent execution: every sandbox gets its own dedicated IPv6 address, adds kernel capabilities for runtime policy enforcement (integrating with NVIDIA's OpenShell), and supports manual snapshotting and forking so a quarantined agent can be rolled back to its last known-good state within milliseconds.
 - **2026-09-16** — [Introducing Baseten Hosted Tools](<harness/Introducing Baseten Hosted Tools.md>) · `harness` · baseten
@@ -233,6 +235,8 @@
   Modal introduces Sidecars, isolated containers running alongside a main Sandbox on the same host to separate trusted harness/credential logic from untrusted agent-generated code without the network-call latency of separate Sandboxes, claiming 3x faster cross-boundary communication.
 - **2026-09-30** — [Debug production from Cursor with the Logfire MCP server](<../evals-observability/tracing/Debug production from Cursor with the Logfire MCP server.md>) · `tracing` · pydantic
   Pydantic's hosted Logfire MCP server exposes OpenTelemetry traces, logs, and metrics (51 tools total, with the SQL-based query_run accounting for over 99% of calls) to coding agents in Cursor, Claude Code, and Codex, letting them query production trace data directly during debugging instead of guessing from source code alone.
+- **2026-09-28** — [Welcome RL Environments to the hub](<../models/reinforcement-learning/Welcome RL Environments to the hub.md>) · `reinforcement-learning` · huggingface
+  Hugging Face ships an `rl-environment` dataset tag and filter so RL training/eval environments (tasksets + runtimes) can be hosted on the Hub and loaded by any compatible framework, rather than siloed in per-framework registries; shows the same terminal-bench-2.1 taskset run via Harbor, verifiers v1, and OpenEnv.
 - **2026-09-25** — [Part II: Replacing FinServ IVRs with an AI Agent: Where the Compounding Happens](<../product-engineering/case-studies/Part II Replacing FinServ IVRs with an AI Agent Where the Compounding Happens.md>) · `case-studies` · cresta
   Case study on scaling an AI agent that replaced FinServ IVR call handling: warns that per-agent Average Handle Time rises as the AI automates easy balance/payment calls, leaving only hard cases for humans, so the real success metric is total human minutes handled and containment volume; also covers staffing around billing-cycle-driven call spikes (e.g. a Saturday cycle close compressing into a Monday surge).
 - **2026-09-23** — [Bringing my LED display to life with GPT-Live-1 and Codex | OpenAI Developers](<../product-engineering/case-studies/Bringing my LED display to life with GPT-Live-1 and Codex OpenAI Developers.md>) · `case-studies` · openai-devs
