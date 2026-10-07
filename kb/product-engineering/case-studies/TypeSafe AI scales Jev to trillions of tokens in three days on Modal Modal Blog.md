@@ -2,10 +2,16 @@
 title: TypeSafe AI scales Jev to trillions of tokens in three days on Modal | Modal
   Blog
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: product-engineering
+subtopic: case-studies
+secondary_topics:
+- models/architectures
+- infra-platform/deployment
+summary: TypeSafe AI's Jev, a non-autoregressive "System One Model" trained with Reinforcement
+  Learning for Calibrated Decisions (RLCD), outputs typed structured values with probabilities
+  instead of generating text; Modal's serverless infra scaled it to over a trillion
+  tokens in three days after launch, topping OpenRouter's 1K-10K token leaderboard
+  at 15.1% share.
 triage: null
 skip_reason: null
 source: modal
@@ -13,7 +19,7 @@ url: https://modal.com/blog/typesafeai-case-study
 author: null
 published: '2026-10-05'
 fetched: '2026-10-07T06:10:08Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 553
 content_sha256: e27c8e8e58c33f5b40b3ff96b05c6cb9b04d066183f12b6ec60c46534450fd60

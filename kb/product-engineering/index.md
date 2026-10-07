@@ -1,7 +1,9 @@
 # product-engineering
 
-66 articles.
+67 articles.
 
+- **2026-10-05** — [TypeSafe AI scales Jev to trillions of tokens in three days on Modal | Modal Blog](<case-studies/TypeSafe AI scales Jev to trillions of tokens in three days on Modal Modal Blog.md>) · `case-studies` · modal
+  TypeSafe AI's Jev, a non-autoregressive "System One Model" trained with Reinforcement Learning for Calibrated Decisions (RLCD), outputs typed structured values with probabilities instead of generating text; Modal's serverless infra scaled it to over a trillion tokens in three days after launch, topping OpenRouter's 1K-10K token leaderboard at 15.1% share.
 - **2026-10-01** — [Sidecars: A low-latency trust boundary for Sandboxes | Modal Blog](<security/Sidecars A low-latency trust boundary for Sandboxes Modal Blog.md>) · `security` · modal
   Modal introduces Sidecars, isolated containers running alongside a main Sandbox on the same host to separate trusted harness/credential logic from untrusted agent-generated code without the network-call latency of separate Sandboxes, claiming 3x faster cross-boundary communication.
 - **2026-09-25** — [Part II: Replacing FinServ IVRs with an AI Agent: Where the Compounding Happens](<case-studies/Part II Replacing FinServ IVRs with an AI Agent Where the Compounding Happens.md>) · `case-studies` · cresta
@@ -137,6 +139,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-10-06** — [Introducing Personal Agent Protocol](<../agents/tool-use/Introducing Personal Agent Protocol.md>) · `tool-use` · sierra
+  Sierra and Meta's Personal Agent Protocol is an OAuth-based open standard letting personal agents discover and authenticate with businesses, carrying a session across a company's website, APIs (MCP/OpenAPI), or its own agent, with consumers controlling read vs. write access.
 - **2026-10-01** — [VM Sandboxes: Full computers for agents | Modal Blog](<../infra-platform/deployment/VM Sandboxes Full computers for agents Modal Blog.md>) · `deployment` · modal
   Modal ships VM Sandboxes, a Cloud Hypervisor-based runtime giving agents a full Linux VM (Docker-in-Docker, kernel access) while keeping the existing Sandbox API and sub-second cold starts; covers customer use at Linear (cgroups/network namespaces for Coding Sessions) after 20M+ VMs launched in early access.
 - **2026-09-28** — [Securing the open frontier with NVIDIA OpenShell and Blaxel sandboxes](<../agents/harness/Securing the open frontier with NVIDIA OpenShell and Blaxel sandboxes.md>) · `harness` · baseten

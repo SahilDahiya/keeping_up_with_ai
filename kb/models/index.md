@@ -417,6 +417,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-10-05** — [TypeSafe AI scales Jev to trillions of tokens in three days on Modal | Modal Blog](<../product-engineering/case-studies/TypeSafe AI scales Jev to trillions of tokens in three days on Modal Modal Blog.md>) · `case-studies` · modal
+  TypeSafe AI's Jev, a non-autoregressive "System One Model" trained with Reinforcement Learning for Calibrated Decisions (RLCD), outputs typed structured values with probabilities instead of generating text; Modal's serverless infra scaled it to over a trillion tokens in three days after launch, topping OpenRouter's 1K-10K token leaderboard at 15.1% share.
 - **2026-09-30** — [Open TTS Leaderboard: Scalable Evaluation for Multilingual Text-to-Speech and Voice Cloning](<../evals-observability/benchmark-design/Open TTS Leaderboard Scalable Evaluation for Multilingual Text-to-Speech and Voice Cloning.md>) · `benchmark-design` · huggingface
   Hugging Face's Open TTS Leaderboard replaces slow arena-style voting with objective metrics (WER/CER via Qwen3 ASR, RTFx/TTFA speed on H200, WavLM speaker-similarity cosine scores) to rank TTS models like Kokoro-82M, Supertonic-3, and Fun-CosyVoice3 in hours instead of the weeks arenas take, while keeping a 'Listen' tab for human comparison.
 - **2026-09-23** — [How to serve trillions of tokens for trillion-parameter coding agents | Modal Blog](<../inference/optimization/How to serve trillions of tokens for trillion-parameter coding agents Modal Blog.md>) · `optimization` · modal

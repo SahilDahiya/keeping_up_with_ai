@@ -1,7 +1,9 @@
 # modal
 
-42 articles.
+43 articles.
 
+- **2026-10-05** — [TypeSafe AI scales Jev to trillions of tokens in three days on Modal | Modal Blog](<../product-engineering/case-studies/TypeSafe AI scales Jev to trillions of tokens in three days on Modal Modal Blog.md>) · `case-studies` · modal
+  TypeSafe AI's Jev, a non-autoregressive "System One Model" trained with Reinforcement Learning for Calibrated Decisions (RLCD), outputs typed structured values with probabilities instead of generating text; Modal's serverless infra scaled it to over a trillion tokens in three days after launch, topping OpenRouter's 1K-10K token leaderboard at 15.1% share.
 - **2026-10-01** — [VM Sandboxes: Full computers for agents | Modal Blog](<../infra-platform/deployment/VM Sandboxes Full computers for agents Modal Blog.md>) · `deployment` · modal
   Modal ships VM Sandboxes, a Cloud Hypervisor-based runtime giving agents a full Linux VM (Docker-in-Docker, kernel access) while keeping the existing Sandbox API and sub-second cold starts; covers customer use at Linear (cgroups/network namespaces for Coding Sessions) after 20M+ VMs launched in early access.
 - **2026-10-01** — [Modal Clusters are generally available](<../infra-platform/gpu-clusters/Modal Clusters are generally available.md>) · `gpu-clusters` · modal

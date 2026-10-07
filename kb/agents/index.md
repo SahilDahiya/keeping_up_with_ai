@@ -1,7 +1,9 @@
 # agents
 
-109 articles.
+110 articles.
 
+- **2026-10-06** — [Introducing Personal Agent Protocol](<tool-use/Introducing Personal Agent Protocol.md>) · `tool-use` · sierra
+  Sierra and Meta's Personal Agent Protocol is an OAuth-based open standard letting personal agents discover and authenticate with businesses, carrying a session across a company's website, APIs (MCP/OpenAPI), or its own agent, with consumers controlling read vs. write access.
 - **2026-10-05** — [Pydantic AI vs Claude Agent SDK: Who owns the agent?](<harness/Pydantic AI vs Claude Agent SDK Who owns the agent.md>) · `harness` · pydantic
   Contrasts Claude Agent SDK, which wraps a Claude Code subprocess with its own shell/file tools/skills/agent loop and an unpublished system prompt that can change on upgrade, against Pydantic AI's compose-your-own-harness model (capabilities like LocalWorkspace/ModalSandbox/Coder added one at a time), and argues the latter suits apps that aren't themselves coding agents.
 - **2026-09-28** — [Securing the open frontier with NVIDIA OpenShell and Blaxel sandboxes](<harness/Securing the open frontier with NVIDIA OpenShell and Blaxel sandboxes.md>) · `harness` · baseten

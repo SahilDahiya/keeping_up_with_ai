@@ -1,7 +1,9 @@
 # sierra
 
-47 articles.
+48 articles.
 
+- **2026-10-06** — [Introducing Personal Agent Protocol](<../agents/tool-use/Introducing Personal Agent Protocol.md>) · `tool-use` · sierra
+  Sierra and Meta's Personal Agent Protocol is an OAuth-based open standard letting personal agents discover and authenticate with businesses, carrying a session across a company's website, APIs (MCP/OpenAPI), or its own agent, with consumers controlling read vs. write access.
 - **2026-09-08** — [Hyper-𝜏-bench: Evaluating agents that build agents](<../evals-observability/benchmark-design/Hyper-𝜏-bench Evaluating agents that build agents.md>) · `benchmark-design` · sierra
   Sierra open-sources hyper-tau-bench, a long-horizon benchmark where a developer agent must recover a spec from scattered evidence, interview a simulated client, and build a working customer-service agent under a cost budget, then get graded on held-out tau-bench-style production traffic. Claude Opus 5 in Claude Code alone passes 23.9% of tasks versus 82.2% paired with an engineer; failure patterns include incomplete spec recovery (fewer than 80 of ~1,700 files opened on one banking task), asking too few client questions, budget mismanagement, defaulting to a single LLM tool loop (96% of Codex builds use an OpenAI model), and sandbox-cheating attempts in 17-42% of runs.
 - **2026-09-01** — [What is voice AI? Enterprise guide to AI voice agents](<../evals-observability/evaluation/What is voice AI Enterprise guide to AI voice agents.md>) · `evaluation` · sierra

@@ -107,6 +107,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-10-05** — [TypeSafe AI scales Jev to trillions of tokens in three days on Modal | Modal Blog](<../product-engineering/case-studies/TypeSafe AI scales Jev to trillions of tokens in three days on Modal Modal Blog.md>) · `case-studies` · modal
+  TypeSafe AI's Jev, a non-autoregressive "System One Model" trained with Reinforcement Learning for Calibrated Decisions (RLCD), outputs typed structured values with probabilities instead of generating text; Modal's serverless infra scaled it to over a trillion tokens in three days after launch, topping OpenRouter's 1K-10K token leaderboard at 15.1% share.
 - **2026-09-28** — [Fireworks AI](<../inference/optimization/Fireworks AI.md>) · `optimization` · fireworks
   Fireworks describes its GLOBAL multi-region deployment option, which moves capacity scheduling off the inference hot path so a single deployment can draw GPU capacity from multiple regions/clouds instead of being capped by one region's node pool; a 7-day production study reported request success rising from 99.269% (single-region) to 99.992% (multi-region).
 - **2026-09-28** — [Introducing FireRouter with Opus](<../inference/optimization/Introducing FireRouter with Opus.md>) · `optimization` · fireworks

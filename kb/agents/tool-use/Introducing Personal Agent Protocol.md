@@ -1,10 +1,14 @@
 ---
 title: Introducing Personal Agent Protocol
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: agents
+subtopic: tool-use
+secondary_topics:
+- product-engineering/architecture
+summary: Sierra and Meta's Personal Agent Protocol is an OAuth-based open standard
+  letting personal agents discover and authenticate with businesses, carrying a session
+  across a company's website, APIs (MCP/OpenAPI), or its own agent, with consumers
+  controlling read vs. write access.
 triage: null
 skip_reason: null
 source: sierra
@@ -12,7 +16,7 @@ url: https://sierra.ai/blog/introducing-personal-agent-protocol
 author: Bret Taylor; Clay Bavor
 published: '2026-10-06'
 fetched: '2026-10-07T06:09:53Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 991
 content_sha256: e245aaee59fc925525b2052cfbe7e5381d3c312b36d215ab91f02206a4b1ae19
