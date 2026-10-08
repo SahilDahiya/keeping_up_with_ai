@@ -1,7 +1,9 @@
 # sierra
 
-48 articles.
+49 articles.
 
+- **2026-10-07** — [Caller ID in the age of agents](<../product-engineering/security/Caller ID in the age of agents.md>) · `security` · sierra
+  Sierra launches fleming-1, a model that analyzes live call audio in real time to flag when the caller on a Sierra-built voice agent's line is itself an AI agent, complementing its newly announced Personal Agent Protocol for agent-to-business authentication.
 - **2026-10-06** — [Introducing Personal Agent Protocol](<../agents/tool-use/Introducing Personal Agent Protocol.md>) · `tool-use` · sierra
   Sierra and Meta's Personal Agent Protocol is an OAuth-based open standard letting personal agents discover and authenticate with businesses, carrying a session across a company's website, APIs (MCP/OpenAPI), or its own agent, with consumers controlling read vs. write access.
 - **2026-09-08** — [Hyper-𝜏-bench: Evaluating agents that build agents](<../evals-observability/benchmark-design/Hyper-𝜏-bench Evaluating agents that build agents.md>) · `benchmark-design` · sierra

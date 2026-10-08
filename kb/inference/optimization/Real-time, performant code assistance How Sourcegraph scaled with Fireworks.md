@@ -1,10 +1,14 @@
 ---
 title: 'Real-time, performant code assistance: How Sourcegraph scaled with Fireworks'
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: inference
+subtopic: optimization
+secondary_topics:
+- product-engineering/case-studies
+summary: Sourcegraph cut code-completion latency 30% and raised acceptance rate from
+  15% to 40% by combining FlashAttention-2, n-gram speculative decoding with a trained
+  draft model, prompt speculation, and direct model routing across DeepSeek-Coder-V2
+  and StarCoder.
 triage: null
 skip_reason: null
 source: fireworks
@@ -12,7 +16,7 @@ url: https://fireworks.ai/blog/story-sourcegraph-code-generation
 author: null
 published: '2026-07-16'
 fetched: '2026-10-08T06:11:08Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1164
 content_sha256: 9acc20d05ec255c4289be1b4b258ddb75fae6ca6338770247ea1fafb2457e8bd

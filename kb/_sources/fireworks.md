@@ -1,6 +1,6 @@
 # fireworks
 
-108 articles.
+111 articles.
 
 - **2026-09-30** — [Reinforcement learning: Why alignment of numerics and MoE routing matter](<../models/reinforcement-learning/Reinforcement learning Why alignment of numerics and MoE routing matter.md>) · `reinforcement-learning` · fireworks
   Fireworks traces RL training instability to numerical mismatches between trainer and rollout engines: a GLM 5.2 run's reward collapsed from 0.9 to under 0.2 around step 20 without alignment (zero-KL and stable reward with it), and a Qwen3.5-MoE run diverged by k3=0.296 (300x their 0.001-equivalence threshold) due to precision differences in combining expert outputs.
@@ -44,6 +44,10 @@
   Demonstrates LoRA post-training of Kimi K3 via Fireworks Serverless Training on two RL tasks, Countdown and Frozen Lake, showing how dense partial-credit rewards produce fast smooth learning curves versus sparse goal-only rewards, with a small RL run (~20 steps, 860K tokens) costing about $65.
 - **2026-07-20** — [Heidi x Fireworks: Bridging the Gap in Frontier Model Performance](<../models/fine-tuning/Heidi x Fireworks Bridging the Gap in Frontier Model Performance.md>) · `fine-tuning` · fireworks
   Heidi's clinical-note scribe moved from closed frontier models to a two-stage pipeline (SFT to imitate style, then RFT/DPO for preference-based quality) on Fireworks, cutting latency from 25s to 7s and outperforming Gemini Flash/Pro tiers in side-by-side evals; success depended on high-quality filtered data and larger effective batch sizes.
+- **2026-07-16** — [How Upwork and Fireworks deliver faster, smarter proposals for freelancers](<../inference/optimization/How Upwork and Fireworks deliver faster, smarter proposals for freelancers.md>) · `optimization` · fireworks
+  Upwork's Uma assistant serves custom Llama-3.1 LoRA models for real-time freelancer proposal drafting, using FireAttention v2 for long-context handling and FireOptimizer's quantization plus adaptive speculative execution to cut latency roughly an order of magnitude versus off-the-shelf open-source serving.
+- **2026-07-16** — [Real-time, performant code assistance: How Sourcegraph scaled with Fireworks](<../inference/optimization/Real-time, performant code assistance How Sourcegraph scaled with Fireworks.md>) · `optimization` · fireworks
+  Sourcegraph cut code-completion latency 30% and raised acceptance rate from 15% to 40% by combining FlashAttention-2, n-gram speculative decoding with a trained draft model, prompt speculation, and direct model routing across DeepSeek-Coder-V2 and StarCoder.
 - **2026-07-10** — [Optimizing MiniMax M3 Sparse Attention on NVIDIA Blackwell](<../inference/kernels/Optimizing MiniMax M3 Sparse Attention on NVIDIA Blackwell.md>) · `kernels` · fireworks
   Deep dive into sparse-attention kernel optimization for MiniMax M3 on NVIDIA Blackwell hardware.
 - **2026-07-08** — [Best Open Source LLMs in 2026: We Reviewed 7 Models](<../models/benchmarks/Best Open Source LLMs in 2026 We Reviewed 7 Models.md>) · `benchmarks` · fireworks
@@ -164,6 +168,8 @@
   Details how Fireworks served Llama 4 Maverick within minutes of weight release using FireOptimizer-tuned FP8 quantization, tensor+expert parallelism, a custom FireAttention kernel extended for Maverick's chunked local attention, and a trained speculative-decoding drafter, reaching 145 tok/s on H200 (10-20% faster than the nearest competitor per Artificial Analysis).
 - **2025-04-09** — [Building Enterprise-Scale RAG Systems with Fireworks and MongoDB Atlas](<../rag-retrieval/pipelines/Building Enterprise-Scale RAG Systems with Fireworks and MongoDB Atlas.md>) · `pipelines` · fireworks
   Walks through an open-source enterprise RAG architecture combining Fireworks (inference plus Whisper V3 Turbo audio transcription) with MongoDB Atlas vector storage, covering multi-format document processing, chunking, batched embedding generation, and metadata-preserving retrieval over earnings calls and financial reports.
+- **2025-03-27** — [How Cresta drives millions of real-time, AI-powered contact center interactions with Fireworks](<../product-engineering/case-studies/How Cresta drives millions of real-time, AI-powered contact center interactions with Fireworks.md>) · `case-studies` · fireworks
+  Cresta serves its Ocean-1 contact-center model with hundreds of per-customer LoRA adapters on a single Fireworks-hosted base model, combining this with RAG for its Knowledge Assist product to beat GPT-4 on accuracy while cutting per-inference cost up to 100x.
 - **2025-03-12** — [Fine-Tuning DeepSeek v3 & R1 to optimize quality, latency, & cost](<../models/fine-tuning/Fine-Tuning DeepSeek v3 & R1 to optimize quality, latency, & cost.md>) · `fine-tuning` · fireworks
   Guide to fine-tuning DeepSeek V3 and R1 models while balancing quality, latency, and cost.
 - **2025-02-07** — [DeepSeek v3 and R1 Model Architecture: Why it's powerful and economical](<../models/reasoning/DeepSeek v3 and R1 Model Architecture Why it's powerful and economical.md>) · `reasoning` · fireworks

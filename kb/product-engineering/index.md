@@ -1,7 +1,9 @@
 # product-engineering
 
-67 articles.
+69 articles.
 
+- **2026-10-07** — [Caller ID in the age of agents](<security/Caller ID in the age of agents.md>) · `security` · sierra
+  Sierra launches fleming-1, a model that analyzes live call audio in real time to flag when the caller on a Sierra-built voice agent's line is itself an AI agent, complementing its newly announced Personal Agent Protocol for agent-to-business authentication.
 - **2026-10-05** — [TypeSafe AI scales Jev to trillions of tokens in three days on Modal | Modal Blog](<case-studies/TypeSafe AI scales Jev to trillions of tokens in three days on Modal Modal Blog.md>) · `case-studies` · modal
   TypeSafe AI's Jev, a non-autoregressive "System One Model" trained with Reinforcement Learning for Calibrated Decisions (RLCD), outputs typed structured values with probabilities instead of generating text; Modal's serverless infra scaled it to over a trillion tokens in three days after launch, topping OpenRouter's 1K-10K token leaderboard at 15.1% share.
 - **2026-10-01** — [Sidecars: A low-latency trust boundary for Sandboxes | Modal Blog](<security/Sidecars A low-latency trust boundary for Sandboxes Modal Blog.md>) · `security` · modal
@@ -104,6 +106,8 @@
   Frames AI agent defense around enterprise security, compliance, testing, and operational safeguards.
 - **2025-06-26** — [Claude Desktop Extensions: One-click MCP server installation for Claude Desktop](<ux-patterns/Claude Desktop Extensions One-click MCP server installation for Claude Desktop.md>) · `ux-patterns` · anthropic-engineering
   Introduces Desktop Extensions (.dxt): a packaging format for one-click installation of local MCP servers in Claude Desktop, with manifest spec and distribution details.
+- **2025-03-27** — [How Cresta drives millions of real-time, AI-powered contact center interactions with Fireworks](<case-studies/How Cresta drives millions of real-time, AI-powered contact center interactions with Fireworks.md>) · `case-studies` · fireworks
+  Cresta serves its Ocean-1 contact-center model with hundreds of per-customer LoRA adapters on a single Fireworks-hosted base model, combining this with RAG for its Knowledge Assist product to beat GPT-4 on accuracy while cutting per-inference cost up to 100x.
 - **2025-03-20** — [Build vs. Buy: How Cresta Engineered Its Own Customer Data Access Solution](<architecture/Build vs. Buy How Cresta Engineered Its Own Customer Data Access Solution.md>) · `architecture` · cresta
   Engineering case study on building a customer data access layer, useful for understanding integration tradeoffs in enterprise AI products.
 - **2025-03-18** — [Our Own Zero to One: Lessons Learned in Building The Brinks Home AI Agent](<case-studies/Our Own Zero to One Lessons Learned in Building The Brinks Home AI Agent.md>) · `case-studies` · cresta
@@ -159,6 +163,10 @@
   NVIDIA's NOOA reframes an agent as a plain Python object: methods are the actions the model can take, fields are its state, docstrings are prompts, and type annotations are contracts — a method whose body is `...` becomes an LLM-driven agentic loop while normal method bodies stay deterministic Python, so agent behavior can be tested, traced, refactored, and versioned like ordinary software. Argues (inspired by PyTorch's "powerful runtime, simple Python surface") for reusing mature language abstractions instead of DSLs/graphs, and identifies six model-facing capabilities it is first to combine on one surface: typed I/O, pass-by-reference over live objects, code-as-action, programmable loop engineering, explicit object state, and model-callable harness APIs for context/events. Surveys fourteen frameworks/harnesses (LangGraph, Deep Agents, Microsoft Agent Framework, OpenAI Agents SDK, Google ADK, PydanticAI, smolagents, Claude Agent SDK, …) scored on those six axes, and evaluates the interface on SWE-bench Verified, Terminal-Bench 2.0, and ARC-AGI-3.
 - **2026-07-21** — [What I Learned by Dogfooding Our Own AI Agent, Signal](<../evals-observability/evaluation/What I Learned by Dogfooding Our Own AI Agent, Signal.md>) · `evaluation` · cresta
   Cresta dogfooded its Synthetic Customers tool (personas built from real conversation data) against its own website AI agent, Signal, to test the agent against realistic non-happy-path visitors (impatient, adversarial, or channel-switching) instead of idealized test cases.
+- **2026-07-16** — [How Upwork and Fireworks deliver faster, smarter proposals for freelancers](<../inference/optimization/How Upwork and Fireworks deliver faster, smarter proposals for freelancers.md>) · `optimization` · fireworks
+  Upwork's Uma assistant serves custom Llama-3.1 LoRA models for real-time freelancer proposal drafting, using FireAttention v2 for long-context handling and FireOptimizer's quantization plus adaptive speculative execution to cut latency roughly an order of magnitude versus off-the-shelf open-source serving.
+- **2026-07-16** — [Real-time, performant code assistance: How Sourcegraph scaled with Fireworks](<../inference/optimization/Real-time, performant code assistance How Sourcegraph scaled with Fireworks.md>) · `optimization` · fireworks
+  Sourcegraph cut code-completion latency 30% and raised acceptance rate from 15% to 40% by combining FlashAttention-2, n-gram speculative decoding with a trained draft model, prompt speculation, and direct model routing across DeepSeek-Coder-V2 and StarCoder.
 - **2026-07-15** — [Pinecone: Harnessing the wisdom of the workforce](<../agents/harness/Pinecone Harnessing the wisdom of the workforce.md>) · `harness` · sierra
   Describes Sierra's internal cloud-agent platform Pinecone: an app server plus 'Agency' control plane that reconciles Kubernetes pods and Redis Streams for durable, resumable sessions, a Go runner supervising Codex/Claude Code, network-proxy credential injection so the agent never sees real tokens, and copy-on-write session forking/branching for multiplayer collaboration.
 - **2026-06-30** — [Let your customers shape your agents](<../evals-observability/evaluation/Let your customers shape your agents.md>) · `evaluation` · sierra

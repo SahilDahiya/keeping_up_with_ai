@@ -225,6 +225,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-10-07** — [Caller ID in the age of agents](<../product-engineering/security/Caller ID in the age of agents.md>) · `security` · sierra
+  Sierra launches fleming-1, a model that analyzes live call audio in real time to flag when the caller on a Sierra-built voice agent's line is itself an AI agent, complementing its newly announced Personal Agent Protocol for agent-to-business authentication.
 - **2026-10-02** — [Agentic inference optimization: 50-90% faster engines](<../inference/optimization/Agentic inference optimization 50-90% faster engines.md>) · `optimization` · baseten
   Baseten let Claude Code (Fable 5) run ~1 week autonomously under the MetaInfer framework to generate a custom inference engine (VibeQwen) for Qwen-3.6-35B-A3B NVFP4 on a B200, beating a tuned vLLM 0.25.1 by 90% single-stream decode TPS and 2.3x faster TTFT; a second agent-built engine (Sammie) for SAM 3.1 hit 91 img/s, 50% faster than Meta's reference server.
 - **2026-10-01** — [ShopGym: Realistic, reproducible sandboxes for shopping agents (2026)](<../evals-observability/benchmark-design/ShopGym Realistic, reproducible sandboxes for shopping agents (2026).md>) · `benchmark-design` · shopify

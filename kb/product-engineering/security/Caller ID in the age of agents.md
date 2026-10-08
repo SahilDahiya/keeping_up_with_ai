@@ -1,10 +1,14 @@
 ---
 title: Caller ID in the age of agents
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: product-engineering
+subtopic: security
+secondary_topics:
+- agents/tool-use
+summary: Sierra launches fleming-1, a model that analyzes live call audio in real
+  time to flag when the caller on a Sierra-built voice agent's line is itself an AI
+  agent, complementing its newly announced Personal Agent Protocol for agent-to-business
+  authentication.
 triage: null
 skip_reason: null
 source: sierra
@@ -12,7 +16,7 @@ url: https://sierra.ai/blog/caller-id-in-the-age-of-agents
 author: Ajeet Grewal; Venu Satuluri
 published: '2026-10-07'
 fetched: '2026-10-08T06:10:51Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 468
 content_sha256: 57fb63ee088e5fe97756c94ed6463726968ce327540cf4f369e5ed9bc1b53221

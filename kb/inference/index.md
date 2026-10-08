@@ -1,6 +1,6 @@
 # inference
 
-143 articles.
+145 articles.
 
 - **2026-10-02** — [Agentic inference optimization: 50-90% faster engines](<optimization/Agentic inference optimization 50-90% faster engines.md>) · `optimization` · baseten
   Baseten let Claude Code (Fable 5) run ~1 week autonomously under the MetaInfer framework to generate a custom inference engine (VibeQwen) for Qwen-3.6-35B-A3B NVFP4 on a B200, beating a tuned vLLM 0.25.1 by 90% single-stream decode TPS and 2.3x faster TTFT; a second agent-built engine (Sammie) for SAM 3.1 hit 91 img/s, 50% faster than Meta's reference server.
@@ -50,8 +50,12 @@
   Surveys production LLM inference optimization techniques -- continuous batching, speculative decoding, KV cache reuse, quantization, and smarter routing -- for cutting latency and cost when GPUs sit idle or repeat work.
 - **2026-07-23** — [Bringing Nunchaku 4-bit Diffusion Inference to Diffusers](<quantization/Bringing Nunchaku 4-bit Diffusion Inference to Diffusers.md>) · `quantization` · huggingface
   Diffusers now natively loads Nunchaku's SVDQuant W4A4 checkpoints via from_pretrained() and the Hugging Face `kernels` package, requiring no local CUDA compilation; unlike weight-only quantization, SVDQuant runs transformer layers in 4-bit weights and activations, cutting both memory and denoising-loop latency.
+- **2026-07-16** — [How Upwork and Fireworks deliver faster, smarter proposals for freelancers](<optimization/How Upwork and Fireworks deliver faster, smarter proposals for freelancers.md>) · `optimization` · fireworks
+  Upwork's Uma assistant serves custom Llama-3.1 LoRA models for real-time freelancer proposal drafting, using FireAttention v2 for long-context handling and FireOptimizer's quantization plus adaptive speculative execution to cut latency roughly an order of magnitude versus off-the-shelf open-source serving.
 - **2026-07-16** — [Real-time video generation inference on Baseten](<optimization/Real-time video generation inference on Baseten.md>) · `optimization` · baseten
   Details Baseten's real-time video inference runtime for Wan 2.2, combining four-step timestep distillation (~20x), custom kernel fusion (~1.5x), and NVFP4 quantization (~1.5x) for a combined 53.6x speedup, cutting per-clip generation from over two minutes to 2.75 seconds and cost from 5 cents to under a sixth of a cent.
+- **2026-07-16** — [Real-time, performant code assistance: How Sourcegraph scaled with Fireworks](<optimization/Real-time, performant code assistance How Sourcegraph scaled with Fireworks.md>) · `optimization` · fireworks
+  Sourcegraph cut code-completion latency 30% and raised acceptance rate from 15% to 40% by combining FlashAttention-2, n-gram speculative decoding with a trained draft model, prompt speculation, and direct model routing across DeepSeek-Coder-V2 and StarCoder.
 - **2026-07-16** — [What does 99.9% uptime mean for inference?](<serving/What does 99.9% uptime mean for inference.md>) · `serving` · together
   Together breaks down what each reliability 'nine' actually requires for GPU inference serving, mapping failure domains (compute ECC errors, NIC/NVLink faults, storage, network, software/routing bugs) to the multi-region and AZ-redundancy architecture needed to survive them.
 - **2026-07-15** — [Inkling by Thinking Machines now available on Modal | Modal Blog](<speculative-decoding/Inkling by Thinking Machines now available on Modal Modal Blog.md>) · `speculative-decoding` · modal
@@ -427,6 +431,8 @@
   Shows how client implementation choices in Python and Rust affect embedding throughput.
 - **2025-03-27** — [How we built BEI: high-throughput embedding, reranker, and classifier inference](<../rag-retrieval/embeddings/How we built BEI high-throughput embedding, reranker, and classifier inference.md>) · `embeddings` · baseten
   Deep dive into BEI, a high-throughput embedding, reranker, and classifier inference system.
+- **2025-03-27** — [How Cresta drives millions of real-time, AI-powered contact center interactions with Fireworks](<../product-engineering/case-studies/How Cresta drives millions of real-time, AI-powered contact center interactions with Fireworks.md>) · `case-studies` · fireworks
+  Cresta serves its Ocean-1 contact-center model with hundreds of per-customer LoRA adapters on a single Fireworks-hosted base model, combining this with RAG for its Knowledge Assist product to beat GPT-4 on accuracy while cutting per-inference cost up to 100x.
 - **2025-03-12** — [Welcome Gemma 3: Google's all new multimodal, multilingual, long context open LLM](<../models/releases/Welcome Gemma 3 Google's all new multimodal, multilingual, long context open LLM.md>) · `releases` · huggingface
   Gemma 3 (1B-27B) adds a SigLIP vision encoder, 128k context (32k for 1B), 140+ languages, and interleaved local/global attention to keep long-context KV cache tractable; covers benchmarks and official QAT quantized checkpoints.
 - **2025-03-07** — [LLM Inference on Edge: A Fun and Easy Guide to run LLMs via React Native on your Phone!](<../infra-platform/edge/LLM Inference on Edge A Fun and Easy Guide to run LLMs via React Native on your Phone!.md>) · `edge` · huggingface

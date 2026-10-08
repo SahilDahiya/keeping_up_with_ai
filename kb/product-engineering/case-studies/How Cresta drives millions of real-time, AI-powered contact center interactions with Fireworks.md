@@ -2,10 +2,15 @@
 title: How Cresta drives millions of real-time, AI-powered contact center interactions
   with Fireworks
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: product-engineering
+subtopic: case-studies
+secondary_topics:
+- inference/serving
+- rag-retrieval/pipelines
+summary: Cresta serves its Ocean-1 contact-center model with hundreds of per-customer
+  LoRA adapters on a single Fireworks-hosted base model, combining this with RAG for
+  its Knowledge Assist product to beat GPT-4 on accuracy while cutting per-inference
+  cost up to 100x.
 triage: null
 skip_reason: null
 source: fireworks
@@ -13,7 +18,7 @@ url: https://fireworks.ai/blog/story-cresta-knowledge-assist
 author: null
 published: '2025-03-27'
 fetched: '2026-10-08T06:11:18Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1031
 content_sha256: 72cd749f671476658d4cbeb3048551bb6b169641e12c3fcc529e706b230d0b0c

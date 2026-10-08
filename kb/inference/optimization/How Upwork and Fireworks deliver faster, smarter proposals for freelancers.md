@@ -1,10 +1,15 @@
 ---
 title: How Upwork and Fireworks deliver faster, smarter proposals for freelancers
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: inference
+subtopic: optimization
+secondary_topics:
+- models/fine-tuning
+- product-engineering/case-studies
+summary: Upwork's Uma assistant serves custom Llama-3.1 LoRA models for real-time
+  freelancer proposal drafting, using FireAttention v2 for long-context handling and
+  FireOptimizer's quantization plus adaptive speculative execution to cut latency
+  roughly an order of magnitude versus off-the-shelf open-source serving.
 triage: null
 skip_reason: null
 source: fireworks
@@ -12,7 +17,7 @@ url: https://fireworks.ai/blog/story-upwork-proposal
 author: null
 published: '2026-07-16'
 fetched: '2026-10-08T06:11:16Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 943
 content_sha256: bdb5bcc2aaaabd9e9757401df28c51a62017ec78247662888b63fe141ed8a59b
