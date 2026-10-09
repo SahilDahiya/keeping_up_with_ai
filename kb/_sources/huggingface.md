@@ -1,7 +1,9 @@
 # huggingface
 
-173 articles.
+174 articles.
 
+- **2026-10-08** — [The model that didn't exist, so you made it yourself](<../prompt-engineering/context-engineering/The model that didn't exist, so you made it yourself.md>) · `context-engineering` · huggingface
+  Hugging Face walkthrough of prompting the autonomous 'ML Intern' agent to plan, budget, train, and publish models: distilling Qwen-Image 2.1's 9B prompt rewriter into a 0.8B CPU model (99.7% valid-output rate, $16 compute) and fine-tuning Qwen3.5-2B for citrus disease diagnosis (14.9% to 52.8% accuracy, $1.90), with prompt patterns for baseline checks, smoke tests, verified-facts context, and hard spending caps.
 - **2026-09-30** — [Open TTS Leaderboard: Scalable Evaluation for Multilingual Text-to-Speech and Voice Cloning](<../evals-observability/benchmark-design/Open TTS Leaderboard Scalable Evaluation for Multilingual Text-to-Speech and Voice Cloning.md>) · `benchmark-design` · huggingface
   Hugging Face's Open TTS Leaderboard replaces slow arena-style voting with objective metrics (WER/CER via Qwen3 ASR, RTFx/TTFA speed on H200, WavLM speaker-similarity cosine scores) to rank TTS models like Kokoro-82M, Supertonic-3, and Fun-CosyVoice3 in hours instead of the weeks arenas take, while keeping a 'Listen' tab for human comparison.
 - **2026-09-28** — [Welcome RL Environments to the hub](<../models/reinforcement-learning/Welcome RL Environments to the hub.md>) · `reinforcement-learning` · huggingface

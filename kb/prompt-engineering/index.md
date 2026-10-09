@@ -1,7 +1,9 @@
 # prompt-engineering
 
-22 articles.
+23 articles.
 
+- **2026-10-08** — [The model that didn't exist, so you made it yourself](<context-engineering/The model that didn't exist, so you made it yourself.md>) · `context-engineering` · huggingface
+  Hugging Face walkthrough of prompting the autonomous 'ML Intern' agent to plan, budget, train, and publish models: distilling Qwen-Image 2.1's 9B prompt rewriter into a 0.8B CPU model (99.7% valid-output rate, $16 compute) and fine-tuning Qwen3.5-2B for citrus disease diagnosis (14.9% to 52.8% accuracy, $1.90), with prompt patterns for baseline checks, smoke tests, verified-facts context, and hard spending caps.
 - **2026-09-11** — [Rethinking skills and prompts for GPT-6 Astra | OpenAI Developers](<context-engineering/Rethinking skills and prompts for GPT-6 Astra OpenAI Developers.md>) · `context-engineering` · openai-devs
   OpenAI's guidance for adapting skills, AGENTS.md, and task prompts for GPT-6 Astra: keep skill descriptions terse and use progressive disclosure to avoid context bloat, prune stale AGENTS.md instructions like mandatory pre-edit doc reads or test-running nudges the model no longer needs, and recalibrate decision-boundary and persistence language now that Astra is more cautious about stopping early.
 - **2026-08-26** — [Best Prompt Management Tools 2026 | Pydantic Logfire](<techniques/Best Prompt Management Tools 2026 Pydantic Logfire.md>) · `techniques` · pydantic

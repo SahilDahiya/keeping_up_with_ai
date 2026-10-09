@@ -1,10 +1,17 @@
 ---
 title: The model that didn't exist, so you made it yourself
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: prompt-engineering
+subtopic: context-engineering
+secondary_topics:
+- agents/planning
+- models/fine-tuning
+summary: 'Hugging Face walkthrough of prompting the autonomous ''ML Intern'' agent
+  to plan, budget, train, and publish models: distilling Qwen-Image 2.1''s 9B prompt
+  rewriter into a 0.8B CPU model (99.7% valid-output rate, $16 compute) and fine-tuning
+  Qwen3.5-2B for citrus disease diagnosis (14.9% to 52.8% accuracy, $1.90), with prompt
+  patterns for baseline checks, smoke tests, verified-facts context, and hard spending
+  caps.'
 triage: null
 skip_reason: null
 source: huggingface
@@ -12,7 +19,7 @@ url: https://huggingface.co/blog/building-with-ml-intern
 author: Yuvraj Sharma; Abubakar Abid
 published: '2026-10-08'
 fetched: '2026-10-09T06:16:41Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1903
 content_sha256: a6e2308380d4135faf38f306b44b9e767b5ab0b4e53b98d890585f9c690dae36
