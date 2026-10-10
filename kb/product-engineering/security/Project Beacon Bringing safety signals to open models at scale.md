@@ -1,10 +1,15 @@
 ---
 title: 'Project Beacon: Bringing safety signals to open models at scale'
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: product-engineering
+subtopic: security
+secondary_topics:
+- evals-observability/monitoring
+summary: Baseten and Goodfire's Project Beacon reads model activations during generation
+  to detect prompt injection, policy violations, and data exposure in real time; a
+  monitor cascade runs activation and text checks in parallel with generation and
+  escalates to a frontier model only when the two disagree, applying per-customer
+  policies to approve, refuse, fall back, or log.
 triage: null
 skip_reason: null
 source: baseten
@@ -12,7 +17,7 @@ url: https://www.baseten.co/blog/safe-open-models-baseten-goodfire/
 author: Sai Maddali
 published: '2026-10-09'
 fetched: '2026-10-10T06:09:54Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 845
 content_sha256: 16003e71965ef7372a72c7f4254d0265bb4c9c4e815b8c8b7219c5d5a61792f4

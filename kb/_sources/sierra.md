@@ -1,7 +1,9 @@
 # sierra
 
-49 articles.
+50 articles.
 
+- **2026-10-09** — [Sharing a draft of Personal Agent Protocol](<../agents/tool-use/Sharing a draft of Personal Agent Protocol.md>) · `tool-use` · sierra
+  Sierra publishes a draft spec of Personal Agent Protocol (Poppy), defining five building blocks - discovery via a well-known poppy.json file, guest/identified sessions, OAuth-based sign-in with scoped tokens, a single cross-channel session token, and per-channel task completion over OpenAPI/MCP/website - for how personal agents authenticate and act on a customer's behalf across a business's site, APIs, or own agent.
 - **2026-10-07** — [Caller ID in the age of agents](<../product-engineering/security/Caller ID in the age of agents.md>) · `security` · sierra
   Sierra launches fleming-1, a model that analyzes live call audio in real time to flag when the caller on a Sierra-built voice agent's line is itself an AI agent, complementing its newly announced Personal Agent Protocol for agent-to-business authentication.
 - **2026-10-06** — [Introducing Personal Agent Protocol](<../agents/tool-use/Introducing Personal Agent Protocol.md>) · `tool-use` · sierra

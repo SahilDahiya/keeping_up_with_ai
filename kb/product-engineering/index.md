@@ -1,7 +1,9 @@
 # product-engineering
 
-69 articles.
+70 articles.
 
+- **2026-10-09** — [Project Beacon: Bringing safety signals to open models at scale](<security/Project Beacon Bringing safety signals to open models at scale.md>) · `security` · baseten
+  Baseten and Goodfire's Project Beacon reads model activations during generation to detect prompt injection, policy violations, and data exposure in real time; a monitor cascade runs activation and text checks in parallel with generation and escalates to a frontier model only when the two disagree, applying per-customer policies to approve, refuse, fall back, or log.
 - **2026-10-07** — [Caller ID in the age of agents](<security/Caller ID in the age of agents.md>) · `security` · sierra
   Sierra launches fleming-1, a model that analyzes live call audio in real time to flag when the caller on a Sierra-built voice agent's line is itself an AI agent, complementing its newly announced Personal Agent Protocol for agent-to-business authentication.
 - **2026-10-05** — [TypeSafe AI scales Jev to trillions of tokens in three days on Modal | Modal Blog](<case-studies/TypeSafe AI scales Jev to trillions of tokens in three days on Modal Modal Blog.md>) · `case-studies` · modal
@@ -143,6 +145,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-10-09** — [Sharing a draft of Personal Agent Protocol](<../agents/tool-use/Sharing a draft of Personal Agent Protocol.md>) · `tool-use` · sierra
+  Sierra publishes a draft spec of Personal Agent Protocol (Poppy), defining five building blocks - discovery via a well-known poppy.json file, guest/identified sessions, OAuth-based sign-in with scoped tokens, a single cross-channel session token, and per-channel task completion over OpenAPI/MCP/website - for how personal agents authenticate and act on a customer's behalf across a business's site, APIs, or own agent.
 - **2026-10-06** — [Introducing Personal Agent Protocol](<../agents/tool-use/Introducing Personal Agent Protocol.md>) · `tool-use` · sierra
   Sierra and Meta's Personal Agent Protocol is an OAuth-based open standard letting personal agents discover and authenticate with businesses, carrying a session across a company's website, APIs (MCP/OpenAPI), or its own agent, with consumers controlling read vs. write access.
 - **2026-10-01** — [VM Sandboxes: Full computers for agents | Modal Blog](<../infra-platform/deployment/VM Sandboxes Full computers for agents Modal Blog.md>) · `deployment` · modal

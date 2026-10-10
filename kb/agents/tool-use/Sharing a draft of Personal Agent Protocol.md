@@ -1,10 +1,16 @@
 ---
 title: Sharing a draft of Personal Agent Protocol
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: agents
+subtopic: tool-use
+secondary_topics:
+- product-engineering/architecture
+summary: Sierra publishes a draft spec of Personal Agent Protocol (Poppy), defining
+  five building blocks - discovery via a well-known poppy.json file, guest/identified
+  sessions, OAuth-based sign-in with scoped tokens, a single cross-channel session
+  token, and per-channel task completion over OpenAPI/MCP/website - for how personal
+  agents authenticate and act on a customer's behalf across a business's site, APIs,
+  or own agent.
 triage: null
 skip_reason: null
 source: sierra
@@ -12,7 +18,7 @@ url: https://sierra.ai/blog/poppy
 author: Bret Taylor; Clay Bavor
 published: '2026-10-09'
 fetched: '2026-10-10T06:09:51Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1020
 content_sha256: 7c95a06ca800b857a4627c5c251a233e381fd43f95997b9f4cde89b0cefe9a00

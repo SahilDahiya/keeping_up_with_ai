@@ -1,10 +1,15 @@
 ---
 title: What makes a high-quality NVFP4 quantization?
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: inference
+subtopic: quantization
+secondary_topics:
+- models/architectures
+summary: 'Explains NVFP4 4-bit quantization mechanics (block scales, calibration)
+  and compares three ways to assign per-layer precision: architecture-based heuristics
+  (NVIDIA ModelOpt''s NVFP4_EXPERTS_ONLY_CFG), AutoQuantize''s isolated-layer sensitivity
+  scoring (gradient, KL divergence, Aumann-Shapley methods), and SaturationQuant,
+  which makes sensitivity scores additive across a mixed-precision recipe.'
 triage: null
 skip_reason: null
 source: baseten
@@ -12,7 +17,7 @@ url: https://www.baseten.co/blog/what-makes-a-high-quality-nvfp4-quantization/
 author: Chloe Florit
 published: '2026-10-09'
 fetched: '2026-10-10T06:09:56Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1925
 content_sha256: e0c2d9dd147dc4dd3c4c1064918fe887bfb1f6e13c9a9b74067515125258c8c8

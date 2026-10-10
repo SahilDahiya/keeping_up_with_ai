@@ -1,7 +1,11 @@
 # baseten
 
-92 articles.
+94 articles.
 
+- **2026-10-09** — [What makes a high-quality NVFP4 quantization?](<../inference/quantization/What makes a high-quality NVFP4 quantization.md>) · `quantization` · baseten
+  Explains NVFP4 4-bit quantization mechanics (block scales, calibration) and compares three ways to assign per-layer precision: architecture-based heuristics (NVIDIA ModelOpt's NVFP4_EXPERTS_ONLY_CFG), AutoQuantize's isolated-layer sensitivity scoring (gradient, KL divergence, Aumann-Shapley methods), and SaturationQuant, which makes sensitivity scores additive across a mixed-precision recipe.
+- **2026-10-09** — [Project Beacon: Bringing safety signals to open models at scale](<../product-engineering/security/Project Beacon Bringing safety signals to open models at scale.md>) · `security` · baseten
+  Baseten and Goodfire's Project Beacon reads model activations during generation to detect prompt injection, policy violations, and data exposure in real time; a monitor cascade runs activation and text checks in parallel with generation and escalates to a frontier model only when the two disagree, applying per-customer policies to approve, refuse, fall back, or log.
 - **2026-10-02** — [Agentic inference optimization: 50-90% faster engines](<../inference/optimization/Agentic inference optimization 50-90% faster engines.md>) · `optimization` · baseten
   Baseten let Claude Code (Fable 5) run ~1 week autonomously under the MetaInfer framework to generate a custom inference engine (VibeQwen) for Qwen-3.6-35B-A3B NVFP4 on a B200, beating a tuned vLLM 0.25.1 by 90% single-stream decode TPS and 2.3x faster TTFT; a second agent-built engine (Sammie) for SAM 3.1 hit 91 img/s, 50% faster than Meta's reference server.
 - **2026-09-28** — [Securing the open frontier with NVIDIA OpenShell and Blaxel sandboxes](<../agents/harness/Securing the open frontier with NVIDIA OpenShell and Blaxel sandboxes.md>) · `harness` · baseten

@@ -251,6 +251,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-10-09** — [Project Beacon: Bringing safety signals to open models at scale](<../product-engineering/security/Project Beacon Bringing safety signals to open models at scale.md>) · `security` · baseten
+  Baseten and Goodfire's Project Beacon reads model activations during generation to detect prompt injection, policy violations, and data exposure in real time; a monitor cascade runs activation and text checks in parallel with generation and escalates to a frontier model only when the two disagree, applying per-customer policies to approve, refuse, fall back, or log.
 - **2026-10-05** — [Pydantic AI vs Claude Agent SDK: Who owns the agent?](<../agents/harness/Pydantic AI vs Claude Agent SDK Who owns the agent.md>) · `harness` · pydantic
   Contrasts Claude Agent SDK, which wraps a Claude Code subprocess with its own shell/file tools/skills/agent loop and an unpublished system prompt that can change on upgrade, against Pydantic AI's compose-your-own-harness model (capabilities like LocalWorkspace/ModalSandbox/Coder added one at a time), and argues the latter suits apps that aren't themselves coding agents.
 - **2026-09-28** — [Welcome RL Environments to the hub](<../models/reinforcement-learning/Welcome RL Environments to the hub.md>) · `reinforcement-learning` · huggingface

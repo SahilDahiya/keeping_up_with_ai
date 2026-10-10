@@ -417,6 +417,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-10-09** — [What makes a high-quality NVFP4 quantization?](<../inference/quantization/What makes a high-quality NVFP4 quantization.md>) · `quantization` · baseten
+  Explains NVFP4 4-bit quantization mechanics (block scales, calibration) and compares three ways to assign per-layer precision: architecture-based heuristics (NVIDIA ModelOpt's NVFP4_EXPERTS_ONLY_CFG), AutoQuantize's isolated-layer sensitivity scoring (gradient, KL divergence, Aumann-Shapley methods), and SaturationQuant, which makes sensitivity scores additive across a mixed-precision recipe.
 - **2026-10-08** — [The model that didn't exist, so you made it yourself](<../prompt-engineering/context-engineering/The model that didn't exist, so you made it yourself.md>) · `context-engineering` · huggingface
   Hugging Face walkthrough of prompting the autonomous 'ML Intern' agent to plan, budget, train, and publish models: distilling Qwen-Image 2.1's 9B prompt rewriter into a 0.8B CPU model (99.7% valid-output rate, $16 compute) and fine-tuning Qwen3.5-2B for citrus disease diagnosis (14.9% to 52.8% accuracy, $1.90), with prompt patterns for baseline checks, smoke tests, verified-facts context, and hard spending caps.
 - **2026-10-05** — [TypeSafe AI scales Jev to trillions of tokens in three days on Modal | Modal Blog](<../product-engineering/case-studies/TypeSafe AI scales Jev to trillions of tokens in three days on Modal Modal Blog.md>) · `case-studies` · modal

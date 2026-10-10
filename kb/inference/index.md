@@ -1,7 +1,9 @@
 # inference
 
-145 articles.
+146 articles.
 
+- **2026-10-09** — [What makes a high-quality NVFP4 quantization?](<quantization/What makes a high-quality NVFP4 quantization.md>) · `quantization` · baseten
+  Explains NVFP4 4-bit quantization mechanics (block scales, calibration) and compares three ways to assign per-layer precision: architecture-based heuristics (NVIDIA ModelOpt's NVFP4_EXPERTS_ONLY_CFG), AutoQuantize's isolated-layer sensitivity scoring (gradient, KL divergence, Aumann-Shapley methods), and SaturationQuant, which makes sensitivity scores additive across a mixed-precision recipe.
 - **2026-10-02** — [Agentic inference optimization: 50-90% faster engines](<optimization/Agentic inference optimization 50-90% faster engines.md>) · `optimization` · baseten
   Baseten let Claude Code (Fable 5) run ~1 week autonomously under the MetaInfer framework to generate a custom inference engine (VibeQwen) for Qwen-3.6-35B-A3B NVFP4 on a B200, beating a tuned vLLM 0.25.1 by 90% single-stream decode TPS and 2.3x faster TTFT; a second agent-built engine (Sammie) for SAM 3.1 hit 91 img/s, 50% faster than Meta's reference server.
 - **2026-09-28** — [Fireworks AI](<optimization/Fireworks AI.md>) · `optimization` · fireworks

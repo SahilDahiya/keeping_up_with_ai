@@ -1,7 +1,9 @@
 # agents
 
-110 articles.
+111 articles.
 
+- **2026-10-09** — [Sharing a draft of Personal Agent Protocol](<tool-use/Sharing a draft of Personal Agent Protocol.md>) · `tool-use` · sierra
+  Sierra publishes a draft spec of Personal Agent Protocol (Poppy), defining five building blocks - discovery via a well-known poppy.json file, guest/identified sessions, OAuth-based sign-in with scoped tokens, a single cross-channel session token, and per-channel task completion over OpenAPI/MCP/website - for how personal agents authenticate and act on a customer's behalf across a business's site, APIs, or own agent.
 - **2026-10-06** — [Introducing Personal Agent Protocol](<tool-use/Introducing Personal Agent Protocol.md>) · `tool-use` · sierra
   Sierra and Meta's Personal Agent Protocol is an OAuth-based open standard letting personal agents discover and authenticate with businesses, carrying a session across a company's website, APIs (MCP/OpenAPI), or its own agent, with consumers controlling read vs. write access.
 - **2026-10-05** — [Pydantic AI vs Claude Agent SDK: Who owns the agent?](<harness/Pydantic AI vs Claude Agent SDK Who owns the agent.md>) · `harness` · pydantic
