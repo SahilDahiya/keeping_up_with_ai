@@ -251,6 +251,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-10-12** — [Endpoint Candidates: evaluate and promote inference endpoints | Modal Blog](<../inference/serving/Endpoint Candidates evaluate and promote inference endpoints Modal Blog.md>) · `serving` · modal
+  Modal's Endpoint Candidates feature lets teams stage alternate inference deployments, mirror a sample of production traffic to them, and compare latency, throughput, and cost before promoting a candidate; it extends a Pingora-based proxy with per-candidate bounded buffers and a shared chunk-count budget so slow or failing mirrors are cancelled instead of blocking production requests.
 - **2026-10-09** — [Project Beacon: Bringing safety signals to open models at scale](<../product-engineering/security/Project Beacon Bringing safety signals to open models at scale.md>) · `security` · baseten
   Baseten and Goodfire's Project Beacon reads model activations during generation to detect prompt injection, policy violations, and data exposure in real time; a monitor cascade runs activation and text checks in parallel with generation and escalates to a frontier model only when the two disagree, applying per-customer policies to approve, refuse, fall back, or log.
 - **2026-10-05** — [Pydantic AI vs Claude Agent SDK: Who owns the agent?](<../agents/harness/Pydantic AI vs Claude Agent SDK Who owns the agent.md>) · `harness` · pydantic

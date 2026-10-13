@@ -1,10 +1,15 @@
 ---
 title: 'Endpoint Candidates: evaluate and promote inference endpoints | Modal Blog'
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: inference
+subtopic: serving
+secondary_topics:
+- evals-observability/evaluation
+summary: Modal's Endpoint Candidates feature lets teams stage alternate inference
+  deployments, mirror a sample of production traffic to them, and compare latency,
+  throughput, and cost before promoting a candidate; it extends a Pingora-based proxy
+  with per-candidate bounded buffers and a shared chunk-count budget so slow or failing
+  mirrors are cancelled instead of blocking production requests.
 triage: null
 skip_reason: null
 source: modal
@@ -12,7 +17,7 @@ url: https://modal.com/blog/endpoint-candidates
 author: Amit Lohe; Deven Navani; Garrett O'Brien
 published: '2026-10-12'
 fetched: '2026-10-13T06:12:47Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 617
 content_sha256: e2c5cabd4c5d75e82afbfd755620c4a45a81bec8531747e326260538f338366d

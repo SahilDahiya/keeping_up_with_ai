@@ -1,7 +1,9 @@
 # modal
 
-43 articles.
+44 articles.
 
+- **2026-10-12** — [Endpoint Candidates: evaluate and promote inference endpoints | Modal Blog](<../inference/serving/Endpoint Candidates evaluate and promote inference endpoints Modal Blog.md>) · `serving` · modal
+  Modal's Endpoint Candidates feature lets teams stage alternate inference deployments, mirror a sample of production traffic to them, and compare latency, throughput, and cost before promoting a candidate; it extends a Pingora-based proxy with per-candidate bounded buffers and a shared chunk-count budget so slow or failing mirrors are cancelled instead of blocking production requests.
 - **2026-10-05** — [TypeSafe AI scales Jev to trillions of tokens in three days on Modal | Modal Blog](<../product-engineering/case-studies/TypeSafe AI scales Jev to trillions of tokens in three days on Modal Modal Blog.md>) · `case-studies` · modal
   TypeSafe AI's Jev, a non-autoregressive "System One Model" trained with Reinforcement Learning for Calibrated Decisions (RLCD), outputs typed structured values with probabilities instead of generating text; Modal's serverless infra scaled it to over a trillion tokens in three days after launch, topping OpenRouter's 1K-10K token leaderboard at 15.1% share.
 - **2026-10-01** — [VM Sandboxes: Full computers for agents | Modal Blog](<../infra-platform/deployment/VM Sandboxes Full computers for agents Modal Blog.md>) · `deployment` · modal

@@ -1,7 +1,9 @@
 # inference
 
-146 articles.
+147 articles.
 
+- **2026-10-12** — [Endpoint Candidates: evaluate and promote inference endpoints | Modal Blog](<serving/Endpoint Candidates evaluate and promote inference endpoints Modal Blog.md>) · `serving` · modal
+  Modal's Endpoint Candidates feature lets teams stage alternate inference deployments, mirror a sample of production traffic to them, and compare latency, throughput, and cost before promoting a candidate; it extends a Pingora-based proxy with per-candidate bounded buffers and a shared chunk-count budget so slow or failing mirrors are cancelled instead of blocking production requests.
 - **2026-10-09** — [What makes a high-quality NVFP4 quantization?](<quantization/What makes a high-quality NVFP4 quantization.md>) · `quantization` · baseten
   Explains NVFP4 4-bit quantization mechanics (block scales, calibration) and compares three ways to assign per-layer precision: architecture-based heuristics (NVIDIA ModelOpt's NVFP4_EXPERTS_ONLY_CFG), AutoQuantize's isolated-layer sensitivity scoring (gradient, KL divergence, Aumann-Shapley methods), and SaturationQuant, which makes sensitivity scores additive across a mixed-precision recipe.
 - **2026-10-02** — [Agentic inference optimization: 50-90% faster engines](<optimization/Agentic inference optimization 50-90% faster engines.md>) · `optimization` · baseten
