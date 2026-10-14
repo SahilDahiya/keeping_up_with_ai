@@ -1,10 +1,14 @@
 ---
 title: Delivering real-time text-to-speech with Gradium
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: inference
+subtopic: optimization
+secondary_topics:
+- models/multimodal
+summary: Gradium TTS reaches a 214ms median time-to-first-audio using Kyutai's Delayed
+  Streams Modeling (a temporal 'reader' transformer plus a depth 'refiner' transformer
+  running every 80ms), combined with torch.compile/Triton kernel fusion and CUDA Graphs
+  to keep the CPU from bottlenecking small, latency-sensitive GPU kernels.
 triage: null
 skip_reason: null
 source: baseten
@@ -12,7 +16,7 @@ url: https://www.baseten.co/blog/delivering-fast-real-time-text-to-speech-with-g
 author: Albert Lee
 published: '2026-10-13'
 fetched: '2026-10-14T06:09:53Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1456
 content_sha256: fbc8b4fee564dd6a69d9e03467533d83183bd09badf59d8d47c898c0533b68b6

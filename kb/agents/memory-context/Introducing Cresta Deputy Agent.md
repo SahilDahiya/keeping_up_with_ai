@@ -1,10 +1,15 @@
 ---
 title: Introducing Cresta Deputy Agent
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: agents
+subtopic: memory-context
+secondary_topics:
+- product-engineering/case-studies
+summary: Cresta's Deputy Agent is a long-running agent for customer-ops workflows
+  (insurance claims, order returns, billing disputes) that persists goal, completed
+  actions, and dependencies across pauses lasting days to weeks, resumes on new documents
+  or approvals, and distinguishes an initiated action from a confirmed outcome with
+  a full audit trail.
 triage: null
 skip_reason: null
 source: cresta
@@ -12,7 +17,7 @@ url: https://cresta.com/blog/meet-deputy-agent-a-long-running-ai-agent-built-for
 author: Ping Wu
 published: '2026-10-13'
 fetched: '2026-10-14T06:09:48Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1469
 content_sha256: 537cb4095494af37537966247df80a4284f39a25a0bec8cb68a41729196b1b93

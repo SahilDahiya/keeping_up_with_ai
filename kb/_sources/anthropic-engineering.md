@@ -1,7 +1,9 @@
 # anthropic-engineering
 
-25 articles.
+26 articles.
 
+- **2026-10-13** — [Redesigning source control at Anthropic](<../product-engineering/architecture/Redesigning source control at Anthropic.md>) · `architecture` · anthropic-engineering
+  Anthropic replaced git with Scion, an in-house, server-centric version control system built for agents that are always online, after merge rate grew from 2,500 to 30,000 code changes/day; the migration cut source-control infrastructure footprint 200x and sped CI checkouts by two orders of magnitude.
 - **2026-05-28** — [Claude Code: Best practices for agentic coding](<../agents/tool-use/Claude Code Best practices for agentic coding.md>) · `tool-use` · anthropic-engineering
   Practical workflows for agentic coding with Claude Code: CLAUDE.md setup, explore-plan-code loops, test-driven iteration, headless automation, and multi-Claude patterns.
 - **2026-05-25** — [How we contain Claude across products](<../product-engineering/security/How we contain Claude across products.md>) · `security` · anthropic-engineering

@@ -107,6 +107,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-10-13** — [Toward RL on mixed-precision, mixed-accelerator samplers](<../models/reinforcement-learning/Toward RL on mixed-precision, mixed-accelerator samplers.md>) · `reinforcement-learning` · modal
+  Modal trains Qwen3.6-35B-A3B on agentic coding (SWE-bench Pro V2) with fully asynchronous RL across six heterogeneous accelerator/precision combinations (B200/B300 NVFP4, H100/H200 FP8, A100/RTX PRO 6000 BF16) using masked importance sampling and other off-policy corrections to keep training stable despite the training-inference mismatch.
 - **2026-10-05** — [TypeSafe AI scales Jev to trillions of tokens in three days on Modal | Modal Blog](<../product-engineering/case-studies/TypeSafe AI scales Jev to trillions of tokens in three days on Modal Modal Blog.md>) · `case-studies` · modal
   TypeSafe AI's Jev, a non-autoregressive "System One Model" trained with Reinforcement Learning for Calibrated Decisions (RLCD), outputs typed structured values with probabilities instead of generating text; Modal's serverless infra scaled it to over a trillion tokens in three days after launch, topping OpenRouter's 1K-10K token leaderboard at 15.1% share.
 - **2026-09-28** — [Fireworks AI](<../inference/optimization/Fireworks AI.md>) · `optimization` · fireworks

@@ -1,7 +1,11 @@
 # cresta
 
-72 articles.
+74 articles.
 
+- **2026-10-13** — [Introducing Cresta Deputy Agent](<../agents/memory-context/Introducing Cresta Deputy Agent.md>) · `memory-context` · cresta
+  Cresta's Deputy Agent is a long-running agent for customer-ops workflows (insurance claims, order returns, billing disputes) that persists goal, completed actions, and dependencies across pauses lasting days to weeks, resumes on new documents or approvals, and distinguishes an initiated action from a confirmed outcome with a full audit trail.
+- **2026-10-12** — [Introducing Cresta Sentry-0.1](<../product-engineering/case-studies/Introducing Cresta Sentry-0.1.md>) · `case-studies` · cresta
+  Cresta's Sentry-0.1 ensemble model detects personal AI agents calling into contact centers by behavioral signals (e.g. exact-phrase repetition in 50% of non-disclosing AI conversations vs 0% of humans, hedging in 76% of human conversations vs 0% of AI), reaching an F1 of roughly 0.9 in preliminary evals.
 - **2026-09-25** — [Part II: Replacing FinServ IVRs with an AI Agent: Where the Compounding Happens](<../product-engineering/case-studies/Part II Replacing FinServ IVRs with an AI Agent Where the Compounding Happens.md>) · `case-studies` · cresta
   Case study on scaling an AI agent that replaced FinServ IVR call handling: warns that per-agent Average Handle Time rises as the AI automates easy balance/payment calls, leaving only hard cases for humans, so the real success metric is total human minutes handled and containment volume; also covers staffing around billing-cycle-driven call spikes (e.g. a Saturday cycle close compressing into a Monday surge).
 - **2026-09-17** — [What 1M+ Conversations Reveal About What to Automate First in Hospitality CX](<../product-engineering/case-studies/What 1M+ Conversations Reveal About What to Automate First in Hospitality CX.md>) · `case-studies` · cresta

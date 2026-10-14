@@ -1,7 +1,9 @@
 # models
 
-206 articles.
+207 articles.
 
+- **2026-10-13** — [Toward RL on mixed-precision, mixed-accelerator samplers](<reinforcement-learning/Toward RL on mixed-precision, mixed-accelerator samplers.md>) · `reinforcement-learning` · modal
+  Modal trains Qwen3.6-35B-A3B on agentic coding (SWE-bench Pro V2) with fully asynchronous RL across six heterogeneous accelerator/precision combinations (B200/B300 NVFP4, H100/H200 FP8, A100/RTX PRO 6000 BF16) using masked importance sampling and other off-policy corrections to keep training stable despite the training-inference mismatch.
 - **2026-09-30** — [Reinforcement learning: Why alignment of numerics and MoE routing matter](<reinforcement-learning/Reinforcement learning Why alignment of numerics and MoE routing matter.md>) · `reinforcement-learning` · fireworks
   Fireworks traces RL training instability to numerical mismatches between trainer and rollout engines: a GLM 5.2 run's reward collapsed from 0.9 to under 0.2 around step 20 without alignment (zero-KL and stable reward with it), and a Qwen3.5-MoE run diverged by k3=0.296 (300x their 0.001-equivalence threshold) due to precision differences in combining expert outputs.
 - **2026-09-28** — [Welcome RL Environments to the hub](<reinforcement-learning/Welcome RL Environments to the hub.md>) · `reinforcement-learning` · huggingface
@@ -417,6 +419,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-10-13** — [Delivering real-time text-to-speech with Gradium](<../inference/optimization/Delivering real-time text-to-speech with Gradium.md>) · `optimization` · baseten
+  Gradium TTS reaches a 214ms median time-to-first-audio using Kyutai's Delayed Streams Modeling (a temporal 'reader' transformer plus a depth 'refiner' transformer running every 80ms), combined with torch.compile/Triton kernel fusion and CUDA Graphs to keep the CPU from bottlenecking small, latency-sensitive GPU kernels.
 - **2026-10-09** — [What makes a high-quality NVFP4 quantization?](<../inference/quantization/What makes a high-quality NVFP4 quantization.md>) · `quantization` · baseten
   Explains NVFP4 4-bit quantization mechanics (block scales, calibration) and compares three ways to assign per-layer precision: architecture-based heuristics (NVIDIA ModelOpt's NVFP4_EXPERTS_ONLY_CFG), AutoQuantize's isolated-layer sensitivity scoring (gradient, KL divergence, Aumann-Shapley methods), and SaturationQuant, which makes sensitivity scores additive across a mixed-precision recipe.
 - **2026-10-08** — [The model that didn't exist, so you made it yourself](<../prompt-engineering/context-engineering/The model that didn't exist, so you made it yourself.md>) · `context-engineering` · huggingface

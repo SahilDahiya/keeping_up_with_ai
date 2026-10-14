@@ -1,10 +1,16 @@
 ---
 title: Toward RL on mixed-precision, mixed-accelerator samplers
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: models
+subtopic: reinforcement-learning
+secondary_topics:
+- infra-platform/gpu-clusters
+- inference/optimization
+summary: Modal trains Qwen3.6-35B-A3B on agentic coding (SWE-bench Pro V2) with fully
+  asynchronous RL across six heterogeneous accelerator/precision combinations (B200/B300
+  NVFP4, H100/H200 FP8, A100/RTX PRO 6000 BF16) using masked importance sampling and
+  other off-policy corrections to keep training stable despite the training-inference
+  mismatch.
 triage: null
 skip_reason: null
 source: modal
@@ -12,7 +18,7 @@ url: https://modal.com/blog/toward-rl-on-mixed-precision-mixed-accelerator-sampl
 author: Nan Jiang
 published: '2026-10-13'
 fetched: '2026-10-14T06:10:02Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 3625
 content_sha256: 7365bef46350feff3b0257d1ef9892a29ae2f2896f80aba763975d8845382f51

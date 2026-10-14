@@ -1,10 +1,13 @@
 ---
 title: Redesigning source control at Anthropic
 kind: blog
-topic: null
-subtopic: null
+topic: product-engineering
+subtopic: architecture
 secondary_topics: []
-summary: null
+summary: Anthropic replaced git with Scion, an in-house, server-centric version control
+  system built for agents that are always online, after merge rate grew from 2,500
+  to 30,000 code changes/day; the migration cut source-control infrastructure footprint
+  200x and sped CI checkouts by two orders of magnitude.
 triage: null
 skip_reason: null
 source: anthropic-engineering
@@ -12,7 +15,7 @@ url: https://www.anthropic.com/engineering/redesigning-source-control
 author: null
 published: '2026-10-13'
 fetched: '2026-10-14T06:09:55Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 3640
 content_sha256: 17903818c1d7e858ee8712afb5c6362515aceebccbf3c081b96e7d80730c2cc3

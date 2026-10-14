@@ -1,10 +1,14 @@
 ---
 title: Introducing Cresta Sentry-0.1
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: product-engineering
+subtopic: case-studies
+secondary_topics:
+- evals-observability/evaluation
+summary: Cresta's Sentry-0.1 ensemble model detects personal AI agents calling into
+  contact centers by behavioral signals (e.g. exact-phrase repetition in 50% of non-disclosing
+  AI conversations vs 0% of humans, hedging in 76% of human conversations vs 0% of
+  AI), reaching an F1 of roughly 0.9 in preliminary evals.
 triage: null
 skip_reason: null
 source: cresta
@@ -12,7 +16,7 @@ url: https://cresta.com/blog/introducing-cresta-sentry-0-1-recognize-personal-ai
 author: Ping Wu
 published: '2026-10-12'
 fetched: '2026-10-14T06:09:46Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1620
 content_sha256: bfbd5761d5216add1b9c695245894a27123be6db602a0289ee24a0020de354f9

@@ -1,7 +1,11 @@
 # product-engineering
 
-70 articles.
+72 articles.
 
+- **2026-10-13** — [Redesigning source control at Anthropic](<architecture/Redesigning source control at Anthropic.md>) · `architecture` · anthropic-engineering
+  Anthropic replaced git with Scion, an in-house, server-centric version control system built for agents that are always online, after merge rate grew from 2,500 to 30,000 code changes/day; the migration cut source-control infrastructure footprint 200x and sped CI checkouts by two orders of magnitude.
+- **2026-10-12** — [Introducing Cresta Sentry-0.1](<case-studies/Introducing Cresta Sentry-0.1.md>) · `case-studies` · cresta
+  Cresta's Sentry-0.1 ensemble model detects personal AI agents calling into contact centers by behavioral signals (e.g. exact-phrase repetition in 50% of non-disclosing AI conversations vs 0% of humans, hedging in 76% of human conversations vs 0% of AI), reaching an F1 of roughly 0.9 in preliminary evals.
 - **2026-10-09** — [Project Beacon: Bringing safety signals to open models at scale](<security/Project Beacon Bringing safety signals to open models at scale.md>) · `security` · baseten
   Baseten and Goodfire's Project Beacon reads model activations during generation to detect prompt injection, policy violations, and data exposure in real time; a monitor cascade runs activation and text checks in parallel with generation and escalates to a frontier model only when the two disagree, applying per-customer policies to approve, refuse, fall back, or log.
 - **2026-10-07** — [Caller ID in the age of agents](<security/Caller ID in the age of agents.md>) · `security` · sierra
@@ -145,6 +149,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-10-13** — [Introducing Cresta Deputy Agent](<../agents/memory-context/Introducing Cresta Deputy Agent.md>) · `memory-context` · cresta
+  Cresta's Deputy Agent is a long-running agent for customer-ops workflows (insurance claims, order returns, billing disputes) that persists goal, completed actions, and dependencies across pauses lasting days to weeks, resumes on new documents or approvals, and distinguishes an initiated action from a confirmed outcome with a full audit trail.
 - **2026-10-09** — [Sharing a draft of Personal Agent Protocol](<../agents/tool-use/Sharing a draft of Personal Agent Protocol.md>) · `tool-use` · sierra
   Sierra publishes a draft spec of Personal Agent Protocol (Poppy), defining five building blocks - discovery via a well-known poppy.json file, guest/identified sessions, OAuth-based sign-in with scoped tokens, a single cross-channel session token, and per-channel task completion over OpenAPI/MCP/website - for how personal agents authenticate and act on a customer's behalf across a business's site, APIs, or own agent.
 - **2026-10-06** — [Introducing Personal Agent Protocol](<../agents/tool-use/Introducing Personal Agent Protocol.md>) · `tool-use` · sierra

@@ -1,7 +1,9 @@
 # inference
 
-147 articles.
+148 articles.
 
+- **2026-10-13** — [Delivering real-time text-to-speech with Gradium](<optimization/Delivering real-time text-to-speech with Gradium.md>) · `optimization` · baseten
+  Gradium TTS reaches a 214ms median time-to-first-audio using Kyutai's Delayed Streams Modeling (a temporal 'reader' transformer plus a depth 'refiner' transformer running every 80ms), combined with torch.compile/Triton kernel fusion and CUDA Graphs to keep the CPU from bottlenecking small, latency-sensitive GPU kernels.
 - **2026-10-12** — [Endpoint Candidates: evaluate and promote inference endpoints | Modal Blog](<serving/Endpoint Candidates evaluate and promote inference endpoints Modal Blog.md>) · `serving` · modal
   Modal's Endpoint Candidates feature lets teams stage alternate inference deployments, mirror a sample of production traffic to them, and compare latency, throughput, and cost before promoting a candidate; it extends a Pingora-based proxy with per-candidate bounded buffers and a shared chunk-count budget so slow or failing mirrors are cancelled instead of blocking production requests.
 - **2026-10-09** — [What makes a high-quality NVFP4 quantization?](<quantization/What makes a high-quality NVFP4 quantization.md>) · `quantization` · baseten
@@ -299,6 +301,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-10-13** — [Toward RL on mixed-precision, mixed-accelerator samplers](<../models/reinforcement-learning/Toward RL on mixed-precision, mixed-accelerator samplers.md>) · `reinforcement-learning` · modal
+  Modal trains Qwen3.6-35B-A3B on agentic coding (SWE-bench Pro V2) with fully asynchronous RL across six heterogeneous accelerator/precision combinations (B200/B300 NVFP4, H100/H200 FP8, A100/RTX PRO 6000 BF16) using masked importance sampling and other off-policy corrections to keep training stable despite the training-inference mismatch.
 - **2026-10-01** — [Modal Clusters are generally available](<../infra-platform/gpu-clusters/Modal Clusters are generally available.md>) · `gpu-clusters` · modal
   Modal Clusters reach GA via a `@modal.clustered` decorator, offering gang-scheduled multi-node GPU jobs with RDMA at up to 6.4 Tbps; cites GLM 4.7 weight sync (~717GB BF16, under 2s over RDMA vs ~2min over 50Gbps TCP) and PD-disaggregated KV-cache transfer for Llama 3.1 70B as motivating workloads.
 - **2026-09-30** — [Reinforcement learning: Why alignment of numerics and MoE routing matter](<../models/reinforcement-learning/Reinforcement learning Why alignment of numerics and MoE routing matter.md>) · `reinforcement-learning` · fireworks
