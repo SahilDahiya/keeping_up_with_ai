@@ -1,10 +1,16 @@
 ---
 title: Maintaining software with the GPT-6 family | OpenAI Developers
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: product-engineering
+subtopic: case-studies
+secondary_topics:
+- agents/tool-use
+- infra-platform/cost
+summary: OpenAI's Core Experimentation team used GPT-6 Astra and the cheaper GPT-6.1
+  Sol in Codex to find and remove dead code and stale feature-flag experiments across
+  a 1M-line codebase, merging 1,400+ PRs (800k lines deleted, one image shrinking
+  3.31GB to 1.72GB) and cutting CI time from ~10min to 4.5min; they report GPT-6.1
+  Sol Ultra matched 92% of Astra Ultra's findings at 14% of the API cost.
 triage: null
 skip_reason: null
 source: openai-devs
@@ -12,7 +18,7 @@ url: https://developers.openai.com/blog/maintaining-software-with-the-gpt-6-fami
 author: null
 published: '2026-10-14'
 fetched: '2026-10-15T06:10:52Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1496
 content_sha256: 62bf5d7f5b49b356b98d3a8b89fdb8552bcc5331c396d4029f68d8a25e176899

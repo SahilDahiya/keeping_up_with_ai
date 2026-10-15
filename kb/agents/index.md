@@ -229,6 +229,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-10-14** — [Maintaining software with the GPT-6 family | OpenAI Developers](<../product-engineering/case-studies/Maintaining software with the GPT-6 family OpenAI Developers.md>) · `case-studies` · openai-devs
+  OpenAI's Core Experimentation team used GPT-6 Astra and the cheaper GPT-6.1 Sol in Codex to find and remove dead code and stale feature-flag experiments across a 1M-line codebase, merging 1,400+ PRs (800k lines deleted, one image shrinking 3.31GB to 1.72GB) and cutting CI time from ~10min to 4.5min; they report GPT-6.1 Sol Ultra matched 92% of Astra Ultra's findings at 14% of the API cost.
 - **2026-10-08** — [The model that didn't exist, so you made it yourself](<../prompt-engineering/context-engineering/The model that didn't exist, so you made it yourself.md>) · `context-engineering` · huggingface
   Hugging Face walkthrough of prompting the autonomous 'ML Intern' agent to plan, budget, train, and publish models: distilling Qwen-Image 2.1's 9B prompt rewriter into a 0.8B CPU model (99.7% valid-output rate, $16 compute) and fine-tuning Qwen3.5-2B for citrus disease diagnosis (14.9% to 52.8% accuracy, $1.90), with prompt patterns for baseline checks, smoke tests, verified-facts context, and hard spending caps.
 - **2026-10-07** — [Caller ID in the age of agents](<../product-engineering/security/Caller ID in the age of agents.md>) · `security` · sierra

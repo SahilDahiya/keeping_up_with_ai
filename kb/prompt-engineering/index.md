@@ -53,6 +53,8 @@
 
 - **2026-09-29** — [Pydantic AI agents on Jev, traced in Logfire](<../evals-observability/tracing/Pydantic AI agents on Jev, traced in Logfire.md>) · `tracing` · pydantic
   Pydantic AI 2.50.0 adds a DecisionModel base class so agents can run classification-style steps (bool/Literal/rubric outputs) on TypeSafe's Jev model instead of an LLM, and a new 'decide' span records each question, answer probability, and routing decision, which Logfire's Live view now renders as a Classifier output panel.
+- **2026-09-10** — [Introducing Custom UI Components | Cresta](<../product-engineering/ux-patterns/Introducing Custom UI Components Cresta.md>) · `ux-patterns` · cresta
+  Cresta's AI Agent now generates task-specific interactive UI components (calendars, seat maps, running-total pickers) from a natural-language spec built in its Conductor engine, instead of answering every request with text; component actions are also logged as plain text so handoffs to humans or other systems stay intact.
 - **2026-09-09** — [The Open Source AI Stack](<../agents/harness/The Open Source AI Stack.md>) · `harness` · together
   Together AI outlines the 'MIGHT stack' for building coding agents on open models: choosing model size (e.g. Kimi K3 vs. GLM 5.3 Flash), inference providers, gateways/routers (OpenRouter, Vercel AI Gateway, LiteLLM), harnesses (PI, OpenCode, Amp), and tools (skills, MCP), plus guidance on managing context and starting fresh sessions to avoid degraded agent output.
 - **2026-09-03** — [Fine-tuning a 350M Model for Better Structured Outputs in 100 GRPO Steps](<../models/reinforcement-learning/Fine-tuning a 350M Model for Better Structured Outputs in 100 GRPO Steps.md>) · `reinforcement-learning` · huggingface

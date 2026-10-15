@@ -1,10 +1,14 @@
 ---
 title: Introducing Custom UI Components | Cresta
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: product-engineering
+subtopic: ux-patterns
+secondary_topics:
+- prompt-engineering/structured-output
+summary: Cresta's AI Agent now generates task-specific interactive UI components (calendars,
+  seat maps, running-total pickers) from a natural-language spec built in its Conductor
+  engine, instead of answering every request with text; component actions are also
+  logged as plain text so handoffs to humans or other systems stay intact.
 triage: null
 skip_reason: null
 source: cresta
@@ -12,7 +16,7 @@ url: https://cresta.com/blog/solving-chats-tl-dr-problem-introducing-custom-ui-c
 author: Ping Wu
 published: '2026-09-10'
 fetched: '2026-10-15T06:10:42Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 999
 content_sha256: b1cb053c2d94028625fb0061d5db5e6f14a3de16ea459cb4f926a259eb66c4c7

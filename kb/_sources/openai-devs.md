@@ -1,7 +1,9 @@
 # openai-devs
 
-25 articles.
+26 articles.
 
+- **2026-10-14** — [Maintaining software with the GPT-6 family | OpenAI Developers](<../product-engineering/case-studies/Maintaining software with the GPT-6 family OpenAI Developers.md>) · `case-studies` · openai-devs
+  OpenAI's Core Experimentation team used GPT-6 Astra and the cheaper GPT-6.1 Sol in Codex to find and remove dead code and stale feature-flag experiments across a 1M-line codebase, merging 1,400+ PRs (800k lines deleted, one image shrinking 3.31GB to 1.72GB) and cutting CI time from ~10min to 4.5min; they report GPT-6.1 Sol Ultra matched 92% of Astra Ultra's findings at 14% of the API cost.
 - **2026-09-23** — [Bringing my LED display to life with GPT-Live-1 and Codex | OpenAI Developers](<../product-engineering/case-studies/Bringing my LED display to life with GPT-Live-1 and Codex OpenAI Developers.md>) · `case-studies` · openai-devs
   An OpenAI engineer documents building a voice-controlled LED wall display on a Raspberry Pi, splitting the system into a GPT-Live-1 full-duplex voice service (WebRTC echo cancellation, wake/sleep handling) and a separate renderer service that streams sanitized weather/calendar/transit frames over DDP, with Codex assisting throughout on hardware bring-up, the HUB75/ESP32 panel controller, and the migration off a laptop.
 - **2026-09-11** — [Rethinking skills and prompts for GPT-6 Astra | OpenAI Developers](<../prompt-engineering/context-engineering/Rethinking skills and prompts for GPT-6 Astra OpenAI Developers.md>) · `context-engineering` · openai-devs

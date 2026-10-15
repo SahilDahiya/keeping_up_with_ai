@@ -1,7 +1,9 @@
 # product-engineering
 
-72 articles.
+74 articles.
 
+- **2026-10-14** — [Maintaining software with the GPT-6 family | OpenAI Developers](<case-studies/Maintaining software with the GPT-6 family OpenAI Developers.md>) · `case-studies` · openai-devs
+  OpenAI's Core Experimentation team used GPT-6 Astra and the cheaper GPT-6.1 Sol in Codex to find and remove dead code and stale feature-flag experiments across a 1M-line codebase, merging 1,400+ PRs (800k lines deleted, one image shrinking 3.31GB to 1.72GB) and cutting CI time from ~10min to 4.5min; they report GPT-6.1 Sol Ultra matched 92% of Astra Ultra's findings at 14% of the API cost.
 - **2026-10-13** — [Redesigning source control at Anthropic](<architecture/Redesigning source control at Anthropic.md>) · `architecture` · anthropic-engineering
   Anthropic replaced git with Scion, an in-house, server-centric version control system built for agents that are always online, after merge rate grew from 2,500 to 30,000 code changes/day; the migration cut source-control infrastructure footprint 200x and sped CI checkouts by two orders of magnitude.
 - **2026-10-12** — [Introducing Cresta Sentry-0.1](<case-studies/Introducing Cresta Sentry-0.1.md>) · `case-studies` · cresta
@@ -20,6 +22,8 @@
   An OpenAI engineer documents building a voice-controlled LED wall display on a Raspberry Pi, splitting the system into a GPT-Live-1 full-duplex voice service (WebRTC echo cancellation, wake/sleep handling) and a separate renderer service that streams sanitized weather/calendar/transit frames over DDP, with Codex assisting throughout on hardware bring-up, the HUB75/ESP32 panel controller, and the migration off a laptop.
 - **2026-09-17** — [What 1M+ Conversations Reveal About What to Automate First in Hospitality CX](<case-studies/What 1M+ Conversations Reveal About What to Automate First in Hospitality CX.md>) · `case-studies` · cresta
   Cresta analyzed 1M+ travel/hospitality contact-center conversations to build an 'Automation Readiness' score combining resolution rate, handle time, flow structure (5-7 phases, 14-16 steps), deviation rate, and tool complexity (1-3 tools), finding high deviation rates often reflect off-topic chatter or transfers rather than broken workflows, and that the highest-volume automation candidate (Booking & Reservation Changes, ~45% of volume) differs from the highest-scoring one (Seat & Cabin Management).
+- **2026-09-10** — [Introducing Custom UI Components | Cresta](<ux-patterns/Introducing Custom UI Components Cresta.md>) · `ux-patterns` · cresta
+  Cresta's AI Agent now generates task-specific interactive UI components (calendars, seat maps, running-total pickers) from a natural-language spec built in its Conductor engine, instead of answering every request with text; component actions are also logged as plain text so handoffs to humans or other systems stay intact.
 - **2026-09-03** — [Part I: Replacing FinServ IVRs with an AI Agent: A 3-Phase Playbook](<case-studies/Part I Replacing FinServ IVRs with an AI Agent A 3-Phase Playbook.md>) · `case-studies` · cresta
   Cresta's playbook for replacing financial-services IVR phone trees with an AI agent: how to measure call containment honestly (exclude after-hours artifacts, don't count abandoned calls as containment, watch composition not just the headline number), and why phased, blast-radius-limited rollouts with shadow testing and UAT beat a single big-bang launch, typically lifting containment from a 20-30% IVR baseline to ~40% after replacement and 60-85% in later phases.
 - **2026-09-02** — [How Botika runs full-stack generative AI on Modal | Modal Blog](<case-studies/How Botika runs full-stack generative AI on Modal Modal Blog.md>) · `case-studies` · modal
