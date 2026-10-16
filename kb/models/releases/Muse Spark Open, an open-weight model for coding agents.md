@@ -1,10 +1,16 @@
 ---
 title: Muse Spark Open, an open-weight model for coding agents
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: models
+subtopic: releases
+secondary_topics:
+- inference/quantization
+- agents/tool-use
+summary: Baseten covers Meta's Muse Spark Open, an 816B-parameter (42.7B active) omnimodal
+  MoE coding-agent model, detailing its compressed MoE block and hybrid global/local
+  attention (46 local 2048-token sliding-window layers vs. 16 global layers) that
+  cuts KV-cache memory 3.7x at 128K context, plus the NVFP4 checkpoint that shrinks
+  weights from 1.6TB to 540GB for single-node serving.
 triage: null
 skip_reason: null
 source: baseten
@@ -12,7 +18,7 @@ url: https://www.baseten.co/blog/muse-spark-open-launch/
 author: Albert Lee; Pavel Belevich; Marylise Tauzia
 published: '2026-10-15'
 fetched: '2026-10-16T06:10:05Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1252
 content_sha256: 861b71725e986da8da4350ccda9e7a5808587499b1c646ba87816ec0403a8971

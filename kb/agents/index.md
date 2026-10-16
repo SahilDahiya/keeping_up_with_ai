@@ -229,6 +229,10 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-10-15** — [Announcing NVIDIA Nemotron 3.5 Super VL on Baseten](<../models/releases/Announcing NVIDIA Nemotron 3.5 Super VL on Baseten.md>) · `releases` · baseten
+  Baseten announces NVIDIA Nemotron 3.5 Super VL, a 120B-parameter MoE model (12B active) adding a vision encoder to the Nemotron 3 Super hybrid Mamba-Transformer architecture, with multi-token prediction and NVFP4 KV-cache quantization; it scores a 1190 Elo on GDPval versus 493 for the text-only predecessor.
+- **2026-10-15** — [Muse Spark Open, an open-weight model for coding agents](<../models/releases/Muse Spark Open, an open-weight model for coding agents.md>) · `releases` · baseten
+  Baseten covers Meta's Muse Spark Open, an 816B-parameter (42.7B active) omnimodal MoE coding-agent model, detailing its compressed MoE block and hybrid global/local attention (46 local 2048-token sliding-window layers vs. 16 global layers) that cuts KV-cache memory 3.7x at 128K context, plus the NVFP4 checkpoint that shrinks weights from 1.6TB to 540GB for single-node serving.
 - **2026-10-14** — [Maintaining software with the GPT-6 family | OpenAI Developers](<../product-engineering/case-studies/Maintaining software with the GPT-6 family OpenAI Developers.md>) · `case-studies` · openai-devs
   OpenAI's Core Experimentation team used GPT-6 Astra and the cheaper GPT-6.1 Sol in Codex to find and remove dead code and stale feature-flag experiments across a 1M-line codebase, merging 1,400+ PRs (800k lines deleted, one image shrinking 3.31GB to 1.72GB) and cutting CI time from ~10min to 4.5min; they report GPT-6.1 Sol Ultra matched 92% of Astra Ultra's findings at 14% of the API cost.
 - **2026-10-08** — [The model that didn't exist, so you made it yourself](<../prompt-engineering/context-engineering/The model that didn't exist, so you made it yourself.md>) · `context-engineering` · huggingface

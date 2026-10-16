@@ -1,10 +1,15 @@
 ---
 title: Announcing NVIDIA Nemotron 3.5 Super VL on Baseten
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: models
+subtopic: releases
+secondary_topics:
+- inference/quantization
+- agents/tool-use
+summary: Baseten announces NVIDIA Nemotron 3.5 Super VL, a 120B-parameter MoE model
+  (12B active) adding a vision encoder to the Nemotron 3 Super hybrid Mamba-Transformer
+  architecture, with multi-token prediction and NVFP4 KV-cache quantization; it scores
+  a 1190 Elo on GDPval versus 493 for the text-only predecessor.
 triage: null
 skip_reason: null
 source: baseten
@@ -12,7 +17,7 @@ url: https://www.baseten.co/blog/nvidia-nemotron-35-super-vl-launch/
 author: Albert Lee; Kenzie Amack
 published: '2026-10-15'
 fetched: '2026-10-16T06:10:07Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 639
 content_sha256: d478d0fc0650316f28781501a23bad79e26401da258fb982a7b8240c84b3c63a

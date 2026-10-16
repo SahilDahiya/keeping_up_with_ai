@@ -1,7 +1,11 @@
 # baseten
 
-95 articles.
+97 articles.
 
+- **2026-10-15** — [Announcing NVIDIA Nemotron 3.5 Super VL on Baseten](<../models/releases/Announcing NVIDIA Nemotron 3.5 Super VL on Baseten.md>) · `releases` · baseten
+  Baseten announces NVIDIA Nemotron 3.5 Super VL, a 120B-parameter MoE model (12B active) adding a vision encoder to the Nemotron 3 Super hybrid Mamba-Transformer architecture, with multi-token prediction and NVFP4 KV-cache quantization; it scores a 1190 Elo on GDPval versus 493 for the text-only predecessor.
+- **2026-10-15** — [Muse Spark Open, an open-weight model for coding agents](<../models/releases/Muse Spark Open, an open-weight model for coding agents.md>) · `releases` · baseten
+  Baseten covers Meta's Muse Spark Open, an 816B-parameter (42.7B active) omnimodal MoE coding-agent model, detailing its compressed MoE block and hybrid global/local attention (46 local 2048-token sliding-window layers vs. 16 global layers) that cuts KV-cache memory 3.7x at 128K context, plus the NVFP4 checkpoint that shrinks weights from 1.6TB to 540GB for single-node serving.
 - **2026-10-13** — [Delivering real-time text-to-speech with Gradium](<../inference/optimization/Delivering real-time text-to-speech with Gradium.md>) · `optimization` · baseten
   Gradium TTS reaches a 214ms median time-to-first-audio using Kyutai's Delayed Streams Modeling (a temporal 'reader' transformer plus a depth 'refiner' transformer running every 80ms), combined with torch.compile/Triton kernel fusion and CUDA Graphs to keep the CPU from bottlenecking small, latency-sensitive GPU kernels.
 - **2026-10-09** — [What makes a high-quality NVFP4 quantization?](<../inference/quantization/What makes a high-quality NVFP4 quantization.md>) · `quantization` · baseten

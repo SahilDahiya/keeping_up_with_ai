@@ -301,6 +301,10 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-10-15** — [Announcing NVIDIA Nemotron 3.5 Super VL on Baseten](<../models/releases/Announcing NVIDIA Nemotron 3.5 Super VL on Baseten.md>) · `releases` · baseten
+  Baseten announces NVIDIA Nemotron 3.5 Super VL, a 120B-parameter MoE model (12B active) adding a vision encoder to the Nemotron 3 Super hybrid Mamba-Transformer architecture, with multi-token prediction and NVFP4 KV-cache quantization; it scores a 1190 Elo on GDPval versus 493 for the text-only predecessor.
+- **2026-10-15** — [Muse Spark Open, an open-weight model for coding agents](<../models/releases/Muse Spark Open, an open-weight model for coding agents.md>) · `releases` · baseten
+  Baseten covers Meta's Muse Spark Open, an 816B-parameter (42.7B active) omnimodal MoE coding-agent model, detailing its compressed MoE block and hybrid global/local attention (46 local 2048-token sliding-window layers vs. 16 global layers) that cuts KV-cache memory 3.7x at 128K context, plus the NVFP4 checkpoint that shrinks weights from 1.6TB to 540GB for single-node serving.
 - **2026-10-13** — [Toward RL on mixed-precision, mixed-accelerator samplers](<../models/reinforcement-learning/Toward RL on mixed-precision, mixed-accelerator samplers.md>) · `reinforcement-learning` · modal
   Modal trains Qwen3.6-35B-A3B on agentic coding (SWE-bench Pro V2) with fully asynchronous RL across six heterogeneous accelerator/precision combinations (B200/B300 NVFP4, H100/H200 FP8, A100/RTX PRO 6000 BF16) using masked importance sampling and other off-policy corrections to keep training stable despite the training-inference mismatch.
 - **2026-10-01** — [Modal Clusters are generally available](<../infra-platform/gpu-clusters/Modal Clusters are generally available.md>) · `gpu-clusters` · modal
