@@ -1,7 +1,9 @@
 # models
 
-209 articles.
+210 articles.
 
+- **2026-10-16** — [Welcome Beam: a 501B open model you can own, customize, and scale](<architectures/Welcome Beam a 501B open model you can own, customize, and scale.md>) · `architectures` · huggingface
+  Deep architecture writeup of Reflection's Beam-1.0-501B-A23B (23B active, 1M-token context, Apache 2.0): hybrid sliding-window/global attention with scalable-softmax query scaling, DeepSeek-V3-style grouped routing across 256 experts, and a depth-scaled 1/sqrt(k) residual stream; ships NVFP4/FP8/BF16 checkpoints, day-0 transformers/vLLM/SGLang support, and SWE-Bench/AIME/GPQA benchmark results.
 - **2026-10-15** — [Announcing NVIDIA Nemotron 3.5 Super VL on Baseten](<releases/Announcing NVIDIA Nemotron 3.5 Super VL on Baseten.md>) · `releases` · baseten
   Baseten announces NVIDIA Nemotron 3.5 Super VL, a 120B-parameter MoE model (12B active) adding a vision encoder to the Nemotron 3 Super hybrid Mamba-Transformer architecture, with multi-token prediction and NVFP4 KV-cache quantization; it scores a 1190 Elo on GDPval versus 493 for the text-only predecessor.
 - **2026-10-15** — [Muse Spark Open, an open-weight model for coding agents](<releases/Muse Spark Open, an open-weight model for coding agents.md>) · `releases` · baseten

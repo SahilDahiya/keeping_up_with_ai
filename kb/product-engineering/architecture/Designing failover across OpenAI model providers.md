@@ -1,10 +1,15 @@
 ---
 title: Designing failover across OpenAI model providers
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: product-engineering
+subtopic: architecture
+secondary_topics:
+- infra-platform/deployment
+summary: 'OpenAI''s framework for validated failover between direct (1P) API access
+  and third-party (3P) providers like Bedrock or Azure OpenAI for critical financial
+  and payments workloads: which operations are safe to retry, circuit breakers, shared
+  retry budgets, private-connectivity and data-residency checks, and a Codex prompt
+  for implementing a disabled-by-default failover policy in an existing LLM gateway.'
 triage: null
 skip_reason: null
 source: openai-devs
@@ -12,7 +17,7 @@ url: https://developers.openai.com/blog/designing-failover-across-openai-model-p
 author: null
 published: '2026-10-14'
 fetched: '2026-10-17T06:08:42Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 2444
 content_sha256: bb33ecc7183becc1faf34aa56e125e5bb42d2306907508c7b93ad0b738d784a1

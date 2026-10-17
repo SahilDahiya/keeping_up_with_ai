@@ -1,7 +1,9 @@
 # huggingface
 
-174 articles.
+175 articles.
 
+- **2026-10-16** — [Welcome Beam: a 501B open model you can own, customize, and scale](<../models/architectures/Welcome Beam a 501B open model you can own, customize, and scale.md>) · `architectures` · huggingface
+  Deep architecture writeup of Reflection's Beam-1.0-501B-A23B (23B active, 1M-token context, Apache 2.0): hybrid sliding-window/global attention with scalable-softmax query scaling, DeepSeek-V3-style grouped routing across 256 experts, and a depth-scaled 1/sqrt(k) residual stream; ships NVFP4/FP8/BF16 checkpoints, day-0 transformers/vLLM/SGLang support, and SWE-Bench/AIME/GPQA benchmark results.
 - **2026-10-08** — [The model that didn't exist, so you made it yourself](<../prompt-engineering/context-engineering/The model that didn't exist, so you made it yourself.md>) · `context-engineering` · huggingface
   Hugging Face walkthrough of prompting the autonomous 'ML Intern' agent to plan, budget, train, and publish models: distilling Qwen-Image 2.1's 9B prompt rewriter into a 0.8B CPU model (99.7% valid-output rate, $16 compute) and fine-tuning Qwen3.5-2B for citrus disease diagnosis (14.9% to 52.8% accuracy, $1.90), with prompt patterns for baseline checks, smoke tests, verified-facts context, and hard spending caps.
 - **2026-09-30** — [Open TTS Leaderboard: Scalable Evaluation for Multilingual Text-to-Speech and Voice Cloning](<../evals-observability/benchmark-design/Open TTS Leaderboard Scalable Evaluation for Multilingual Text-to-Speech and Voice Cloning.md>) · `benchmark-design` · huggingface

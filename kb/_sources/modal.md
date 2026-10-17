@@ -1,7 +1,9 @@
 # modal
 
-45 articles.
+46 articles.
 
+- **2026-10-16** — [Building fast filesystems for VMs](<../inference/optimization/Building fast filesystems for VMs.md>) · `optimization` · modal
+  Modal's engineering postmortem on VM Sandbox filesystem performance: routing its ImageFS layer through virtio-fs made `chown` 6x slower (three guest-host FUSE round trips) and `pnpm install`/`bun install` 3x slower, so they built ImageFS-blk, a virtio-blk backend that lazily materializes ext4 metadata and serves blocks directly from the guest kernel, cutting `bun install` from 12.5s to 1.07s while keeping sub-second cold starts.
 - **2026-10-13** — [Toward RL on mixed-precision, mixed-accelerator samplers](<../models/reinforcement-learning/Toward RL on mixed-precision, mixed-accelerator samplers.md>) · `reinforcement-learning` · modal
   Modal trains Qwen3.6-35B-A3B on agentic coding (SWE-bench Pro V2) with fully asynchronous RL across six heterogeneous accelerator/precision combinations (B200/B300 NVFP4, H100/H200 FP8, A100/RTX PRO 6000 BF16) using masked importance sampling and other off-policy corrections to keep training stable despite the training-inference mismatch.
 - **2026-10-12** — [Endpoint Candidates: evaluate and promote inference endpoints | Modal Blog](<../inference/serving/Endpoint Candidates evaluate and promote inference endpoints Modal Blog.md>) · `serving` · modal

@@ -229,6 +229,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-10-16** — [Building fast filesystems for VMs](<../inference/optimization/Building fast filesystems for VMs.md>) · `optimization` · modal
+  Modal's engineering postmortem on VM Sandbox filesystem performance: routing its ImageFS layer through virtio-fs made `chown` 6x slower (three guest-host FUSE round trips) and `pnpm install`/`bun install` 3x slower, so they built ImageFS-blk, a virtio-blk backend that lazily materializes ext4 metadata and serves blocks directly from the guest kernel, cutting `bun install` from 12.5s to 1.07s while keeping sub-second cold starts.
 - **2026-10-15** — [Announcing NVIDIA Nemotron 3.5 Super VL on Baseten](<../models/releases/Announcing NVIDIA Nemotron 3.5 Super VL on Baseten.md>) · `releases` · baseten
   Baseten announces NVIDIA Nemotron 3.5 Super VL, a 120B-parameter MoE model (12B active) adding a vision encoder to the Nemotron 3 Super hybrid Mamba-Transformer architecture, with multi-token prediction and NVFP4 KV-cache quantization; it scores a 1190 Elo on GDPval versus 493 for the text-only predecessor.
 - **2026-10-15** — [Muse Spark Open, an open-weight model for coding agents](<../models/releases/Muse Spark Open, an open-weight model for coding agents.md>) · `releases` · baseten

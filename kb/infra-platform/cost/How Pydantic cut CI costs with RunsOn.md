@@ -1,10 +1,15 @@
 ---
 title: How Pydantic cut CI costs with RunsOn
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: infra-platform
+subtopic: cost
+secondary_topics:
+- product-engineering/case-studies
+summary: 'Pydantic/Logfire cut monthly CI costs from $18,200 (August 2026) to $5,700
+  (September) by moving GitHub Actions to RunsOn''s ephemeral EC2 runners: Spot instances
+  for interruption-tolerant jobs, On-Demand for merge-queue/release paths, and Graviton
+  ARM runners for most Python/TypeScript/agentic jobs, even as runner-minutes kept
+  climbing with AI-driven PR volume (2,032 PRs merged in August vs. 365 a year earlier).'
 triage: null
 skip_reason: null
 source: pydantic
@@ -12,7 +17,7 @@ url: https://pydantic.dev/articles/ai-oh-my-ci
 author: Bill Easton
 published: '2026-10-16'
 fetched: '2026-10-17T06:14:36Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 725
 content_sha256: 45d49681d8ca21834bbcd4ffc8fc6db94e18bfce2e28829ed6f2895e80b0cf98

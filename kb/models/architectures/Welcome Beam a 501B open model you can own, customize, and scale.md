@@ -1,10 +1,16 @@
 ---
 title: 'Welcome Beam: a 501B open model you can own, customize, and scale'
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: models
+subtopic: architectures
+secondary_topics:
+- inference/quantization
+- inference/speculative-decoding
+summary: 'Deep architecture writeup of Reflection''s Beam-1.0-501B-A23B (23B active,
+  1M-token context, Apache 2.0): hybrid sliding-window/global attention with scalable-softmax
+  query scaling, DeepSeek-V3-style grouped routing across 256 experts, and a depth-scaled
+  1/sqrt(k) residual stream; ships NVFP4/FP8/BF16 checkpoints, day-0 transformers/vLLM/SGLang
+  support, and SWE-Bench/AIME/GPQA benchmark results.'
 triage: null
 skip_reason: null
 source: huggingface
@@ -12,7 +18,7 @@ url: https://huggingface.co/blog/reflection-beam
 author: Ben Burtenshaw; Merve; Pedro Cuenca
 published: '2026-10-16'
 fetched: '2026-10-17T06:14:30Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 4531
 content_sha256: c5636c0e9a7a674b190ea346b6dd7cc83502ef1a0ba91044ef174c912d22fe22

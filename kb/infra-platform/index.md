@@ -1,7 +1,9 @@
 # infra-platform
 
-51 articles.
+52 articles.
 
+- **2026-10-16** — [How Pydantic cut CI costs with RunsOn](<cost/How Pydantic cut CI costs with RunsOn.md>) · `cost` · pydantic
+  Pydantic/Logfire cut monthly CI costs from $18,200 (August 2026) to $5,700 (September) by moving GitHub Actions to RunsOn's ephemeral EC2 runners: Spot instances for interruption-tolerant jobs, On-Demand for merge-queue/release paths, and Graviton ARM runners for most Python/TypeScript/agentic jobs, even as runner-minutes kept climbing with AI-driven PR volume (2,032 PRs merged in August vs. 365 a year earlier).
 - **2026-10-01** — [VM Sandboxes: Full computers for agents | Modal Blog](<deployment/VM Sandboxes Full computers for agents Modal Blog.md>) · `deployment` · modal
   Modal ships VM Sandboxes, a Cloud Hypervisor-based runtime giving agents a full Linux VM (Docker-in-Docker, kernel access) while keeping the existing Sandbox API and sub-second cold starts; covers customer use at Linear (cgroups/network namespaces for Coding Sessions) after 20M+ VMs launched in early access.
 - **2026-10-01** — [Modal Clusters are generally available](<gpu-clusters/Modal Clusters are generally available.md>) · `gpu-clusters` · modal
@@ -107,6 +109,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-10-14** — [Designing failover across OpenAI model providers](<../product-engineering/architecture/Designing failover across OpenAI model providers.md>) · `architecture` · openai-devs
+  OpenAI's framework for validated failover between direct (1P) API access and third-party (3P) providers like Bedrock or Azure OpenAI for critical financial and payments workloads: which operations are safe to retry, circuit breakers, shared retry budgets, private-connectivity and data-residency checks, and a Codex prompt for implementing a disabled-by-default failover policy in an existing LLM gateway.
 - **2026-10-14** — [Maintaining software with the GPT-6 family | OpenAI Developers](<../product-engineering/case-studies/Maintaining software with the GPT-6 family OpenAI Developers.md>) · `case-studies` · openai-devs
   OpenAI's Core Experimentation team used GPT-6 Astra and the cheaper GPT-6.1 Sol in Codex to find and remove dead code and stale feature-flag experiments across a 1M-line codebase, merging 1,400+ PRs (800k lines deleted, one image shrinking 3.31GB to 1.72GB) and cutting CI time from ~10min to 4.5min; they report GPT-6.1 Sol Ultra matched 92% of Astra Ultra's findings at 14% of the API cost.
 - **2026-10-13** — [Toward RL on mixed-precision, mixed-accelerator samplers](<../models/reinforcement-learning/Toward RL on mixed-precision, mixed-accelerator samplers.md>) · `reinforcement-learning` · modal

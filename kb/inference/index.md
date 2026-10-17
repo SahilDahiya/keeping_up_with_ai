@@ -1,7 +1,9 @@
 # inference
 
-148 articles.
+149 articles.
 
+- **2026-10-16** — [Building fast filesystems for VMs](<optimization/Building fast filesystems for VMs.md>) · `optimization` · modal
+  Modal's engineering postmortem on VM Sandbox filesystem performance: routing its ImageFS layer through virtio-fs made `chown` 6x slower (three guest-host FUSE round trips) and `pnpm install`/`bun install` 3x slower, so they built ImageFS-blk, a virtio-blk backend that lazily materializes ext4 metadata and serves blocks directly from the guest kernel, cutting `bun install` from 12.5s to 1.07s while keeping sub-second cold starts.
 - **2026-10-13** — [Delivering real-time text-to-speech with Gradium](<optimization/Delivering real-time text-to-speech with Gradium.md>) · `optimization` · baseten
   Gradium TTS reaches a 214ms median time-to-first-audio using Kyutai's Delayed Streams Modeling (a temporal 'reader' transformer plus a depth 'refiner' transformer running every 80ms), combined with torch.compile/Triton kernel fusion and CUDA Graphs to keep the CPU from bottlenecking small, latency-sensitive GPU kernels.
 - **2026-10-12** — [Endpoint Candidates: evaluate and promote inference endpoints | Modal Blog](<serving/Endpoint Candidates evaluate and promote inference endpoints Modal Blog.md>) · `serving` · modal
@@ -301,6 +303,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-10-16** — [Welcome Beam: a 501B open model you can own, customize, and scale](<../models/architectures/Welcome Beam a 501B open model you can own, customize, and scale.md>) · `architectures` · huggingface
+  Deep architecture writeup of Reflection's Beam-1.0-501B-A23B (23B active, 1M-token context, Apache 2.0): hybrid sliding-window/global attention with scalable-softmax query scaling, DeepSeek-V3-style grouped routing across 256 experts, and a depth-scaled 1/sqrt(k) residual stream; ships NVFP4/FP8/BF16 checkpoints, day-0 transformers/vLLM/SGLang support, and SWE-Bench/AIME/GPQA benchmark results.
 - **2026-10-15** — [Announcing NVIDIA Nemotron 3.5 Super VL on Baseten](<../models/releases/Announcing NVIDIA Nemotron 3.5 Super VL on Baseten.md>) · `releases` · baseten
   Baseten announces NVIDIA Nemotron 3.5 Super VL, a 120B-parameter MoE model (12B active) adding a vision encoder to the Nemotron 3 Super hybrid Mamba-Transformer architecture, with multi-token prediction and NVFP4 KV-cache quantization; it scores a 1190 Elo on GDPval versus 493 for the text-only predecessor.
 - **2026-10-15** — [Muse Spark Open, an open-weight model for coding agents](<../models/releases/Muse Spark Open, an open-weight model for coding agents.md>) · `releases` · baseten

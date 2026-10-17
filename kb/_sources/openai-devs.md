@@ -1,7 +1,9 @@
 # openai-devs
 
-26 articles.
+27 articles.
 
+- **2026-10-14** — [Designing failover across OpenAI model providers](<../product-engineering/architecture/Designing failover across OpenAI model providers.md>) · `architecture` · openai-devs
+  OpenAI's framework for validated failover between direct (1P) API access and third-party (3P) providers like Bedrock or Azure OpenAI for critical financial and payments workloads: which operations are safe to retry, circuit breakers, shared retry budgets, private-connectivity and data-residency checks, and a Codex prompt for implementing a disabled-by-default failover policy in an existing LLM gateway.
 - **2026-10-14** — [Maintaining software with the GPT-6 family | OpenAI Developers](<../product-engineering/case-studies/Maintaining software with the GPT-6 family OpenAI Developers.md>) · `case-studies` · openai-devs
   OpenAI's Core Experimentation team used GPT-6 Astra and the cheaper GPT-6.1 Sol in Codex to find and remove dead code and stale feature-flag experiments across a 1M-line codebase, merging 1,400+ PRs (800k lines deleted, one image shrinking 3.31GB to 1.72GB) and cutting CI time from ~10min to 4.5min; they report GPT-6.1 Sol Ultra matched 92% of Astra Ultra's findings at 14% of the API cost.
 - **2026-09-23** — [Bringing my LED display to life with GPT-Live-1 and Codex | OpenAI Developers](<../product-engineering/case-studies/Bringing my LED display to life with GPT-Live-1 and Codex OpenAI Developers.md>) · `case-studies` · openai-devs

@@ -1,10 +1,17 @@
 ---
 title: Building fast filesystems for VMs
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: inference
+subtopic: optimization
+secondary_topics:
+- agents/computer-use
+- product-engineering/architecture
+summary: 'Modal''s engineering postmortem on VM Sandbox filesystem performance: routing
+  its ImageFS layer through virtio-fs made `chown` 6x slower (three guest-host FUSE
+  round trips) and `pnpm install`/`bun install` 3x slower, so they built ImageFS-blk,
+  a virtio-blk backend that lazily materializes ext4 metadata and serves blocks directly
+  from the guest kernel, cutting `bun install` from 12.5s to 1.07s while keeping sub-second
+  cold starts.'
 triage: null
 skip_reason: null
 source: modal
@@ -12,7 +19,7 @@ url: https://modal.com/blog/vm-sandbox-filesystem
 author: Nitin Maddi; Amit Prasad
 published: '2026-10-16'
 fetched: '2026-10-17T06:08:45Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1925
 content_sha256: 60d735a9efe77e9cdfdf549b921400006922eaf827bae652ef49fdc87885897d
