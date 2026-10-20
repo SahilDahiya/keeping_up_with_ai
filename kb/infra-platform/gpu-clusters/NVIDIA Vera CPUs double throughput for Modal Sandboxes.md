@@ -1,10 +1,15 @@
 ---
 title: NVIDIA Vera CPUs double throughput for Modal Sandboxes
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: infra-platform
+subtopic: gpu-clusters
+secondary_topics:
+- agents/computer-use
+- inference/hardware
+summary: Modal benchmarks NVIDIA's new Arm-compatible Vera CPU against Intel GNR,
+  AWS Graviton 4/5, and AMD Zen 5 for its multi-tenant Sandboxes product, finding
+  similar straight-line latency but roughly 2x throughput under concurrent load, which
+  matters for noisy-neighbor contention in bursty agent and RL-rollout workloads.
 triage: null
 skip_reason: null
 source: modal
@@ -12,7 +17,7 @@ url: https://modal.com/blog/nvidia-vera-sandboxes
 author: Erik Dunteman
 published: '2026-10-19'
 fetched: '2026-10-20T06:09:40Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1267
 content_sha256: 0dacdcbc011756372c1d4ecda41d8d3f3d6a7706e832015a6b30065bd6e4a0fe

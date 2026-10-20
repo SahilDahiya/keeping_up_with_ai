@@ -1,7 +1,9 @@
 # modal
 
-46 articles.
+47 articles.
 
+- **2026-10-19** — [NVIDIA Vera CPUs double throughput for Modal Sandboxes](<../infra-platform/gpu-clusters/NVIDIA Vera CPUs double throughput for Modal Sandboxes.md>) · `gpu-clusters` · modal
+  Modal benchmarks NVIDIA's new Arm-compatible Vera CPU against Intel GNR, AWS Graviton 4/5, and AMD Zen 5 for its multi-tenant Sandboxes product, finding similar straight-line latency but roughly 2x throughput under concurrent load, which matters for noisy-neighbor contention in bursty agent and RL-rollout workloads.
 - **2026-10-16** — [Building fast filesystems for VMs](<../inference/optimization/Building fast filesystems for VMs.md>) · `optimization` · modal
   Modal's engineering postmortem on VM Sandbox filesystem performance: routing its ImageFS layer through virtio-fs made `chown` 6x slower (three guest-host FUSE round trips) and `pnpm install`/`bun install` 3x slower, so they built ImageFS-blk, a virtio-blk backend that lazily materializes ext4 metadata and serves blocks directly from the guest kernel, cutting `bun install` from 12.5s to 1.07s while keeping sub-second cold starts.
 - **2026-10-13** — [Toward RL on mixed-precision, mixed-accelerator samplers](<../models/reinforcement-learning/Toward RL on mixed-precision, mixed-accelerator samplers.md>) · `reinforcement-learning` · modal

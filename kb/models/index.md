@@ -1,7 +1,9 @@
 # models
 
-210 articles.
+211 articles.
 
+- **2026-10-19** — [Together Post-Training: frontier-grade model shaping, the way that fits you](<reinforcement-learning/Together Post-Training frontier-grade model shaping, the way that fits you.md>) · `reinforcement-learning` · together
+  Together launches a post-training service giving dedicated GPU 'Model Resources' with separate Trainer/Generator instances for RL (GRPO, CISPO, DPPO) and SFT/LoRA, using Rollout Routing Replay and other numerics-alignment work to curb training/inference policy drift, plus multi-LoRA serving and FP4 merged inference for deployment.
 - **2026-10-16** — [Welcome Beam: a 501B open model you can own, customize, and scale](<architectures/Welcome Beam a 501B open model you can own, customize, and scale.md>) · `architectures` · huggingface
   Deep architecture writeup of Reflection's Beam-1.0-501B-A23B (23B active, 1M-token context, Apache 2.0): hybrid sliding-window/global attention with scalable-softmax query scaling, DeepSeek-V3-style grouped routing across 256 experts, and a depth-scaled 1/sqrt(k) residual stream; ships NVFP4/FP8/BF16 checkpoints, day-0 transformers/vLLM/SGLang support, and SWE-Bench/AIME/GPQA benchmark results.
 - **2026-10-15** — [Announcing NVIDIA Nemotron 3.5 Super VL on Baseten](<releases/Announcing NVIDIA Nemotron 3.5 Super VL on Baseten.md>) · `releases` · baseten

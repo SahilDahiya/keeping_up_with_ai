@@ -1,10 +1,15 @@
 ---
 title: 'Together Post-Training: frontier-grade model shaping, the way that fits you'
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: models
+subtopic: reinforcement-learning
+secondary_topics:
+- infra-platform/deployment
+- infra-platform/cost
+summary: Together launches a post-training service giving dedicated GPU 'Model Resources'
+  with separate Trainer/Generator instances for RL (GRPO, CISPO, DPPO) and SFT/LoRA,
+  using Rollout Routing Replay and other numerics-alignment work to curb training/inference
+  policy drift, plus multi-LoRA serving and FP4 merged inference for deployment.
 triage: null
 skip_reason: null
 source: together
@@ -16,7 +21,7 @@ author: Ivan Provilkov; Gleb Khaykin; Denis Mazur; Nikita Smetanin; Egor Timofee
   Fedorenko; Sonny Khan; David Wang; Jennifer Wu; Max Ryabinin
 published: '2026-10-19'
 fetched: '2026-10-20T06:09:38Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1877
 content_sha256: 033af8de343a3a93758a43f7db650106e9246e1204d88278b766667748135416

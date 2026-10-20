@@ -1,7 +1,9 @@
 # infra-platform
 
-52 articles.
+53 articles.
 
+- **2026-10-19** — [NVIDIA Vera CPUs double throughput for Modal Sandboxes](<gpu-clusters/NVIDIA Vera CPUs double throughput for Modal Sandboxes.md>) · `gpu-clusters` · modal
+  Modal benchmarks NVIDIA's new Arm-compatible Vera CPU against Intel GNR, AWS Graviton 4/5, and AMD Zen 5 for its multi-tenant Sandboxes product, finding similar straight-line latency but roughly 2x throughput under concurrent load, which matters for noisy-neighbor contention in bursty agent and RL-rollout workloads.
 - **2026-10-16** — [How Pydantic cut CI costs with RunsOn](<cost/How Pydantic cut CI costs with RunsOn.md>) · `cost` · pydantic
   Pydantic/Logfire cut monthly CI costs from $18,200 (August 2026) to $5,700 (September) by moving GitHub Actions to RunsOn's ephemeral EC2 runners: Spot instances for interruption-tolerant jobs, On-Demand for merge-queue/release paths, and Graviton ARM runners for most Python/TypeScript/agentic jobs, even as runner-minutes kept climbing with AI-driven PR volume (2,032 PRs merged in August vs. 365 a year earlier).
 - **2026-10-01** — [VM Sandboxes: Full computers for agents | Modal Blog](<deployment/VM Sandboxes Full computers for agents Modal Blog.md>) · `deployment` · modal
@@ -109,6 +111,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-10-19** — [Together Post-Training: frontier-grade model shaping, the way that fits you](<../models/reinforcement-learning/Together Post-Training frontier-grade model shaping, the way that fits you.md>) · `reinforcement-learning` · together
+  Together launches a post-training service giving dedicated GPU 'Model Resources' with separate Trainer/Generator instances for RL (GRPO, CISPO, DPPO) and SFT/LoRA, using Rollout Routing Replay and other numerics-alignment work to curb training/inference policy drift, plus multi-LoRA serving and FP4 merged inference for deployment.
 - **2026-10-14** — [Designing failover across OpenAI model providers](<../product-engineering/architecture/Designing failover across OpenAI model providers.md>) · `architecture` · openai-devs
   OpenAI's framework for validated failover between direct (1P) API access and third-party (3P) providers like Bedrock or Azure OpenAI for critical financial and payments workloads: which operations are safe to retry, circuit breakers, shared retry budgets, private-connectivity and data-residency checks, and a Codex prompt for implementing a disabled-by-default failover policy in an existing LLM gateway.
 - **2026-10-14** — [Maintaining software with the GPT-6 family | OpenAI Developers](<../product-engineering/case-studies/Maintaining software with the GPT-6 family OpenAI Developers.md>) · `case-studies` · openai-devs

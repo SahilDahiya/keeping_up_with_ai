@@ -303,6 +303,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-10-19** — [NVIDIA Vera CPUs double throughput for Modal Sandboxes](<../infra-platform/gpu-clusters/NVIDIA Vera CPUs double throughput for Modal Sandboxes.md>) · `gpu-clusters` · modal
+  Modal benchmarks NVIDIA's new Arm-compatible Vera CPU against Intel GNR, AWS Graviton 4/5, and AMD Zen 5 for its multi-tenant Sandboxes product, finding similar straight-line latency but roughly 2x throughput under concurrent load, which matters for noisy-neighbor contention in bursty agent and RL-rollout workloads.
 - **2026-10-16** — [Welcome Beam: a 501B open model you can own, customize, and scale](<../models/architectures/Welcome Beam a 501B open model you can own, customize, and scale.md>) · `architectures` · huggingface
   Deep architecture writeup of Reflection's Beam-1.0-501B-A23B (23B active, 1M-token context, Apache 2.0): hybrid sliding-window/global attention with scalable-softmax query scaling, DeepSeek-V3-style grouped routing across 256 experts, and a depth-scaled 1/sqrt(k) residual stream; ships NVFP4/FP8/BF16 checkpoints, day-0 transformers/vLLM/SGLang support, and SWE-Bench/AIME/GPQA benchmark results.
 - **2026-10-15** — [Announcing NVIDIA Nemotron 3.5 Super VL on Baseten](<../models/releases/Announcing NVIDIA Nemotron 3.5 Super VL on Baseten.md>) · `releases` · baseten

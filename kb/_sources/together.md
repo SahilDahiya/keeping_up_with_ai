@@ -1,7 +1,9 @@
 # together
 
-96 articles.
+97 articles.
 
+- **2026-10-19** — [Together Post-Training: frontier-grade model shaping, the way that fits you](<../models/reinforcement-learning/Together Post-Training frontier-grade model shaping, the way that fits you.md>) · `reinforcement-learning` · together
+  Together launches a post-training service giving dedicated GPU 'Model Resources' with separate Trainer/Generator instances for RL (GRPO, CISPO, DPPO) and SFT/LoRA, using Rollout Routing Replay and other numerics-alignment work to curb training/inference policy drift, plus multi-LoRA serving and FP4 merged inference for deployment.
 - **2026-09-23** — [How to train your own Jev for $17](<../models/fine-tuning/How to train your own Jev for $17.md>) · `fine-tuning` · together
   Together shows how to fine-tune your own Jev-style structured classifier for about $17 using the open-source tev1 repo, demonstrated by training together/Tev1-4B-experimental on Qwen3.5 4B and deploying it as a serverless API endpoint.
 - **2026-09-22** — [Canary rollouts: upgrade models in production without downtime](<../infra-platform/deployment/Canary rollouts upgrade models in production without downtime.md>) · `deployment` · together
