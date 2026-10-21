@@ -1,10 +1,14 @@
 ---
 title: Serverless routing made sticky | Modal Blog
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: infra-platform
+subtopic: deployment
+secondary_topics:
+- inference/serving
+summary: Describes Modal's Sticky Sessions, built on the fprs stateless proxy underlying
+  Modal Servers, which guarantees every request in a session lands on the same container
+  for stateful workloads like streaming STT and voice agents, replacing the max_containers=1
+  anti-pattern with session-based autoscaling.
 triage: null
 skip_reason: null
 source: modal
@@ -12,7 +16,7 @@ url: https://modal.com/blog/serverless-routing-made-sticky
 author: Siwon Park; Kartik Sinha; Kathir Meyyappan; Daniel Shaar
 published: '2026-10-20'
 fetched: '2026-10-21T06:10:23Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1150
 content_sha256: e5c56af9dce87eae26e90e2add41a48988f13f13ff8a0d7b2b6602e483ee8e42

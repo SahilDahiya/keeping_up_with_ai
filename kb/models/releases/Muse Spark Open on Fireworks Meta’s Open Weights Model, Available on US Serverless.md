@@ -1,10 +1,14 @@
 ---
 title: 'Muse Spark Open on Fireworks: Meta’s Open Weights Model, Available on US Serverless'
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: models
+subtopic: releases
+secondary_topics:
+- product-engineering/case-studies
+summary: Announces Meta's Muse Spark Open (816B-param MoE, 42B active params, 1M-token
+  context) on Fireworks serverless, reporting it ranks first on Harvey's Legal Agent
+  Benchmark and beats Claude Opus 5.5 on Rogo's Big Finance Bench, with 33% hallucination
+  rate on AA-Omniscience versus 59% for Opus 5.5.
 triage: null
 skip_reason: null
 source: fireworks
@@ -12,7 +16,7 @@ url: https://fireworks.ai/blog/meta-muse-spark-open
 author: null
 published: '2026-10-20'
 fetched: '2026-10-21T06:10:17Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 793
 content_sha256: 3d6ad052f5f07b7390ef8926dde9f4977c18dab332ced1f1705997584df9c038

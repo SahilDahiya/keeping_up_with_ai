@@ -229,6 +229,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-10-20** — [Why Voice and Chat AI Agents Should Behave Differently](<../product-engineering/architecture/Why Voice and Chat AI Agents Should Behave Differently.md>) · `architecture` · cresta
+  Argues voice and chat AI agents need channel-specific orchestration despite a shared business-logic foundation, citing production deployment data on turn-taking latency (voice needs sub-1.5s responses, callers barge in), ASR noise tolerance, and chat's need to manage the lifecycle of stale UI elements like expired payment links.
 - **2026-10-19** — [NVIDIA Vera CPUs double throughput for Modal Sandboxes](<../infra-platform/gpu-clusters/NVIDIA Vera CPUs double throughput for Modal Sandboxes.md>) · `gpu-clusters` · modal
   Modal benchmarks NVIDIA's new Arm-compatible Vera CPU against Intel GNR, AWS Graviton 4/5, and AMD Zen 5 for its multi-tenant Sandboxes product, finding similar straight-line latency but roughly 2x throughput under concurrent load, which matters for noisy-neighbor contention in bursty agent and RL-rollout workloads.
 - **2026-10-16** — [Building fast filesystems for VMs](<../inference/optimization/Building fast filesystems for VMs.md>) · `optimization` · modal

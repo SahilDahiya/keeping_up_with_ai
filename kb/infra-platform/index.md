@@ -1,7 +1,9 @@
 # infra-platform
 
-53 articles.
+54 articles.
 
+- **2026-10-20** — [Serverless routing made sticky | Modal Blog](<deployment/Serverless routing made sticky Modal Blog.md>) · `deployment` · modal
+  Describes Modal's Sticky Sessions, built on the fprs stateless proxy underlying Modal Servers, which guarantees every request in a session lands on the same container for stateful workloads like streaming STT and voice agents, replacing the max_containers=1 anti-pattern with session-based autoscaling.
 - **2026-10-19** — [NVIDIA Vera CPUs double throughput for Modal Sandboxes](<gpu-clusters/NVIDIA Vera CPUs double throughput for Modal Sandboxes.md>) · `gpu-clusters` · modal
   Modal benchmarks NVIDIA's new Arm-compatible Vera CPU against Intel GNR, AWS Graviton 4/5, and AMD Zen 5 for its multi-tenant Sandboxes product, finding similar straight-line latency but roughly 2x throughput under concurrent load, which matters for noisy-neighbor contention in bursty agent and RL-rollout workloads.
 - **2026-10-16** — [How Pydantic cut CI costs with RunsOn](<cost/How Pydantic cut CI costs with RunsOn.md>) · `cost` · pydantic

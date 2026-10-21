@@ -251,6 +251,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-10-20** — [Training Muse Glimmer for free to out-bet Jev](<../models/fine-tuning/Training Muse Glimmer for free to out-bet Jev.md>) · `fine-tuning` · fireworks
+  Fine-tunes Fireworks' Muse Glimmer 30B via LoRA SFT with K-way cross-entropy loss on historical Kalshi prediction markets, using strict train/calibration/eval date splits to prevent leakage, reaching 58.3% accuracy on unseen topics versus 47.1% for the comparison bot Jev.
 - **2026-10-12** — [Endpoint Candidates: evaluate and promote inference endpoints | Modal Blog](<../inference/serving/Endpoint Candidates evaluate and promote inference endpoints Modal Blog.md>) · `serving` · modal
   Modal's Endpoint Candidates feature lets teams stage alternate inference deployments, mirror a sample of production traffic to them, and compare latency, throughput, and cost before promoting a candidate; it extends a Pingora-based proxy with per-candidate bounded buffers and a shared chunk-count budget so slow or failing mirrors are cancelled instead of blocking production requests.
 - **2026-10-12** — [Introducing Cresta Sentry-0.1](<../product-engineering/case-studies/Introducing Cresta Sentry-0.1.md>) · `case-studies` · cresta

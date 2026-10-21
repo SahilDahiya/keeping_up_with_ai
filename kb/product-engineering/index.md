@@ -1,7 +1,9 @@
 # product-engineering
 
-75 articles.
+76 articles.
 
+- **2026-10-20** — [Why Voice and Chat AI Agents Should Behave Differently](<architecture/Why Voice and Chat AI Agents Should Behave Differently.md>) · `architecture` · cresta
+  Argues voice and chat AI agents need channel-specific orchestration despite a shared business-logic foundation, citing production deployment data on turn-taking latency (voice needs sub-1.5s responses, callers barge in), ASR noise tolerance, and chat's need to manage the lifecycle of stale UI elements like expired payment links.
 - **2026-10-14** — [Designing failover across OpenAI model providers](<architecture/Designing failover across OpenAI model providers.md>) · `architecture` · openai-devs
   OpenAI's framework for validated failover between direct (1P) API access and third-party (3P) providers like Bedrock or Azure OpenAI for critical financial and payments workloads: which operations are safe to retry, circuit breakers, shared retry budgets, private-connectivity and data-residency checks, and a Codex prompt for implementing a disabled-by-default failover policy in an existing LLM gateway.
 - **2026-10-14** — [Maintaining software with the GPT-6 family | OpenAI Developers](<case-studies/Maintaining software with the GPT-6 family OpenAI Developers.md>) · `case-studies` · openai-devs
@@ -155,6 +157,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-10-20** — [Muse Spark Open on Fireworks: Meta’s Open Weights Model, Available on US Serverless](<../models/releases/Muse Spark Open on Fireworks Meta’s Open Weights Model, Available on US Serverless.md>) · `releases` · fireworks
+  Announces Meta's Muse Spark Open (816B-param MoE, 42B active params, 1M-token context) on Fireworks serverless, reporting it ranks first on Harvey's Legal Agent Benchmark and beats Claude Opus 5.5 on Rogo's Big Finance Bench, with 33% hallucination rate on AA-Omniscience versus 59% for Opus 5.5.
 - **2026-10-16** — [Building fast filesystems for VMs](<../inference/optimization/Building fast filesystems for VMs.md>) · `optimization` · modal
   Modal's engineering postmortem on VM Sandbox filesystem performance: routing its ImageFS layer through virtio-fs made `chown` 6x slower (three guest-host FUSE round trips) and `pnpm install`/`bun install` 3x slower, so they built ImageFS-blk, a virtio-blk backend that lazily materializes ext4 metadata and serves blocks directly from the guest kernel, cutting `bun install` from 12.5s to 1.07s while keeping sub-second cold starts.
 - **2026-10-16** — [How Pydantic cut CI costs with RunsOn](<../infra-platform/cost/How Pydantic cut CI costs with RunsOn.md>) · `cost` · pydantic

@@ -1,7 +1,9 @@
 # cresta
 
-75 articles.
+76 articles.
 
+- **2026-10-20** — [Why Voice and Chat AI Agents Should Behave Differently](<../product-engineering/architecture/Why Voice and Chat AI Agents Should Behave Differently.md>) · `architecture` · cresta
+  Argues voice and chat AI agents need channel-specific orchestration despite a shared business-logic foundation, citing production deployment data on turn-taking latency (voice needs sub-1.5s responses, callers barge in), ASR noise tolerance, and chat's need to manage the lifecycle of stale UI elements like expired payment links.
 - **2026-10-13** — [Introducing Cresta Deputy Agent](<../agents/memory-context/Introducing Cresta Deputy Agent.md>) · `memory-context` · cresta
   Cresta's Deputy Agent is a long-running agent for customer-ops workflows (insurance claims, order returns, billing disputes) that persists goal, completed actions, and dependencies across pauses lasting days to weeks, resumes on new documents or approvals, and distinguishes an initiated action from a confirmed outcome with a full audit trail.
 - **2026-10-12** — [Introducing Cresta Sentry-0.1](<../product-engineering/case-studies/Introducing Cresta Sentry-0.1.md>) · `case-studies` · cresta

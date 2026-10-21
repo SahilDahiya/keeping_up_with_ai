@@ -1,7 +1,11 @@
 # models
 
-211 articles.
+213 articles.
 
+- **2026-10-20** — [Training Muse Glimmer for free to out-bet Jev](<fine-tuning/Training Muse Glimmer for free to out-bet Jev.md>) · `fine-tuning` · fireworks
+  Fine-tunes Fireworks' Muse Glimmer 30B via LoRA SFT with K-way cross-entropy loss on historical Kalshi prediction markets, using strict train/calibration/eval date splits to prevent leakage, reaching 58.3% accuracy on unseen topics versus 47.1% for the comparison bot Jev.
+- **2026-10-20** — [Muse Spark Open on Fireworks: Meta’s Open Weights Model, Available on US Serverless](<releases/Muse Spark Open on Fireworks Meta’s Open Weights Model, Available on US Serverless.md>) · `releases` · fireworks
+  Announces Meta's Muse Spark Open (816B-param MoE, 42B active params, 1M-token context) on Fireworks serverless, reporting it ranks first on Harvey's Legal Agent Benchmark and beats Claude Opus 5.5 on Rogo's Big Finance Bench, with 33% hallucination rate on AA-Omniscience versus 59% for Opus 5.5.
 - **2026-10-19** — [Together Post-Training: frontier-grade model shaping, the way that fits you](<reinforcement-learning/Together Post-Training frontier-grade model shaping, the way that fits you.md>) · `reinforcement-learning` · together
   Together launches a post-training service giving dedicated GPU 'Model Resources' with separate Trainer/Generator instances for RL (GRPO, CISPO, DPPO) and SFT/LoRA, using Rollout Routing Replay and other numerics-alignment work to curb training/inference policy drift, plus multi-LoRA serving and FP4 merged inference for deployment.
 - **2026-10-16** — [Welcome Beam: a 501B open model you can own, customize, and scale](<architectures/Welcome Beam a 501B open model you can own, customize, and scale.md>) · `architectures` · huggingface

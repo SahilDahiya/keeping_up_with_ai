@@ -1,10 +1,15 @@
 ---
 title: Why Voice and Chat AI Agents Should Behave Differently
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: product-engineering
+subtopic: architecture
+secondary_topics:
+- agents/harness
+summary: Argues voice and chat AI agents need channel-specific orchestration despite
+  a shared business-logic foundation, citing production deployment data on turn-taking
+  latency (voice needs sub-1.5s responses, callers barge in), ASR noise tolerance,
+  and chat's need to manage the lifecycle of stale UI elements like expired payment
+  links.
 triage: null
 skip_reason: null
 source: cresta
@@ -12,7 +17,7 @@ url: https://cresta.com/blog/why-voice-and-chat-ai-agents-should-behave-differen
 author: Renjie Li
 published: '2026-10-20'
 fetched: '2026-10-21T06:10:11Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1623
 content_sha256: 7d9893df02079ca2f638d9d5d579424c24f155d7a665099052dde928d55a841a

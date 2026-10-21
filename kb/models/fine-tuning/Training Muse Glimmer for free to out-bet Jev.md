@@ -1,10 +1,14 @@
 ---
 title: Training Muse Glimmer for free to out-bet Jev
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: models
+subtopic: fine-tuning
+secondary_topics:
+- evals-observability/evaluation
+summary: Fine-tunes Fireworks' Muse Glimmer 30B via LoRA SFT with K-way cross-entropy
+  loss on historical Kalshi prediction markets, using strict train/calibration/eval
+  date splits to prevent leakage, reaching 58.3% accuracy on unseen topics versus
+  47.1% for the comparison bot Jev.
 triage: null
 skip_reason: null
 source: fireworks
@@ -12,7 +16,7 @@ url: https://fireworks.ai/blog/training-muse-glimmer-to-out-bet-jev
 author: null
 published: '2026-10-20'
 fetched: '2026-10-21T06:10:21Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1479
 content_sha256: 465c91f551b1b264cea93969d85321cffdd53cf165671ef22b9c9a2ff9bd3a7c

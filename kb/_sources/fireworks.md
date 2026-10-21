@@ -1,7 +1,11 @@
 # fireworks
 
-111 articles.
+113 articles.
 
+- **2026-10-20** — [Training Muse Glimmer for free to out-bet Jev](<../models/fine-tuning/Training Muse Glimmer for free to out-bet Jev.md>) · `fine-tuning` · fireworks
+  Fine-tunes Fireworks' Muse Glimmer 30B via LoRA SFT with K-way cross-entropy loss on historical Kalshi prediction markets, using strict train/calibration/eval date splits to prevent leakage, reaching 58.3% accuracy on unseen topics versus 47.1% for the comparison bot Jev.
+- **2026-10-20** — [Muse Spark Open on Fireworks: Meta’s Open Weights Model, Available on US Serverless](<../models/releases/Muse Spark Open on Fireworks Meta’s Open Weights Model, Available on US Serverless.md>) · `releases` · fireworks
+  Announces Meta's Muse Spark Open (816B-param MoE, 42B active params, 1M-token context) on Fireworks serverless, reporting it ranks first on Harvey's Legal Agent Benchmark and beats Claude Opus 5.5 on Rogo's Big Finance Bench, with 33% hallucination rate on AA-Omniscience versus 59% for Opus 5.5.
 - **2026-09-30** — [Reinforcement learning: Why alignment of numerics and MoE routing matter](<../models/reinforcement-learning/Reinforcement learning Why alignment of numerics and MoE routing matter.md>) · `reinforcement-learning` · fireworks
   Fireworks traces RL training instability to numerical mismatches between trainer and rollout engines: a GLM 5.2 run's reward collapsed from 0.9 to under 0.2 around step 20 without alignment (zero-KL and stable reward with it), and a Qwen3.5-MoE run diverged by k3=0.296 (300x their 0.001-equivalence threshold) due to precision differences in combining expert outputs.
 - **2026-09-28** — [Fireworks AI](<../inference/optimization/Fireworks AI.md>) · `optimization` · fireworks
