@@ -1,10 +1,14 @@
 ---
 title: The code is the graph | Pydantic
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: agents
+subtopic: harness
+secondary_topics:
+- infra-platform/deployment
+summary: Pydantic AI's Samuel Colvin argues graph libraries like LangGraph duplicate
+  control flow that plain async Python (branches, loops, asyncio.gather) already provides
+  with type safety, and introduces Monty, a sandboxed Python interpreter that snapshots
+  and resumes agent code at each external call for durable execution.
 triage: null
 skip_reason: null
 source: pydantic
@@ -12,7 +16,7 @@ url: https://pydantic.dev/articles/the-code-is-the-graph
 author: Samuel Colvin
 published: '2026-10-13'
 fetched: '2026-10-22T06:15:28Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 2430
 content_sha256: 9cfc340abd3c0d348e5a5f35b10f331d497375aa11b07fd9177eaa783db0b621

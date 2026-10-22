@@ -1,7 +1,9 @@
 # modal
 
-48 articles.
+49 articles.
 
+- **2026-10-21** — [Get started with LLM training on Modal](<../models/reinforcement-learning/Get started with LLM training on Modal.md>) · `reinforcement-learning` · modal
+  Modal open-sourced Dojo, a production LLM/RL training library built on Miles and Slime that handles model selection, dataset ingestion from harness/eval traces, auto-tuned training recipes, and an observability dashboard for catching reward hacking and profiling training runs.
 - **2026-10-20** — [Serverless routing made sticky | Modal Blog](<../infra-platform/deployment/Serverless routing made sticky Modal Blog.md>) · `deployment` · modal
   Describes Modal's Sticky Sessions, built on the fprs stateless proxy underlying Modal Servers, which guarantees every request in a session lands on the same container for stateful workloads like streaming STT and voice agents, replacing the max_containers=1 anti-pattern with session-based autoscaling.
 - **2026-10-19** — [NVIDIA Vera CPUs double throughput for Modal Sandboxes](<../infra-platform/gpu-clusters/NVIDIA Vera CPUs double throughput for Modal Sandboxes.md>) · `gpu-clusters` · modal

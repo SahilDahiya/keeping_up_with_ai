@@ -1,10 +1,15 @@
 ---
 title: 'Train Muse Glimmer for free: Our recipe for out-betting Jev'
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: models
+subtopic: fine-tuning
+secondary_topics:
+- evals-observability/evaluation
+- inference/serving
+summary: Fireworks fine-tuned Muse Glimmer 30B with a LoRA/SFT adapter and K-way cross-entropy
+  loss on Kalshi prediction-market questions, beating Jev by 11.2pp on unseen topics
+  (58.3% vs 47.1%) after per-question-type confidence calibration, and served the
+  result 2-3x faster via the System One API on a single B200.
 triage: null
 skip_reason: null
 source: fireworks
@@ -12,7 +17,7 @@ url: https://fireworks.ai/blog/train-muse-glimmer-for-free
 author: null
 published: '2026-10-20'
 fetched: '2026-10-22T06:09:40Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1479
 content_sha256: 465c91f551b1b264cea93969d85321cffdd53cf165671ef22b9c9a2ff9bd3a7c

@@ -1,7 +1,9 @@
 # fireworks
 
-113 articles.
+114 articles.
 
+- **2026-10-20** — [Train Muse Glimmer for free: Our recipe for out-betting Jev](<../models/fine-tuning/Train Muse Glimmer for free Our recipe for out-betting Jev.md>) · `fine-tuning` · fireworks
+  Fireworks fine-tuned Muse Glimmer 30B with a LoRA/SFT adapter and K-way cross-entropy loss on Kalshi prediction-market questions, beating Jev by 11.2pp on unseen topics (58.3% vs 47.1%) after per-question-type confidence calibration, and served the result 2-3x faster via the System One API on a single B200.
 - **2026-10-20** — [Training Muse Glimmer for free to out-bet Jev](<../models/fine-tuning/Training Muse Glimmer for free to out-bet Jev.md>) · `fine-tuning` · fireworks
   Fine-tunes Fireworks' Muse Glimmer 30B via LoRA SFT with K-way cross-entropy loss on historical Kalshi prediction markets, using strict train/calibration/eval date splits to prevent leakage, reaching 58.3% accuracy on unseen topics versus 47.1% for the comparison bot Jev.
 - **2026-10-20** — [Muse Spark Open on Fireworks: Meta’s Open Weights Model, Available on US Serverless](<../models/releases/Muse Spark Open on Fireworks Meta’s Open Weights Model, Available on US Serverless.md>) · `releases` · fireworks

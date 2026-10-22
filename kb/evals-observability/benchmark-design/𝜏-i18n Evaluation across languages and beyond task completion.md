@@ -1,10 +1,14 @@
 ---
 title: '𝜏-i18n: Evaluation across languages and beyond task completion'
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: evals-observability
+subtopic: benchmark-design
+secondary_topics:
+- product-engineering/ux-patterns
+summary: Sierra extended its tau-Voice benchmark into tau-i18n, testing airline/retail/telecom
+  voice agents across Spanish, Brazilian Portuguese, Hindi, Korean, and Mandarin over
+  2,700 calls, scoring task completion, interaction, and generation quality separately;
+  Korean trailed English by 22.6 points on task completion despite identical tasks.
 triage: null
 skip_reason: null
 source: sierra
@@ -12,7 +16,7 @@ url: https://sierra.ai/blog/tau-i18n
 author: Soham Ray
 published: '2026-10-21'
 fetched: '2026-10-22T06:09:27Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 774
 content_sha256: 9bbed849e8781b863272d944dcde43cf926941fcc22b69d37a45452781873efe

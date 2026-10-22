@@ -1,7 +1,9 @@
 # baseten
 
-97 articles.
+98 articles.
 
+- **2026-10-21** — [The top ranked decision models in the world: mammoth-1 and elephant-1](<../models/releases/The top ranked decision models in the world mammoth-1 and elephant-1.md>) · `releases` · baseten
+  Baseten's Base Labs released mammoth-1 (27B) and elephant-1 (9B), decision models post-trained from Qwen3.5 that output a probability distribution over answers instead of generating text; mammoth-1 ranks #1 of 208 on the Jev Decision Index 0.4, trained on 6.21M examples spanning five decision-skill domains.
 - **2026-10-15** — [Announcing NVIDIA Nemotron 3.5 Super VL on Baseten](<../models/releases/Announcing NVIDIA Nemotron 3.5 Super VL on Baseten.md>) · `releases` · baseten
   Baseten announces NVIDIA Nemotron 3.5 Super VL, a 120B-parameter MoE model (12B active) adding a vision encoder to the Nemotron 3 Super hybrid Mamba-Transformer architecture, with multi-token prediction and NVFP4 KV-cache quantization; it scores a 1190 Elo on GDPval versus 493 for the text-only predecessor.
 - **2026-10-15** — [Muse Spark Open, an open-weight model for coding agents](<../models/releases/Muse Spark Open, an open-weight model for coding agents.md>) · `releases` · baseten

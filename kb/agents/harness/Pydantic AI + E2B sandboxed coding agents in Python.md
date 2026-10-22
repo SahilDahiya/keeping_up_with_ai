@@ -1,10 +1,14 @@
 ---
 title: 'Pydantic AI + E2B: sandboxed coding agents in Python'
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: agents
+subtopic: harness
+secondary_topics:
+- product-engineering/security
+summary: Pydantic AI added E2B as a native sandbox capability so an agent's shell
+  and file-system tool calls run inside isolated E2B microVMs instead of the host
+  machine, with pause/resume semantics and a Temporal-durable-workflow example that
+  survives a worker crash mid-run.
 triage: null
 skip_reason: null
 source: pydantic
@@ -12,7 +16,7 @@ url: https://pydantic.dev/articles/pydantic-ai-e2b-sandboxes
 author: Laís Carvalho
 published: '2026-10-22'
 fetched: '2026-10-22T06:15:26Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 2211
 content_sha256: 326a0b5703b1af2d6cf8d7f1cdccad57276b8cc299b4936da93bc22ecaf02ad7

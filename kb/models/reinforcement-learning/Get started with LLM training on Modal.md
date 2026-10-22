@@ -1,10 +1,15 @@
 ---
 title: Get started with LLM training on Modal
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: models
+subtopic: reinforcement-learning
+secondary_topics:
+- infra-platform/gpu-clusters
+- evals-observability/monitoring
+summary: Modal open-sourced Dojo, a production LLM/RL training library built on Miles
+  and Slime that handles model selection, dataset ingestion from harness/eval traces,
+  auto-tuned training recipes, and an observability dashboard for catching reward
+  hacking and profiling training runs.
 triage: null
 skip_reason: null
 source: modal
@@ -12,7 +17,7 @@ url: https://modal.com/blog/get-started-with-llm-training-on-modal
 author: Joy Liu; Andrew Hinh
 published: '2026-10-21'
 fetched: '2026-10-22T06:09:42Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1024
 content_sha256: 94d46afbcdabbb377fd88af1c5c1153ee949e322f0a9ea6ef540a98498f241a0

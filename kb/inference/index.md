@@ -303,6 +303,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-10-20** — [Train Muse Glimmer for free: Our recipe for out-betting Jev](<../models/fine-tuning/Train Muse Glimmer for free Our recipe for out-betting Jev.md>) · `fine-tuning` · fireworks
+  Fireworks fine-tuned Muse Glimmer 30B with a LoRA/SFT adapter and K-way cross-entropy loss on Kalshi prediction-market questions, beating Jev by 11.2pp on unseen topics (58.3% vs 47.1%) after per-question-type confidence calibration, and served the result 2-3x faster via the System One API on a single B200.
 - **2026-10-20** — [Serverless routing made sticky | Modal Blog](<../infra-platform/deployment/Serverless routing made sticky Modal Blog.md>) · `deployment` · modal
   Describes Modal's Sticky Sessions, built on the fprs stateless proxy underlying Modal Servers, which guarantees every request in a session lands on the same container for stateful workloads like streaming STT and voice agents, replacing the max_containers=1 anti-pattern with session-based autoscaling.
 - **2026-10-19** — [NVIDIA Vera CPUs double throughput for Modal Sandboxes](<../infra-platform/gpu-clusters/NVIDIA Vera CPUs double throughput for Modal Sandboxes.md>) · `gpu-clusters` · modal

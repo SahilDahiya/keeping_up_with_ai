@@ -157,6 +157,10 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-10-22** — [Pydantic AI + E2B: sandboxed coding agents in Python](<../agents/harness/Pydantic AI + E2B sandboxed coding agents in Python.md>) · `harness` · pydantic
+  Pydantic AI added E2B as a native sandbox capability so an agent's shell and file-system tool calls run inside isolated E2B microVMs instead of the host machine, with pause/resume semantics and a Temporal-durable-workflow example that survives a worker crash mid-run.
+- **2026-10-21** — [𝜏-i18n: Evaluation across languages and beyond task completion](<../evals-observability/benchmark-design/𝜏-i18n Evaluation across languages and beyond task completion.md>) · `benchmark-design` · sierra
+  Sierra extended its tau-Voice benchmark into tau-i18n, testing airline/retail/telecom voice agents across Spanish, Brazilian Portuguese, Hindi, Korean, and Mandarin over 2,700 calls, scoring task completion, interaction, and generation quality separately; Korean trailed English by 22.6 points on task completion despite identical tasks.
 - **2026-10-20** — [Muse Spark Open on Fireworks: Meta’s Open Weights Model, Available on US Serverless](<../models/releases/Muse Spark Open on Fireworks Meta’s Open Weights Model, Available on US Serverless.md>) · `releases` · fireworks
   Announces Meta's Muse Spark Open (816B-param MoE, 42B active params, 1M-token context) on Fireworks serverless, reporting it ranks first on Harvey's Legal Agent Benchmark and beats Claude Opus 5.5 on Rogo's Big Finance Bench, with 33% hallucination rate on AA-Omniscience versus 59% for Opus 5.5.
 - **2026-10-16** — [Building fast filesystems for VMs](<../inference/optimization/Building fast filesystems for VMs.md>) · `optimization` · modal

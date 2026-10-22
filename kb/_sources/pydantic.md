@@ -1,9 +1,13 @@
 # pydantic
 
-50 articles.
+52 articles.
 
+- **2026-10-22** — [Pydantic AI + E2B: sandboxed coding agents in Python](<../agents/harness/Pydantic AI + E2B sandboxed coding agents in Python.md>) · `harness` · pydantic
+  Pydantic AI added E2B as a native sandbox capability so an agent's shell and file-system tool calls run inside isolated E2B microVMs instead of the host machine, with pause/resume semantics and a Temporal-durable-workflow example that survives a worker crash mid-run.
 - **2026-10-16** — [How Pydantic cut CI costs with RunsOn](<../infra-platform/cost/How Pydantic cut CI costs with RunsOn.md>) · `cost` · pydantic
   Pydantic/Logfire cut monthly CI costs from $18,200 (August 2026) to $5,700 (September) by moving GitHub Actions to RunsOn's ephemeral EC2 runners: Spot instances for interruption-tolerant jobs, On-Demand for merge-queue/release paths, and Graviton ARM runners for most Python/TypeScript/agentic jobs, even as runner-minutes kept climbing with AI-driven PR volume (2,032 PRs merged in August vs. 365 a year earlier).
+- **2026-10-13** — [The code is the graph | Pydantic](<../agents/harness/The code is the graph Pydantic.md>) · `harness` · pydantic
+  Pydantic AI's Samuel Colvin argues graph libraries like LangGraph duplicate control flow that plain async Python (branches, loops, asyncio.gather) already provides with type safety, and introduces Monty, a sandboxed Python interpreter that snapshots and resumes agent code at each external call for durable execution.
 - **2026-10-05** — [Pydantic AI vs Claude Agent SDK: Who owns the agent?](<../agents/harness/Pydantic AI vs Claude Agent SDK Who owns the agent.md>) · `harness` · pydantic
   Contrasts Claude Agent SDK, which wraps a Claude Code subprocess with its own shell/file tools/skills/agent loop and an unpublished system prompt that can change on upgrade, against Pydantic AI's compose-your-own-harness model (capabilities like LocalWorkspace/ModalSandbox/Coder added one at a time), and argues the latter suits apps that aren't themselves coding agents.
 - **2026-10-01** — [AI agent observability: the production layer you need](<../evals-observability/tracing/AI agent observability the production layer you need.md>) · `tracing` · pydantic

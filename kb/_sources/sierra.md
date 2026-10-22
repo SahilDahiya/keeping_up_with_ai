@@ -1,7 +1,9 @@
 # sierra
 
-50 articles.
+51 articles.
 
+- **2026-10-21** — [𝜏-i18n: Evaluation across languages and beyond task completion](<../evals-observability/benchmark-design/𝜏-i18n Evaluation across languages and beyond task completion.md>) · `benchmark-design` · sierra
+  Sierra extended its tau-Voice benchmark into tau-i18n, testing airline/retail/telecom voice agents across Spanish, Brazilian Portuguese, Hindi, Korean, and Mandarin over 2,700 calls, scoring task completion, interaction, and generation quality separately; Korean trailed English by 22.6 points on task completion despite identical tasks.
 - **2026-10-09** — [Sharing a draft of Personal Agent Protocol](<../agents/tool-use/Sharing a draft of Personal Agent Protocol.md>) · `tool-use` · sierra
   Sierra publishes a draft spec of Personal Agent Protocol (Poppy), defining five building blocks - discovery via a well-known poppy.json file, guest/identified sessions, OAuth-based sign-in with scoped tokens, a single cross-channel session token, and per-channel task completion over OpenAPI/MCP/website - for how personal agents authenticate and act on a customer's behalf across a business's site, APIs, or own agent.
 - **2026-10-07** — [Caller ID in the age of agents](<../product-engineering/security/Caller ID in the age of agents.md>) · `security` · sierra

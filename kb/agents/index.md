@@ -1,7 +1,11 @@
 # agents
 
-112 articles.
+114 articles.
 
+- **2026-10-22** — [Pydantic AI + E2B: sandboxed coding agents in Python](<harness/Pydantic AI + E2B sandboxed coding agents in Python.md>) · `harness` · pydantic
+  Pydantic AI added E2B as a native sandbox capability so an agent's shell and file-system tool calls run inside isolated E2B microVMs instead of the host machine, with pause/resume semantics and a Temporal-durable-workflow example that survives a worker crash mid-run.
+- **2026-10-13** — [The code is the graph | Pydantic](<harness/The code is the graph Pydantic.md>) · `harness` · pydantic
+  Pydantic AI's Samuel Colvin argues graph libraries like LangGraph duplicate control flow that plain async Python (branches, loops, asyncio.gather) already provides with type safety, and introduces Monty, a sandboxed Python interpreter that snapshots and resumes agent code at each external call for durable execution.
 - **2026-10-13** — [Introducing Cresta Deputy Agent](<memory-context/Introducing Cresta Deputy Agent.md>) · `memory-context` · cresta
   Cresta's Deputy Agent is a long-running agent for customer-ops workflows (insurance claims, order returns, billing disputes) that persists goal, completed actions, and dependencies across pauses lasting days to weeks, resumes on new documents or approvals, and distinguishes an initiated action from a confirmed outcome with a full audit trail.
 - **2026-10-09** — [Sharing a draft of Personal Agent Protocol](<tool-use/Sharing a draft of Personal Agent Protocol.md>) · `tool-use` · sierra

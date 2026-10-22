@@ -1,7 +1,9 @@
 # evals-observability
 
-123 articles.
+124 articles.
 
+- **2026-10-21** — [𝜏-i18n: Evaluation across languages and beyond task completion](<benchmark-design/𝜏-i18n Evaluation across languages and beyond task completion.md>) · `benchmark-design` · sierra
+  Sierra extended its tau-Voice benchmark into tau-i18n, testing airline/retail/telecom voice agents across Spanish, Brazilian Portuguese, Hindi, Korean, and Mandarin over 2,700 calls, scoring task completion, interaction, and generation quality separately; Korean trailed English by 22.6 points on task completion despite identical tasks.
 - **2026-10-01** — [ShopGym: Realistic, reproducible sandboxes for shopping agents (2026)](<benchmark-design/ShopGym Realistic, reproducible sandboxes for shopping agents (2026).md>) · `benchmark-design` · shopify
   Shopify's ShopGym turns live storefronts into anonymized, resettable sandbox shops (via multi-agent ShopArena, with execution-verification loops and a browser-based visual-verification agent) and auto-generates shopping tasks across seven skill categories via ShopGuru; validated on 224 tasks across six sandbox shops, showing synthetic-shop agent performance correlates with performance on the live stores they mirror.
 - **2026-10-01** — [AI agent observability: the production layer you need](<tracing/AI agent observability the production layer you need.md>) · `tracing` · pydantic
@@ -251,6 +253,12 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-10-21** — [Get started with LLM training on Modal](<../models/reinforcement-learning/Get started with LLM training on Modal.md>) · `reinforcement-learning` · modal
+  Modal open-sourced Dojo, a production LLM/RL training library built on Miles and Slime that handles model selection, dataset ingestion from harness/eval traces, auto-tuned training recipes, and an observability dashboard for catching reward hacking and profiling training runs.
+- **2026-10-21** — [The top ranked decision models in the world: mammoth-1 and elephant-1](<../models/releases/The top ranked decision models in the world mammoth-1 and elephant-1.md>) · `releases` · baseten
+  Baseten's Base Labs released mammoth-1 (27B) and elephant-1 (9B), decision models post-trained from Qwen3.5 that output a probability distribution over answers instead of generating text; mammoth-1 ranks #1 of 208 on the Jev Decision Index 0.4, trained on 6.21M examples spanning five decision-skill domains.
+- **2026-10-20** — [Train Muse Glimmer for free: Our recipe for out-betting Jev](<../models/fine-tuning/Train Muse Glimmer for free Our recipe for out-betting Jev.md>) · `fine-tuning` · fireworks
+  Fireworks fine-tuned Muse Glimmer 30B with a LoRA/SFT adapter and K-way cross-entropy loss on Kalshi prediction-market questions, beating Jev by 11.2pp on unseen topics (58.3% vs 47.1%) after per-question-type confidence calibration, and served the result 2-3x faster via the System One API on a single B200.
 - **2026-10-20** — [Training Muse Glimmer for free to out-bet Jev](<../models/fine-tuning/Training Muse Glimmer for free to out-bet Jev.md>) · `fine-tuning` · fireworks
   Fine-tunes Fireworks' Muse Glimmer 30B via LoRA SFT with K-way cross-entropy loss on historical Kalshi prediction markets, using strict train/calibration/eval date splits to prevent leakage, reaching 58.3% accuracy on unseen topics versus 47.1% for the comparison bot Jev.
 - **2026-10-12** — [Endpoint Candidates: evaluate and promote inference endpoints | Modal Blog](<../inference/serving/Endpoint Candidates evaluate and promote inference endpoints Modal Blog.md>) · `serving` · modal

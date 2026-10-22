@@ -1,10 +1,14 @@
 ---
 title: 'The top ranked decision models in the world: mammoth-1 and elephant-1'
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: models
+subtopic: releases
+secondary_topics:
+- evals-observability/benchmark-design
+summary: 'Baseten''s Base Labs released mammoth-1 (27B) and elephant-1 (9B), decision
+  models post-trained from Qwen3.5 that output a probability distribution over answers
+  instead of generating text; mammoth-1 ranks #1 of 208 on the Jev Decision Index
+  0.4, trained on 6.21M examples spanning five decision-skill domains.'
 triage: null
 skip_reason: null
 source: baseten
@@ -13,7 +17,7 @@ author: Max Kirkby; Michael Psenka; Thomas Villeneuve; Aaryam Sharma; Charles O'
   Chloe Florit; Ardin Lo
 published: '2026-10-21'
 fetched: '2026-10-22T06:09:33Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 939
 content_sha256: 5aa8950f0904fa850828d25649fb744babc134144927436ff005110fd5917fcf
