@@ -1,7 +1,9 @@
 # sierra
 
-51 articles.
+52 articles.
 
+- **2026-10-22** — [𝜏-Entity: Can voice agents get the details right?](<../evals-observability/benchmark-design/𝜏-Entity Can voice agents get the details right.md>) · `benchmark-design` · sierra
+  Introduces tau-Entity, a benchmark measuring whether voice agents can correctly capture, detect uncertainty in, and repair entity details like names and phone numbers, after observing agents fail authentication on exactly this bottleneck.
 - **2026-10-21** — [𝜏-i18n: Evaluation across languages and beyond task completion](<../evals-observability/benchmark-design/𝜏-i18n Evaluation across languages and beyond task completion.md>) · `benchmark-design` · sierra
   Sierra extended its tau-Voice benchmark into tau-i18n, testing airline/retail/telecom voice agents across Spanish, Brazilian Portuguese, Hindi, Korean, and Mandarin over 2,700 calls, scoring task completion, interaction, and generation quality separately; Korean trailed English by 22.6 points on task completion despite identical tasks.
 - **2026-10-09** — [Sharing a draft of Personal Agent Protocol](<../agents/tool-use/Sharing a draft of Personal Agent Protocol.md>) · `tool-use` · sierra

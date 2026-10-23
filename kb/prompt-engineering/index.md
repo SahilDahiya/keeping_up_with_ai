@@ -1,6 +1,6 @@
 # prompt-engineering
 
-23 articles.
+26 articles.
 
 - **2026-10-08** — [The model that didn't exist, so you made it yourself](<context-engineering/The model that didn't exist, so you made it yourself.md>) · `context-engineering` · huggingface
   Hugging Face walkthrough of prompting the autonomous 'ML Intern' agent to plan, budget, train, and publish models: distilling Qwen-Image 2.1's 9B prompt rewriter into a 0.8B CPU model (99.7% valid-output rate, $16 compute) and fine-tuning Qwen3.5-2B for citrus disease diagnosis (14.9% to 52.8% accuracy, $1.90), with prompt patterns for baseline checks, smoke tests, verified-facts context, and hard spending caps.
@@ -20,10 +20,14 @@
   Prompting guide for steering GPT-5.4 toward non-generic frontend design: the model was trained for UI work, native image search/generation (e.g. prompt it to build mood boards first), and computer use for self-verification with tools like Playwright.
 - **2026-02-02** — [Automated Prompt Optimization with GEPA, Pydantic AI, and Pydantic Evals](<techniques/Automated Prompt Optimization with GEPA, Pydantic AI, and Pydantic Evals.md>) · `techniques` · pydantic
   Walks through automated prompt optimization with GEPA's evolutionary/reflective algorithm driven by Pydantic Evals as the scoring harness, using Agent.override() to inject candidate prompts without modifying agent definitions, turning manual prompt iteration into a systematic search of the prompt space against defined success criteria.
+- **2025-12-17** — [Self-Improving Agents With Eval Protocol and GEPA | Fireworks](<techniques/Self-Improving Agents With Eval Protocol and GEPA Fireworks.md>) · `techniques` · fireworks
+  Integrates GEPA reflective prompt optimization into Eval Protocol, converting an agent's eval failure signals directly into automatic, inspectable prompt improvements without touching model weights.
 - **2025-09-29** — [Effective context engineering for AI agents](<context-engineering/Effective context engineering for AI agents.md>) · `context-engineering` · anthropic-engineering
   Strategies for managing agent context windows—compaction, structured note-taking, sub-agent architectures—and why context engineering supersedes prompt engineering.
 - **2025-09-29** — [VibeGame: Exploring Vibe Coding Games](<context-engineering/VibeGame Exploring Vibe Coding Games.md>) · `context-engineering` · huggingface
   Case study on why vibe-coded games fall apart as they grow: the context window fills and model performance degrades. Compares Roblox MCP, Unity MCP and web stacks for LLM-friendliness, and introduces Shallot, a lightweight /peel + /nourish context-management system for Claude Code, arguing for high-level abstractions (ECS/declarative) that keep the codebase small enough to fit in context.
+- **2025-02-01** — [Constrained Generation for Reasoning Models With JSON Mode | Fireworks](<structured-output/Constrained Generation for Reasoning Models With JSON Mode Fireworks.md>) · `structured-output` · fireworks
+  Explains constrained generation for reasoning models using JSON mode, covering how grammar/schema constraints guarantee structured LLM output without sacrificing reasoning quality.
 - **2025-02-01** — [From text to task: Constrained generation for structured extraction in R1](<structured-output/From text to task Constrained generation for structured extraction in R1.md>) · `structured-output` · fireworks
   Explains constrained generation for structured extraction with reasoning models and schema-bound outputs.
 - **2024-12-23** — [Controlling Language Model Generation with NVIDIA's LogitsProcessorZoo](<structured-output/Controlling Language Model Generation with NVIDIA's LogitsProcessorZoo.md>) · `structured-output` · huggingface
@@ -34,6 +38,8 @@
   HF's leaderboards team and dottxt show that eval scores swing wildly with tiny prompt-format changes, and that forcing structured generation (Outlines' regex/JSON-constrained decoding) sharply reduces that variance across prompt formats on GSM8K-style tasks.
 - **2024-04-04** — [Text2SQL using Hugging Face Dataset Viewer API and Motherduck DuckDB-NSQL-7B](<structured-output/Text2SQL using Hugging Face Dataset Viewer API and Motherduck DuckDB-NSQL-7B.md>) · `structured-output` · huggingface
   Text-to-SQL walkthrough using MotherDuck's DuckDB-NSQL-7B (Llama-2-7B fine-tuned on DuckDB SQL pairs) with the HF Dataset Viewer parquet API: schema-in-prompt templating, generation, and executing the SQL against DuckDB.
+- **2024-02-20** — [Structured Output for LLMs: JSON Mode and Grammar Mode | Fireworks](<structured-output/Structured Output for LLMs JSON Mode and Grammar Mode Fireworks.md>) · `structured-output` · fireworks
+  Traces the history of constrained LLM generation from ReAct and Gorilla through OpenAI's JSON mode and llama.cpp's grammar-based sampling, then explains Fireworks' JSON-schema and context-free-grammar constrained decoding.
 - **2024-02-20** — [Why do all LLMs need structured output modes?](<structured-output/Why do all LLMs need structured output modes.md>) · `structured-output` · fireworks
   Explains why structured-output modes matter for reliable LLM applications and tool-calling systems.
 - **2024-01-31** — [Function calling and JSON mode](<structured-output/Function calling and JSON mode.md>) · `structured-output` · together

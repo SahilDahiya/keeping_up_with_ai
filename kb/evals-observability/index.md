@@ -1,7 +1,9 @@
 # evals-observability
 
-124 articles.
+136 articles.
 
+- **2026-10-22** — [𝜏-Entity: Can voice agents get the details right?](<benchmark-design/𝜏-Entity Can voice agents get the details right.md>) · `benchmark-design` · sierra
+  Introduces tau-Entity, a benchmark measuring whether voice agents can correctly capture, detect uncertainty in, and repair entity details like names and phone numbers, after observing agents fail authentication on exactly this bottleneck.
 - **2026-10-21** — [𝜏-i18n: Evaluation across languages and beyond task completion](<benchmark-design/𝜏-i18n Evaluation across languages and beyond task completion.md>) · `benchmark-design` · sierra
   Sierra extended its tau-Voice benchmark into tau-i18n, testing airline/retail/telecom voice agents across Spanish, Brazilian Portuguese, Hindi, Korean, and Mandarin over 2,700 calls, scoring task completion, interaction, and generation quality separately; Korean trailed English by 22.6 points on task completion despite identical tasks.
 - **2026-10-01** — [ShopGym: Realistic, reproducible sandboxes for shopping agents (2026)](<benchmark-design/ShopGym Realistic, reproducible sandboxes for shopping agents (2026).md>) · `benchmark-design` · shopify
@@ -20,6 +22,8 @@
   UK AISI is publishing verified, reproducible results through EvalEval's Evaluation Cards platform and Every Eval Ever schema, releasing transcript-level results and configs for HealthBench, FrontierMath, Humanity's Last Exam, SWE-Bench Pro, and Terminal-Bench 2.0 across six frontier models (Claude Opus 4/4.5/4.6, GPT-5/5.2/5.4), accompanying AISI's paper on how inference-time compute and evaluation protocol shape benchmark scores.
 - **2026-09-22** — [Introducing The Specialized Intelligence Index](<benchmark-design/Introducing The Specialized Intelligence Index.md>) · `benchmark-design` · fireworks
   Fireworks launches the Specialized Intelligence Index, a benchmark hub across 7 domains (healthcare, legal, cybersecurity, finance, customer support, productivity, software) built from practitioner-authored real-work evals like Harvey's LAB, Doximity's BedsideBench, and Traversal's ORCA-Bench, and lays out a 5-step methodology (define the job, reflect the work, set acceptance criteria, validate the grader, test generalization) for building benchmarks that predict business outcomes rather than just leaderboard scores, citing METR's finding that maintainer PR-acceptance scores ran 24.2 points below SWE-bench Verified scores.
+- **2026-09-22** — [Specialized Intelligence Index: Real-Work AI Benchmarks | Fireworks](<benchmark-design/Specialized Intelligence Index Real-Work AI Benchmarks Fireworks.md>) · `benchmark-design` · fireworks
+  Introduces the Specialized Intelligence Index, a benchmark covering domain-specific real-work tasks (healthcare, legal, cybersecurity, finance, and more), citing METR research that SWE-bench-passing PRs score 24.2 points lower on maintainer acceptance than on automated benchmarks.
 - **2026-09-16** — [From Better Evaluators to Better Agents: Building Compliance Intelligence with CompliBench](<benchmark-design/From Better Evaluators to Better Agents Building Compliance Intelligence with CompliBench.md>) · `benchmark-design` · cresta
   Introduces CompliBench, a synthetic-data pipeline that uses controllable compliance-violation injection and three specialized agents (customer, workflow tracker, assistant) to generate 318 labeled multi-turn enterprise conversations across airline, healthcare, and insurance domains; finds GPT-5 stays below 50% and Gemini reaches only the mid-50% range on conversation-level compliance accuracy despite strong per-turn guideline identification.
 - **2026-09-08** — [Hyper-𝜏-bench: Evaluating agents that build agents](<benchmark-design/Hyper-𝜏-bench Evaluating agents that build agents.md>) · `benchmark-design` · sierra
@@ -146,6 +150,8 @@
   Explains the benchmark and quality gaps involved in shipping Kimi K2.5 for production workloads.
 - **2026-01-26** — [DSGym: A holistic framework for evaluating and training data science agents](<benchmark-design/DSGym A holistic framework for evaluating and training data science agents.md>) · `benchmark-design` · together
   Introduces DSGym for evaluating and training data science agents.
+- **2026-01-23** — [Turn Production Logs Into LLM Evaluation Datasets | Fireworks](<evaluation/Turn Production Logs Into LLM Evaluation Datasets Fireworks.md>) · `evaluation` · fireworks
+  Describes a methodology for building representative LLM evaluation datasets from production traffic logs instead of hand-written examples or unfiltered raw logs.
 - **2026-01-23** — [Turning production logs into evaluation datasets](<evaluation/Turning production logs into evaluation datasets.md>) · `evaluation` · fireworks
   Describes converting production traces into compact evaluation datasets using embeddings, clustering, and representative sampling.
 - **2026-01-22** — [Testing Agent Skills Systematically with Evals | OpenAI Developers](<evaluation/Testing Agent Skills Systematically with Evals OpenAI Developers.md>) · `evaluation` · openai-devs
@@ -158,6 +164,8 @@
   A practical framework for building agent evals: grader design, task suites, pass@k metrics, and evolving evals as agent capabilities improve.
 - **2025-12-05** — [Tangle: An open-source ML experimentation platform built for scale (2025)](<tracing/Tangle An open-source ML experimentation platform built for scale (2025).md>) · `tracing` · shopify
   Tangle: Shopify's open-source ML experimentation platform for reproducibility at scale, tracking notebook versions, data snapshots, and parameters so experiments can be reproduced without re-running from scratch.
+- **2025-11-20** — [Eval Protocol: Open-Source RL for Production Agents | Fireworks](<evaluation/Eval Protocol Open-Source RL for Production Agents Fireworks.md>) · `evaluation` · fireworks
+  Describes Eval Protocol's open-source, framework-agnostic interface for reinforcement fine-tuning of agents, designed to let teams migrate from local experiments to remote RL training without rewriting their agent.
 - **2025-11-04** — [How to evaluate and benchmark Large Language Models (LLMs)](<benchmark-design/How to evaluate and benchmark Large Language Models (LLMs).md>) · `benchmark-design` · together
   Guide to evaluating and benchmarking LLMs for production model selection.
 - **2025-10-27** — [Why You Can’t Trust Out-of-the-Box Evaluators](<llm-as-judge/Why You Can’t Trust Out-of-the-Box Evaluators.md>) · `llm-as-judge` · cresta
@@ -166,28 +174,44 @@
   Benchmark study showing instruction-following failures during reasoning.
 - **2025-10-17** — [When to Use What: A Practical Guide to AI Agent Testing and Evaluation](<testing/When to Use What A Practical Guide to AI Agent Testing and Evaluation.md>) · `testing` · cresta
   Practical guide for choosing AI agent testing and evaluation methods based on deployment stage and risk.
+- **2025-10-15** — [LLM Judge Evals for Ollama Models with Eval Protocol | Fireworks](<llm-as-judge/LLM Judge Evals for Ollama Models with Eval Protocol Fireworks.md>) · `llm-as-judge` · fireworks
+  Shows how to use Eval Protocol for model-picking evaluations and host models locally with Ollama, walking through end-to-end agent evaluation and an LLM-judge pass over Langfuse production traces.
 - **2025-10-09** — [The New World of Non-Deterministic Testing and Evaluation](<testing/The New World of Non-Deterministic Testing and Evaluation.md>) · `testing` · cresta
   Explains why non-deterministic AI systems require different testing and evaluation methods than traditional software.
 - **2025-09-30** — [Automated AI Agent Testing: Deploy with Confidence | Cresta](<evaluation/Automated AI Agent Testing Deploy with Confidence Cresta.md>) · `evaluation` · cresta
   Describes an AI-agent test suite built from expert-aligned LLM judges (a Hallucination Detection judge checking answers trace to approved sources, a Golden Response judge checking semantic equivalence), simulated virtual customers drawn from millions of real conversations, and modular logic-based plus judge-based evaluators. Claims 30% better test coverage than human testing, 10-15x more tests executed, and 25-35% faster releases.
+- **2025-09-22** — [Rank LLMs With Production Traces and an LLM Judge | Fireworks](<evaluation/Rank LLMs With Production Traces and an LLM Judge Fireworks.md>) · `evaluation` · fireworks
+  Walks through a no-ground-truth-required method for building an internal model leaderboard from production logs using an LLM judge, validating the resulting rankings against the official Tau-Bench Airline benchmark.
 - **2025-09-22** — [Traces are all you need](<evaluation/Traces are all you need.md>) · `evaluation` · fireworks
   Shows how to turn production traces into an internal model leaderboard with rollout processors and judge comparisons.
 - **2025-08-25** — [LLM Eval Driven Development with Claude Code](<evaluation/LLM Eval Driven Development with Claude Code.md>) · `evaluation` · fireworks
   Explains eval-driven development with Claude Code, using tests and feedback loops to improve coding-agent behavior.
+- **2025-08-25** — [Eval-Driven Development With Claude Code and Eval Protocol | Fireworks](<testing/Eval-Driven Development With Claude Code and Eval Protocol Fireworks.md>) · `testing` · fireworks
+  Walks through building an AI agent from a blank project using Claude Code with MCP servers plus Eval Protocol, applying classic test-driven development (write evals before code) to prevent regressions as models change.
 - **2025-08-15** — [Your AI Benchmark is Lying to You. Here's How We Caught It](<benchmark-design/Your AI Benchmark is Lying to You. Here's How We Caught It.md>) · `benchmark-design` · fireworks
   Explains how benchmark methodology can mislead model selection and how to evaluate models against real workload constraints.
+- **2025-08-15** — [AI Benchmark Scores Mislead: How We Fixed Our LLM Judge | Fireworks](<llm-as-judge/AI Benchmark Scores Mislead How We Fixed Our LLM Judge Fireworks.md>) · `llm-as-judge` · fireworks
+  Shows how a naive LLM-as-judge gave a UI screenshot a misleading 93.3% by checklist-matching requirements instead of judging overall quality, and describes the rubric redesign used to better align the judge with human evaluation.
+- **2025-08-14** — [Test-Driven AI Agent Development with Eval Protocol | Fireworks](<testing/Test-Driven AI Agent Development with Eval Protocol Fireworks.md>) · `testing` · fireworks
+  Walks through building a digital-store-concierge agent end-to-end using Eval Protocol's pytest-centric framework to apply test-driven development to agent behavior, catching regressions across multi-turn conversations.
 - **2025-08-14** — [Test-driven agent development](<testing/Test-driven agent development.md>) · `testing` · fireworks
   Shows a TDD-style workflow for building agents with concrete acceptance tests, red teaming, and regression checks.
 - **2025-08-12** — [TextQuests: How Good are LLMs at Text-Based Video Games?](<benchmark-design/TextQuests How Good are LLMs at Text-Based Video Games.md>) · `benchmark-design` · huggingface
   TextQuests evaluates LLM agents on 25 classic Infocom interactive-fiction games that need hundreds of precise actions over 30+ hours of play, testing long-horizon planning and long-context reasoning with no external tools. Scores both game progress and 'harm' (irreversible mistakes), and finds frontier models still struggle with sustained exploratory reasoning.
+- **2025-08-04** — [Eval Protocol: Open-Source LLM Evals as Unit Tests | Fireworks](<evaluation/Eval Protocol Open-Source LLM Evals as Unit Tests Fireworks.md>) · `evaluation` · fireworks
+  Introduces Eval Protocol, an open-source spec for writing LLM evaluations as unit tests that travel from local prompt engineering through CI/CD regression checks to fine-tuning and RL.
 - **2025-07-30** — [Fireworks AI](<benchmark-design/Fireworks AI.md>) · `benchmark-design` · fireworks
   Fireworks' Real-World Leaderboard evaluates models on vertical, production-mirroring tasks (ticket classification, e-commerce search, agentic workflows) rather than academic benchmarks, finding Qwen3 Instruct strongest on knowledge-heavy tasks, Qwen3 Coder strong on simple tool-use, and Claude Sonnet 4 still leading complex multi-step agentic work.
 - **2025-07-17** — [Back to The Future: Evaluating AI Agents on Predicting Future Events](<benchmark-design/Back to The Future Evaluating AI Agents on Predicting Future Events.md>) · `benchmark-design` · huggingface
   FutureBench evaluates agents on predicting events that have not happened yet (news outcomes, prediction-market style questions), which makes benchmark contamination impossible by construction and makes results objectively verifiable once the future arrives. Describes the automated question-generation pipeline and rolling scoring of agents with web search.
+- **2025-07-10** — [Model-as-a-Judge Rewards for Reinforcement Fine-Tuning | Fireworks](<llm-as-judge/Model-as-a-Judge Rewards for Reinforcement Fine-Tuning Fireworks.md>) · `llm-as-judge` · fireworks
+  Demonstrates using a stronger LLM as a judge-based reward signal to reinforcement fine-tune a Qwen2.5-32B model for creative writing, reaching a 93.8% win rate over the base model on Arena-Hard-Auto.
 - **2025-07-10** — [Using Model-as-a-Judge for Reward in Reinforcement Finetuning](<llm-as-judge/Using Model-as-a-Judge for Reward in Reinforcement Finetuning.md>) · `llm-as-judge` · fireworks
   Explains using model-as-judge rewards for reinforcement fine-tuning and the evaluation risks involved.
 - **2025-07-02** — [How we used evals and inference-time compute scaling to generate beautiful QR codes that actually work](<evaluation/How we used evals and inference-time compute scaling to generate beautiful QR codes that actually work.md>) · `evaluation` · modal
   Case study using evals and inference-time compute scaling to generate QR codes that satisfy visual and functional constraints.
+- **2025-06-11** — [Build SDK and Experimentation Platform for AI Agents | Fireworks](<evaluation/Build SDK and Experimentation Platform for AI Agents Fireworks.md>) · `evaluation` · fireworks
+  Describes a four-stage agent development lifecycle (launch and collect data, tune candidate models, run offline evals, deploy the winner) and the SDK/experimentation platform built to support rapid iteration on it.
 - **2025-04-30** — [Introducing Conversation Intelligence for AI Agents](<evaluation/Introducing Conversation Intelligence for AI Agents.md>) · `evaluation` · cresta
   Makes the case for evaluating AI agents with the same behavioral quality management used on human agents, since both show response variance, and for comparing them on shared criteria like resolution rate, CSAT and sentiment. Cites Metrigy that fewer than 20% of AI-handled conversations reach successful resolution, and supports ingesting third-party bot transcripts.
 - **2025-04-16** — [Introducing HELMET: Holistically Evaluating Long-context Language Models](<benchmark-design/Introducing HELMET Holistically Evaluating Long-context Language Models.md>) · `benchmark-design` · huggingface
@@ -275,6 +299,8 @@
   Together shows how to fine-tune your own Jev-style structured classifier for about $17 using the open-source tev1 repo, demonstrated by training together/Tev1-4B-experimental on Qwen3.5 4B and deploying it as a serverless API endpoint.
 - **2026-09-22** — [Canary rollouts: upgrade models in production without downtime](<../infra-platform/deployment/Canary rollouts upgrade models in production without downtime.md>) · `deployment` · together
   Together AI details its canary/blue-green/rolling rollout engine for swapping production model deployments, covering the step state machine (scale target, health gate, traffic shift, propagation wait, source drain, metric gate), regression vs. threshold metric checks on router latency/error rate/inflight requests, and timing-window math; a live Qwen2.5-7B to Qwen3.5-9B canary catches a 137% p95 latency regression (1,740ms vs. 734ms) at 10% traffic and reverses cleanly with 6,800 requests and zero errors.
+- **2026-09-21** — [Model Routing for LLMs: What 18 Models Show on DeepSWE | Fireworks](<../agents/harness/Model Routing for LLMs What 18 Models Show on DeepSWE Fireworks.md>) · `harness` · fireworks
+  Runs 18 models on every DeepSWE task to measure the ceiling for model routing, finding that routing to the best model per task reaches 97.6% accuracy at under a third of the cost of the best single model (74.1%).
 - **2026-09-17** — [Phylo brings frontier AI to more scientists with open models on Fireworks](<../infra-platform/deployment/Phylo brings frontier AI to more scientists with open models on Fireworks.md>) · `deployment` · fireworks
   Case study of Phylo's Biomni Lab, a long-horizon biology research agent making hundreds of tool calls over hours or days: switching its model-agnostic default routing to open-weight frontier models on Fireworks serverless (gated by Phylo's internal BiomniBench evals for quality/latency/cost) cut inference spend 60% while usage doubled month-on-month and roughly halved time-to-first-token.
 - **2026-09-16** — [Migrating from closed to open source models, Together](<../infra-platform/deployment/Migrating from closed to open source models, Together.md>) · `deployment` · together
@@ -323,6 +349,8 @@
   Introduces an agent used to help develop other AI agents, with lessons around orchestration, testing, and iteration workflows.
 - **2026-06-09** — [AI spend is the new headcount: why cost control is an observability problem](<../infra-platform/cost/AI spend is the new headcount why cost control is an observability problem.md>) · `cost` · pydantic
   Frames LLM/agent spend as headcount-shaped (usage-scaled, salary-magnitude) rather than SaaS-shaped, arguing cost governance is really an observability problem: attribute spend per agent, per user, per session from traces (via the genai-prices dataset) and ask 'was this run worth what it cost?'.
+- **2026-05-20** — [Agent Execution Tax: A 720-Run Browser Agent Benchmark | Fireworks](<../agents/tool-use/Agent Execution Tax A 720-Run Browser Agent Benchmark Fireworks.md>) · `tool-use` · fireworks
+  A 720-run browser-agent benchmark across four LLMs finds that execution reliability, not reasoning quality, drives failures: one model wasted nearly 1-in-5 calls on malformed JSON retries, defined as a 22.9% 'Agent Execution Tax' versus 0% for the best model.
 - **2026-05-18** — [Voice AI is only as good as what it hears](<../models/multimodal/Voice AI is only as good as what it hears.md>) · `multimodal` · sierra
   Explains why voice-agent quality depends on transcription accuracy and how hearing failures propagate into agent behavior.
 - **2026-05-12** — [Explorer: The agent-optimizing agent](<../agents/planning/Explorer The agent-optimizing agent.md>) · `planning` · sierra
@@ -359,6 +387,8 @@
   Explores how to evaluate AI voice quality beyond subjective preference, including production criteria for speech experiences.
 - **2025-12-17** — [Self-Improving Agents, Powered by Your Evals](<../agents/planning/Self-Improving Agents, Powered by Your Evals.md>) · `planning` · fireworks
   Describes self-improving agents powered by eval loops, using evaluation feedback to improve behavior.
+- **2025-12-17** — [Self-Improving Agents With Eval Protocol and GEPA | Fireworks](<../prompt-engineering/techniques/Self-Improving Agents With Eval Protocol and GEPA Fireworks.md>) · `techniques` · fireworks
+  Integrates GEPA reflective prompt optimization into Eval Protocol, converting an agent's eval failure signals directly into automatic, inspectable prompt improvements without touching model weights.
 - **2025-12-09** — [Cresta Agent Operations Center for Human and AI Agents](<../agents/harness/Cresta Agent Operations Center for Human and AI Agents.md>) · `harness` · cresta
   A human-oversight layer for AI agents in production: supervisors are alerted by negative sentiment, compliance triggers, or low model confidence, the AI agent can itself request help on out-of-knowledge-base or exception requests, and escalation hands off to a human with full conversation context preserved. Names the emerging 'AI Supervisor' role.
 - **2025-11-20** — [Eval Protocol: RL on your agents, in any environment](<../models/reinforcement-learning/Eval Protocol RL on your agents, in any environment.md>) · `reinforcement-learning` · fireworks

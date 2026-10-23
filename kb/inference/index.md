@@ -1,6 +1,6 @@
 # inference
 
-149 articles.
+156 articles.
 
 - **2026-10-16** — [Building fast filesystems for VMs](<optimization/Building fast filesystems for VMs.md>) · `optimization` · modal
   Modal's engineering postmortem on VM Sandbox filesystem performance: routing its ImageFS layer through virtio-fs made `chown` 6x slower (three guest-host FUSE round trips) and `pnpm install`/`bun install` 3x slower, so they built ImageFS-blk, a virtio-blk backend that lazily materializes ext4 metadata and serves blocks directly from the guest kernel, cutting `bun install` from 12.5s to 1.07s while keeping sub-second cold starts.
@@ -72,6 +72,8 @@
   Deep dive into sparse-attention kernel optimization for MiniMax M3 on NVIDIA Blackwell hardware.
 - **2026-07-02** — [H100 vs. H200 vs. B200: which GPU should you use?](<hardware/H100 vs. H200 vs. B200 which GPU should you use.md>) · `hardware` · baseten
   Compares H100, H200, and B200 GPUs for choosing hardware for inference workloads.
+- **2026-06-30** — [GLM 5.2 Fast: Faster Serverless Inference, Same Quality | Fireworks](<serving/GLM 5.2 Fast Faster Serverless Inference, Same Quality Fireworks.md>) · `serving` · fireworks
+  Details GLM 5.2 Fast's shared serverless deployment reaching a peak 446 tok/sec and running 2-3x faster than the standard path, aimed at coding agents whose ~90k-token average prompts make inference speed critical to usability.
 - **2026-06-30** — [Multi-token Residual Prediction](<speculative-decoding/Multi-token Residual Prediction.md>) · `speculative-decoding` · modal
   Explains multi-token residual prediction as an inference acceleration technique for generating multiple tokens per step.
 - **2026-06-25** — [Proxying inference requests in 6ms with Pingora, Envoy, and Spanner](<serving/Proxying inference requests in 6ms with Pingora, Envoy, and Spanner.md>) · `serving` · modal
@@ -156,6 +158,8 @@
   Gets ~2.3x faster LoRA inference for Flux.1-Dev by combining LoRA hotswapping with torch.compile without recompilation — using peft's hotswap_adapter, max-rank padding so shapes stay static, and flags to avoid recompiles when adapters have different ranks and target layers. Also covers fusing/unfusing and FP8 quantization on top.
 - **2025-06-18** — [Run FLUX.1-dev three times faster](<optimization/Run FLUX.1-dev three times faster.md>) · `optimization` · modal
   Explains optimizations for running FLUX.1-dev faster, including inference configuration and image-model serving tradeoffs.
+- **2025-06-14** — [3D FireOptimizer: Automated LLM Serving Optimization | Fireworks](<optimization/3D FireOptimizer Automated LLM Serving Optimization Fireworks.md>) · `optimization` · fireworks
+  Introduces 3D FireOptimizer, which automatically searches thousands of hardware, quantization, and speculative-decoding configurations to find the quality/throughput/latency sweet spot for a given LLM serving workload.
 - **2025-06-14** — [3D FireOptimizer: Automating the Multi-Dimensional Tradeoffs in LLM Serving](<serving/3D FireOptimizer Automating the Multi-Dimensional Tradeoffs in LLM Serving.md>) · `serving` · fireworks
   Explains multi-dimensional optimization for LLM serving, balancing latency, cost, throughput, and quality tradeoffs.
 - **2025-06-12** — [Learn the Hugging Face Kernel Hub in 5 Minutes](<kernels/Learn the Hugging Face Kernel Hub in 5 Minutes.md>) · `kernels` · huggingface
@@ -164,6 +168,8 @@
   Explains YAQA, a model-preserving adaptive rounding approach for quantization.
 - **2025-06-04** — [KV Cache from scratch in nanoVLM](<kernels/KV Cache from scratch in nanoVLM.md>) · `kernels` · huggingface
   Implements KV caching from scratch in nanoVLM, explaining prefill vs decode, how cached keys/values remove redundant attention recomputation, and the code changes to the attention block and generation loop; yields a 38% generation speedup.
+- **2025-05-28** — [FireAttention V4: FP4 LLM Inference on NVIDIA B200 | Fireworks](<kernels/FireAttention V4 FP4 LLM Inference on NVIDIA B200 Fireworks.md>) · `kernels` · fireworks
+  Describes FireAttention V4 achieving over 250 tokens/second on NVIDIA B200 GPUs using FP4 (NVFP4) precision, positioning FP4 as the optimal precision for Blackwell the way FP8 was for Hopper.
 - **2025-05-28** — [FireAttention V4: Industry-Leading Latency and Cost Efficiency with FP4](<quantization/FireAttention V4 Industry-Leading Latency and Cost Efficiency with FP4.md>) · `quantization` · fireworks
   Covers FP4 and B200-focused FireAttention V4 optimizations for latency and cost-efficient serving.
 - **2025-05-21** — [Exploring Quantization Backends in Diffusers](<quantization/Exploring Quantization Backends in Diffusers.md>) · `quantization` · huggingface
@@ -204,12 +210,16 @@
   Dynamic speculative decoding (Intel Labs + HF, default in Transformers 4.45) adapts the speculation lookahead per iteration instead of using a fixed number of draft tokens, giving up to 2.7x faster assisted generation depending on task while preserving the target model's output.
 - **2024-09-18** — [Fine-tuning LLMs to 1.58bit: extreme quantization made easy](<quantization/Fine-tuning LLMs to 1.58bit extreme quantization made easy.md>) · `quantization` · huggingface
   Shows how to fine-tune an existing Llama3-8B/SmolLM into BitNet's 1.58-bit ternary ({-1,0,1}) weight format instead of pre-training from scratch, using BitLinear layers, a lambda-scheduled quantization warmup and per-row/per-tensor scaling. Reports pre-training and fine-tuning results plus custom kernel benchmarks.
+- **2024-09-18** — [Multi-LoRA Serving: Fine-Tuned LoRAs on One Base Model | Fireworks](<serving/Multi-LoRA Serving Fine-Tuned LoRAs on One Base Model Fireworks.md>) · `serving` · fireworks
+  Describes Multi-LoRA serving, which lets hundreds of fine-tuned LoRA adapters share one base model's GPU cost, enabling per-user/per-segment personalization without per-model infrastructure scaling.
 - **2024-09-16** — [Boost your throughput with dynamic batching](<optimization/Boost your throughput with dynamic batching.md>) · `optimization` · modal
   Explains dynamic batching for Whisper transcription workloads and how batching improves throughput without changing model behavior.
 - **2024-09-05** — [Speculative decoding for high-throughput long-context inference](<speculative-decoding/Speculative decoding for high-throughput long-context inference.md>) · `speculative-decoding` · together
   Explains speculative decoding for high-throughput long-context inference.
 - **2024-08-30** — [FireOptimizer: Customizing latency and quality for your production inference workload](<optimization/FireOptimizer Customizing latency and quality for your production inference workload.md>) · `optimization` · fireworks
   Introduces FireOptimizer, Fireworks' adaptation engine that auto-tunes hardware, model, and software layers of the serving stack per workload, headlined by an adaptive speculative-execution feature that delivers up to 3x latency improvements by tailoring draft strategies to each customer's traffic.
+- **2024-08-30** — [FireOptimizer: Speculative Decoding Tuned to Your Workload | Fireworks](<speculative-decoding/FireOptimizer Speculative Decoding Tuned to Your Workload Fireworks.md>) · `speculative-decoding` · fireworks
+  Introduces FireOptimizer's adaptive speculative execution, which automatically tailors speculative decoding to a workload's specific data distribution for up to 3x latency improvements.
 - **2024-08-28** — [TEAL: Training-Free Activation Sparsity in Large Language Models](<optimization/TEAL Training-Free Activation Sparsity in Large Language Models.md>) · `optimization` · together
   Explains TEAL, a training-free activation sparsity method for large language models.
 - **2024-08-20** — [How to double tokens per second for Llama 3 with Medusa](<speculative-decoding/How to double tokens per second for Llama 3 with Medusa.md>) · `speculative-decoding` · baseten
@@ -276,12 +286,16 @@
   Introduces FireAttention for serving open models faster through quantization with minimal quality tradeoff.
 - **2023-12-22** — [Faster Mixtral inference with TensorRT-LLM and quantization](<quantization/Faster Mixtral inference with TensorRT-LLM and quantization.md>) · `quantization` · baseten
   Shows how TensorRT-LLM and quantization improve Mixtral inference performance.
+- **2023-12-14** — [Mixtral 8x7B: Up to 175 Tokens/s, Live Before Release | Fireworks](<kernels/Mixtral 8x7B Up to 175 Tokenss, Live Before Release Fireworks.md>) · `kernels` · fireworks
+  Explains the custom MoE kernels, multi-query-attention kernels, and parallelization schemes Fireworks built to serve Mixtral 8x7B at 175 tokens/sec, plus FP8 quantization's near-zero quality impact versus integer quantization.
 - **2023-11-28** — [NVIDIA A10 vs A10G for ML model inference](<hardware/NVIDIA A10 vs A10G for ML model inference.md>) · `hardware` · baseten
   Compares NVIDIA A10 and A10G GPUs for model inference performance and cost.
 - **2023-11-17** — [A guide to LLM inference and performance](<serving/A guide to LLM inference and performance.md>) · `serving` · baseten
   Comprehensive guide to LLM inference, transformer serving, latency, and throughput performance.
 - **2023-11-13** — [FlashFFTConv: Efficient Convolutions for Long Sequences with Tensor Cores](<kernels/FlashFFTConv Efficient Convolutions for Long Sequences with Tensor Cores.md>) · `kernels` · together
   Explains FlashFFTConv for efficient long-sequence convolutions on tensor cores.
+- **2023-11-03** — [LLM Inference Benchmarking: Latency, Throughput, and Cost | Fireworks](<optimization/LLM Inference Benchmarking Latency, Throughput, and Cost Fireworks.md>) · `optimization` · fireworks
+  Explains how differing LLM use-case requirements (sequence length, latency versus throughput, input/output length) shape inference optimization objectives and deployment configuration choices.
 - **2023-11-03** — [LLM Inference Performance Benchmarking (Part 1)](<serving/LLM Inference Performance Benchmarking (Part 1).md>) · `serving` · fireworks
   Introduces LLM inference performance benchmarking and the metrics needed to compare serving systems.
 - **2023-10-12** — [Flash-Decoding for long-context inference](<kernels/Flash-Decoding for long-context inference.md>) · `kernels` · together
@@ -451,6 +465,8 @@
   Fine-tunes FLUX.1-dev with QLoRA under ~10GB of VRAM on a single RTX 4090 using bitsandbytes NF4, 8-bit optimizers and gradient checkpointing, and compares FP8 training with torchao for extra speed on compatible hardware.
 - **2025-06-12** — [Your client code matters: 12x higher embedding throughput with Python and Rust](<../rag-retrieval/embeddings/Your client code matters 12x higher embedding throughput with Python and Rust.md>) · `embeddings` · baseten
   Shows how client implementation choices in Python and Rust affect embedding throughput.
+- **2025-04-28** — [Llama 4 Maverick API: Fast Inference and Function Calling | Fireworks](<../models/architectures/Llama 4 Maverick API Fast Inference and Function Calling Fireworks.md>) · `architectures` · fireworks
+  Details the engineering behind serving Llama 4 Maverick (Meta's first natively multimodal MoE model with a 1M-token context) on day one, including tuned FP8 quantization, tensor/expert parallelism, and a custom FireAttention extension for its chunked local attention variant.
 - **2025-03-27** — [How we built BEI: high-throughput embedding, reranker, and classifier inference](<../rag-retrieval/embeddings/How we built BEI high-throughput embedding, reranker, and classifier inference.md>) · `embeddings` · baseten
   Deep dive into BEI, a high-throughput embedding, reranker, and classifier inference system.
 - **2025-03-27** — [How Cresta drives millions of real-time, AI-powered contact center interactions with Fireworks](<../product-engineering/case-studies/How Cresta drives millions of real-time, AI-powered contact center interactions with Fireworks.md>) · `case-studies` · fireworks

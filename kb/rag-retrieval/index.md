@@ -1,6 +1,6 @@
 # rag-retrieval
 
-39 articles.
+44 articles.
 
 - **2026-08-26** — [Training and Finetuning Multi-Vector Embedding Models with Sentence Transformers](<embeddings/Training and Finetuning Multi-Vector Embedding Models with Sentence Transformers.md>) · `embeddings` · huggingface
   Walks through finetuning ColBERT-style multi-vector (late-interaction) embedding models using Sentence Transformers' new MultiVectorEncoder, covering datasets, loss functions, training arguments, and evaluators, and shows a model finetuned in 14.5 hours on a single RTX 3090 beating general-purpose dense, sparse, lexical, and multi-vector retrievers on a medical retrieval benchmark (MIRIAD NDCG@10).
@@ -10,6 +10,8 @@
   Details the hybrid search architecture behind Papers with Code: an offline Jobs pipeline embeds papers with Qwen3-Embedding into a versioned pgvector contract (HNSW, 0.9955 Recall@20 at 256 dims), while online queries fuse lexical and semantic branches via weighted RRF and fall back to full-text search if the Inference Endpoint is cold or unhealthy.
 - **2026-08-18** — [Multi-Vector (Late Interaction) Embedding Models with Sentence Transformers](<embeddings/Multi-Vector (Late Interaction) Embedding Models with Sentence Transformers.md>) · `embeddings` · huggingface
   Introduces Sentence Transformers' MultiVectorEncoder for ColBERT-style late-interaction retrieval, explaining MaxSim scoring versus dense bi-encoders and cross-encoders, and walking through loading, encoding, ColPali-style visual document retrieval, and index-size tradeoffs (e.g. LateOn's 608k token vectors at 311.5MB raw vs 92MB with fast-plaid/PLAID compression).
+- **2026-08-05** — [Voyage AI Embedding and Reranking Models for RAG | Fireworks](<embeddings/Voyage AI Embedding and Reranking Models for RAG Fireworks.md>) · `embeddings` · fireworks
+  Argues that retrieval quality, not model size, is the bottleneck for AI built on proprietary data, and describes bringing Voyage AI's embedding and reranking models natively onto Fireworks to unify the embed-retrieve-rerank-generate pipeline.
 - **2026-07-29** — [Fine-Tune Your Own Embedding Model from an LLM — for the Price of a Coffee](<embeddings/Fine-Tune Your Own Embedding Model from an LLM — for the Price of a Coffee.md>) · `embeddings` · fireworks
   Shows a sub-$10 recipe for contrastive fine-tuning of Qwen3-Embedding-8B (in-batch negatives, InfoNCE) on the Fireworks platform, lifting retrieval quality on domain tasks like legal citation retrieval (LegalBench, +36% nDCG@10), clinical trial matching, and EU case-law retrieval, while preserving general-purpose performance.
 - **2026-07-16** — [Fast, accurate retrieval with NVIDIA Nemotron 3 Embed](<embeddings/Fast, accurate retrieval with NVIDIA Nemotron 3 Embed.md>) · `embeddings` · baseten
@@ -32,6 +34,8 @@
   Explains how operational knowledge bases need to be structured for AI agents, with emphasis on grounding and retrieval readiness.
 - **2025-10-01** — [Introducing RTEB: A New Standard for Retrieval Evaluation](<embeddings/Introducing RTEB A New Standard for Retrieval Evaluation.md>) · `embeddings` · huggingface
   RTEB is a retrieval benchmark that mixes open and permanently-private held-out datasets, so a model's gap between public and private scores exposes overfitting to MTEB-style public leaderboards. Covers the dataset selection across domains/languages, the private-eval protocol, and evidence that several leaderboard-topping embedding models generalize worse than their public scores suggest.
+- **2025-09-12** — [Embeddings vs. Reranking in RAG: Two-Stage Retrieval | Fireworks](<embeddings/Embeddings vs. Reranking in RAG Two-Stage Retrieval Fireworks.md>) · `embeddings` · fireworks
+  Explains the technical foundations of embeddings versus reranking as two complementary retrieval stages in production RAG systems, tracing the shift from keyword to semantic search.
 - **2025-09-12** — [Understanding embeddings and reranking at scale](<search/Understanding embeddings and reranking at scale.md>) · `search` · fireworks
   Explains embeddings, reranking, and retrieval architecture patterns for production RAG systems.
 - **2025-09-04** — [Welcome EmbeddingGemma, Google's new efficient embedding model](<embeddings/Welcome EmbeddingGemma, Google's new efficient embedding model.md>) · `embeddings` · huggingface
@@ -42,6 +46,8 @@
   End-to-end guide to training SPLADE-style sparse embedding models with Sentence Transformers: the model/loss/evaluator/trainer components, FLOPS regularization to control sparsity, distillation from a cross-encoder, and NanoBEIR results plus the retrieval-cost tradeoff versus dense vectors.
 - **2025-06-12** — [Your client code matters: 12x higher embedding throughput with Python and Rust](<embeddings/Your client code matters 12x higher embedding throughput with Python and Rust.md>) · `embeddings` · baseten
   Shows how client implementation choices in Python and Rust affect embedding throughput.
+- **2025-04-09** — [Build Enterprise RAG on MongoDB Atlas Vector Search | Fireworks](<pipelines/Build Enterprise RAG on MongoDB Atlas Vector Search Fireworks.md>) · `pipelines` · fireworks
+  Open-source project walkthrough for building an enterprise RAG pipeline over earnings calls and financial documents using MongoDB Atlas Vector Search, with architecture notes on optimizing cost and performance.
 - **2025-04-09** — [Building Enterprise-Scale RAG Systems with Fireworks and MongoDB Atlas](<pipelines/Building Enterprise-Scale RAG Systems with Fireworks and MongoDB Atlas.md>) · `pipelines` · fireworks
   Walks through an open-source enterprise RAG architecture combining Fireworks (inference plus Whisper V3 Turbo audio transcription) with MongoDB Atlas vector storage, covering multi-format document processing, chunking, batched embedding generation, and metadata-preserving retrieval over earnings calls and financial reports.
 - **2025-03-27** — [How we built BEI: high-throughput embedding, reranker, and classifier inference](<embeddings/How we built BEI high-throughput embedding, reranker, and classifier inference.md>) · `embeddings` · baseten
@@ -58,6 +64,8 @@
   Builds a multimodal document RAG pipeline with Llama 3.2 Vision and ColQwen2.
 - **2024-09-19** — [Contextual Retrieval in AI Systems](<pipelines/Contextual Retrieval in AI Systems.md>) · `pipelines` · anthropic-engineering
   Introduces contextual retrieval: prepending chunk-situating context before embedding and BM25 indexing, cutting retrieval failure rates by 49% (67% with reranking).
+- **2024-08-14** — [Build a RAG App With Astro, FastAPI and SurrealDB | Fireworks](<pipelines/Build a RAG App With Astro, FastAPI and SurrealDB Fireworks.md>) · `pipelines` · fireworks
+  Tutorial building a RAG application with Astro, FastAPI, and SurrealDB, covering the pipeline architecture for visually updatable chatbot knowledge.
 - **2024-08-14** — [Building a RAG with Astro, FastAPI, SurrealDB and Llama 3.1](<pipelines/Building a RAG with Astro, FastAPI, SurrealDB and Llama 3.1.md>) · `pipelines` · fireworks
   Tutorial building a RAG chatbot with SurrealDB as the vector store, FastAPI backend, and Astro frontend, serving responses from Fireworks-hosted Llama 3.1 405B and covering the end-to-end flow of embedding user-supplied knowledge and streaming context-augmented answers.
 - **2024-07-16** — [How we leveraged distilabel to create an Argilla 2.0 Chatbot](<pipelines/How we leveraged distilabel to create an Argilla 2.0 Chatbot.md>) · `pipelines` · huggingface
@@ -68,6 +76,8 @@
   Complete guide to finetuning embedding models with Sentence Transformers v3: choosing a loss for your dataset shape (MultipleNegativesRankingLoss for (anchor, positive) pairs, CoSENT, etc.), the SentenceTransformerTrainer API, training args (batch size matters a lot for in-batch negatives), and evaluators for measuring retrieval gains.
 - **2024-03-22** — [Binary and Scalar Embedding Quantization for Significantly Faster & Cheaper Retrieval](<embeddings/Binary and Scalar Embedding Quantization for Significantly Faster & Cheaper Retrieval.md>) · `embeddings` · huggingface
   Binary (1-bit) and int8 scalar quantization of embeddings cuts retrieval memory/cost ~32x and ~4x while retaining ~92-96% of performance; covers rescoring with float embeddings and combining binary search + int8 rescoring in FAISS/usearch.
+- **2024-03-21** — [RAG with MongoDB Atlas Vector Search: Python Tutorial | Fireworks](<pipelines/RAG with MongoDB Atlas Vector Search Python Tutorial Fireworks.md>) · `pipelines` · fireworks
+  Python tutorial building a Retrieval-Augmented Generation app on MongoDB Atlas Vector Search, including guidance on optimizing the retrieval architecture for cost and performance.
 - **2024-03-15** — [CPU Optimized Embeddings with 🤗 Optimum Intel and fastRAG](<embeddings/CPU Optimized Embeddings with 🤗 Optimum Intel and fastRAG.md>) · `embeddings` · huggingface
   Speeds up bge-base embeddings on Xeon CPUs by quantizing to int8 with Optimum Intel / IPEX, reporting latency and MTEB retrieval-quality deltas, then wires the optimized encoder into a fastRAG retrieval pipeline.
 - **2024-02-23** — [🪆 Introduction to Matryoshka Embedding Models](<embeddings/🪆 Introduction to Matryoshka Embedding Models.md>) · `embeddings` · huggingface

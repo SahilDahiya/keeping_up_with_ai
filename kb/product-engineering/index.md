@@ -1,6 +1,6 @@
 # product-engineering
 
-76 articles.
+80 articles.
 
 - **2026-10-20** — [Why Voice and Chat AI Agents Should Behave Differently](<architecture/Why Voice and Chat AI Agents Should Behave Differently.md>) · `architecture` · cresta
   Argues voice and chat AI agents need channel-specific orchestration despite a shared business-logic foundation, citing production deployment data on turn-taking latency (voice needs sub-1.5s responses, callers barge in), ASR noise tolerance, and chat's need to manage the lifecycle of stale UI elements like expired payment links.
@@ -52,6 +52,8 @@
   Lessons from building Sierra's internal MCP gateway: a 'grab the lock' single-owner model for coordination, coding agents that cheat verification (reading tokens directly, falling back to curl) requiring weaker consumer agents for smoke tests, and a three-pass deterministic-plus-two-model pipeline that blocks cross-customer data access with an audit log.
 - **2026-07-10** — [AI-pilling our company: lessons learned](<case-studies/AI-pilling our company lessons learned.md>) · `case-studies` · sierra
   Internal adoption case study on spreading AI workflows through a company, including practical lessons for using agents and tools in day-to-day work.
+- **2026-07-07** — [GLM 5.2 Fast: One Engineer-Month of Work in Four Days | Fireworks](<case-studies/GLM 5.2 Fast One Engineer-Month of Work in Four Days Fireworks.md>) · `case-studies` · fireworks
+  First-person case study of shipping a GPU-scheduler 'reclaim' feature (4 PRs, ~3,000 lines, 34 tests, CI green) in four days using glm-5p2-fast via Claude Code, for $218 in inference cost versus an estimated engineer-month.
 - **2026-06-26** — [Making private MCP servers reachable without making them public | OpenAI Developers](<security/Making private MCP servers reachable without making them public OpenAI Developers.md>) · `security` · openai-devs
   Engineering design of OpenAI's Secure MCP Tunnel: a customer-run open-source client beside a private MCP server opens outbound-only HTTPS to OpenAI, forwarding MCP requests (including streaming and auth flows) so ChatGPT/Codex can reach the server without public endpoints, VPNs, or third-party tunnels.
 - **2026-06-23** — [Mastering remote engineering work from your phone | OpenAI Developers](<ux-patterns/Mastering remote engineering work from your phone OpenAI Developers.md>) · `ux-patterns` · openai-devs
@@ -72,6 +74,8 @@
   Migrating Logfire's audit logging from synchronous PostgreSQL triggers to async event-based logs, covering reliability, write-path performance, and capturing who-did-what context without blocking the request.
 - **2026-05-01** — [Designing the AI Agent Supervision Experience](<ux-patterns/Designing the AI Agent Supervision Experience.md>) · `ux-patterns` · cresta
   Discusses UX and workflow design for supervising AI agents, including human oversight and intervention surfaces.
+- **2026-04-27** — [DeepSeek V4 Pro: How We Validated It for Production | Fireworks](<case-studies/DeepSeek V4 Pro How We Validated It for Production Fireworks.md>) · `case-studies` · fireworks
+  A production postmortem describing how DeepSeek V4 Pro's reasoning traces degraded into token-level corruption during the first 48 hours of deployment, reproduced across multiple providers, pointing to a serving-path correctness bug rather than the model itself.
 - **2026-04-24** — [How we fixed prompt injection for all models on Fireworks](<security/How we fixed prompt injection for all models on Fireworks.md>) · `security` · fireworks
   Explains a tokenizer-level prompt-injection fix and the implications for securing model-serving systems.
 - **2026-04-15** — [Automation Discovery: Designing Systems to Extract Blueprints from Conversation Data](<architecture/Automation Discovery Designing Systems to Extract Blueprints from Conversation Data.md>) · `architecture` · cresta
@@ -130,6 +134,8 @@
   FastRTC builds real-time voice/video AI apps in Python over WebRTC or WebSockets: built-in voice activity detection and turn-taking (ReplyOnPause), automatic Gradio UI, phone-call ingress, and mounting streams onto FastAPI.
 - **2024-12-03** — [Investing in Performance: Fine-tune small models with LLM insights - a CFM case study](<case-studies/Investing in Performance Fine-tune small models with LLM insights - a CFM case study.md>) · `case-studies` · huggingface
   CFM (quant hedge fund) case study: use an LLM to label financial NER data, distill that into a compact fine-tuned model, and deploy it on Inference Endpoints — with an F1 and $/hour table showing the fine-tuned small model beating zero-shot LLM accuracy at a fraction of the inference cost.
+- **2024-09-25** — [Enterprise Multimodal Models: Healthcare and E-Commerce | Fireworks](<case-studies/Enterprise Multimodal Models Healthcare and E-Commerce Fireworks.md>) · `case-studies` · fireworks
+  Case study on healthcare and insurance companies using multimodal models to process medical and insurance records in real time, reporting 100x lower cost and 1.5x faster speed than GPT-4o.
 - **2024-08-06** — [Compound AI systems explained](<architecture/Compound AI systems explained.md>) · `architecture` · baseten
   Explains compound AI systems and how multiple models, tools, and control logic combine into applications.
 - **2024-07-09** — [Banque des Territoires (CDC Group) x Polyconseil x Hugging Face: Enhancing a Major French Environmental Program with a Sovereign Data Solution](<case-studies/Banque des Territoires (CDC Group) x Polyconseil x Hugging Face Enhancing a Major French Environmental Program with a Sovereign Data Solution.md>) · `case-studies` · huggingface
@@ -140,6 +146,8 @@
   XLSCOUT fine-tunes BGE-base into ParaEmbed 2.0 on expert-curated patent data, gaining 23% accuracy over its predecessor and beating GPT-4/text-embedding-ada-002 on patent prior-art retrieval — a case for domain-specific open embeddings over closed APIs.
 - **2024-06-06** — [How to catch crypto miners using syscall signatures](<security/How to catch crypto miners using syscall signatures.md>) · `security` · modal
   Explains detecting abusive GPU workloads with syscall signatures, a useful pattern for securing shared AI infrastructure.
+- **2024-05-06** — [Playing Doom With an LLM: Fine-Tuning Mistral-7B | Fireworks](<case-studies/Playing Doom With an LLM Fine-Tuning Mistral-7B Fireworks.md>) · `case-studies` · fireworks
+  Hackathon case study fine-tuning Mistral-7B to play Doom from screen input and keyboard actions, covering the data collection and fine-tuning approach used to teach an LLM a real-time control task.
 - **2024-04-16** — [Running Privacy-Preserving Inferences on Hugging Face Endpoints](<security/Running Privacy-Preserving Inferences on Hugging Face Endpoints.md>) · `security` · huggingface
   Shows how to serve Zama Concrete ML models under Fully Homomorphic Encryption on HF Inference Endpoints via custom inference handlers, so a spam classifier runs on ciphertext without ever seeing the plaintext message; also covers compiling your own FHE-friendly model.
 - **2024-02-26** — [AI Watermarking 101: Tools and Techniques](<security/AI Watermarking 101 Tools and Techniques.md>) · `security` · huggingface
@@ -181,6 +189,8 @@
   Walks through building Void Explorer, a TypeScript/Three.js WebGPU space game, with OpenAI's Astra coding agent: a floating-origin coordinate system and quadtree LOD terrain streamed from Web Workers, plus measured optimization work (indexed meshes cut transferred terrain data from ~35MB to ~15MB; a stabilized LOD scheduler cut discarded terrain jobs from 6,074 to 13 during a simulated descent; a ship-model swap cut draw calls from 119 to 77 and average frame time from 251ms to 199ms). Also covers exposing a debug state interface and named Playwright test scenes so the agent could reproduce bugs and verify performance regressions on its own.
 - **2026-09-01** — [What is voice AI? Enterprise guide to AI voice agents](<../evals-observability/evaluation/What is voice AI Enterprise guide to AI voice agents.md>) · `evaluation` · sierra
   Argues enterprise voice AI agents must be evaluated end-to-end rather than on voice quality alone, laying out seven call-readiness tests (latency, turn-taking, hearing, context, action, guardrails, handoff) and citing Sierra's tau-voice benchmark (278 grounded tasks) and Voice Sims for realistic multi-condition testing.
+- **2026-08-26** — [DeepSeek V4 Pro CyberGym Results: Security Agent Costs | Fireworks](<../models/benchmarks/DeepSeek V4 Pro CyberGym Results Security Agent Costs Fireworks.md>) · `benchmarks` · fireworks
+  Runs DeepSeek V4 Pro against Kimi K3, GPT-5.5, and Claude Opus 4.8 on CyberGym (840 adversarial security tasks requiring finding and fixing real vulnerabilities), finding zero refusals and half the cost-per-success of the best closed model.
 - **2026-08-11** — [Teaching agents to navigate janky IVR systems](<../agents/tool-use/Teaching agents to navigate janky IVR systems.md>) · `tool-use` · sierra
   Details five concrete failure modes voice agents hit navigating IVR phone trees for other companies (response timing during preambles, keyword vs conversational response modes, detecting a human vs hold-music greetings, unpredictable/broken menu trees, and DTMF tone-vs-speech input handling), which raised Sierra agents' IVR success rate from ~50% to 85%.
 - **2026-08-03** — [Laguna S 2.1 goes Greek: a repository-scale game transformation](<../agents/tool-use/Laguna S 2.1 goes Greek a repository-scale game transformation.md>) · `tool-use` · baseten

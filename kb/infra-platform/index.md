@@ -1,7 +1,9 @@
 # infra-platform
 
-54 articles.
+57 articles.
 
+- **2026-10-22** — [Introducing our Training API](<deployment/Introducing our Training API.md>) · `deployment` · modal
+  Introduces Modal's Training API, positioned against Thinking Machines' Tinker, aiming to let teams write training loops in plain Python while avoiding per-token pricing and provider-restricted model/feature choices as they scale experiments.
 - **2026-10-20** — [Serverless routing made sticky | Modal Blog](<deployment/Serverless routing made sticky Modal Blog.md>) · `deployment` · modal
   Describes Modal's Sticky Sessions, built on the fprs stateless proxy underlying Modal Servers, which guarantees every request in a session lands on the same container for stateful workloads like streaming STT and voice agents, replacing the max_containers=1 anti-pattern with session-based autoscaling.
 - **2026-10-19** — [NVIDIA Vera CPUs double throughput for Modal Sandboxes](<gpu-clusters/NVIDIA Vera CPUs double throughput for Modal Sandboxes.md>) · `gpu-clusters` · modal
@@ -26,6 +28,8 @@
   Shows how to use Pydantic Logfire's typed managed variables as feature flags for production AI systems, letting teams target and A/B test models, prompts, and tool policies (with UsageLimits caps) without redeploying, and tying each resolved variant to OpenTelemetry traces and dashboards.
 - **2026-08-17** — [A/B test models in production](<deployment/AB test models in production.md>) · `deployment` · together
   Explains Together AI's endpoint-level A/B testing for production model traffic: one control plus up to 20 variants with fixed percentage splits independent of replica autoscaling, etag-guarded ramping, sampling-key-based cohort stickiness, and promote-then-delete rollout to end an experiment. Walks through a live run ramping 95/5 to 80/20 to 50/50 and shows observed traffic shares matching the configured percents.
+- **2026-07-26** — [Fireworks Nexus: Cut AI Coding Costs With Open Models | Fireworks](<cost/Fireworks Nexus Cut AI Coding Costs With Open Models Fireworks.md>) · `cost` · fireworks
+  Describes Fireworks Nexus, which routes routine coding-agent work to open models like Kimi-K3 and GLM-5.2 instead of frontier closed models, reporting a third off per-merged-PR cost in early tests with teams like Notion and Doximity.
 - **2026-07-21** — [Devin Outposts on Modal | Modal Blog](<deployment/Devin Outposts on Modal Modal Blog.md>) · `deployment` · modal
   Modal's open-source modal-devin library lets Cognition's Devin coding agent execute in user-controlled Modal Sandboxes (GPU-backed, custom images, snapshot suspend/resume) while its reasoning stays in Cognition's cloud, splitting the agent's control-plane queue from a self-hosted data-plane orchestrator and worker.
 - **2026-07-15** — [Scaling to 1 million concurrent sandboxes in seconds | Modal Blog](<deployment/Scaling to 1 million concurrent sandboxes in seconds Modal Blog.md>) · `deployment` · modal
@@ -98,6 +102,8 @@
   Practical guide to testing and operating large GPU clusters for generative model training.
 - **2024-07-22** — [WWDC 24: Running Mistral 7B with Core ML](<edge/WWDC 24 Running Mistral 7B with Core ML.md>) · `edge` · huggingface
   Reproduces Apple's WWDC'24 Mistral-7B Core ML demo: exporting a Swift-Transformers model, stateful KV cache, multifunction models for prefill vs extend, INT4 block-wise weight quantization, and running across CPU/GPU/ANE on Apple Silicon.
+- **2024-06-03** — [On-Demand GPU Deployments vs Serverless and Reserved | Fireworks](<cost/On-Demand GPU Deployments vs Serverless and Reserved Fireworks.md>) · `cost` · fireworks
+  Gives concrete guidance on when to graduate from serverless to on-demand/reserved GPU deployments, pegging the economic crossover around 100k+ tokens per minute of sustained traffic.
 - **2024-06-03** — [GPUs on-demand: Not serverless, not reserved, but some third thing](<gpu-clusters/GPUs on-demand Not serverless, not reserved, but some third thing.md>) · `gpu-clusters` · fireworks
   Explains on-demand GPU infrastructure as a middle ground between serverless and reserved capacity.
 - **2024-05-30** — [Control plane vs workload plane in model serving infrastructure](<deployment/Control plane vs workload plane in model serving infrastructure.md>) · `deployment` · baseten
@@ -153,8 +159,12 @@
   Pydantic AI Harness adds AWSLambdaDurability, which checkpoints every model request, tool call, and MCP call as an AWS Lambda durable-functions step so a retried invocation resumes from where it left off instead of re-running the whole agent loop, avoiding duplicated side effects like double refunds after a mid-run timeout.
 - **2026-09-09** — [The Open Source AI Stack](<../agents/harness/The Open Source AI Stack.md>) · `harness` · together
   Together AI outlines the 'MIGHT stack' for building coding agents on open models: choosing model size (e.g. Kimi K3 vs. GLM 5.3 Flash), inference providers, gateways/routers (OpenRouter, Vercel AI Gateway, LiteLLM), harnesses (PI, OpenCode, Amp), and tools (skills, MCP), plus guidance on managing context and starting fresh sessions to avoid degraded agent output.
+- **2026-09-09** — [Specialized Intelligence: When to Train Your Own Model | Fireworks](<../models/fine-tuning/Specialized Intelligence When to Train Your Own Model Fireworks.md>) · `fine-tuning` · fireworks
+  Lays out a three-stage framework for when teams move from renting closed frontier models to training their own: starting with harnessed closed-model usage, migrating to cheaper open models, then training a custom model once a problem is truly domain-specific.
 - **2026-09-02** — [How Botika runs full-stack generative AI on Modal | Modal Blog](<../product-engineering/case-studies/How Botika runs full-stack generative AI on Modal Modal Blog.md>) · `case-studies` · modal
   Case study on Botika running a full-stack generative AI operation on Modal: a 100TB image data pipeline with under 1% error rate and no orchestrator, multi-node training with RDMA networking for proprietary 4K image-generation foundation models, and an RL infrastructure (reward servers, iterative reward modeling, rollouts) built from Modal primitives in under a day.
+- **2026-08-31** — [Training API Now GA: Custom RL and Fine-Tuning Loops | Fireworks](<../models/reinforcement-learning/Training API Now GA Custom RL and Fine-Tuning Loops Fireworks.md>) · `reinforcement-learning` · fireworks
+  Covers Fireworks' Training API reaching general availability, citing Harvey's async-RL post-training of Kimi K3 for legal work (19.7% vs 10.8% baseline on the LAB benchmark) and Vercel's RFT-plus-speculative-decoding tuning for a 93% error-free, 40x-faster auto-fixer.
 - **2026-08-31** — [Training API now generally available | Fireworks](<../models/reinforcement-learning/Training API now generally available Fireworks.md>) · `reinforcement-learning` · fireworks
   Fireworks details the infrastructure behind its now-GA Training API and Fireworks Lab: aligning numerical formats (BF16, block-wise FP8, NVFP4) and kernels between trainer and rollout engines, Router Replay to keep MoE expert selection consistent across rollout and backward pass, asynchronous RL that overlaps rollout generation with training, and XOR-diff plus zstd weight compression that cuts hot-load transmission bandwidth up to 10x.
 - **2026-08-26** — [Best Prompt Management Tools 2026 | Pydantic Logfire](<../prompt-engineering/techniques/Best Prompt Management Tools 2026 Pydantic Logfire.md>) · `techniques` · pydantic
@@ -181,12 +191,16 @@
   Analyzes 904 graded DeepSWE rollouts comparing Kimi K3 and GPT-5.6 Sol: Sol leads pass@1 72.7% to 68.5%, but Kimi K3 wins pass@4 (89.4% vs 85.8%) at 64% lower cost ($4.65 vs $8.37 per rollout). With only 0.46 task-level correlation between the two models, a Kimi-first cascade that escalates to Sol on test failure covers 108/113 tasks (~85.6%), beating both single models and a perfect one-shot router.
 - **2026-07-14** — [Agent and LLM views in Pydantic Logfire](<../evals-observability/monitoring/Agent and LLM views in Pydantic Logfire.md>) · `monitoring` · pydantic
   Argues that non-deterministic agent workloads should be monitored on turns-per-run and tool-calling-turns-per-run at p90, not the mean, because a rare runaway retry loop (e.g. 40 tool calls, $12) hides in the average; built from the gen_ai.* spans agents already emit.
+- **2026-07-09** — [LangChain Deep Agents on NVIDIA Nemotron 3 Ultra | Fireworks](<../agents/harness/LangChain Deep Agents on NVIDIA Nemotron 3 Ultra Fireworks.md>) · `harness` · fireworks
+  Covers LangChain Deep Agents tuned on NVIDIA Nemotron 3 Ultra, arguing that cost-per-completed-task (not cost-per-response) is the metric that matters once multi-turn agentic workloads consume 5-1000x the tokens of single-shot calls.
 - **2026-07-02** — [H100 vs. H200 vs. B200: which GPU should you use?](<../inference/hardware/H100 vs. H200 vs. B200 which GPU should you use.md>) · `hardware` · baseten
   Compares H100, H200, and B200 GPUs for choosing hardware for inference workloads.
 - **2026-06-26** — [How Factory Grew Open Model Usage 2-3x in Six Months on Fireworks](<../agents/harness/How Factory Grew Open Model Usage 2-3x in Six Months on Fireworks.md>) · `harness` · fireworks
   Factory's Droids run any coding model (frontier or open-weight) behind one harness that absorbs per-model differences in reasoning/tracing formats, tool schemas, and git-state handling; open-weight share of Factory's usage grew 2-3x in six months as models closed the capability gap at a fraction of frontier cost.
 - **2026-06-25** — [Proxying inference requests in 6ms with Pingora, Envoy, and Spanner](<../inference/serving/Proxying inference requests in 6ms with Pingora, Envoy, and Spanner.md>) · `serving` · modal
   Explains low-latency inference proxying with Pingora, Envoy, and Spanner, including request-routing architecture.
+- **2026-06-24** — [Frontier RL Training Infrastructure for GLM 5.2 | Fireworks](<../models/reinforcement-learning/Frontier RL Training Infrastructure for GLM 5.2 Fireworks.md>) · `reinforcement-learning` · fireworks
+  Explains why RL on frontier models is an infrastructure problem rather than an algorithm problem, detailing batch invariance and zero-KLD training/serving parity as the engineering foundation now offered as a managed RL service on GLM 5.2.
 - **2026-06-24** — [Frontier-lab training infrastructure, now as a service](<../models/reinforcement-learning/Frontier-lab training infrastructure, now as a service.md>) · `reinforcement-learning` · fireworks
   Details the batch-invariance and end-to-end zero-KLD infrastructure needed to keep an RL trainer and rollout engine numerically identical on large MoE models, and announces it as a managed training-as-a-service offering starting with GLM 5.2.
 - **2026-05-28** — [Reinforcement learning is an infrastructure problem](<../models/reinforcement-learning/Reinforcement learning is an infrastructure problem.md>) · `reinforcement-learning` · modal
@@ -201,6 +215,8 @@
   Practical guide to shipping and scaling AI agents, including lifecycle, reliability, deployment, and continuous improvement concerns.
 - **2026-05-12** — [A more reliable inference layer for foundation models](<../inference/serving/A more reliable inference layer for foundation models.md>) · `serving` · sierra
   Explains Sierra's inference-layer reliability strategy for foundation models, including routing, redundancy, and serving behavior preservation under provider failures.
+- **2026-04-27** — [DeepSeek V4 Pro: How We Validated It for Production | Fireworks](<../product-engineering/case-studies/DeepSeek V4 Pro How We Validated It for Production Fireworks.md>) · `case-studies` · fireworks
+  A production postmortem describing how DeepSeek V4 Pro's reasoning traces degraded into token-level corruption during the first 48 hours of deployment, reproduced across multiple providers, pointing to a serving-path correctness bug rather than the model itself.
 - **2026-04-16** — [How to Optimize MCP Tool Schemas to Reduce Token Usage](<../agents/tool-use/How to Optimize MCP Tool Schemas to Reduce Token Usage.md>) · `tool-use` · pydantic
   Shows how MCP tool definitions consume context tokens and how to engineer them for efficiency, using a Rust weather MCP server (Open-Meteo, built on the sans-IO 'mercutio' library) as the worked example for tightening the tool schemas and descriptions that Claude and other agents ingest on every request.
 - **2026-04-08** — [Scaling Managed Agents: Decoupling the brain from the hands](<../product-engineering/architecture/Scaling Managed Agents Decoupling the brain from the hands.md>) · `architecture` · anthropic-engineering

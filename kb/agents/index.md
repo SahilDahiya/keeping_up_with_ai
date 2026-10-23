@@ -1,6 +1,6 @@
 # agents
 
-114 articles.
+125 articles.
 
 - **2026-10-22** — [Pydantic AI + E2B: sandboxed coding agents in Python](<harness/Pydantic AI + E2B sandboxed coding agents in Python.md>) · `harness` · pydantic
   Pydantic AI added E2B as a native sandbox capability so an agent's shell and file-system tool calls run inside isolated E2B microVMs instead of the host machine, with pause/resume semantics and a Temporal-durable-workflow example that survives a worker crash mid-run.
@@ -16,6 +16,8 @@
   Contrasts Claude Agent SDK, which wraps a Claude Code subprocess with its own shell/file tools/skills/agent loop and an unpublished system prompt that can change on upgrade, against Pydantic AI's compose-your-own-harness model (capabilities like LocalWorkspace/ModalSandbox/Coder added one at a time), and argues the latter suits apps that aren't themselves coding agents.
 - **2026-09-28** — [Securing the open frontier with NVIDIA OpenShell and Blaxel sandboxes](<harness/Securing the open frontier with NVIDIA OpenShell and Blaxel sandboxes.md>) · `harness` · baseten
   Baseten's Blaxel introduces Carbon, a fourth-generation microVM sandbox for agent execution: every sandbox gets its own dedicated IPv6 address, adds kernel capabilities for runtime policy enforcement (integrating with NVIDIA's OpenShell), and supports manual snapshotting and forking so a quarantined agent can be rolled back to its last known-good state within milliseconds.
+- **2026-09-21** — [Model Routing for LLMs: What 18 Models Show on DeepSWE | Fireworks](<harness/Model Routing for LLMs What 18 Models Show on DeepSWE Fireworks.md>) · `harness` · fireworks
+  Runs 18 models on every DeepSWE task to measure the ceiling for model routing, finding that routing to the best model per task reaches 97.6% accuracy at under a third of the cost of the best single model (74.1%).
 - **2026-09-16** — [Introducing Baseten Hosted Tools](<harness/Introducing Baseten Hosted Tools.md>) · `harness` · baseten
   Baseten's new Hosted Tools run the agentic tool-use loop server-side, co-located with model inference, instead of round-tripping through the client; the company reports a 15% end-to-end latency reduction versus client-side tool loops and launches web search with Exa, Keenable, Parallel, and You.com as the first hosted tool.
 - **2026-09-09** — [Durable Pydantic AI agents on AWS Lambda](<harness/Durable Pydantic AI agents on AWS Lambda.md>) · `harness` · pydantic
@@ -60,6 +62,8 @@
   Second post in the harness series on orchestrating loops of agents: sub-agent delegation via a delegate_task tool that gives each child an isolated context and its own narrow toolset, with tool_retries/contain_errors to bound and absorb child failures, plus 'code mode' dynamic workflows where the model writes a Python program (in sandboxed Pydantic Monty) to gather/vote/retry across specialists.
 - **2026-07-10** — **[Paper]** [Failure as a Process: An Anatomy of CLI Coding Agent Trajectories](<planning/[Paper] Failure as a Process An Anatomy of CLI Coding Agent Trajectories.md>) · `planning` · arxiv
   Empirical study of how CLI coding agents fail as a *process* rather than an outcome: 3,843 trajectories from 7 frontier models across 3 scaffolds (OpenHands, MiniSWE, Terminus2) on Terminal-Bench, with 1,794 valid ones hand-annotated over 63,000 execution steps. Finds failures are driven mainly by epistemic errors, begin within the first few steps, and stay hidden until recovery is impossible — arguing for early validation and intervention instead of final-outcome evaluation.
+- **2026-07-09** — [LangChain Deep Agents on NVIDIA Nemotron 3 Ultra | Fireworks](<harness/LangChain Deep Agents on NVIDIA Nemotron 3 Ultra Fireworks.md>) · `harness` · fireworks
+  Covers LangChain Deep Agents tuned on NVIDIA Nemotron 3 Ultra, arguing that cost-per-completed-task (not cost-per-response) is the metric that matters once multi-turn agentic workloads consume 5-1000x the tokens of single-shot calls.
 - **2026-07-07** — **[Paper]** [Beyond the Leaderboard: A Synthesis of Tool-Use, Planning, and Reasoning Failures in Large Language Model Agents](<planning/[Paper] Beyond the Leaderboard A Synthesis of Tool-Use, Planning, and Reasoning Failures in Large Language Model Agents.md>) · `planning` · arxiv
   Synthesizes 27 benchmark, taxonomy, and audit papers (2023-2026) across 19 benchmarks into a unified taxonomy of LLM-agent failure, with six clusters: tool-invocation/parameter errors, planning and constraint-satisfaction failures, long-horizon degradation from context accumulation, multi-agent coordination breakdown, safety failures under adversarial or underspecified conditions, and measurement-validity problems. Finds failures compound nonlinearly with task length, strong sub-task scores do not predict end-to-end success, and extra scaffolding does not reliably improve reliability.
 - **2026-07-02** — [Observability MCP comparison: Pydantic Logfire, ClickStack, LangSmith, Braintrust, Galileo, Phoenix, and Langfuse](<tool-use/Observability MCP comparison Pydantic Logfire, ClickStack, LangSmith, Braintrust, Galileo, Phoenix, and Langfuse.md>) · `tool-use` · pydantic
@@ -88,6 +92,8 @@
   Guest post on adding a durable execution runtime to Pydantic AI agents so a harnessed run survives production failures (pod evictions, tool timeouts, crashes after expensive model calls) by persisting intermediate decisions and supporting pause/resume for offline human approval, rather than losing agent state to terminal output.
 - **2026-05-25** — [Harness, Scaffold, and the AI Agent Terms Worth Getting Right](<tool-use/Harness, Scaffold, and the AI Agent Terms Worth Getting Right.md>) · `tool-use` · huggingface
   A working glossary that disentangles the overloaded agent vocabulary — model vs scaffolding vs harness vs agent, plus context engineering, policy, tool use, skills, sub-agents and orchestrators — using Claude Code, Codex and RL-environment framing as reference points. Defines 'harness engineering' (stop conditions, error handling, guardrails) and the eval-harness variant.
+- **2026-05-20** — [Agent Execution Tax: A 720-Run Browser Agent Benchmark | Fireworks](<tool-use/Agent Execution Tax A 720-Run Browser Agent Benchmark Fireworks.md>) · `tool-use` · fireworks
+  A 720-run browser-agent benchmark across four LLMs finds that execution reliability, not reasoning quality, drives failures: one model wasted nearly 1-in-5 calls on malformed JSON retries, defined as a 22.9% 'Agent Execution Tax' versus 0% for the best model.
 - **2026-05-12** — [Sierra Agent OS 2.0: from answers to memory and action](<memory-context/Sierra Agent OS 2.0 from answers to memory and action.md>) · `memory-context` · sierra
   Describes Agent OS 2.0 moving agents from answers to memory and action, covering persistent context, tool use, and stateful behavior.
 - **2026-05-12** — [Explorer: The agent-optimizing agent](<planning/Explorer The agent-optimizing agent.md>) · `planning` · sierra
@@ -140,6 +146,8 @@
   Introduces tool search, programmatic tool calling, and tool-use examples on the Claude Developer Platform to scale agents past context-window limits on large tool sets.
 - **2025-11-19** — [50 Trillion Tokens Per Day: The State of Agent Environments](<computer-use/50 Trillion Tokens Per Day The State of Agent Environments.md>) · `computer-use` · fireworks
   Surveys the state of agent environments, emphasizing execution scale, sandboxing, and environment design.
+- **2025-11-19** — [State of Agent Environments: 7 Types Ranked by Usage | Fireworks](<harness/State of Agent Environments 7 Types Ranked by Usage Fireworks.md>) · `harness` · fireworks
+  Analyzes API telemetry across 7 types of agent production environments, arguing that the tools/workflows/data scaffolding around agents, not raw model intelligence, now determines which companies capture value at a scale of 1.5 quadrillion tokens/month.
 - **2025-11-05** — [Tool Calling in Inference](<tool-use/Tool Calling in Inference.md>) · `tool-use` · baseten
   Explains tool calling in inference and how model servers support structured external actions.
 - **2025-11-04** — [Code execution with MCP: building more efficient AI agents](<tool-use/Code execution with MCP building more efficient AI agents.md>) · `tool-use` · anthropic-engineering
@@ -160,6 +168,8 @@
   Argues for decentralized voice-agent architectures over central orchestration in some customer-experience workloads.
 - **2025-08-21** — [AI agents for efficient LLM inference engineering](<tool-use/AI agents for efficient LLM inference engineering.md>) · `tool-use` · together
   Case study of using AI agents to automate engineering tasks while developing efficient inference systems.
+- **2025-08-12** — [gpt-oss on Fireworks: Tool Calling Fixes and Benchmarks | Fireworks](<tool-use/gpt-oss on Fireworks Tool Calling Fixes and Benchmarks Fireworks.md>) · `tool-use` · fireworks
+  Describes bugs found and fixed in gpt-oss's tool-calling implementation after its release, plus resulting benchmark improvements from Fireworks' production hardening work.
 - **2025-08-07** — [Beyond Multi-Channel: A Guide to Omnichannel AI Agents](<memory-context/Beyond Multi-Channel A Guide to Omnichannel AI Agents.md>) · `memory-context` · cresta
   On carrying conversation context across SMS, chat and voice so customers do not restate themselves after a channel switch, using a fraud-alert example that breaks across three channels. Argues agents should be channel-aware, adapting register and length to each medium rather than reusing one script everywhere.
 - **2025-07-15** — [Building reliable AI agents](<planning/Building reliable AI agents.md>) · `planning` · baseten
@@ -168,6 +178,8 @@
   Explains function calling as the bridge between LLM outputs, external tools, and agentic execution loops.
 - **2025-07-02** — [DeepSWE coding agent trained with scaled RL](<tool-use/DeepSWE coding agent trained with scaled RL.md>) · `tool-use` · together
   Explains DeepSWE, an open-source coding agent trained by scaling reinforcement learning.
+- **2025-06-22** — [Responses API With MCP: Connect Open Models to Your Tools | Fireworks](<tool-use/Responses API With MCP Connect Open Models to Your Tools Fireworks.md>) · `tool-use` · fireworks
+  Explains how Fireworks' Responses API uses the Model Context Protocol (MCP) to connect open models to external tools and data without hand-written glue code for the prompt/parse/call/feed-back loop.
 - **2025-06-22** — [Unlock Your Tools: Fireworks Adds OpenAI-Response API with MCP Support (Beta)](<tool-use/Unlock Your Tools Fireworks Adds OpenAI-Response API with MCP Support (Beta).md>) · `tool-use` · fireworks
   Fireworks' OpenAI-compatible Responses API adds first-class Model Context Protocol (MCP) support, moving the agentic loop (reasoning, tool selection, execution) server-side so any MCP-speaking tool integration is portable across models rather than locked into one vendor's tool-calling format.
 - **2025-06-18** — [Introducing Roast: Structured AI workflows made easy (2025)](<harness/Introducing Roast Structured AI workflows made easy (2025).md>) · `harness` · shopify
@@ -180,8 +192,12 @@
   Shows that making a CodeAgent emit its thoughts and code as structured JSON (rather than free-form markdown code blocks) beats both plain CodeAgents and JSON ToolCallingAgents on SmolBench (GAIA, MATH, SimpleQA, Frames), with the gain concentrated in larger models; smaller models can be hurt by the added format constraint.
 - **2025-05-21** — [Building an open-source Browser Agent on Fireworks](<computer-use/Building an open-source Browser Agent on Fireworks.md>) · `computer-use` · fireworks
   Technical breakdown of Fireworks BrowserUse: gives an LLM web-browsing ability by combining DOM extraction (interactive element structure), base64 screenshot capture for visual context, viewport/scroll position tracking, and unique indexing of interactive elements so the model can unambiguously reference what to click.
+- **2025-05-21** — [How to Build an Open-Source AI Browser Agent | Fireworks](<computer-use/How to Build an Open-Source AI Browser Agent Fireworks.md>) · `computer-use` · fireworks
+  Technical deep dive into the architecture of an open-source LLM browser agent, covering how the model perceives web page content and takes real-time actions like clicking and form-filling.
 - **2025-05-19** — [Agentic AI Systems](<planning/Agentic AI Systems.md>) · `planning` · fireworks
   Overview of agentic AI systems, covering planning, tool use, control loops, and production architecture concerns.
+- **2025-05-06** — [Qwen 3 on Fireworks: Controllable chain-of-thought and tool calling at frontier scale](<tool-use/Qwen 3 on Fireworks Controllable chain-of-thought and tool calling at frontier scale.md>) · `tool-use` · fireworks
+  Covers Qwen3's ability to stream an explicit reasoning trace alongside structured tool calls in one completion, with a reasoning_effort flag to trade transparency for throughput on the 235B/22B-active MoE model.
 - **2025-04-16** — [Open Deep Research](<tool-use/Open Deep Research.md>) · `tool-use` · together
   Describes an open deep research system combining retrieval, planning, and tool use.
 - **2025-04-08** — [DeepCoder: A Fully Open-Source 14B Coder at O3-mini Level](<tool-use/DeepCoder A Fully Open-Source 14B Coder at O3-mini Level.md>) · `tool-use` · together
@@ -200,12 +216,16 @@
   Frames voice agents as a choice between rigid flow-based bots that cannot handle diverse intents and purely generative agents that hallucinate in public ways, and proposes a hybrid architecture pairing LLM generation with deterministic systems enforcing business rules. Cites Metrigy finding 40.6% of customers actively avoid virtual agents.
 - **2024-08-29** — [Build Your Own Flight Recommendation System using FastAPI, SerpAPI, and Firefunction](<tool-use/Build Your Own Flight Recommendation System using FastAPI, SerpAPI, and Firefunction.md>) · `tool-use` · fireworks
   Tutorial building a flight-recommendation agent that uses Firefunction-v2 to extract structured flight parameters (IATA codes, dates) from natural-language queries and dispatch them as tool calls to the SerpApi Google Flights endpoint, wired up with FastAPI and Next.js.
+- **2024-08-29** — [Function Calling Flight Search with SerpApi and FastAPI | Fireworks](<tool-use/Function Calling Flight Search with SerpApi and FastAPI Fireworks.md>) · `tool-use` · fireworks
+  Tutorial building a flight-recommendation agent that uses Firefunction-v2 for structured extraction of travel parameters, chained with SerpApi, FastAPI, and Next.js.
 - **2024-08-12** — [Tool Use, Unified](<tool-use/Tool Use, Unified.md>) · `tool-use` · huggingface
   Explains the unified tool-use API in Transformers chat templates: pass plain Python functions with typed signatures and docstrings and they are auto-converted to JSON schema, then rendered per-model by the model's Jinja chat template — plus the conventions chosen for tool-call and tool-result messages so tool-calling chats are portable across models that disagree on formats.
 - **2024-07-01** — [Our Transformers Code Agent beats the GAIA benchmark 🏅](<tool-use/Our Transformers Code Agent beats the GAIA benchmark 🏅.md>) · `tool-use` · huggingface
   How a Transformers CodeAgent (LLM writes Python actions rather than JSON) topped the GAIA agent benchmark: multi-agent web-browser delegation, tool design, and error analysis of GAIA failure modes.
 - **2024-06-17** — [Firefunction-v2: Function calling capability on par with GPT4o at 2.5x the speed and 10% of the cost=](<tool-use/Firefunction-v2 Function calling capability on par with GPT4o at 2.5x the speed and 10% of the cost=.md>) · `tool-use` · fireworks
   Releases Firefunction-v2, a Llama-3-70B-based function-calling model tuned for multi-turn conversation and parallel function calling, reporting 0.81 vs GPT-4o's 0.80 on a public benchmark medley at 180 tok/sec versus GPT-4o's 69 tok/sec and roughly a tenth of the cost.
+- **2024-06-17** — [Firefunction-v2: Open-Weights Function Calling Model | Fireworks](<tool-use/Firefunction-v2 Open-Weights Function Calling Model Fireworks.md>) · `tool-use` · fireworks
+  Details FireFunction-v2's function-calling benchmarks against Llama 3 and GPT-4o (MT-Bench, Nexus parallel multi-function eval), showing competitive accuracy at a fraction of GPT-4o's cost and latency.
 - **2024-06-11** — [Together MoA collective intelligence of open-source models](<multi-agent/Together MoA collective intelligence of open-source models.md>) · `multi-agent` · together
   Explains Mixture-of-Agents for improving model outputs through collective open-source model reasoning.
 - **2024-05-13** — [License to Call: Introducing Transformers Agents 2.0](<tool-use/License to Call Introducing Transformers Agents 2.0.md>) · `tool-use` · huggingface
@@ -216,6 +236,8 @@
   Hackathon writeup on getting text-only Mistral-7B to play Doom by representing the game screen as text (bounding boxes of detected objects) rather than using vision models, working around the lack of native multimodal input to give a text LLM real-time game-state awareness.
 - **2024-02-20** — [FireFunction V1 - Fireworks’ GPT-4-level function calling model - 4x faster than GPT-4 and open weights](<tool-use/FireFunction V1 - Fireworks’ GPT-4-level function calling model - 4x faster than GPT-4 and open weights.md>) · `tool-use` · fireworks
   Releases FireFunction-v1, a Mixtral-based open-weights function-calling model, detailing its structured-output/JSON-mode design, a forced-function-call 'any' tool_choice option, and Nexus OTX/VT benchmark results showing near-GPT-4 accuracy (87.88% vs 87.88% on 5-function tasks) at ~4x lower latency.
+- **2024-02-20** — [FireFunction-v1: Open-Weights Function Calling Model | Fireworks](<tool-use/FireFunction-v1 Open-Weights Function Calling Model Fireworks.md>) · `tool-use` · fireworks
+  Announces FireFunction-v1, an open-weights function-calling model based on Mixtral, detailing improvements over the prior alpha version for incorporating external tool calls into LLM applications.
 - **2024-02-01** — **[Paper]** [Executable Code Actions Elicit Better LLM Agents](<tool-use/[Paper] Executable Code Actions Elicit Better LLM Agents.md>) · `tool-use` · arxiv
   Argues LLM agents should act by generating executable Python code rather than JSON tool calls or free text. Consolidating actions into code gives one unified action space where the model composes tools, uses control flow, and revises on execution feedback; across 17 LLMs CodeAct achieves up to ~20% higher success with fewer actions than JSON/text baselines. Releases the CodeActInstruct dataset and the open CodeActAgent — the canonical statement of the code-as-action paradigm.
 - **2024-01-24** — [Open-source LLMs as LangChain Agents](<tool-use/Open-source LLMs as LangChain Agents.md>) · `tool-use` · huggingface
@@ -233,6 +255,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-10-22** — [𝜏-Entity: Can voice agents get the details right?](<../evals-observability/benchmark-design/𝜏-Entity Can voice agents get the details right.md>) · `benchmark-design` · sierra
+  Introduces tau-Entity, a benchmark measuring whether voice agents can correctly capture, detect uncertainty in, and repair entity details like names and phone numbers, after observing agents fail authentication on exactly this bottleneck.
 - **2026-10-20** — [Why Voice and Chat AI Agents Should Behave Differently](<../product-engineering/architecture/Why Voice and Chat AI Agents Should Behave Differently.md>) · `architecture` · cresta
   Argues voice and chat AI agents need channel-specific orchestration despite a shared business-logic foundation, citing production deployment data on turn-taking latency (voice needs sub-1.5s responses, callers barge in), ASR noise tolerance, and chat's need to manage the lifecycle of stale UI elements like expired payment links.
 - **2026-10-19** — [NVIDIA Vera CPUs double throughput for Modal Sandboxes](<../infra-platform/gpu-clusters/NVIDIA Vera CPUs double throughput for Modal Sandboxes.md>) · `gpu-clusters` · modal
@@ -299,6 +323,8 @@
   Case study on integrating Cresta's voice AI agent with Avaya Infinity's new WebSocket media protocol, covering audio chunk-size tuning (20-200ms) for barge-in latency, timestamp-ordered transcript delivery, and race conditions that silently dropped the final transcript turn during call shutdown.
 - **2026-07-29** — [ThunderAgent: 2x Faster Agentic Inference for Synthetic Data Generation at Scale](<../inference/optimization/ThunderAgent 2x Faster Agentic Inference for Synthetic Data Generation at Scale.md>) · `optimization` · together
   Together AI's ThunderAgent (ICML 2026 Spotlight) fixes KV cache thrashing in high-concurrency agentic inference by scheduling at the program level instead of per-request: it pauses low-priority agent workflows under memory pressure and resumes them via a global waiting queue, achieving 803 vs 390 tok/s single-node throughput over SGLang and near-linear scaling to 2.4x speedup across 8 H100 nodes.
+- **2026-07-26** — [Fireworks Nexus: Cut AI Coding Costs With Open Models | Fireworks](<../infra-platform/cost/Fireworks Nexus Cut AI Coding Costs With Open Models Fireworks.md>) · `cost` · fireworks
+  Describes Fireworks Nexus, which routes routine coding-agent work to open models like Kimi-K3 and GLM-5.2 instead of frontier closed models, reporting a third off per-merged-PR cost in early tests with teams like Notion and Doximity.
 - **2026-07-23** — [Cresta's Compass AI: Better Enterprise Discoverability](<../product-engineering/ux-patterns/Cresta's Compass AI Better Enterprise Discoverability.md>) · `ux-patterns` · cresta
   Rethinks enterprise navigation around an embedded support agent: instead of answering 'where is this feature', Compass answers 'what is the next step toward my goal' and carries context as users move between Insights, Opera automations, and quality management. Notes building an agent inside your own product differs from shipping one to customers, though the requirements/evals/iterate loop stays the same.
 - **2026-07-22** — [Building Sierra’s MCP Gateway: An engineering iceberg](<../product-engineering/security/Building Sierra’s MCP Gateway An engineering iceberg.md>) · `security` · sierra
@@ -411,6 +437,8 @@
   Explains why multi-turn tool-use agents need full RL rather than SFT-on-golden-traces or per-step decomposition, and lays out a trajectory-generator/inference-service/environment/trainer training loop plus reward-design recipes for long-horizon, tool-heavy tasks.
 - **2025-11-20** — [Eval Protocol: RL on your agents, in any environment](<../models/reinforcement-learning/Eval Protocol RL on your agents, in any environment.md>) · `reinforcement-learning` · fireworks
   Describes using Eval Protocol to run reinforcement learning on agents in task environments.
+- **2025-11-20** — [Eval Protocol: Open-Source RL for Production Agents | Fireworks](<../evals-observability/evaluation/Eval Protocol Open-Source RL for Production Agents Fireworks.md>) · `evaluation` · fireworks
+  Describes Eval Protocol's open-source, framework-agnostic interface for reinforcement fine-tuning of agents, designed to let teams migrate from local experiments to remote RL training without rewriting their agent.
 - **2025-11-09** — [Modernizing Healthcare with AI: How RADPAIR and Fireworks Unlock Smarter Radiology Workflows](<../product-engineering/case-studies/Modernizing Healthcare with AI How RADPAIR and Fireworks Unlock Smarter Radiology Workflows.md>) · `case-studies` · fireworks
   RADPAIR built an open-source AI orchestration standard for radiology (Report Document Schema + Actions and Event Protocol) running fine-tuned models and multi-agent pipelines on Fireworks, cutting report turnaround from 15-20s to 2-5s and reporting ~12% fewer errors across 1,000+ concurrent users.
 - **2025-10-31** — [Genspark’s Deep Research Agent Outperforms a Frontier Closed Model in Quality and Tool Calls using Fireworks RFT, Achieving a 50% Cost Reduction](<../models/reinforcement-learning/Genspark’s Deep Research Agent Outperforms a Frontier Closed Model in Quality and Tool Calls using Fireworks RFT, Achieving a 50% Cost Reduction.md>) · `reinforcement-learning` · fireworks
@@ -429,6 +457,8 @@
   Strategies for managing agent context windows—compaction, structured note-taking, sub-agent architectures—and why context engineering supersedes prompt engineering.
 - **2025-08-25** — [LLM Eval Driven Development with Claude Code](<../evals-observability/evaluation/LLM Eval Driven Development with Claude Code.md>) · `evaluation` · fireworks
   Explains eval-driven development with Claude Code, using tests and feedback loops to improve coding-agent behavior.
+- **2025-08-25** — [Eval-Driven Development With Claude Code and Eval Protocol | Fireworks](<../evals-observability/testing/Eval-Driven Development With Claude Code and Eval Protocol Fireworks.md>) · `testing` · fireworks
+  Walks through building an AI agent from a blank project using Claude Code with MCP servers plus Eval Protocol, applying classic test-driven development (write evals before code) to prevent regressions as models change.
 - **2025-08-14** — [Test-driven agent development](<../evals-observability/testing/Test-driven agent development.md>) · `testing` · fireworks
   Shows a TDD-style workflow for building agents with concrete acceptance tests, red teaming, and regression checks.
 - **2025-08-12** — [TextQuests: How Good are LLMs at Text-Based Video Games?](<../evals-observability/benchmark-design/TextQuests How Good are LLMs at Text-Based Video Games.md>) · `benchmark-design` · huggingface
@@ -439,6 +469,8 @@
   FutureBench evaluates agents on predicting events that have not happened yet (news outcomes, prediction-market style questions), which makes benchmark contamination impossible by construction and makes results objectively verifiable once the future arrives. Describes the automated question-generation pipeline and rolling scoring of agents with web search.
 - **2025-06-26** — [Claude Desktop Extensions: One-click MCP server installation for Claude Desktop](<../product-engineering/ux-patterns/Claude Desktop Extensions One-click MCP server installation for Claude Desktop.md>) · `ux-patterns` · anthropic-engineering
   Introduces Desktop Extensions (.dxt): a packaging format for one-click installation of local MCP servers in Claude Desktop, with manifest spec and distribution details.
+- **2025-06-11** — [Build SDK and Experimentation Platform for AI Agents | Fireworks](<../evals-observability/evaluation/Build SDK and Experimentation Platform for AI Agents Fireworks.md>) · `evaluation` · fireworks
+  Describes a four-stage agent development lifecycle (launch and collect data, tune candidate models, run offline evals, deploy the winner) and the SDK/experimentation platform built to support rapid iteration on it.
 - **2025-05-28** — [Mixture-of-Agents Alignment for post-training](<../models/fine-tuning/Mixture-of-Agents Alignment for post-training.md>) · `fine-tuning` · together
   Explains Mixture-of-Agents Alignment for improving post-training with collective model intelligence.
 - **2025-05-06** — [Qwen 3 on Fireworks: Controllable Chain-of-Thought and Tool Calling at Frontier Scale](<../models/reasoning/Qwen 3 on Fireworks Controllable Chain-of-Thought and Tool Calling at Frontier Scale.md>) · `reasoning` · fireworks
@@ -453,6 +485,8 @@
   Technical deep dive into fine-tuning LLMs for multi-turn conversations.
 - **2024-11-20** — [Letting Large Models Debate: The First Multilingual LLM Debate Competition](<../evals-observability/benchmark-design/Letting Large Models Debate The First Multilingual LLM Debate Competition.md>) · `benchmark-design` · huggingface
   BAAI's FlagEval Debate makes LLMs argue against each other as a dynamic eval, arguing that Chatbot-Arena-style setups lack discriminative power, never let models actually interact, and let style bias votes; uses a dual expert-plus-user scoring system across Chinese, English, Korean and Arabic.
+- **2024-11-15** — [Fireworks f1: Compound AI Model for Complex Reasoning | Fireworks](<../models/architectures/Fireworks f1 Compound AI Model for Complex Reasoning Fireworks.md>) · `architectures` · fireworks
+  Introduces Fireworks f1, a compound AI model that interweaves multiple open models at the inference layer for complex reasoning, framed around declarative prompting instead of manually orchestrating component models.
 - **2024-09-12** — [How to build function calling and JSON mode for open-source and fine-tuned LLMs](<../prompt-engineering/structured-output/How to build function calling and JSON mode for open-source and fine-tuned LLMs.md>) · `structured-output` · baseten
   Shows how to build function calling and JSON mode for open-source and fine-tuned LLMs.
 - **2024-08-06** — [Compound AI systems explained](<../product-engineering/architecture/Compound AI systems explained.md>) · `architecture` · baseten
