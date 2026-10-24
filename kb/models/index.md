@@ -1,7 +1,9 @@
 # models
 
-252 articles.
+253 articles.
 
+- **2026-10-21** — [How Shopify turns open models into task experts (2026)](<fine-tuning/How Shopify turns open models into task experts (2026).md>) · `fine-tuning` · shopify
+  Shopify's Sidekick post-trains open models like NVIDIA Nemotron 3.5 Lightning (3B of 30B params active) with Megatron Bridge to replace frontier-model subagents such as its GraphQL subagent, using a GEPA/ACE-tuned LLM judge, a self-healing loop that repaired 69% of 59,535 failed production conversations over 86 nightly runs, and NVIDIA AIPerf/TensorRT-LLM serving benchmarks showing Blackwell B300s trained 1.86x faster than H200s at 46% fewer GPU-hours.
 - **2026-10-21** — [Get started with LLM training on Modal](<reinforcement-learning/Get started with LLM training on Modal.md>) · `reinforcement-learning` · modal
   Modal open-sourced Dojo, a production LLM/RL training library built on Miles and Slime that handles model selection, dataset ingestion from harness/eval traces, auto-tuned training recipes, and an observability dashboard for catching reward hacking and profiling training runs.
 - **2026-10-21** — [The top ranked decision models in the world: mammoth-1 and elephant-1](<releases/The top ranked decision models in the world mammoth-1 and elephant-1.md>) · `releases` · baseten

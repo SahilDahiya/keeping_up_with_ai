@@ -1,10 +1,17 @@
 ---
 title: How Shopify turns open models into task experts (2026)
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: models
+subtopic: fine-tuning
+secondary_topics:
+- agents/multi-agent
+- evals-observability/llm-as-judge
+summary: Shopify's Sidekick post-trains open models like NVIDIA Nemotron 3.5 Lightning
+  (3B of 30B params active) with Megatron Bridge to replace frontier-model subagents
+  such as its GraphQL subagent, using a GEPA/ACE-tuned LLM judge, a self-healing loop
+  that repaired 69% of 59,535 failed production conversations over 86 nightly runs,
+  and NVIDIA AIPerf/TensorRT-LLM serving benchmarks showing Blackwell B300s trained
+  1.86x faster than H200s at 46% fewer GPU-hours.
 triage: null
 skip_reason: null
 source: shopify
@@ -12,7 +19,7 @@ url: https://shopify.engineering/open-model-task-experts
 author: Andrew McNamara
 published: '2026-10-21'
 fetched: '2026-10-24T06:16:06Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1032
 content_sha256: 23858e29424268649421ad95576f437fba5cb5f569eb32959de1646bfbca2eb7

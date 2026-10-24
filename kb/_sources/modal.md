@@ -1,6 +1,6 @@
 # modal
 
-50 articles.
+51 articles.
 
 - **2026-10-22** — [Introducing our Training API](<../infra-platform/deployment/Introducing our Training API.md>) · `deployment` · modal
   Introduces Modal's Training API, positioned against Thinking Machines' Tinker, aiming to let teams write training loops in plain Python while avoiding per-token pricing and provider-restricted model/feature choices as they scale experiments.
@@ -12,6 +12,8 @@
   Modal benchmarks NVIDIA's new Arm-compatible Vera CPU against Intel GNR, AWS Graviton 4/5, and AMD Zen 5 for its multi-tenant Sandboxes product, finding similar straight-line latency but roughly 2x throughput under concurrent load, which matters for noisy-neighbor contention in bursty agent and RL-rollout workloads.
 - **2026-10-16** — [Building fast filesystems for VMs](<../inference/optimization/Building fast filesystems for VMs.md>) · `optimization` · modal
   Modal's engineering postmortem on VM Sandbox filesystem performance: routing its ImageFS layer through virtio-fs made `chown` 6x slower (three guest-host FUSE round trips) and `pnpm install`/`bun install` 3x slower, so they built ImageFS-blk, a virtio-blk backend that lazily materializes ext4 metadata and serves blocks directly from the guest kernel, cutting `bun install` from 12.5s to 1.07s while keeping sub-second cold starts.
+- **2026-10-15** — [Augment Your LiveKit Agent with Modal GPUs](<../inference/optimization/Augment Your LiveKit Agent with Modal GPUs.md>) · `optimization` · modal
+  Modal shows how to run a LiveKit video avatar (BitHuman's Expression Video Avatar voiced by Qwen3-TTS) on serverless GPUs, using Modal Sticky Sessions for container affinity across the avatar's `/launch` WebSocket session and GPU snapshots to hide cold starts that would otherwise require reloading gigabytes of model weights.
 - **2026-10-13** — [Toward RL on mixed-precision, mixed-accelerator samplers](<../models/reinforcement-learning/Toward RL on mixed-precision, mixed-accelerator samplers.md>) · `reinforcement-learning` · modal
   Modal trains Qwen3.6-35B-A3B on agentic coding (SWE-bench Pro V2) with fully asynchronous RL across six heterogeneous accelerator/precision combinations (B200/B300 NVFP4, H100/H200 FP8, A100/RTX PRO 6000 BF16) using masked importance sampling and other off-policy corrections to keep training stable despite the training-inference mismatch.
 - **2026-10-12** — [Endpoint Candidates: evaluate and promote inference endpoints | Modal Blog](<../inference/serving/Endpoint Candidates evaluate and promote inference endpoints Modal Blog.md>) · `serving` · modal

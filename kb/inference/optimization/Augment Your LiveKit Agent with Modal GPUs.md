@@ -1,10 +1,14 @@
 ---
 title: Augment Your LiveKit Agent with Modal GPUs
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: inference
+subtopic: optimization
+secondary_topics:
+- infra-platform/deployment
+summary: Modal shows how to run a LiveKit video avatar (BitHuman's Expression Video
+  Avatar voiced by Qwen3-TTS) on serverless GPUs, using Modal Sticky Sessions for
+  container affinity across the avatar's `/launch` WebSocket session and GPU snapshots
+  to hide cold starts that would otherwise require reloading gigabytes of model weights.
 triage: null
 skip_reason: null
 source: modal
@@ -12,7 +16,7 @@ url: https://modal.com/blog/livekit-modal
 author: Ben Shababo; Andrew Hinh
 published: '2026-10-15'
 fetched: '2026-10-24T06:10:19Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 324
 content_sha256: 9bf3a6403f4bf9503d2fd3fbfecd91753ea5eda297303eec33876b81d3fc254e

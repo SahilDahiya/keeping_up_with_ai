@@ -93,6 +93,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-10-20** — [Cross-store product clustering across millions of stores (2026)](<../product-engineering/architecture/Cross-store product clustering across millions of stores (2026).md>) · `architecture` · shopify
+  Shopify describes the architecture behind cross-store product clustering in its Catalog API: embedding-based ANN retrieval narrows billions of listings to candidate pairs, three LLM-judge pair scorers (L1/L2/L3) of increasing cost label matches, and a graph-based UPI builder evaluates proposed cluster merges rather than relying on simple connected components, since pairwise match judgments are non-transitive.
 - **2026-09-03** — [Give Your Coding Agents a Memory You Own](<../agents/memory-context/Give Your Coding Agents a Memory You Own.md>) · `memory-context` · huggingface
   Introduces funes, a local-first durable memory layer for coding agents (Claude Code, Codex, pi, Hermes) that indexes, retrieves, and ranks past agent session traces so an agent can `recall` prior decisions and their provenance instead of losing context across sessions.
 - **2026-09-01** — [You.com is now a Pydantic AI capability](<../agents/tool-use/You.com is now a Pydantic AI capability.md>) · `tool-use` · pydantic

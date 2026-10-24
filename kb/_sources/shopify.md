@@ -1,7 +1,13 @@
 # shopify
 
-20 articles.
+23 articles.
 
+- **2026-10-21** — [How Shopify turns open models into task experts (2026)](<../models/fine-tuning/How Shopify turns open models into task experts (2026).md>) · `fine-tuning` · shopify
+  Shopify's Sidekick post-trains open models like NVIDIA Nemotron 3.5 Lightning (3B of 30B params active) with Megatron Bridge to replace frontier-model subagents such as its GraphQL subagent, using a GEPA/ACE-tuned LLM judge, a self-healing loop that repaired 69% of 59,535 failed production conversations over 86 nightly runs, and NVIDIA AIPerf/TensorRT-LLM serving benchmarks showing Blackwell B300s trained 1.86x faster than H200s at 46% fewer GPU-hours.
+- **2026-10-20** — [Cross-store product clustering across millions of stores (2026)](<../product-engineering/architecture/Cross-store product clustering across millions of stores (2026).md>) · `architecture` · shopify
+  Shopify describes the architecture behind cross-store product clustering in its Catalog API: embedding-based ANN retrieval narrows billions of listings to candidate pairs, three LLM-judge pair scorers (L1/L2/L3) of increasing cost label matches, and a graph-based UPI builder evaluates proposed cluster merges rather than relying on simple connected components, since pairwise match judgments are non-transitive.
+- **2026-10-19** — [Building Overexposed: understanding application exposure (2026)](<../product-engineering/security/Building Overexposed understanding application exposure (2026).md>) · `security` · shopify
+  Shopify built Overexposed, a scheduled scanner that uses GCP's Cloud Asset Inventory API to enumerate GKE Ingresses and Cloud Run services, then sends a live anonymous HTTP probe to each endpoint and reconciles the result against a reviewed allowlist, after finding that reading Kubernetes config alone produced false alarms, missed admission-controller effects, and blind spots from Ingresses defined outside the main infra repo.
 - **2026-10-01** — [ShopGym: Realistic, reproducible sandboxes for shopping agents (2026)](<../evals-observability/benchmark-design/ShopGym Realistic, reproducible sandboxes for shopping agents (2026).md>) · `benchmark-design` · shopify
   Shopify's ShopGym turns live storefronts into anonymized, resettable sandbox shops (via multi-agent ShopArena, with execution-verification loops and a browser-based visual-verification agent) and auto-generates shopping tasks across seven skill categories via ShopGuru; validated on 224 tasks across six sandbox shops, showing synthetic-shop agent performance correlates with performance on the live stores they mirror.
 - **2026-09-02** — [How River takes security work from a fix to merge (2026)](<../product-engineering/security/How River takes security work from a fix to merge (2026).md>) · `security` · shopify

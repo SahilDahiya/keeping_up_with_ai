@@ -1,9 +1,11 @@
 # inference
 
-156 articles.
+157 articles.
 
 - **2026-10-16** — [Building fast filesystems for VMs](<optimization/Building fast filesystems for VMs.md>) · `optimization` · modal
   Modal's engineering postmortem on VM Sandbox filesystem performance: routing its ImageFS layer through virtio-fs made `chown` 6x slower (three guest-host FUSE round trips) and `pnpm install`/`bun install` 3x slower, so they built ImageFS-blk, a virtio-blk backend that lazily materializes ext4 metadata and serves blocks directly from the guest kernel, cutting `bun install` from 12.5s to 1.07s while keeping sub-second cold starts.
+- **2026-10-15** — [Augment Your LiveKit Agent with Modal GPUs](<optimization/Augment Your LiveKit Agent with Modal GPUs.md>) · `optimization` · modal
+  Modal shows how to run a LiveKit video avatar (BitHuman's Expression Video Avatar voiced by Qwen3-TTS) on serverless GPUs, using Modal Sticky Sessions for container affinity across the avatar's `/launch` WebSocket session and GPU snapshots to hide cold starts that would otherwise require reloading gigabytes of model weights.
 - **2026-10-13** — [Delivering real-time text-to-speech with Gradium](<optimization/Delivering real-time text-to-speech with Gradium.md>) · `optimization` · baseten
   Gradium TTS reaches a 214ms median time-to-first-audio using Kyutai's Delayed Streams Modeling (a temporal 'reader' transformer plus a depth 'refiner' transformer running every 80ms), combined with torch.compile/Triton kernel fusion and CUDA Graphs to keep the CPU from bottlenecking small, latency-sensitive GPU kernels.
 - **2026-10-12** — [Endpoint Candidates: evaluate and promote inference endpoints | Modal Blog](<serving/Endpoint Candidates evaluate and promote inference endpoints Modal Blog.md>) · `serving` · modal

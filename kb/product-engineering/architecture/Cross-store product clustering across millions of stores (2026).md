@@ -1,10 +1,17 @@
 ---
 title: Cross-store product clustering across millions of stores (2026)
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: product-engineering
+subtopic: architecture
+secondary_topics:
+- rag-retrieval/embeddings
+- evals-observability/llm-as-judge
+summary: 'Shopify describes the architecture behind cross-store product clustering
+  in its Catalog API: embedding-based ANN retrieval narrows billions of listings to
+  candidate pairs, three LLM-judge pair scorers (L1/L2/L3) of increasing cost label
+  matches, and a graph-based UPI builder evaluates proposed cluster merges rather
+  than relying on simple connected components, since pairwise match judgments are
+  non-transitive.'
 triage: null
 skip_reason: null
 source: shopify
@@ -12,7 +19,7 @@ url: https://shopify.engineering/catalog-clustering-part-ii
 author: Ilia Kuchumov
 published: '2026-10-20'
 fetched: '2026-10-24T06:16:03Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 2941
 content_sha256: 4faad8a6a8352f27319b69e07257df606be7e5fa9681e2a83370bbfb968ec543

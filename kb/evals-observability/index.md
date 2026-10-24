@@ -277,6 +277,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-10-21** — [How Shopify turns open models into task experts (2026)](<../models/fine-tuning/How Shopify turns open models into task experts (2026).md>) · `fine-tuning` · shopify
+  Shopify's Sidekick post-trains open models like NVIDIA Nemotron 3.5 Lightning (3B of 30B params active) with Megatron Bridge to replace frontier-model subagents such as its GraphQL subagent, using a GEPA/ACE-tuned LLM judge, a self-healing loop that repaired 69% of 59,535 failed production conversations over 86 nightly runs, and NVIDIA AIPerf/TensorRT-LLM serving benchmarks showing Blackwell B300s trained 1.86x faster than H200s at 46% fewer GPU-hours.
 - **2026-10-21** — [Get started with LLM training on Modal](<../models/reinforcement-learning/Get started with LLM training on Modal.md>) · `reinforcement-learning` · modal
   Modal open-sourced Dojo, a production LLM/RL training library built on Miles and Slime that handles model selection, dataset ingestion from harness/eval traces, auto-tuned training recipes, and an observability dashboard for catching reward hacking and profiling training runs.
 - **2026-10-21** — [The top ranked decision models in the world: mammoth-1 and elephant-1](<../models/releases/The top ranked decision models in the world mammoth-1 and elephant-1.md>) · `releases` · baseten
@@ -285,6 +287,8 @@
   Fireworks fine-tuned Muse Glimmer 30B with a LoRA/SFT adapter and K-way cross-entropy loss on Kalshi prediction-market questions, beating Jev by 11.2pp on unseen topics (58.3% vs 47.1%) after per-question-type confidence calibration, and served the result 2-3x faster via the System One API on a single B200.
 - **2026-10-20** — [Training Muse Glimmer for free to out-bet Jev](<../models/fine-tuning/Training Muse Glimmer for free to out-bet Jev.md>) · `fine-tuning` · fireworks
   Fine-tunes Fireworks' Muse Glimmer 30B via LoRA SFT with K-way cross-entropy loss on historical Kalshi prediction markets, using strict train/calibration/eval date splits to prevent leakage, reaching 58.3% accuracy on unseen topics versus 47.1% for the comparison bot Jev.
+- **2026-10-20** — [Cross-store product clustering across millions of stores (2026)](<../product-engineering/architecture/Cross-store product clustering across millions of stores (2026).md>) · `architecture` · shopify
+  Shopify describes the architecture behind cross-store product clustering in its Catalog API: embedding-based ANN retrieval narrows billions of listings to candidate pairs, three LLM-judge pair scorers (L1/L2/L3) of increasing cost label matches, and a graph-based UPI builder evaluates proposed cluster merges rather than relying on simple connected components, since pairwise match judgments are non-transitive.
 - **2026-10-12** — [Endpoint Candidates: evaluate and promote inference endpoints | Modal Blog](<../inference/serving/Endpoint Candidates evaluate and promote inference endpoints Modal Blog.md>) · `serving` · modal
   Modal's Endpoint Candidates feature lets teams stage alternate inference deployments, mirror a sample of production traffic to them, and compare latency, throughput, and cost before promoting a candidate; it extends a Pingora-based proxy with per-candidate bounded buffers and a shared chunk-count budget so slow or failing mirrors are cancelled instead of blocking production requests.
 - **2026-10-12** — [Introducing Cresta Sentry-0.1](<../product-engineering/case-studies/Introducing Cresta Sentry-0.1.md>) · `case-studies` · cresta

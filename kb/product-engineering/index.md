@@ -1,9 +1,13 @@
 # product-engineering
 
-80 articles.
+82 articles.
 
+- **2026-10-20** — [Cross-store product clustering across millions of stores (2026)](<architecture/Cross-store product clustering across millions of stores (2026).md>) · `architecture` · shopify
+  Shopify describes the architecture behind cross-store product clustering in its Catalog API: embedding-based ANN retrieval narrows billions of listings to candidate pairs, three LLM-judge pair scorers (L1/L2/L3) of increasing cost label matches, and a graph-based UPI builder evaluates proposed cluster merges rather than relying on simple connected components, since pairwise match judgments are non-transitive.
 - **2026-10-20** — [Why Voice and Chat AI Agents Should Behave Differently](<architecture/Why Voice and Chat AI Agents Should Behave Differently.md>) · `architecture` · cresta
   Argues voice and chat AI agents need channel-specific orchestration despite a shared business-logic foundation, citing production deployment data on turn-taking latency (voice needs sub-1.5s responses, callers barge in), ASR noise tolerance, and chat's need to manage the lifecycle of stale UI elements like expired payment links.
+- **2026-10-19** — [Building Overexposed: understanding application exposure (2026)](<security/Building Overexposed understanding application exposure (2026).md>) · `security` · shopify
+  Shopify built Overexposed, a scheduled scanner that uses GCP's Cloud Asset Inventory API to enumerate GKE Ingresses and Cloud Run services, then sends a live anonymous HTTP probe to each endpoint and reconciles the result against a reviewed allowlist, after finding that reading Kubernetes config alone produced false alarms, missed admission-controller effects, and blind spots from Ingresses defined outside the main infra repo.
 - **2026-10-14** — [Designing failover across OpenAI model providers](<architecture/Designing failover across OpenAI model providers.md>) · `architecture` · openai-devs
   OpenAI's framework for validated failover between direct (1P) API access and third-party (3P) providers like Bedrock or Azure OpenAI for critical financial and payments workloads: which operations are safe to retry, circuit breakers, shared retry budgets, private-connectivity and data-residency checks, and a Codex prompt for implementing a disabled-by-default failover policy in an existing LLM gateway.
 - **2026-10-14** — [Maintaining software with the GPT-6 family | OpenAI Developers](<case-studies/Maintaining software with the GPT-6 family OpenAI Developers.md>) · `case-studies` · openai-devs

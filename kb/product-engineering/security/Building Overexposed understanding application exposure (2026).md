@@ -1,10 +1,15 @@
 ---
 title: 'Building Overexposed: understanding application exposure (2026)'
 kind: blog
-topic: null
-subtopic: null
+topic: product-engineering
+subtopic: security
 secondary_topics: []
-summary: null
+summary: Shopify built Overexposed, a scheduled scanner that uses GCP's Cloud Asset
+  Inventory API to enumerate GKE Ingresses and Cloud Run services, then sends a live
+  anonymous HTTP probe to each endpoint and reconciles the result against a reviewed
+  allowlist, after finding that reading Kubernetes config alone produced false alarms,
+  missed admission-controller effects, and blind spots from Ingresses defined outside
+  the main infra repo.
 triage: null
 skip_reason: null
 source: shopify
@@ -12,7 +17,7 @@ url: https://shopify.engineering/overexposed
 author: Simar Singh
 published: '2026-10-19'
 fetched: '2026-10-24T06:16:09Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1860
 content_sha256: da825e8a8e8c35366ffd6342a02ab44e7f7debd3c11c19c91623028b9370f675
