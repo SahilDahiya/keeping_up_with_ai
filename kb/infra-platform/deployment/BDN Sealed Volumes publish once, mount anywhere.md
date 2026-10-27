@@ -1,10 +1,15 @@
 ---
 title: 'BDN Sealed Volumes: publish once, mount anywhere'
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: infra-platform
+subtopic: deployment
+secondary_topics:
+- inference/serving
+summary: Introduces Baseten's BDN Sealed Volumes, which let teams publish read-only
+  model artifacts (weights, LoRA adapters, checkpoints, vector/embedding indexes)
+  once and mount an immutable, content-addressed version in any deployment, borrowing
+  the container-registry tag/digest split to stop drift between staging and production
+  copies.
 triage: null
 skip_reason: null
 source: baseten
@@ -12,7 +17,7 @@ url: https://www.baseten.co/blog/bdn-sealed-volumes-publish-once-mount-anywhere/
 author: Stephen Day; Gregory Kofman; Yun Zou; Rajesh Malireddy
 published: '2026-10-26'
 fetched: '2026-10-27T06:11:07Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1916
 content_sha256: ffab51f966e34500cc885d2412aed16e53240225e6b96d89eb5667e2dd6ae94f

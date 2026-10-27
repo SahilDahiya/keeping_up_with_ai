@@ -1,6 +1,6 @@
 # modal
 
-51 articles.
+53 articles.
 
 - **2026-10-22** — [Introducing our Training API](<../infra-platform/deployment/Introducing our Training API.md>) · `deployment` · modal
   Introduces Modal's Training API, positioned against Thinking Machines' Tinker, aiming to let teams write training loops in plain Python while avoiding per-token pricing and provider-restricted model/feature choices as they scale experiments.
@@ -8,6 +8,8 @@
   Modal open-sourced Dojo, a production LLM/RL training library built on Miles and Slime that handles model selection, dataset ingestion from harness/eval traces, auto-tuned training recipes, and an observability dashboard for catching reward hacking and profiling training runs.
 - **2026-10-20** — [Serverless routing made sticky | Modal Blog](<../infra-platform/deployment/Serverless routing made sticky Modal Blog.md>) · `deployment` · modal
   Describes Modal's Sticky Sessions, built on the fprs stateless proxy underlying Modal Servers, which guarantees every request in a session lands on the same container for stateful workloads like streaming STT and voice agents, replacing the max_containers=1 anti-pattern with session-based autoscaling.
+- **2026-10-19** — [How Legora runs 2,000 parallel agent evals on Modal Sandboxes | Modal Blog](<../evals-observability/evaluation/How Legora runs 2,000 parallel agent evals on Modal Sandboxes Modal Blog.md>) · `evaluation` · modal
+  Case study on how legal AI agent Legora runs 2,000 parallel agent evals (100 cases x 4 harness variants x 5 trials) by booting its entire product stack -- a headless DOCX editor, self-hosted Turbopuffer, Postgres, and code-execution sandboxes -- inside an isolated Modal Sandbox per run for environment fidelity rather than mocking dependencies.
 - **2026-10-19** — [NVIDIA Vera CPUs double throughput for Modal Sandboxes](<../infra-platform/gpu-clusters/NVIDIA Vera CPUs double throughput for Modal Sandboxes.md>) · `gpu-clusters` · modal
   Modal benchmarks NVIDIA's new Arm-compatible Vera CPU against Intel GNR, AWS Graviton 4/5, and AMD Zen 5 for its multi-tenant Sandboxes product, finding similar straight-line latency but roughly 2x throughput under concurrent load, which matters for noisy-neighbor contention in bursty agent and RL-rollout workloads.
 - **2026-10-16** — [Building fast filesystems for VMs](<../inference/optimization/Building fast filesystems for VMs.md>) · `optimization` · modal
@@ -30,6 +32,8 @@
   Modal built Quail, a query-aware inference engine that combines a query planner with an LLM inference engine for AI-SQL style batch workloads, hitting over 1 billion tokens/minute on a single H100 (>10x vLLM baseline) and 1.84x faster on their new quail-bench AI-SQL benchmark, at under 6 cents per billion tokens.
 - **2026-09-23** — [How to serve trillions of tokens for trillion-parameter coding agents | Modal Blog](<../inference/optimization/How to serve trillions of tokens for trillion-parameter coding agents Modal Blog.md>) · `optimization` · modal
   Modal details the performance engineering behind serving Moonshot's Kimi K2.6 for coding agents at trillion-token scale, explaining how they scaled per-replica decode throughput 2.8x per user and 5.6x across concurrent users by tuning the interactivity-vs-throughput tradeoff on tensor-core GPU hardware.
+- **2026-09-04** — [One compute platform for end-to-end training at Markov Robotics | Modal Blog](<../infra-platform/gpu-clusters/One compute platform for end-to-end training at Markov Robotics Modal Blog.md>) · `gpu-clusters` · modal
+  Case study on Markov Robotics training a video-and-proprioception-conditioned world model for zero-shot robot manipulation entirely on Modal: fanning out preprocessing of hundreds of terabytes of video with Modal Functions and `.spawn_map` across thousands of CPU/GPU containers (up to 500 GPUs at once), with per-stage hardware selection to keep cost proportional to each step's needs.
 - **2026-09-02** — [How Botika runs full-stack generative AI on Modal | Modal Blog](<../product-engineering/case-studies/How Botika runs full-stack generative AI on Modal Modal Blog.md>) · `case-studies` · modal
   Case study on Botika running a full-stack generative AI operation on Modal: a 100TB image data pipeline with under 1% error rate and no orchestrator, multi-node training with RDMA networking for proprietary 4K image-generation foundation models, and an RL infrastructure (reward servers, iterative reward modeling, rollouts) built from Modal primitives in under a day.
 - **2026-08-04** — [Bringing serverless functions closer to the speed of wire | Modal Blog](<../inference/optimization/Bringing serverless functions closer to the speed of wire Modal Blog.md>) · `optimization` · modal

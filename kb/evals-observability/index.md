@@ -1,11 +1,15 @@
 # evals-observability
 
-136 articles.
+138 articles.
 
+- **2026-10-26** — [Logs vs traces: why logs are not enough](<tracing/Logs vs traces why logs are not enough.md>) · `tracing` · pydantic
+  Argues logs can't reconstruct concurrent request behavior and walks through an async Python checkout handler (fetch_cart/fetch_discounts) to show how trace ID, span ID, and parent span ID let you see which operations belong to the same request, what called what, and exactly where time was lost, in a way plain log lines can't.
 - **2026-10-22** — [𝜏-Entity: Can voice agents get the details right?](<benchmark-design/𝜏-Entity Can voice agents get the details right.md>) · `benchmark-design` · sierra
   Introduces tau-Entity, a benchmark measuring whether voice agents can correctly capture, detect uncertainty in, and repair entity details like names and phone numbers, after observing agents fail authentication on exactly this bottleneck.
 - **2026-10-21** — [𝜏-i18n: Evaluation across languages and beyond task completion](<benchmark-design/𝜏-i18n Evaluation across languages and beyond task completion.md>) · `benchmark-design` · sierra
   Sierra extended its tau-Voice benchmark into tau-i18n, testing airline/retail/telecom voice agents across Spanish, Brazilian Portuguese, Hindi, Korean, and Mandarin over 2,700 calls, scoring task completion, interaction, and generation quality separately; Korean trailed English by 22.6 points on task completion despite identical tasks.
+- **2026-10-19** — [How Legora runs 2,000 parallel agent evals on Modal Sandboxes | Modal Blog](<evaluation/How Legora runs 2,000 parallel agent evals on Modal Sandboxes Modal Blog.md>) · `evaluation` · modal
+  Case study on how legal AI agent Legora runs 2,000 parallel agent evals (100 cases x 4 harness variants x 5 trials) by booting its entire product stack -- a headless DOCX editor, self-hosted Turbopuffer, Postgres, and code-execution sandboxes -- inside an isolated Modal Sandbox per run for environment fidelity rather than mocking dependencies.
 - **2026-10-01** — [ShopGym: Realistic, reproducible sandboxes for shopping agents (2026)](<benchmark-design/ShopGym Realistic, reproducible sandboxes for shopping agents (2026).md>) · `benchmark-design` · shopify
   Shopify's ShopGym turns live storefronts into anonymized, resettable sandbox shops (via multi-agent ShopArena, with execution-verification loops and a browser-based visual-verification agent) and auto-generates shopping tasks across seven skill categories via ShopGuru; validated on 224 tasks across six sandbox shops, showing synthetic-shop agent performance correlates with performance on the live stores they mirror.
 - **2026-10-01** — [AI agent observability: the production layer you need](<tracing/AI agent observability the production layer you need.md>) · `tracing` · pydantic

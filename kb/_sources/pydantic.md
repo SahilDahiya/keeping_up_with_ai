@@ -1,7 +1,9 @@
 # pydantic
 
-52 articles.
+53 articles.
 
+- **2026-10-26** — [Logs vs traces: why logs are not enough](<../evals-observability/tracing/Logs vs traces why logs are not enough.md>) · `tracing` · pydantic
+  Argues logs can't reconstruct concurrent request behavior and walks through an async Python checkout handler (fetch_cart/fetch_discounts) to show how trace ID, span ID, and parent span ID let you see which operations belong to the same request, what called what, and exactly where time was lost, in a way plain log lines can't.
 - **2026-10-22** — [Pydantic AI + E2B: sandboxed coding agents in Python](<../agents/harness/Pydantic AI + E2B sandboxed coding agents in Python.md>) · `harness` · pydantic
   Pydantic AI added E2B as a native sandbox capability so an agent's shell and file-system tool calls run inside isolated E2B microVMs instead of the host machine, with pause/resume semantics and a Temporal-durable-workflow example that survives a worker crash mid-run.
 - **2026-10-16** — [How Pydantic cut CI costs with RunsOn](<../infra-platform/cost/How Pydantic cut CI costs with RunsOn.md>) · `cost` · pydantic

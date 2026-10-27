@@ -319,6 +319,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-10-26** — [BDN Sealed Volumes: publish once, mount anywhere](<../infra-platform/deployment/BDN Sealed Volumes publish once, mount anywhere.md>) · `deployment` · baseten
+  Introduces Baseten's BDN Sealed Volumes, which let teams publish read-only model artifacts (weights, LoRA adapters, checkpoints, vector/embedding indexes) once and mount an immutable, content-addressed version in any deployment, borrowing the container-registry tag/digest split to stop drift between staging and production copies.
 - **2026-10-20** — [Train Muse Glimmer for free: Our recipe for out-betting Jev](<../models/fine-tuning/Train Muse Glimmer for free Our recipe for out-betting Jev.md>) · `fine-tuning` · fireworks
   Fireworks fine-tuned Muse Glimmer 30B with a LoRA/SFT adapter and K-way cross-entropy loss on Kalshi prediction-market questions, beating Jev by 11.2pp on unseen topics (58.3% vs 47.1%) after per-question-type confidence calibration, and served the result 2-3x faster via the System One API on a single B200.
 - **2026-10-20** — [Serverless routing made sticky | Modal Blog](<../infra-platform/deployment/Serverless routing made sticky Modal Blog.md>) · `deployment` · modal

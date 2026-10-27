@@ -1,10 +1,14 @@
 ---
 title: 'Logs vs traces: why logs are not enough'
 kind: blog
-topic: null
-subtopic: null
+topic: evals-observability
+subtopic: tracing
 secondary_topics: []
-summary: null
+summary: Argues logs can't reconstruct concurrent request behavior and walks through
+  an async Python checkout handler (fetch_cart/fetch_discounts) to show how trace
+  ID, span ID, and parent span ID let you see which operations belong to the same
+  request, what called what, and exactly where time was lost, in a way plain log lines
+  can't.
 triage: null
 skip_reason: null
 source: pydantic
@@ -12,7 +16,7 @@ url: https://pydantic.dev/articles/why-traces-when-you-have-logs
 author: Marcelo Trylesinski
 published: '2026-10-26'
 fetched: '2026-10-27T06:17:06Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1645
 content_sha256: 440ab7156fae9bfe49864af92db29f15ea7fe18b0ec02fb5e715e2daf91a9f69

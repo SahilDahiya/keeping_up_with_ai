@@ -1,10 +1,15 @@
 ---
 title: How Legora runs 2,000 parallel agent evals on Modal Sandboxes | Modal Blog
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: evals-observability
+subtopic: evaluation
+secondary_topics:
+- infra-platform/deployment
+summary: Case study on how legal AI agent Legora runs 2,000 parallel agent evals (100
+  cases x 4 harness variants x 5 trials) by booting its entire product stack -- a
+  headless DOCX editor, self-hosted Turbopuffer, Postgres, and code-execution sandboxes
+  -- inside an isolated Modal Sandbox per run for environment fidelity rather than
+  mocking dependencies.
 triage: null
 skip_reason: null
 source: modal
@@ -12,7 +17,7 @@ url: https://modal.com/blog/how-legora-runs-thousand-scale-parallel-agent-evals-
 author: null
 published: '2026-10-19'
 fetched: '2026-10-27T06:11:20Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 924
 content_sha256: c6e2c89ddde8e345e92b53d5ddbfbc7b0705e19011e0b69ffa29a26ab57da3c8

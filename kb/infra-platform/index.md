@@ -1,7 +1,9 @@
 # infra-platform
 
-57 articles.
+59 articles.
 
+- **2026-10-26** — [BDN Sealed Volumes: publish once, mount anywhere](<deployment/BDN Sealed Volumes publish once, mount anywhere.md>) · `deployment` · baseten
+  Introduces Baseten's BDN Sealed Volumes, which let teams publish read-only model artifacts (weights, LoRA adapters, checkpoints, vector/embedding indexes) once and mount an immutable, content-addressed version in any deployment, borrowing the container-registry tag/digest split to stop drift between staging and production copies.
 - **2026-10-22** — [Introducing our Training API](<deployment/Introducing our Training API.md>) · `deployment` · modal
   Introduces Modal's Training API, positioned against Thinking Machines' Tinker, aiming to let teams write training loops in plain Python while avoiding per-token pricing and provider-restricted model/feature choices as they scale experiments.
 - **2026-10-20** — [Serverless routing made sticky | Modal Blog](<deployment/Serverless routing made sticky Modal Blog.md>) · `deployment` · modal
@@ -22,6 +24,8 @@
   Together AI's Discover-Evaluate-Adapt-Decide-Production playbook for migrating production LLM workloads from closed to open-source models: replaying real production traffic instead of generic benchmarks (FrontierCode, tau-bench, LMArena) for evaluation, adaptation levers ranked by effort (prompt engineering, inference settings, harness/context engineering, fine-tuning), and canary rollouts starting at 10% of traffic, with customers reporting up to 70% cost reduction.
 - **2026-09-10** — [Introducing preemptible compute: the same compute, half the price](<gpu-clusters/Introducing preemptible compute the same compute, half the price.md>) · `gpu-clusters` · together
   Together GPU Clusters adds preemptible Kubernetes nodes billed sub-hourly at a flat 50% of on-demand price, with a 5-minute SIGTERM drain window for reclamation; aimed at checkpointable/retryable work like ablations, evals, and batch inference, while coordinators and user-facing replicas stay on standard nodes.
+- **2026-09-04** — [One compute platform for end-to-end training at Markov Robotics | Modal Blog](<gpu-clusters/One compute platform for end-to-end training at Markov Robotics Modal Blog.md>) · `gpu-clusters` · modal
+  Case study on Markov Robotics training a video-and-proprioception-conditioned world model for zero-shot robot manipulation entirely on Modal: fanning out preprocessing of hundreds of terabytes of video with Modal Functions and `.spawn_map` across thousands of CPU/GPU containers (up to 500 GPUs at once), with per-stage hardware selection to keep cost proportional to each step's needs.
 - **2026-08-20** — [Release governance: guardrails for agents at scale](<deployment/Release governance guardrails for agents at scale.md>) · `deployment` · sierra
   Sierra describes release governance for its agent platform: Agent Checks (a linter flagging missing tools, conflicting instructions, and weak authentication on sensitive lookups), Simulations as pre-production quality gates, merge approval workflows with a dedicated Reviewer role, and split-traffic canary releases backed by immutable, instantly rollback-able snapshots.
 - **2026-08-18** — [Feature flags for production AI](<deployment/Feature flags for production AI.md>) · `deployment` · pydantic
@@ -123,6 +127,8 @@
   Modal open-sourced Dojo, a production LLM/RL training library built on Miles and Slime that handles model selection, dataset ingestion from harness/eval traces, auto-tuned training recipes, and an observability dashboard for catching reward hacking and profiling training runs.
 - **2026-10-19** — [Together Post-Training: frontier-grade model shaping, the way that fits you](<../models/reinforcement-learning/Together Post-Training frontier-grade model shaping, the way that fits you.md>) · `reinforcement-learning` · together
   Together launches a post-training service giving dedicated GPU 'Model Resources' with separate Trainer/Generator instances for RL (GRPO, CISPO, DPPO) and SFT/LoRA, using Rollout Routing Replay and other numerics-alignment work to curb training/inference policy drift, plus multi-LoRA serving and FP4 merged inference for deployment.
+- **2026-10-19** — [How Legora runs 2,000 parallel agent evals on Modal Sandboxes | Modal Blog](<../evals-observability/evaluation/How Legora runs 2,000 parallel agent evals on Modal Sandboxes Modal Blog.md>) · `evaluation` · modal
+  Case study on how legal AI agent Legora runs 2,000 parallel agent evals (100 cases x 4 harness variants x 5 trials) by booting its entire product stack -- a headless DOCX editor, self-hosted Turbopuffer, Postgres, and code-execution sandboxes -- inside an isolated Modal Sandbox per run for environment fidelity rather than mocking dependencies.
 - **2026-10-15** — [Augment Your LiveKit Agent with Modal GPUs](<../inference/optimization/Augment Your LiveKit Agent with Modal GPUs.md>) · `optimization` · modal
   Modal shows how to run a LiveKit video avatar (BitHuman's Expression Video Avatar voiced by Qwen3-TTS) on serverless GPUs, using Modal Sticky Sessions for container affinity across the avatar's `/launch` WebSocket session and GPU snapshots to hide cold starts that would otherwise require reloading gigabytes of model weights.
 - **2026-10-14** — [Designing failover across OpenAI model providers](<../product-engineering/architecture/Designing failover across OpenAI model providers.md>) · `architecture` · openai-devs

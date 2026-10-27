@@ -1,10 +1,16 @@
 ---
 title: One compute platform for end-to-end training at Markov Robotics | Modal Blog
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: infra-platform
+subtopic: gpu-clusters
+secondary_topics:
+- models/training
+- product-engineering/case-studies
+summary: 'Case study on Markov Robotics training a video-and-proprioception-conditioned
+  world model for zero-shot robot manipulation entirely on Modal: fanning out preprocessing
+  of hundreds of terabytes of video with Modal Functions and `.spawn_map` across thousands
+  of CPU/GPU containers (up to 500 GPUs at once), with per-stage hardware selection
+  to keep cost proportional to each step''s needs.'
 triage: null
 skip_reason: null
 source: modal
@@ -12,7 +18,7 @@ url: https://modal.com/blog/markov-case-study
 author: null
 published: '2026-09-04'
 fetched: '2026-10-27T06:11:22Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1239
 content_sha256: 74ebc0e25468c414aa3e55ed216437cc64b924f281ae6085daee26332c3813dc

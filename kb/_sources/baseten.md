@@ -1,7 +1,9 @@
 # baseten
 
-98 articles.
+99 articles.
 
+- **2026-10-26** — [BDN Sealed Volumes: publish once, mount anywhere](<../infra-platform/deployment/BDN Sealed Volumes publish once, mount anywhere.md>) · `deployment` · baseten
+  Introduces Baseten's BDN Sealed Volumes, which let teams publish read-only model artifacts (weights, LoRA adapters, checkpoints, vector/embedding indexes) once and mount an immutable, content-addressed version in any deployment, borrowing the container-registry tag/digest split to stop drift between staging and production copies.
 - **2026-10-21** — [The top ranked decision models in the world: mammoth-1 and elephant-1](<../models/releases/The top ranked decision models in the world mammoth-1 and elephant-1.md>) · `releases` · baseten
   Baseten's Base Labs released mammoth-1 (27B) and elephant-1 (9B), decision models post-trained from Qwen3.5 that output a probability distribution over answers instead of generating text; mammoth-1 ranks #1 of 208 on the Jev Decision Index 0.4, trained on 6.21M examples spanning five decision-skill domains.
 - **2026-10-15** — [Announcing NVIDIA Nemotron 3.5 Super VL on Baseten](<../models/releases/Announcing NVIDIA Nemotron 3.5 Super VL on Baseten.md>) · `releases` · baseten
