@@ -1,7 +1,9 @@
 # together
 
-97 articles.
+98 articles.
 
+- **2026-10-27** — [Auto repair for Together GPU Clusters: from GPU fault to healthy node](<../infra-platform/gpu-clusters/Auto repair for Together GPU Clusters from GPU fault to healthy node.md>) · `gpu-clusters` · together
+  Together AI details its automatic GPU node repair pipeline: dual-sided detection (in-VM exporters for Xid/ECC/PCIe errors, host-side InfiniBand and reachability checks), a policy layer separating what/whether/when decisions, an escalation ladder from reboot to quick reprovision to migration, cluster-wide safety rails (cooldown, circuit breaker, concurrency budgets), and automatic re-validation of vacated hosts before they rejoin the fleet.
 - **2026-10-19** — [Together Post-Training: frontier-grade model shaping, the way that fits you](<../models/reinforcement-learning/Together Post-Training frontier-grade model shaping, the way that fits you.md>) · `reinforcement-learning` · together
   Together launches a post-training service giving dedicated GPU 'Model Resources' with separate Trainer/Generator instances for RL (GRPO, CISPO, DPPO) and SFT/LoRA, using Rollout Routing Replay and other numerics-alignment work to curb training/inference policy drift, plus multi-LoRA serving and FP4 merged inference for deployment.
 - **2026-09-23** — [How to train your own Jev for $17](<../models/fine-tuning/How to train your own Jev for $17.md>) · `fine-tuning` · together

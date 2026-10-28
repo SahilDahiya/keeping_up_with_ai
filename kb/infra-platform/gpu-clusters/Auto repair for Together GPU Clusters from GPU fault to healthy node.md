@@ -1,10 +1,16 @@
 ---
 title: 'Auto repair for Together GPU Clusters: from GPU fault to healthy node'
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: infra-platform
+subtopic: gpu-clusters
+secondary_topics:
+- evals-observability/monitoring
+summary: 'Together AI details its automatic GPU node repair pipeline: dual-sided detection
+  (in-VM exporters for Xid/ECC/PCIe errors, host-side InfiniBand and reachability
+  checks), a policy layer separating what/whether/when decisions, an escalation ladder
+  from reboot to quick reprovision to migration, cluster-wide safety rails (cooldown,
+  circuit breaker, concurrency budgets), and automatic re-validation of vacated hosts
+  before they rejoin the fleet.'
 triage: null
 skip_reason: null
 source: together
@@ -12,7 +18,7 @@ url: https://www.together.ai/blog/auto-repair-for-together-gpu-clusters
 author: Pavneet Ahluwalia; Dongsheng Zhang; Barbara Kazanowska
 published: '2026-10-27'
 fetched: '2026-10-28T06:07:47Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 2268
 content_sha256: bc0b787cffaa5ab146b95fbfbf3bea0ea6dc0afc0af8f8c631abab318297e875

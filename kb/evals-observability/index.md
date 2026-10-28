@@ -281,6 +281,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-10-27** — [Auto repair for Together GPU Clusters: from GPU fault to healthy node](<../infra-platform/gpu-clusters/Auto repair for Together GPU Clusters from GPU fault to healthy node.md>) · `gpu-clusters` · together
+  Together AI details its automatic GPU node repair pipeline: dual-sided detection (in-VM exporters for Xid/ECC/PCIe errors, host-side InfiniBand and reachability checks), a policy layer separating what/whether/when decisions, an escalation ladder from reboot to quick reprovision to migration, cluster-wide safety rails (cooldown, circuit breaker, concurrency budgets), and automatic re-validation of vacated hosts before they rejoin the fleet.
 - **2026-10-21** — [How Shopify turns open models into task experts (2026)](<../models/fine-tuning/How Shopify turns open models into task experts (2026).md>) · `fine-tuning` · shopify
   Shopify's Sidekick post-trains open models like NVIDIA Nemotron 3.5 Lightning (3B of 30B params active) with Megatron Bridge to replace frontier-model subagents such as its GraphQL subagent, using a GEPA/ACE-tuned LLM judge, a self-healing loop that repaired 69% of 59,535 failed production conversations over 86 nightly runs, and NVIDIA AIPerf/TensorRT-LLM serving benchmarks showing Blackwell B300s trained 1.86x faster than H200s at 46% fewer GPU-hours.
 - **2026-10-21** — [Get started with LLM training on Modal](<../models/reinforcement-learning/Get started with LLM training on Modal.md>) · `reinforcement-learning` · modal
