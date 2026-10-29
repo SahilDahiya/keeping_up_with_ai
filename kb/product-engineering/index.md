@@ -169,6 +169,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-10-23** — [Launching a trillion-parameter model at Sakana AI | Modal Blog](<../inference/optimization/Launching a trillion-parameter model at Sakana AI Modal Blog.md>) · `optimization` · modal
+  Modal's case study on serving Sakana AI's ~1T-parameter Namazu MoE model: selective NVFP4 expert quantization tuned for Japanese retention, a custom DFlash/DFlash2 speculative draft model trained on raw production token streams (+25-43% acceptance rate), cross-GPU speculative-decoding correctness fixes, and a KV-aware router that eliminated multi-minute TTFT spikes.
 - **2026-10-22** — [Pydantic AI + E2B: sandboxed coding agents in Python](<../agents/harness/Pydantic AI + E2B sandboxed coding agents in Python.md>) · `harness` · pydantic
   Pydantic AI added E2B as a native sandbox capability so an agent's shell and file-system tool calls run inside isolated E2B microVMs instead of the host machine, with pause/resume semantics and a Temporal-durable-workflow example that survives a worker crash mid-run.
 - **2026-10-21** — [𝜏-i18n: Evaluation across languages and beyond task completion](<../evals-observability/benchmark-design/𝜏-i18n Evaluation across languages and beyond task completion.md>) · `benchmark-design` · sierra

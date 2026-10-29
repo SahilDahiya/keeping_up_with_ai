@@ -281,6 +281,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-10-28** — [Code mode vs tool calling: a 5,276-run benchmark | Pydantic](<../agents/harness/Code mode vs tool calling a 5,276-run benchmark Pydantic.md>) · `harness` · pydantic
+  Pydantic benchmarked code-mode (model writes a program calling tools as functions in a Monty/Rust sandbox) against classic one-tool-call-at-a-time calling across 8 models and 5,276 runs: on long multi-step tasks code mode cut cost 58% and wall time 51% while raising success 16 points, but cost more on small 5-item jobs, with gains driven by what goes into each request rather than round-trip count.
 - **2026-10-27** — [Auto repair for Together GPU Clusters: from GPU fault to healthy node](<../infra-platform/gpu-clusters/Auto repair for Together GPU Clusters from GPU fault to healthy node.md>) · `gpu-clusters` · together
   Together AI details its automatic GPU node repair pipeline: dual-sided detection (in-VM exporters for Xid/ECC/PCIe errors, host-side InfiniBand and reachability checks), a policy layer separating what/whether/when decisions, an escalation ladder from reboot to quick reprovision to migration, cluster-wide safety rails (cooldown, circuit breaker, concurrency budgets), and automatic re-validation of vacated hosts before they rejoin the fleet.
 - **2026-10-21** — [How Shopify turns open models into task experts (2026)](<../models/fine-tuning/How Shopify turns open models into task experts (2026).md>) · `fine-tuning` · shopify

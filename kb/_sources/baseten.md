@@ -1,7 +1,9 @@
 # baseten
 
-99 articles.
+100 articles.
 
+- **2026-10-28** — [The fastest, lowest-cost batch transcription with Qwen3-ASR](<../inference/optimization/The fastest, lowest-cost batch transcription with Qwen3-ASR.md>) · `optimization` · baseten
+  Baseten optimized Qwen3-ASR 1.7B batch transcription with native audio decoding, KV cache quantization, and fewer host-to-device syncs, reaching 7x the throughput of vanilla vLLM and sustaining over 3,000x real-time factor on hour-long audio at about 1/10th of a cent per audio hour with no meaningful WER change.
 - **2026-10-26** — [BDN Sealed Volumes: publish once, mount anywhere](<../infra-platform/deployment/BDN Sealed Volumes publish once, mount anywhere.md>) · `deployment` · baseten
   Introduces Baseten's BDN Sealed Volumes, which let teams publish read-only model artifacts (weights, LoRA adapters, checkpoints, vector/embedding indexes) once and mount an immutable, content-addressed version in any deployment, borrowing the container-registry tag/digest split to stop drift between staging and production copies.
 - **2026-10-21** — [The top ranked decision models in the world: mammoth-1 and elephant-1](<../models/releases/The top ranked decision models in the world mammoth-1 and elephant-1.md>) · `releases` · baseten

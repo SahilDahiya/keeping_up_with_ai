@@ -1,10 +1,16 @@
 ---
 title: Launching a trillion-parameter model at Sakana AI | Modal Blog
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: inference
+subtopic: optimization
+secondary_topics:
+- product-engineering/case-studies
+- infra-platform/cost
+summary: 'Modal''s case study on serving Sakana AI''s ~1T-parameter Namazu MoE model:
+  selective NVFP4 expert quantization tuned for Japanese retention, a custom DFlash/DFlash2
+  speculative draft model trained on raw production token streams (+25-43% acceptance
+  rate), cross-GPU speculative-decoding correctness fixes, and a KV-aware router that
+  eliminated multi-minute TTFT spikes.'
 triage: null
 skip_reason: null
 source: modal
@@ -12,7 +18,7 @@ url: https://modal.com/blog/sakana-case-study
 author: Peri Langlois; Saatwik Nagpal
 published: '2026-10-23'
 fetched: '2026-10-29T06:07:46Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1290
 content_sha256: 6de7645196a98e895f4ded6110515677f8671510cea73ea73cf552820c0fafd8

@@ -1,10 +1,13 @@
 ---
 title: The fastest, lowest-cost batch transcription with Qwen3-ASR
 kind: blog
-topic: null
-subtopic: null
+topic: inference
+subtopic: optimization
 secondary_topics: []
-summary: null
+summary: Baseten optimized Qwen3-ASR 1.7B batch transcription with native audio decoding,
+  KV cache quantization, and fewer host-to-device syncs, reaching 7x the throughput
+  of vanilla vLLM and sustaining over 3,000x real-time factor on hour-long audio at
+  about 1/10th of a cent per audio hour with no meaningful WER change.
 triage: null
 skip_reason: null
 source: baseten
@@ -12,7 +15,7 @@ url: https://www.baseten.co/blog/fastest-lowest-cost-qwen3-asr-batch-transcripti
 author: Hasan Khan; Ansel Erol
 published: '2026-10-28'
 fetched: '2026-10-29T06:07:37Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 2071
 content_sha256: 9fbd374b6adfb5b5322c953c1943303db85aa47575ecbeab7dcdbd49562bed24

@@ -1,7 +1,11 @@
 # inference
 
-157 articles.
+159 articles.
 
+- **2026-10-28** — [The fastest, lowest-cost batch transcription with Qwen3-ASR](<optimization/The fastest, lowest-cost batch transcription with Qwen3-ASR.md>) · `optimization` · baseten
+  Baseten optimized Qwen3-ASR 1.7B batch transcription with native audio decoding, KV cache quantization, and fewer host-to-device syncs, reaching 7x the throughput of vanilla vLLM and sustaining over 3,000x real-time factor on hour-long audio at about 1/10th of a cent per audio hour with no meaningful WER change.
+- **2026-10-23** — [Launching a trillion-parameter model at Sakana AI | Modal Blog](<optimization/Launching a trillion-parameter model at Sakana AI Modal Blog.md>) · `optimization` · modal
+  Modal's case study on serving Sakana AI's ~1T-parameter Namazu MoE model: selective NVFP4 expert quantization tuned for Japanese retention, a custom DFlash/DFlash2 speculative draft model trained on raw production token streams (+25-43% acceptance rate), cross-GPU speculative-decoding correctness fixes, and a KV-aware router that eliminated multi-minute TTFT spikes.
 - **2026-10-16** — [Building fast filesystems for VMs](<optimization/Building fast filesystems for VMs.md>) · `optimization` · modal
   Modal's engineering postmortem on VM Sandbox filesystem performance: routing its ImageFS layer through virtio-fs made `chown` 6x slower (three guest-host FUSE round trips) and `pnpm install`/`bun install` 3x slower, so they built ImageFS-blk, a virtio-blk backend that lazily materializes ext4 metadata and serves blocks directly from the guest kernel, cutting `bun install` from 12.5s to 1.07s while keeping sub-second cold starts.
 - **2026-10-15** — [Augment Your LiveKit Agent with Modal GPUs](<optimization/Augment Your LiveKit Agent with Modal GPUs.md>) · `optimization` · modal

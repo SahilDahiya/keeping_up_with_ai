@@ -1,7 +1,9 @@
 # agents
 
-125 articles.
+126 articles.
 
+- **2026-10-28** — [Code mode vs tool calling: a 5,276-run benchmark | Pydantic](<harness/Code mode vs tool calling a 5,276-run benchmark Pydantic.md>) · `harness` · pydantic
+  Pydantic benchmarked code-mode (model writes a program calling tools as functions in a Monty/Rust sandbox) against classic one-tool-call-at-a-time calling across 8 models and 5,276 runs: on long multi-step tasks code mode cut cost 58% and wall time 51% while raising success 16 points, but cost more on small 5-item jobs, with gains driven by what goes into each request rather than round-trip count.
 - **2026-10-22** — [Pydantic AI + E2B: sandboxed coding agents in Python](<harness/Pydantic AI + E2B sandboxed coding agents in Python.md>) · `harness` · pydantic
   Pydantic AI added E2B as a native sandbox capability so an agent's shell and file-system tool calls run inside isolated E2B microVMs instead of the host machine, with pause/resume semantics and a Temporal-durable-workflow example that survives a worker crash mid-run.
 - **2026-10-13** — [The code is the graph | Pydantic](<harness/The code is the graph Pydantic.md>) · `harness` · pydantic

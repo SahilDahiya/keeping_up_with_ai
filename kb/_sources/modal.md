@@ -1,7 +1,9 @@
 # modal
 
-53 articles.
+54 articles.
 
+- **2026-10-23** — [Launching a trillion-parameter model at Sakana AI | Modal Blog](<../inference/optimization/Launching a trillion-parameter model at Sakana AI Modal Blog.md>) · `optimization` · modal
+  Modal's case study on serving Sakana AI's ~1T-parameter Namazu MoE model: selective NVFP4 expert quantization tuned for Japanese retention, a custom DFlash/DFlash2 speculative draft model trained on raw production token streams (+25-43% acceptance rate), cross-GPU speculative-decoding correctness fixes, and a KV-aware router that eliminated multi-minute TTFT spikes.
 - **2026-10-22** — [Introducing our Training API](<../infra-platform/deployment/Introducing our Training API.md>) · `deployment` · modal
   Introduces Modal's Training API, positioned against Thinking Machines' Tinker, aiming to let teams write training loops in plain Python while avoiding per-token pricing and provider-restricted model/feature choices as they scale experiments.
 - **2026-10-21** — [Get started with LLM training on Modal](<../models/reinforcement-learning/Get started with LLM training on Modal.md>) · `reinforcement-learning` · modal

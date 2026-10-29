@@ -125,6 +125,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-10-23** — [Launching a trillion-parameter model at Sakana AI | Modal Blog](<../inference/optimization/Launching a trillion-parameter model at Sakana AI Modal Blog.md>) · `optimization` · modal
+  Modal's case study on serving Sakana AI's ~1T-parameter Namazu MoE model: selective NVFP4 expert quantization tuned for Japanese retention, a custom DFlash/DFlash2 speculative draft model trained on raw production token streams (+25-43% acceptance rate), cross-GPU speculative-decoding correctness fixes, and a KV-aware router that eliminated multi-minute TTFT spikes.
 - **2026-10-21** — [Get started with LLM training on Modal](<../models/reinforcement-learning/Get started with LLM training on Modal.md>) · `reinforcement-learning` · modal
   Modal open-sourced Dojo, a production LLM/RL training library built on Miles and Slime that handles model selection, dataset ingestion from harness/eval traces, auto-tuned training recipes, and an observability dashboard for catching reward hacking and profiling training runs.
 - **2026-10-19** — [Together Post-Training: frontier-grade model shaping, the way that fits you](<../models/reinforcement-learning/Together Post-Training frontier-grade model shaping, the way that fits you.md>) · `reinforcement-learning` · together

@@ -1,10 +1,15 @@
 ---
 title: 'Code mode vs tool calling: a 5,276-run benchmark | Pydantic'
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: agents
+subtopic: harness
+secondary_topics:
+- evals-observability/benchmark-design
+summary: 'Pydantic benchmarked code-mode (model writes a program calling tools as
+  functions in a Monty/Rust sandbox) against classic one-tool-call-at-a-time calling
+  across 8 models and 5,276 runs: on long multi-step tasks code mode cut cost 58%
+  and wall time 51% while raising success 16 points, but cost more on small 5-item
+  jobs, with gains driven by what goes into each request rather than round-trip count.'
 triage: null
 skip_reason: null
 source: pydantic
@@ -12,7 +17,7 @@ url: https://pydantic.dev/articles/why-code-mode-is-the-future
 author: Michael Pfaffenberger
 published: '2026-10-28'
 fetched: '2026-10-29T06:13:31Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 5019
 content_sha256: 66c559e5c23ae3356a1331c22381261ffaf8fdeba1e3b38232753ff78314153a

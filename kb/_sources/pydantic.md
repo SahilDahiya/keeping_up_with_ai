@@ -1,7 +1,9 @@
 # pydantic
 
-53 articles.
+54 articles.
 
+- **2026-10-28** — [Code mode vs tool calling: a 5,276-run benchmark | Pydantic](<../agents/harness/Code mode vs tool calling a 5,276-run benchmark Pydantic.md>) · `harness` · pydantic
+  Pydantic benchmarked code-mode (model writes a program calling tools as functions in a Monty/Rust sandbox) against classic one-tool-call-at-a-time calling across 8 models and 5,276 runs: on long multi-step tasks code mode cut cost 58% and wall time 51% while raising success 16 points, but cost more on small 5-item jobs, with gains driven by what goes into each request rather than round-trip count.
 - **2026-10-26** — [Logs vs traces: why logs are not enough](<../evals-observability/tracing/Logs vs traces why logs are not enough.md>) · `tracing` · pydantic
   Argues logs can't reconstruct concurrent request behavior and walks through an async Python checkout handler (fetch_cart/fetch_discounts) to show how trace ID, span ID, and parent span ID let you see which operations belong to the same request, what called what, and exactly where time was lost, in a way plain log lines can't.
 - **2026-10-22** — [Pydantic AI + E2B: sandboxed coding agents in Python](<../agents/harness/Pydantic AI + E2B sandboxed coding agents in Python.md>) · `harness` · pydantic
