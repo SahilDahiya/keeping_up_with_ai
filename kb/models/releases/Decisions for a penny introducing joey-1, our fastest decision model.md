@@ -1,10 +1,14 @@
 ---
 title: 'Decisions for a penny: introducing joey-1, our fastest decision model'
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: models
+subtopic: releases
+secondary_topics:
+- inference/optimization
+summary: Baseten introduces joey-1, a 2B-parameter decision model post-trained from
+  Qwen3.5-2B that returns a label and calibrated probability in a single token instead
+  of generating text, hitting 20ms P50 latency and $0.01/M tokens, 5x faster than
+  its 9B sibling elephant-1 and a tenth the cost of the 27B mammoth-1.
 triage: null
 skip_reason: null
 source: baseten
@@ -12,7 +16,7 @@ url: https://www.baseten.co/blog/decisions-for-a-penny-introducing-joey-1/
 author: Max Kirkby; Charles O'Neill
 published: '2026-10-29'
 fetched: '2026-10-30T06:07:38Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 685
 content_sha256: ee9d9c15b0e2e5bf9a09d8d28bc8e9430ab51553d1ac7776ff44c9a48db73d9d

@@ -1,7 +1,9 @@
 # baseten
 
-100 articles.
+101 articles.
 
+- **2026-10-29** — [Decisions for a penny: introducing joey-1, our fastest decision model](<../models/releases/Decisions for a penny introducing joey-1, our fastest decision model.md>) · `releases` · baseten
+  Baseten introduces joey-1, a 2B-parameter decision model post-trained from Qwen3.5-2B that returns a label and calibrated probability in a single token instead of generating text, hitting 20ms P50 latency and $0.01/M tokens, 5x faster than its 9B sibling elephant-1 and a tenth the cost of the 27B mammoth-1.
 - **2026-10-28** — [The fastest, lowest-cost batch transcription with Qwen3-ASR](<../inference/optimization/The fastest, lowest-cost batch transcription with Qwen3-ASR.md>) · `optimization` · baseten
   Baseten optimized Qwen3-ASR 1.7B batch transcription with native audio decoding, KV cache quantization, and fewer host-to-device syncs, reaching 7x the throughput of vanilla vLLM and sustaining over 3,000x real-time factor on hour-long audio at about 1/10th of a cent per audio hour with no meaningful WER change.
 - **2026-10-26** — [BDN Sealed Volumes: publish once, mount anywhere](<../infra-platform/deployment/BDN Sealed Volumes publish once, mount anywhere.md>) · `deployment` · baseten

@@ -2,10 +2,16 @@
 title: 'Cresta-Bench: Measuring How Well LLMs Run Production-Grade Customer Experience
   AI Agents'
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: evals-observability
+subtopic: benchmark-design
+secondary_topics:
+- agents/tool-use
+summary: Cresta-Bench evaluates 14 LLMs inside four production-grade customer-experience
+  agent harnesses (181 test cases across lending, healthcare, scheduling, and airline
+  support), finding the best model passes only 89.5% of runs with most failures from
+  not following prompt-specific exceptions; uses pass@1/pass^3 metrics plus a human-calibrated
+  LLM judge that also audits whether the simulated caller or the test case itself
+  was at fault.
 triage: null
 skip_reason: null
 source: cresta
@@ -13,7 +19,7 @@ url: https://cresta.com/blog/cresta-bench-measuring-how-well-llms-run-production
 author: Weifeng Li
 published: '2026-10-28'
 fetched: '2026-10-30T06:07:32Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 2506
 content_sha256: 13f61a35ae7dca04dd34f1aa5bad313b66a9e0b0bea76a5420c191eec34977ca

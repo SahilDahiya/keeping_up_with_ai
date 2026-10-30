@@ -1,7 +1,9 @@
 # huggingface
 
-175 articles.
+176 articles.
 
+- **2026-10-29** — [Introducing AnySpeechRecognizer and AnyDecisionModel: Open Models for Speech and Decisions on Apple Platforms](<../infra-platform/edge/Introducing AnySpeechRecognizer and AnyDecisionModel Open Models for Speech and Decisions on Apple Platforms.md>) · `edge` · huggingface
+  Hugging Face's AnySpeechRecognizer and AnyDecisionModel are Swift packages that let Apple-platform apps swap speech-recognition and decision-model engines (NVIDIA Parakeet, Alibaba Qwen3-ASR, MLX/Core ML/llama.cpp decision models) behind Apple's native Speech APIs, running on-device via Core ML with published model conversions and benchmarked latency/accuracy tradeoffs.
 - **2026-10-16** — [Welcome Beam: a 501B open model you can own, customize, and scale](<../models/architectures/Welcome Beam a 501B open model you can own, customize, and scale.md>) · `architectures` · huggingface
   Deep architecture writeup of Reflection's Beam-1.0-501B-A23B (23B active, 1M-token context, Apache 2.0): hybrid sliding-window/global attention with scalable-softmax query scaling, DeepSeek-V3-style grouped routing across 256 experts, and a depth-scaled 1/sqrt(k) residual stream; ships NVFP4/FP8/BF16 checkpoints, day-0 transformers/vLLM/SGLang support, and SWE-Bench/AIME/GPQA benchmark results.
 - **2026-10-08** — [The model that didn't exist, so you made it yourself](<../prompt-engineering/context-engineering/The model that didn't exist, so you made it yourself.md>) · `context-engineering` · huggingface

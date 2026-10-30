@@ -2,10 +2,15 @@
 title: 'Introducing AnySpeechRecognizer and AnyDecisionModel: Open Models for Speech
   and Decisions on Apple Platforms'
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: infra-platform
+subtopic: edge
+secondary_topics:
+- inference/serving
+summary: Hugging Face's AnySpeechRecognizer and AnyDecisionModel are Swift packages
+  that let Apple-platform apps swap speech-recognition and decision-model engines
+  (NVIDIA Parakeet, Alibaba Qwen3-ASR, MLX/Core ML/llama.cpp decision models) behind
+  Apple's native Speech APIs, running on-device via Core ML with published model conversions
+  and benchmarked latency/accuracy tradeoffs.
 triage: null
 skip_reason: null
 source: huggingface
@@ -13,7 +18,7 @@ url: https://huggingface.co/blog/anydecisionmodel
 author: Mattt
 published: '2026-10-29'
 fetched: '2026-10-30T06:13:29Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 2619
 content_sha256: b42eef31cb8249ef45f32931c96876d34cc7f0e7dbb7ffda384ceefd40e568c5

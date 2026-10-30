@@ -1,7 +1,9 @@
 # infra-platform
 
-60 articles.
+61 articles.
 
+- **2026-10-29** — [Introducing AnySpeechRecognizer and AnyDecisionModel: Open Models for Speech and Decisions on Apple Platforms](<edge/Introducing AnySpeechRecognizer and AnyDecisionModel Open Models for Speech and Decisions on Apple Platforms.md>) · `edge` · huggingface
+  Hugging Face's AnySpeechRecognizer and AnyDecisionModel are Swift packages that let Apple-platform apps swap speech-recognition and decision-model engines (NVIDIA Parakeet, Alibaba Qwen3-ASR, MLX/Core ML/llama.cpp decision models) behind Apple's native Speech APIs, running on-device via Core ML with published model conversions and benchmarked latency/accuracy tradeoffs.
 - **2026-10-27** — [Auto repair for Together GPU Clusters: from GPU fault to healthy node](<gpu-clusters/Auto repair for Together GPU Clusters from GPU fault to healthy node.md>) · `gpu-clusters` · together
   Together AI details its automatic GPU node repair pipeline: dual-sided detection (in-VM exporters for Xid/ECC/PCIe errors, host-side InfiniBand and reachability checks), a policy layer separating what/whether/when decisions, an escalation ladder from reboot to quick reprovision to migration, cluster-wide safety rails (cooldown, circuit breaker, concurrency budgets), and automatic re-validation of vacated hosts before they rejoin the fleet.
 - **2026-10-26** — [BDN Sealed Volumes: publish once, mount anywhere](<deployment/BDN Sealed Volumes publish once, mount anywhere.md>) · `deployment` · baseten

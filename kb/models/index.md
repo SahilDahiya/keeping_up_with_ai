@@ -1,7 +1,9 @@
 # models
 
-253 articles.
+254 articles.
 
+- **2026-10-29** — [Decisions for a penny: introducing joey-1, our fastest decision model](<releases/Decisions for a penny introducing joey-1, our fastest decision model.md>) · `releases` · baseten
+  Baseten introduces joey-1, a 2B-parameter decision model post-trained from Qwen3.5-2B that returns a label and calibrated probability in a single token instead of generating text, hitting 20ms P50 latency and $0.01/M tokens, 5x faster than its 9B sibling elephant-1 and a tenth the cost of the 27B mammoth-1.
 - **2026-10-21** — [How Shopify turns open models into task experts (2026)](<fine-tuning/How Shopify turns open models into task experts (2026).md>) · `fine-tuning` · shopify
   Shopify's Sidekick post-trains open models like NVIDIA Nemotron 3.5 Lightning (3B of 30B params active) with Megatron Bridge to replace frontier-model subagents such as its GraphQL subagent, using a GEPA/ACE-tuned LLM judge, a self-healing loop that repaired 69% of 59,535 failed production conversations over 86 nightly runs, and NVIDIA AIPerf/TensorRT-LLM serving benchmarks showing Blackwell B300s trained 1.86x faster than H200s at 46% fewer GPU-hours.
 - **2026-10-21** — [Get started with LLM training on Modal](<reinforcement-learning/Get started with LLM training on Modal.md>) · `reinforcement-learning` · modal

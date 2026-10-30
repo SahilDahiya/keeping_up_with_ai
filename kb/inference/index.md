@@ -323,6 +323,10 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-10-29** — [Decisions for a penny: introducing joey-1, our fastest decision model](<../models/releases/Decisions for a penny introducing joey-1, our fastest decision model.md>) · `releases` · baseten
+  Baseten introduces joey-1, a 2B-parameter decision model post-trained from Qwen3.5-2B that returns a label and calibrated probability in a single token instead of generating text, hitting 20ms P50 latency and $0.01/M tokens, 5x faster than its 9B sibling elephant-1 and a tenth the cost of the 27B mammoth-1.
+- **2026-10-29** — [Introducing AnySpeechRecognizer and AnyDecisionModel: Open Models for Speech and Decisions on Apple Platforms](<../infra-platform/edge/Introducing AnySpeechRecognizer and AnyDecisionModel Open Models for Speech and Decisions on Apple Platforms.md>) · `edge` · huggingface
+  Hugging Face's AnySpeechRecognizer and AnyDecisionModel are Swift packages that let Apple-platform apps swap speech-recognition and decision-model engines (NVIDIA Parakeet, Alibaba Qwen3-ASR, MLX/Core ML/llama.cpp decision models) behind Apple's native Speech APIs, running on-device via Core ML with published model conversions and benchmarked latency/accuracy tradeoffs.
 - **2026-10-26** — [BDN Sealed Volumes: publish once, mount anywhere](<../infra-platform/deployment/BDN Sealed Volumes publish once, mount anywhere.md>) · `deployment` · baseten
   Introduces Baseten's BDN Sealed Volumes, which let teams publish read-only model artifacts (weights, LoRA adapters, checkpoints, vector/embedding indexes) once and mount an immutable, content-addressed version in any deployment, borrowing the container-registry tag/digest split to stop drift between staging and production copies.
 - **2026-10-20** — [Train Muse Glimmer for free: Our recipe for out-betting Jev](<../models/fine-tuning/Train Muse Glimmer for free Our recipe for out-betting Jev.md>) · `fine-tuning` · fireworks

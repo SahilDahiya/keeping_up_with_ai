@@ -1,7 +1,9 @@
 # evals-observability
 
-138 articles.
+139 articles.
 
+- **2026-10-28** — [Cresta-Bench: Measuring How Well LLMs Run Production-Grade Customer Experience AI Agents](<benchmark-design/Cresta-Bench Measuring How Well LLMs Run Production-Grade Customer Experience AI Agents.md>) · `benchmark-design` · cresta
+  Cresta-Bench evaluates 14 LLMs inside four production-grade customer-experience agent harnesses (181 test cases across lending, healthcare, scheduling, and airline support), finding the best model passes only 89.5% of runs with most failures from not following prompt-specific exceptions; uses pass@1/pass^3 metrics plus a human-calibrated LLM judge that also audits whether the simulated caller or the test case itself was at fault.
 - **2026-10-26** — [Logs vs traces: why logs are not enough](<tracing/Logs vs traces why logs are not enough.md>) · `tracing` · pydantic
   Argues logs can't reconstruct concurrent request behavior and walks through an async Python checkout handler (fetch_cart/fetch_discounts) to show how trace ID, span ID, and parent span ID let you see which operations belong to the same request, what called what, and exactly where time was lost, in a way plain log lines can't.
 - **2026-10-22** — [𝜏-Entity: Can voice agents get the details right?](<benchmark-design/𝜏-Entity Can voice agents get the details right.md>) · `benchmark-design` · sierra
