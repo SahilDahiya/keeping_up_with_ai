@@ -1,7 +1,9 @@
 # inference
 
-159 articles.
+160 articles.
 
+- **2026-10-30** — [The fastest delta weight syncs in the world](<serving/The fastest delta weight syncs in the world.md>) · `serving` · baseten
+  Baseten rebuilt delta weight syncs to treat GPU memory as the sole parent copy (instead of a duplicate ~770GB CPU copy) and added O(1) Adler-32 checksum updates that touch only changed bytes, cutting a GLM-5.3 sync pause from 6s to 0.8s (36s to 15s total, 3.2x throughput) and speeding a 30GB Kimi K3 delta 2.3x (230s to 100s), freeing host memory for KV cache and unblocking Kimi K3 RL rollout on 8xGB300.
 - **2026-10-28** — [The fastest, lowest-cost batch transcription with Qwen3-ASR](<optimization/The fastest, lowest-cost batch transcription with Qwen3-ASR.md>) · `optimization` · baseten
   Baseten optimized Qwen3-ASR 1.7B batch transcription with native audio decoding, KV cache quantization, and fewer host-to-device syncs, reaching 7x the throughput of vanilla vLLM and sustaining over 3,000x real-time factor on hour-long audio at about 1/10th of a cent per audio hour with no meaningful WER change.
 - **2026-10-23** — [Launching a trillion-parameter model at Sakana AI | Modal Blog](<optimization/Launching a trillion-parameter model at Sakana AI Modal Blog.md>) · `optimization` · modal

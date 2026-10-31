@@ -1,10 +1,16 @@
 ---
 title: The fastest delta weight syncs in the world
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: inference
+subtopic: serving
+secondary_topics:
+- models/reinforcement-learning
+- infra-platform/gpu-clusters
+summary: Baseten rebuilt delta weight syncs to treat GPU memory as the sole parent
+  copy (instead of a duplicate ~770GB CPU copy) and added O(1) Adler-32 checksum updates
+  that touch only changed bytes, cutting a GLM-5.3 sync pause from 6s to 0.8s (36s
+  to 15s total, 3.2x throughput) and speeding a 30GB Kimi K3 delta 2.3x (230s to 100s),
+  freeing host memory for KV cache and unblocking Kimi K3 RL rollout on 8xGB300.
 triage: null
 skip_reason: null
 source: baseten
@@ -12,7 +18,7 @@ url: https://www.baseten.co/blog/the-fastest-delta-weight-syncs-in-the-world/
 author: Jerry Hong; Paras Stefanopoulos
 published: '2026-10-30'
 fetched: '2026-10-31T06:05:54Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1492
 content_sha256: 7647629edf69ed4a9749d3d7ee594ec314950dba580afa05c2644d00722b6073

@@ -1,7 +1,9 @@
 # baseten
 
-101 articles.
+102 articles.
 
+- **2026-10-30** — [The fastest delta weight syncs in the world](<../inference/serving/The fastest delta weight syncs in the world.md>) · `serving` · baseten
+  Baseten rebuilt delta weight syncs to treat GPU memory as the sole parent copy (instead of a duplicate ~770GB CPU copy) and added O(1) Adler-32 checksum updates that touch only changed bytes, cutting a GLM-5.3 sync pause from 6s to 0.8s (36s to 15s total, 3.2x throughput) and speeding a 30GB Kimi K3 delta 2.3x (230s to 100s), freeing host memory for KV cache and unblocking Kimi K3 RL rollout on 8xGB300.
 - **2026-10-29** — [Decisions for a penny: introducing joey-1, our fastest decision model](<../models/releases/Decisions for a penny introducing joey-1, our fastest decision model.md>) · `releases` · baseten
   Baseten introduces joey-1, a 2B-parameter decision model post-trained from Qwen3.5-2B that returns a label and calibrated probability in a single token instead of generating text, hitting 20ms P50 latency and $0.01/M tokens, 5x faster than its 9B sibling elephant-1 and a tenth the cost of the 27B mammoth-1.
 - **2026-10-28** — [The fastest, lowest-cost batch transcription with Qwen3-ASR](<../inference/optimization/The fastest, lowest-cost batch transcription with Qwen3-ASR.md>) · `optimization` · baseten
