@@ -127,6 +127,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-11-02** — [Best Python AI Agent Frameworks in 2026 | Pydantic AI](<../agents/harness/Best Python AI Agent Frameworks in 2026 Pydantic AI.md>) · `harness` · pydantic
+  Pydantic AI's framework comparison picks itself as the top choice, citing 30+ model providers, eight durable-execution engines (Temporal, DBOS, Prefect, Restate, AWS Lambda, Absurd, pgtask, Apache Airflow), ten sandboxes, MCP client/server support, and deferred-tool human-in-the-loop approval, while recommending LangGraph, OpenAI Agents SDK, Google ADK, Microsoft Agent Framework, Strands, CrewAI, Claude Agent SDK, Agno, LiveKit Agents, and Pipecat for teams already standardized on those ecosystems.
 - **2026-10-30** — [The fastest delta weight syncs in the world](<../inference/serving/The fastest delta weight syncs in the world.md>) · `serving` · baseten
   Baseten rebuilt delta weight syncs to treat GPU memory as the sole parent copy (instead of a duplicate ~770GB CPU copy) and added O(1) Adler-32 checksum updates that touch only changed bytes, cutting a GLM-5.3 sync pause from 6s to 0.8s (36s to 15s total, 3.2x throughput) and speeding a 30GB Kimi K3 delta 2.3x (230s to 100s), freeing host memory for KV cache and unblocking Kimi K3 RL rollout on 8xGB300.
 - **2026-10-23** — [Launching a trillion-parameter model at Sakana AI | Modal Blog](<../inference/optimization/Launching a trillion-parameter model at Sakana AI Modal Blog.md>) · `optimization` · modal

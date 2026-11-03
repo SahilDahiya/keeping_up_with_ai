@@ -1,10 +1,16 @@
 ---
 title: Best Python AI Agent Frameworks in 2026 | Pydantic AI
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: agents
+subtopic: harness
+secondary_topics:
+- infra-platform/deployment
+summary: Pydantic AI's framework comparison picks itself as the top choice, citing
+  30+ model providers, eight durable-execution engines (Temporal, DBOS, Prefect, Restate,
+  AWS Lambda, Absurd, pgtask, Apache Airflow), ten sandboxes, MCP client/server support,
+  and deferred-tool human-in-the-loop approval, while recommending LangGraph, OpenAI
+  Agents SDK, Google ADK, Microsoft Agent Framework, Strands, CrewAI, Claude Agent
+  SDK, Agno, LiveKit Agents, and Pipecat for teams already standardized on those ecosystems.
 triage: null
 skip_reason: null
 source: pydantic
@@ -12,7 +18,7 @@ url: https://pydantic.dev/articles/best-python-ai-agent-frameworks
 author: Douwe Maan
 published: '2026-11-02'
 fetched: '2026-11-03T06:21:51Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 5630
 content_sha256: ddf4272e15d56c115d66ff0c73deb3ff7b693880fc2334ceccccd504b3af7f63
