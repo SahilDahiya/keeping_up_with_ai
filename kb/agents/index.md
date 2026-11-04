@@ -1,9 +1,11 @@
 # agents
 
-127 articles.
+128 articles.
 
 - **2026-11-02** — [Best Python AI Agent Frameworks in 2026 | Pydantic AI](<harness/Best Python AI Agent Frameworks in 2026 Pydantic AI.md>) · `harness` · pydantic
   Pydantic AI's framework comparison picks itself as the top choice, citing 30+ model providers, eight durable-execution engines (Temporal, DBOS, Prefect, Restate, AWS Lambda, Absurd, pgtask, Apache Airflow), ten sandboxes, MCP client/server support, and deferred-tool human-in-the-loop approval, while recommending LangGraph, OpenAI Agents SDK, Google ADK, Microsoft Agent Framework, Strands, CrewAI, Claude Agent SDK, Agno, LiveKit Agents, and Pipecat for teams already standardized on those ecosystems.
+- **2026-10-29** — [Cresta’s AI Agent Expertise in Developers’ Hands: Introducing Our End-to-End Self-Serve Model](<harness/Cresta’s AI Agent Expertise in Developers’ Hands Introducing Our End-to-End Self-Serve Model.md>) · `harness` · cresta
+  Describes Cresta Conductor's self-serve agent development workflow: Git-versioned agent revisions with traffic-split canary releases and rollback, per-step token/model cost monitoring (e.g. moving a routing agent to a cheaper model after evals confirm quality holds), environment/secrets separation, custom MCP servers and Agent Skills support, and turn-by-turn voice testing with conversation traces for debugging.
 - **2026-10-28** — [Code mode vs tool calling: a 5,276-run benchmark | Pydantic](<harness/Code mode vs tool calling a 5,276-run benchmark Pydantic.md>) · `harness` · pydantic
   Pydantic benchmarked code-mode (model writes a program calling tools as functions in a Monty/Rust sandbox) against classic one-tool-call-at-a-time calling across 8 models and 5,276 runs: on long multi-step tasks code mode cut cost 58% and wall time 51% while raising success 16 points, but cost more on small 5-item jobs, with gains driven by what goes into each request rather than round-trip count.
 - **2026-10-22** — [Pydantic AI + E2B: sandboxed coding agents in Python](<harness/Pydantic AI + E2B sandboxed coding agents in Python.md>) · `harness` · pydantic
@@ -259,6 +261,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-10-30** — [Rendreal: conversational print ordering on Pydantic AI and MCP](<../product-engineering/case-studies/Rendreal conversational print ordering on Pydantic AI and MCP.md>) · `case-studies` · pydantic
+  Case study of Rendreal, a conversational print-ordering agent built on Pydantic AI and MCP: specialist product-configuration and design agents share typed tool definitions, so Pydantic AI validates tool arguments and structured outputs and retries malformed model responses before the order reaches validation.
 - **2026-10-28** — [Cresta-Bench: Measuring How Well LLMs Run Production-Grade Customer Experience AI Agents](<../evals-observability/benchmark-design/Cresta-Bench Measuring How Well LLMs Run Production-Grade Customer Experience AI Agents.md>) · `benchmark-design` · cresta
   Cresta-Bench evaluates 14 LLMs inside four production-grade customer-experience agent harnesses (181 test cases across lending, healthcare, scheduling, and airline support), finding the best model passes only 89.5% of runs with most failures from not following prompt-specific exceptions; uses pass@1/pass^3 metrics plus a human-calibrated LLM judge that also audits whether the simulated caller or the test case itself was at fault.
 - **2026-10-22** — [𝜏-Entity: Can voice agents get the details right?](<../evals-observability/benchmark-design/𝜏-Entity Can voice agents get the details right.md>) · `benchmark-design` · sierra

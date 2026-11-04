@@ -2,10 +2,15 @@
 title: 'Cresta’s AI Agent Expertise in Developers’ Hands: Introducing Our End-to-End
   Self-Serve Model'
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: agents
+subtopic: harness
+secondary_topics:
+- infra-platform/deployment
+summary: 'Describes Cresta Conductor''s self-serve agent development workflow: Git-versioned
+  agent revisions with traffic-split canary releases and rollback, per-step token/model
+  cost monitoring (e.g. moving a routing agent to a cheaper model after evals confirm
+  quality holds), environment/secrets separation, custom MCP servers and Agent Skills
+  support, and turn-by-turn voice testing with conversation traces for debugging.'
 triage: null
 skip_reason: null
 source: cresta
@@ -13,7 +18,7 @@ url: https://cresta.com/blog/crestas-ai-agent-expertise-in-developers-hands-intr
 author: Ping Wu
 published: '2026-10-29'
 fetched: '2026-11-04T06:06:26Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1265
 content_sha256: 0b9cea6a63908ef7a8819f12ac6b8ab59c167de537152b86aad4d5b49898ebaf

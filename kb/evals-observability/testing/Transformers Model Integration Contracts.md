@@ -1,10 +1,14 @@
 ---
 title: Transformers Model Integration Contracts
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: evals-observability
+subtopic: testing
+secondary_topics:
+- models/architectures
+summary: 'Introduces Model Integration Contracts: pinned shrunk-model fixtures plus
+  recorded usage-path baselines, run as cheap CPU fast-integration tests across Transformers''
+  750+ model types. A UMT5 fixture caught a real SDPA attention regression (live on
+  main July 30-Sept 28, 2026) that a forward-pass-only check would have missed.'
 triage: null
 skip_reason: null
 source: huggingface
@@ -12,7 +16,7 @@ url: https://huggingface.co/blog/transformers-mic
 author: Tarek Ziadé
 published: '2026-11-03'
 fetched: '2026-11-04T06:22:09Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1623
 content_sha256: 91c0f38ba2a196a73a2aaf35421576cac35a31cc02ff56064008de25ada4ad96

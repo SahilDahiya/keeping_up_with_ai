@@ -1,7 +1,11 @@
 # evals-observability
 
-139 articles.
+141 articles.
 
+- **2026-11-03** — [CWE-bench v2: More coverage, quality, and transparency](<benchmark-design/CWE-bench v2 More coverage, quality, and transparency.md>) · `benchmark-design` · huggingface
+  CWE-bench v2 open-sources 100 deterministic, Harbor-run security-patching tasks spanning 91 CWE classes plus a held-out eval set; Gemini 4 Argon leads at 67.8% pass@1 just ahead of Claude Opus 5.5 (67.3%), while DeepSeek V4.1 Flash anchors the cost-Pareto frontier at $0.04 per rollout.
+- **2026-11-03** — [Transformers Model Integration Contracts](<testing/Transformers Model Integration Contracts.md>) · `testing` · huggingface
+  Introduces Model Integration Contracts: pinned shrunk-model fixtures plus recorded usage-path baselines, run as cheap CPU fast-integration tests across Transformers' 750+ model types. A UMT5 fixture caught a real SDPA attention regression (live on main July 30-Sept 28, 2026) that a forward-pass-only check would have missed.
 - **2026-10-28** — [Cresta-Bench: Measuring How Well LLMs Run Production-Grade Customer Experience AI Agents](<benchmark-design/Cresta-Bench Measuring How Well LLMs Run Production-Grade Customer Experience AI Agents.md>) · `benchmark-design` · cresta
   Cresta-Bench evaluates 14 LLMs inside four production-grade customer-experience agent harnesses (181 test cases across lending, healthcare, scheduling, and airline support), finding the best model passes only 89.5% of runs with most failures from not following prompt-specific exceptions; uses pass@1/pass^3 metrics plus a human-calibrated LLM judge that also audits whether the simulated caller or the test case itself was at fault.
 - **2026-10-26** — [Logs vs traces: why logs are not enough](<tracing/Logs vs traces why logs are not enough.md>) · `tracing` · pydantic
@@ -283,6 +287,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-11-03** — [Fireworks unveils new products at Forge | Fireworks](<../inference/optimization/Fireworks unveils new products at Forge Fireworks.md>) · `optimization` · fireworks
+  Fireworks Forge launches: Ultra-fast inference on NVIDIA Blackwell hits 1,500 tok/s on DeepSeek V4.1 Flash, cutting a benchmarked 30-turn agent task from 1 minute to 8 seconds; half-price Background Mode and multi-day prompt caching target latency-insensitive workloads; Ember-1 uses ~40% fewer tokens than Kimi K3 at comparable quality; and No Eval turns production traces into task-specific evals for model training.
 - **2026-10-28** — [Code mode vs tool calling: a 5,276-run benchmark | Pydantic](<../agents/harness/Code mode vs tool calling a 5,276-run benchmark Pydantic.md>) · `harness` · pydantic
   Pydantic benchmarked code-mode (model writes a program calling tools as functions in a Monty/Rust sandbox) against classic one-tool-call-at-a-time calling across 8 models and 5,276 runs: on long multi-step tasks code mode cut cost 58% and wall time 51% while raising success 16 points, but cost more on small 5-item jobs, with gains driven by what goes into each request rather than round-trip count.
 - **2026-10-27** — [Auto repair for Together GPU Clusters: from GPU fault to healthy node](<../infra-platform/gpu-clusters/Auto repair for Together GPU Clusters from GPU fault to healthy node.md>) · `gpu-clusters` · together

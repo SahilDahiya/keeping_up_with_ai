@@ -1,10 +1,14 @@
 ---
 title: 'CWE-bench v2: More coverage, quality, and transparency'
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: evals-observability
+subtopic: benchmark-design
+secondary_topics:
+- product-engineering/security
+summary: CWE-bench v2 open-sources 100 deterministic, Harbor-run security-patching
+  tasks spanning 91 CWE classes plus a held-out eval set; Gemini 4 Argon leads at
+  67.8% pass@1 just ahead of Claude Opus 5.5 (67.3%), while DeepSeek V4.1 Flash anchors
+  the cost-Pareto frontier at $0.04 per rollout.
 triage: null
 skip_reason: null
 source: huggingface
@@ -12,7 +16,7 @@ url: https://huggingface.co/blog/cwe-bench
 author: Gonzalo Gonzalez; Ajay Jagannath; Nazneen Rajani; Nathan Habib
 published: '2026-11-03'
 fetched: '2026-11-04T06:22:15Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 749
 content_sha256: 3465d50ca73234ea86700f839c9d768e7c08bab729822ba22de0d9b2794c96c0

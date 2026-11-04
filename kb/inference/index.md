@@ -1,7 +1,9 @@
 # inference
 
-160 articles.
+161 articles.
 
+- **2026-11-03** — [Fireworks unveils new products at Forge | Fireworks](<optimization/Fireworks unveils new products at Forge Fireworks.md>) · `optimization` · fireworks
+  Fireworks Forge launches: Ultra-fast inference on NVIDIA Blackwell hits 1,500 tok/s on DeepSeek V4.1 Flash, cutting a benchmarked 30-turn agent task from 1 minute to 8 seconds; half-price Background Mode and multi-day prompt caching target latency-insensitive workloads; Ember-1 uses ~40% fewer tokens than Kimi K3 at comparable quality; and No Eval turns production traces into task-specific evals for model training.
 - **2026-10-30** — [The fastest delta weight syncs in the world](<serving/The fastest delta weight syncs in the world.md>) · `serving` · baseten
   Baseten rebuilt delta weight syncs to treat GPU memory as the sole parent copy (instead of a duplicate ~770GB CPU copy) and added O(1) Adler-32 checksum updates that touch only changed bytes, cutting a GLM-5.3 sync pause from 6s to 0.8s (36s to 15s total, 3.2x throughput) and speeding a 30GB Kimi K3 delta 2.3x (230s to 100s), freeing host memory for KV cache and unblocking Kimi K3 RL rollout on 8xGB300.
 - **2026-10-28** — [The fastest, lowest-cost batch transcription with Qwen3-ASR](<optimization/The fastest, lowest-cost batch transcription with Qwen3-ASR.md>) · `optimization` · baseten

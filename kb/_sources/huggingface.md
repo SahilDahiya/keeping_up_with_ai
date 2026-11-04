@@ -1,7 +1,11 @@
 # huggingface
 
-176 articles.
+178 articles.
 
+- **2026-11-03** — [CWE-bench v2: More coverage, quality, and transparency](<../evals-observability/benchmark-design/CWE-bench v2 More coverage, quality, and transparency.md>) · `benchmark-design` · huggingface
+  CWE-bench v2 open-sources 100 deterministic, Harbor-run security-patching tasks spanning 91 CWE classes plus a held-out eval set; Gemini 4 Argon leads at 67.8% pass@1 just ahead of Claude Opus 5.5 (67.3%), while DeepSeek V4.1 Flash anchors the cost-Pareto frontier at $0.04 per rollout.
+- **2026-11-03** — [Transformers Model Integration Contracts](<../evals-observability/testing/Transformers Model Integration Contracts.md>) · `testing` · huggingface
+  Introduces Model Integration Contracts: pinned shrunk-model fixtures plus recorded usage-path baselines, run as cheap CPU fast-integration tests across Transformers' 750+ model types. A UMT5 fixture caught a real SDPA attention regression (live on main July 30-Sept 28, 2026) that a forward-pass-only check would have missed.
 - **2026-10-29** — [Introducing AnySpeechRecognizer and AnyDecisionModel: Open Models for Speech and Decisions on Apple Platforms](<../infra-platform/edge/Introducing AnySpeechRecognizer and AnyDecisionModel Open Models for Speech and Decisions on Apple Platforms.md>) · `edge` · huggingface
   Hugging Face's AnySpeechRecognizer and AnyDecisionModel are Swift packages that let Apple-platform apps swap speech-recognition and decision-model engines (NVIDIA Parakeet, Alibaba Qwen3-ASR, MLX/Core ML/llama.cpp decision models) behind Apple's native Speech APIs, running on-device via Core ML with published model conversions and benchmarked latency/accuracy tradeoffs.
 - **2026-10-16** — [Welcome Beam: a 501B open model you can own, customize, and scale](<../models/architectures/Welcome Beam a 501B open model you can own, customize, and scale.md>) · `architectures` · huggingface

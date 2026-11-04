@@ -1,9 +1,11 @@
 # pydantic
 
-55 articles.
+56 articles.
 
 - **2026-11-02** — [Best Python AI Agent Frameworks in 2026 | Pydantic AI](<../agents/harness/Best Python AI Agent Frameworks in 2026 Pydantic AI.md>) · `harness` · pydantic
   Pydantic AI's framework comparison picks itself as the top choice, citing 30+ model providers, eight durable-execution engines (Temporal, DBOS, Prefect, Restate, AWS Lambda, Absurd, pgtask, Apache Airflow), ten sandboxes, MCP client/server support, and deferred-tool human-in-the-loop approval, while recommending LangGraph, OpenAI Agents SDK, Google ADK, Microsoft Agent Framework, Strands, CrewAI, Claude Agent SDK, Agno, LiveKit Agents, and Pipecat for teams already standardized on those ecosystems.
+- **2026-10-30** — [Rendreal: conversational print ordering on Pydantic AI and MCP](<../product-engineering/case-studies/Rendreal conversational print ordering on Pydantic AI and MCP.md>) · `case-studies` · pydantic
+  Case study of Rendreal, a conversational print-ordering agent built on Pydantic AI and MCP: specialist product-configuration and design agents share typed tool definitions, so Pydantic AI validates tool arguments and structured outputs and retries malformed model responses before the order reaches validation.
 - **2026-10-28** — [Code mode vs tool calling: a 5,276-run benchmark | Pydantic](<../agents/harness/Code mode vs tool calling a 5,276-run benchmark Pydantic.md>) · `harness` · pydantic
   Pydantic benchmarked code-mode (model writes a program calling tools as functions in a Monty/Rust sandbox) against classic one-tool-call-at-a-time calling across 8 models and 5,276 runs: on long multi-step tasks code mode cut cost 58% and wall time 51% while raising success 16 points, but cost more on small 5-item jobs, with gains driven by what goes into each request rather than round-trip count.
 - **2026-10-26** — [Logs vs traces: why logs are not enough](<../evals-observability/tracing/Logs vs traces why logs are not enough.md>) · `tracing` · pydantic

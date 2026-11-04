@@ -1,10 +1,15 @@
 ---
 title: 'Rendreal: conversational print ordering on Pydantic AI and MCP'
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: product-engineering
+subtopic: case-studies
+secondary_topics:
+- agents/multi-agent
+- agents/tool-use
+summary: 'Case study of Rendreal, a conversational print-ordering agent built on Pydantic
+  AI and MCP: specialist product-configuration and design agents share typed tool
+  definitions, so Pydantic AI validates tool arguments and structured outputs and
+  retries malformed model responses before the order reaches validation.'
 triage: null
 skip_reason: null
 source: pydantic
@@ -12,7 +17,7 @@ url: https://pydantic.dev/articles/rendreal-case-study
 author: Laís Carvalho
 published: '2026-10-30'
 fetched: '2026-11-04T06:22:21Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 607
 content_sha256: 26478acefe89d6e776ef4dcdcfb646bc2fc6e9c9a86de6080288a397773e385a

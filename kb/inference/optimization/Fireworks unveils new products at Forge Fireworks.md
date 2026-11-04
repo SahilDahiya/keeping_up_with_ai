@@ -1,10 +1,17 @@
 ---
 title: Fireworks unveils new products at Forge | Fireworks
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: inference
+subtopic: optimization
+secondary_topics:
+- infra-platform/cost
+- evals-observability/evaluation
+summary: 'Fireworks Forge launches: Ultra-fast inference on NVIDIA Blackwell hits
+  1,500 tok/s on DeepSeek V4.1 Flash, cutting a benchmarked 30-turn agent task from
+  1 minute to 8 seconds; half-price Background Mode and multi-day prompt caching target
+  latency-insensitive workloads; Ember-1 uses ~40% fewer tokens than Kimi K3 at comparable
+  quality; and No Eval turns production traces into task-specific evals for model
+  training.'
 triage: null
 skip_reason: null
 source: fireworks
@@ -12,7 +19,7 @@ url: https://fireworks.ai/blog/fireworks-unveils-new-products-at-forge-to-help-c
 author: null
 published: '2026-11-03'
 fetched: '2026-11-04T06:16:25Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1157
 content_sha256: c96dc2a3d05b70090b0eb387da9d135eb8d2e0b0d0a65cbbd94749ea92f86af8

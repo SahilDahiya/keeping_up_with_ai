@@ -1,7 +1,9 @@
 # product-engineering
 
-82 articles.
+83 articles.
 
+- **2026-10-30** — [Rendreal: conversational print ordering on Pydantic AI and MCP](<case-studies/Rendreal conversational print ordering on Pydantic AI and MCP.md>) · `case-studies` · pydantic
+  Case study of Rendreal, a conversational print-ordering agent built on Pydantic AI and MCP: specialist product-configuration and design agents share typed tool definitions, so Pydantic AI validates tool arguments and structured outputs and retries malformed model responses before the order reaches validation.
 - **2026-10-20** — [Cross-store product clustering across millions of stores (2026)](<architecture/Cross-store product clustering across millions of stores (2026).md>) · `architecture` · shopify
   Shopify describes the architecture behind cross-store product clustering in its Catalog API: embedding-based ANN retrieval narrows billions of listings to candidate pairs, three LLM-judge pair scorers (L1/L2/L3) of increasing cost label matches, and a graph-based UPI builder evaluates proposed cluster merges rather than relying on simple connected components, since pairwise match judgments are non-transitive.
 - **2026-10-20** — [Why Voice and Chat AI Agents Should Behave Differently](<architecture/Why Voice and Chat AI Agents Should Behave Differently.md>) · `architecture` · cresta
@@ -169,6 +171,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-11-03** — [CWE-bench v2: More coverage, quality, and transparency](<../evals-observability/benchmark-design/CWE-bench v2 More coverage, quality, and transparency.md>) · `benchmark-design` · huggingface
+  CWE-bench v2 open-sources 100 deterministic, Harbor-run security-patching tasks spanning 91 CWE classes plus a held-out eval set; Gemini 4 Argon leads at 67.8% pass@1 just ahead of Claude Opus 5.5 (67.3%), while DeepSeek V4.1 Flash anchors the cost-Pareto frontier at $0.04 per rollout.
 - **2026-10-23** — [Launching a trillion-parameter model at Sakana AI | Modal Blog](<../inference/optimization/Launching a trillion-parameter model at Sakana AI Modal Blog.md>) · `optimization` · modal
   Modal's case study on serving Sakana AI's ~1T-parameter Namazu MoE model: selective NVFP4 expert quantization tuned for Japanese retention, a custom DFlash/DFlash2 speculative draft model trained on raw production token streams (+25-43% acceptance rate), cross-GPU speculative-decoding correctness fixes, and a KV-aware router that eliminated multi-minute TTFT spikes.
 - **2026-10-22** — [Pydantic AI + E2B: sandboxed coding agents in Python](<../agents/harness/Pydantic AI + E2B sandboxed coding agents in Python.md>) · `harness` · pydantic

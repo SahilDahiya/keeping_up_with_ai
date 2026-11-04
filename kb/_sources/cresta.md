@@ -1,7 +1,9 @@
 # cresta
 
-77 articles.
+78 articles.
 
+- **2026-10-29** — [Cresta’s AI Agent Expertise in Developers’ Hands: Introducing Our End-to-End Self-Serve Model](<../agents/harness/Cresta’s AI Agent Expertise in Developers’ Hands Introducing Our End-to-End Self-Serve Model.md>) · `harness` · cresta
+  Describes Cresta Conductor's self-serve agent development workflow: Git-versioned agent revisions with traffic-split canary releases and rollback, per-step token/model cost monitoring (e.g. moving a routing agent to a cheaper model after evals confirm quality holds), environment/secrets separation, custom MCP servers and Agent Skills support, and turn-by-turn voice testing with conversation traces for debugging.
 - **2026-10-28** — [Cresta-Bench: Measuring How Well LLMs Run Production-Grade Customer Experience AI Agents](<../evals-observability/benchmark-design/Cresta-Bench Measuring How Well LLMs Run Production-Grade Customer Experience AI Agents.md>) · `benchmark-design` · cresta
   Cresta-Bench evaluates 14 LLMs inside four production-grade customer-experience agent harnesses (181 test cases across lending, healthcare, scheduling, and airline support), finding the best model passes only 89.5% of runs with most failures from not following prompt-specific exceptions; uses pass@1/pass^3 metrics plus a human-calibrated LLM judge that also audits whether the simulated caller or the test case itself was at fault.
 - **2026-10-20** — [Why Voice and Chat AI Agents Should Behave Differently](<../product-engineering/architecture/Why Voice and Chat AI Agents Should Behave Differently.md>) · `architecture` · cresta
