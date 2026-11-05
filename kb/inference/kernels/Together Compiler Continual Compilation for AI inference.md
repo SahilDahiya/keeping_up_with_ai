@@ -1,10 +1,17 @@
 ---
 title: 'Together Compiler: Continual Compilation for AI inference'
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: inference
+subtopic: kernels
+secondary_topics:
+- agents/multi-agent
+summary: Together AI details Together Compiler (TKCC), which uses a swarm of agents
+  coordinating over a message board plus 'persistent engines' (hot-reloadable forward
+  passes, no VLLM/SGLang restarts) and a custom parallelism cost model to continually
+  recompile inference kernels; reports up to 2.6x higher TPS across Kimi K3/GLM 5.3/MiniMax
+  M3.1-Flash/DeepSeek v4.1-Flash, SOTA InferenceX low-latency numbers (1111 TPS MiniMax,
+  1205 TPS DeepSeek), 1.7x over hand-tuned megakernels on Llama 1B batch-1, and 252x
+  higher experiment throughput than baseline agentic optimization systems.
 triage: null
 skip_reason: null
 source: together
@@ -12,7 +19,7 @@ url: https://www.together.ai/blog/together-compiler-continual-compilation-for-ai
 author: Reyna Abhyankar; Dylan Lim; Simran Arora
 published: '2026-11-04'
 fetched: '2026-11-05T06:16:31Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1219
 content_sha256: d224bf32096b8bb6cbf8bad7ac5b418b6b2d5ebc70e829c2a64b38e02af7d376

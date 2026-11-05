@@ -261,6 +261,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-11-04** — [Together Compiler: Continual Compilation for AI inference](<../inference/kernels/Together Compiler Continual Compilation for AI inference.md>) · `kernels` · together
+  Together AI details Together Compiler (TKCC), which uses a swarm of agents coordinating over a message board plus 'persistent engines' (hot-reloadable forward passes, no VLLM/SGLang restarts) and a custom parallelism cost model to continually recompile inference kernels; reports up to 2.6x higher TPS across Kimi K3/GLM 5.3/MiniMax M3.1-Flash/DeepSeek v4.1-Flash, SOTA InferenceX low-latency numbers (1111 TPS MiniMax, 1205 TPS DeepSeek), 1.7x over hand-tuned megakernels on Llama 1B batch-1, and 252x higher experiment throughput than baseline agentic optimization systems.
 - **2026-10-30** — [Rendreal: conversational print ordering on Pydantic AI and MCP](<../product-engineering/case-studies/Rendreal conversational print ordering on Pydantic AI and MCP.md>) · `case-studies` · pydantic
   Case study of Rendreal, a conversational print-ordering agent built on Pydantic AI and MCP: specialist product-configuration and design agents share typed tool definitions, so Pydantic AI validates tool arguments and structured outputs and retries malformed model responses before the order reaches validation.
 - **2026-10-28** — [Cresta-Bench: Measuring How Well LLMs Run Production-Grade Customer Experience AI Agents](<../evals-observability/benchmark-design/Cresta-Bench Measuring How Well LLMs Run Production-Grade Customer Experience AI Agents.md>) · `benchmark-design` · cresta

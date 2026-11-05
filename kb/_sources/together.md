@@ -1,7 +1,11 @@
 # together
 
-98 articles.
+100 articles.
 
+- **2026-11-04** — [Together Compiler: Continual Compilation for AI inference](<../inference/kernels/Together Compiler Continual Compilation for AI inference.md>) · `kernels` · together
+  Together AI details Together Compiler (TKCC), which uses a swarm of agents coordinating over a message board plus 'persistent engines' (hot-reloadable forward passes, no VLLM/SGLang restarts) and a custom parallelism cost model to continually recompile inference kernels; reports up to 2.6x higher TPS across Kimi K3/GLM 5.3/MiniMax M3.1-Flash/DeepSeek v4.1-Flash, SOTA InferenceX low-latency numbers (1111 TPS MiniMax, 1205 TPS DeepSeek), 1.7x over hand-tuned megakernels on Llama 1B batch-1, and 252x higher experiment throughput than baseline agentic optimization systems.
+- **2026-11-04** — [Polymorphic Inference: self-tuning inference for open models](<../inference/optimization/Polymorphic Inference self-tuning inference for open models.md>) · `optimization` · together
+  Together AI's research-agenda post coining 'Polymorphic Inference' (vs. legacy 'Static Inference') to describe adapting serving systems to fast-moving model architectures, traffic shapes, and hardware (B200/GB300/Vera Rubin); introduces Together Compiler for agent-driven Continuous Compilation and previews shape-shifting speculative decoding, a ThunderAgent router, and workload-aware model routing (TogetherLink).
 - **2026-10-27** — [Auto repair for Together GPU Clusters: from GPU fault to healthy node](<../infra-platform/gpu-clusters/Auto repair for Together GPU Clusters from GPU fault to healthy node.md>) · `gpu-clusters` · together
   Together AI details its automatic GPU node repair pipeline: dual-sided detection (in-VM exporters for Xid/ECC/PCIe errors, host-side InfiniBand and reachability checks), a policy layer separating what/whether/when decisions, an escalation ladder from reboot to quick reprovision to migration, cluster-wide safety rails (cooldown, circuit breaker, concurrency budgets), and automatic re-validation of vacated hosts before they rejoin the fleet.
 - **2026-10-19** — [Together Post-Training: frontier-grade model shaping, the way that fits you](<../models/reinforcement-learning/Together Post-Training frontier-grade model shaping, the way that fits you.md>) · `reinforcement-learning` · together

@@ -1,10 +1,14 @@
 ---
 title: 'Polymorphic Inference: self-tuning inference for open models'
 kind: blog
-topic: null
-subtopic: null
+topic: inference
+subtopic: optimization
 secondary_topics: []
-summary: null
+summary: Together AI's research-agenda post coining 'Polymorphic Inference' (vs. legacy
+  'Static Inference') to describe adapting serving systems to fast-moving model architectures,
+  traffic shapes, and hardware (B200/GB300/Vera Rubin); introduces Together Compiler
+  for agent-driven Continuous Compilation and previews shape-shifting speculative
+  decoding, a ThunderAgent router, and workload-aware model routing (TogetherLink).
 triage: null
 skip_reason: null
 source: together
@@ -12,7 +16,7 @@ url: https://www.together.ai/blog/polymorphic-inference
 author: Simran Arora SVP; AI Systems; Dan Fu
 published: '2026-11-04'
 fetched: '2026-11-05T06:16:33Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1686
 content_sha256: 7a85457e35a55472d1f01c37ef734219db6d39e1b2c1e53984442f604214c2e7

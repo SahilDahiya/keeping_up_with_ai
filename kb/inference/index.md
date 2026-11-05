@@ -1,7 +1,11 @@
 # inference
 
-161 articles.
+163 articles.
 
+- **2026-11-04** — [Together Compiler: Continual Compilation for AI inference](<kernels/Together Compiler Continual Compilation for AI inference.md>) · `kernels` · together
+  Together AI details Together Compiler (TKCC), which uses a swarm of agents coordinating over a message board plus 'persistent engines' (hot-reloadable forward passes, no VLLM/SGLang restarts) and a custom parallelism cost model to continually recompile inference kernels; reports up to 2.6x higher TPS across Kimi K3/GLM 5.3/MiniMax M3.1-Flash/DeepSeek v4.1-Flash, SOTA InferenceX low-latency numbers (1111 TPS MiniMax, 1205 TPS DeepSeek), 1.7x over hand-tuned megakernels on Llama 1B batch-1, and 252x higher experiment throughput than baseline agentic optimization systems.
+- **2026-11-04** — [Polymorphic Inference: self-tuning inference for open models](<optimization/Polymorphic Inference self-tuning inference for open models.md>) · `optimization` · together
+  Together AI's research-agenda post coining 'Polymorphic Inference' (vs. legacy 'Static Inference') to describe adapting serving systems to fast-moving model architectures, traffic shapes, and hardware (B200/GB300/Vera Rubin); introduces Together Compiler for agent-driven Continuous Compilation and previews shape-shifting speculative decoding, a ThunderAgent router, and workload-aware model routing (TogetherLink).
 - **2026-11-03** — [Fireworks unveils new products at Forge | Fireworks](<optimization/Fireworks unveils new products at Forge Fireworks.md>) · `optimization` · fireworks
   Fireworks Forge launches: Ultra-fast inference on NVIDIA Blackwell hits 1,500 tok/s on DeepSeek V4.1 Flash, cutting a benchmarked 30-turn agent task from 1 minute to 8 seconds; half-price Background Mode and multi-day prompt caching target latency-insensitive workloads; Ember-1 uses ~40% fewer tokens than Kimi K3 at comparable quality; and No Eval turns production traces into task-specific evals for model training.
 - **2026-10-30** — [The fastest delta weight syncs in the world](<serving/The fastest delta weight syncs in the world.md>) · `serving` · baseten
