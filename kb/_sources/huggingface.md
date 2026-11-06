@@ -1,7 +1,9 @@
 # huggingface
 
-178 articles.
+179 articles.
 
+- **2026-11-05** — [A Closer Look at Phonon TTS. Launching High-Quality On-Device Speech That Tops the Benchmarks.](<../models/multimodal/A Closer Look at Phonon TTS. Launching High-Quality On-Device Speech That Tops the Benchmarks.md>) · `multimodal` · huggingface
+  Deep dive on Phonon, a 31-75MB on-device TTS model in the Pocket TTS lineage that generates audio via flow-matching latent autoregression; covers the new multi-backend `ptts` inference runtime (CPU/GPU/NPU, 28ms time-to-first-audio) and its modular Transformers integration, which treats the audio codec as a tokenizer alongside the text tokenizer.
 - **2026-11-03** — [CWE-bench v2: More coverage, quality, and transparency](<../evals-observability/benchmark-design/CWE-bench v2 More coverage, quality, and transparency.md>) · `benchmark-design` · huggingface
   CWE-bench v2 open-sources 100 deterministic, Harbor-run security-patching tasks spanning 91 CWE classes plus a held-out eval set; Gemini 4 Argon leads at 67.8% pass@1 just ahead of Claude Opus 5.5 (67.3%), while DeepSeek V4.1 Flash anchors the cost-Pareto frontier at $0.04 per rollout.
 - **2026-11-03** — [Transformers Model Integration Contracts](<../evals-observability/testing/Transformers Model Integration Contracts.md>) · `testing` · huggingface

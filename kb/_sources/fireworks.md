@@ -1,7 +1,9 @@
 # fireworks
 
-194 articles.
+195 articles.
 
+- **2026-11-04** — [Kimi K3.1 Pro on Fireworks: More Intelligence per Dollar, Delivered Fast](<../models/releases/Kimi K3.1 Pro on Fireworks More Intelligence per Dollar, Delivered Fast.md>) · `releases` · fireworks
+  Fireworks launches Moonshot's Kimi K3.1 Pro, which swaps K3's full-attention layers for sparse attention to serve long contexts more efficiently; on Fireworks' Specialized Intelligence Index it leads Sierra's tau3-Banking customer-support benchmark at 64.7% (8.7pp over Claude Opus 5.5) and ties Opus 5.5 on Rogo's finance benchmark, priced at $2/$0.20/$10 per million uncached/cached-input/output tokens.
 - **2026-11-03** — [Fireworks unveils new products at Forge | Fireworks](<../inference/optimization/Fireworks unveils new products at Forge Fireworks.md>) · `optimization` · fireworks
   Fireworks Forge launches: Ultra-fast inference on NVIDIA Blackwell hits 1,500 tok/s on DeepSeek V4.1 Flash, cutting a benchmarked 30-turn agent task from 1 minute to 8 seconds; half-price Background Mode and multi-day prompt caching target latency-insensitive workloads; Ember-1 uses ~40% fewer tokens than Kimi K3 at comparable quality; and No Eval turns production traces into task-specific evals for model training.
 - **2026-10-20** — [Train Muse Glimmer for free: Our recipe for out-betting Jev](<../models/fine-tuning/Train Muse Glimmer for free Our recipe for out-betting Jev.md>) · `fine-tuning` · fireworks

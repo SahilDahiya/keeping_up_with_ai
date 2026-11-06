@@ -1,7 +1,11 @@
 # models
 
-254 articles.
+256 articles.
 
+- **2026-11-05** — [A Closer Look at Phonon TTS. Launching High-Quality On-Device Speech That Tops the Benchmarks.](<multimodal/A Closer Look at Phonon TTS. Launching High-Quality On-Device Speech That Tops the Benchmarks.md>) · `multimodal` · huggingface
+  Deep dive on Phonon, a 31-75MB on-device TTS model in the Pocket TTS lineage that generates audio via flow-matching latent autoregression; covers the new multi-backend `ptts` inference runtime (CPU/GPU/NPU, 28ms time-to-first-audio) and its modular Transformers integration, which treats the audio codec as a tokenizer alongside the text tokenizer.
+- **2026-11-04** — [Kimi K3.1 Pro on Fireworks: More Intelligence per Dollar, Delivered Fast](<releases/Kimi K3.1 Pro on Fireworks More Intelligence per Dollar, Delivered Fast.md>) · `releases` · fireworks
+  Fireworks launches Moonshot's Kimi K3.1 Pro, which swaps K3's full-attention layers for sparse attention to serve long contexts more efficiently; on Fireworks' Specialized Intelligence Index it leads Sierra's tau3-Banking customer-support benchmark at 64.7% (8.7pp over Claude Opus 5.5) and ties Opus 5.5 on Rogo's finance benchmark, priced at $2/$0.20/$10 per million uncached/cached-input/output tokens.
 - **2026-10-29** — [Decisions for a penny: introducing joey-1, our fastest decision model](<releases/Decisions for a penny introducing joey-1, our fastest decision model.md>) · `releases` · baseten
   Baseten introduces joey-1, a 2B-parameter decision model post-trained from Qwen3.5-2B that returns a label and calibrated probability in a single token instead of generating text, hitting 20ms P50 latency and $0.01/M tokens, 5x faster than its 9B sibling elephant-1 and a tenth the cost of the 27B mammoth-1.
 - **2026-10-21** — [How Shopify turns open models into task experts (2026)](<fine-tuning/How Shopify turns open models into task experts (2026).md>) · `fine-tuning` · shopify

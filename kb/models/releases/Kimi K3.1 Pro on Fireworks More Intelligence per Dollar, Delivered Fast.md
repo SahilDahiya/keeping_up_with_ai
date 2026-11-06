@@ -1,10 +1,15 @@
 ---
 title: 'Kimi K3.1 Pro on Fireworks: More Intelligence per Dollar, Delivered Fast'
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: models
+subtopic: releases
+secondary_topics:
+- inference/serving
+summary: Fireworks launches Moonshot's Kimi K3.1 Pro, which swaps K3's full-attention
+  layers for sparse attention to serve long contexts more efficiently; on Fireworks'
+  Specialized Intelligence Index it leads Sierra's tau3-Banking customer-support benchmark
+  at 64.7% (8.7pp over Claude Opus 5.5) and ties Opus 5.5 on Rogo's finance benchmark,
+  priced at $2/$0.20/$10 per million uncached/cached-input/output tokens.
 triage: null
 skip_reason: null
 source: fireworks
@@ -12,7 +17,7 @@ url: https://fireworks.ai/blog/kimi-k3-1-pro-fireworks
 author: null
 published: '2026-11-04'
 fetched: '2026-11-06T06:16:45Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 486
 content_sha256: 52c1f86b78166ae4a29f21a4f7b41b09a6c3db2574859ea45684946985d98fd5

@@ -2,10 +2,16 @@
 title: A Closer Look at Phonon TTS. Launching High-Quality On-Device Speech That Tops
   the Benchmarks.
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: models
+subtopic: multimodal
+secondary_topics:
+- infra-platform/edge
+- inference/optimization
+summary: Deep dive on Phonon, a 31-75MB on-device TTS model in the Pocket TTS lineage
+  that generates audio via flow-matching latent autoregression; covers the new multi-backend
+  `ptts` inference runtime (CPU/GPU/NPU, 28ms time-to-first-audio) and its modular
+  Transformers integration, which treats the audio codec as a tokenizer alongside
+  the text tokenizer.
 triage: null
 skip_reason: null
 source: huggingface
@@ -13,7 +19,7 @@ url: https://huggingface.co/blog/phonon-tts
 author: Olesia Krizhevich; Laurent Mazare; Eric Bezzam; Eustache Le Bihan
 published: '2026-11-05'
 fetched: '2026-11-06T06:22:30Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1418
 content_sha256: 9120fc91733858fee2be1ee5e1750adbb2f5787fe6d485f2456e16a4d55fef14

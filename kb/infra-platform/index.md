@@ -127,6 +127,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-11-05** — [A Closer Look at Phonon TTS. Launching High-Quality On-Device Speech That Tops the Benchmarks.](<../models/multimodal/A Closer Look at Phonon TTS. Launching High-Quality On-Device Speech That Tops the Benchmarks.md>) · `multimodal` · huggingface
+  Deep dive on Phonon, a 31-75MB on-device TTS model in the Pocket TTS lineage that generates audio via flow-matching latent autoregression; covers the new multi-backend `ptts` inference runtime (CPU/GPU/NPU, 28ms time-to-first-audio) and its modular Transformers integration, which treats the audio codec as a tokenizer alongside the text tokenizer.
 - **2026-11-03** — [Fireworks unveils new products at Forge | Fireworks](<../inference/optimization/Fireworks unveils new products at Forge Fireworks.md>) · `optimization` · fireworks
   Fireworks Forge launches: Ultra-fast inference on NVIDIA Blackwell hits 1,500 tok/s on DeepSeek V4.1 Flash, cutting a benchmarked 30-turn agent task from 1 minute to 8 seconds; half-price Background Mode and multi-day prompt caching target latency-insensitive workloads; Ember-1 uses ~40% fewer tokens than Kimi K3 at comparable quality; and No Eval turns production traces into task-specific evals for model training.
 - **2026-11-02** — [Best Python AI Agent Frameworks in 2026 | Pydantic AI](<../agents/harness/Best Python AI Agent Frameworks in 2026 Pydantic AI.md>) · `harness` · pydantic
