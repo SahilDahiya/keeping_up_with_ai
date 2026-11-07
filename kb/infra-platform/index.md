@@ -127,6 +127,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-11-06** — [How Snorkel runs realistic agent simulations with Modal | Modal Blog](<../product-engineering/case-studies/How Snorkel runs realistic agent simulations with Modal Modal Blog.md>) · `case-studies` · modal
+  Case study on how Snorkel uses Modal's GPU/CPU sandboxes to run millions of agent-simulation benchmarks per month (coding, infra, ML engineering tasks); adopting Modal's memory/CPU bursting cut their sandbox bill by about 20% by letting under-provisioned sandboxes expand elastically instead of failing or being over-provisioned.
 - **2026-11-05** — [A Closer Look at Phonon TTS. Launching High-Quality On-Device Speech That Tops the Benchmarks.](<../models/multimodal/A Closer Look at Phonon TTS. Launching High-Quality On-Device Speech That Tops the Benchmarks.md>) · `multimodal` · huggingface
   Deep dive on Phonon, a 31-75MB on-device TTS model in the Pocket TTS lineage that generates audio via flow-matching latent autoregression; covers the new multi-backend `ptts` inference runtime (CPU/GPU/NPU, 28ms time-to-first-audio) and its modular Transformers integration, which treats the audio codec as a tokenizer alongside the text tokenizer.
 - **2026-11-03** — [Fireworks unveils new products at Forge | Fireworks](<../inference/optimization/Fireworks unveils new products at Forge Fireworks.md>) · `optimization` · fireworks

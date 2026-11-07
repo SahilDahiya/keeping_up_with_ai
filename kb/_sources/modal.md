@@ -1,7 +1,9 @@
 # modal
 
-54 articles.
+55 articles.
 
+- **2026-11-06** — [How Snorkel runs realistic agent simulations with Modal | Modal Blog](<../product-engineering/case-studies/How Snorkel runs realistic agent simulations with Modal Modal Blog.md>) · `case-studies` · modal
+  Case study on how Snorkel uses Modal's GPU/CPU sandboxes to run millions of agent-simulation benchmarks per month (coding, infra, ML engineering tasks); adopting Modal's memory/CPU bursting cut their sandbox bill by about 20% by letting under-provisioned sandboxes expand elastically instead of failing or being over-provisioned.
 - **2026-10-23** — [Launching a trillion-parameter model at Sakana AI | Modal Blog](<../inference/optimization/Launching a trillion-parameter model at Sakana AI Modal Blog.md>) · `optimization` · modal
   Modal's case study on serving Sakana AI's ~1T-parameter Namazu MoE model: selective NVFP4 expert quantization tuned for Japanese retention, a custom DFlash/DFlash2 speculative draft model trained on raw production token streams (+25-43% acceptance rate), cross-GPU speculative-decoding correctness fixes, and a KV-aware router that eliminated multi-minute TTFT spikes.
 - **2026-10-22** — [Introducing our Training API](<../infra-platform/deployment/Introducing our Training API.md>) · `deployment` · modal

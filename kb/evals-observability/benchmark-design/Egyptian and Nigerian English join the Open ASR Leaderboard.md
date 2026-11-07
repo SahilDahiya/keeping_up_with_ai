@@ -1,10 +1,13 @@
 ---
 title: Egyptian and Nigerian English join the Open ASR Leaderboard
 kind: blog
-topic: null
-subtopic: null
+topic: evals-observability
+subtopic: benchmark-design
 secondary_topics: []
-summary: null
+summary: Hugging Face's Open ASR Leaderboard adds two new private, held-out accent
+  splits (Egyptian and Nigerian English, ~1.3-1.6 hours each) from data provider Liva
+  AI, and introduces a Kachru's Three Circles accent breakdown (Inner vs. Outer/Expanding
+  Circle) to track ASR performance disparities by accent and resist benchmaxxing.
 triage: null
 skip_reason: null
 source: huggingface
@@ -12,7 +15,7 @@ url: https://huggingface.co/blog/open-asr-leaderboard-liva
 author: Eric Bezzam; Ashley Mo; Aoi Otani
 published: '2026-11-06'
 fetched: '2026-11-07T06:21:16Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 356
 content_sha256: ca17e0fe66eaeced8fd328a44dea0384051c7bf8a84763918c152698248aaade

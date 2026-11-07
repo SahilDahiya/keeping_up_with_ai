@@ -1,10 +1,15 @@
 ---
 title: How Snorkel runs realistic agent simulations with Modal | Modal Blog
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: product-engineering
+subtopic: case-studies
+secondary_topics:
+- infra-platform/cost
+- evals-observability/evaluation
+summary: Case study on how Snorkel uses Modal's GPU/CPU sandboxes to run millions
+  of agent-simulation benchmarks per month (coding, infra, ML engineering tasks);
+  adopting Modal's memory/CPU bursting cut their sandbox bill by about 20% by letting
+  under-provisioned sandboxes expand elastically instead of failing or being over-provisioned.
 triage: null
 skip_reason: null
 source: modal
@@ -12,7 +17,7 @@ url: https://modal.com/blog/how-snorkel-runs-realistic-agent-simulations-with-mo
 author: null
 published: '2026-11-06'
 fetched: '2026-11-07T06:15:32Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 992
 content_sha256: 9508f3503bb48d62faf76130a3d9d89e9d78953955f71ca0d3cd4872ee081c1c

@@ -1,7 +1,9 @@
 # huggingface
 
-179 articles.
+180 articles.
 
+- **2026-11-06** — [Egyptian and Nigerian English join the Open ASR Leaderboard](<../evals-observability/benchmark-design/Egyptian and Nigerian English join the Open ASR Leaderboard.md>) · `benchmark-design` · huggingface
+  Hugging Face's Open ASR Leaderboard adds two new private, held-out accent splits (Egyptian and Nigerian English, ~1.3-1.6 hours each) from data provider Liva AI, and introduces a Kachru's Three Circles accent breakdown (Inner vs. Outer/Expanding Circle) to track ASR performance disparities by accent and resist benchmaxxing.
 - **2026-11-05** — [A Closer Look at Phonon TTS. Launching High-Quality On-Device Speech That Tops the Benchmarks.](<../models/multimodal/A Closer Look at Phonon TTS. Launching High-Quality On-Device Speech That Tops the Benchmarks.md>) · `multimodal` · huggingface
   Deep dive on Phonon, a 31-75MB on-device TTS model in the Pocket TTS lineage that generates audio via flow-matching latent autoregression; covers the new multi-backend `ptts` inference runtime (CPU/GPU/NPU, 28ms time-to-first-audio) and its modular Transformers integration, which treats the audio codec as a tokenizer alongside the text tokenizer.
 - **2026-11-03** — [CWE-bench v2: More coverage, quality, and transparency](<../evals-observability/benchmark-design/CWE-bench v2 More coverage, quality, and transparency.md>) · `benchmark-design` · huggingface

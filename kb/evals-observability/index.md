@@ -1,7 +1,9 @@
 # evals-observability
 
-141 articles.
+142 articles.
 
+- **2026-11-06** — [Egyptian and Nigerian English join the Open ASR Leaderboard](<benchmark-design/Egyptian and Nigerian English join the Open ASR Leaderboard.md>) · `benchmark-design` · huggingface
+  Hugging Face's Open ASR Leaderboard adds two new private, held-out accent splits (Egyptian and Nigerian English, ~1.3-1.6 hours each) from data provider Liva AI, and introduces a Kachru's Three Circles accent breakdown (Inner vs. Outer/Expanding Circle) to track ASR performance disparities by accent and resist benchmaxxing.
 - **2026-11-03** — [CWE-bench v2: More coverage, quality, and transparency](<benchmark-design/CWE-bench v2 More coverage, quality, and transparency.md>) · `benchmark-design` · huggingface
   CWE-bench v2 open-sources 100 deterministic, Harbor-run security-patching tasks spanning 91 CWE classes plus a held-out eval set; Gemini 4 Argon leads at 67.8% pass@1 just ahead of Claude Opus 5.5 (67.3%), while DeepSeek V4.1 Flash anchors the cost-Pareto frontier at $0.04 per rollout.
 - **2026-11-03** — [Transformers Model Integration Contracts](<testing/Transformers Model Integration Contracts.md>) · `testing` · huggingface
@@ -287,6 +289,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-11-06** — [How Snorkel runs realistic agent simulations with Modal | Modal Blog](<../product-engineering/case-studies/How Snorkel runs realistic agent simulations with Modal Modal Blog.md>) · `case-studies` · modal
+  Case study on how Snorkel uses Modal's GPU/CPU sandboxes to run millions of agent-simulation benchmarks per month (coding, infra, ML engineering tasks); adopting Modal's memory/CPU bursting cut their sandbox bill by about 20% by letting under-provisioned sandboxes expand elastically instead of failing or being over-provisioned.
 - **2026-11-03** — [Fireworks unveils new products at Forge | Fireworks](<../inference/optimization/Fireworks unveils new products at Forge Fireworks.md>) · `optimization` · fireworks
   Fireworks Forge launches: Ultra-fast inference on NVIDIA Blackwell hits 1,500 tok/s on DeepSeek V4.1 Flash, cutting a benchmarked 30-turn agent task from 1 minute to 8 seconds; half-price Background Mode and multi-day prompt caching target latency-insensitive workloads; Ember-1 uses ~40% fewer tokens than Kimi K3 at comparable quality; and No Eval turns production traces into task-specific evals for model training.
 - **2026-10-28** — [Code mode vs tool calling: a 5,276-run benchmark | Pydantic](<../agents/harness/Code mode vs tool calling a 5,276-run benchmark Pydantic.md>) · `harness` · pydantic
