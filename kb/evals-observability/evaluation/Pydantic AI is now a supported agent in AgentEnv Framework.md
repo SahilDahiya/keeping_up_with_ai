@@ -1,10 +1,15 @@
 ---
 title: Pydantic AI is now a supported agent in AgentEnv Framework
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: evals-observability
+subtopic: evaluation
+secondary_topics:
+- agents/harness
+summary: Pydantic AI is now a supported agent in Scale AI's open-source AgentEnv Framework,
+  which runs agents in-process against realistic multi-step environments (e.g. an
+  MCP-exposed email inbox) with task graphs, A2A agent connections, and outcome verifiers,
+  so teams can grade and compare agents like Pydantic AI and Claude Code head-to-head
+  beyond fixed-dataset evals.
 triage: null
 skip_reason: null
 source: pydantic
@@ -12,7 +17,7 @@ url: https://pydantic.dev/articles/agentenv-pydantic-ai
 author: Laís Carvalho
 published: '2026-11-06'
 fetched: '2026-11-10T06:22:09Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 833
 content_sha256: 4a2f2883f16ce6e9cfc3422e654abfcac04aea6480edc970f36d8d3232b95ea8

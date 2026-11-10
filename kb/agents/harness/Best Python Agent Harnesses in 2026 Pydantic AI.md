@@ -1,10 +1,17 @@
 ---
 title: Best Python Agent Harnesses in 2026 | Pydantic AI
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: agents
+subtopic: harness
+secondary_topics:
+- infra-platform/deployment
+- evals-observability/tracing
+summary: A detailed 2026 comparison of Python agent harness SDKs — Pydantic AI Harness,
+  LangChain Deep Agents, Claude Agent SDK, OpenAI Agents SDK, Codex SDK, OpenHands
+  Software Agent SDK, Strands, and Microsoft Agent Framework — scored on model portability,
+  composability, sandboxes, durable execution engines, context/compaction strategies,
+  approval controls, tracing, and commercial support, with a detailed feature table
+  and picks for different team stacks.
 triage: null
 skip_reason: null
 source: pydantic
@@ -12,7 +19,7 @@ url: https://pydantic.dev/articles/best-python-agent-harnesses
 author: Douwe Maan
 published: '2026-11-09'
 fetched: '2026-11-10T06:22:05Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 5219
 content_sha256: 70ea521400afd74c167094e55092f5e6a1a280f077a93c628c5df0d1d9702ff8

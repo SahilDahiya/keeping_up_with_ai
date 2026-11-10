@@ -1,10 +1,15 @@
 ---
 title: Manage OpenTelemetry Collectors and SDKs | Pydantic Logfire
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: evals-observability
+subtopic: monitoring
+secondary_topics:
+- infra-platform/deployment
+summary: Pydantic Logfire's new Fleet Management feature lets teams remotely change
+  what OpenTelemetry Collectors and application SDKs (Python, Node.js, Java, .NET,
+  Go) collect and export via OpAMP — adjusting log levels, sampling, and attribute
+  redaction live without redeploys — with versioned, rollout-gated policies that Collectors
+  can reject if incompatible.
 triage: null
 skip_reason: null
 source: pydantic
@@ -12,7 +17,7 @@ url: https://pydantic.dev/articles/fleet-management-launch
 author: Bill Easton
 published: '2026-11-09'
 fetched: '2026-11-10T06:22:07Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1082
 content_sha256: 3cefb17f496acf438906f1c49057c84801349ce2bfb5af5940d950aed005513f

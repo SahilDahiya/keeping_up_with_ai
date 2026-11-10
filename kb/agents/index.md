@@ -1,7 +1,9 @@
 # agents
 
-128 articles.
+129 articles.
 
+- **2026-11-09** — [Best Python Agent Harnesses in 2026 | Pydantic AI](<harness/Best Python Agent Harnesses in 2026 Pydantic AI.md>) · `harness` · pydantic
+  A detailed 2026 comparison of Python agent harness SDKs — Pydantic AI Harness, LangChain Deep Agents, Claude Agent SDK, OpenAI Agents SDK, Codex SDK, OpenHands Software Agent SDK, Strands, and Microsoft Agent Framework — scored on model portability, composability, sandboxes, durable execution engines, context/compaction strategies, approval controls, tracing, and commercial support, with a detailed feature table and picks for different team stacks.
 - **2026-11-02** — [Best Python AI Agent Frameworks in 2026 | Pydantic AI](<harness/Best Python AI Agent Frameworks in 2026 Pydantic AI.md>) · `harness` · pydantic
   Pydantic AI's framework comparison picks itself as the top choice, citing 30+ model providers, eight durable-execution engines (Temporal, DBOS, Prefect, Restate, AWS Lambda, Absurd, pgtask, Apache Airflow), ten sandboxes, MCP client/server support, and deferred-tool human-in-the-loop approval, while recommending LangGraph, OpenAI Agents SDK, Google ADK, Microsoft Agent Framework, Strands, CrewAI, Claude Agent SDK, Agno, LiveKit Agents, and Pipecat for teams already standardized on those ecosystems.
 - **2026-10-29** — [Cresta’s AI Agent Expertise in Developers’ Hands: Introducing Our End-to-End Self-Serve Model](<harness/Cresta’s AI Agent Expertise in Developers’ Hands Introducing Our End-to-End Self-Serve Model.md>) · `harness` · cresta
@@ -261,6 +263,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-11-06** — [Pydantic AI is now a supported agent in AgentEnv Framework](<../evals-observability/evaluation/Pydantic AI is now a supported agent in AgentEnv Framework.md>) · `evaluation` · pydantic
+  Pydantic AI is now a supported agent in Scale AI's open-source AgentEnv Framework, which runs agents in-process against realistic multi-step environments (e.g. an MCP-exposed email inbox) with task graphs, A2A agent connections, and outcome verifiers, so teams can grade and compare agents like Pydantic AI and Claude Code head-to-head beyond fixed-dataset evals.
 - **2026-11-04** — [Together Compiler: Continual Compilation for AI inference](<../inference/kernels/Together Compiler Continual Compilation for AI inference.md>) · `kernels` · together
   Together AI details Together Compiler (TKCC), which uses a swarm of agents coordinating over a message board plus 'persistent engines' (hot-reloadable forward passes, no VLLM/SGLang restarts) and a custom parallelism cost model to continually recompile inference kernels; reports up to 2.6x higher TPS across Kimi K3/GLM 5.3/MiniMax M3.1-Flash/DeepSeek v4.1-Flash, SOTA InferenceX low-latency numbers (1111 TPS MiniMax, 1205 TPS DeepSeek), 1.7x over hand-tuned megakernels on Llama 1B batch-1, and 252x higher experiment throughput than baseline agentic optimization systems.
 - **2026-10-30** — [Rendreal: conversational print ordering on Pydantic AI and MCP](<../product-engineering/case-studies/Rendreal conversational print ordering on Pydantic AI and MCP.md>) · `case-studies` · pydantic

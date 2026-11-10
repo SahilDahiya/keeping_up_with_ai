@@ -127,6 +127,10 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-11-09** — [Best Python Agent Harnesses in 2026 | Pydantic AI](<../agents/harness/Best Python Agent Harnesses in 2026 Pydantic AI.md>) · `harness` · pydantic
+  A detailed 2026 comparison of Python agent harness SDKs — Pydantic AI Harness, LangChain Deep Agents, Claude Agent SDK, OpenAI Agents SDK, Codex SDK, OpenHands Software Agent SDK, Strands, and Microsoft Agent Framework — scored on model portability, composability, sandboxes, durable execution engines, context/compaction strategies, approval controls, tracing, and commercial support, with a detailed feature table and picks for different team stacks.
+- **2026-11-09** — [Manage OpenTelemetry Collectors and SDKs | Pydantic Logfire](<../evals-observability/monitoring/Manage OpenTelemetry Collectors and SDKs Pydantic Logfire.md>) · `monitoring` · pydantic
+  Pydantic Logfire's new Fleet Management feature lets teams remotely change what OpenTelemetry Collectors and application SDKs (Python, Node.js, Java, .NET, Go) collect and export via OpAMP — adjusting log levels, sampling, and attribute redaction live without redeploys — with versioned, rollout-gated policies that Collectors can reject if incompatible.
 - **2026-11-06** — [How Snorkel runs realistic agent simulations with Modal | Modal Blog](<../product-engineering/case-studies/How Snorkel runs realistic agent simulations with Modal Modal Blog.md>) · `case-studies` · modal
   Case study on how Snorkel uses Modal's GPU/CPU sandboxes to run millions of agent-simulation benchmarks per month (coding, infra, ML engineering tasks); adopting Modal's memory/CPU bursting cut their sandbox bill by about 20% by letting under-provisioned sandboxes expand elastically instead of failing or being over-provisioned.
 - **2026-11-05** — [A Closer Look at Phonon TTS. Launching High-Quality On-Device Speech That Tops the Benchmarks.](<../models/multimodal/A Closer Look at Phonon TTS. Launching High-Quality On-Device Speech That Tops the Benchmarks.md>) · `multimodal` · huggingface
