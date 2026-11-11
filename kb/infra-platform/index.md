@@ -127,6 +127,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-11-10** — [Code mode vs sandboxes for AI agents](<../agents/harness/Code mode vs sandboxes for AI agents.md>) · `harness` · pydantic
+  Distinguishes code mode (model writes Python calling tools as functions via a single run_code tool, cutting round trips and context) from sandboxes (isolated execution environments), and walks through Pydantic AI's Monty interpreter (0.8ms warm-start vs ~1.5s for a Daytona sandbox) and workspace abstraction for composing the two security boundaries.
 - **2026-11-09** — [Best Python Agent Harnesses in 2026 | Pydantic AI](<../agents/harness/Best Python Agent Harnesses in 2026 Pydantic AI.md>) · `harness` · pydantic
   A detailed 2026 comparison of Python agent harness SDKs — Pydantic AI Harness, LangChain Deep Agents, Claude Agent SDK, OpenAI Agents SDK, Codex SDK, OpenHands Software Agent SDK, Strands, and Microsoft Agent Framework — scored on model portability, composability, sandboxes, durable execution engines, context/compaction strategies, approval controls, tracing, and commercial support, with a detailed feature table and picks for different team stacks.
 - **2026-11-09** — [Manage OpenTelemetry Collectors and SDKs | Pydantic Logfire](<../evals-observability/monitoring/Manage OpenTelemetry Collectors and SDKs Pydantic Logfire.md>) · `monitoring` · pydantic

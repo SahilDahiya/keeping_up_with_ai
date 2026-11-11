@@ -1,10 +1,18 @@
 ---
 title: 'Pushing voice agents further: inside four GPT-Live builds | OpenAI Developers'
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: product-engineering
+subtopic: case-studies
+secondary_topics:
+- agents/multi-agent
+- agents/memory-context
+summary: 'Four startups (Juno, Picsart, Treater, Weekend) detail how they built on
+  OpenAI''s GPT-Live: Juno cut dead-air hand-offs 40% and silences from 9.3s to 3.2s
+  using a background Decisions-API model for logging/memory, and A/B-tested custom
+  prompt-to-voice voices with 290 users; Picsart split a thin GPT-Live voice layer
+  from its text-based intelligence layer over WebSocket/WebRTC; Treater saw 26-40%
+  longer calls and +6pp goal completion after replacing a bespoke voice stack with
+  GPT-Live.'
 triage: null
 skip_reason: null
 source: openai-devs
@@ -12,7 +20,7 @@ url: https://developers.openai.com/blog/pushing-voice-agents-further/
 author: About the author; Company
 published: '2026-11-10'
 fetched: '2026-11-11T06:16:26Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 5140
 content_sha256: 0e39e27ab8f26b5aee849ae5ee1fb1b6967808fbfe53f85fbbb84d6a02b40d69

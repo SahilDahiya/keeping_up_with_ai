@@ -1,7 +1,9 @@
 # evals-observability
 
-144 articles.
+145 articles.
 
+- **2026-11-10** — [Change OpenTelemetry sampling without a redeploy | Pydantic Logfire](<monitoring/Change OpenTelemetry sampling without a redeploy Pydantic Logfire.md>) · `monitoring` · pydantic
+  Hands-on walkthrough of Pydantic Logfire's Fleet Management: connecting a FastAPI service and its OpenTelemetry Collector via OpAMP to change log level, span redaction, and sampling live without a redeploy, with equivalent setup steps for Node.js, Java, .NET, and Go.
 - **2026-11-09** — [Manage OpenTelemetry Collectors and SDKs | Pydantic Logfire](<monitoring/Manage OpenTelemetry Collectors and SDKs Pydantic Logfire.md>) · `monitoring` · pydantic
   Pydantic Logfire's new Fleet Management feature lets teams remotely change what OpenTelemetry Collectors and application SDKs (Python, Node.js, Java, .NET, Go) collect and export via OpAMP — adjusting log levels, sampling, and attribute redaction live without redeploys — with versioned, rollout-gated policies that Collectors can reject if incompatible.
 - **2026-11-06** — [Egyptian and Nigerian English join the Open ASR Leaderboard](<benchmark-design/Egyptian and Nigerian English join the Open ASR Leaderboard.md>) · `benchmark-design` · huggingface

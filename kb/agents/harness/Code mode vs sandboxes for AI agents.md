@@ -1,10 +1,15 @@
 ---
 title: Code mode vs sandboxes for AI agents
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: agents
+subtopic: harness
+secondary_topics:
+- infra-platform/deployment
+summary: Distinguishes code mode (model writes Python calling tools as functions via
+  a single run_code tool, cutting round trips and context) from sandboxes (isolated
+  execution environments), and walks through Pydantic AI's Monty interpreter (0.8ms
+  warm-start vs ~1.5s for a Daytona sandbox) and workspace abstraction for composing
+  the two security boundaries.
 triage: null
 skip_reason: null
 source: pydantic
@@ -12,7 +17,7 @@ url: https://pydantic.dev/articles/code-mode-vs-sandboxes
 author: Marcelo Trylesinski
 published: '2026-11-10'
 fetched: '2026-11-11T06:22:18Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 2449
 content_sha256: 48b31c902d476ab4fb82e18fb091c6a38cff97a62d0477bb24afe375d17a32e2

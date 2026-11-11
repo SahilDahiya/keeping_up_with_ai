@@ -1,7 +1,9 @@
 # product-engineering
 
-84 articles.
+85 articles.
 
+- **2026-11-10** — [Pushing voice agents further: inside four GPT-Live builds | OpenAI Developers](<case-studies/Pushing voice agents further inside four GPT-Live builds OpenAI Developers.md>) · `case-studies` · openai-devs
+  Four startups (Juno, Picsart, Treater, Weekend) detail how they built on OpenAI's GPT-Live: Juno cut dead-air hand-offs 40% and silences from 9.3s to 3.2s using a background Decisions-API model for logging/memory, and A/B-tested custom prompt-to-voice voices with 290 users; Picsart split a thin GPT-Live voice layer from its text-based intelligence layer over WebSocket/WebRTC; Treater saw 26-40% longer calls and +6pp goal completion after replacing a bespoke voice stack with GPT-Live.
 - **2026-11-06** — [How Snorkel runs realistic agent simulations with Modal | Modal Blog](<case-studies/How Snorkel runs realistic agent simulations with Modal Modal Blog.md>) · `case-studies` · modal
   Case study on how Snorkel uses Modal's GPU/CPU sandboxes to run millions of agent-simulation benchmarks per month (coding, infra, ML engineering tasks); adopting Modal's memory/CPU bursting cut their sandbox bill by about 20% by letting under-provisioned sandboxes expand elastically instead of failing or being over-provisioned.
 - **2026-10-30** — [Rendreal: conversational print ordering on Pydantic AI and MCP](<case-studies/Rendreal conversational print ordering on Pydantic AI and MCP.md>) · `case-studies` · pydantic

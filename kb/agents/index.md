@@ -1,7 +1,9 @@
 # agents
 
-129 articles.
+130 articles.
 
+- **2026-11-10** — [Code mode vs sandboxes for AI agents](<harness/Code mode vs sandboxes for AI agents.md>) · `harness` · pydantic
+  Distinguishes code mode (model writes Python calling tools as functions via a single run_code tool, cutting round trips and context) from sandboxes (isolated execution environments), and walks through Pydantic AI's Monty interpreter (0.8ms warm-start vs ~1.5s for a Daytona sandbox) and workspace abstraction for composing the two security boundaries.
 - **2026-11-09** — [Best Python Agent Harnesses in 2026 | Pydantic AI](<harness/Best Python Agent Harnesses in 2026 Pydantic AI.md>) · `harness` · pydantic
   A detailed 2026 comparison of Python agent harness SDKs — Pydantic AI Harness, LangChain Deep Agents, Claude Agent SDK, OpenAI Agents SDK, Codex SDK, OpenHands Software Agent SDK, Strands, and Microsoft Agent Framework — scored on model portability, composability, sandboxes, durable execution engines, context/compaction strategies, approval controls, tracing, and commercial support, with a detailed feature table and picks for different team stacks.
 - **2026-11-02** — [Best Python AI Agent Frameworks in 2026 | Pydantic AI](<harness/Best Python AI Agent Frameworks in 2026 Pydantic AI.md>) · `harness` · pydantic
@@ -263,6 +265,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-11-10** — [Pushing voice agents further: inside four GPT-Live builds | OpenAI Developers](<../product-engineering/case-studies/Pushing voice agents further inside four GPT-Live builds OpenAI Developers.md>) · `case-studies` · openai-devs
+  Four startups (Juno, Picsart, Treater, Weekend) detail how they built on OpenAI's GPT-Live: Juno cut dead-air hand-offs 40% and silences from 9.3s to 3.2s using a background Decisions-API model for logging/memory, and A/B-tested custom prompt-to-voice voices with 290 users; Picsart split a thin GPT-Live voice layer from its text-based intelligence layer over WebSocket/WebRTC; Treater saw 26-40% longer calls and +6pp goal completion after replacing a bespoke voice stack with GPT-Live.
 - **2026-11-06** — [Pydantic AI is now a supported agent in AgentEnv Framework](<../evals-observability/evaluation/Pydantic AI is now a supported agent in AgentEnv Framework.md>) · `evaluation` · pydantic
   Pydantic AI is now a supported agent in Scale AI's open-source AgentEnv Framework, which runs agents in-process against realistic multi-step environments (e.g. an MCP-exposed email inbox) with task graphs, A2A agent connections, and outcome verifiers, so teams can grade and compare agents like Pydantic AI and Claude Code head-to-head beyond fixed-dataset evals.
 - **2026-11-04** — [Together Compiler: Continual Compilation for AI inference](<../inference/kernels/Together Compiler Continual Compilation for AI inference.md>) · `kernels` · together

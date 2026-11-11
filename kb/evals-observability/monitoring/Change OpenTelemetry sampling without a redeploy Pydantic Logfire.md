@@ -1,10 +1,13 @@
 ---
 title: Change OpenTelemetry sampling without a redeploy | Pydantic Logfire
 kind: blog
-topic: null
-subtopic: null
+topic: evals-observability
+subtopic: monitoring
 secondary_topics: []
-summary: null
+summary: 'Hands-on walkthrough of Pydantic Logfire''s Fleet Management: connecting
+  a FastAPI service and its OpenTelemetry Collector via OpAMP to change log level,
+  span redaction, and sampling live without a redeploy, with equivalent setup steps
+  for Node.js, Java, .NET, and Go.'
 triage: null
 skip_reason: null
 source: pydantic
@@ -12,7 +15,7 @@ url: https://pydantic.dev/articles/fleet-hands-on
 author: Bill Easton
 published: '2026-11-10'
 fetched: '2026-11-11T06:22:20Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1424
 content_sha256: 4f795ea516eac51076e4d97003e5da3011fdb2ebadfe1fdbb10303fe09745017

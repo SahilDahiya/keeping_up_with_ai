@@ -1,7 +1,9 @@
 # openai-devs
 
-27 articles.
+28 articles.
 
+- **2026-11-10** — [Pushing voice agents further: inside four GPT-Live builds | OpenAI Developers](<../product-engineering/case-studies/Pushing voice agents further inside four GPT-Live builds OpenAI Developers.md>) · `case-studies` · openai-devs
+  Four startups (Juno, Picsart, Treater, Weekend) detail how they built on OpenAI's GPT-Live: Juno cut dead-air hand-offs 40% and silences from 9.3s to 3.2s using a background Decisions-API model for logging/memory, and A/B-tested custom prompt-to-voice voices with 290 users; Picsart split a thin GPT-Live voice layer from its text-based intelligence layer over WebSocket/WebRTC; Treater saw 26-40% longer calls and +6pp goal completion after replacing a bespoke voice stack with GPT-Live.
 - **2026-10-14** — [Designing failover across OpenAI model providers](<../product-engineering/architecture/Designing failover across OpenAI model providers.md>) · `architecture` · openai-devs
   OpenAI's framework for validated failover between direct (1P) API access and third-party (3P) providers like Bedrock or Azure OpenAI for critical financial and payments workloads: which operations are safe to retry, circuit breakers, shared retry budgets, private-connectivity and data-residency checks, and a Codex prompt for implementing a disabled-by-default failover policy in an existing LLM gateway.
 - **2026-10-14** — [Maintaining software with the GPT-6 family | OpenAI Developers](<../product-engineering/case-studies/Maintaining software with the GPT-6 family OpenAI Developers.md>) · `case-studies` · openai-devs
