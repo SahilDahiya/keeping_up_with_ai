@@ -1,7 +1,9 @@
 # pydantic
 
-61 articles.
+62 articles.
 
+- **2026-11-11** — [Testing OpAMP clients against the spec | Pydantic Logfire](<../evals-observability/monitoring/Testing OpAMP clients against the spec Pydantic Logfire.md>) · `monitoring` · pydantic
+  Describes Pydantic Logfire's Fleet Management OpAMP client core, written once in Rust and run as WebAssembly (wazero, Chicory) or a native library across six languages, verified against ~300 extracted spec statements with TLA+ models and differential testing against upstream OpenTelemetry clients.
 - **2026-11-10** — [Code mode vs sandboxes for AI agents](<../agents/harness/Code mode vs sandboxes for AI agents.md>) · `harness` · pydantic
   Distinguishes code mode (model writes Python calling tools as functions via a single run_code tool, cutting round trips and context) from sandboxes (isolated execution environments), and walks through Pydantic AI's Monty interpreter (0.8ms warm-start vs ~1.5s for a Daytona sandbox) and workspace abstraction for composing the two security boundaries.
 - **2026-11-10** — [Change OpenTelemetry sampling without a redeploy | Pydantic Logfire](<../evals-observability/monitoring/Change OpenTelemetry sampling without a redeploy Pydantic Logfire.md>) · `monitoring` · pydantic

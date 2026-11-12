@@ -1,7 +1,9 @@
 # evals-observability
 
-145 articles.
+153 articles.
 
+- **2026-11-11** — [Testing OpAMP clients against the spec | Pydantic Logfire](<monitoring/Testing OpAMP clients against the spec Pydantic Logfire.md>) · `monitoring` · pydantic
+  Describes Pydantic Logfire's Fleet Management OpAMP client core, written once in Rust and run as WebAssembly (wazero, Chicory) or a native library across six languages, verified against ~300 extracted spec statements with TLA+ models and differential testing against upstream OpenTelemetry clients.
 - **2026-11-10** — [Change OpenTelemetry sampling without a redeploy | Pydantic Logfire](<monitoring/Change OpenTelemetry sampling without a redeploy Pydantic Logfire.md>) · `monitoring` · pydantic
   Hands-on walkthrough of Pydantic Logfire's Fleet Management: connecting a FastAPI service and its OpenTelemetry Collector via OpAMP to change log level, span redaction, and sampling live without a redeploy, with equivalent setup steps for Node.js, Java, .NET, and Go.
 - **2026-11-09** — [Manage OpenTelemetry Collectors and SDKs | Pydantic Logfire](<monitoring/Manage OpenTelemetry Collectors and SDKs Pydantic Logfire.md>) · `monitoring` · pydantic
@@ -56,6 +58,8 @@
   Compares Langfuse against LangSmith, Braintrust, Arize Phoenix, Helicone, Laminar, and Confident AI for LLM tracing, detailing concrete gaps: Langfuse's OTLP endpoint accepts traces but not logs/metrics, its billing meters traces/observations/scores together, and nine governance features (RBAC, audit logs, data masking) require an enterprise license key.
 - **2026-08-26** — [Best OpenTelemetry Backends in 2026 | Pydantic Logfire](<tracing/Best OpenTelemetry Backends in 2026 Pydantic Logfire.md>) · `tracing` · pydantic
   Compares OTLP-native observability backends (including Pydantic Logfire) on cross-signal querying, high-cardinality tolerance, self-hosting, and how each handles OpenTelemetry's still-evolving GenAI semantic conventions for model names, token counts, and tool calls in LLM/agent request paths.
+- **2026-08-24** — [How leading platforms ensure observability for LLM inference](<monitoring/How leading platforms ensure observability for LLM inference (baseten).md>) · `monitoring` · baseten
+  Covers the core LLM inference observability metrics (TTFT, TPOT, TPS, end-to-end latency, KV cache hit rate) and how build/deploy/serve-stage logs plus traces pinpoint where a request slowed or failed.
 - **2026-08-24** — [How leading platforms ensure observability for LLM inference](<monitoring/How leading platforms ensure observability for LLM inference.md>) · `monitoring` · baseten
   Explains LLM inference observability through three lenses: metrics (TTFT, TPOT, TPS, end-to-end latency, KV cache hit rate), build/deploy/serving logs keyed by request_id, and distributed traces that break a single request into API Gateway, Service Mesh, Activator, Queue, and Server stages to pinpoint cold-start and queue-backup latency.
 - **2026-08-21** — [Measuring benchmark optimization in speech recognition](<benchmark-design/Measuring benchmark optimization in speech recognition.md>) · `benchmark-design` · huggingface
@@ -158,6 +162,8 @@
   Explains model performance metrics used in production inference, including latency, throughput, and quality signals.
 - **2026-02-06** — [What do LLMs think when you don't tell them what to think about?](<evaluation/What do LLMs think when you don't tell them what to think about.md>) · `evaluation` · together
   Investigates what LLMs do under underspecified prompting and how that affects evaluation.
+- **2026-02-05** — [How to run LLM performance benchmarks (and why you should)](<benchmark-design/How to run LLM performance benchmarks (and why you should) (baseten).md>) · `benchmark-design` · baseten
+  Walks through replicating SemiAnalysis's InferenceMAX benchmark on Baseten using TensorRT-LLM with a TP4EP1 config on B200s, reproducing the token-throughput-per-GPU vs. end-to-end-latency curve.
 - **2026-02-05** — [How to run LLM performance benchmarks (and why you should)](<benchmark-design/How to run LLM performance benchmarks (and why you should).md>) · `benchmark-design` · baseten
   Explains how to run LLM performance benchmarks and which serving metrics matter.
 - **2026-02-05** — [Quantifying infrastructure noise in agentic coding evals](<benchmark-design/Quantifying infrastructure noise in agentic coding evals.md>) · `benchmark-design` · anthropic-engineering
@@ -186,6 +192,10 @@
   Describes Eval Protocol's open-source, framework-agnostic interface for reinforcement fine-tuning of agents, designed to let teams migrate from local experiments to remote RL training without rewriting their agent.
 - **2025-11-04** — [How to evaluate and benchmark Large Language Models (LLMs)](<benchmark-design/How to evaluate and benchmark Large Language Models (LLMs).md>) · `benchmark-design` · together
   Guide to evaluating and benchmarking LLMs for production model selection.
+- **2025-10-30** — [Lumina: building self-improving evaluation through customer-in-the-loop refinement](<llm-as-judge/Lumina building self-improving evaluation through customer-in-the-loop refinement.md>) · `llm-as-judge` · baseten
+  Describes Lumina, an adaptive LLM-as-judge system that clusters model-output failures discovered by an annotation model (e.g. Opus) into an executable taxonomy of binary PASS/FAIL checks, refined iteratively with customer domain experts.
+- **2025-10-27** — [Training loss predicts evaluation performance, even for non-verifiable tasks](<evaluation/Training loss predicts evaluation performance, even for non-verifiable tasks.md>) · `evaluation` · baseten
+  Trains 15 Qwen-3 LoRA configurations (1.5B-32B, rank 64) on a clinical-scribe task and finds training loss explains 74% of variance in a 5-judge LLM-as-judge evaluation ensemble's pass rate (R^2>0.90 controlling for dataset size), letting loss substitute for expensive eval runs during optimization.
 - **2025-10-27** — [Why You Can’t Trust Out-of-the-Box Evaluators](<llm-as-judge/Why You Can’t Trust Out-of-the-Box Evaluators.md>) · `llm-as-judge` · cresta
   Explains why generic evaluators often fail in production and why domain-specific calibration is needed.
 - **2025-10-22** — [Large Reasoning Models Fail to Follow Instructions During Reasoning: A Benchmark Study](<benchmark-design/Large Reasoning Models Fail to Follow Instructions During Reasoning A Benchmark Study.md>) · `benchmark-design` · together
@@ -222,6 +232,8 @@
   Fireworks' Real-World Leaderboard evaluates models on vertical, production-mirroring tasks (ticket classification, e-commerce search, agentic workflows) rather than academic benchmarks, finding Qwen3 Instruct strongest on knowledge-heavy tasks, Qwen3 Coder strong on simple tool-use, and Claude Sonnet 4 still leading complex multi-step agentic work.
 - **2025-07-17** — [Back to The Future: Evaluating AI Agents on Predicting Future Events](<benchmark-design/Back to The Future Evaluating AI Agents on Predicting Future Events.md>) · `benchmark-design` · huggingface
   FutureBench evaluates agents on predicting events that have not happened yet (news outcomes, prediction-market style questions), which makes benchmark contamination impossible by construction and makes results objectively verifiable once the future arrives. Describes the automated question-generation pipeline and rolling scoring of agents with web search.
+- **2025-07-13** — [The bitter lesson of LLM evals](<llm-as-judge/The bitter lesson of LLM evals.md>) · `llm-as-judge` · baseten
+  Argues LLM-as-judge evaluation is unreliable even at temperature=0 due to floating-point nondeterminism and extreme sensitivity to irrelevant prompt changes, and that scaling human judgment care beats scaling judge compute.
 - **2025-07-10** — [Model-as-a-Judge Rewards for Reinforcement Fine-Tuning | Fireworks](<llm-as-judge/Model-as-a-Judge Rewards for Reinforcement Fine-Tuning Fireworks.md>) · `llm-as-judge` · fireworks
   Demonstrates using a stronger LLM as a judge-based reward signal to reinforcement fine-tune a Qwen2.5-32B model for creative writing, reaching a 93.8% win rate over the base model on Arena-Hard-Auto.
 - **2025-07-10** — [Using Model-as-a-Judge for Reward in Reinforcement Finetuning](<llm-as-judge/Using Model-as-a-Judge for Reward in Reinforcement Finetuning.md>) · `llm-as-judge` · fireworks
@@ -230,6 +242,8 @@
   Case study using evals and inference-time compute scaling to generate QR codes that satisfy visual and functional constraints.
 - **2025-06-11** — [Build SDK and Experimentation Platform for AI Agents | Fireworks](<evaluation/Build SDK and Experimentation Platform for AI Agents Fireworks.md>) · `evaluation` · fireworks
   Describes a four-stage agent development lifecycle (launch and collect data, tune candidate models, run offline evals, deploy the winner) and the SDK/experimentation platform built to support rapid iteration on it.
+- **2025-05-08** — [Do transformers notice their own mistakes? Finding a linear hallucination detector inside LLMs](<evaluation/Do transformers notice their own mistakes Finding a linear hallucination detector inside LLMs.md>) · `evaluation` · baseten
+  Finds a linear probe on a frozen Gemma-2 observer model's residual-stream activations detects contextual hallucinations with up to 0.99 F1 on XSum/CNN-DailyMail-derived examples, in a single generator-agnostic forward pass, introducing the ContraTales benchmark of 2000 stories ending in deliberate contradictions.
 - **2025-04-30** — [Introducing Conversation Intelligence for AI Agents](<evaluation/Introducing Conversation Intelligence for AI Agents.md>) · `evaluation` · cresta
   Makes the case for evaluating AI agents with the same behavioral quality management used on human agents, since both show response variance, and for comparing them on shared criteria like resolution rate, CSAT and sentiment. Cites Metrigy that fewer than 20% of AI-handled conversations reach successful resolution, and supports ingesting third-party bot transcripts.
 - **2025-04-16** — [Introducing HELMET: Holistically Evaluating Long-context Language Models](<benchmark-design/Introducing HELMET Holistically Evaluating Long-context Language Models.md>) · `benchmark-design` · huggingface
@@ -276,6 +290,8 @@
   Upstage's Open Ko-LLM Leaderboard evaluates Korean LLMs on Ko-ARC/HellaSwag/MMLU/TruthfulQA plus a Korean commonsense benchmark, deliberately keeping test sets private to prevent contamination — a design lesson for any leaderboard.
 - **2024-02-02** — [NPHardEval Leaderboard: Unveiling the Reasoning Abilities of Large Language Models through Complexity Classes and Dynamic Updates](<benchmark-design/NPHardEval Leaderboard Unveiling the Reasoning Abilities of Large Language Models through Complexity Classes and Dynamic Updates.md>) · `benchmark-design` · huggingface
   NPHardEval grounds LLM reasoning evaluation in computational complexity classes: 900 auto-generated algorithmic questions (3 P, 3 NP-complete, 3 NP-hard tasks x 10 difficulty levels), refreshed monthly to defeat overfitting, scored by weighted accuracy and failure rate.
+- **2024-01-31** — [How to benchmark image generation models like Stable Diffusion XL](<benchmark-design/How to benchmark image generation models like Stable Diffusion XL (baseten).md>) · `benchmark-design` · baseten
+  Walks through designing a representative SDXL inference benchmark, covering how GPU choice, model server, and batch/sequence configuration determine latency, throughput, and cost tradeoffs.
 - **2024-01-31** — [How to benchmark image generation models like Stable Diffusion XL](<benchmark-design/How to benchmark image generation models like Stable Diffusion XL.md>) · `benchmark-design` · baseten
   Explains how to benchmark image-generation models with attention to quality, latency, and reproducibility.
 - **2024-01-31** — [Introducing the Enterprise Scenarios Leaderboard: a Leaderboard for Real World Use Cases](<benchmark-design/Introducing the Enterprise Scenarios Leaderboard a Leaderboard for Real World Use Cases.md>) · `benchmark-design` · huggingface
@@ -295,12 +311,16 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-11-10** — [The platform for inference, training, and execution | Baseten](<../models/reinforcement-learning/The platform for inference, training, and execution Baseten.md>) · `reinforcement-learning` · baseten
+  Describes post-training Qwen3.5-397B into a Deep Research agent for Genspark, raising its LLM-grader quality score from 0.612 to 0.759 (above Opus 5.5 and Sonnet 5.5) while crawling 5x more sources, served on 2xB200 in NVFP4.
 - **2026-11-09** — [Best Python Agent Harnesses in 2026 | Pydantic AI](<../agents/harness/Best Python Agent Harnesses in 2026 Pydantic AI.md>) · `harness` · pydantic
   A detailed 2026 comparison of Python agent harness SDKs — Pydantic AI Harness, LangChain Deep Agents, Claude Agent SDK, OpenAI Agents SDK, Codex SDK, OpenHands Software Agent SDK, Strands, and Microsoft Agent Framework — scored on model portability, composability, sandboxes, durable execution engines, context/compaction strategies, approval controls, tracing, and commercial support, with a detailed feature table and picks for different team stacks.
 - **2026-11-06** — [How Snorkel runs realistic agent simulations with Modal | Modal Blog](<../product-engineering/case-studies/How Snorkel runs realistic agent simulations with Modal Modal Blog.md>) · `case-studies` · modal
   Case study on how Snorkel uses Modal's GPU/CPU sandboxes to run millions of agent-simulation benchmarks per month (coding, infra, ML engineering tasks); adopting Modal's memory/CPU bursting cut their sandbox bill by about 20% by letting under-provisioned sandboxes expand elastically instead of failing or being over-provisioned.
 - **2026-11-03** — [Fireworks unveils new products at Forge | Fireworks](<../inference/optimization/Fireworks unveils new products at Forge Fireworks.md>) · `optimization` · fireworks
   Fireworks Forge launches: Ultra-fast inference on NVIDIA Blackwell hits 1,500 tok/s on DeepSeek V4.1 Flash, cutting a benchmarked 30-turn agent task from 1 minute to 8 seconds; half-price Background Mode and multi-day prompt caching target latency-insensitive workloads; Ember-1 uses ~40% fewer tokens than Kimi K3 at comparable quality; and No Eval turns production traces into task-specific evals for model training.
+- **2026-11-01** — [New MCP and skill for coding agents to use Baseten](<../agents/tool-use/New MCP and skill for coding agents to use Baseten.md>) · `tool-use` · baseten
+  Describes Baseten's MCP server and coding-agent skill for operating its platform, benchmarked across 320 runs/16 tasks to show a 7.5% average cost/time reduction (up to 57% on operation-heavy tasks) and acceptance rate rising from 89% to 97%.
 - **2026-10-28** — [Code mode vs tool calling: a 5,276-run benchmark | Pydantic](<../agents/harness/Code mode vs tool calling a 5,276-run benchmark Pydantic.md>) · `harness` · pydantic
   Pydantic benchmarked code-mode (model writes a program calling tools as functions in a Monty/Rust sandbox) against classic one-tool-call-at-a-time calling across 8 models and 5,276 runs: on long multi-step tasks code mode cut cost 58% and wall time 51% while raising success 16 points, but cost more on small 5-item jobs, with gains driven by what goes into each request rather than round-trip count.
 - **2026-10-27** — [Auto repair for Together GPU Clusters: from GPU fault to healthy node](<../infra-platform/gpu-clusters/Auto repair for Together GPU Clusters from GPU fault to healthy node.md>) · `gpu-clusters` · together
@@ -321,12 +341,16 @@
   Modal's Endpoint Candidates feature lets teams stage alternate inference deployments, mirror a sample of production traffic to them, and compare latency, throughput, and cost before promoting a candidate; it extends a Pingora-based proxy with per-candidate bounded buffers and a shared chunk-count budget so slow or failing mirrors are cancelled instead of blocking production requests.
 - **2026-10-12** — [Introducing Cresta Sentry-0.1](<../product-engineering/case-studies/Introducing Cresta Sentry-0.1.md>) · `case-studies` · cresta
   Cresta's Sentry-0.1 ensemble model detects personal AI agents calling into contact centers by behavioral signals (e.g. exact-phrase repetition in 50% of non-disclosing AI conversations vs 0% of humans, hedging in 76% of human conversations vs 0% of AI), reaching an F1 of roughly 0.9 in preliminary evals.
+- **2026-10-09** — [Project Beacon: Bringing safety signals to open models at scale](<../product-engineering/security/Project Beacon Bringing safety signals to open models at scale (baseten).md>) · `security` · baseten
+  Project Beacon, built with Goodfire AI, reads a model's internal activations during generation to detect prompt injection, unauthorized actions, sensitive-data exposure, and cyber-misuse in flight, wiring those activation-based probe signals into Baseten's inference path before output reaches a user or tool.
 - **2026-10-09** — [Project Beacon: Bringing safety signals to open models at scale](<../product-engineering/security/Project Beacon Bringing safety signals to open models at scale.md>) · `security` · baseten
   Baseten and Goodfire's Project Beacon reads model activations during generation to detect prompt injection, policy violations, and data exposure in real time; a monitor cascade runs activation and text checks in parallel with generation and escalates to a frontier model only when the two disagree, applying per-customer policies to approve, refuse, fall back, or log.
 - **2026-10-05** — [Pydantic AI vs Claude Agent SDK: Who owns the agent?](<../agents/harness/Pydantic AI vs Claude Agent SDK Who owns the agent.md>) · `harness` · pydantic
   Contrasts Claude Agent SDK, which wraps a Claude Code subprocess with its own shell/file tools/skills/agent loop and an unpublished system prompt that can change on upgrade, against Pydantic AI's compose-your-own-harness model (capabilities like LocalWorkspace/ModalSandbox/Coder added one at a time), and argues the latter suits apps that aren't themselves coding agents.
 - **2026-09-28** — [Welcome RL Environments to the hub](<../models/reinforcement-learning/Welcome RL Environments to the hub.md>) · `reinforcement-learning` · huggingface
   Hugging Face ships an `rl-environment` dataset tag and filter so RL training/eval environments (tasksets + runtimes) can be hosted on the Hub and loaded by any compatible framework, rather than siloed in per-framework registries; shows the same terminal-bench-2.1 taskset run via Harbor, verifiers v1, and OpenEnv.
+- **2026-09-24** — [Fine-tune on your LangSmith traces with Baseten Loops](<../models/fine-tuning/Fine-tune on your LangSmith traces with Baseten Loops (baseten).md>) · `fine-tuning` · baseten
+  LangSmith's open-source smithtune CLI converts successful LangSmith agent traces directly into an SFT dataset, fine-tunes on Baseten Loops GPUs, and redeploys the checkpoint to Baseten Dedicated Inference without downloading weights -- a trace-to-deployed-model pipeline runnable by a coding agent.
 - **2026-09-23** — [How to train your own Jev for $17](<../models/fine-tuning/How to train your own Jev for $17.md>) · `fine-tuning` · together
   Together shows how to fine-tune your own Jev-style structured classifier for about $17 using the open-source tev1 repo, demonstrated by training together/Tev1-4B-experimental on Qwen3.5 4B and deploying it as a serverless API endpoint.
 - **2026-09-22** — [Canary rollouts: upgrade models in production without downtime](<../infra-platform/deployment/Canary rollouts upgrade models in production without downtime.md>) · `deployment` · together
@@ -401,8 +425,12 @@
   Describes systems that mine conversation data to discover automation opportunities and generate process blueprints.
 - **2026-04-13** — [EinsteinArena: Harnessing the collective intelligence of agents in the wild to advance science](<../agents/multi-agent/EinsteinArena Harnessing the collective intelligence of agents in the wild to advance science.md>) · `multi-agent` · together
   Explains EinsteinArena for using collective agent intelligence to advance scientific tasks.
+- **2026-03-13** — [The platform for inference, training, and execution | Baseten](<../models/reinforcement-learning/The platform for inference, training, and execution Baseten (baseten, 2026).md>) · `reinforcement-learning` · baseten
+  Compares on/off-policy and dense/sparse post-training signals (iSFT, RL/GRPO, and on-policy self-distillation/OPSD) on Qwen3-4B using a shortened version of Anthropic's constitution as privileged teacher context, finding OPSD generalizes best to novel incoherent prompts (BullshitBench) even though the student never sees the constitution directly.
 - **2026-03-05** — [When the Call Runs Too Long: Modeling Outcomes for Long Conversations](<../models/reasoning/When the Call Runs Too Long Modeling Outcomes for Long Conversations.md>) · `reasoning` · cresta
   Discusses modeling outcomes for long conversations, including challenges around sequence length and delayed success signals.
+- **2026-03-03** — [Outperforming frontier models on emergency medicine documentation](<../product-engineering/case-studies/Outperforming frontier models on emergency medicine documentation.md>) · `case-studies` · baseten
+  A fine-tuned specialist model for emergency-department clinical documentation hit 84.8% chart-generation accuracy and 67.2% on summarization versus gemini-2.5-pro's 63.6%/47.2%, running 6-8x faster, validated with a custom LLM-as-judge evaluation framework (Lumina) built from 120 customer-identified failure modes.
 - **2026-02-23** — [How Cresta Scales Data Annotation With a Human-Supervised Multi-Agent System (MAS)](<../agents/multi-agent/How Cresta Scales Data Annotation With a Human-Supervised Multi-Agent System (MAS).md>) · `multi-agent` · cresta
   Case study on scaling data annotation with a human-supervised multi-agent system, including review and quality-control loops.
 - **2026-02-23** — [How speech models fail where it matters the most and what to do about it](<../models/multimodal/How speech models fail where it matters the most and what to do about it.md>) · `multimodal` · together
@@ -425,6 +453,10 @@
   A human-oversight layer for AI agents in production: supervisors are alerted by negative sentiment, compliance triggers, or low model confidence, the AI agent can itself request help on out-of-knowledge-base or exception requests, and escalation hands off to a human with full conversation context preserved. Names the emerging 'AI Supervisor' role.
 - **2025-11-20** — [Eval Protocol: RL on your agents, in any environment](<../models/reinforcement-learning/Eval Protocol RL on your agents, in any environment.md>) · `reinforcement-learning` · fireworks
   Describes using Eval Protocol to run reinforcement learning on agents in task environments.
+- **2025-11-05** — [Purpose-built LLMs for dental note-taking](<../product-engineering/case-studies/Purpose-built LLMs for dental note-taking.md>) · `case-studies` · baseten
+  A single rank-256 LoRA adapter learned three dental-scribe tasks simultaneously (transcript-to-note, real-time note updates, note editing), matching gemini-2.5-pro's accuracy while responding 5-6x faster, validated with the Lumina LLM-as-judge evaluation engine.
+- **2025-10-10** — [Practical LoRA Research](<../models/fine-tuning/Practical LoRA Research.md>) · `fine-tuning` · baseten
+  Fine-tuning qwen-3-4B on a clinical scribe task, Baseten finds LoRA matches full fine-tuning when tuned correctly but could not reproduce LoRA-XS's claimed gains over LoRA, using five LLM-as-judge evaluators and Mann-Whitney U tests to compare ranks 1-64.
 - **2025-10-01** — [Introducing RTEB: A New Standard for Retrieval Evaluation](<../rag-retrieval/embeddings/Introducing RTEB A New Standard for Retrieval Evaluation.md>) · `embeddings` · huggingface
   RTEB is a retrieval benchmark that mixes open and permanently-private held-out datasets, so a model's gap between public and private scores exposes overfitting to MTEB-style public leaderboards. Covers the dataset selection across domains/languages, the private-eval protocol, and evidence that several leaderboard-topping embedding models generalize worse than their public scores suggest.
 - **2025-09-17** — [A postmortem of three recent issues](<../inference/serving/A postmortem of three recent issues.md>) · `serving` · anthropic-engineering
@@ -433,10 +465,14 @@
   Frames AI agent defense around enterprise security, compliance, testing, and operational safeguards.
 - **2025-08-26** — [Building production-ready agentic systems: Lessons from Shopify Sidekick (2025)](<../agents/harness/Building production-ready agentic systems Lessons from Shopify Sidekick (2025).md>) · `harness` · shopify
   ICML 2025 talk on building Shopify Sidekick as a production agentic system: architecture, LLM-based evaluation, and GRPO reinforcement-learning training for a merchant-facing AI assistant.
+- **2025-08-15** — [Fine-tuning small open-source LLMs to outperform large closed-source models by 60% on specialized tasks](<../models/fine-tuning/Fine-tuning small open-source LLMs to outperform large closed-source models by 60% on specialized tasks (baseten).md>) · `fine-tuning` · baseten
+  Describes fine-tuning a 27B Gemma 3 model with an evaluation-first SFT+RL pipeline to beat Claude Sonnet 4 by 60% accuracy on a healthcare ambient-scribing task, at 50-80% lower inference cost.
 - **2025-08-06** — [Grounding Reality – How Cresta Tackles LLM Hallucinations in Enterprise AI](<../rag-retrieval/pipelines/Grounding Reality – How Cresta Tackles LLM Hallucinations in Enterprise AI.md>) · `pipelines` · cresta
   Explains grounding strategies for reducing hallucinations in enterprise AI systems, with emphasis on knowledge and evaluation loops.
 - **2025-07-15** — [Building reliable AI agents](<../agents/planning/Building reliable AI agents.md>) · `planning` · baseten
   Covers practical design patterns for building more reliable AI agents.
+- **2025-07-15** — [Building reliable AI agents](<../product-engineering/architecture/Building reliable AI agents.md>) · `architecture` · baseten
+  Breaks the agent stack into cognitive, tool-interaction, oversight, and orchestration layers, and describes using Patronus AI's Percival debugger to catch 20+ production agent error types.
 - **2025-06-18** — [Introducing Roast: Structured AI workflows made easy (2025)](<../agents/harness/Introducing Roast Structured AI workflows made easy (2025).md>) · `harness` · shopify
   Shopify open-sources Roast, a framework for structured AI workflows, built to grade and optimize unit tests at scale with minimal human intervention after finding ad-hoc AI workflows hard to maintain.
 - **2025-06-13** — [How we built our multi-agent research system](<../agents/multi-agent/How we built our multi-agent research system.md>) · `multi-agent` · anthropic-engineering
@@ -449,6 +485,8 @@
   Connects transcription performance to broader AI application quality, especially for voice-first systems.
 - **2025-04-08** — [Arabic Leaderboards: Introducing Arabic Instruction Following, Updating AraGen, and More](<../models/benchmarks/Arabic Leaderboards Introducing Arabic Instruction Following, Updating AraGen, and More.md>) · `benchmarks` · huggingface
   Updates the Arabic LLM evaluation stack: the 3C3H generative scoring metric (correctness, completeness, conciseness + helpfulness, honesty, harmlessness) behind AraGen-03-25, plus Arabic IFEval, the first public instruction-following benchmark for Arabic, consolidated in one Arabic-Leaderboards Space with MBZUAI.
+- **2025-02-15** — [Resurrecting the salmon: seeing clearer inside LLMs with domain-specific SAEs](<../models/architectures/Resurrecting the salmon seeing clearer inside LLMs with domain-specific SAEs.md>) · `architectures` · baseten
+  Training a sparse autoencoder on a narrow domain (195,000 medical Q&A examples for Gemma-2) instead of general web text recovered 20% more explained variance in the model's activations and surfaced crisper clinically-relevant features, addressing the vague/generic features typical of general-purpose SAEs.
 - **2025-02-04** — [Open-source DeepResearch – Freeing our search agents](<../agents/tool-use/Open-source DeepResearch – Freeing our search agents.md>) · `tool-use` · huggingface
   Open reproduction of OpenAI's Deep Research: a smolagents CodeAgent (Python-action instead of JSON tool calls) with a text web browser and file inspector reaches 55% on GAIA validation vs OpenAI's ~67%, with analysis of where browser interaction is the bottleneck.
 - **2025-01-28** — [How Cresta Scales Real-Time Insights with ClickHouse](<../infra-platform/deployment/How Cresta Scales Real-Time Insights with ClickHouse.md>) · `deployment` · cresta
@@ -465,6 +503,8 @@
   Details fine-tuning end-to-end ASR base models on hand-annotated customer audio: 2-3 weeks of human transcription plus 1-2 weeks of training, roughly 4-6 weeks total. Reports base-model WER under 11% streaming and under 9% pre-recorded, custom models under 9% and 8% respectively, with Slot Error Rate on customer keywords cut by close to 30%.
 - **2024-05-29** — [Benchmarking Text Generation Inference](<../inference/serving/Benchmarking Text Generation Inference.md>) · `serving` · huggingface
   How to use the TGI benchmarking tool to profile LLM serving: separating prefill from decode, reading latency vs throughput curves under different batch sizes, and choosing the batch size that meets your latency SLO.
+- **2024-05-09** — [Comparing tokens per second across LLMs](<../inference/optimization/Comparing tokens per second across LLMs.md>) · `optimization` · baseten
+  Shows why raw tokens-per-second numbers mislead across models because tokenizer efficiency differs (Llama 3's tiktoken-based tokenizer is up to 15% more efficient than Llama 2's), so TPS comparisons must be normalized per tokenizer before comparing LLM inference speed.
 - **2024-05-05** — [Introducing the Open Leaderboard for Hebrew LLMs!](<../models/benchmarks/Introducing the Open Leaderboard for Hebrew LLMs!.md>) · `benchmarks` · huggingface
   An open leaderboard for Hebrew LLMs, motivated by Hebrew's root-and-pattern morphology breaking tokenization strategies designed for simpler languages; it evaluates on Hebrew-native tasks (Q&A, sentiment, winograd, translation) rather than translated English benchmarks.
 - **2024-05-03** — [Bringing the Artificial Analysis LLM Performance Leaderboard to Hugging Face](<../inference/serving/Bringing the Artificial Analysis LLM Performance Leaderboard to Hugging Face.md>) · `serving` · huggingface
@@ -479,6 +519,8 @@
   Explains the ReAct loop mechanics (thought/action/observation, stopping, error handling) and builds such agents with LangChain's ChatHuggingFace, then benchmarks open LLMs on a custom agent evaluation set against GPT-3.5/GPT-4. Mixtral-8x7B comes out ahead of GPT-3.5 on the agentic tasks; also covers the JSON-parsing failure modes that dominate agent errors.
 - **2024-01-18** — [Preference Tuning LLMs with Direct Preference Optimization Methods](<../models/fine-tuning/Preference Tuning LLMs with Direct Preference Optimization Methods.md>) · `fine-tuning` · huggingface
   Empirical head-to-head of DPO vs IPO vs KTO in TRL on two SFT'd 7B models (Zephyr and OpenHermes), sweeping the beta hyperparameter and scoring on MT-Bench; finds DPO/IPO roughly on par and beating KTO in the paired-preference setting, with beta mattering more than algorithm choice. Includes an errata where a summed-vs-averaged log-likelihood bug in TRL's IPO loss changed the results.
+- **2024-01-12** — [Understanding performance benchmarks for LLM inference](<../inference/optimization/Understanding performance benchmarks for LLM inference.md>) · `optimization` · baseten
+  Explains how to interpret LLM inference benchmarks (hardware, streaming, batch size) since no single metric captures performance, arguing provider benchmark comparisons must control for these variables.
 - **2023-11-03** — [LLM Inference Performance Benchmarking (Part 1)](<../inference/serving/LLM Inference Performance Benchmarking (Part 1).md>) · `serving` · fireworks
   Introduces LLM inference performance benchmarking and the metrics needed to compare serving systems.
 - **2023-10-05** — **[Paper]** [DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines](<../prompt-engineering/techniques/[Paper] DSPy Compiling Declarative Language Model Calls into Self-Improving Pipelines.md>) · `techniques` · arxiv

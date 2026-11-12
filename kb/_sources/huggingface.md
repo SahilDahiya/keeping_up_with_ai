@@ -1,7 +1,9 @@
 # huggingface
 
-180 articles.
+181 articles.
 
+- **2026-11-11** — [Token Pooling-Aware Training for Multi-Vector Embedding Models](<../rag-retrieval/embeddings/Token Pooling-Aware Training for Multi-Vector Embedding Models.md>) · `embeddings` · huggingface
+  Introduces pooling-aware training for multi-vector embedding models (ModernBERT-based), raising NanoBEIR nDCG@10 retention from 94.6% to 97.8% at a 4x token-vector compression ratio (pool_factor=4) versus standard training.
 - **2026-11-06** — [Egyptian and Nigerian English join the Open ASR Leaderboard](<../evals-observability/benchmark-design/Egyptian and Nigerian English join the Open ASR Leaderboard.md>) · `benchmark-design` · huggingface
   Hugging Face's Open ASR Leaderboard adds two new private, held-out accent splits (Egyptian and Nigerian English, ~1.3-1.6 hours each) from data provider Liva AI, and introduces a Kachru's Three Circles accent breakdown (Inner vs. Outer/Expanding Circle) to track ASR performance disparities by accent and resist benchmaxxing.
 - **2026-11-05** — [A Closer Look at Phonon TTS. Launching High-Quality On-Device Speech That Tops the Benchmarks.](<../models/multimodal/A Closer Look at Phonon TTS. Launching High-Quality On-Device Speech That Tops the Benchmarks.md>) · `multimodal` · huggingface

@@ -1,13 +1,19 @@
 # inference
 
-163 articles.
+247 articles.
 
+- **2026-11-10** — [How to make flash models even faster: optimizing DeepSeek V4.1 Flash 1017](<optimization/How to make flash models even faster optimizing DeepSeek V4.1 Flash 1017.md>) · `optimization` · baseten
+  Details optimizing 80+ kernels for the 552B-parameter DeepSeek V4.1 Flash MoE using kernel fusion, Programmatic Dependent Launch, and host-loop minimization, reaching 991 output tokens/s on Artificial Analysis.
 - **2026-11-04** — [Together Compiler: Continual Compilation for AI inference](<kernels/Together Compiler Continual Compilation for AI inference.md>) · `kernels` · together
   Together AI details Together Compiler (TKCC), which uses a swarm of agents coordinating over a message board plus 'persistent engines' (hot-reloadable forward passes, no VLLM/SGLang restarts) and a custom parallelism cost model to continually recompile inference kernels; reports up to 2.6x higher TPS across Kimi K3/GLM 5.3/MiniMax M3.1-Flash/DeepSeek v4.1-Flash, SOTA InferenceX low-latency numbers (1111 TPS MiniMax, 1205 TPS DeepSeek), 1.7x over hand-tuned megakernels on Llama 1B batch-1, and 252x higher experiment throughput than baseline agentic optimization systems.
+- **2026-11-04** — [Introducing Baseten Router: a Pareto-optimal model router for coding tasks](<optimization/Introducing Baseten Router a Pareto-optimal model router for coding tasks.md>) · `optimization` · baseten
+  Explains Baseten Router, a learned router that sends each coding task to an open- or closed-weight model (e.g. GLM 5.3 Flash vs Opus 5.5) based on expected cost/performance, reaching within 0.8 points of Opus 5.5's pass rate at 72% lower cost on DeepSWE/SWE-Atlas/Terminal-Bench test sets.
 - **2026-11-04** — [Polymorphic Inference: self-tuning inference for open models](<optimization/Polymorphic Inference self-tuning inference for open models.md>) · `optimization` · together
   Together AI's research-agenda post coining 'Polymorphic Inference' (vs. legacy 'Static Inference') to describe adapting serving systems to fast-moving model architectures, traffic shapes, and hardware (B200/GB300/Vera Rubin); introduces Together Compiler for agent-driven Continuous Compilation and previews shape-shifting speculative decoding, a ThunderAgent router, and workload-aware model routing (TogetherLink).
 - **2026-11-03** — [Fireworks unveils new products at Forge | Fireworks](<optimization/Fireworks unveils new products at Forge Fireworks.md>) · `optimization` · fireworks
   Fireworks Forge launches: Ultra-fast inference on NVIDIA Blackwell hits 1,500 tok/s on DeepSeek V4.1 Flash, cutting a benchmarked 30-turn agent task from 1 minute to 8 seconds; half-price Background Mode and multi-day prompt caching target latency-insensitive workloads; Ember-1 uses ~40% fewer tokens than Kimi K3 at comparable quality; and No Eval turns production traces into task-specific evals for model training.
+- **2026-11-01** — [The fastest, lowest-cost batch transcription with Qwen3-ASR](<optimization/The fastest, lowest-cost batch transcription with Qwen3-ASR (baseten).md>) · `optimization` · baseten
+  Optimizing Qwen3-ASR 1.7B batch transcription via native audio decoding, KV-cache quantization, and fewer host-device syncs yields 7x more audio/sec over vanilla vLLM, sustaining 3,000x real-time factor at about $0.001 per audio hour with no WER regression.
 - **2026-10-30** — [The fastest delta weight syncs in the world](<serving/The fastest delta weight syncs in the world.md>) · `serving` · baseten
   Baseten rebuilt delta weight syncs to treat GPU memory as the sole parent copy (instead of a duplicate ~770GB CPU copy) and added O(1) Adler-32 checksum updates that touch only changed bytes, cutting a GLM-5.3 sync pause from 6s to 0.8s (36s to 15s total, 3.2x throughput) and speeding a 30GB Kimi K3 delta 2.3x (230s to 100s), freeing host memory for KV cache and unblocking Kimi K3 RL rollout on 8xGB300.
 - **2026-10-28** — [The fastest, lowest-cost batch transcription with Qwen3-ASR](<optimization/The fastest, lowest-cost batch transcription with Qwen3-ASR.md>) · `optimization` · baseten
@@ -22,8 +28,12 @@
   Gradium TTS reaches a 214ms median time-to-first-audio using Kyutai's Delayed Streams Modeling (a temporal 'reader' transformer plus a depth 'refiner' transformer running every 80ms), combined with torch.compile/Triton kernel fusion and CUDA Graphs to keep the CPU from bottlenecking small, latency-sensitive GPU kernels.
 - **2026-10-12** — [Endpoint Candidates: evaluate and promote inference endpoints | Modal Blog](<serving/Endpoint Candidates evaluate and promote inference endpoints Modal Blog.md>) · `serving` · modal
   Modal's Endpoint Candidates feature lets teams stage alternate inference deployments, mirror a sample of production traffic to them, and compare latency, throughput, and cost before promoting a candidate; it extends a Pingora-based proxy with per-candidate bounded buffers and a shared chunk-count budget so slow or failing mirrors are cancelled instead of blocking production requests.
+- **2026-10-09** — [What makes a high-quality NVFP4 quantization?](<quantization/What makes a high-quality NVFP4 quantization (baseten).md>) · `quantization` · baseten
+  Compares three approaches for picking which layers can run at NVFP4 (4-bit): heuristic architecture rules, isolated per-layer sensitivity scoring, and SaturationQuant, which bakes in a saturation term so per-layer scores can be summed across a mixed-precision recipe.
 - **2026-10-09** — [What makes a high-quality NVFP4 quantization?](<quantization/What makes a high-quality NVFP4 quantization.md>) · `quantization` · baseten
   Explains NVFP4 4-bit quantization mechanics (block scales, calibration) and compares three ways to assign per-layer precision: architecture-based heuristics (NVIDIA ModelOpt's NVFP4_EXPERTS_ONLY_CFG), AutoQuantize's isolated-layer sensitivity scoring (gradient, KL divergence, Aumann-Shapley methods), and SaturationQuant, which makes sensitivity scores additive across a mixed-precision recipe.
+- **2026-10-02** — [Agentic inference optimization: 50-90% faster engines](<optimization/Agentic inference optimization 50-90% faster engines (baseten).md>) · `optimization` · baseten
+  Claude Code, following the skills-only MetaInfer paper, generated a custom Qwen3.6-35B-A3B (NVFP4) inference engine on a single B200 that beat vLLM 0.25.1 by up to 90% on single-stream decode speed and 2.33x on TTFT.
 - **2026-10-02** — [Agentic inference optimization: 50-90% faster engines](<optimization/Agentic inference optimization 50-90% faster engines.md>) · `optimization` · baseten
   Baseten let Claude Code (Fable 5) run ~1 week autonomously under the MetaInfer framework to generate a custom inference engine (VibeQwen) for Qwen-3.6-35B-A3B NVFP4 on a B200, beating a tuned vLLM 0.25.1 by 90% single-stream decode TPS and 2.3x faster TTFT; a second agent-built engine (Sammie) for SAM 3.1 hit 91 img/s, 50% faster than Meta's reference server.
 - **2026-09-28** — [Fireworks AI](<optimization/Fireworks AI.md>) · `optimization` · fireworks
@@ -40,40 +50,62 @@
   A fintech running coding-agent traffic on GLM-5.2 (MoE) via Together's Dedicated Model Inference hit prefill/KV-cache exhaustion and multi-minute queuing after a replica reshape; self-serve endpoint control let them fix it same-day by restoring cache-session-aware routing over cache-aware-by-hash and widening max-inflight-per-worker, while a metrics API traced a 192s slow request to a 2.3M-token prefill backlog rather than compute cost.
 - **2026-09-10** — [To Infinity and Beyond: ThunderKittens Now on NVIDIA Vera Rubin NVL72!](<kernels/To Infinity and Beyond ThunderKittens Now on NVIDIA Vera Rubin NVL72!.md>) · `kernels` · together
   Together's kernels team ports ThunderKittens NVFP4/FP8 GEMM kernels to NVIDIA Vera Rubin NVL72, exploiting the doubled-K tensor-core step and expanded 576-column tensor memory to push past the ~42-44% of roofline achieved by naively reusing Blackwell kernels, reaching over 22 PFLOPS and competitive with cuBLAS and CuTe DSL.
+- **2026-09-09** — [How Baseten makes pyannote’s diarization models 9.6x faster](<optimization/How Baseten makes pyannote’s diarization models 9.6x faster (baseten).md>) · `optimization` · baseten
+  Combines quality-aware quantization, index-based clustering, and scheduling optimizations to speed up pyannote's Community-1 and Precision-2 speaker diarization models by up to 9.6x latency and 3x throughput on long audio.
 - **2026-09-09** — [How Baseten makes pyannote’s diarization models 9.6x faster](<optimization/How Baseten makes pyannote’s diarization models 9.6x faster.md>) · `optimization` · baseten
   Baseten sped up pyannote's Community-1 and Precision-2 speaker diarization models with mixed-precision quantization (FP8/BF16/FP32/FP64 per pipeline stage), an indexing strategy that pre-merges near-duplicate embeddings before clustering, and batching/scheduling tuning, cutting Community-1's long-audio latency up to 9.6x and boosting Precision-2 throughput 3.2x with only a 0.5% DER penalty, enabling 20 hours of audio to diarize in 2 minutes on one GPU.
+- **2026-09-08** — [Baseten leads Coval’s voice AI benchmark](<optimization/Baseten leads Coval’s voice AI benchmark (baseten).md>) · `optimization` · baseten
+  Baseten's Qwen3 ASR 1.7B Streaming deployment sits on Coval's quality-latency Pareto frontier for voice AI, running STT about 5x faster than OpenAI's with a lower Word Error Rate, highlighting how orchestration and networking across the STT/LLM/TTS pipeline compound latency.
 - **2026-09-08** — [Baseten leads Coval’s voice AI benchmark](<optimization/Baseten leads Coval’s voice AI benchmark.md>) · `optimization` · baseten
   Baseten's STT deployment (Qwen3 ASR 1.7B Streaming) tops Coval's voice AI benchmark, running ~5x faster than OpenAI's while posting the lowest WER; argues voice AI benchmarks must measure the full turn (STT, LLM, TTS, VAD, orchestration, autoscaling) rather than a single model's throughput, since p95 latency and infrastructure placement matter as much as model choice.
 - **2026-09-08** — [Optimizing delta weight syncs for managed rollouts](<optimization/Optimizing delta weight syncs for managed rollouts.md>) · `optimization` · baseten
   Baseten details how it syncs delta weights (XOR of serialized policy bytes, zstd-compressed) to independent rollout GPU clusters for frontier RL training in under 40s with 6s of request pause; a custom decoder reads zstd's own literal/sequence commands to skip materializing the full 716.56 GiB logical output (compressed to 1.55 GiB for a GLM-5.3 fixture), and batching sparse updates by destination cut the vLLM pause/load/resume interval from 12s to 6s.
 - **2026-09-02** — [The efficient frontier of LLM inference](<optimization/The efficient frontier of LLM inference.md>) · `optimization` · baseten
   Surveys LLM inference engineering as tradeoffs (batch sizing; tensor/expert/attention-data parallelism; quantization to MXFP4/NVFP4) versus techniques that push the whole frontier out (CUDA kernel optimization, EAGLE-3/DSpark/DFlash speculative decoding, prefill/decode disaggregation).
+- **2026-09-01** — [The efficient frontier of LLM inference](<optimization/The efficient frontier of LLM inference (baseten).md>) · `optimization` · baseten
+  Frames inference engineering techniques as either moving a deployment along the latency-throughput efficient frontier (tradeoffs like quantization, reasoning-level) or pushing the whole frontier outward (e.g. KV-aware routing for models like GLM-5.3 or Kimi K3).
 - **2026-08-29** — [Agentic kernels in production](<kernels/Agentic kernels in production.md>) · `kernels` · baseten
   Baseten built a self-improving agentic framework that profiles production diffusion-model serving (Qwen-Image, FLUX.2 on B300 GPUs with SGLang), then generates, benchmarks, and ships GPU kernel optimizations like pre-packed FP8 scales directly into the serving stack, cutting end-to-end latency 42.3% on Qwen-Image, 15.2% on FLUX.2, and lifting throughput 5.5% on MiniMax M3.
+- **2026-08-28** — [Agentic kernels in production](<kernels/Agentic kernels in production (baseten).md>) · `kernels` · baseten
+  An agentic kernel-development framework profiles production serving workloads, generates and validates improved CUDA kernels, cutting end-to-end latency 42.3% on Qwen-Image and 15.2% on FLUX.2, plus a 5.5% tok/s gain on MiniMax M3.
 - **2026-08-19** — [Gisting: Compressing LLM Agent context to ↑ throughput and ↓ cost (2026)](<optimization/Gisting Compressing LLM Agent context to ↑ throughput and ↓ cost (2026).md>) · `optimization` · shopify
   Shopify's Sidekick GraphQL agent uses gisting -- training special 'gist' token embeddings via knowledge distillation -- to compress its ~6,000-token system prompt to ~1,500 gist tokens (4:1), cutting median TTFT from 438ms to 354ms and end-to-end latency from 6.8s to 4.2s while raising throughput from 20.2 to 23.4 QPS at 350 RPM, reducing the GPUs needed to serve the agent.
 - **2026-08-14** — [Inference engineering for DeepSeek V4 Pro 0813](<optimization/Inference engineering for DeepSeek V4 Pro 0813.md>) · `optimization` · baseten
   Baseten details the inference engineering behind serving DeepSeek V4 Pro 0813 (1.7T params, MXFP4 weights) day-zero: retuned parallelism, KV cache allocation, and prefill-decode worker ratios for longer agentic-coding sequences, plus speculative decoding via the model's built-in DSpark speculator for higher throughput.
+- **2026-08-13** — [Inference engineering for DeepSeek V4 Pro 0813](<optimization/Inference engineering for DeepSeek V4 Pro 0813 (baseten).md>) · `optimization` · baseten
+  Covers the day-zero inference engineering for the 1.7T-parameter MIT-licensed DeepSeek V4 Pro 0813, including native MXFP4 serving, re-tuned parallelism/KV-cache allocation for longer agentic sequences, and a new input/output encoding spec replacing the Jinja chat template.
 - **2026-08-04** — [Bringing serverless functions closer to the speed of wire | Modal Blog](<optimization/Bringing serverless functions closer to the speed of wire Modal Blog.md>) · `optimization` · modal
   Modal rewrote its Function I/O plane in Go and deployed it across 4+ regions with a routing_region flag, cutting p50 end-to-end Function Call latency by ~80ms; also covers async offloading of non-critical work, JWT-based auth refresh, and sticking with Redis 7.1 over Valkey/Redis 7.2 after observing CPU spikes under load.
 - **2026-07-31** — [Autoscaling endpoints for LLM inference](<optimization/Autoscaling endpoints for LLM inference.md>) · `optimization` · together
   Together AI details its dedicated-inference autoscaler (proportional control loop, asymmetric scale-up/scale-down windows) and compares 8 scaling metrics; an experiment replaying sine-wave + spike traffic under inflight_requests, ttft-p95, and gpu_utilization policies shows only the concurrency-based inflight_requests metric caught saturation, since continuous batching hid the problem from both TTFT and GPU-utilization signals.
 - **2026-07-29** — [ThunderAgent: 2x Faster Agentic Inference for Synthetic Data Generation at Scale](<optimization/ThunderAgent 2x Faster Agentic Inference for Synthetic Data Generation at Scale.md>) · `optimization` · together
   Together AI's ThunderAgent (ICML 2026 Spotlight) fixes KV cache thrashing in high-concurrency agentic inference by scheduling at the program level instead of per-request: it pauses low-priority agent workflows under memory pressure and resumes them via a global waiting queue, achieving 803 vs 390 tok/s single-node throughput over SGLang and near-linear scaling to 2.4x speedup across 8 H100 nodes.
+- **2026-07-27** — [Making Kimi K3 tokenization 18x faster for million-token agentic workloads](<optimization/Making Kimi K3 tokenization 18x faster for million-token agentic workloads (baseten).md>) · `optimization` · baseten
+  Details Basetenkenizer, a Rust reimplementation of Kimi K3's BPE tokenizer that is up to 18x faster than the Python tiktoken path on long (up to 1M-token) agentic inputs while preserving exact token IDs, including handling of control-token edge cases.
 - **2026-07-27** — [Making Kimi K3 tokenization 18x faster for million-token agentic workloads](<optimization/Making Kimi K3 tokenization 18x faster for million-token agentic workloads.md>) · `optimization` · baseten
   Describes Baseten's Rust-based Basetenkenizer, built to replace a Python tiktoken implementation for Kimi K3's up-to-1M-token agentic inputs, correctly distinguishing literal control-token strings from structural chat-template tokens while running up to 18x faster than tiktoken with exact token-ID parity.
+- **2026-07-27** — [How to build a day-0 API for Kimi K3](<serving/How to build a day-0 API for Kimi K3 (baseten).md>) · `serving` · baseten
+  Details standing up day-0 inference for the 2.8T-parameter Kimi K3 on NVIDIA GB300 NVL72 systems, covering its Kimi Delta Attention/Attention Residuals backbone and sparse 16-of-896 expert MoE routing.
 - **2026-07-27** — [How to build a day-0 API for Kimi K3](<serving/How to build a day-0 API for Kimi K3.md>) · `serving` · baseten
   Walks through Baseten's five milestones for standing up a day-0 inference API for the 2.8T-parameter Kimi K3 on NVIDIA GB300 NVL72 systems: bringing up vLLM/SGLang with native MXFP4 weights, validating fidelity with Moonshot's Kimi Vendor Verifier, sweeping TP/EP/ADP configs, applying speculation/disaggregation/caching, and scaling replicas with KV-aware routing for prefix cache hit rate.
 - **2026-07-27** — [Kimi K3 by Moonshot now available on Modal | Modal Blog](<speculative-decoding/Kimi K3 by Moonshot now available on Modal Modal Blog.md>) · `speculative-decoding` · modal
   Modal details Day-0 serving of Kimi K3 with a custom DFlash speculator tuned to K3's architecture, trained on hidden states from 28 B300 nodes running K3 at TP8 against 4 training nodes, yielding 360% faster interactivity (100 to 460 tok/s) and 88% higher throughput; also notes Moonshot's MXFP4/MXFP8 quantization-aware training and a new KDA-compatible prefix-caching implementation contributed to vLLM.
+- **2026-07-25** — [How we built the new fastest API for GLM-5.2](<optimization/How we built the new fastest API for GLM-5.2.md>) · `optimization` · baseten
+  Describes Baseten's performance tuning of its GLM-5.2 API, including scheduler optimization, updated NVFP4 weights, and a new speculative decoding profile, plus a separate latency-tuned GLM-5.2-Fast variant using Tensor+Expert Parallelism and smaller batch sizes.
 - **2026-07-23** — [H100 vs. H200 GPUs](<hardware/H100 vs. H200 GPUs.md>) · `hardware` · baseten
   Compares H100 vs H200 SXM nodes for LLM serving: an 8x H100 node has 640GB VRAM versus 1,128GB for H200 (needed to fit models like GLM 5.2 at 744B params/~755GB FP8 on one node), and covers MIG partitioning for serving small models cheaply on fractional GPUs.
 - **2026-07-23** — [How to optimize LLM inference speed and reduce costs in production](<optimization/How to optimize LLM inference speed and reduce costs in production.md>) · `optimization` · baseten
   Surveys production LLM inference optimization techniques -- continuous batching, speculative decoding, KV cache reuse, quantization, and smarter routing -- for cutting latency and cost when GPUs sit idle or repeat work.
 - **2026-07-23** — [Bringing Nunchaku 4-bit Diffusion Inference to Diffusers](<quantization/Bringing Nunchaku 4-bit Diffusion Inference to Diffusers.md>) · `quantization` · huggingface
   Diffusers now natively loads Nunchaku's SVDQuant W4A4 checkpoints via from_pretrained() and the Hugging Face `kernels` package, requiring no local CUDA compilation; unlike weight-only quantization, SVDQuant runs transformer layers in 4-bit weights and activations, cutting both memory and denoising-loop latency.
+- **2026-07-22** — [H100 vs. H200 GPUs](<hardware/H100 vs. H200 GPUs (baseten).md>) · `hardware` · baseten
+  Compares H100 and H200 specs (HBM3 vs HBM3e, 3.35 vs 4.8 TB/s bandwidth) and when MIG partitioning or H200's larger VRAM better suits model size and long-context serving.
+- **2026-07-22** — [How to optimize LLM inference speed and reduce costs in production](<optimization/How to optimize LLM inference speed and reduce costs in production (baseten).md>) · `optimization` · baseten
+  Surveys LLM inference optimization techniques across the prefill/decode split: continuous batching, speculative decoding, KV-cache reuse, and quantization, explaining how each cuts latency, throughput, or cost.
 - **2026-07-16** — [How Upwork and Fireworks deliver faster, smarter proposals for freelancers](<optimization/How Upwork and Fireworks deliver faster, smarter proposals for freelancers.md>) · `optimization` · fireworks
   Upwork's Uma assistant serves custom Llama-3.1 LoRA models for real-time freelancer proposal drafting, using FireAttention v2 for long-context handling and FireOptimizer's quantization plus adaptive speculative execution to cut latency roughly an order of magnitude versus off-the-shelf open-source serving.
+- **2026-07-16** — [Real-time video generation inference on Baseten](<optimization/Real-time video generation inference on Baseten (baseten).md>) · `optimization` · baseten
+  Baseten's video inference runtime for Wan 2.2 combines 4-step timestep distillation (~20x), custom fused kernels (~1.5x), and NVFP4 quantization (~1.5x) for a multiplicative 53.6x speedup, generating clips in 2.75s at under one-sixth of a cent each versus five cents at baseline.
 - **2026-07-16** — [Real-time video generation inference on Baseten](<optimization/Real-time video generation inference on Baseten.md>) · `optimization` · baseten
   Details Baseten's real-time video inference runtime for Wan 2.2, combining four-step timestep distillation (~20x), custom kernel fusion (~1.5x), and NVFP4 quantization (~1.5x) for a combined 53.6x speedup, cutting per-clip generation from over two minutes to 2.75 seconds and cost from 5 cents to under a sixth of a cent.
 - **2026-07-16** — [Real-time, performant code assistance: How Sourcegraph scaled with Fireworks](<optimization/Real-time, performant code assistance How Sourcegraph scaled with Fireworks.md>) · `optimization` · fireworks
@@ -84,6 +116,8 @@
   Describes adapting Z Lab's DFlash block-diffusion speculator to Thinking Machines' Inkling (which uses five sliding-window attention layers per full-attention layer), making the drafter all-local-attention and causal for kernel support, reaching 250 tok/s/user at 2.5M TPM per GPU, 67% faster than Inkling's built-in MTP speculative path.
 - **2026-07-10** — [Optimizing MiniMax M3 Sparse Attention on NVIDIA Blackwell](<kernels/Optimizing MiniMax M3 Sparse Attention on NVIDIA Blackwell.md>) · `kernels` · fireworks
   Deep dive into sparse-attention kernel optimization for MiniMax M3 on NVIDIA Blackwell hardware.
+- **2026-07-02** — [H100 vs. H200 vs. B200: which GPU should you use?](<hardware/H100 vs. H200 vs. B200 which GPU should you use (baseten).md>) · `hardware` · baseten
+  Compares H100, H200, and B200 GPUs across memory bandwidth, FP4/FP8 compute, and VRAM per 8-GPU node, recommending B200's FP4 support for high-throughput production inference at scale.
 - **2026-07-02** — [H100 vs. H200 vs. B200: which GPU should you use?](<hardware/H100 vs. H200 vs. B200 which GPU should you use.md>) · `hardware` · baseten
   Compares H100, H200, and B200 GPUs for choosing hardware for inference workloads.
 - **2026-06-30** — [GLM 5.2 Fast: Faster Serverless Inference, Same Quality | Fireworks](<serving/GLM 5.2 Fast Faster Serverless Inference, Same Quality Fireworks.md>) · `serving` · fireworks
@@ -92,16 +126,26 @@
   Explains multi-token residual prediction as an inference acceleration technique for generating multiple tokens per step.
 - **2026-06-25** — [Proxying inference requests in 6ms with Pingora, Envoy, and Spanner](<serving/Proxying inference requests in 6ms with Pingora, Envoy, and Spanner.md>) · `serving` · modal
   Explains low-latency inference proxying with Pingora, Envoy, and Spanner, including request-routing architecture.
+- **2026-06-25** — [Live draft model training for speculative decoding](<speculative-decoding/Live draft model training for speculative decoding.md>) · `speculative-decoding` · baseten
+  Describes a distributed pipeline that trains speculative-decoding draft models live from hidden states extracted during production inference (avoiding offline storage of multi-GB samples), yielding a median 20% accept-rate increase and 100%+ on constrained traffic.
 - **2026-06-22** — [Best practices to accelerate inference for large-scale production workloads](<optimization/Best practices to accelerate inference for large-scale production workloads.md>) · `optimization` · together
   Best practices for accelerating inference in large-scale production workloads.
+- **2026-06-22** — [How we built the world’s fastest API for GLM-5.2](<optimization/How we built the world’s fastest API for GLM-5.2.md>) · `optimization` · baseten
+  Details how Baseten hit 280+ TPS for GLM-5.2 using NVFP4 quantization on Blackwell, KV-aware routing with NVIDIA Dynamo, prefill-decode disaggregation, and Multi-Token Prediction heads for speculative decoding.
 - **2026-06-22** — [Achieve state-of-the-art inference latencies with speculative decoding](<speculative-decoding/Achieve state-of-the-art inference latencies with speculative decoding.md>) · `speculative-decoding` · modal
   Explains speculative decoding for lower inference latency, including draft-model tradeoffs and production serving considerations.
 - **2026-06-19** — [Speculation Is All You Need](<speculative-decoding/Speculation Is All You Need.md>) · `speculative-decoding` · modal
   Deep dive into speculative decoding and related techniques for improving LLM inference latency and throughput.
 - **2026-06-02** — [MiniMax-M3 efficient 1M-token multimodal serving](<serving/MiniMax-M3 efficient 1M-token multimodal serving.md>) · `serving` · together
   Covers efficient MiniMax-M3 serving for million-token context and multimodal workloads.
+- **2026-05-29** — [Timestep distillation: 2.5x faster FLUX.2 image generation](<optimization/Timestep distillation 2.5x faster FLUX.2 image generation.md>) · `optimization` · baseten
+  Applies Distribution Matching Distillation to FLUX.2, compressing denoising from 20 steps to 4-8 for a 2.5x speedup, noting it can't be combined with DiT-cache style feature caching (~1.5x) since distilled steps span timestep gaps too large for cache validity assumptions.
+- **2026-05-18** — [Sub-second image generation with Flux.2 and Qwen-Image](<optimization/Sub-second image generation with Flux.2 and Qwen-Image (baseten).md>) · `optimization` · baseten
+  Baseten delivers 2.3x faster Flux.2 [dev] and 1.6x faster Qwen-Image image generation on NVIDIA Blackwell GPUs (1.9x/1.1x on Hopper) vs SGLang, via quantization, optimized attention kernels, and runtime improvements.
 - **2026-05-18** — [Sub-second image generation with Flux.2 and Qwen-Image](<optimization/Sub-second image generation with Flux.2 and Qwen-Image.md>) · `optimization` · baseten
   Explains sub-second image generation with FLUX.2 and Qwen-Image serving optimizations.
+- **2026-05-14** — [Cost-efficient, high-performance TTS with Qwen3-TTS](<optimization/Cost-efficient, high-performance TTS with Qwen3-TTS.md>) · `optimization` · baseten
+  Optimizing Qwen3-TTS with vLLM-Omni to reach $3-4 per million characters, roughly 90% cheaper than closed-source TTS APIs, by increasing concurrency per H100 replica to amortize the $6.50/hour GPU cost.
 - **2026-05-12** — [Engineering low-latency voice agents](<optimization/Engineering low-latency voice agents.md>) · `optimization` · sierra
   Engineering note on low-latency voice agents, covering response-time constraints and optimization across speech and model serving.
 - **2026-05-12** — [A more reliable inference layer for foundation models](<serving/A more reliable inference layer for foundation models.md>) · `serving` · sierra
@@ -110,6 +154,8 @@
   Covers model failover for preserving agent behavior while serving LLMs reliably across model/provider disruptions.
 - **2026-05-11** — [Serving DeepSeek-V4: why million-token context is an inference systems problem](<serving/Serving DeepSeek-V4 why million-token context is an inference systems problem.md>) · `serving` · together
   Explains why million-token context serving is primarily an inference-systems problem.
+- **2026-05-08** — [DFlash: 3x faster LLM inference](<speculative-decoding/DFlash 3x faster LLM inference (baseten).md>) · `speculative-decoding` · baseten
+  DFlash uses bidirectional attention to predict 8-16 draft tokens per forward pass (vs EAGLE's 1), breaking EAGLE's ~2x speedup ceiling to deliver ~3x speedups on Qwen3-8B on a single B200, 10-30% faster than vLLM/SGLang's EAGLE implementations.
 - **2026-05-08** — [DFlash: 3x faster LLM inference](<speculative-decoding/DFlash 3x faster LLM inference.md>) · `speculative-decoding` · baseten
   Explains DFlash as an optimization for faster LLM inference.
 - **2026-05-04** — [Foundational research powering efficient inference at scale](<optimization/Foundational research powering efficient inference at scale.md>) · `optimization` · together
@@ -120,38 +166,70 @@
   Describes a small configuration change that improves multimodal inference performance, with attention to batching and serving settings.
 - **2026-04-17** — [Making FlashAttention-4 faster for inference](<kernels/Making FlashAttention-4 faster for inference.md>) · `kernels` · modal
   Deep dive on making FlashAttention-4 faster for inference, including kernel-level and serving-performance considerations.
+- **2026-04-13** — [The platform for inference, training, and execution | Baseten](<speculative-decoding/The platform for inference, training, and execution Baseten.md>) · `speculative-decoding` · baseten
+  Covers training custom EAGLE-3 draft heads (a single transformer decoder layer, 1-5% of target model size) for a Qwen3-4B target model, measuring 1.5-2.5x production latency gains versus the 4-6x reported in benchmarks.
+- **2026-04-06** — [Sub-3 millisecond named entity recognition (NER) inference](<optimization/Sub-3 millisecond named entity recognition (NER) inference (baseten).md>) · `optimization` · baseten
+  Extends Baseten Embeddings Inference (BEI) to token-classification NER workloads, reaching sub-3ms client-side and 1ms server-side latency for BERT-class NER models, about 7x faster than typical solutions, for use in document ingestion and retrieval-augmentation pipelines.
 - **2026-04-06** — [Sub-3 millisecond named entity recognition (NER) inference](<optimization/Sub-3 millisecond named entity recognition (NER) inference.md>) · `optimization` · baseten
   Shows how to achieve sub-3-millisecond NER inference with optimized serving.
 - **2026-03-27** — [I spent 31 hours on the math behind TurboQuant so you don't have to](<quantization/I spent 31 hours on the math behind TurboQuant so you don't have to.md>) · `quantization` · baseten
   Mathematical deep dive into TurboQuant and its quantization behavior for LLM inference.
+- **2026-03-26** — [I spent 31 hours on the math behind TurboQuant so you don't have to](<quantization/I spent 31 hours on the math behind TurboQuant so you don't have to (baseten).md>) · `quantization` · baseten
+  Breaks down the math behind Google's TurboQuant/PolarQuant KV-cache quantization (polar-coordinate transform with recursive angle quantization, >4.2x KV cache compression) and contrasts it with NVFP4 two-layer quantization.
 - **2026-03-10** — [Training-Inference Parity in MoE Models: Where Numerics Drift](<kernels/Training-Inference Parity in MoE Models Where Numerics Drift.md>) · `kernels` · fireworks
   Explains training-inference parity issues in MoE models and how numeric drift can affect production behavior.
 - **2026-03-05** — [FlashAttention-4: Algorithm and Kernel Pipelining Co-Design for Asymmetric Hardware Scaling](<kernels/FlashAttention-4 Algorithm and Kernel Pipelining Co-Design for Asymmetric Hardware Scaling.md>) · `kernels` · together
   Covers FlashAttention-4 algorithm and kernel co-design for asymmetric hardware scaling.
 - **2026-03-04** — [Cache-aware prefill-decode disaggregation for long-context LLM serving](<serving/Cache-aware prefill-decode disaggregation for long-context LLM serving.md>) · `serving` · together
   Explains cache-aware prefill/decode disaggregation for faster long-context LLM serving.
+- **2026-03-04** — [How we built the fastest GLM-5 on Artificial Analysis](<speculative-decoding/How we built the fastest GLM-5 on Artificial Analysis.md>) · `speculative-decoding` · baseten
+  Details reaching 200+ TPS on the 744B-parameter (40B active) GLM-5 via a low-overhead MTP speculative decoding engine, MoE dispatch kernels tuned to its deep-narrow architecture, and custom kernels exploiting DeepSeek Sparse Attention.
 - **2026-02-19** — [Consistency diffusion language models: Up to 14x faster inference without sacrificing quality](<optimization/Consistency diffusion language models Up to 14x faster inference without sacrificing quality.md>) · `optimization` · together
   Explains consistency diffusion language models for faster inference without large quality loss.
+- **2026-02-18** — [4-Bit Quantization for Inference Optimization](<quantization/4-Bit Quantization for Inference Optimization (baseten).md>) · `quantization` · baseten
+  Details 4-bit quantization of the FLUX.2 [dev] diffusion model's text encoder and denoising loop using SGLang kernels, achieving 1.6x faster inference with no perceptible quality loss.
 - **2026-02-18** — [4-Bit Quantization for Inference Optimization](<quantization/4-Bit Quantization for Inference Optimization.md>) · `quantization` · baseten
   Deep dive into 4-bit quantization for inference, covering math, tradeoffs, and production optimization.
+- **2026-02-11** — [How we built the fastest Kimi K2.5 on Artificial Analysis](<speculative-decoding/How we built the fastest Kimi K2.5 on Artificial Analysis.md>) · `speculative-decoding` · baseten
+  Details reaching 340+ TPS on the 1T-parameter Kimi K2.5 using a custom EAGLE-3 speculator trained on hidden states from synthetic queries plus an INT4-to-NVFP4 conversion to unlock NVIDIA Blackwell inference.
+- **2026-02-09** — [AI model performance metrics explained](<optimization/AI model performance metrics explained.md>) · `optimization` · baseten
+  Breaks down the three inference performance metrics that drive perceived UX -- time to first token, tokens per second, and end-to-end latency -- and explains why they must be re-baselined across model switches since models vary in verbosity and batching behavior.
+- **2026-02-03** — [The Baseten Inference Stack at NVIDIA Dynamo Day](<serving/The Baseten Inference Stack at NVIDIA Dynamo Day.md>) · `serving` · baseten
+  Describes how NVIDIA Dynamo's disaggregated serving, KV cache-aware routing, and KV cache offloading combine in the Baseten Inference Stack to cut TTFT 50% and TPOT 34% while raising throughput 61% on long-input/output workloads.
 - **2026-01-23** — [Open-sourcing Baseten’s suffix automaton MTP accelerator](<speculative-decoding/Open-sourcing Baseten’s suffix automaton MTP accelerator.md>) · `speculative-decoding` · baseten
   Explains a suffix-automaton MTP accelerator for improving speculative decoding acceptance rates.
 - **2026-01-22** — [Optimizing inference speed and costs: Lessons learned from large-scale deployments](<optimization/Optimizing inference speed and costs Lessons learned from large-scale deployments.md>) · `optimization` · together
   Lessons from optimizing inference speed and cost in large-scale deployments.
+- **2026-01-22** — [Open-sourcing Baseten’s suffix automaton MTP accelerator](<speculative-decoding/Open-sourcing Baseten’s suffix automaton MTP accelerator (baseten).md>) · `speculative-decoding` · baseten
+  Open-sourced a suffix-automaton (SA) decoding technique combined with MTP/EAGLE draft models, integrated into TensorRT-LLM, achieving up to 40% higher throughput or 40% lower latency on agentic coding workloads versus MTP alone.
+- **2026-01-21** — [RadixMLP: Intra-batch deduplication for causal transformers](<optimization/RadixMLP Intra-batch deduplication for causal transformers.md>) · `optimization` · baseten
+  RadixMLP maps batches with shared prefixes (system prompts, reranking queries) onto a prefix trie to deduplicate MLP/LayerNorm computation, giving 1.44-1.59x speedups on real MS MARCO reranking workloads with Qwen3 models and up to 5x on synthetic benchmarks.
+- **2026-01-21** — [Wan 2.2 video generation in less than 60 seconds](<optimization/Wan 2.2 video generation in less than 60 seconds.md>) · `optimization` · baseten
+  Built a Wan 2.2 video-generation runtime delivering 3x faster inference on NVIDIA Blackwell and 2.5x on Hopper versus the default runtime, cutting cost 67% for high-volume dedicated deployments at batch size one.
+- **2026-01-15** — [The fastest Whisper — with streaming and diarization](<optimization/The fastest Whisper — with streaming and diarization.md>) · `optimization` · baseten
+  Adds real-time streaming and speaker diarization to Baseten's Whisper Large V3 Turbo pipeline (8 H100 MIGs, 2400x RTF), decoupling WebSocket server (CPU) from the model server (GPU) via Baseten Chains for independent autoscaling.
 - **2026-01-15** — [Open Responses: What you need to know](<serving/Open Responses What you need to know.md>) · `serving` · huggingface
   Argues Chat Completions is a poor fit for agentic workloads and proposes Open Responses, an open version of OpenAI's Responses API: stateless by default with encrypted reasoning, standardized model params, and provider-side agentic loops that execute tool calls before returning.
 - **2025-11-18** — [Host overhead is killing your inference efficiency](<optimization/Host overhead is killing your inference efficiency.md>) · `optimization` · modal
   Analyzes host overhead as an inference bottleneck and shows why CPU-side orchestration can dominate model-serving efficiency.
 - **2025-11-12** — [Building world-class product search at Shopify: Where C++ excellence meets ML innovation (2025)](<serving/Building world-class product search at Shopify Where C++ excellence meets ML innovation (2025).md>) · `serving` · shopify
   How Shopify runs transformers, neural rankers, and gradient-boosted models (LightGBM, CatBoost) at native C++ speed for product search, meeting millisecond-latency-at-scale while keeping fast ML iteration.
+- **2025-11-11** — [Kimi K2 Thinking at 140+ TPS on NVIDIA Blackwell](<optimization/Kimi K2 Thinking at 140+ TPS on NVIDIA Blackwell.md>) · `optimization` · baseten
+  Details Baseten's Kimi K2 Thinking API achieving 300ms TTFT and 140+ TPS on a single 8xB200 node via NVFP4 quantization, Tensor+Expert Parallelism, and KV-aware routing for cache re-use.
 - **2025-11-04** — [One-second voice-to-voice latency with Modal, Pipecat, and open models](<optimization/One-second voice-to-voice latency with Modal, Pipecat, and open models.md>) · `optimization` · modal
   Builds a low-latency voice-to-voice system with open models, covering speech pipeline latency and serving architecture.
+- **2025-10-24** — [How we made the fastest GPT-OSS on NVIDIA GPUs 60% faster](<speculative-decoding/How we made the fastest GPT-OSS on NVIDIA GPUs 60% faster.md>) · `speculative-decoding` · baseten
+  Explains how adding EAGLE-3 speculative decoding to GPT-OSS 120B on NVIDIA GPUs raised throughput from ~400 to ~650 tokens/second, building on prior TensorRT-LLM and NVIDIA Dynamo work.
 - **2025-10-21** — [Engineering for Real-Time Voice Agent Latency](<serving/Engineering for Real-Time Voice Agent Latency.md>) · `serving` · cresta
   Technical discussion of latency in real-time voice agents and the engineering constraints behind responsive spoken interaction.
+- **2025-10-16** — [2x faster inference with KV cache-aware routing](<optimization/2x faster inference with KV cache-aware routing (baseten).md>) · `optimization` · baseten
+  Details adopting NVIDIA Dynamo's KV-cache-aware request routing, which hashes requests into a radix tree to route to replicas with cached context, delivering roughly 2x faster TTFT in production.
 - **2025-10-16** — [2x faster inference with KV cache-aware routing](<optimization/2x faster inference with KV cache-aware routing.md>) · `optimization` · baseten
   Describes 2x faster inference through KV-cache-aware routing with NVIDIA Dynamo.
 - **2025-10-10** — [ATLAS runtime-learning accelerators for LLM inference](<speculative-decoding/ATLAS runtime-learning accelerators for LLM inference.md>) · `speculative-decoding` · together
   Introduces ATLAS, a runtime-learning accelerator for improving LLM inference.
+- **2025-10-06** — [Baseten brings AI video to life on Nebius](<serving/Baseten brings AI video to life on Nebius.md>) · `serving` · baseten
+  Describes the serving architecture for a custom text-to-video system on Nebius capacity: modality-specific kernels, kernel fusion, request prioritization, topology-aware multi-node parallelism, and SLA-aware autoscaling for predictable P90/P99 latency.
 - **2025-09-29** — [Accelerating Qwen3-8B Agent on Intel® Core™ Ultra with Depth-Pruned Draft Models](<speculative-decoding/Accelerating Qwen3-8B Agent on Intel® Core™ Ultra with Depth-Pruned Draft Models.md>) · `speculative-decoding` · huggingface
   Accelerates a Qwen3-8B agent on Intel Core Ultra by ~1.3x using speculative decoding with a depth-pruned Qwen3-0.6B int8 draft model in OpenVINO GenAI, showing how draft-model depth pruning raises acceptance rate per unit of draft cost on client hardware.
 - **2025-09-26** — [We reverse-engineered Flash Attention 4](<kernels/We reverse-engineered Flash Attention 4.md>) · `kernels` · modal
@@ -162,12 +240,22 @@
   Unpacks the optimizations shipped in transformers for OpenAI's gpt-oss and reusable by any model: zero-build kernels pulled from the Hub, MXFP4 quantization, tensor parallelism, expert parallelism, continuous batching and dynamic sliding-window caches.
 - **2025-09-02** — [Make your ZeroGPU Spaces go brrr with ahead-of-time compilation](<kernels/Make your ZeroGPU Spaces go brrr with ahead-of-time compilation.md>) · `kernels` · huggingface
   Uses PyTorch ahead-of-time compilation (torch.export + AOTInductor) instead of just-in-time torch.compile so short-lived ZeroGPU processes keep the compiled artifact, giving 1.3x-1.8x speedups on Flux, Wan and LTX; also covers FP8 quantization, dynamic shapes and multi-compile for varying resolutions.
+- **2025-08-29** — [HTTP vs. WebSockets vs. gRPC for AI model inference](<serving/HTTP vs. WebSockets vs. gRPC for AI model inference.md>) · `serving` · baseten
+  Compares HTTP, WebSockets, and gRPC as transport protocols for AI model inference, covering statelessness/caching tradeoffs for HTTP versus persistent bidirectional connections for real-time voice/agent applications.
 - **2025-08-18** — [From Zero to GPU: A Guide to Building and Scaling Production-Ready CUDA Kernels](<hardware/From Zero to GPU A Guide to Building and Scaling Production-Ready CUDA Kernels.md>) · `hardware` · huggingface
   End-to-end guide to writing a custom CUDA kernel and shipping it with HF's kernel-builder: Nix-based reproducible builds across multiple GPU architectures and torch ABIs, PyTorch op registration and torch.compile compatibility, and distribution via `get_kernel()` from the Hub instead of compiling at install time.
 - **2025-08-14** — [More than Just a Model: How Cresta Delivers Precise, Adaptable Summaries with Ultra-Low Latency](<serving/More than Just a Model How Cresta Delivers Precise, Adaptable Summaries with Ultra-Low Latency.md>) · `serving` · cresta
   Explains production summarization architecture focused on low latency, adaptability, and precision rather than model choice alone.
+- **2025-08-08** — [Zero to real-time text-to-speech: The complete Orpheus + WebSockets tutorial](<serving/Zero to real-time text-to-speech The complete Orpheus + WebSockets tutorial.md>) · `serving` · baseten
+  Walks through streaming text-to-speech with the open-source Orpheus TTS model over a persistent WebSocket connection on Baseten, avoiding per-request HTTP connection overhead for real-time audio generation.
+- **2025-08-06** — [How we run GPT OSS 120B at 500+ tokens per second on NVIDIA GPUs](<optimization/How we run GPT OSS 120B at 500+ tokens per second on NVIDIA GPUs.md>) · `optimization` · baseten
+  Baseten's day-zero optimization of OpenAI's gpt-oss-120b spanned benchmarking across TensorRT-LLM, vLLM, and SGLang and ensuring Hopper/Blackwell compatibility, reaching the top public latency/throughput numbers on OpenRouter by launch day and adding 100 more tokens/sec of throughput in the time it took to write the post.
 - **2025-07-30** — [GPU Memory Snapshots: Supercharging sub-second startup](<optimization/GPU Memory Snapshots Supercharging sub-second startup.md>) · `optimization` · modal
   Explains GPU memory snapshots for reducing cold-start latency and preserving loaded model state across invocations.
+- **2025-07-29** — [Run Qwen3 Embedding on NVIDIA Blackwell GPUs](<optimization/Run Qwen3 Embedding on NVIDIA Blackwell GPUs.md>) · `optimization` · baseten
+  Baseten Embeddings Inference (BEI) on B200 GPUs processes Qwen3 Embedding 8B at 1.5x the tokens/sec of BEI on H100, 3.3x vLLM, and 3.6x TEI on high-throughput workloads, with an 8.4x throughput edge over vLLM at low query volume.
+- **2025-07-28** — [Zero to real-time transcription: The complete Whisper V3 streaming tutorial](<serving/Zero to real-time transcription The complete Whisper V3 streaming tutorial.md>) · `serving` · baseten
+  Walks through real-time microphone transcription with Whisper V3 streamed over WebSockets on Baseten, covering audio chunking and the client/server code for continuous low-latency transcription.
 - **2025-07-23** — [Fast LoRA inference for Flux with Diffusers and PEFT](<optimization/Fast LoRA inference for Flux with Diffusers and PEFT.md>) · `optimization` · huggingface
   Gets ~2.3x faster LoRA inference for Flux.1-Dev by combining LoRA hotswapping with torch.compile without recompilation — using peft's hotswap_adapter, max-rank padding so shapes stay static, and flags to avoid recompiles when adapters have different ranks and target layers. Also covers fusing/unfusing and FP8 quantization on top.
 - **2025-06-18** — [Run FLUX.1-dev three times faster](<optimization/Run FLUX.1-dev three times faster.md>) · `optimization` · modal
@@ -178,6 +266,8 @@
   Explains multi-dimensional optimization for LLM serving, balancing latency, cost, throughput, and quality tradeoffs.
 - **2025-06-12** — [Learn the Hugging Face Kernel Hub in 5 Minutes](<kernels/Learn the Hugging Face Kernel Hub in 5 Minutes.md>) · `kernels` · huggingface
   Introduces the Kernel Hub: `get_kernel("kernels-community/activation")` downloads precompiled optimized CUDA kernels at runtime with no local build system, and the post benchmarks the drop-in kernels (activation, RMSNorm, Flash Attention) against native PyTorch.
+- **2025-06-12** — [Your client code matters: 12x higher embedding throughput with Python and Rust](<optimization/Your client code matters 12x higher embedding throughput with Python and Rust.md>) · `optimization` · baseten
+  Baseten's open-source Performance Client (Rust + PyO3, releasing Python's GIL via Tokio during network calls) delivers up to 12x higher embedding throughput than AsyncOpenAI (1m11s vs 15m+ for 2,097,152 parallel embedding inputs).
 - **2025-06-05** — [Model-Preserving Adaptive Rounding with YAQA](<quantization/Model-Preserving Adaptive Rounding with YAQA.md>) · `quantization` · together
   Explains YAQA, a model-preserving adaptive rounding approach for quantization.
 - **2025-06-04** — [KV Cache from scratch in nanoVLM](<kernels/KV Cache from scratch in nanoVLM.md>) · `kernels` · huggingface
@@ -192,30 +282,56 @@
   An optimized Whisper deployment on Inference Endpoints built on vLLM, targeting Ada Lovelace GPUs (L4/L40s) to unlock torch.compile JIT kernels, CUDA graphs and a float8 KV cache — with the resulting latency/throughput gains for transcription workloads.
 - **2025-05-12** — [Boosting DeepSeek-R1 speed with customized speculative decoding](<speculative-decoding/Boosting DeepSeek-R1 speed with customized speculative decoding.md>) · `speculative-decoding` · together
   Shows customized speculative decoding for accelerating DeepSeek-R1 serving.
+- **2025-05-05** — [Canopy Labs selects Baseten as preferred inference provider for Orpheus TTS models](<optimization/Canopy Labs selects Baseten as preferred inference provider for Orpheus TTS models.md>) · `optimization` · baseten
+  TensorRT-LLM-optimized Orpheus TTS serving benchmarks: 16-24 concurrent real-time streams on a single H100 MIG slice (up from 7), with 200ms TTFB on MIG and under 150ms on a full H100, plus batch-size tradeoffs for non-real-time generation.
+- **2025-04-29** — [Day zero benchmarks for Qwen 3 with SGLang on Baseten](<serving/Day zero benchmarks for Qwen 3 with SGLang on Baseten.md>) · `serving` · baseten
+  Qwen 3 235B (MoE, 128 experts, 8 active per token, 22B active params) served day-zero on SGLang using tensor parallelism for attention and separate sharding for the sparse MoE layer, matching DeepSeek-R1 quality on gsm8k with a quarter of the GPUs.
 - **2025-04-28** — [Optimizing Llama 4 Maverick on Fireworks](<optimization/Optimizing Llama 4 Maverick on Fireworks.md>) · `optimization` · fireworks
   Details how Fireworks served Llama 4 Maverick within minutes of weight release using FireOptimizer-tuned FP8 quantization, tensor+expert parallelism, a custom FireAttention kernel extended for Maverick's chunked local attention, and a trained speculative-decoding drafter, reaching 145 tok/s on H200 (10-20% faster than the nearest competitor per Artificial Analysis).
 - **2025-04-21** — [Chipmunk: Training-Free Acceleration of Diffusion Transformers with Dynamic Column-Sparse Deltas](<kernels/Chipmunk Training-Free Acceleration of Diffusion Transformers with Dynamic Column-Sparse Deltas.md>) · `kernels` · together
   Describes Chipmunk, a training-free acceleration method for diffusion transformers.
+- **2025-04-18** — [Accelerating inference with NVIDIA B200 GPUs](<hardware/Accelerating inference with NVIDIA B200 GPUs (baseten).md>) · `hardware` · baseten
+  NVIDIA B200 (Blackwell) GPUs deliver 5x higher throughput, 50%+ lower cost per token, and up to 38% lower latency for large models like DeepSeek-R1 (671B params), and unlock full 10M-token context serving for Llama 4 Scout versus H100/H200.
 - **2025-04-18** — [Accelerating inference with NVIDIA B200 GPUs](<hardware/Accelerating inference with NVIDIA B200 GPUs.md>) · `hardware` · baseten
   Covers inference acceleration on NVIDIA B200 GPUs and the hardware features relevant to model serving.
+- **2025-03-27** — [How we built BEI: high-throughput embedding, reranker, and classifier inference](<optimization/How we built BEI high-throughput embedding, reranker, and classifier inference.md>) · `optimization` · baseten
+  Details building Baseten Embedding Inference (BEI) on TensorRT-LLM to double throughput for embedding, reranker, and classifier models, addressing the dual demands of high-throughput corpus processing and millisecond real-time querying.
+- **2025-03-27** — [Introducing Baseten Embeddings Inference: The fastest embeddings solution available](<serving/Introducing Baseten Embeddings Inference The fastest embeddings solution available.md>) · `serving` · baseten
+  Describes Baseten Embeddings Inference (BEI), a serving engine for embedding/reranker/classifier models tuned for both high-concurrency batch throughput and low-latency single queries, claiming 2x throughput and 10% lower latency than prior solutions.
 - **2025-03-15** — [ThunderKittens Now Optimized for NVIDIA Blackwell GPUs](<hardware/ThunderKittens Now Optimized for NVIDIA Blackwell GPUs.md>) · `hardware` · together
   Describes ThunderKittens optimizations for NVIDIA Blackwell GPUs.
 - **2025-03-13** — [Understanding Cresta’s Voice Platform - ML Services, Inference Graphs, and Real-Time Intelligence](<serving/Understanding Cresta’s Voice Platform - ML Services, Inference Graphs, and Real-Time Intelligence.md>) · `serving` · cresta
   Explains ML services, inference graphs, and real-time intelligence components in a production voice platform.
 - **2025-02-24** — ['I paid for the whole GPU, I am going to use the whole GPU': A high-level guide to GPU utilization](<hardware/'I paid for the whole GPU, I am going to use the whole GPU' A high-level guide to GPU utilization.md>) · `hardware` · modal
   Guide to GPU utilization for AI workloads, covering bottlenecks, throughput, batching, and cost-aware usage.
+- **2025-02-13** — [How multi-node inference works for massive LLMs like DeepSeek-R1](<serving/How multi-node inference works for massive LLMs like DeepSeek-R1 (baseten).md>) · `serving` · baseten
+  Explains why DeepSeek-R1's 671GB of weights requires combining 16 H100 GPUs (1280GB VRAM) across two nodes via multi-node inference, covering the interconnect and model-performance challenges this introduces.
 - **2025-02-13** — [How multi-node inference works for massive LLMs like DeepSeek-R1](<serving/How multi-node inference works for massive LLMs like DeepSeek-R1.md>) · `serving` · baseten
   Explains multi-node inference for very large LLMs such as DeepSeek-R1.
+- **2025-02-07** — [Testing Llama 3.3 70B inference performance on NVIDIA GH200 in Lambda Cloud](<hardware/Testing Llama 3.3 70B inference performance on NVIDIA GH200 in Lambda Cloud.md>) · `hardware` · baseten
+  Benchmarks Llama 3.3 70B on NVIDIA GH200 (96GB) via Lambda Cloud, showing its 450 GB/s CPU-GPU NVLink-C2C interconnect (vs 64 GB/s on H100) enables offloading KV cache to abundant host memory.
+- **2025-01-09** — [Driving model performance optimization: 2024 highlights](<optimization/Driving model performance optimization 2024 highlights.md>) · `optimization` · baseten
+  2024 retrospective on Baseten's model performance work: adopting TensorRT-LLM over vLLM/TGI after benchmarking, then adding KV cache reuse, chunked prefill, and production speculative decoding across LLM and non-LLM (image/ASR/embedding) modalities.
+- **2024-12-19** — [A quick introduction to speculative decoding](<speculative-decoding/A quick introduction to speculative decoding (baseten).md>) · `speculative-decoding` · baseten
+  Explains speculative decoding mechanics: a smaller draft model (e.g. Llama 8B) proposes tokens that a larger target model (e.g. Llama 70B) accepts or rejects in the same forward pass, reducing time-per-output-token.
 - **2024-12-19** — [A quick introduction to speculative decoding](<speculative-decoding/A quick introduction to speculative decoding.md>) · `speculative-decoding` · baseten
   Introduces speculative decoding and the draft-target model pattern for lower LLM inference latency.
+- **2024-12-19** — [How we built production-ready speculative decoding with TensorRT-LLM](<speculative-decoding/How we built production-ready speculative decoding with TensorRT-LLM (baseten).md>) · `speculative-decoding` · baseten
+  Details productionizing speculative decoding in the TensorRT-LLM Engine Builder for code generation, solving batching failures, high TTFT, and crashes while adding streaming, structured output, and cancellation support.
 - **2024-12-19** — [How we built production-ready speculative decoding with TensorRT-LLM](<speculative-decoding/How we built production-ready speculative decoding with TensorRT-LLM.md>) · `speculative-decoding` · baseten
   Deep dive into production-ready speculative decoding with TensorRT-LLM.
+- **2024-12-19** — [Introducing our Speculative Decoding Engine Builder integration for ultra-low-latency LLM inference](<speculative-decoding/Introducing our Speculative Decoding Engine Builder integration for ultra-low-latency LLM inference.md>) · `speculative-decoding` · baseten
+  Baseten's TensorRT-LLM Engine Builder gained a speculative-decoding integration with pre-optimized draft/target model configs, reportedly halving latency for production LLM workloads with no output-quality impact.
+- **2024-12-11** — [Generally Available: The fastest, most accurate and cost-efficient Whisper transcription](<optimization/Generally Available The fastest, most accurate and cost-efficient Whisper transcription.md>) · `optimization` · baseten
+  Describes Baseten's Whisper transcription pipeline built on Chains, achieving a 10.0 WER on the Rev16 benchmark and transcribing 1 hour of audio in 3.6 seconds (2400x real-time factor).
 - **2024-11-20** — [Faster Text Generation with Self-Speculative Decoding](<speculative-decoding/Faster Text Generation with Self-Speculative Decoding.md>) · `speculative-decoding` · huggingface
   LayerSkip self-speculative decoding: the same model drafts with early-exit at an intermediate layer and verifies with the remaining layers, reusing the KV cache so no separate draft model or extra memory is needed; includes speedups on Llama checkpoints trained with layer dropout + early-exit loss.
 - **2024-10-30** — [Even Better, Even Faster Quantized LLMs with QTIP](<quantization/Even Better, Even Faster Quantized LLMs with QTIP.md>) · `quantization` · together
   Explains QTIP quantization for faster LLM inference with improved quality preservation.
 - **2024-10-29** — [Universal Assisted Generation: Faster Decoding with Any Assistant Model](<speculative-decoding/Universal Assisted Generation Faster Decoding with Any Assistant Model.md>) · `speculative-decoding` · huggingface
   Universal Assisted Generation (Intel Labs + HF) lifts speculative decoding's requirement that the draft model share the target's tokenizer by re-encoding draft tokens between vocabularies, giving 1.5x-2x speedups for models like gemma-2-9b and Mixtral-8x22B that have no small same-family draft model.
+- **2024-10-22** — [Evaluating NVIDIA H200 Tensor Core GPUs for LLM inference](<hardware/Evaluating NVIDIA H200 Tensor Core GPUs for LLM inference (baseten).md>) · `hardware` · baseten
+  Benchmarks an 8xH200 cluster against H100s serving the 123B-parameter Mistral Large, finding H200's 76% more VRAM and 43% more memory bandwidth only pay off for 100B+ parameter models, large batch sizes, or very long input sequences -- otherwise H100s are more cost-efficient.
 - **2024-10-22** — [Evaluating NVIDIA H200 Tensor Core GPUs for LLM inference](<hardware/Evaluating NVIDIA H200 Tensor Core GPUs for LLM inference.md>) · `hardware` · baseten
   Evaluates NVIDIA H200 GPUs for LLM inference and compares their serving performance characteristics.
 - **2024-10-15** — [FireAttention V3: Enabling AMD as a viable alternative for GPU inference](<hardware/FireAttention V3 Enabling AMD as a viable alternative for GPU inference.md>) · `hardware` · fireworks
@@ -236,20 +352,28 @@
   Introduces FireOptimizer's adaptive speculative execution, which automatically tailors speculative decoding to a workload's specific data distribution for up to 3x latency improvements.
 - **2024-08-28** — [TEAL: Training-Free Activation Sparsity in Large Language Models](<optimization/TEAL Training-Free Activation Sparsity in Large Language Models.md>) · `optimization` · together
   Explains TEAL, a training-free activation sparsity method for large language models.
+- **2024-08-20** — [How to double tokens per second for Llama 3 with Medusa](<speculative-decoding/How to double tokens per second for Llama 3 with Medusa (baseten).md>) · `speculative-decoding` · baseten
+  Describes training custom Medusa decoding heads for Llama 3 8B and serving them with TensorRT-LLM, measuring a 94-122% tokens-per-second increase validated against MMLU scores.
 - **2024-08-20** — [How to double tokens per second for Llama 3 with Medusa](<speculative-decoding/How to double tokens per second for Llama 3 with Medusa.md>) · `speculative-decoding` · baseten
   Explains Medusa-style speculative heads for increasing Llama 3 tokens per second.
 - **2024-08-13** — [Introduction to ggml](<kernels/Introduction to ggml.md>) · `kernels` · huggingface
   A hands-on introduction to ggml — the C/C++ tensor library behind llama.cpp, whisper.cpp, ollama and LM Studio — covering its context/graph memory model, GGUF file format, quantized tensor types, and backend dispatch (CPU/CUDA/Metal) via a worked matrix-multiplication example.
+- **2024-08-01** — [Introducing automatic LLM optimization with TensorRT-LLM Engine Builder](<optimization/Introducing automatic LLM optimization with TensorRT-LLM Engine Builder.md>) · `optimization` · baseten
+  TensorRT-LLM Engine Builder automates engine creation at deploy time, removing the need to manually match GPU hardware for engine building (e.g. 8 extra H100s for Llama 3.1 405B) and achieving results like Writer's 60% higher tokens/sec on Palmyra-70B models.
 - **2024-08-01** — [How Fireworks evaluates quantization precisely and interpretably](<quantization/How Fireworks evaluates quantization precisely and interpretably.md>) · `quantization` · fireworks
   Details precise and interpretable quantization evaluation for understanding quality and performance tradeoffs.
 - **2024-07-30** — [Memory-efficient Diffusion Transformers with Quanto and Diffusers](<quantization/Memory-efficient Diffusion Transformers with Quanto and Diffusers.md>) · `quantization` · huggingface
   Quantizes diffusion-transformer pipelines (PixArt-Sigma, SD3, Flux) with Quanto: int8/fp8/int4 on the transformer and T5 text encoders cuts SD3 inference memory from 18.8GB FP16 toward consumer-GPU range, with per-component memory/latency/quality tradeoffs and gotchas.
 - **2024-07-23** — [How to serve 10,000 fine-tuned LLMs from a single GPU](<serving/How to serve 10,000 fine-tuned LLMs from a single GPU.md>) · `serving` · baseten
   Explains serving many fine-tuned LLM adapters from a single GPU with efficient multiplexing.
+- **2024-07-22** — [How to serve 10,000 fine-tuned LLMs from a single GPU](<serving/How to serve 10,000 fine-tuned LLMs from a single GPU (baseten).md>) · `serving` · baseten
+  Explains how TensorRT-LLM's LoRA swapping, compatible with in-flight batching and loading adapter weights in 1-2ms, lets thousands of fine-tuned LoRA variants be served from a single GPU deployment.
 - **2024-07-18** — [TGI Multi-LoRA: Deploy Once, Serve 30 Models](<serving/TGI Multi-LoRA Deploy Once, Serve 30 Models.md>) · `serving` · huggingface
   Explains TGI's multi-LoRA serving: load one base model plus up to ~30 LoRA adapters in a single deployment, batching requests for different adapters together via a gathered/segmented matmul so per-adapter overhead is small. Argues the cost and ops case for many specialized adapters over many full deployments, with latency numbers vs single-adapter serving.
 - **2024-07-11** — [FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-precision](<kernels/FlashAttention-3 Fast and Accurate Attention with Asynchrony and Low-precision.md>) · `kernels` · together
   Explains FlashAttention-3 and its asynchronous low-precision attention optimizations.
+- **2024-07-11** — [Using asynchronous inference in production](<serving/Using asynchronous inference in production (baseten).md>) · `serving` · baseten
+  Describes Baseten's async inference queueing architecture (priority queue, webhook/cloud-storage delivery) that protects against timeouts and traffic spikes for long-running or non-interactive inference requests.
 - **2024-07-11** — [Using asynchronous inference in production](<serving/Using asynchronous inference in production.md>) · `serving` · baseten
   Explains asynchronous inference patterns for production model-serving workloads.
 - **2024-06-23** — [How Cursor built Fast Apply using the Speculative Decoding API](<speculative-decoding/How Cursor built Fast Apply using the Speculative Decoding API.md>) · `speculative-decoding` · fireworks
@@ -258,52 +382,86 @@
   Explains FireAttention V2 and the serving optimizations that make long-context inference more practical.
 - **2024-06-18** — [SpecExec: Massively Parallel Speculative Decoding for Interactive LLM Inference on Consumer Devices](<speculative-decoding/SpecExec Massively Parallel Speculative Decoding for Interactive LLM Inference on Consumer Devices.md>) · `speculative-decoding` · together
   Introduces SpecExec for massively parallel speculative decoding on consumer devices.
+- **2024-06-14** — [Comparing few-step image generation models](<optimization/Comparing few-step image generation models.md>) · `optimization` · baseten
+  Compares few-step diffusion techniques (LCMs, SDXL Turbo, SDXL Lightning) that cut sampling from ~50 steps to 1-8, trading off generation speed against image detail and resolution.
 - **2024-05-29** — [Benchmarking Text Generation Inference](<serving/Benchmarking Text Generation Inference.md>) · `serving` · huggingface
   How to use the TGI benchmarking tool to profile LLM serving: separating prefill from decode, reading latency vs throughput curves under different batch sizes, and choosing the batch size that meets your latency SLO.
+- **2024-05-09** — [Comparing tokens per second across LLMs](<optimization/Comparing tokens per second across LLMs.md>) · `optimization` · baseten
+  Shows why raw tokens-per-second numbers mislead across models because tokenizer efficiency differs (Llama 3's tiktoken-based tokenizer is up to 15% more efficient than Llama 2's), so TPS comparisons must be normalized per tokenizer before comparing LLM inference speed.
 - **2024-05-03** — [Bringing the Artificial Analysis LLM Performance Leaderboard to Hugging Face](<serving/Bringing the Artificial Analysis LLM Performance Leaderboard to Hugging Face.md>) · `serving` · huggingface
   The Artificial Analysis LLM Performance Leaderboard benchmarks hosted inference endpoints (not model quality) on throughput tokens/s, time-to-first-token, and price per token across providers, arguing latency is the limiting factor for agentic/tool-use systems where sequential LLM calls compound.
 - **2024-05-01** — [Powerful ASR + diarization + speculative decoding with Hugging Face Inference Endpoints](<serving/Powerful ASR + diarization + speculative decoding with Hugging Face Inference Endpoints.md>) · `serving` · huggingface
   Walks through a custom Inference Endpoints handler that chains Whisper-large-v3 ASR, Pyannote diarization and speculative decoding (with a distil-whisper assistant model and SDPA/Flash Attention 2) into one deployable pipeline, including the pre/post-processing needed to align transcript timestamps with speaker turns.
+- **2024-04-18** — [Streaming real-time text to speech with XTTS V2](<serving/Streaming real-time text to speech with XTTS V2.md>) · `serving` · baseten
+  Walks through deploying a streaming endpoint for XTTS V2 (voice-cloning TTS from a 6-second sample) with a 200ms round-trip time to first audio chunk, for near-real-time narration across 17 languages.
+- **2024-04-05** — [Continuous vs dynamic batching for AI inference](<optimization/Continuous vs dynamic batching for AI inference (baseten).md>) · `optimization` · baseten
+  Explains the four GPU batching strategies for AI inference (none, static, dynamic, continuous) and recommends continuous batching for most LLM deployments versus dynamic batching for other generative model types.
 - **2024-04-05** — [Continuous vs dynamic batching for AI inference](<optimization/Continuous vs dynamic batching for AI inference.md>) · `optimization` · baseten
   Compares continuous and dynamic batching for inference serving and their latency-throughput tradeoffs.
 - **2024-04-03** — [Blazing Fast SetFit Inference with 🤗 Optimum Intel on Xeon](<quantization/Blazing Fast SetFit Inference with 🤗 Optimum Intel on Xeon.md>) · `quantization` · huggingface
   Accelerates SetFit few-shot text classification inference by 7.8x on Intel Xeon (Sapphire Rapids) using Optimum Intel + OpenVINO post-training quantization to int8, with an accuracy-drop constraint; includes the few-shot accuracy context where SetFit beats 3-shot GPT-3.5/GPT-4 on Banking77.
+- **2024-03-28** — [Using fractional H100 GPUs for efficient model serving](<hardware/Using fractional H100 GPUs for efficient model serving.md>) · `hardware` · baseten
+  Explains using NVIDIA Multi-Instance GPU (MIG) to split an H100 into two model-serving instances that match or beat A100 performance at a 20% lower cost, while supporting FP8 quantization.
 - **2024-03-28** — [Using fractional H100 GPUs for efficient model serving](<serving/Using fractional H100 GPUs for efficient model serving.md>) · `serving` · baseten
   Explains fractional H100 usage for efficient model serving and better GPU utilization.
 - **2024-03-18** — [Quanto: a PyTorch quantization backend for Optimum](<quantization/Quanto a PyTorch quantization backend for Optimum.md>) · `quantization` · huggingface
   Introduces quanto, a PyTorch quantization backend for Optimum with a device-agnostic design: int8/float8 weights and activations, eager-mode quantized tensor subclass, calibration and QAT support, working across CUDA/MPS/CPU where most quantization libraries are locked to specific model or device configurations.
+- **2024-03-14** — [Benchmarking fast Mistral 7B inference](<optimization/Benchmarking fast Mistral 7B inference.md>) · `optimization` · baseten
+  Independent benchmarking by Artificial Analysis measured Baseten's Mistral 7B deployment (FP8, TensorRT-LLM, H100) at 130ms TTFT, 170 tokens/sec, and 700ms total response time for 100 output tokens, versus shared-endpoint competitors.
+- **2024-03-14** — [33% faster LLM inference with FP8 quantization](<quantization/33% faster LLM inference with FP8 quantization (baseten).md>) · `quantization` · baseten
+  Quantizing Mistral 7B to FP8 on H100 GPUs via TensorRT-LLM yielded an 8.5% TTFT reduction, 33% higher tokens/sec, 31% more throughput, and 24% lower cost per million tokens, with near-zero perplexity degradation versus FP16.
 - **2024-03-14** — [33% faster LLM inference with FP8 quantization](<quantization/33% faster LLM inference with FP8 quantization.md>) · `quantization` · baseten
   Shows how FP8 quantization improves LLM inference throughput while managing accuracy and hardware constraints.
 - **2024-03-12** — [High performance ML inference with NVIDIA TensorRT](<optimization/High performance ML inference with NVIDIA TensorRT.md>) · `optimization` · baseten
   Explains high-performance model inference with NVIDIA TensorRT and related deployment considerations.
+- **2024-03-11** — [High performance ML inference with NVIDIA TensorRT](<optimization/High performance ML inference with NVIDIA TensorRT (baseten).md>) · `optimization` · baseten
+  Overview of using NVIDIA TensorRT and TensorRT-LLM to compile models into optimized serving engines, citing 40% lower SDXL latency and sub-200ms TTFT on Mixtral 8x7B.
 - **2024-03-07** — [FP8: Efficient model inference with 8-bit floating point numbers](<quantization/FP8 Efficient model inference with 8-bit floating point numbers.md>) · `quantization` · baseten
   Explains FP8 numeric formats and why 8-bit floating point can improve efficient model inference.
+- **2024-03-06** — [FP8: Efficient model inference with 8-bit floating point numbers](<quantization/FP8 Efficient model inference with 8-bit floating point numbers (baseten).md>) · `quantization` · baseten
+  Explains why FP8's wider dynamic range vs INT8 lets LLM activations and weights be quantized with less output degradation, including hardware support on Ada Lovelace/Hopper GPUs like L4 and H100.
 - **2024-02-29** — [Text-Generation Pipeline on Intel® Gaudi® 2 AI Accelerator](<hardware/Text-Generation Pipeline on Intel® Gaudi® 2 AI Accelerator.md>) · `hardware` · huggingface
   Runs a custom text-generation pipeline for Llama-2-7b on Intel Gaudi 2 via Optimum Habana, covering HPU graph warmup, bf16, batching and static shapes, and plugging the pipeline into LangChain for a RAG-style prompt template.
+- **2024-02-22** — [40% faster Stable Diffusion XL inference with NVIDIA TensorRT](<optimization/40% faster Stable Diffusion XL inference with NVIDIA TensorRT (baseten).md>) · `optimization` · baseten
+  Using NVIDIA TensorRT to optimize each component of the SDXL image-generation pipeline improved inference latency by 40% and throughput by 70% on H100 GPUs versus A100.
 - **2024-02-22** — [40% faster Stable Diffusion XL inference with NVIDIA TensorRT](<optimization/40% faster Stable Diffusion XL inference with NVIDIA TensorRT.md>) · `optimization` · baseten
   Explains TensorRT optimization for Stable Diffusion XL inference, including latency and throughput gains.
 - **2024-02-20** — [Why GPU utilization matters for model inference](<hardware/Why GPU utilization matters for model inference.md>) · `hardware` · baseten
   Explains why GPU utilization is central to inference cost and performance.
+- **2024-02-20** — [Why GPU utilization matters for model inference](<optimization/Why GPU utilization matters for model inference.md>) · `optimization` · baseten
+  Explains GPU utilization (compute, memory, bandwidth usage) as the key lever for serving cost, since higher utilization per GPU reduces the instance count needed for a given traffic level.
 - **2024-02-08** — [From OpenAI to Open LLMs with Messages API on Hugging Face](<serving/From OpenAI to Open LLMs with Messages API on Hugging Face.md>) · `serving` · huggingface
   TGI 1.4 adds an OpenAI Chat Completions-compatible Messages API, so open models on Inference Endpoints become a drop-in swap for GPT-4 by only changing base_url and api_key — shown with the OpenAI Python/JS clients, LangChain and LlamaIndex, and a Nous-Hermes-2-Mixtral migration.
+- **2024-02-06** — [Unlocking the full power of NVIDIA H100 GPUs for ML inference with TensorRT](<hardware/Unlocking the full power of NVIDIA H100 GPUs for ML inference with TensorRT.md>) · `hardware` · baseten
+  Benchmarks Mistral 7B (fp16) and SDXL on H100 vs A100 using TensorRT/TensorRT-LLM, finding 2-3x better throughput and an 18-45% price-performance improvement from H100's 3.35 TB/s bandwidth and 989.5 TFLOPs fp16 compute.
 - **2024-02-06** — [Unlocking the full power of NVIDIA H100 GPUs for ML inference with TensorRT](<optimization/Unlocking the full power of NVIDIA H100 GPUs for ML inference with TensorRT.md>) · `optimization` · baseten
   Shows how TensorRT unlocks H100 performance for model inference.
 - **2024-02-01** — [Hugging Face Text Generation Inference available for AWS Inferentia2](<hardware/Hugging Face Text Generation Inference available for AWS Inferentia2.md>) · `hardware` · huggingface
   Deploys Zephyr-7B with TGI on AWS Inferentia2 via SageMaker as a GPU alternative, covering the Neuronx TGI image, the ahead-of-time model compilation/tracing step that Neuron requires (fixed batch size and sequence length), and how tensor parallelism plus continuous batching carry over.
+- **2024-01-31** — [Introduction to quantizing ML models](<quantization/Introduction to quantizing ML models (baseten).md>) · `quantization` · baseten
+  Explainer on quantizing ML model weights (FP32/FP16/FP8/INT8/INT4) to speed up inference via smaller memory footprint and higher Tensor Core throughput, noting the speed/accuracy and perplexity tradeoffs involved.
 - **2024-01-31** — [Introduction to quantizing ML models](<quantization/Introduction to quantizing ML models.md>) · `quantization` · baseten
   Introduces model quantization concepts and how they affect inference efficiency and model quality.
 - **2024-01-30** — [Accelerate StarCoder with 🤗 Optimum Intel on Xeon: Q8/Q4 and Speculative Decoding](<quantization/Accelerate StarCoder with 🤗 Optimum Intel on Xeon Q8Q4 and Speculative Decoding.md>) · `quantization` · huggingface
   Over 7x inference speedup for StarCoder-15B on 4th-gen Intel Xeon (AMX) by combining INT8/INT4 weight-only quantization with assisted/speculative decoding using a small draft model, with latency and accuracy tables per configuration.
 - **2024-01-15** — [Accelerating SD Turbo and SDXL Turbo Inference with ONNX Runtime and Olive](<optimization/Accelerating SD Turbo and SDXL Turbo Inference with ONNX Runtime and Olive.md>) · `optimization` · huggingface
   Benchmarks ONNX Runtime CUDA and TensorRT execution providers against PyTorch for SD Turbo and SDXL Turbo one-step generation on NVIDIA GPUs, reporting throughput gains up to 229% (SDXL Turbo) and 120% (SD Turbo). Covers graph fusions, static vs dynamic shapes, and Olive-based optimization/quantization of the pipeline.
+- **2024-01-12** — [Understanding performance benchmarks for LLM inference](<optimization/Understanding performance benchmarks for LLM inference.md>) · `optimization` · baseten
+  Explains how to interpret LLM inference benchmarks (hardware, streaming, batch size) since no single metric captures performance, arguing provider benchmark comparisons must control for these variables.
 - **2024-01-08** — [FireAttention: serving open models faster with quantization](<quantization/FireAttention serving open models faster with quantization.md>) · `quantization` · fireworks
   Introduces FireAttention for serving open models faster through quantization with minimal quality tradeoff.
 - **2023-12-22** — [Faster Mixtral inference with TensorRT-LLM and quantization](<quantization/Faster Mixtral inference with TensorRT-LLM and quantization.md>) · `quantization` · baseten
   Shows how TensorRT-LLM and quantization improve Mixtral inference performance.
+- **2023-12-21** — [Faster Mixtral inference with TensorRT-LLM and quantization](<quantization/Faster Mixtral inference with TensorRT-LLM and quantization (baseten).md>) · `quantization` · baseten
+  Int8-quantized Mixtral 8x7B on TensorRT-LLM hits 127ms TTFT and 81 tokens/sec on a single A100 with only a 0.08% perplexity increase, and TensorRT-LLM itself gives a 2-3x tokens/sec improvement over vLLM for this MoE model.
 - **2023-12-14** — [Mixtral 8x7B: Up to 175 Tokens/s, Live Before Release | Fireworks](<kernels/Mixtral 8x7B Up to 175 Tokenss, Live Before Release Fireworks.md>) · `kernels` · fireworks
   Explains the custom MoE kernels, multi-query-attention kernels, and parallelization schemes Fireworks built to serve Mixtral 8x7B at 175 tokens/sec, plus FP8 quantization's near-zero quality impact versus integer quantization.
+- **2023-11-28** — [NVIDIA A10 vs A10G for ML model inference](<hardware/NVIDIA A10 vs A10G for ML model inference (baseten).md>) · `hardware` · baseten
+  Compares NVIDIA's A10 and AWS's A10G GPU variants for ML inference, showing their tensor-compute vs CUDA-core spec differences but near-equivalence for memory-bound inference workloads like 7B-parameter LLMs.
 - **2023-11-28** — [NVIDIA A10 vs A10G for ML model inference](<hardware/NVIDIA A10 vs A10G for ML model inference.md>) · `hardware` · baseten
   Compares NVIDIA A10 and A10G GPUs for model inference performance and cost.
+- **2023-11-17** — [A guide to LLM inference and performance](<optimization/A guide to LLM inference and performance.md>) · `optimization` · baseten
+  Walks through computing a GPU's ops:byte ratio versus a transformer's arithmetic intensity (using Llama 2 on an A10) to determine whether LLM inference is compute- or memory-bound, and how that determines GPU choice and batching strategy.
 - **2023-11-17** — [A guide to LLM inference and performance](<serving/A guide to LLM inference and performance.md>) · `serving` · baseten
   Comprehensive guide to LLM inference, transformer serving, latency, and throughput performance.
 - **2023-11-13** — [FlashFFTConv: Efficient Convolutions for Long Sequences with Tensor Cores](<kernels/FlashFFTConv Efficient Convolutions for Long Sequences with Tensor Cores.md>) · `kernels` · together
@@ -316,16 +474,26 @@
   Introduces Flash-Decoding for efficient long-context inference.
 - **2023-10-11** — [Accelerating Code Completion with Fireworks Fast LLM Inference](<optimization/Accelerating Code Completion with Fireworks Fast LLM Inference.md>) · `optimization` · fireworks
   Sourcegraph's Cody code-completion integrated Fireworks-served StarCoder, raising Completion Acceptance Rate from 15% to 30% and cutting multi-line latency from 3.4s to 2.4s; Fireworks reports 3.5x+ lower latency than vLLM across batch sizes on 8xA100 via multi-query attention and PyTorch runtime optimizations.
+- **2023-09-15** — [NVIDIA A10 vs A100 GPUs for LLM and Stable Diffusion inference](<hardware/NVIDIA A10 vs A100 GPUs for LLM and Stable Diffusion inference (baseten).md>) · `hardware` · baseten
+  Compares NVIDIA A10 and A100 GPUs for LLM and Stable Diffusion inference workloads, covering when multi-GPU A100 instances or multiple A10s make sense based on latency, throughput, model size, and budget.
 - **2023-09-15** — [NVIDIA A10 vs A100 GPUs for LLM and Stable Diffusion inference](<hardware/NVIDIA A10 vs A100 GPUs for LLM and Stable Diffusion inference.md>) · `hardware` · baseten
   Compares NVIDIA A10 and A100 GPUs for LLM and Stable Diffusion inference workloads.
 - **2023-09-11** — [Medusa: Simple framework for accelerating LLM generation with multiple decoding heads](<speculative-decoding/Medusa Simple framework for accelerating LLM generation with multiple decoding heads.md>) · `speculative-decoding` · together
   Introduces Medusa, a multi-decoding-head framework for accelerating LLM generation.
+- **2023-08-30** — [SDXL inference in under 2 seconds: the ultimate guide to Stable Diffusion optimization](<optimization/SDXL inference in under 2 seconds the ultimate guide to Stable Diffusion optimization.md>) · `optimization` · baseten
+  Cuts SDXL image-generation latency from 8-10s to 1.92s on an A100 by combining fewer diffusion steps (50 to 20), zeroing classifier-free guidance after 8 steps, swapping in a refiner for the last 20% of steps, torch.compile, and an fp16 VAE with efficient attention.
 - **2023-08-30** — [SDXL inference in under 2 seconds](<optimization/SDXL inference in under 2 seconds.md>) · `optimization` · baseten
   Guide to Stable Diffusion XL inference optimization for sub-2-second image generation.
 - **2023-08-29** — [Speed, Python: Pick Two. How CUDA Graphs Enable Fast Python Code for Deep Learning](<kernels/Speed, Python Pick Two. How CUDA Graphs Enable Fast Python Code for Deep Learning.md>) · `kernels` · fireworks
   Explains how CUDA Graphs reduce Python overhead for fast deep-learning execution.
 - **2023-07-17** — [FlashAttention-2 for faster training and inference](<kernels/FlashAttention-2 for faster training and inference.md>) · `kernels` · together
   Introduces FlashAttention-2 and its impact on training and inference speed.
+- **2023-05-23** — [Understanding NVIDIA’s Datacenter GPU line](<hardware/Understanding NVIDIA’s Datacenter GPU line.md>) · `hardware` · baseten
+  Decodes NVIDIA datacenter GPU naming (architecture letter plus tier number, e.g. A100, L40, H100) and maps architectures/tiers to model-serving use cases.
+- **2023-05-22** — [Comparing GPUs across architectures and tiers](<hardware/Comparing GPUs across architectures and tiers.md>) · `hardware` · baseten
+  Explains how to compare datacenter GPUs across generations using core type (CUDA/Tensor/RT), FLOPS, VRAM, and TDP rather than marketing generation names.
+- **2023-04-27** — [Comparing NVIDIA GPUs for AI: T4 vs A10](<hardware/Comparing NVIDIA GPUs for AI T4 vs A10 (baseten).md>) · `hardware` · baseten
+  Head-to-head comparison of NVIDIA T4 vs A10 GPUs for generative AI serving and fine-tuning workloads, covering core types, VRAM, price, and availability tradeoffs.
 - **2023-04-27** — [Comparing NVIDIA GPUs for AI: T4 vs A10](<hardware/Comparing NVIDIA GPUs for AI T4 vs A10.md>) · `hardware` · baseten
   Compares NVIDIA T4 and A10 GPUs for AI inference workloads and cost-performance tradeoffs.
 
@@ -335,6 +503,10 @@
   Deep dive on Phonon, a 31-75MB on-device TTS model in the Pocket TTS lineage that generates audio via flow-matching latent autoregression; covers the new multi-backend `ptts` inference runtime (CPU/GPU/NPU, 28ms time-to-first-audio) and its modular Transformers integration, which treats the audio codec as a tokenizer alongside the text tokenizer.
 - **2026-11-04** — [Kimi K3.1 Pro on Fireworks: More Intelligence per Dollar, Delivered Fast](<../models/releases/Kimi K3.1 Pro on Fireworks More Intelligence per Dollar, Delivered Fast.md>) · `releases` · fireworks
   Fireworks launches Moonshot's Kimi K3.1 Pro, which swaps K3's full-attention layers for sparse attention to serve long contexts more efficiently; on Fireworks' Specialized Intelligence Index it leads Sierra's tau3-Banking customer-support benchmark at 64.7% (8.7pp over Claude Opus 5.5) and ties Opus 5.5 on Rogo's finance benchmark, priced at $2/$0.20/$10 per million uncached/cached-input/output tokens.
+- **2026-11-01** — [Best open-source models for post-training](<../models/fine-tuning/Best open-source models for post-training (baseten).md>) · `fine-tuning` · baseten
+  Ranks open-source models for post-training by cost tier based on active vs. total MoE parameters (e.g. Kimi K2.6's 1T total / 32B active params), recommending DeepSeek-V4-Flash for long-context, GLM-5.2 for async RL, and Qwen3 as the safe default.
+- **2026-11-01** — [The platform for inference, training, and execution | Baseten](<../models/releases/The platform for inference, training, and execution Baseten.md>) · `releases` · baseten
+  Release of joey-1 (2B), a decision model (direct classification token + calibrated probability instead of generated text) with 20ms P50 latency at 2,000 input tokens, 2.5x faster than the 9B elephant-1, at $0.01 per million tokens.
 - **2026-10-29** — [Decisions for a penny: introducing joey-1, our fastest decision model](<../models/releases/Decisions for a penny introducing joey-1, our fastest decision model.md>) · `releases` · baseten
   Baseten introduces joey-1, a 2B-parameter decision model post-trained from Qwen3.5-2B that returns a label and calibrated probability in a single token instead of generating text, hitting 20ms P50 latency and $0.01/M tokens, 5x faster than its 9B sibling elephant-1 and a tenth the cost of the 27B mammoth-1.
 - **2026-10-29** — [Introducing AnySpeechRecognizer and AnyDecisionModel: Open Models for Speech and Decisions on Apple Platforms](<../infra-platform/edge/Introducing AnySpeechRecognizer and AnyDecisionModel Open Models for Speech and Decisions on Apple Platforms.md>) · `edge` · huggingface
@@ -349,6 +521,8 @@
   Modal benchmarks NVIDIA's new Arm-compatible Vera CPU against Intel GNR, AWS Graviton 4/5, and AMD Zen 5 for its multi-tenant Sandboxes product, finding similar straight-line latency but roughly 2x throughput under concurrent load, which matters for noisy-neighbor contention in bursty agent and RL-rollout workloads.
 - **2026-10-16** — [Welcome Beam: a 501B open model you can own, customize, and scale](<../models/architectures/Welcome Beam a 501B open model you can own, customize, and scale.md>) · `architectures` · huggingface
   Deep architecture writeup of Reflection's Beam-1.0-501B-A23B (23B active, 1M-token context, Apache 2.0): hybrid sliding-window/global attention with scalable-softmax query scaling, DeepSeek-V3-style grouped routing across 256 experts, and a depth-scaled 1/sqrt(k) residual stream; ships NVFP4/FP8/BF16 checkpoints, day-0 transformers/vLLM/SGLang support, and SWE-Bench/AIME/GPQA benchmark results.
+- **2026-10-15** — [Announcing NVIDIA Nemotron 3.5 Super VL on Baseten](<../models/multimodal/Announcing NVIDIA Nemotron 3.5 Super VL on Baseten.md>) · `multimodal` · baseten
+  NVIDIA Nemotron 3.5 Super VL is a 120B-parameter MoE model (12B active) built on a hybrid Mamba-Transformer architecture with multi-token prediction and NVFP4 KV-cache quantization, adding native document/image/video understanding and tool use for agent workflows.
 - **2026-10-15** — [Announcing NVIDIA Nemotron 3.5 Super VL on Baseten](<../models/releases/Announcing NVIDIA Nemotron 3.5 Super VL on Baseten.md>) · `releases` · baseten
   Baseten announces NVIDIA Nemotron 3.5 Super VL, a 120B-parameter MoE model (12B active) adding a vision encoder to the Nemotron 3 Super hybrid Mamba-Transformer architecture, with multi-token prediction and NVFP4 KV-cache quantization; it scores a 1190 Elo on GDPval versus 493 for the text-only predecessor.
 - **2026-10-15** — [Muse Spark Open, an open-weight model for coding agents](<../models/releases/Muse Spark Open, an open-weight model for coding agents.md>) · `releases` · baseten
@@ -359,10 +533,14 @@
   Modal Clusters reach GA via a `@modal.clustered` decorator, offering gang-scheduled multi-node GPU jobs with RDMA at up to 6.4 Tbps; cites GLM 4.7 weight sync (~717GB BF16, under 2s over RDMA vs ~2min over 50Gbps TCP) and PD-disaggregated KV-cache transfer for Llama 3.1 70B as motivating workloads.
 - **2026-09-30** — [Reinforcement learning: Why alignment of numerics and MoE routing matter](<../models/reinforcement-learning/Reinforcement learning Why alignment of numerics and MoE routing matter.md>) · `reinforcement-learning` · fireworks
   Fireworks traces RL training instability to numerical mismatches between trainer and rollout engines: a GLM 5.2 run's reward collapsed from 0.9 to under 0.2 around step 20 without alignment (zero-KL and stable reward with it), and a Qwen3.5-MoE run diverged by k3=0.296 (300x their 0.001-equivalence threshold) due to precision differences in combining expert outputs.
+- **2026-09-23** — [NVIDIA Nemotron 3 Diarization: real-time speaker labels at a cent per audio hour](<../models/architectures/NVIDIA Nemotron 3 Diarization real-time speaker labels at a cent per audio hour (baseten).md>) · `architectures` · baseten
+  NVIDIA Nemotron 3 Diarization is a ~100M-parameter transformer built on Streaming Sortformer that uses an arrival-order speaker cache and FIFO frame buffer to label up to 8 speakers at latencies from 320ms to 30s from one checkpoint, hitting 9.8% DER on AISHELL-4 and sustaining 500+ concurrent streams on an RTX PRO 6000.
 - **2026-09-23** — [NVIDIA Nemotron 3 Diarization: real-time speaker labels at a cent per audio hour](<../models/architectures/NVIDIA Nemotron 3 Diarization real-time speaker labels at a cent per audio hour.md>) · `architectures` · baseten
   NVIDIA Nemotron 3 Diarization is a ~100M-parameter streaming transformer built on Streaming Sortformer that labels up to 8 speakers per 320ms chunk using an arrival-order speaker cache and FIFO frame buffer instead of embeddings or clustering, hitting 9.8% DER on AISHELL-4 at the low-latency profile (vs 27.2% for its predecessor) and sustaining 500+ concurrent hour-long streams on an RTX PRO 6000.
 - **2026-09-16** — [Introducing Baseten Hosted Tools](<../agents/harness/Introducing Baseten Hosted Tools.md>) · `harness` · baseten
   Baseten's new Hosted Tools run the agentic tool-use loop server-side, co-located with model inference, instead of round-tripping through the client; the company reports a 15% end-to-end latency reduction versus client-side tool loops and launches web search with Exa, Keenable, Parallel, and You.com as the first hosted tool.
+- **2026-09-16** — [Introducing Baseten Hosted Tools](<../agents/tool-use/Introducing Baseten Hosted Tools.md>) · `tool-use` · baseten
+  Describes Baseten Hosted Tools, which moves web-search tool execution onto the inference backend so the model's ReAct-style tool-call loop runs server-side and streams tool-use/tool-result blocks to the client instead of requiring client-side orchestration.
 - **2026-09-14** — [DeepSeek-V4.1-Flash on Fireworks: Astra-level DeepSWE at 1/15th the cost](<../models/benchmarks/DeepSeek-V4.1-Flash on Fireworks Astra-level DeepSWE at 115th the cost.md>) · `benchmarks` · fireworks
   Fireworks benchmarks DeepSeek-V4.1-Flash (552B MoE with an encoder/decoder split activation budget) against GPT-6 Astra, Gemini 3.8 Flash, and Claude Opus 5 on DeepSWE, Terminal-Bench 2.1, and HLE, finding comparable coding accuracy (74.34% DeepSWE pass@1) at 1/15th the cost ($0.43/task) thanks to a KV cache overhaul that cuts HBM 4x and holds a 99.6% cache-hit rate; an oracle router combining it with Astra beats Astra alone on HLE.
 - **2026-09-11** — [DeepSeek-V4.1-Flash: more efficient prefill for coding agents](<../models/architectures/DeepSeek-V4.1-Flash more efficient prefill for coding agents.md>) · `architectures` · baseten
@@ -399,8 +577,12 @@
   NVIDIA Nemotron 3.5 Lightning is a 30B MoE model (3B active) distilled from Nemotron 3 Ultra for agentic workloads, achieving ~4x higher throughput and 30% lower task completion time than comparable open models, now available on Baseten Dedicated Inference.
 - **2026-08-06** — [DeepSeek-V4 Flash 0731 vs GPT-5.6 Luna on DeepSWE: Cost and Coding](<../models/benchmarks/DeepSeek-V4 Flash 0731 vs GPT-5.6 Luna on DeepSWE Cost and Coding.md>) · `benchmarks` · together
   Benchmarks DeepSeek-V4 Flash 0731 against GPT-5.6 Luna on all 113 DeepSWE coding tasks (900 rollouts): Luna leads pass@1 67.2% vs 53.3% but costs 6x more ($0.61 vs $0.10/rollout); shows a DeepSeek-first cascade that escalates to Luna only on failure solves 78.9% of tasks at $0.385 each, beating Luna alone on both accuracy and cost.
+- **2026-08-04** — [Introducing NVIDIA Nemotron 3.5 ASR Streaming](<../models/releases/Introducing NVIDIA Nemotron 3.5 ASR Streaming (baseten).md>) · `releases` · baseten
+  Details NVIDIA Nemotron 3.5 ASR, a cache-aware FastConformer-RNNT streaming speech model (24-layer encoder) in English and 40-language variants, benchmarked at 8.84% average WER on FLEURS and sustaining 100 concurrent real-time streams per H100 over WebSocket.
 - **2026-08-04** — [Introducing NVIDIA Nemotron 3.5 ASR Streaming](<../models/releases/Introducing NVIDIA Nemotron 3.5 ASR Streaming.md>) · `releases` · baseten
   Baseten benchmarks NVIDIA's Nemotron 3.5 ASR streaming models (a 600M-parameter cache-aware FastConformer-RNNT architecture) on H100s, sustaining 100 concurrent WebSocket streams with 98-138ms finalization latency, 8.84% average WER across 19 languages, and 2.32% WER on LibriSpeech Clean for the English-only variant.
+- **2026-07-31** — [Fine-tuning Qwen3-TTS for high-quality voice cloning](<../models/fine-tuning/Fine-tuning Qwen3-TTS for high-quality voice cloning (baseten).md>) · `fine-tuning` · baseten
+  Compares in-context-learning, speaker-embedding-only (ECAPA-TDNN), and SFT fine-tuning approaches for voice cloning with Qwen3-TTS, detailing a training recipe published in Baseten's ml-cookbook.
 - **2026-07-31** — [Fine-tuning Qwen3-TTS for high-quality voice cloning](<../models/fine-tuning/Fine-tuning Qwen3-TTS for high-quality voice cloning.md>) · `fine-tuning` · baseten
   Baseten details a fine-tuning recipe for Qwen3-TTS voice cloning: an ASR-driven pipeline for building utterance-level (audio, text) pairs, talker/sub-talker cross-entropy loss over 12 RVQ codebook frames/sec, a centroid speaker embedding averaged over 64 clips, and warmup+cosine LR decay, trained in ~1 hour on a single H100 for 8 epochs on 1.5 hours of LJ Speech audio, reaching ~130ms TTFA (vs ~154ms for ICL cloning).
 - **2026-07-26** — [Kimi K3 vs GPT-5.6 Sol on DeepSWE: Cost, Coding, and Routing](<../models/benchmarks/Kimi K3 vs GPT-5.6 Sol on DeepSWE Cost, Coding, and Routing.md>) · `benchmarks` · together
@@ -419,16 +601,26 @@
   Describes live draft-model training for speculative decoding systems.
 - **2026-06-23** — [ParallelKernelBench: Frontier LLMs can't write fast multi-GPU kernels (yet)](<../evals-observability/benchmark-design/ParallelKernelBench Frontier LLMs can't write fast multi-GPU kernels (yet).md>) · `benchmark-design` · together
   Introduces ParallelKernelBench for measuring whether frontier LLMs can write fast multi-GPU kernels.
+- **2026-06-17** — [The best open-source large language models (LLMs)](<../models/benchmarks/The best open-source large language models (LLMs).md>) · `benchmarks` · baseten
+  Compares 9 open-source LLMs (DeepSeek V4 Pro 0813, Gemma 4, GLM-5.3, GPT OSS 120B, Kimi K3, MiniMax M3, Nemotron 3 Ultra, Qwen 3.6) for agentic coding and long-context use, detailing DeepSeek's CSA/HCA compressed-sparse-attention KV cache (10% of standard memory) and built-in DSpark speculative decoding module.
 - **2026-06-16** — [GLM 5.2 is live on Fireworks inference, day zero.](<../models/benchmarks/GLM 5.2 is live on Fireworks inference, day zero.md>) · `benchmarks` · fireworks
   Independently reproduces Z.ai's GLM 5.2 launch benchmarks on Fireworks' own GPUs and inference engine (91.4% GPQA-Diamond vs the reported 91.2%), and explains the difference between running an inference-provider-hosted model directly versus via an API router.
 - **2026-06-12** — [MiniMax M3 is live: long context + native multimodality at 1/20th the price](<../models/architectures/MiniMax M3 is live long context + native multimodality at 120th the price.md>) · `architectures` · fireworks
   MiniMax M3's extended context comes from MSA (MiniMax Sparse Attention), which pre-filters and blocks KV caches with a 'KV outer gather Q' operator ordering that fetches each block once, delivering >4x speedup over Flash-Sparse-Attention/flash-moba, 95% lower per-token compute, and 9x/15x faster prefill/decode at 1M-token context versus M2.7.
 - **2026-06-12** — [Rolling deployments for zero-downtime model updates](<../infra-platform/deployment/Rolling deployments for zero-downtime model updates.md>) · `deployment` · baseten
   Explains rolling deployments for zero-downtime model updates in production serving systems.
+- **2026-06-11** — [Mercury 2, the first reasoning diffusion LLM, is now on Baseten](<../models/architectures/Mercury 2, the first reasoning diffusion LLM, is now on Baseten.md>) · `architectures` · baseten
+  Covers Inception's Mercury 2, a diffusion LLM (dLLM) that drafts and iteratively refines full outputs in parallel instead of generating autoregressively, exceeding 1,000 tok/s on commodity NVIDIA GPUs; cites Augment Code cutting costs 90% and latency 82% in production.
+- **2026-06-10** — [The platform for inference, training, and execution | Baseten](<../agents/memory-context/The platform for inference, training, and execution Baseten.md>) · `memory-context` · baseten
+  Still trains a small per-layer Perceiver once against a frozen base model to compact a KV cache in a single forward pass (versus per-context optimization), achieving 8x-200x compression on Qwen and Gemma models and beating the strongest RULER baseline by 8-22 points across 8k-128k contexts.
+- **2026-06-04** — [Introducing NVIDIA Nemotron 3 Ultra: The Nemotron 3.x family is here!](<../models/architectures/Introducing NVIDIA Nemotron 3 Ultra The Nemotron 3.x family is here!.md>) · `architectures` · baseten
+  NVIDIA Nemotron 3 Ultra is a 550B-parameter MoE (55B active) built mostly from Mamba layers instead of quadratic attention so long agent trajectories don't slow down over hundreds of steps, giving up to 5x faster inference and 30% lower cost; it is post-trained with RL across agentic environments and released fully open.
 - **2026-05-29** — [How Together AI built a fast speech-to-text stack](<../models/multimodal/How Together AI built a fast speech-to-text stack.md>) · `multimodal` · together
   Engineering writeup on building a fast speech-to-text stack.
 - **2026-05-29** — [Timestep distillation: 2.5x faster FLUX.2 image generation](<../models/multimodal/Timestep distillation 2.5x faster FLUX.2 image generation.md>) · `multimodal` · baseten
   Explains timestep distillation for faster FLUX.2 image generation.
+- **2026-05-27** — [Powering Inference for the Continual Learning Era](<../infra-platform/deployment/Powering Inference for the Continual Learning Era.md>) · `deployment` · baseten
+  Describes the serving pipeline Baseten built with Trajectory to take a LoRA adapter from a finished training run straight to a live OpenAI-compatible endpoint within minutes, since continual-learning products need per-customer model variants redeployed on an hourly checkpoint cadence rather than treating weights as stable.
 - **2026-05-27** — [Reachy Mini goes fully local](<../infra-platform/edge/Reachy Mini goes fully local.md>) · `edge` · huggingface
   Runs a full cascaded voice stack (VAD -> STT -> LLM -> TTS) locally on-device behind an OpenAI-Realtime-API-compatible /v1/realtime WebSocket, replacing the cloud backend for the Reachy Mini robot; argues cascades beat end-to-end S2S models on flexibility and latency and shows which local components to swap in.
 - **2026-05-19** — [Benchmarking inference at scale: coding agents](<../evals-observability/benchmark-design/Benchmarking inference at scale coding agents.md>) · `benchmark-design` · together
@@ -445,16 +637,26 @@
   Explains stable looped models for doing more with fewer parameters.
 - **2026-04-13** — [How to train custom EAGLE-3 heads for speculative decoding](<../models/fine-tuning/How to train custom EAGLE-3 heads for speculative decoding.md>) · `fine-tuning` · baseten
   Explains training custom EAGLE-3 heads for speculative decoding acceleration.
+- **2026-04-09** — [How the Baseten Delivery Network (BDN) makes cold starts fast](<../infra-platform/deployment/How the Baseten Delivery Network (BDN) makes cold starts fast (baseten).md>) · `deployment` · baseten
+  Describes BDN's three-tier weight-caching hierarchy (node-local disk, consistent-hash-ring peer cache, mirrored origin) that cuts cold starts 2-3x by avoiding thundering-herd pulls from Hugging Face/S3 during deploys.
 - **2026-04-09** — [How the Baseten Delivery Network (BDN) makes cold starts fast](<../infra-platform/deployment/How the Baseten Delivery Network (BDN) makes cold starts fast.md>) · `deployment` · baseten
   Deep dive into how the Baseten Delivery Network reduces cold starts for model serving.
+- **2026-04-01** — [The platform for inference, training, and execution | Baseten](<../agents/memory-context/The platform for inference, training, and execution Baseten (baseten).md>) · `memory-context` · baseten
+  Proposes a forward-pass-speed intermediate working-memory layer between the lossless KV cache and lossy long-term weights, building on Attention Matching and Cartridges cache-compaction research, compressing KV cache 8x while retaining 85%+ factual accuracy.
+- **2026-03-19** — [Introducing the Baseten Delivery Network: Fast cold starts for big models](<../infra-platform/deployment/Introducing the Baseten Delivery Network Fast cold starts for big models.md>) · `deployment` · baseten
+  The Baseten Delivery Network cuts cold starts 2-3x for 10s-100s-of-billions-parameter models via multi-tier caching and single-flight downloads that prevent thundering-herd weight-download storms during burst autoscaling.
 - **2026-03-17** — [Mamba-3](<../models/reasoning/Mamba-3.md>) · `reasoning` · together
   Describes Mamba-3 and its implications for efficient sequence modeling.
+- **2026-03-05** — [Repeated KV cache for long-running agents](<../agents/memory-context/Repeated KV cache for long-running agents.md>) · `memory-context` · baseten
+  Tests whether Attention Matching's KV-cache compaction (50x compression in one shot) can be applied repeatedly as a long-running agent's context grows; using Qwen3-4B on the LongHealth clinical-QA benchmark, it evaluates fresh versus incremental re-compaction strategies under a fixed memory budget across sequential patient arrivals.
 - **2026-02-27** — [DeepSeek Models: V3.2, R1, Distills, and Production Caveats](<../models/reasoning/DeepSeek Models V3.2, R1, Distills, and Production Caveats.md>) · `reasoning` · fireworks
   Surveys DeepSeek model variants with production caveats around serving, reasoning behavior, and deployment tradeoffs.
 - **2026-02-17** — [Is Your Python Web Framework Really the Performance Bottleneck? | Pydantic Logfire](<../product-engineering/architecture/Is Your Python Web Framework Really the Performance Bottleneck Pydantic Logfire.md>) · `architecture` · pydantic
   Argues Python web-framework micro-benchmarks mislead: within a real request, database calls, serialization, and downstream I/O usually dominate, so framework choice is rarely the actual latency bottleneck—use tracing to find the real one.
 - **2026-02-09** — [AI Model Performance Metrics Explained](<../evals-observability/monitoring/AI Model Performance Metrics Explained.md>) · `monitoring` · baseten
   Explains model performance metrics used in production inference, including latency, throughput, and quality signals.
+- **2026-02-05** — [How to run LLM performance benchmarks (and why you should)](<../evals-observability/benchmark-design/How to run LLM performance benchmarks (and why you should) (baseten).md>) · `benchmark-design` · baseten
+  Walks through replicating SemiAnalysis's InferenceMAX benchmark on Baseten using TensorRT-LLM with a TP4EP1 config on B200s, reproducing the token-throughput-per-GPU vs. end-to-end-latency curve.
 - **2026-02-05** — [How to run LLM performance benchmarks (and why you should)](<../evals-observability/benchmark-design/How to run LLM performance benchmarks (and why you should).md>) · `benchmark-design` · baseten
   Explains how to run LLM performance benchmarks and which serving metrics matter.
 - **2026-01-26** — [Kimi K2.5 Is Live on Fireworks: Vibe Coding, Agents, and Full-Parameter RFT](<../models/reinforcement-learning/Kimi K2.5 Is Live on Fireworks Vibe Coding, Agents, and Full-Parameter RFT.md>) · `reinforcement-learning` · fireworks
@@ -469,10 +671,14 @@
   NVIDIA Nemotron 3 Nano is a 30B MoE (3B active) hybrid Mamba-Transformer with 23 Mamba-2/MoE layers, 6 attention layers, 128 experts (5 active) plus a shared expert, and a token 'thinking budget' to cap reasoning-token generation; a cookbook demonstrates a chunk-then-synthesize strategy for summarizing large source files.
 - **2025-12-02** — [Unlock Advanced Reasoning with NVIDIA Nemotron Nano 2 Models on Fireworks](<../models/architectures/Unlock Advanced Reasoning with NVIDIA Nemotron Nano 2 Models on Fireworks.md>) · `architectures` · fireworks
   NVIDIA Nemotron Nano 2 uses a hybrid Mamba-Transformer design where only ~8% of layers use quadratic-cost self-attention (placed where long-range links matter) and the rest use constant-cost Mamba-2/FFN blocks, giving transformer-level accuracy with much lower compute and stable memory for long-context reasoning.
+- **2025-11-04** — [Tool Calling in Inference](<../agents/tool-use/Tool Calling in Inference (baseten).md>) · `tool-use` · baseten
+  Explains why tool-calling quality varies across inference providers despite similar base model quality, covering the pre-processing, schema generation, and post-processing stages providers control for single- and multi-turn tool calls.
 - **2025-11-03** — [Vercel code fixing with open models, speculative decoding, and RFT](<../product-engineering/case-studies/Vercel code fixing with open models, speculative decoding, and RFT.md>) · `case-studies` · fireworks
   Case study of improving Vercel code-fixing outputs with open models, speculative decoding, and reinforcement fine-tuning.
 - **2025-10-27** — [Accelerate your Vision Pipelines with the new NVIDIA Nemotron Nano 2 VL Model on Fireworks](<../models/multimodal/Accelerate your Vision Pipelines with the new NVIDIA Nemotron Nano 2 VL Model on Fireworks.md>) · `multimodal` · fireworks
   NVIDIA Nemotron Nano2 VL combines the hybrid Mamba-Transformer Nemotron LLM with a CRADIOH-V2 vision encoder and video token compression; in an invoice-processing benchmark on Fireworks it hit 90%+ extraction accuracy on fields like invoice number and date via semantic (not pure-OCR) document understanding.
+- **2025-10-23** — [DeepSeek-OCR and the Unreasonable Usefulness of Compression](<../models/multimodal/DeepSeek-OCR and the Unreasonable Usefulness of Compression (baseten).md>) · `multimodal` · baseten
+  Analyzes DeepSeek-OCR's approach of encoding document images into ~10x fewer visual tokens than text tokens (97% decoding precision), enabling 200k+ pages/day on one GPU, and covers deploying the model via Truss on Baseten.
 - **2025-08-21** — [AI agents for efficient LLM inference engineering](<../agents/tool-use/AI agents for efficient LLM inference engineering.md>) · `tool-use` · together
   Case study of using AI agents to automate engineering tasks while developing efficient inference systems.
 - **2025-07-28** — [Building Voice AI That Actually Works: Balancing Realistic Voices vs. Production-Ready Performance](<../models/multimodal/Building Voice AI That Actually Works Balancing Realistic Voices vs. Production-Ready Performance.md>) · `multimodal` · cresta
@@ -517,12 +723,16 @@
   Explains LoLCATs for linearizing LLM attention while preserving useful behavior.
 - **2024-09-18** — [Multi-LoRA: Personalize AI at scale and deliver the best experience for each customer and use case, with 100x cost-efficiency](<../models/fine-tuning/Multi-LoRA Personalize AI at scale and deliver the best experience for each customer and use case, with 100x cost-efficiency.md>) · `fine-tuning` · fireworks
   Explains Multi-LoRA serving for personalized models at scale with better cost efficiency.
+- **2024-09-12** — [How to build function calling and JSON mode for open-source and fine-tuned LLMs](<../prompt-engineering/structured-output/How to build function calling and JSON mode for open-source and fine-tuned LLMs (baseten).md>) · `structured-output` · baseten
+  Explains the implementation behind guaranteed-schema structured output and function calling in a customized NVIDIA Triton server: building a state machine over a JSON schema and using pre-computed logit-bias token masks with no TPS penalty.
 - **2024-08-19** — [Deploy Meta Llama 3.1 405B on Google Cloud Vertex AI](<../infra-platform/deployment/Deploy Meta Llama 3.1 405B on Google Cloud Vertex AI.md>) · `deployment` · huggingface
   Step-by-step deployment of Llama 3.1 405B (FP8 quantized) on Google Cloud Vertex AI with Hugging Face TGI on an A3 8xH100 node: registering the model, endpoint config, and running online inference with 128k context.
 - **2024-07-23** — [Llama 3.1 - 405B, 70B & 8B with multilinguality and long context](<../models/releases/Llama 3.1 - 405B, 70B & 8B with multilinguality and long context.md>) · `releases` · huggingface
   Llama 3.1 8B/70B/405B: 128k context via a new RoPE scaling recipe, 15T-token training, and the accompanying Llama Guard 3 safety classifier and Prompt Guard jailbreak/prompt-injection detector; covers FP8/AWQ/GPTQ quantization needed to actually serve 405B, TGI deployment, and using 405B for synthetic data and LLM-as-judge.
 - **2024-07-22** — [WWDC 24: Running Mistral 7B with Core ML](<../infra-platform/edge/WWDC 24 Running Mistral 7B with Core ML.md>) · `edge` · huggingface
   Reproduces Apple's WWDC'24 Mistral-7B Core ML demo: exporting a Swift-Transformers model, stateful KV cache, multifunction models for prefill vs extend, INT4 block-wise weight quantization, and running across CPU/GPU/ANE on Apple Silicon.
+- **2024-06-04** — [How latent consistency models work](<../models/architectures/How latent consistency models work.md>) · `architectures` · baseten
+  Explains how Latent Consistency Models combine latent diffusion with direct consistency models to cut Stable Diffusion-style image generation from ~50 denoising steps to 2-4, enabling sub-second inference.
 - **2024-06-04** — [How latent consistency models work](<../models/multimodal/How latent consistency models work.md>) · `multimodal` · baseten
   Explains latent consistency models and how they enable faster image generation.
 - **2024-05-30** — [Control plane vs workload plane in model serving infrastructure](<../infra-platform/deployment/Control plane vs workload plane in model serving infrastructure.md>) · `deployment` · baseten
@@ -541,6 +751,8 @@
   Explains BASED linear-attention language models and the recall-throughput tradeoff.
 - **2024-02-20** — [BitDelta: Your Fine-Tune May Only Be Worth One Bit](<../models/fine-tuning/BitDelta Your Fine-Tune May Only Be Worth One Bit.md>) · `fine-tuning` · together
   Explains BitDelta and how small weight deltas can represent fine-tuned model changes.
+- **2024-01-31** — [How to benchmark image generation models like Stable Diffusion XL](<../evals-observability/benchmark-design/How to benchmark image generation models like Stable Diffusion XL (baseten).md>) · `benchmark-design` · baseten
+  Walks through designing a representative SDXL inference benchmark, covering how GPU choice, model server, and batch/sequence configuration determine latency, throughput, and cost tradeoffs.
 - **2024-01-12** — [Understanding performance benchmarks for LLM inference](<../evals-observability/benchmark-design/Understanding performance benchmarks for LLM inference.md>) · `benchmark-design` · baseten
   Explains LLM inference performance benchmarks and how to interpret serving metrics.
 - **2023-12-08** — [StripedHyena-7B and efficient architectures beyond Transformers](<../models/reasoning/StripedHyena-7B and efficient architectures beyond Transformers.md>) · `reasoning` · together

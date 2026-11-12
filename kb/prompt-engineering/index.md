@@ -1,6 +1,6 @@
 # prompt-engineering
 
-26 articles.
+27 articles.
 
 - **2026-10-08** — [The model that didn't exist, so you made it yourself](<context-engineering/The model that didn't exist, so you made it yourself.md>) · `context-engineering` · huggingface
   Hugging Face walkthrough of prompting the autonomous 'ML Intern' agent to plan, budget, train, and publish models: distilling Qwen-Image 2.1's 9B prompt rewriter into a 0.8B CPU model (99.7% valid-output rate, $16 compute) and fine-tuning Qwen3.5-2B for citrus disease diagnosis (14.9% to 52.8% accuracy, $1.90), with prompt patterns for baseline checks, smoke tests, verified-facts context, and hard spending caps.
@@ -32,6 +32,8 @@
   Explains constrained generation for structured extraction with reasoning models and schema-bound outputs.
 - **2024-12-23** — [Controlling Language Model Generation with NVIDIA's LogitsProcessorZoo](<structured-output/Controlling Language Model Generation with NVIDIA's LogitsProcessorZoo.md>) · `structured-output` · huggingface
   Uses NVIDIA's LogitsProcessorZoo to steer generation by editing the logit distribution directly: GenLengthLogitsProcessor to control answer length, CiteFromPromptLogitsProcessor to bias tokens toward the source passage (useful for RAG), ForceLastPhraseLogitsProcessor and MultipleChoiceLogitsProcessor for constrained answers.
+- **2024-09-12** — [How to build function calling and JSON mode for open-source and fine-tuned LLMs](<structured-output/How to build function calling and JSON mode for open-source and fine-tuned LLMs (baseten).md>) · `structured-output` · baseten
+  Explains the implementation behind guaranteed-schema structured output and function calling in a customized NVIDIA Triton server: building a state machine over a JSON schema and using pre-computed logit-bias token masks with no TPS penalty.
 - **2024-09-12** — [How to build function calling and JSON mode for open-source and fine-tuned LLMs](<structured-output/How to build function calling and JSON mode for open-source and fine-tuned LLMs.md>) · `structured-output` · baseten
   Shows how to build function calling and JSON mode for open-source and fine-tuned LLMs.
 - **2024-04-30** — [Improving Prompt Consistency with Structured Generations](<structured-output/Improving Prompt Consistency with Structured Generations.md>) · `structured-output` · huggingface
@@ -87,6 +89,8 @@
   Explains why million-token context serving is primarily an inference-systems problem.
 - **2026-04-24** — [How we fixed prompt injection for all models on Fireworks](<../product-engineering/security/How we fixed prompt injection for all models on Fireworks.md>) · `security` · fireworks
   Explains a tokenizer-level prompt-injection fix and the implications for securing model-serving systems.
+- **2026-04-16** — [Harnesses are everything. Here's how to optimize yours.](<../agents/harness/Harnesses are everything. Here's how to optimize yours (baseten).md>) · `harness` · baseten
+  Argues coding harness quality matters as much as the model, covering lean CLAUDE.md/AGENTS.md authoring (human-written beats LLM-generated per ETH research), the R.P.I. prompting framework, and using subagents to protect the main context window.
 - **2026-04-08** — [MCP Code Execution: Why Your Agent Would Rather Write Code | Pydantic](<../agents/harness/MCP Code Execution Why Your Agent Would Rather Write Code Pydantic.md>) · `harness` · pydantic
   After hand-crafting 40+ MCP tools for Logfire, a single code-execution (exec) tool outperformed them because tool descriptions themselves eat the context window (Cloudflare needed 1.17M tokens for a full MCP over a 2,500-endpoint API); a case for code-actions over many JSON tools while keeping curated tools around.
 - **2026-03-25** — [How Perplexity Brought Voice Search to Millions Using the Realtime API | OpenAI Developers](<../product-engineering/case-studies/How Perplexity Brought Voice Search to Millions Using the Realtime API OpenAI Developers.md>) · `case-studies` · openai-devs
@@ -103,6 +107,8 @@
   Explains tool calling in inference and how model servers support structured external actions.
 - **2025-11-04** — [Code execution with MCP: building more efficient AI agents](<../agents/tool-use/Code execution with MCP building more efficient AI agents.md>) · `tool-use` · anthropic-engineering
   Argues agents should write code that calls MCP tools rather than invoking tools directly, cutting token usage and enabling control flow over intermediate results.
+- **2025-10-27** — [Robust, sample efficient SFT with prompt mutations](<../models/fine-tuning/Robust, sample efficient SFT with prompt mutations.md>) · `fine-tuning` · baseten
+  Proposes mutating the static instructions in a repeated SFT prompt template (while preserving variable task content and gold outputs) to reduce prompt brittleness and training data requirements compared to vanilla SFT or RL with LLM-judge rewards.
 - **2025-10-27** — [Using Codex for education at Dagster Labs | OpenAI Developers](<../product-engineering/case-studies/Using Codex for education at Dagster Labs OpenAI Developers.md>) · `case-studies` · openai-devs
   Dagster Labs describes using Codex to accelerate documentation work — writing docs, translating content across mediums, and measuring doc completeness — and finds a well-structured CONTRIBUTING.md doubles as high-leverage scaffolding for the agent.
 - **2025-10-16** — [Equipping agents for the real world with Agent Skills](<../agents/tool-use/Equipping agents for the real world with Agent Skills.md>) · `tool-use` · anthropic-engineering

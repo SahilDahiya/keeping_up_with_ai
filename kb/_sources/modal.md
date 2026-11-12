@@ -1,7 +1,9 @@
 # modal
 
-55 articles.
+56 articles.
 
+- **2026-11-11** — [Modal becomes a gVisor maintainer](<../product-engineering/security/Modal becomes a gVisor maintainer.md>) · `security` · modal
+  Modal becomes a gVisor maintainer as Google donates it to CNCF; details gVisor's Sentry application-kernel architecture, its nvproxy GPU ioctl proxy, ~25ms sandbox boot with 12MB overhead, and GPU-memory checkpoint/restore, run across 40 million containers/day including AI coding agent sandboxes.
 - **2026-11-06** — [How Snorkel runs realistic agent simulations with Modal | Modal Blog](<../product-engineering/case-studies/How Snorkel runs realistic agent simulations with Modal Modal Blog.md>) · `case-studies` · modal
   Case study on how Snorkel uses Modal's GPU/CPU sandboxes to run millions of agent-simulation benchmarks per month (coding, infra, ML engineering tasks); adopting Modal's memory/CPU bursting cut their sandbox bill by about 20% by letting under-provisioned sandboxes expand elastically instead of failing or being over-provisioned.
 - **2026-10-23** — [Launching a trillion-parameter model at Sakana AI | Modal Blog](<../inference/optimization/Launching a trillion-parameter model at Sakana AI Modal Blog.md>) · `optimization` · modal

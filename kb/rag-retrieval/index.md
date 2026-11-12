@@ -1,7 +1,9 @@
 # rag-retrieval
 
-44 articles.
+49 articles.
 
+- **2026-11-11** — [Token Pooling-Aware Training for Multi-Vector Embedding Models](<embeddings/Token Pooling-Aware Training for Multi-Vector Embedding Models.md>) · `embeddings` · huggingface
+  Introduces pooling-aware training for multi-vector embedding models (ModernBERT-based), raising NanoBEIR nDCG@10 retention from 94.6% to 97.8% at a 4x token-vector compression ratio (pool_factor=4) versus standard training.
 - **2026-08-26** — [Training and Finetuning Multi-Vector Embedding Models with Sentence Transformers](<embeddings/Training and Finetuning Multi-Vector Embedding Models with Sentence Transformers.md>) · `embeddings` · huggingface
   Walks through finetuning ColBERT-style multi-vector (late-interaction) embedding models using Sentence Transformers' new MultiVectorEncoder, covering datasets, loss functions, training arguments, and evaluators, and shows a model finetuned in 14.5 hours on a single RTX 3090 beating general-purpose dense, sparse, lexical, and multi-vector retrievers on a medical retrieval benchmark (MIRIAD NDCG@10).
 - **2026-08-26** — [Why Pay for Every Question Twice? Precomputing Answers for Real-Time RAG](<pipelines/Why Pay for Every Question Twice Precomputing Answers for Real-Time RAG.md>) · `pipelines` · cresta
@@ -14,6 +16,8 @@
   Argues that retrieval quality, not model size, is the bottleneck for AI built on proprietary data, and describes bringing Voyage AI's embedding and reranking models natively onto Fireworks to unify the embed-retrieve-rerank-generate pipeline.
 - **2026-07-29** — [Fine-Tune Your Own Embedding Model from an LLM — for the Price of a Coffee](<embeddings/Fine-Tune Your Own Embedding Model from an LLM — for the Price of a Coffee.md>) · `embeddings` · fireworks
   Shows a sub-$10 recipe for contrastive fine-tuning of Qwen3-Embedding-8B (in-batch negatives, InfoNCE) on the Fireworks platform, lifting retrieval quality on domain tasks like legal citation retrieval (LegalBench, +36% nDCG@10), clinical trial matching, and EU case-law retrieval, while preserving general-purpose performance.
+- **2026-07-16** — [Fast, accurate retrieval with NVIDIA Nemotron 3 Embed](<embeddings/Fast, accurate retrieval with NVIDIA Nemotron 3 Embed (baseten).md>) · `embeddings` · baseten
+  NVIDIA Nemotron 3 Embed ships in 8B (leading retrieval accuracy) and 1B (95% of that accuracy, faster indexing) variants on Baseten, targeted at agentic retrieval and code retrieval use cases.
 - **2026-07-16** — [Fast, accurate retrieval with NVIDIA Nemotron 3 Embed](<embeddings/Fast, accurate retrieval with NVIDIA Nemotron 3 Embed.md>) · `embeddings` · baseten
   Compares NVIDIA's Nemotron 3 Embed 8B and 1B embedding models available on Baseten: the 1B model uses pruning, distillation, and NVFP4 quantization to retain 95% of the 8B's retrieval accuracy (99% in NVFP4 on Blackwell, 2x throughput) while cutting indexing latency and serving cost; also covers a fine-tuning recipe yielding ~10% accuracy gains in 5 hours.
 - **2026-05-19** — [Introducing the Ettin Reranker Family](<search/Introducing the Ettin Reranker Family.md>) · `search` · huggingface
@@ -30,6 +34,8 @@
   Sentence Transformers v5+ adds multimodal embedding and reranker models (shared text/image embedding space, mixed-modality cross-encoder scoring) for visual document retrieval, cross-modal search and multimodal RAG; covers the API and model choices.
 - **2026-03-17** — [Introducing Cresta Knowledge Agent](<pipelines/Introducing Cresta Knowledge Agent.md>) · `pipelines` · cresta
   An agentic retrieval assistant that grounds answers in three sources at once: intent inferred from the live conversation, on-screen CRM state read from the agent's browser (loyalty tier, account status, ticket type), and policy documentation. Delivers cited answers unprompted through a persistent sidebar that follows the agent across browser tabs.
+- **2025-11-11** — [BYO SWE-grep: automatically train blazing fast search sub-agents on your knowledge base (Pt. 1)](<search/BYO SWE-grep automatically train blazing fast search sub-agents on your knowledge base (Pt. 1).md>) · `search` · baseten
+  Describes RL-training small search sub-agents on a customer's own knowledge base structure rather than using static RAG, choosing TF-IDF over embeddings for deterministic, stable reward signals, with fully synthetic training data generated from chunked docs.
 - **2025-10-07** — [AI-Ready Knowledge for Contact Centers: Closing the Gap Between the Knowledge Base and AI](<pipelines/AI-Ready Knowledge for Contact Centers Closing the Gap Between the Knowledge Base and AI.md>) · `pipelines` · cresta
   Explains how operational knowledge bases need to be structured for AI agents, with emphasis on grounding and retrieval readiness.
 - **2025-10-01** — [Introducing RTEB: A New Standard for Retrieval Evaluation](<embeddings/Introducing RTEB A New Standard for Retrieval Evaluation.md>) · `embeddings` · huggingface
@@ -50,6 +56,8 @@
   Open-source project walkthrough for building an enterprise RAG pipeline over earnings calls and financial documents using MongoDB Atlas Vector Search, with architecture notes on optimizing cost and performance.
 - **2025-04-09** — [Building Enterprise-Scale RAG Systems with Fireworks and MongoDB Atlas](<pipelines/Building Enterprise-Scale RAG Systems with Fireworks and MongoDB Atlas.md>) · `pipelines` · fireworks
   Walks through an open-source enterprise RAG architecture combining Fireworks (inference plus Whisper V3 Turbo audio transcription) with MongoDB Atlas vector storage, covering multi-format document processing, chunking, batched embedding generation, and metadata-preserving retrieval over earnings calls and financial reports.
+- **2025-04-04** — [The best open-source embedding models](<embeddings/The best open-source embedding models.md>) · `embeddings` · baseten
+  Curated comparison of open-source embedding models for RAG/search, recommending Qwen3 8B Embedding in FP8 on B200 for top quality and EmbeddingGemma (Matryoshka Representation Learning, <500M params, best-in-class MTEB for its size) for lower-cost deployments.
 - **2025-03-27** — [How we built BEI: high-throughput embedding, reranker, and classifier inference](<embeddings/How we built BEI high-throughput embedding, reranker, and classifier inference.md>) · `embeddings` · baseten
   Deep dive into BEI, a high-throughput embedding, reranker, and classifier inference system.
 - **2025-03-26** — [Training and Finetuning Reranker Models with Sentence Transformers](<search/Training and Finetuning Reranker Models with Sentence Transformers.md>) · `search` · huggingface
@@ -86,6 +94,8 @@
   Walkthrough of embedding English Wikipedia quickly, covering large-scale embedding jobs, batching, and storage workflow.
 - **2024-01-11** — [Long context retrieval models with Monarch Mixer](<search/Long context retrieval models with Monarch Mixer.md>) · `search` · together
   Explains long-context retrieval models using Monarch Mixer.
+- **2023-11-02** — [Deployment and inference for open source text embedding models](<embeddings/Deployment and inference for open source text embedding models (baseten).md>) · `embeddings` · baseten
+  Overview of deploying open-source text embedding models for search, RAG context retrieval, recommendations, and classification, stressing that the same embedding model must be used consistently for both corpus indexing and query time.
 - **2023-11-02** — [Deployment and inference for open source text embedding models](<embeddings/Deployment and inference for open source text embedding models.md>) · `embeddings` · baseten
   Covers deployment and inference patterns for open-source text embedding models.
 - **2020-05-22** — **[Paper]** [Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks](<pipelines/[Paper] Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks.md>) · `pipelines` · arxiv
@@ -99,22 +109,36 @@
   Introduces funes, a local-first durable memory layer for coding agents (Claude Code, Codex, pi, Hermes) that indexes, retrieves, and ranks past agent session traces so an agent can `recall` prior decisions and their provenance instead of losing context across sessions.
 - **2026-09-01** — [You.com is now a Pydantic AI capability](<../agents/tool-use/You.com is now a Pydantic AI capability.md>) · `tool-use` · pydantic
   Walks through wiring You.com's YouSearch/YouResearch web-search and research APIs into Pydantic AI Harness as agent capabilities, covering context-cost controls (num_results, extraction_mode, max_text_chars, freshness), ModelRetry vs. hard-fail error semantics, structured output_schema requirements, and keeping source citations in tool-return metadata instead of the model's context.
+- **2026-08-13** — [Baseten delivers open-source inference for You.com](<../product-engineering/case-studies/Baseten delivers open-source inference for You.com.md>) · `case-studies` · baseten
+  You.com's Answer API runs NER, embeddings, query expansion and intent prediction plus generation (GLM-5.2, Kimi K3) on Baseten's multi-region open-weight inference, hitting 93.48% accuracy on Simple QA at 2.67s p50 latency and $5 per 1,000 calls.
 - **2026-07-29** — [Cresta Insights: One System to Understand Your CX](<../agents/planning/Cresta Insights One System to Understand Your CX.md>) · `planning` · cresta
   AI Analyst is recast from a question-answering tool into a research agent that builds and autonomously executes a multi-step plan: scoping data, running analyses, checking whether findings are meaningful, and deciding what step to take next. Also replaces hand-maintained keyword categories in Topic Discovery and adds Real-Time Trends.
 - **2026-06-17** — [Clustering billions of products for agentic commerce with Catalog API (2026)](<../product-engineering/case-studies/Clustering billions of products for agentic commerce with Catalog API (2026).md>) · `case-studies` · shopify
   How Shopify clusters billions of product listings across millions of stores into canonical entities via embeddings for its agentic-commerce Catalog API, reconciling inconsistent merchant listing structures.
 - **2026-05-13** — [Tau-Knowledge: benchmarking agents on realistic knowledge](<../evals-observability/benchmark-design/Tau-Knowledge benchmarking agents on realistic knowledge.md>) · `benchmark-design` · sierra
   Introduces tau-knowledge for benchmarking agents on realistic knowledge tasks that require grounded retrieval and use of external information.
+- **2026-04-06** — [Sub-3 millisecond named entity recognition (NER) inference](<../inference/optimization/Sub-3 millisecond named entity recognition (NER) inference (baseten).md>) · `optimization` · baseten
+  Extends Baseten Embeddings Inference (BEI) to token-classification NER workloads, reaching sub-3ms client-side and 1ms server-side latency for BERT-class NER models, about 7x faster than typical solutions, for use in document ingestion and retrieval-augmentation pipelines.
 - **2026-02-25** — [The generative recommender behind Shopify's commerce engine (2026)](<../models/architectures/The generative recommender behind Shopify's commerce engine (2026).md>) · `architectures` · shopify
   Shopify's generative recommender treats a buyer's cross-storefront event history as a sequence and predicts the next action, a sequence-modeling approach to commerce recommendations over months-long journeys.
+- **2026-01-21** — [RadixMLP: Intra-batch deduplication for causal transformers](<../inference/optimization/RadixMLP Intra-batch deduplication for causal transformers.md>) · `optimization` · baseten
+  RadixMLP maps batches with shared prefixes (system prompts, reranking queries) onto a prefix trie to deduplicate MLP/LayerNorm computation, giving 1.44-1.59x speedups on real MS MARCO reranking workloads with Qwen3 models and up to 5x on synthetic benchmarks.
 - **2025-11-12** — [Building world-class product search at Shopify: Where C++ excellence meets ML innovation (2025)](<../inference/serving/Building world-class product search at Shopify Where C++ excellence meets ML innovation (2025).md>) · `serving` · shopify
   How Shopify runs transformers, neural rankers, and gradient-boosted models (LightGBM, CatBoost) at native C++ speed for product search, meeting millisecond-latency-at-scale while keeping fast ML iteration.
 - **2025-09-09** — [mmBERT: ModernBERT goes Multilingual](<../models/training/mmBERT ModernBERT goes Multilingual.md>) · `training` · huggingface
   mmBERT is a ModernBERT-style multilingual encoder trained on 3T+ tokens across 1,800+ languages using a three-phase schedule with an inverse masking-ratio decay and 'annealed language learning' that progressively adds low-resource languages late in training. Beats XLM-R and mGTE on multilingual retrieval and classification while running significantly faster.
+- **2025-07-29** — [Run Qwen3 Embedding on NVIDIA Blackwell GPUs](<../inference/optimization/Run Qwen3 Embedding on NVIDIA Blackwell GPUs.md>) · `optimization` · baseten
+  Baseten Embeddings Inference (BEI) on B200 GPUs processes Qwen3 Embedding 8B at 1.5x the tokens/sec of BEI on H100, 3.3x vLLM, and 3.6x TEI on high-throughput workloads, with an 8.4x throughput edge over vLLM at low query volume.
 - **2025-07-16** — [Ettin Suite: SoTA Paired Encoders and Decoders](<../models/training/Ettin Suite SoTA Paired Encoders and Decoders.md>) · `training` · huggingface
   Ettin is the first suite of paired encoder-only and decoder-only models (17M-1B params) trained on identical data (2T tokens), architecture and recipe, giving a true apples-to-apples MLM vs causal-LM comparison. The open ModernBERT-style recipe beats ModernBERT on encoder tasks and beats Llama 3.2 1B and SmolLM2 on decoder tasks; also tests cross-objective continued training.
+- **2025-06-12** — [Your client code matters: 12x higher embedding throughput with Python and Rust](<../inference/optimization/Your client code matters 12x higher embedding throughput with Python and Rust.md>) · `optimization` · baseten
+  Baseten's open-source Performance Client (Rust + PyO3, releasing Python's GIL via Tokio during network calls) delivers up to 12x higher embedding throughput than AsyncOpenAI (1m11s vs 15m+ for 2,097,152 parallel embedding inputs).
 - **2025-04-16** — [Open Deep Research](<../agents/tool-use/Open Deep Research.md>) · `tool-use` · together
   Describes an open deep research system combining retrieval, planning, and tool use.
+- **2025-03-27** — [How we built BEI: high-throughput embedding, reranker, and classifier inference](<../inference/optimization/How we built BEI high-throughput embedding, reranker, and classifier inference.md>) · `optimization` · baseten
+  Details building Baseten Embedding Inference (BEI) on TensorRT-LLM to double throughput for embedding, reranker, and classifier models, addressing the dual demands of high-throughput corpus processing and millisecond real-time querying.
+- **2025-03-27** — [Introducing Baseten Embeddings Inference: The fastest embeddings solution available](<../inference/serving/Introducing Baseten Embeddings Inference The fastest embeddings solution available.md>) · `serving` · baseten
+  Describes Baseten Embeddings Inference (BEI), a serving engine for embedding/reranker/classifier models tuned for both high-concurrency batch throughput and low-latency single queries, claiming 2x throughput and 10% lower latency than prior solutions.
 - **2025-03-27** — [How Cresta drives millions of real-time, AI-powered contact center interactions with Fireworks](<../product-engineering/case-studies/How Cresta drives millions of real-time, AI-powered contact center interactions with Fireworks.md>) · `case-studies` · fireworks
   Cresta serves its Ocean-1 contact-center model with hundreds of per-customer LoRA adapters on a single Fireworks-hosted base model, combining this with RAG for its Knowledge Assist product to beat GPT-4 on accuracy while cutting per-inference cost up to 100x.
 - **2024-12-19** — [Finally, a Replacement for BERT: Introducing ModernBERT](<../models/architectures/Finally, a Replacement for BERT Introducing ModernBERT.md>) · `architectures` · huggingface
