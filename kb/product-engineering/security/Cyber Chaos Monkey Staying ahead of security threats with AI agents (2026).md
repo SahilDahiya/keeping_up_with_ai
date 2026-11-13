@@ -1,10 +1,15 @@
 ---
 title: 'Cyber Chaos Monkey: Staying ahead of security threats with AI agents (2026)'
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: product-engineering
+subtopic: security
+secondary_topics:
+- agents/multi-agent
+summary: Details Shopify's Cyber Chaos Monkey, an agentic vulnerability-hunting system
+  that runs live offensive engagements against production infrastructure via a Discovery/Sandbox
+  pipeline, contained with per-engagement k8s jobs, a credential proxy, and egress
+  allowlisting, plus a two-person-integrity design where a separately-aligned judge
+  agent monitors the executor's full session and can kill it on policy violations.
 triage: null
 skip_reason: null
 source: shopify
@@ -12,7 +17,7 @@ url: https://shopify.engineering/cyber-chaos-monkey
 author: Dan Scofield
 published: '2026-11-12'
 fetched: '2026-11-13T06:12:16Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1553
 content_sha256: 34c50184a4eb8c59104f5d580fec0bae56ee1aedbf5f2fbbf25a2d07f52b0602

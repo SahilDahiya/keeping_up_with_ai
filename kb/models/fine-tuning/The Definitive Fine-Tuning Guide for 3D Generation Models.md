@@ -1,10 +1,13 @@
 ---
 title: The Definitive Fine-Tuning Guide for 3D Generation Models
 kind: blog
-topic: null
-subtopic: null
+topic: models
+subtopic: fine-tuning
 secondary_topics: []
-summary: null
+summary: Walks through LoRA fine-tuning of the TRELLIS.2 3D generation model, showing
+  which pipeline components (structure vs. geometry vs. materials) to freeze vs. adapt,
+  using a 188-object GSO footwear subset to fix inaccurate shoe-sole geometry; ships
+  runnable scripts for local and Hugging Face Jobs training.
 triage: null
 skip_reason: null
 source: huggingface
@@ -12,7 +15,7 @@ url: https://huggingface.co/blog/3d-lora-finetuning
 author: Suvaditya Mukherjee; Merve; Pedro Cuenca
 published: '2026-11-12'
 fetched: '2026-11-13T06:12:10Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 3700
 content_sha256: 9e29bb93e7aede6727f28920b388a5606b8927d1f10fb0c4ef61618ce65629d0

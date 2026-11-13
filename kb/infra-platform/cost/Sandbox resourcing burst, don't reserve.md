@@ -1,10 +1,14 @@
 ---
 title: 'Sandbox resourcing: burst, don''t reserve'
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: infra-platform
+subtopic: cost
+secondary_topics:
+- agents/computer-use
+summary: Explains Modal's active-resource (bursting) pricing for Sandboxes used by
+  coding agents, RL rollouts, and evals, which spend most of their life under 6% peak
+  CPU; shows a billing model and calculator claiming ~58% savings over fixed-size
+  reservations, plus limit/eviction tradeoffs and SLOs for OOM rates.
 triage: null
 skip_reason: null
 source: modal
@@ -12,7 +16,7 @@ url: https://modal.com/blog/sandbox-bursting
 author: Kevin Yang
 published: '2026-11-12'
 fetched: '2026-11-13T06:06:25Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1219
 content_sha256: 3c2065ddd1738133ad7e1f61385f3f13456a0b327416555227b67d4a762fe265

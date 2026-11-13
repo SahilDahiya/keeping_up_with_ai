@@ -1,7 +1,9 @@
 # infra-platform
 
-76 articles.
+77 articles.
 
+- **2026-11-12** — [Sandbox resourcing: burst, don't reserve](<cost/Sandbox resourcing burst, don't reserve.md>) · `cost` · modal
+  Explains Modal's active-resource (bursting) pricing for Sandboxes used by coding agents, RL rollouts, and evals, which spend most of their life under 6% peak CPU; shows a billing model and calculator claiming ~58% savings over fixed-size reservations, plus limit/eviction tradeoffs and SLOs for OOM rates.
 - **2026-11-06** — [The platform for inference, training, and execution | Baseten](<gpu-clusters/The platform for inference, training, and execution Baseten.md>) · `gpu-clusters` · baseten
   Announces GA of Serverless Loops, a Tinker-compatible SFT/RL training SDK with one-click deploy to production inference; cites NVIDIA's use of it to raise Nemotron Super 3.5 VL intent-classification accuracy from 76.8% to 94%.
 - **2026-11-05** — [Building the Agent Cloud: Introducing Baseten Sandboxes](<deployment/Building the Agent Cloud Introducing Baseten Sandboxes.md>) · `deployment` · baseten

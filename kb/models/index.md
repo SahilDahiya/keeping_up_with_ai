@@ -1,7 +1,9 @@
 # models
 
-315 articles.
+316 articles.
 
+- **2026-11-12** — [The Definitive Fine-Tuning Guide for 3D Generation Models](<fine-tuning/The Definitive Fine-Tuning Guide for 3D Generation Models.md>) · `fine-tuning` · huggingface
+  Walks through LoRA fine-tuning of the TRELLIS.2 3D generation model, showing which pipeline components (structure vs. geometry vs. materials) to freeze vs. adapt, using a 188-object GSO footwear subset to fix inaccurate shoe-sole geometry; ships runnable scripts for local and Hugging Face Jobs training.
 - **2026-11-10** — [The platform for inference, training, and execution | Baseten](<reinforcement-learning/The platform for inference, training, and execution Baseten.md>) · `reinforcement-learning` · baseten
   Describes post-training Qwen3.5-397B into a Deep Research agent for Genspark, raising its LLM-grader quality score from 0.612 to 0.759 (above Opus 5.5 and Sonnet 5.5) while crawling 5x more sources, served on 2xB200 in NVFP4.
 - **2026-11-05** — [A Closer Look at Phonon TTS. Launching High-Quality On-Device Speech That Tops the Benchmarks.](<multimodal/A Closer Look at Phonon TTS. Launching High-Quality On-Device Speech That Tops the Benchmarks.md>) · `multimodal` · huggingface

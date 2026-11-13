@@ -1,7 +1,11 @@
 # shopify
 
-23 articles.
+25 articles.
 
+- **2026-11-12** — [Cyber Chaos Monkey: Staying ahead of security threats with AI agents (2026)](<../product-engineering/security/Cyber Chaos Monkey Staying ahead of security threats with AI agents (2026).md>) · `security` · shopify
+  Details Shopify's Cyber Chaos Monkey, an agentic vulnerability-hunting system that runs live offensive engagements against production infrastructure via a Discovery/Sandbox pipeline, contained with per-engagement k8s jobs, a credential proxy, and egress allowlisting, plus a two-person-integrity design where a separately-aligned judge agent monitors the executor's full session and can kill it on policy violations.
+- **2026-11-11** — [Shopify’s generative discovery model (2026)](<../rag-retrieval/search/Shopify’s generative discovery model (2026).md>) · `search` · shopify
+  Describes Shopify's shared generative model, jointly trained on search and recommendation data over a catalog of billions of products, using semantic-ID tokenization of product embeddings; reports production gains of +7.95% orders and +9.85% CVR on the Shop home feed, plus a 2.1-2.7 point OneDCG@10 improvement in search.
 - **2026-10-21** — [How Shopify turns open models into task experts (2026)](<../models/fine-tuning/How Shopify turns open models into task experts (2026).md>) · `fine-tuning` · shopify
   Shopify's Sidekick post-trains open models like NVIDIA Nemotron 3.5 Lightning (3B of 30B params active) with Megatron Bridge to replace frontier-model subagents such as its GraphQL subagent, using a GEPA/ACE-tuned LLM judge, a self-healing loop that repaired 69% of 59,535 failed production conversations over 86 nightly runs, and NVIDIA AIPerf/TensorRT-LLM serving benchmarks showing Blackwell B300s trained 1.86x faster than H200s at 46% fewer GPU-hours.
 - **2026-10-20** — [Cross-store product clustering across millions of stores (2026)](<../product-engineering/architecture/Cross-store product clustering across millions of stores (2026).md>) · `architecture` · shopify

@@ -291,6 +291,12 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-11-12** — [Sandbox resourcing: burst, don't reserve](<../infra-platform/cost/Sandbox resourcing burst, don't reserve.md>) · `cost` · modal
+  Explains Modal's active-resource (bursting) pricing for Sandboxes used by coding agents, RL rollouts, and evals, which spend most of their life under 6% peak CPU; shows a billing model and calculator claiming ~58% savings over fixed-size reservations, plus limit/eviction tradeoffs and SLOs for OOM rates.
+- **2026-11-12** — [Cyber Chaos Monkey: Staying ahead of security threats with AI agents (2026)](<../product-engineering/security/Cyber Chaos Monkey Staying ahead of security threats with AI agents (2026).md>) · `security` · shopify
+  Details Shopify's Cyber Chaos Monkey, an agentic vulnerability-hunting system that runs live offensive engagements against production infrastructure via a Discovery/Sandbox pipeline, contained with per-engagement k8s jobs, a credential proxy, and egress allowlisting, plus a two-person-integrity design where a separately-aligned judge agent monitors the executor's full session and can kill it on policy violations.
+- **2026-11-12** — [Securing persistent agents like OpenClaw at OpenAI](<../product-engineering/security/Securing persistent agents like OpenClaw at OpenAI.md>) · `security` · openai-devs
+  Describes OpenAI's security architecture for running hundreds of persistent OpenClaw agents internally: splitting trusted gateway code from untrusted agent execution via remote harness execution, and concrete codex requirements.toml/config.toml settings for sandbox modes, network allowlists/denylists (blocking metadata endpoints), filesystem permissions, and a credential broker.
 - **2026-11-11** — [Modal becomes a gVisor maintainer](<../product-engineering/security/Modal becomes a gVisor maintainer.md>) · `security` · modal
   Modal becomes a gVisor maintainer as Google donates it to CNCF; details gVisor's Sentry application-kernel architecture, its nvproxy GPU ioctl proxy, ~25ms sandbox boot with 12MB overhead, and GPU-memory checkpoint/restore, run across 40 million containers/day including AI coding agent sandboxes.
 - **2026-11-10** — [The platform for inference, training, and execution | Baseten](<../models/reinforcement-learning/The platform for inference, training, and execution Baseten.md>) · `reinforcement-learning` · baseten

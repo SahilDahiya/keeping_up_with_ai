@@ -1,7 +1,9 @@
 # huggingface
 
-181 articles.
+182 articles.
 
+- **2026-11-12** — [The Definitive Fine-Tuning Guide for 3D Generation Models](<../models/fine-tuning/The Definitive Fine-Tuning Guide for 3D Generation Models.md>) · `fine-tuning` · huggingface
+  Walks through LoRA fine-tuning of the TRELLIS.2 3D generation model, showing which pipeline components (structure vs. geometry vs. materials) to freeze vs. adapt, using a 188-object GSO footwear subset to fix inaccurate shoe-sole geometry; ships runnable scripts for local and Hugging Face Jobs training.
 - **2026-11-11** — [Token Pooling-Aware Training for Multi-Vector Embedding Models](<../rag-retrieval/embeddings/Token Pooling-Aware Training for Multi-Vector Embedding Models.md>) · `embeddings` · huggingface
   Introduces pooling-aware training for multi-vector embedding models (ModernBERT-based), raising NanoBEIR nDCG@10 retention from 94.6% to 97.8% at a 4x token-vector compression ratio (pool_factor=4) versus standard training.
 - **2026-11-06** — [Egyptian and Nigerian English join the Open ASR Leaderboard](<../evals-observability/benchmark-design/Egyptian and Nigerian English join the Open ASR Leaderboard.md>) · `benchmark-design` · huggingface

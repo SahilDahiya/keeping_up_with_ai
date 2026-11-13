@@ -1,7 +1,9 @@
 # modal
 
-56 articles.
+57 articles.
 
+- **2026-11-12** — [Sandbox resourcing: burst, don't reserve](<../infra-platform/cost/Sandbox resourcing burst, don't reserve.md>) · `cost` · modal
+  Explains Modal's active-resource (bursting) pricing for Sandboxes used by coding agents, RL rollouts, and evals, which spend most of their life under 6% peak CPU; shows a billing model and calculator claiming ~58% savings over fixed-size reservations, plus limit/eviction tradeoffs and SLOs for OOM rates.
 - **2026-11-11** — [Modal becomes a gVisor maintainer](<../product-engineering/security/Modal becomes a gVisor maintainer.md>) · `security` · modal
   Modal becomes a gVisor maintainer as Google donates it to CNCF; details gVisor's Sentry application-kernel architecture, its nvproxy GPU ioctl proxy, ~25ms sandbox boot with 12MB overhead, and GPU-memory checkpoint/restore, run across 40 million containers/day including AI coding agent sandboxes.
 - **2026-11-06** — [How Snorkel runs realistic agent simulations with Modal | Modal Blog](<../product-engineering/case-studies/How Snorkel runs realistic agent simulations with Modal Modal Blog.md>) · `case-studies` · modal

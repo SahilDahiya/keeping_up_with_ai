@@ -1,10 +1,14 @@
 ---
 title: Shopify’s generative discovery model (2026)
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: rag-retrieval
+subtopic: search
+secondary_topics:
+- product-engineering/case-studies
+summary: Describes Shopify's shared generative model, jointly trained on search and
+  recommendation data over a catalog of billions of products, using semantic-ID tokenization
+  of product embeddings; reports production gains of +7.95% orders and +9.85% CVR
+  on the Shop home feed, plus a 2.1-2.7 point OneDCG@10 improvement in search.
 triage: null
 skip_reason: null
 source: shopify
@@ -12,7 +16,7 @@ url: https://shopify.engineering/generative-discovery
 author: Shuying Sun
 published: '2026-11-11'
 fetched: '2026-11-13T06:12:19Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 2566
 content_sha256: f213f615e1e720975863c87bddbfa691e98ce26c524fac08a5ce3be6f7a89be0

@@ -1,7 +1,11 @@
 # product-engineering
 
-104 articles.
+106 articles.
 
+- **2026-11-12** — [Cyber Chaos Monkey: Staying ahead of security threats with AI agents (2026)](<security/Cyber Chaos Monkey Staying ahead of security threats with AI agents (2026).md>) · `security` · shopify
+  Details Shopify's Cyber Chaos Monkey, an agentic vulnerability-hunting system that runs live offensive engagements against production infrastructure via a Discovery/Sandbox pipeline, contained with per-engagement k8s jobs, a credential proxy, and egress allowlisting, plus a two-person-integrity design where a separately-aligned judge agent monitors the executor's full session and can kill it on policy violations.
+- **2026-11-12** — [Securing persistent agents like OpenClaw at OpenAI](<security/Securing persistent agents like OpenClaw at OpenAI.md>) · `security` · openai-devs
+  Describes OpenAI's security architecture for running hundreds of persistent OpenClaw agents internally: splitting trusted gateway code from untrusted agent execution via remote harness execution, and concrete codex requirements.toml/config.toml settings for sandbox modes, network allowlists/denylists (blocking metadata endpoints), filesystem permissions, and a credential broker.
 - **2026-11-11** — [Modal becomes a gVisor maintainer](<security/Modal becomes a gVisor maintainer.md>) · `security` · modal
   Modal becomes a gVisor maintainer as Google donates it to CNCF; details gVisor's Sentry application-kernel architecture, its nvproxy GPU ioctl proxy, ~25ms sandbox boot with 12MB overhead, and GPU-memory checkpoint/restore, run across 40 million containers/day including AI coding agent sandboxes.
 - **2026-11-10** — [Pushing voice agents further: inside four GPT-Live builds | OpenAI Developers](<case-studies/Pushing voice agents further inside four GPT-Live builds OpenAI Developers.md>) · `case-studies` · openai-devs
@@ -213,6 +217,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-11-11** — [Shopify’s generative discovery model (2026)](<../rag-retrieval/search/Shopify’s generative discovery model (2026).md>) · `search` · shopify
+  Describes Shopify's shared generative model, jointly trained on search and recommendation data over a catalog of billions of products, using semantic-ID tokenization of product embeddings; reports production gains of +7.95% orders and +9.85% CVR on the Shop home feed, plus a 2.1-2.7 point OneDCG@10 improvement in search.
 - **2026-11-03** — [CWE-bench v2: More coverage, quality, and transparency](<../evals-observability/benchmark-design/CWE-bench v2 More coverage, quality, and transparency.md>) · `benchmark-design` · huggingface
   CWE-bench v2 open-sources 100 deterministic, Harbor-run security-patching tasks spanning 91 CWE classes plus a held-out eval set; Gemini 4 Argon leads at 67.8% pass@1 just ahead of Claude Opus 5.5 (67.3%), while DeepSeek V4.1 Flash anchors the cost-Pareto frontier at $0.04 per rollout.
 - **2026-10-23** — [Launching a trillion-parameter model at Sakana AI | Modal Blog](<../inference/optimization/Launching a trillion-parameter model at Sakana AI Modal Blog.md>) · `optimization` · modal

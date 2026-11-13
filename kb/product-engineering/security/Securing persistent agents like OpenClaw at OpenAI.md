@@ -1,10 +1,15 @@
 ---
 title: Securing persistent agents like OpenClaw at OpenAI
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: product-engineering
+subtopic: security
+secondary_topics:
+- agents/harness
+summary: 'Describes OpenAI''s security architecture for running hundreds of persistent
+  OpenClaw agents internally: splitting trusted gateway code from untrusted agent
+  execution via remote harness execution, and concrete codex requirements.toml/config.toml
+  settings for sandbox modes, network allowlists/denylists (blocking metadata endpoints),
+  filesystem permissions, and a credential broker.'
 triage: null
 skip_reason: null
 source: openai-devs
@@ -12,7 +17,7 @@ url: https://developers.openai.com/blog/securing-persistent-agents-like-openclaw
 author: null
 published: '2026-11-12'
 fetched: '2026-11-13T06:06:20Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1367
 content_sha256: 801e44d7defedda6f36fe153ce6c68dde98cc7cc6ce1e7d9ae53071bfbd00001

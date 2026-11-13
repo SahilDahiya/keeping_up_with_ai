@@ -1,9 +1,11 @@
 # rag-retrieval
 
-49 articles.
+50 articles.
 
 - **2026-11-11** — [Token Pooling-Aware Training for Multi-Vector Embedding Models](<embeddings/Token Pooling-Aware Training for Multi-Vector Embedding Models.md>) · `embeddings` · huggingface
   Introduces pooling-aware training for multi-vector embedding models (ModernBERT-based), raising NanoBEIR nDCG@10 retention from 94.6% to 97.8% at a 4x token-vector compression ratio (pool_factor=4) versus standard training.
+- **2026-11-11** — [Shopify’s generative discovery model (2026)](<search/Shopify’s generative discovery model (2026).md>) · `search` · shopify
+  Describes Shopify's shared generative model, jointly trained on search and recommendation data over a catalog of billions of products, using semantic-ID tokenization of product embeddings; reports production gains of +7.95% orders and +9.85% CVR on the Shop home feed, plus a 2.1-2.7 point OneDCG@10 improvement in search.
 - **2026-08-26** — [Training and Finetuning Multi-Vector Embedding Models with Sentence Transformers](<embeddings/Training and Finetuning Multi-Vector Embedding Models with Sentence Transformers.md>) · `embeddings` · huggingface
   Walks through finetuning ColBERT-style multi-vector (late-interaction) embedding models using Sentence Transformers' new MultiVectorEncoder, covering datasets, loss functions, training arguments, and evaluators, and shows a model finetuned in 14.5 hours on a single RTX 3090 beating general-purpose dense, sparse, lexical, and multi-vector retrievers on a medical retrieval benchmark (MIRIAD NDCG@10).
 - **2026-08-26** — [Why Pay for Every Question Twice? Precomputing Answers for Real-Time RAG](<pipelines/Why Pay for Every Question Twice Precomputing Answers for Real-Time RAG.md>) · `pipelines` · cresta
