@@ -1,6 +1,6 @@
 # models
 
-316 articles.
+317 articles.
 
 - **2026-11-12** — [The Definitive Fine-Tuning Guide for 3D Generation Models](<fine-tuning/The Definitive Fine-Tuning Guide for 3D Generation Models.md>) · `fine-tuning` · huggingface
   Walks through LoRA fine-tuning of the TRELLIS.2 3D generation model, showing which pipeline components (structure vs. geometry vs. materials) to freeze vs. adapt, using a 188-object GSO footwear subset to fix inaccurate shoe-sole geometry; ships runnable scripts for local and Hugging Face Jobs training.
@@ -270,6 +270,8 @@
   Argues the real bottlenecks in LLM fine-tuning are integration friction and slow iteration cycles (not training algorithms), illustrated with patterns from engagements with Cursor and Genspark and a shift toward self-closing agentic fine-tuning loops.
 - **2026-03-28** — [The Fine-Tuning Bottleneck Isn't the Algorithm](<fine-tuning/The Fine-Tuning Bottleneck Isn't the Algorithm.md>) · `fine-tuning` · fireworks
   Explains why fine-tuning bottlenecks often come from data, evaluation, orchestration, and serving rather than algorithms alone.
+- **2026-03-23** — [Frontier RL Is Cheaper Than You Think](<reinforcement-learning/Frontier RL Is Cheaper Than You Think (fireworks).md>) · `reinforcement-learning` · fireworks
+  Fireworks describes using delta-compressed checkpoint updates (average 20.3 GiB delta vs. a 1024 GiB full checkpoint, ~98% of bf16 weights bit-identical between steps) to cut cross-region weight-sync traffic ~94%, letting asynchronous RL rollout fleets run across fragmented, multi-region GPU capacity instead of one RDMA-linked mega-cluster; used in Cursor's Composer 2 training run.
 - **2026-03-23** — [Frontier RL Is Cheaper Than You Think](<reinforcement-learning/Frontier RL Is Cheaper Than You Think.md>) · `reinforcement-learning` · fireworks
   Argues that frontier reinforcement learning can be cost-effective with the right infrastructure and training-loop design.
 - **2026-03-17** — [Mamba-3](<reasoning/Mamba-3.md>) · `reasoning` · together

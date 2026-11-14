@@ -291,6 +291,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-11-13** — [Coding agent tracing in Logfire: cost, skills and evals](<../evals-observability/tracing/Coding agent tracing in Logfire cost, skills and evals.md>) · `tracing` · pydantic
+  Pydantic Logfire's coding-agent tracing captures model calls, tool calls, and cost across harnesses (Claude Code, Codex, Cursor, Copilot); the post shows using the Logfire MCP server to build cost/efficiency dashboards, carry session context across new sessions, and mine traces to build and validate agent skills — one skill-validation experiment raised a 12-case eval from 3/12 to 12/12 passing (57/72 to 72/72 assertions).
 - **2026-11-12** — [Sandbox resourcing: burst, don't reserve](<../infra-platform/cost/Sandbox resourcing burst, don't reserve.md>) · `cost` · modal
   Explains Modal's active-resource (bursting) pricing for Sandboxes used by coding agents, RL rollouts, and evals, which spend most of their life under 6% peak CPU; shows a billing model and calculator claiming ~58% savings over fixed-size reservations, plus limit/eviction tradeoffs and SLOs for OOM rates.
 - **2026-11-12** — [Cyber Chaos Monkey: Staying ahead of security threats with AI agents (2026)](<../product-engineering/security/Cyber Chaos Monkey Staying ahead of security threats with AI agents (2026).md>) · `security` · shopify

@@ -309,6 +309,8 @@
   Maps the open-source LLM training stack into four layers (GPU/CUDA systems, PyTorch/checkpoint core runtime, training frameworks/scaling, inference serving), explaining what each library does, depends on, and when to reach for it.
 - **2026-03-28** — [The Fine-Tuning Bottleneck Isn't the Algorithm](<../models/fine-tuning/The Fine-Tuning Bottleneck Isn't the Algorithm.md>) · `fine-tuning` · fireworks
   Explains why fine-tuning bottlenecks often come from data, evaluation, orchestration, and serving rather than algorithms alone.
+- **2026-03-23** — [Frontier RL Is Cheaper Than You Think](<../models/reinforcement-learning/Frontier RL Is Cheaper Than You Think (fireworks).md>) · `reinforcement-learning` · fireworks
+  Fireworks describes using delta-compressed checkpoint updates (average 20.3 GiB delta vs. a 1024 GiB full checkpoint, ~98% of bf16 weights bit-identical between steps) to cut cross-region weight-sync traffic ~94%, letting asynchronous RL rollout fleets run across fragmented, multi-region GPU capacity instead of one RDMA-linked mega-cluster; used in Cursor's Composer 2 training run.
 - **2026-03-23** — [Frontier RL Is Cheaper Than You Think](<../models/reinforcement-learning/Frontier RL Is Cheaper Than You Think.md>) · `reinforcement-learning` · fireworks
   Argues that frontier reinforcement learning can be cost-effective with the right infrastructure and training-loop design.
 - **2026-03-10** — [Keep the Tokens Flowing: Lessons from 16 Open-Source RL Libraries](<../models/reinforcement-learning/Keep the Tokens Flowing Lessons from 16 Open-Source RL Libraries.md>) · `reinforcement-learning` · huggingface

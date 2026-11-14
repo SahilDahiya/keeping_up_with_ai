@@ -1,7 +1,9 @@
 # evals-observability
 
-153 articles.
+154 articles.
 
+- **2026-11-13** — [Coding agent tracing in Logfire: cost, skills and evals](<tracing/Coding agent tracing in Logfire cost, skills and evals.md>) · `tracing` · pydantic
+  Pydantic Logfire's coding-agent tracing captures model calls, tool calls, and cost across harnesses (Claude Code, Codex, Cursor, Copilot); the post shows using the Logfire MCP server to build cost/efficiency dashboards, carry session context across new sessions, and mine traces to build and validate agent skills — one skill-validation experiment raised a 12-case eval from 3/12 to 12/12 passing (57/72 to 72/72 assertions).
 - **2026-11-11** — [Testing OpAMP clients against the spec | Pydantic Logfire](<monitoring/Testing OpAMP clients against the spec Pydantic Logfire.md>) · `monitoring` · pydantic
   Describes Pydantic Logfire's Fleet Management OpAMP client core, written once in Rust and run as WebAssembly (wazero, Chicory) or a native library across six languages, verified against ~300 extracted spec statements with TLA+ models and differential testing against upstream OpenTelemetry clients.
 - **2026-11-10** — [Change OpenTelemetry sampling without a redeploy | Pydantic Logfire](<monitoring/Change OpenTelemetry sampling without a redeploy Pydantic Logfire.md>) · `monitoring` · pydantic

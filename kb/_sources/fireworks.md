@@ -1,6 +1,6 @@
 # fireworks
 
-195 articles.
+196 articles.
 
 - **2026-11-04** — [Kimi K3.1 Pro on Fireworks: More Intelligence per Dollar, Delivered Fast](<../models/releases/Kimi K3.1 Pro on Fireworks More Intelligence per Dollar, Delivered Fast.md>) · `releases` · fireworks
   Fireworks launches Moonshot's Kimi K3.1 Pro, which swaps K3's full-attention layers for sparse attention to serve long contexts more efficiently; on Fireworks' Specialized Intelligence Index it leads Sierra's tau3-Banking customer-support benchmark at 64.7% (8.7pp over Claude Opus 5.5) and ties Opus 5.5 on Rogo's finance benchmark, priced at $2/$0.20/$10 per million uncached/cached-input/output tokens.
@@ -136,6 +136,8 @@
   Argues the real bottlenecks in LLM fine-tuning are integration friction and slow iteration cycles (not training algorithms), illustrated with patterns from engagements with Cursor and Genspark and a shift toward self-closing agentic fine-tuning loops.
 - **2026-03-28** — [The Fine-Tuning Bottleneck Isn't the Algorithm](<../models/fine-tuning/The Fine-Tuning Bottleneck Isn't the Algorithm.md>) · `fine-tuning` · fireworks
   Explains why fine-tuning bottlenecks often come from data, evaluation, orchestration, and serving rather than algorithms alone.
+- **2026-03-23** — [Frontier RL Is Cheaper Than You Think](<../models/reinforcement-learning/Frontier RL Is Cheaper Than You Think (fireworks).md>) · `reinforcement-learning` · fireworks
+  Fireworks describes using delta-compressed checkpoint updates (average 20.3 GiB delta vs. a 1024 GiB full checkpoint, ~98% of bf16 weights bit-identical between steps) to cut cross-region weight-sync traffic ~94%, letting asynchronous RL rollout fleets run across fragmented, multi-region GPU capacity instead of one RDMA-linked mega-cluster; used in Cursor's Composer 2 training run.
 - **2026-03-23** — [Frontier RL Is Cheaper Than You Think](<../models/reinforcement-learning/Frontier RL Is Cheaper Than You Think.md>) · `reinforcement-learning` · fireworks
   Argues that frontier reinforcement learning can be cost-effective with the right infrastructure and training-loop design.
 - **2026-03-10** — [Training-Inference Parity in MoE Models: Where Numerics Drift](<../inference/kernels/Training-Inference Parity in MoE Models Where Numerics Drift.md>) · `kernels` · fireworks

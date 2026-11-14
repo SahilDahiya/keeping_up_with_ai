@@ -1,10 +1,16 @@
 ---
 title: 'Coding agent tracing in Logfire: cost, skills and evals'
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: evals-observability
+subtopic: tracing
+secondary_topics:
+- agents/harness
+summary: Pydantic Logfire's coding-agent tracing captures model calls, tool calls,
+  and cost across harnesses (Claude Code, Codex, Cursor, Copilot); the post shows
+  using the Logfire MCP server to build cost/efficiency dashboards, carry session
+  context across new sessions, and mine traces to build and validate agent skills
+  — one skill-validation experiment raised a 12-case eval from 3/12 to 12/12 passing
+  (57/72 to 72/72 assertions).
 triage: null
 skip_reason: null
 source: pydantic
@@ -12,7 +18,7 @@ url: https://pydantic.dev/articles/coding-harness-tracing
 author: Duncan McKinnon
 published: '2026-11-13'
 fetched: '2026-11-14T06:11:31Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 4177
 content_sha256: 6d23b81bf22d9d7f01c67fe0ba69246a59cae07cf4efaabd91381e3a3e8b8038

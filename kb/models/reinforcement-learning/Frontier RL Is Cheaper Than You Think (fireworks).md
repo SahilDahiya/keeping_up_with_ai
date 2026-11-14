@@ -1,10 +1,15 @@
 ---
 title: Frontier RL Is Cheaper Than You Think
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: models
+subtopic: reinforcement-learning
+secondary_topics:
+- infra-platform/gpu-clusters
+summary: Fireworks describes using delta-compressed checkpoint updates (average 20.3
+  GiB delta vs. a 1024 GiB full checkpoint, ~98% of bf16 weights bit-identical between
+  steps) to cut cross-region weight-sync traffic ~94%, letting asynchronous RL rollout
+  fleets run across fragmented, multi-region GPU capacity instead of one RDMA-linked
+  mega-cluster; used in Cursor's Composer 2 training run.
 triage: null
 skip_reason: null
 source: fireworks
@@ -12,7 +17,7 @@ url: https://fireworks.ai/blog/frontier-rl-delta-weight-updates
 author: null
 published: '2026-03-23'
 fetched: '2026-11-14T06:05:46Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1514
 content_sha256: 41cbcbc17b1661c2bc249b2e055bb13a29dbc61a709550b29eca71c9ad23f116
