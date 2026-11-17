@@ -1,7 +1,9 @@
 # huggingface
 
-182 articles.
+183 articles.
 
+- **2026-11-16** — [Hugging Face and OpenRouter join forces to make open-weight models easy to run](<../inference/optimization/Hugging Face and OpenRouter join forces to make open-weight models easy to run.md>) · `optimization` · huggingface
+  Hugging Face moves Inference Providers' routing to OpenRouter, which now picks a provider per request on live price/speed/reliability (cutting capacity errors 46%, improving time-to-first-token 16.9%) with cache-aware routing via an X-HF-Session-Id header and :fastest/:cheapest policy suffixes; open-weight models' share of OpenRouter tokens rose from 26.8% to 71.7% over the past year.
 - **2026-11-12** — [The Definitive Fine-Tuning Guide for 3D Generation Models](<../models/fine-tuning/The Definitive Fine-Tuning Guide for 3D Generation Models.md>) · `fine-tuning` · huggingface
   Walks through LoRA fine-tuning of the TRELLIS.2 3D generation model, showing which pipeline components (structure vs. geometry vs. materials) to freeze vs. adapt, using a 188-object GSO footwear subset to fix inaccurate shoe-sole geometry; ships runnable scripts for local and Hugging Face Jobs training.
 - **2026-11-11** — [Token Pooling-Aware Training for Multi-Vector Embedding Models](<../rag-retrieval/embeddings/Token Pooling-Aware Training for Multi-Vector Embedding Models.md>) · `embeddings` · huggingface

@@ -1,10 +1,14 @@
 ---
 title: Making open models work for long-horizon agentic workloads
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: agents
+subtopic: harness
+secondary_topics:
+- inference/optimization
+summary: Together AI (inference engine) and Ollama (harness) lay out how prefix/KV
+  caching works for agentic coding workloads and give concrete rules to avoid invalidating
+  the cache every turn, such as appending late-loaded tool definitions to the end
+  of the prompt instead of the top of the tool list.
 triage: null
 skip_reason: null
 source: together
@@ -12,7 +16,7 @@ url: https://www.together.ai/blog/making-open-models-work-for-long-horizon-agent
 author: Zain Hasan; Parth Sareen
 published: '2026-11-16'
 fetched: '2026-11-17T06:06:58Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 2844
 content_sha256: c030a05781ce09b01c9e4075136adf0dba253527f83835379f2f78b43d03d388

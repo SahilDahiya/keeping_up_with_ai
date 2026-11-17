@@ -15,6 +15,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-11-16** — [Hugging Face and OpenRouter join forces to make open-weight models easy to run](<../inference/optimization/Hugging Face and OpenRouter join forces to make open-weight models easy to run.md>) · `optimization` · huggingface
+  Hugging Face moves Inference Providers' routing to OpenRouter, which now picks a provider per request on live price/speed/reliability (cutting capacity errors 46%, improving time-to-first-token 16.9%) with cache-aware routing via an X-HF-Session-Id header and :fastest/:cheapest policy suffixes; open-weight models' share of OpenRouter tokens rose from 26.8% to 71.7% over the past year.
 - **2026-04-23** — [Claude Code pricing: plans, API costs, and how to lower your bill](<../infra-platform/cost/Claude Code pricing plans, API costs, and how to lower your bill.md>) · `cost` · fireworks
   Breaks down Claude Code cost paths (Pro $17/mo, Max 5x/20x, Team Standard/Premium, Enterprise, API) and describes routing Claude Code through Fireworks-hosted open-weight models (GLM 5.2, Kimi K2.7 Code, MiniMax M3) via FireConnect or an OpenAI-compatible harness, recommending evaluation on completion rate and repair time rather than token price alone.
 - **2026-03-06** — [Inference Providers vs. API Routers: where do tokens come from?](<../infra-platform/deployment/Inference Providers vs. API Routers where do tokens come from.md>) · `deployment` · fireworks

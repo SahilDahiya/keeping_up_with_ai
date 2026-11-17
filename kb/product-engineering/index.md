@@ -1,7 +1,9 @@
 # product-engineering
 
-106 articles.
+107 articles.
 
+- **2026-11-16** — [Introducing the Baseten Voice Agent Stack: own and optimize voice agents end-to-end](<architecture/Introducing the Baseten Voice Agent Stack own and optimize voice agents end-to-end.md>) · `architecture` · baseten
+  Baseten's Voice Agent Stack co-locates the orchestrator with every model (STT/LLM/TTS) on one in-cluster network to remove the hundreds of milliseconds a remote orchestrator adds per turn, and its reference agent delegates fast conversational replies to a co-located 'talker' model while a stronger 'thinker' model handles reasoning and tool calls, scoring 93% on Full-Duplex-Bench at about $0.012 per audio minute.
 - **2026-11-12** — [Cyber Chaos Monkey: Staying ahead of security threats with AI agents (2026)](<security/Cyber Chaos Monkey Staying ahead of security threats with AI agents (2026).md>) · `security` · shopify
   Details Shopify's Cyber Chaos Monkey, an agentic vulnerability-hunting system that runs live offensive engagements against production infrastructure via a Discovery/Sandbox pipeline, contained with per-engagement k8s jobs, a credential proxy, and egress allowlisting, plus a two-person-integrity design where a separately-aligned judge agent monitors the executor's full session and can kill it on policy violations.
 - **2026-11-12** — [Securing persistent agents like OpenClaw at OpenAI](<security/Securing persistent agents like OpenClaw at OpenAI.md>) · `security` · openai-devs

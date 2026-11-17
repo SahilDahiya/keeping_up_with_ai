@@ -1,10 +1,15 @@
 ---
 title: Durable Pydantic AI agents with Azure Durable Task
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: agents
+subtopic: harness
+secondary_topics:
+- infra-platform/deployment
+summary: Pydantic AI Harness ships AzureDurableTaskDurability, which runs each model
+  request, tool call, and MCP call as an Azure Durable Task activity so a worker killed
+  mid-run resumes from its last completed step instead of replaying everything; demoed
+  with a support agent that issues idempotent refunds keyed by run_id/tool_call_id,
+  traced via Logfire.
 triage: null
 skip_reason: null
 source: pydantic
@@ -12,7 +17,7 @@ url: https://pydantic.dev/articles/azure-durable-task-pydantic-ai
 author: Laís Carvalho
 published: '2026-11-16'
 fetched: '2026-11-17T06:12:51Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 2318
 content_sha256: 91dd5b177ff48ab1d4b008074c70c28c6faafcd204bcf993fcb8723f02a370db

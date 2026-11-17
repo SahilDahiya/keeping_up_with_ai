@@ -1,7 +1,11 @@
 # agents
 
-143 articles.
+145 articles.
 
+- **2026-11-16** — [Durable Pydantic AI agents with Azure Durable Task](<harness/Durable Pydantic AI agents with Azure Durable Task.md>) · `harness` · pydantic
+  Pydantic AI Harness ships AzureDurableTaskDurability, which runs each model request, tool call, and MCP call as an Azure Durable Task activity so a worker killed mid-run resumes from its last completed step instead of replaying everything; demoed with a support agent that issues idempotent refunds keyed by run_id/tool_call_id, traced via Logfire.
+- **2026-11-16** — [Making open models work for long-horizon agentic workloads](<harness/Making open models work for long-horizon agentic workloads.md>) · `harness` · together
+  Together AI (inference engine) and Ollama (harness) lay out how prefix/KV caching works for agentic coding workloads and give concrete rules to avoid invalidating the cache every turn, such as appending late-loaded tool definitions to the end of the prompt instead of the top of the tool list.
 - **2026-11-10** — [Code mode vs sandboxes for AI agents](<harness/Code mode vs sandboxes for AI agents.md>) · `harness` · pydantic
   Distinguishes code mode (model writes Python calling tools as functions via a single run_code tool, cutting round trips and context) from sandboxes (isolated execution environments), and walks through Pydantic AI's Monty interpreter (0.8ms warm-start vs ~1.5s for a Daytona sandbox) and workspace abstraction for composing the two security boundaries.
 - **2026-11-09** — [Best Python Agent Harnesses in 2026 | Pydantic AI](<harness/Best Python Agent Harnesses in 2026 Pydantic AI.md>) · `harness` · pydantic
@@ -291,6 +295,10 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-11-16** — [Last year we built megakernels. This year we deleted them: The road to Together Compiler](<../inference/kernels/Last year we built megakernels. This year we deleted them The road to Together Compiler.md>) · `kernels` · together
+  Together AI shows Torch Inductor's heuristics misfire badly (a weight-freezing flag gives +10-26% throughput at large batch but a 49% slowdown at batch 1) and that with just CUDA Graphs and Programmatic Dependent Launch on default Inductor kernels they recover 96-98% of hand-written megakernel performance on Llama 1B/H100, then beat the megakernel by up to 1.7x (1100+ TPS) with multi-kernels, motivating their new Together Compiler.
+- **2026-11-16** — [How we make Together AI easy for coding agents to use](<../evals-observability/evaluation/How we make Together AI easy for coding agents to use.md>) · `evaluation` · together
+  Together AI describes its agent-experience (AX) eval harness: a fixed task list run under baseline/MCP/skills configurations across three models with two attempts each inside sandboxed GitHub Actions runs, scored pass/fail/partial by an LLM judge that reviews the recorded session, which surfaced and fixed gaps like missing GPU-cluster pricing docs.
 - **2026-11-13** — [Coding agent tracing in Logfire: cost, skills and evals](<../evals-observability/tracing/Coding agent tracing in Logfire cost, skills and evals.md>) · `tracing` · pydantic
   Pydantic Logfire's coding-agent tracing captures model calls, tool calls, and cost across harnesses (Claude Code, Codex, Cursor, Copilot); the post shows using the Logfire MCP server to build cost/efficiency dashboards, carry session context across new sessions, and mine traces to build and validate agent skills — one skill-validation experiment raised a 12-case eval from 3/12 to 12/12 passing (57/72 to 72/72 assertions).
 - **2026-11-12** — [Sandbox resourcing: burst, don't reserve](<../infra-platform/cost/Sandbox resourcing burst, don't reserve.md>) · `cost` · modal

@@ -1,7 +1,9 @@
 # evals-observability
 
-154 articles.
+155 articles.
 
+- **2026-11-16** — [How we make Together AI easy for coding agents to use](<evaluation/How we make Together AI easy for coding agents to use.md>) · `evaluation` · together
+  Together AI describes its agent-experience (AX) eval harness: a fixed task list run under baseline/MCP/skills configurations across three models with two attempts each inside sandboxed GitHub Actions runs, scored pass/fail/partial by an LLM judge that reviews the recorded session, which surfaced and fixed gaps like missing GPU-cluster pricing docs.
 - **2026-11-13** — [Coding agent tracing in Logfire: cost, skills and evals](<tracing/Coding agent tracing in Logfire cost, skills and evals.md>) · `tracing` · pydantic
   Pydantic Logfire's coding-agent tracing captures model calls, tool calls, and cost across harnesses (Claude Code, Codex, Cursor, Copilot); the post shows using the Logfire MCP server to build cost/efficiency dashboards, carry session context across new sessions, and mine traces to build and validate agent skills — one skill-validation experiment raised a 12-case eval from 3/12 to 12/12 passing (57/72 to 72/72 assertions).
 - **2026-11-11** — [Testing OpAMP clients against the spec | Pydantic Logfire](<monitoring/Testing OpAMP clients against the spec Pydantic Logfire.md>) · `monitoring` · pydantic

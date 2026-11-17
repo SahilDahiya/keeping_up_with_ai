@@ -1,7 +1,9 @@
 # baseten
 
-303 articles.
+304 articles.
 
+- **2026-11-16** — [Introducing the Baseten Voice Agent Stack: own and optimize voice agents end-to-end](<../product-engineering/architecture/Introducing the Baseten Voice Agent Stack own and optimize voice agents end-to-end.md>) · `architecture` · baseten
+  Baseten's Voice Agent Stack co-locates the orchestrator with every model (STT/LLM/TTS) on one in-cluster network to remove the hundreds of milliseconds a remote orchestrator adds per turn, and its reference agent delegates fast conversational replies to a co-located 'talker' model while a stronger 'thinker' model handles reasoning and tool calls, scoring 93% on Full-Duplex-Bench at about $0.012 per audio minute.
 - **2026-11-10** — [The platform for inference, training, and execution | Baseten](<../models/reinforcement-learning/The platform for inference, training, and execution Baseten.md>) · `reinforcement-learning` · baseten
   Describes post-training Qwen3.5-397B into a Deep Research agent for Genspark, raising its LLM-grader quality score from 0.612 to 0.759 (above Opus 5.5 and Sonnet 5.5) while crawling 5x more sources, served on 2xB200 in NVFP4.
 - **2026-11-10** — [How to make flash models even faster: optimizing DeepSeek V4.1 Flash 1017](<../inference/optimization/How to make flash models even faster optimizing DeepSeek V4.1 Flash 1017.md>) · `optimization` · baseten

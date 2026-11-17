@@ -2,10 +2,16 @@
 title: 'Last year we built megakernels. This year we deleted them: The road to Together
   Compiler'
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: inference
+subtopic: kernels
+secondary_topics:
+- agents/harness
+summary: Together AI shows Torch Inductor's heuristics misfire badly (a weight-freezing
+  flag gives +10-26% throughput at large batch but a 49% slowdown at batch 1) and
+  that with just CUDA Graphs and Programmatic Dependent Launch on default Inductor
+  kernels they recover 96-98% of hand-written megakernel performance on Llama 1B/H100,
+  then beat the megakernel by up to 1.7x (1100+ TPS) with multi-kernels, motivating
+  their new Together Compiler.
 triage: null
 skip_reason: null
 source: together
@@ -13,7 +19,7 @@ url: https://www.together.ai/blog/road-to-together-compiler
 author: Dylan Lim; Reyna Abhyankar; Simran Arora
 published: '2026-11-16'
 fetched: '2026-11-17T06:06:56Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 5954
 content_sha256: 8520155cf669c95a00fa77aa5e9e77d032db3d4ee942d30de1ef8c6566f30dac

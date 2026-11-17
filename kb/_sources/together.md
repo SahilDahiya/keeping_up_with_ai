@@ -1,7 +1,13 @@
 # together
 
-100 articles.
+103 articles.
 
+- **2026-11-16** — [Making open models work for long-horizon agentic workloads](<../agents/harness/Making open models work for long-horizon agentic workloads.md>) · `harness` · together
+  Together AI (inference engine) and Ollama (harness) lay out how prefix/KV caching works for agentic coding workloads and give concrete rules to avoid invalidating the cache every turn, such as appending late-loaded tool definitions to the end of the prompt instead of the top of the tool list.
+- **2026-11-16** — [Last year we built megakernels. This year we deleted them: The road to Together Compiler](<../inference/kernels/Last year we built megakernels. This year we deleted them The road to Together Compiler.md>) · `kernels` · together
+  Together AI shows Torch Inductor's heuristics misfire badly (a weight-freezing flag gives +10-26% throughput at large batch but a 49% slowdown at batch 1) and that with just CUDA Graphs and Programmatic Dependent Launch on default Inductor kernels they recover 96-98% of hand-written megakernel performance on Llama 1B/H100, then beat the megakernel by up to 1.7x (1100+ TPS) with multi-kernels, motivating their new Together Compiler.
+- **2026-11-16** — [How we make Together AI easy for coding agents to use](<../evals-observability/evaluation/How we make Together AI easy for coding agents to use.md>) · `evaluation` · together
+  Together AI describes its agent-experience (AX) eval harness: a fixed task list run under baseline/MCP/skills configurations across three models with two attempts each inside sandboxed GitHub Actions runs, scored pass/fail/partial by an LLM judge that reviews the recorded session, which surfaced and fixed gaps like missing GPU-cluster pricing docs.
 - **2026-11-04** — [Together Compiler: Continual Compilation for AI inference](<../inference/kernels/Together Compiler Continual Compilation for AI inference.md>) · `kernels` · together
   Together AI details Together Compiler (TKCC), which uses a swarm of agents coordinating over a message board plus 'persistent engines' (hot-reloadable forward passes, no VLLM/SGLang restarts) and a custom parallelism cost model to continually recompile inference kernels; reports up to 2.6x higher TPS across Kimi K3/GLM 5.3/MiniMax M3.1-Flash/DeepSeek v4.1-Flash, SOTA InferenceX low-latency numbers (1111 TPS MiniMax, 1205 TPS DeepSeek), 1.7x over hand-tuned megakernels on Llama 1B batch-1, and 252x higher experiment throughput than baseline agentic optimization systems.
 - **2026-11-04** — [Polymorphic Inference: self-tuning inference for open models](<../inference/optimization/Polymorphic Inference self-tuning inference for open models.md>) · `optimization` · together

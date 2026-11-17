@@ -2,10 +2,15 @@
 title: Hugging Face and OpenRouter join forces to make open-weight models easy to
   run
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: inference
+subtopic: optimization
+secondary_topics:
+- industry/trends
+summary: Hugging Face moves Inference Providers' routing to OpenRouter, which now
+  picks a provider per request on live price/speed/reliability (cutting capacity errors
+  46%, improving time-to-first-token 16.9%) with cache-aware routing via an X-HF-Session-Id
+  header and :fastest/:cheapest policy suffixes; open-weight models' share of OpenRouter
+  tokens rose from 26.8% to 71.7% over the past year.
 triage: null
 skip_reason: null
 source: huggingface
@@ -14,7 +19,7 @@ author: Célina Hanouti; Victor Mustar; Bertrand Chevrier; Lucain Pouget; Pierri
   Eliott Coyac; Julien Chaumond
 published: '2026-11-16'
 fetched: '2026-11-17T06:12:45Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1150
 content_sha256: c518219204e533ca029c2beba0f183695a36599220a4579f89eaea0263716f59

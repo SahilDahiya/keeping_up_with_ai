@@ -1,10 +1,15 @@
 ---
 title: How we make Together AI easy for coding agents to use
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: evals-observability
+subtopic: evaluation
+secondary_topics:
+- agents/tool-use
+summary: 'Together AI describes its agent-experience (AX) eval harness: a fixed task
+  list run under baseline/MCP/skills configurations across three models with two attempts
+  each inside sandboxed GitHub Actions runs, scored pass/fail/partial by an LLM judge
+  that reviews the recorded session, which surfaced and fixed gaps like missing GPU-cluster
+  pricing docs.'
 triage: null
 skip_reason: null
 source: together
@@ -12,7 +17,7 @@ url: https://www.together.ai/blog/how-we-do-agent-evals-at-together-ai
 author: Hassan El Mghari; Sam Barrowclough; Zain Hasan; Mo King
 published: '2026-11-16'
 fetched: '2026-11-17T06:07:00Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 2774
 content_sha256: 5c2cab0ca9d25ea5bcac9919622a54256b57388b23d2aa17a60726b4d6ce9592

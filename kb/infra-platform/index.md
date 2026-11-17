@@ -159,6 +159,10 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-11-16** — [Durable Pydantic AI agents with Azure Durable Task](<../agents/harness/Durable Pydantic AI agents with Azure Durable Task.md>) · `harness` · pydantic
+  Pydantic AI Harness ships AzureDurableTaskDurability, which runs each model request, tool call, and MCP call as an Azure Durable Task activity so a worker killed mid-run resumes from its last completed step instead of replaying everything; demoed with a support agent that issues idempotent refunds keyed by run_id/tool_call_id, traced via Logfire.
+- **2026-11-16** — [Introducing the Baseten Voice Agent Stack: own and optimize voice agents end-to-end](<../product-engineering/architecture/Introducing the Baseten Voice Agent Stack own and optimize voice agents end-to-end.md>) · `architecture` · baseten
+  Baseten's Voice Agent Stack co-locates the orchestrator with every model (STT/LLM/TTS) on one in-cluster network to remove the hundreds of milliseconds a remote orchestrator adds per turn, and its reference agent delegates fast conversational replies to a co-located 'talker' model while a stronger 'thinker' model handles reasoning and tool calls, scoring 93% on Full-Duplex-Bench at about $0.012 per audio minute.
 - **2026-11-11** — [Testing OpAMP clients against the spec | Pydantic Logfire](<../evals-observability/monitoring/Testing OpAMP clients against the spec Pydantic Logfire.md>) · `monitoring` · pydantic
   Describes Pydantic Logfire's Fleet Management OpAMP client core, written once in Rust and run as WebAssembly (wazero, Chicory) or a native library across six languages, verified against ~300 extracted spec statements with TLA+ models and differential testing against upstream OpenTelemetry clients.
 - **2026-11-11** — [Modal becomes a gVisor maintainer](<../product-engineering/security/Modal becomes a gVisor maintainer.md>) · `security` · modal

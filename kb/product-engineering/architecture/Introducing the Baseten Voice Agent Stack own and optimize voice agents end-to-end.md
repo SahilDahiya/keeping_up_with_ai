@@ -1,10 +1,17 @@
 ---
 title: 'Introducing the Baseten Voice Agent Stack: own and optimize voice agents end-to-end'
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: product-engineering
+subtopic: architecture
+secondary_topics:
+- infra-platform/deployment
+- inference/optimization
+summary: Baseten's Voice Agent Stack co-locates the orchestrator with every model
+  (STT/LLM/TTS) on one in-cluster network to remove the hundreds of milliseconds a
+  remote orchestrator adds per turn, and its reference agent delegates fast conversational
+  replies to a co-located 'talker' model while a stronger 'thinker' model handles
+  reasoning and tool calls, scoring 93% on Full-Duplex-Bench at about $0.012 per audio
+  minute.
 triage: null
 skip_reason: null
 source: baseten
@@ -12,7 +19,7 @@ url: https://www.baseten.co/blog/introducing-the-baseten-voice-agent-stack
 author: Ian Carrasco; Tianshu Cheng
 published: '2026-11-16'
 fetched: '2026-11-17T06:06:50Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1589
 content_sha256: a0f1b052f8fdc5629e211566205ec3b1e0c0b7f7e958dbd8acc755ca94e3f70c

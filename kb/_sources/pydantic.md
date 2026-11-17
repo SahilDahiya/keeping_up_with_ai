@@ -1,7 +1,9 @@
 # pydantic
 
-63 articles.
+64 articles.
 
+- **2026-11-16** — [Durable Pydantic AI agents with Azure Durable Task](<../agents/harness/Durable Pydantic AI agents with Azure Durable Task.md>) · `harness` · pydantic
+  Pydantic AI Harness ships AzureDurableTaskDurability, which runs each model request, tool call, and MCP call as an Azure Durable Task activity so a worker killed mid-run resumes from its last completed step instead of replaying everything; demoed with a support agent that issues idempotent refunds keyed by run_id/tool_call_id, traced via Logfire.
 - **2026-11-13** — [Coding agent tracing in Logfire: cost, skills and evals](<../evals-observability/tracing/Coding agent tracing in Logfire cost, skills and evals.md>) · `tracing` · pydantic
   Pydantic Logfire's coding-agent tracing captures model calls, tool calls, and cost across harnesses (Claude Code, Codex, Cursor, Copilot); the post shows using the Logfire MCP server to build cost/efficiency dashboards, carry session context across new sessions, and mine traces to build and validate agent skills — one skill-validation experiment raised a 12-case eval from 3/12 to 12/12 passing (57/72 to 72/72 assertions).
 - **2026-11-11** — [Testing OpAMP clients against the spec | Pydantic Logfire](<../evals-observability/monitoring/Testing OpAMP clients against the spec Pydantic Logfire.md>) · `monitoring` · pydantic

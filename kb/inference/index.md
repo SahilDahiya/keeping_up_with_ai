@@ -1,7 +1,11 @@
 # inference
 
-247 articles.
+249 articles.
 
+- **2026-11-16** — [Last year we built megakernels. This year we deleted them: The road to Together Compiler](<kernels/Last year we built megakernels. This year we deleted them The road to Together Compiler.md>) · `kernels` · together
+  Together AI shows Torch Inductor's heuristics misfire badly (a weight-freezing flag gives +10-26% throughput at large batch but a 49% slowdown at batch 1) and that with just CUDA Graphs and Programmatic Dependent Launch on default Inductor kernels they recover 96-98% of hand-written megakernel performance on Llama 1B/H100, then beat the megakernel by up to 1.7x (1100+ TPS) with multi-kernels, motivating their new Together Compiler.
+- **2026-11-16** — [Hugging Face and OpenRouter join forces to make open-weight models easy to run](<optimization/Hugging Face and OpenRouter join forces to make open-weight models easy to run.md>) · `optimization` · huggingface
+  Hugging Face moves Inference Providers' routing to OpenRouter, which now picks a provider per request on live price/speed/reliability (cutting capacity errors 46%, improving time-to-first-token 16.9%) with cache-aware routing via an X-HF-Session-Id header and :fastest/:cheapest policy suffixes; open-weight models' share of OpenRouter tokens rose from 26.8% to 71.7% over the past year.
 - **2026-11-10** — [How to make flash models even faster: optimizing DeepSeek V4.1 Flash 1017](<optimization/How to make flash models even faster optimizing DeepSeek V4.1 Flash 1017.md>) · `optimization` · baseten
   Details optimizing 80+ kernels for the 552B-parameter DeepSeek V4.1 Flash MoE using kernel fusion, Programmatic Dependent Launch, and host-loop minimization, reaching 991 output tokens/s on Artificial Analysis.
 - **2026-11-04** — [Together Compiler: Continual Compilation for AI inference](<kernels/Together Compiler Continual Compilation for AI inference.md>) · `kernels` · together
@@ -499,6 +503,10 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-11-16** — [Making open models work for long-horizon agentic workloads](<../agents/harness/Making open models work for long-horizon agentic workloads.md>) · `harness` · together
+  Together AI (inference engine) and Ollama (harness) lay out how prefix/KV caching works for agentic coding workloads and give concrete rules to avoid invalidating the cache every turn, such as appending late-loaded tool definitions to the end of the prompt instead of the top of the tool list.
+- **2026-11-16** — [Introducing the Baseten Voice Agent Stack: own and optimize voice agents end-to-end](<../product-engineering/architecture/Introducing the Baseten Voice Agent Stack own and optimize voice agents end-to-end.md>) · `architecture` · baseten
+  Baseten's Voice Agent Stack co-locates the orchestrator with every model (STT/LLM/TTS) on one in-cluster network to remove the hundreds of milliseconds a remote orchestrator adds per turn, and its reference agent delegates fast conversational replies to a co-located 'talker' model while a stronger 'thinker' model handles reasoning and tool calls, scoring 93% on Full-Duplex-Bench at about $0.012 per audio minute.
 - **2026-11-05** — [A Closer Look at Phonon TTS. Launching High-Quality On-Device Speech That Tops the Benchmarks.](<../models/multimodal/A Closer Look at Phonon TTS. Launching High-Quality On-Device Speech That Tops the Benchmarks.md>) · `multimodal` · huggingface
   Deep dive on Phonon, a 31-75MB on-device TTS model in the Pocket TTS lineage that generates audio via flow-matching latent autoregression; covers the new multi-backend `ptts` inference runtime (CPU/GPU/NPU, 28ms time-to-first-audio) and its modular Transformers integration, which treats the audio codec as a tokenizer alongside the text tokenizer.
 - **2026-11-04** — [Kimi K3.1 Pro on Fireworks: More Intelligence per Dollar, Delivered Fast](<../models/releases/Kimi K3.1 Pro on Fireworks More Intelligence per Dollar, Delivered Fast.md>) · `releases` · fireworks
