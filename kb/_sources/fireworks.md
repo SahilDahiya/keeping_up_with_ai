@@ -1,7 +1,9 @@
 # fireworks
 
-196 articles.
+198 articles.
 
+- **2026-11-17** — [What MiniMax M3.1 Flash reveals about choosing and combining models](<../models/benchmarks/What MiniMax M3.1 Flash reveals about choosing and combining models.md>) · `benchmarks` · fireworks
+  Fireworks benchmarks MiniMax M3.1 Flash against Claude Sonnet 5.5, GPT-6 Luna, and Gemini 3.8 Flash on DeepSWE coding tasks and web-research evals, showing retries raise DeepSWE coverage from 73% to 90% for about $0.15/task more, and a simulation routing failed legacy-code attempts from M3.1 Flash to Claude Opus 5.5 beats Opus alone on cost.
 - **2026-11-04** — [Kimi K3.1 Pro on Fireworks: More Intelligence per Dollar, Delivered Fast](<../models/releases/Kimi K3.1 Pro on Fireworks More Intelligence per Dollar, Delivered Fast.md>) · `releases` · fireworks
   Fireworks launches Moonshot's Kimi K3.1 Pro, which swaps K3's full-attention layers for sparse attention to serve long contexts more efficiently; on Fireworks' Specialized Intelligence Index it leads Sierra's tau3-Banking customer-support benchmark at 64.7% (8.7pp over Claude Opus 5.5) and ties Opus 5.5 on Rogo's finance benchmark, priced at $2/$0.20/$10 per million uncached/cached-input/output tokens.
 - **2026-11-03** — [Fireworks unveils new products at Forge | Fireworks](<../inference/optimization/Fireworks unveils new products at Forge Fireworks.md>) · `optimization` · fireworks
@@ -198,6 +200,8 @@
   Announces Fireworks RFT, a managed reinforcement fine-tuning service for agentic use cases, citing results where Genspark beat frontier closed-model quality by 10% and Vercel achieved 94% error-free code generation at 40x the speed.
 - **2025-11-09** — [Modernizing Healthcare with AI: How RADPAIR and Fireworks Unlock Smarter Radiology Workflows](<../product-engineering/case-studies/Modernizing Healthcare with AI How RADPAIR and Fireworks Unlock Smarter Radiology Workflows.md>) · `case-studies` · fireworks
   RADPAIR built an open-source AI orchestration standard for radiology (Report Document Schema + Actions and Event Protocol) running fine-tuned models and multi-agent pipelines on Fireworks, cutting report turnaround from 15-20s to 2-5s and reporting ~12% fewer errors across 1,000+ concurrent users.
+- **2025-11-06** — [Kimi K3.1 Pro vs K3 and Claude Opus 5.5: Should You Switch?](<../models/benchmarks/Kimi K3.1 Pro vs K3 and Claude Opus 5.5 Should You Switch.md>) · `benchmarks` · fireworks
+  Fireworks' Specialized Intelligence Index compares Kimi K3.1 Pro against K3, Claude Opus 5.5, and GPT-6 Astra/Sol across banking, legal, finance, and legacy-code benchmarks, finding K3.1 Pro regresses on memory creation (FrontierMemory, -22%) and contract review (LAB: Contracts, -64%) despite overall gains, and shows routing/pairing simulations (e.g. K3.1 Pro + Opus) beat either model alone on cost.
 - **2025-11-03** — [Vercel code fixing with open models, speculative decoding, and RFT](<../product-engineering/case-studies/Vercel code fixing with open models, speculative decoding, and RFT.md>) · `case-studies` · fireworks
   Case study of improving Vercel code-fixing outputs with open models, speculative decoding, and reinforcement fine-tuning.
 - **2025-10-31** — [Genspark’s Deep Research Agent Outperforms a Frontier Closed Model in Quality and Tool Calls using Fireworks RFT, Achieving a 50% Cost Reduction](<../models/reinforcement-learning/Genspark’s Deep Research Agent Outperforms a Frontier Closed Model in Quality and Tool Calls using Fireworks RFT, Achieving a 50% Cost Reduction.md>) · `reinforcement-learning` · fireworks

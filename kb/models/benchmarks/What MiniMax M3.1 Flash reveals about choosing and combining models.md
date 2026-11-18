@@ -1,10 +1,15 @@
 ---
 title: What MiniMax M3.1 Flash reveals about choosing and combining models
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: models
+subtopic: benchmarks
+secondary_topics:
+- agents/multi-agent
+summary: Fireworks benchmarks MiniMax M3.1 Flash against Claude Sonnet 5.5, GPT-6
+  Luna, and Gemini 3.8 Flash on DeepSWE coding tasks and web-research evals, showing
+  retries raise DeepSWE coverage from 73% to 90% for about $0.15/task more, and a
+  simulation routing failed legacy-code attempts from M3.1 Flash to Claude Opus 5.5
+  beats Opus alone on cost.
 triage: null
 skip_reason: null
 source: fireworks
@@ -12,7 +17,7 @@ url: https://fireworks.ai/blog/what-minimax-m3-1-flash-reveals-about-choosing-an
 author: null
 published: '2026-11-17'
 fetched: '2026-11-18T06:06:40Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 2101
 content_sha256: 3ee1879caebf901f5483b15ee910752fee60cd4df7b01176f0bbc61d619af6d4

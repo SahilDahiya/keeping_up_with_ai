@@ -1,7 +1,9 @@
 # models
 
-317 articles.
+319 articles.
 
+- **2026-11-17** — [What MiniMax M3.1 Flash reveals about choosing and combining models](<benchmarks/What MiniMax M3.1 Flash reveals about choosing and combining models.md>) · `benchmarks` · fireworks
+  Fireworks benchmarks MiniMax M3.1 Flash against Claude Sonnet 5.5, GPT-6 Luna, and Gemini 3.8 Flash on DeepSWE coding tasks and web-research evals, showing retries raise DeepSWE coverage from 73% to 90% for about $0.15/task more, and a simulation routing failed legacy-code attempts from M3.1 Flash to Claude Opus 5.5 beats Opus alone on cost.
 - **2026-11-12** — [The Definitive Fine-Tuning Guide for 3D Generation Models](<fine-tuning/The Definitive Fine-Tuning Guide for 3D Generation Models.md>) · `fine-tuning` · huggingface
   Walks through LoRA fine-tuning of the TRELLIS.2 3D generation model, showing which pipeline components (structure vs. geometry vs. materials) to freeze vs. adapt, using a 188-object GSO footwear subset to fix inaccurate shoe-sole geometry; ships runnable scripts for local and Hugging Face Jobs training.
 - **2026-11-10** — [The platform for inference, training, and execution | Baseten](<reinforcement-learning/The platform for inference, training, and execution Baseten.md>) · `reinforcement-learning` · baseten
@@ -356,6 +358,8 @@
   Describes using Eval Protocol to run reinforcement learning on agents in task environments.
 - **2025-11-10** — [Fireworks RFT: Reinforcement Fine-Tuning for AI Agents | Fireworks](<reinforcement-learning/Fireworks RFT Reinforcement Fine-Tuning for AI Agents Fireworks.md>) · `reinforcement-learning` · fireworks
   Announces Fireworks RFT, a managed reinforcement fine-tuning service for agentic use cases, citing results where Genspark beat frontier closed-model quality by 10% and Vercel achieved 94% error-free code generation at 40x the speed.
+- **2025-11-06** — [Kimi K3.1 Pro vs K3 and Claude Opus 5.5: Should You Switch?](<benchmarks/Kimi K3.1 Pro vs K3 and Claude Opus 5.5 Should You Switch.md>) · `benchmarks` · fireworks
+  Fireworks' Specialized Intelligence Index compares Kimi K3.1 Pro against K3, Claude Opus 5.5, and GPT-6 Astra/Sol across banking, legal, finance, and legacy-code benchmarks, finding K3.1 Pro regresses on memory creation (FrontierMemory, -22%) and contract review (LAB: Contracts, -64%) despite overall gains, and shows routing/pairing simulations (e.g. K3.1 Pro + Opus) beat either model alone on cost.
 - **2025-10-31** — [Genspark’s Deep Research Agent Outperforms a Frontier Closed Model in Quality and Tool Calls using Fireworks RFT, Achieving a 50% Cost Reduction](<reinforcement-learning/Genspark’s Deep Research Agent Outperforms a Frontier Closed Model in Quality and Tool Calls using Fireworks RFT, Achieving a 50% Cost Reduction.md>) · `reinforcement-learning` · fireworks
   Genspark used Fireworks' Reinforcement Fine-Tuning on a 1T-parameter Kimi K2 Mixture-of-Agents deep-research system, achieving 12% better quality and 33% more tool calls than a SOTA closed model at 50% lower cost within one month, moving beyond what prompt engineering on a proprietary model could achieve.
 - **2025-10-29** — [Upweight the strategy, not the tokens: faster training with explicit reasoning through RGT (Rationale-Guided Training)](<training/Upweight the strategy, not the tokens faster training with explicit reasoning through RGT (Rationale-Guided Training).md>) · `training` · baseten

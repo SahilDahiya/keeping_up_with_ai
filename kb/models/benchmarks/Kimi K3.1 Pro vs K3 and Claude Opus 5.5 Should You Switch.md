@@ -1,10 +1,15 @@
 ---
 title: 'Kimi K3.1 Pro vs K3 and Claude Opus 5.5: Should You Switch?'
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: models
+subtopic: benchmarks
+secondary_topics:
+- agents/multi-agent
+summary: 'Fireworks'' Specialized Intelligence Index compares Kimi K3.1 Pro against
+  K3, Claude Opus 5.5, and GPT-6 Astra/Sol across banking, legal, finance, and legacy-code
+  benchmarks, finding K3.1 Pro regresses on memory creation (FrontierMemory, -22%)
+  and contract review (LAB: Contracts, -64%) despite overall gains, and shows routing/pairing
+  simulations (e.g. K3.1 Pro + Opus) beat either model alone on cost.'
 triage: null
 skip_reason: null
 source: fireworks
@@ -12,7 +17,7 @@ url: https://fireworks.ai/blog/should-you-switch-your-agents-to-kimi-k3-1-pro
 author: null
 published: '2025-11-06'
 fetched: '2026-11-18T06:06:38Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 2977
 content_sha256: fa118ed9ab21b30dadf49d518731e7ae7f2e691c4f43e213b026689f52ddb720
