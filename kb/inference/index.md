@@ -503,6 +503,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-11-18** — [Rumble-2-Flash: an open 0.5B speech model for 40+ languages](<../models/fine-tuning/Rumble-2-Flash an open 0.5B speech model for 40+ languages.md>) · `fine-tuning` · huggingface
+  HuggingFace/Reson8 release Rumble-2-Flash, a 0.5B ASR model distilled from their larger Rumble-2 using on-policy distillation: the student transcribes its own audio and the teacher scores every token, with GOLD aligning the mismatched Qwen3-ASR-derived tokenizers between teacher and student. It hits 6.96% multilingual WER (beating 7B/15x-larger omniASR-LLM and Whisper large-v3), over 7,000 RTFx throughput, and 7.86% WER on a 302-hour call-center benchmark, on par with NVIDIA's 30B Nemotron 3.5 Transcribe.
 - **2026-11-16** — [Making open models work for long-horizon agentic workloads](<../agents/harness/Making open models work for long-horizon agentic workloads.md>) · `harness` · together
   Together AI (inference engine) and Ollama (harness) lay out how prefix/KV caching works for agentic coding workloads and give concrete rules to avoid invalidating the cache every turn, such as appending late-loaded tool definitions to the end of the prompt instead of the top of the tool list.
 - **2026-11-16** — [Introducing the Baseten Voice Agent Stack: own and optimize voice agents end-to-end](<../product-engineering/architecture/Introducing the Baseten Voice Agent Stack own and optimize voice agents end-to-end.md>) · `architecture` · baseten

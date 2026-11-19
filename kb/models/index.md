@@ -1,7 +1,9 @@
 # models
 
-319 articles.
+320 articles.
 
+- **2026-11-18** — [Rumble-2-Flash: an open 0.5B speech model for 40+ languages](<fine-tuning/Rumble-2-Flash an open 0.5B speech model for 40+ languages.md>) · `fine-tuning` · huggingface
+  HuggingFace/Reson8 release Rumble-2-Flash, a 0.5B ASR model distilled from their larger Rumble-2 using on-policy distillation: the student transcribes its own audio and the teacher scores every token, with GOLD aligning the mismatched Qwen3-ASR-derived tokenizers between teacher and student. It hits 6.96% multilingual WER (beating 7B/15x-larger omniASR-LLM and Whisper large-v3), over 7,000 RTFx throughput, and 7.86% WER on a 302-hour call-center benchmark, on par with NVIDIA's 30B Nemotron 3.5 Transcribe.
 - **2026-11-17** — [What MiniMax M3.1 Flash reveals about choosing and combining models](<benchmarks/What MiniMax M3.1 Flash reveals about choosing and combining models.md>) · `benchmarks` · fireworks
   Fireworks benchmarks MiniMax M3.1 Flash against Claude Sonnet 5.5, GPT-6 Luna, and Gemini 3.8 Flash on DeepSWE coding tasks and web-research evals, showing retries raise DeepSWE coverage from 73% to 90% for about $0.15/task more, and a simulation routing failed legacy-code attempts from M3.1 Flash to Claude Opus 5.5 beats Opus alone on cost.
 - **2026-11-12** — [The Definitive Fine-Tuning Guide for 3D Generation Models](<fine-tuning/The Definitive Fine-Tuning Guide for 3D Generation Models.md>) · `fine-tuning` · huggingface

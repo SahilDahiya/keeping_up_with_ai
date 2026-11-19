@@ -1,10 +1,17 @@
 ---
 title: 'Rumble-2-Flash: an open 0.5B speech model for 40+ languages'
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: models
+subtopic: fine-tuning
+secondary_topics:
+- inference/optimization
+summary: 'HuggingFace/Reson8 release Rumble-2-Flash, a 0.5B ASR model distilled from
+  their larger Rumble-2 using on-policy distillation: the student transcribes its
+  own audio and the teacher scores every token, with GOLD aligning the mismatched
+  Qwen3-ASR-derived tokenizers between teacher and student. It hits 6.96% multilingual
+  WER (beating 7B/15x-larger omniASR-LLM and Whisper large-v3), over 7,000 RTFx throughput,
+  and 7.86% WER on a 302-hour call-center benchmark, on par with NVIDIA''s 30B Nemotron
+  3.5 Transcribe.'
 triage: null
 skip_reason: null
 source: huggingface
@@ -12,7 +19,7 @@ url: https://huggingface.co/blog/rumble-2-flash
 author: Reson8; Mark 't Hart; Eustache Le Bihan; Eric Bezzam
 published: '2026-11-18'
 fetched: '2026-11-19T06:12:56Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 709
 content_sha256: c7a6d1506d93cf00c6c41b72ba6817e23c79f366b032cccdfa5aa1977e39d8c7

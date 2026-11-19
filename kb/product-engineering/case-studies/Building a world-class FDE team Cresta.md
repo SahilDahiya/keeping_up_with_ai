@@ -1,10 +1,16 @@
 ---
 title: Building a world-class FDE team | Cresta
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: product-engineering
+subtopic: case-studies
+secondary_topics:
+- evals-observability/evaluation
+summary: 'Cresta describes how its Forward Deployed Engineering team (1 to 50+ engineers
+  in a year, embedded in Product Engineering rather than GTM/CS) closes the gap between
+  an AI agent prototype and production: staffing 2-3 FDEs per project, running 1-3
+  month deployments with site visits capped at 2-5 days, and never shipping a model/prompt/toolset
+  to a new vertical without evals, since prompt behavior (e.g. empathetic tone) that
+  works in healthcare can backfire in fintech collections.'
 triage: null
 skip_reason: null
 source: cresta
@@ -12,7 +18,7 @@ url: https://cresta.com/blog/building-a-world-class-fde-team
 author: Jove Zhong
 published: '2026-10-06'
 fetched: '2026-11-19T06:06:51Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1156
 content_sha256: d81dad3221d3c93ec907e512004a2c7390f6e225ad4564db3bf95c561856ce95

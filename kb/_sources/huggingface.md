@@ -1,7 +1,9 @@
 # huggingface
 
-183 articles.
+184 articles.
 
+- **2026-11-18** — [Rumble-2-Flash: an open 0.5B speech model for 40+ languages](<../models/fine-tuning/Rumble-2-Flash an open 0.5B speech model for 40+ languages.md>) · `fine-tuning` · huggingface
+  HuggingFace/Reson8 release Rumble-2-Flash, a 0.5B ASR model distilled from their larger Rumble-2 using on-policy distillation: the student transcribes its own audio and the teacher scores every token, with GOLD aligning the mismatched Qwen3-ASR-derived tokenizers between teacher and student. It hits 6.96% multilingual WER (beating 7B/15x-larger omniASR-LLM and Whisper large-v3), over 7,000 RTFx throughput, and 7.86% WER on a 302-hour call-center benchmark, on par with NVIDIA's 30B Nemotron 3.5 Transcribe.
 - **2026-11-16** — [Hugging Face and OpenRouter join forces to make open-weight models easy to run](<../inference/optimization/Hugging Face and OpenRouter join forces to make open-weight models easy to run.md>) · `optimization` · huggingface
   Hugging Face moves Inference Providers' routing to OpenRouter, which now picks a provider per request on live price/speed/reliability (cutting capacity errors 46%, improving time-to-first-token 16.9%) with cache-aware routing via an X-HF-Session-Id header and :fastest/:cheapest policy suffixes; open-weight models' share of OpenRouter tokens rose from 26.8% to 71.7% over the past year.
 - **2026-11-12** — [The Definitive Fine-Tuning Guide for 3D Generation Models](<../models/fine-tuning/The Definitive Fine-Tuning Guide for 3D Generation Models.md>) · `fine-tuning` · huggingface

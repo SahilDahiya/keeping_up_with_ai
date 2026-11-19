@@ -1,6 +1,6 @@
 # cresta
 
-78 articles.
+79 articles.
 
 - **2026-10-29** — [Cresta’s AI Agent Expertise in Developers’ Hands: Introducing Our End-to-End Self-Serve Model](<../agents/harness/Cresta’s AI Agent Expertise in Developers’ Hands Introducing Our End-to-End Self-Serve Model.md>) · `harness` · cresta
   Describes Cresta Conductor's self-serve agent development workflow: Git-versioned agent revisions with traffic-split canary releases and rollback, per-step token/model cost monitoring (e.g. moving a routing agent to a cheaper model after evals confirm quality holds), environment/secrets separation, custom MCP servers and Agent Skills support, and turn-by-turn voice testing with conversation traces for debugging.
@@ -12,6 +12,8 @@
   Cresta's Deputy Agent is a long-running agent for customer-ops workflows (insurance claims, order returns, billing disputes) that persists goal, completed actions, and dependencies across pauses lasting days to weeks, resumes on new documents or approvals, and distinguishes an initiated action from a confirmed outcome with a full audit trail.
 - **2026-10-12** — [Introducing Cresta Sentry-0.1](<../product-engineering/case-studies/Introducing Cresta Sentry-0.1.md>) · `case-studies` · cresta
   Cresta's Sentry-0.1 ensemble model detects personal AI agents calling into contact centers by behavioral signals (e.g. exact-phrase repetition in 50% of non-disclosing AI conversations vs 0% of humans, hedging in 76% of human conversations vs 0% of AI), reaching an F1 of roughly 0.9 in preliminary evals.
+- **2026-10-06** — [Building a world-class FDE team | Cresta](<../product-engineering/case-studies/Building a world-class FDE team Cresta.md>) · `case-studies` · cresta
+  Cresta describes how its Forward Deployed Engineering team (1 to 50+ engineers in a year, embedded in Product Engineering rather than GTM/CS) closes the gap between an AI agent prototype and production: staffing 2-3 FDEs per project, running 1-3 month deployments with site visits capped at 2-5 days, and never shipping a model/prompt/toolset to a new vertical without evals, since prompt behavior (e.g. empathetic tone) that works in healthcare can backfire in fintech collections.
 - **2026-09-25** — [Part II: Replacing FinServ IVRs with an AI Agent: Where the Compounding Happens](<../product-engineering/case-studies/Part II Replacing FinServ IVRs with an AI Agent Where the Compounding Happens.md>) · `case-studies` · cresta
   Case study on scaling an AI agent that replaced FinServ IVR call handling: warns that per-agent Average Handle Time rises as the AI automates easy balance/payment calls, leaving only hard cases for humans, so the real success metric is total human minutes handled and containment volume; also covers staffing around billing-cycle-driven call spikes (e.g. a Saturday cycle close compressing into a Monday surge).
 - **2026-09-17** — [What 1M+ Conversations Reveal About What to Automate First in Hospitality CX](<../product-engineering/case-studies/What 1M+ Conversations Reveal About What to Automate First in Hospitality CX.md>) · `case-studies` · cresta

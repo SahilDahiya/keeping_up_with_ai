@@ -1,6 +1,6 @@
 # product-engineering
 
-107 articles.
+108 articles.
 
 - **2026-11-16** — [Introducing the Baseten Voice Agent Stack: own and optimize voice agents end-to-end](<architecture/Introducing the Baseten Voice Agent Stack own and optimize voice agents end-to-end.md>) · `architecture` · baseten
   Baseten's Voice Agent Stack co-locates the orchestrator with every model (STT/LLM/TTS) on one in-cluster network to remove the hundreds of milliseconds a remote orchestrator adds per turn, and its reference agent delegates fast conversational replies to a co-located 'talker' model while a stronger 'thinker' model handles reasoning and tool calls, scoring 93% on Full-Duplex-Bench at about $0.012 per audio minute.
@@ -36,6 +36,8 @@
   Baseten and Goodfire's Project Beacon reads model activations during generation to detect prompt injection, policy violations, and data exposure in real time; a monitor cascade runs activation and text checks in parallel with generation and escalates to a frontier model only when the two disagree, applying per-customer policies to approve, refuse, fall back, or log.
 - **2026-10-07** — [Caller ID in the age of agents](<security/Caller ID in the age of agents.md>) · `security` · sierra
   Sierra launches fleming-1, a model that analyzes live call audio in real time to flag when the caller on a Sierra-built voice agent's line is itself an AI agent, complementing its newly announced Personal Agent Protocol for agent-to-business authentication.
+- **2026-10-06** — [Building a world-class FDE team | Cresta](<case-studies/Building a world-class FDE team Cresta.md>) · `case-studies` · cresta
+  Cresta describes how its Forward Deployed Engineering team (1 to 50+ engineers in a year, embedded in Product Engineering rather than GTM/CS) closes the gap between an AI agent prototype and production: staffing 2-3 FDEs per project, running 1-3 month deployments with site visits capped at 2-5 days, and never shipping a model/prompt/toolset to a new vertical without evals, since prompt behavior (e.g. empathetic tone) that works in healthcare can backfire in fintech collections.
 - **2026-10-05** — [TypeSafe AI scales Jev to trillions of tokens in three days on Modal | Modal Blog](<case-studies/TypeSafe AI scales Jev to trillions of tokens in three days on Modal Modal Blog.md>) · `case-studies` · modal
   TypeSafe AI's Jev, a non-autoregressive "System One Model" trained with Reinforcement Learning for Calibrated Decisions (RLCD), outputs typed structured values with probabilities instead of generating text; Modal's serverless infra scaled it to over a trillion tokens in three days after launch, topping OpenRouter's 1K-10K token leaderboard at 15.1% share.
 - **2026-10-01** — [Sidecars: A low-latency trust boundary for Sandboxes | Modal Blog](<security/Sidecars A low-latency trust boundary for Sandboxes Modal Blog.md>) · `security` · modal
