@@ -1,7 +1,11 @@
 # product-engineering
 
-108 articles.
+110 articles.
 
+- **2026-11-19** — [How Abundant designed efficient rollout architecture with Modal Sandboxes | Modal Blog](<case-studies/How Abundant designed efficient rollout architecture with Modal Sandboxes Modal Blog.md>) · `case-studies` · modal
+  Abundant built RL training-environment rollout infrastructure (75,000+ rollouts/month, 2M+ Modal Sandboxes/month) using Modal Sandboxes with a 30-second heartbeat monitor, CPU/memory 'bursting' to cut idle-compute costs, and anti-reward-hacking verifier design that deletes task instructions and uses a reviewer agent to catch evaluation-awareness.
+- **2026-11-18** — [Building secure mobile apps in the agentic era (2026)](<security/Building secure mobile apps in the agentic era (2026).md>) · `security` · shopify
+  Shopify built an agentic mobile-app security review system -- one OWASP MASVS/MASTG-based skill per attack surface (deep links, WebViews, stored data, dependencies), each item reviewed individually with only its own code -- that runs daily to catch vulnerabilities as code throughput rose 11x (434k LOC/week) after moving to agent-written mobile code.
 - **2026-11-16** — [Introducing the Baseten Voice Agent Stack: own and optimize voice agents end-to-end](<architecture/Introducing the Baseten Voice Agent Stack own and optimize voice agents end-to-end.md>) · `architecture` · baseten
   Baseten's Voice Agent Stack co-locates the orchestrator with every model (STT/LLM/TTS) on one in-cluster network to remove the hundreds of milliseconds a remote orchestrator adds per turn, and its reference agent delegates fast conversational replies to a co-located 'talker' model while a stronger 'thinker' model handles reasoning and tool calls, scoring 93% on Full-Duplex-Bench at about $0.012 per audio minute.
 - **2026-11-12** — [Cyber Chaos Monkey: Staying ahead of security threats with AI agents (2026)](<security/Cyber Chaos Monkey Staying ahead of security threats with AI agents (2026).md>) · `security` · shopify

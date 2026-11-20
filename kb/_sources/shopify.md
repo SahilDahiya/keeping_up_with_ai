@@ -1,7 +1,9 @@
 # shopify
 
-25 articles.
+26 articles.
 
+- **2026-11-18** — [Building secure mobile apps in the agentic era (2026)](<../product-engineering/security/Building secure mobile apps in the agentic era (2026).md>) · `security` · shopify
+  Shopify built an agentic mobile-app security review system -- one OWASP MASVS/MASTG-based skill per attack surface (deep links, WebViews, stored data, dependencies), each item reviewed individually with only its own code -- that runs daily to catch vulnerabilities as code throughput rose 11x (434k LOC/week) after moving to agent-written mobile code.
 - **2026-11-12** — [Cyber Chaos Monkey: Staying ahead of security threats with AI agents (2026)](<../product-engineering/security/Cyber Chaos Monkey Staying ahead of security threats with AI agents (2026).md>) · `security` · shopify
   Details Shopify's Cyber Chaos Monkey, an agentic vulnerability-hunting system that runs live offensive engagements against production infrastructure via a Discovery/Sandbox pipeline, contained with per-engagement k8s jobs, a credential proxy, and egress allowlisting, plus a two-person-integrity design where a separately-aligned judge agent monitors the executor's full session and can kill it on policy violations.
 - **2026-11-11** — [Shopify’s generative discovery model (2026)](<../rag-retrieval/search/Shopify’s generative discovery model (2026).md>) · `search` · shopify

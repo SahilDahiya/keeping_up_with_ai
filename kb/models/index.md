@@ -1,7 +1,9 @@
 # models
 
-320 articles.
+321 articles.
 
+- **2026-11-19** — [Tencent Hy4 is live on Together AI](<releases/Tencent Hy4 is live on Together AI.md>) · `releases` · together
+  Tencent's Hy4 -- a 770B-parameter MoE model (49B active per token) with a 1M-token context window and its family's first image input -- launched on Together Serverless Inference at $0.83/$2.50 per 1M input/output tokens; Together's tests show it accurately extracting chart data from a screenshot and rebuilding the chart as HTML, and writing a working browser game from a single prompt.
 - **2026-11-18** — [Rumble-2-Flash: an open 0.5B speech model for 40+ languages](<fine-tuning/Rumble-2-Flash an open 0.5B speech model for 40+ languages.md>) · `fine-tuning` · huggingface
   HuggingFace/Reson8 release Rumble-2-Flash, a 0.5B ASR model distilled from their larger Rumble-2 using on-policy distillation: the student transcribes its own audio and the teacher scores every token, with GOLD aligning the mismatched Qwen3-ASR-derived tokenizers between teacher and student. It hits 6.96% multilingual WER (beating 7B/15x-larger omniASR-LLM and Whisper large-v3), over 7,000 RTFx throughput, and 7.86% WER on a 302-hour call-center benchmark, on par with NVIDIA's 30B Nemotron 3.5 Transcribe.
 - **2026-11-17** — [What MiniMax M3.1 Flash reveals about choosing and combining models](<benchmarks/What MiniMax M3.1 Flash reveals about choosing and combining models.md>) · `benchmarks` · fireworks
@@ -645,6 +647,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-11-19** — [How Abundant designed efficient rollout architecture with Modal Sandboxes | Modal Blog](<../product-engineering/case-studies/How Abundant designed efficient rollout architecture with Modal Sandboxes Modal Blog.md>) · `case-studies` · modal
+  Abundant built RL training-environment rollout infrastructure (75,000+ rollouts/month, 2M+ Modal Sandboxes/month) using Modal Sandboxes with a 30-second heartbeat monitor, CPU/memory 'bursting' to cut idle-compute costs, and anti-reward-hacking verifier design that deletes task instructions and uses a reviewer agent to catch evaluation-awareness.
 - **2026-11-11** — [Token Pooling-Aware Training for Multi-Vector Embedding Models](<../rag-retrieval/embeddings/Token Pooling-Aware Training for Multi-Vector Embedding Models.md>) · `embeddings` · huggingface
   Introduces pooling-aware training for multi-vector embedding models (ModernBERT-based), raising NanoBEIR nDCG@10 retention from 94.6% to 97.8% at a 4x token-vector compression ratio (pool_factor=4) versus standard training.
 - **2026-11-06** — [The platform for inference, training, and execution | Baseten](<../infra-platform/gpu-clusters/The platform for inference, training, and execution Baseten.md>) · `gpu-clusters` · baseten

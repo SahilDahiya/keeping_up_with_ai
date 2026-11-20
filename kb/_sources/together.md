@@ -1,7 +1,11 @@
 # together
 
-103 articles.
+105 articles.
 
+- **2026-11-19** — [Tencent Hy4 is live on Together AI](<../models/releases/Tencent Hy4 is live on Together AI.md>) · `releases` · together
+  Tencent's Hy4 -- a 770B-parameter MoE model (49B active per token) with a 1M-token context window and its family's first image input -- launched on Together Serverless Inference at $0.83/$2.50 per 1M input/output tokens; Together's tests show it accurately extracting chart data from a screenshot and rebuilding the chart as HTML, and writing a working browser game from a single prompt.
+- **2026-11-19** — [Introducing Together Storage Accelerator: fast, free data caching for your GPU cluster](<../infra-platform/gpu-clusters/Introducing Together Storage Accelerator fast, free data caching for your GPU cluster.md>) · `gpu-clusters` · together
+  Together AI launched Together Storage Accelerator (TSA), a free distributed NVMe caching layer (built on its ASTRA transport) in front of S3/R2/Hugging Face Hub for GPU clusters, measuring ~20x faster warm reads (3.4 GB/s/node vs 143-169 MB/s cross-cloud), 60-80x lower latency on small files, and a single origin fetch for 200 nodes pulling the same checkpoint.
 - **2026-11-16** — [Making open models work for long-horizon agentic workloads](<../agents/harness/Making open models work for long-horizon agentic workloads.md>) · `harness` · together
   Together AI (inference engine) and Ollama (harness) lay out how prefix/KV caching works for agentic coding workloads and give concrete rules to avoid invalidating the cache every turn, such as appending late-loaded tool definitions to the end of the prompt instead of the top of the tool list.
 - **2026-11-16** — [Last year we built megakernels. This year we deleted them: The road to Together Compiler](<../inference/kernels/Last year we built megakernels. This year we deleted them The road to Together Compiler.md>) · `kernels` · together

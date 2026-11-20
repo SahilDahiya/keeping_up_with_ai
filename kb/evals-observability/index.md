@@ -315,6 +315,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-11-18** — [Building secure mobile apps in the agentic era (2026)](<../product-engineering/security/Building secure mobile apps in the agentic era (2026).md>) · `security` · shopify
+  Shopify built an agentic mobile-app security review system -- one OWASP MASVS/MASTG-based skill per attack surface (deep links, WebViews, stored data, dependencies), each item reviewed individually with only its own code -- that runs daily to catch vulnerabilities as code throughput rose 11x (434k LOC/week) after moving to agent-written mobile code.
 - **2026-11-10** — [The platform for inference, training, and execution | Baseten](<../models/reinforcement-learning/The platform for inference, training, and execution Baseten.md>) · `reinforcement-learning` · baseten
   Describes post-training Qwen3.5-397B into a Deep Research agent for Genspark, raising its LLM-grader quality score from 0.612 to 0.759 (above Opus 5.5 and Sonnet 5.5) while crawling 5x more sources, served on 2xB200 in NVFP4.
 - **2026-11-09** — [Best Python Agent Harnesses in 2026 | Pydantic AI](<../agents/harness/Best Python Agent Harnesses in 2026 Pydantic AI.md>) · `harness` · pydantic

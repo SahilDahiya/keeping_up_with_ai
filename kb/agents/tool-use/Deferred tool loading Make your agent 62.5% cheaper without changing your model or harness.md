@@ -2,10 +2,16 @@
 title: 'Deferred tool loading: Make your agent 62.5% cheaper without changing your
   model or harness'
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: agents
+subtopic: tool-use
+secondary_topics:
+- prompt-engineering/context-engineering
+- inference/optimization
+summary: Baseten added deferred tool loading (just-in-time tool schema retrieval via
+  a tool_search call) to open models like GLM 5.3, DeepSeek, and Kimi on Baseten Model
+  APIs, cutting Claude Code coding-benchmark costs 62.5% and latency 26.2%, and agentic-benchmark
+  costs 51.1%, by keeping ~141k tokens of tool schemas out of the system prompt until
+  the model actually needs them.
 triage: null
 skip_reason: null
 source: baseten
@@ -13,7 +19,7 @@ url: https://www.baseten.co/blog/deferred-tool-loading-without-changing-model-ha
 author: Fred Liu; Alex Ker
 published: '2026-11-19'
 fetched: '2026-11-20T06:06:57Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1239
 content_sha256: 98347ab39e93295cd00672d718882122b5097dec5911b3d38cfcfeb82f89ac6d

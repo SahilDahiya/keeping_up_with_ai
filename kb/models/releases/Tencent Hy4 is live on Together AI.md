@@ -1,10 +1,14 @@
 ---
 title: Tencent Hy4 is live on Together AI
 kind: blog
-topic: null
-subtopic: null
+topic: models
+subtopic: releases
 secondary_topics: []
-summary: null
+summary: Tencent's Hy4 -- a 770B-parameter MoE model (49B active per token) with a
+  1M-token context window and its family's first image input -- launched on Together
+  Serverless Inference at $0.83/$2.50 per 1M input/output tokens; Together's tests
+  show it accurately extracting chart data from a screenshot and rebuilding the chart
+  as HTML, and writing a working browser game from a single prompt.
 triage: null
 skip_reason: null
 source: together
@@ -12,7 +16,7 @@ url: https://www.together.ai/blog/tencent-hy4
 author: Sonny Khan
 published: '2026-11-19'
 fetched: '2026-11-20T06:07:08Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 903
 content_sha256: 3fc62129dfbbfd8cccbda3e660144c0bff806049ff913d7c5d7ac0387c33cb47

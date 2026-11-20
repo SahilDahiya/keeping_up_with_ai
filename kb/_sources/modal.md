@@ -1,7 +1,9 @@
 # modal
 
-57 articles.
+58 articles.
 
+- **2026-11-19** — [How Abundant designed efficient rollout architecture with Modal Sandboxes | Modal Blog](<../product-engineering/case-studies/How Abundant designed efficient rollout architecture with Modal Sandboxes Modal Blog.md>) · `case-studies` · modal
+  Abundant built RL training-environment rollout infrastructure (75,000+ rollouts/month, 2M+ Modal Sandboxes/month) using Modal Sandboxes with a 30-second heartbeat monitor, CPU/memory 'bursting' to cut idle-compute costs, and anti-reward-hacking verifier design that deletes task instructions and uses a reviewer agent to catch evaluation-awareness.
 - **2026-11-12** — [Sandbox resourcing: burst, don't reserve](<../infra-platform/cost/Sandbox resourcing burst, don't reserve.md>) · `cost` · modal
   Explains Modal's active-resource (bursting) pricing for Sandboxes used by coding agents, RL rollouts, and evals, which spend most of their life under 6% peak CPU; shows a billing model and calculator claiming ~58% savings over fixed-size reservations, plus limit/eviction tradeoffs and SLOs for OOM rates.
 - **2026-11-11** — [Modal becomes a gVisor maintainer](<../product-engineering/security/Modal becomes a gVisor maintainer.md>) · `security` · modal

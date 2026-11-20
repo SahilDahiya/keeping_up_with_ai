@@ -1,7 +1,9 @@
 # infra-platform
 
-77 articles.
+78 articles.
 
+- **2026-11-19** — [Introducing Together Storage Accelerator: fast, free data caching for your GPU cluster](<gpu-clusters/Introducing Together Storage Accelerator fast, free data caching for your GPU cluster.md>) · `gpu-clusters` · together
+  Together AI launched Together Storage Accelerator (TSA), a free distributed NVMe caching layer (built on its ASTRA transport) in front of S3/R2/Hugging Face Hub for GPU clusters, measuring ~20x faster warm reads (3.4 GB/s/node vs 143-169 MB/s cross-cloud), 60-80x lower latency on small files, and a single origin fetch for 200 nodes pulling the same checkpoint.
 - **2026-11-12** — [Sandbox resourcing: burst, don't reserve](<cost/Sandbox resourcing burst, don't reserve.md>) · `cost` · modal
   Explains Modal's active-resource (bursting) pricing for Sandboxes used by coding agents, RL rollouts, and evals, which spend most of their life under 6% peak CPU; shows a billing model and calculator claiming ~58% savings over fixed-size reservations, plus limit/eviction tradeoffs and SLOs for OOM rates.
 - **2026-11-06** — [The platform for inference, training, and execution | Baseten](<gpu-clusters/The platform for inference, training, and execution Baseten.md>) · `gpu-clusters` · baseten
@@ -159,6 +161,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-11-19** — [How Abundant designed efficient rollout architecture with Modal Sandboxes | Modal Blog](<../product-engineering/case-studies/How Abundant designed efficient rollout architecture with Modal Sandboxes Modal Blog.md>) · `case-studies` · modal
+  Abundant built RL training-environment rollout infrastructure (75,000+ rollouts/month, 2M+ Modal Sandboxes/month) using Modal Sandboxes with a 30-second heartbeat monitor, CPU/memory 'bursting' to cut idle-compute costs, and anti-reward-hacking verifier design that deletes task instructions and uses a reviewer agent to catch evaluation-awareness.
 - **2026-11-16** — [Durable Pydantic AI agents with Azure Durable Task](<../agents/harness/Durable Pydantic AI agents with Azure Durable Task.md>) · `harness` · pydantic
   Pydantic AI Harness ships AzureDurableTaskDurability, which runs each model request, tool call, and MCP call as an Azure Durable Task activity so a worker killed mid-run resumes from its last completed step instead of replaying everything; demoed with a support agent that issues idempotent refunds keyed by run_id/tool_call_id, traced via Logfire.
 - **2026-11-16** — [Introducing the Baseten Voice Agent Stack: own and optimize voice agents end-to-end](<../product-engineering/architecture/Introducing the Baseten Voice Agent Stack own and optimize voice agents end-to-end.md>) · `architecture` · baseten

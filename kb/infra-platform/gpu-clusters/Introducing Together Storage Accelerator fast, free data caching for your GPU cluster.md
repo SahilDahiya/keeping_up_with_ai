@@ -2,10 +2,14 @@
 title: 'Introducing Together Storage Accelerator: fast, free data caching for your
   GPU cluster'
 kind: blog
-topic: null
-subtopic: null
+topic: infra-platform
+subtopic: gpu-clusters
 secondary_topics: []
-summary: null
+summary: Together AI launched Together Storage Accelerator (TSA), a free distributed
+  NVMe caching layer (built on its ASTRA transport) in front of S3/R2/Hugging Face
+  Hub for GPU clusters, measuring ~20x faster warm reads (3.4 GB/s/node vs 143-169
+  MB/s cross-cloud), 60-80x lower latency on small files, and a single origin fetch
+  for 200 nodes pulling the same checkpoint.
 triage: null
 skip_reason: null
 source: together
@@ -13,7 +17,7 @@ url: https://www.together.ai/blog/introducing-together-storage-accelerator
 author: Pavneet Ahluwalia; Vinamra Jain
 published: '2026-11-19'
 fetched: '2026-11-20T06:07:10Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 816
 content_sha256: 7e34869d311502b837749bcbe28b8b90fb78f02b4a994b7e7fc1e15ed1b896b3

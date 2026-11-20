@@ -1,7 +1,9 @@
 # prompt-engineering
 
-27 articles.
+28 articles.
 
+- **2026-11-19** — [Prompting GPT-Live for languages and regional accents | OpenAI Developers](<techniques/Prompting GPT-Live for languages and regional accents OpenAI Developers.md>) · `techniques` · openai-devs
+  OpenAI's guide to prompting GPT-Live voice agents for regional accents: selecting built-in voices (e.g. Nira for Hindi-influenced English), using prompt-to-voice with detailed accent/script_hint descriptions to generate custom voices (Peninsular Castilian Spanish, Emirati Arabic), and separating voice-sound design from session-instruction behavior.
 - **2026-10-08** — [The model that didn't exist, so you made it yourself](<context-engineering/The model that didn't exist, so you made it yourself.md>) · `context-engineering` · huggingface
   Hugging Face walkthrough of prompting the autonomous 'ML Intern' agent to plan, budget, train, and publish models: distilling Qwen-Image 2.1's 9B prompt rewriter into a 0.8B CPU model (99.7% valid-output rate, $16 compute) and fine-tuning Qwen3.5-2B for citrus disease diagnosis (14.9% to 52.8% accuracy, $1.90), with prompt patterns for baseline checks, smoke tests, verified-facts context, and hard spending caps.
 - **2026-09-11** — [Rethinking skills and prompts for GPT-6 Astra | OpenAI Developers](<context-engineering/Rethinking skills and prompts for GPT-6 Astra OpenAI Developers.md>) · `context-engineering` · openai-devs
@@ -59,6 +61,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-11-19** — [Deferred tool loading: Make your agent 62.5% cheaper without changing your model or harness](<../agents/tool-use/Deferred tool loading Make your agent 62.5% cheaper without changing your model or harness.md>) · `tool-use` · baseten
+  Baseten added deferred tool loading (just-in-time tool schema retrieval via a tool_search call) to open models like GLM 5.3, DeepSeek, and Kimi on Baseten Model APIs, cutting Claude Code coding-benchmark costs 62.5% and latency 26.2%, and agentic-benchmark costs 51.1%, by keeping ~141k tokens of tool schemas out of the system prompt until the model actually needs them.
 - **2026-09-29** — [Pydantic AI agents on Jev, traced in Logfire](<../evals-observability/tracing/Pydantic AI agents on Jev, traced in Logfire.md>) · `tracing` · pydantic
   Pydantic AI 2.50.0 adds a DecisionModel base class so agents can run classification-style steps (bool/Literal/rubric outputs) on TypeSafe's Jev model instead of an LLM, and a new 'decide' span records each question, answer probability, and routing decision, which Logfire's Live view now renders as a Classifier output panel.
 - **2026-09-10** — [Introducing Custom UI Components | Cresta](<../product-engineering/ux-patterns/Introducing Custom UI Components Cresta.md>) · `ux-patterns` · cresta

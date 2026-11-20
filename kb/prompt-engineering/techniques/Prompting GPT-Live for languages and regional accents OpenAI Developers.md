@@ -1,10 +1,14 @@
 ---
 title: Prompting GPT-Live for languages and regional accents | OpenAI Developers
 kind: blog
-topic: null
-subtopic: null
+topic: prompt-engineering
+subtopic: techniques
 secondary_topics: []
-summary: null
+summary: 'OpenAI''s guide to prompting GPT-Live voice agents for regional accents:
+  selecting built-in voices (e.g. Nira for Hindi-influenced English), using prompt-to-voice
+  with detailed accent/script_hint descriptions to generate custom voices (Peninsular
+  Castilian Spanish, Emirati Arabic), and separating voice-sound design from session-instruction
+  behavior.'
 triage: null
 skip_reason: null
 source: openai-devs
@@ -12,7 +16,7 @@ url: https://developers.openai.com/blog/prompting-multilingual-voice-agents/
 author: null
 published: '2026-11-19'
 fetched: '2026-11-20T06:07:03Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1912
 content_sha256: 2efe521964cddc64655509a72907524737d379cf3b3d1b2bca26143764d93eb6

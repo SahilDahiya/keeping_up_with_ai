@@ -1,7 +1,9 @@
 # baseten
 
-304 articles.
+305 articles.
 
+- **2026-11-19** — [Deferred tool loading: Make your agent 62.5% cheaper without changing your model or harness](<../agents/tool-use/Deferred tool loading Make your agent 62.5% cheaper without changing your model or harness.md>) · `tool-use` · baseten
+  Baseten added deferred tool loading (just-in-time tool schema retrieval via a tool_search call) to open models like GLM 5.3, DeepSeek, and Kimi on Baseten Model APIs, cutting Claude Code coding-benchmark costs 62.5% and latency 26.2%, and agentic-benchmark costs 51.1%, by keeping ~141k tokens of tool schemas out of the system prompt until the model actually needs them.
 - **2026-11-16** — [Introducing the Baseten Voice Agent Stack: own and optimize voice agents end-to-end](<../product-engineering/architecture/Introducing the Baseten Voice Agent Stack own and optimize voice agents end-to-end.md>) · `architecture` · baseten
   Baseten's Voice Agent Stack co-locates the orchestrator with every model (STT/LLM/TTS) on one in-cluster network to remove the hundreds of milliseconds a remote orchestrator adds per turn, and its reference agent delegates fast conversational replies to a co-located 'talker' model while a stronger 'thinker' model handles reasoning and tool calls, scoring 93% on Full-Duplex-Bench at about $0.012 per audio minute.
 - **2026-11-10** — [The platform for inference, training, and execution | Baseten](<../models/reinforcement-learning/The platform for inference, training, and execution Baseten.md>) · `reinforcement-learning` · baseten

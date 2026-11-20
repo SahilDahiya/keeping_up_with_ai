@@ -503,6 +503,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-11-19** — [Deferred tool loading: Make your agent 62.5% cheaper without changing your model or harness](<../agents/tool-use/Deferred tool loading Make your agent 62.5% cheaper without changing your model or harness.md>) · `tool-use` · baseten
+  Baseten added deferred tool loading (just-in-time tool schema retrieval via a tool_search call) to open models like GLM 5.3, DeepSeek, and Kimi on Baseten Model APIs, cutting Claude Code coding-benchmark costs 62.5% and latency 26.2%, and agentic-benchmark costs 51.1%, by keeping ~141k tokens of tool schemas out of the system prompt until the model actually needs them.
 - **2026-11-18** — [Rumble-2-Flash: an open 0.5B speech model for 40+ languages](<../models/fine-tuning/Rumble-2-Flash an open 0.5B speech model for 40+ languages.md>) · `fine-tuning` · huggingface
   HuggingFace/Reson8 release Rumble-2-Flash, a 0.5B ASR model distilled from their larger Rumble-2 using on-policy distillation: the student transcribes its own audio and the teacher scores every token, with GOLD aligning the mismatched Qwen3-ASR-derived tokenizers between teacher and student. It hits 6.96% multilingual WER (beating 7B/15x-larger omniASR-LLM and Whisper large-v3), over 7,000 RTFx throughput, and 7.86% WER on a 302-hour call-center benchmark, on par with NVIDIA's 30B Nemotron 3.5 Transcribe.
 - **2026-11-16** — [Making open models work for long-horizon agentic workloads](<../agents/harness/Making open models work for long-horizon agentic workloads.md>) · `harness` · together

@@ -2,10 +2,15 @@
 title: How Abundant designed efficient rollout architecture with Modal Sandboxes |
   Modal Blog
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: product-engineering
+subtopic: case-studies
+secondary_topics:
+- infra-platform/deployment
+- models/reinforcement-learning
+summary: Abundant built RL training-environment rollout infrastructure (75,000+ rollouts/month,
+  2M+ Modal Sandboxes/month) using Modal Sandboxes with a 30-second heartbeat monitor,
+  CPU/memory 'bursting' to cut idle-compute costs, and anti-reward-hacking verifier
+  design that deletes task instructions and uses a reviewer agent to catch evaluation-awareness.
 triage: null
 skip_reason: null
 source: modal
@@ -13,7 +18,7 @@ url: https://modal.com/blog/abundant-efficient-rollout-architecture-with-modal-s
 author: null
 published: '2026-11-19'
 fetched: '2026-11-20T06:07:12Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 907
 content_sha256: e67beabd833f5ce953ce9f7e0f4b03a928a51b906dea3debfba9dabc4f2d27a5

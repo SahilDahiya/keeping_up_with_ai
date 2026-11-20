@@ -1,10 +1,16 @@
 ---
 title: Building secure mobile apps in the agentic era (2026)
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: product-engineering
+subtopic: security
+secondary_topics:
+- agents/harness
+- evals-observability/monitoring
+summary: Shopify built an agentic mobile-app security review system -- one OWASP MASVS/MASTG-based
+  skill per attack surface (deep links, WebViews, stored data, dependencies), each
+  item reviewed individually with only its own code -- that runs daily to catch vulnerabilities
+  as code throughput rose 11x (434k LOC/week) after moving to agent-written mobile
+  code.
 triage: null
 skip_reason: null
 source: shopify
@@ -12,7 +18,7 @@ url: https://shopify.engineering/secure-agentic-apps
 author: Michael Hughes
 published: '2026-11-18'
 fetched: '2026-11-20T06:12:54Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1300
 content_sha256: aac1c0f0175899b2ec8522c27f8c47e87c3c0c8fc7491a341fe88cc48c3d6020

@@ -1,7 +1,9 @@
 # openai-devs
 
-29 articles.
+30 articles.
 
+- **2026-11-19** — [Prompting GPT-Live for languages and regional accents | OpenAI Developers](<../prompt-engineering/techniques/Prompting GPT-Live for languages and regional accents OpenAI Developers.md>) · `techniques` · openai-devs
+  OpenAI's guide to prompting GPT-Live voice agents for regional accents: selecting built-in voices (e.g. Nira for Hindi-influenced English), using prompt-to-voice with detailed accent/script_hint descriptions to generate custom voices (Peninsular Castilian Spanish, Emirati Arabic), and separating voice-sound design from session-instruction behavior.
 - **2026-11-12** — [Securing persistent agents like OpenClaw at OpenAI](<../product-engineering/security/Securing persistent agents like OpenClaw at OpenAI.md>) · `security` · openai-devs
   Describes OpenAI's security architecture for running hundreds of persistent OpenClaw agents internally: splitting trusted gateway code from untrusted agent execution via remote harness execution, and concrete codex requirements.toml/config.toml settings for sandbox modes, network allowlists/denylists (blocking metadata endpoints), filesystem permissions, and a credential broker.
 - **2026-11-10** — [Pushing voice agents further: inside four GPT-Live builds | OpenAI Developers](<../product-engineering/case-studies/Pushing voice agents further inside four GPT-Live builds OpenAI Developers.md>) · `case-studies` · openai-devs

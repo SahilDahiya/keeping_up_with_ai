@@ -1,7 +1,9 @@
 # agents
 
-145 articles.
+146 articles.
 
+- **2026-11-19** — [Deferred tool loading: Make your agent 62.5% cheaper without changing your model or harness](<tool-use/Deferred tool loading Make your agent 62.5% cheaper without changing your model or harness.md>) · `tool-use` · baseten
+  Baseten added deferred tool loading (just-in-time tool schema retrieval via a tool_search call) to open models like GLM 5.3, DeepSeek, and Kimi on Baseten Model APIs, cutting Claude Code coding-benchmark costs 62.5% and latency 26.2%, and agentic-benchmark costs 51.1%, by keeping ~141k tokens of tool schemas out of the system prompt until the model actually needs them.
 - **2026-11-16** — [Durable Pydantic AI agents with Azure Durable Task](<harness/Durable Pydantic AI agents with Azure Durable Task.md>) · `harness` · pydantic
   Pydantic AI Harness ships AzureDurableTaskDurability, which runs each model request, tool call, and MCP call as an Azure Durable Task activity so a worker killed mid-run resumes from its last completed step instead of replaying everything; demoed with a support agent that issues idempotent refunds keyed by run_id/tool_call_id, traced via Logfire.
 - **2026-11-16** — [Making open models work for long-horizon agentic workloads](<harness/Making open models work for long-horizon agentic workloads.md>) · `harness` · together
@@ -295,6 +297,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-11-18** — [Building secure mobile apps in the agentic era (2026)](<../product-engineering/security/Building secure mobile apps in the agentic era (2026).md>) · `security` · shopify
+  Shopify built an agentic mobile-app security review system -- one OWASP MASVS/MASTG-based skill per attack surface (deep links, WebViews, stored data, dependencies), each item reviewed individually with only its own code -- that runs daily to catch vulnerabilities as code throughput rose 11x (434k LOC/week) after moving to agent-written mobile code.
 - **2026-11-17** — [What MiniMax M3.1 Flash reveals about choosing and combining models](<../models/benchmarks/What MiniMax M3.1 Flash reveals about choosing and combining models.md>) · `benchmarks` · fireworks
   Fireworks benchmarks MiniMax M3.1 Flash against Claude Sonnet 5.5, GPT-6 Luna, and Gemini 3.8 Flash on DeepSWE coding tasks and web-research evals, showing retries raise DeepSWE coverage from 73% to 90% for about $0.15/task more, and a simulation routing failed legacy-code attempts from M3.1 Flash to Claude Opus 5.5 beats Opus alone on cost.
 - **2026-11-16** — [Last year we built megakernels. This year we deleted them: The road to Together Compiler](<../inference/kernels/Last year we built megakernels. This year we deleted them The road to Together Compiler.md>) · `kernels` · together
