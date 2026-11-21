@@ -1,7 +1,9 @@
 # cresta
 
-79 articles.
+80 articles.
 
+- **2026-11-19** — [Test and Evaluate Voice AI Agents Under Realistic Call Conditions with Soundcheck](<../evals-observability/evaluation/Test and Evaluate Voice AI Agents Under Realistic Call Conditions with Soundcheck.md>) · `evaluation` · cresta
+  Cresta's Soundcheck adds voice-condition simulation (accents, interruptions, background noise, 8kHz vs 16kHz audio, network packet loss) to agent test cases, paired with voice evaluators that score barge-in, time-to-first-audio latency, unresponsiveness, word error rate, and gibberish separately from content-accuracy evaluators.
 - **2026-10-29** — [Cresta’s AI Agent Expertise in Developers’ Hands: Introducing Our End-to-End Self-Serve Model](<../agents/harness/Cresta’s AI Agent Expertise in Developers’ Hands Introducing Our End-to-End Self-Serve Model.md>) · `harness` · cresta
   Describes Cresta Conductor's self-serve agent development workflow: Git-versioned agent revisions with traffic-split canary releases and rollback, per-step token/model cost monitoring (e.g. moving a routing agent to a cheaper model after evals confirm quality holds), environment/secrets separation, custom MCP servers and Agent Skills support, and turn-by-turn voice testing with conversation traces for debugging.
 - **2026-10-28** — [Cresta-Bench: Measuring How Well LLMs Run Production-Grade Customer Experience AI Agents](<../evals-observability/benchmark-design/Cresta-Bench Measuring How Well LLMs Run Production-Grade Customer Experience AI Agents.md>) · `benchmark-design` · cresta

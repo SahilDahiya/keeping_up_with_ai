@@ -1,10 +1,16 @@
 ---
 title: How I stay in the flow with Ultrafast | OpenAI Developers
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: prompt-engineering
+subtopic: techniques
+secondary_topics:
+- inference/optimization
+summary: 'An OpenAI engineer''s workflow for Codex''s Ultrafast tier (4.5x faster
+  token generation): keep tasks short, start at Light/Low reasoning and raise it only
+  for nuanced edits, and separate quick iteration from verification; a benchmarked
+  Android-timer task (16.7s standard vs 15.7s ultrafast, with ~13s of that spent in
+  build/test) shows speedups only help the token-generation-bound portion of a task,
+  not tool-call- or build-bound time.'
 triage: null
 skip_reason: null
 source: openai-devs
@@ -12,7 +18,7 @@ url: https://developers.openai.com/blog/how-i-stay-in-the-flow-with-ultrafast/
 author: null
 published: '2026-11-20'
 fetched: '2026-11-21T06:06:12Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1225
 content_sha256: 2f570931fa921b142bbb9ccc714cddd71c00c3e9d52f0777921bc31c7bd4914d

@@ -1,7 +1,9 @@
 # evals-observability
 
-155 articles.
+156 articles.
 
+- **2026-11-19** — [Test and Evaluate Voice AI Agents Under Realistic Call Conditions with Soundcheck](<evaluation/Test and Evaluate Voice AI Agents Under Realistic Call Conditions with Soundcheck.md>) · `evaluation` · cresta
+  Cresta's Soundcheck adds voice-condition simulation (accents, interruptions, background noise, 8kHz vs 16kHz audio, network packet loss) to agent test cases, paired with voice evaluators that score barge-in, time-to-first-audio latency, unresponsiveness, word error rate, and gibberish separately from content-accuracy evaluators.
 - **2026-11-16** — [How we make Together AI easy for coding agents to use](<evaluation/How we make Together AI easy for coding agents to use.md>) · `evaluation` · together
   Together AI describes its agent-experience (AX) eval harness: a fixed task list run under baseline/MCP/skills configurations across three models with two attempts each inside sandboxed GitHub Actions runs, scored pass/fail/partial by an LLM judge that reviews the recorded session, which surfaced and fixed gaps like missing GPU-cluster pricing docs.
 - **2026-11-13** — [Coding agent tracing in Logfire: cost, skills and evals](<tracing/Coding agent tracing in Logfire cost, skills and evals.md>) · `tracing` · pydantic
@@ -315,6 +317,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-11-20** — [Improved controls for the new era of cyberattacks](<../product-engineering/security/Improved controls for the new era of cyberattacks.md>) · `security` · baseten
+  Baseten outlines how autonomous agent swarms have shifted cyberattacks to agent-speed (minutes-long exfiltration, automated zero-day exploitation, LLMJacking of GPU capacity), and how it responds with AI-assisted detection/response, defense-in-depth isolation of customer workloads, and agentic red-teaming via OpenAI's Daybreak Red.
 - **2026-11-18** — [Building secure mobile apps in the agentic era (2026)](<../product-engineering/security/Building secure mobile apps in the agentic era (2026).md>) · `security` · shopify
   Shopify built an agentic mobile-app security review system -- one OWASP MASVS/MASTG-based skill per attack surface (deep links, WebViews, stored data, dependencies), each item reviewed individually with only its own code -- that runs daily to catch vulnerabilities as code throughput rose 11x (434k LOC/week) after moving to agent-written mobile code.
 - **2026-11-10** — [The platform for inference, training, and execution | Baseten](<../models/reinforcement-learning/The platform for inference, training, and execution Baseten.md>) · `reinforcement-learning` · baseten

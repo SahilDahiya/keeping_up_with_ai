@@ -161,6 +161,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-11-20** — [How we secure 100+ clusters across 20+ clouds](<../product-engineering/security/How we secure 100+ clusters across 20+ clouds.md>) · `security` · baseten
+  Baseten describes its multi-cloud security architecture across 100+ clusters and 20+ providers: a four-boundary threat model (infrastructure, operating partners, workloads, internal access), handover hardening (closed ports, allowlisted Kubernetes API, key-only SSH with MFA and no long-lived credentials), and a cluster checklist readers can apply to their own fleets.
 - **2026-11-19** — [How Abundant designed efficient rollout architecture with Modal Sandboxes | Modal Blog](<../product-engineering/case-studies/How Abundant designed efficient rollout architecture with Modal Sandboxes Modal Blog.md>) · `case-studies` · modal
   Abundant built RL training-environment rollout infrastructure (75,000+ rollouts/month, 2M+ Modal Sandboxes/month) using Modal Sandboxes with a 30-second heartbeat monitor, CPU/memory 'bursting' to cut idle-compute costs, and anti-reward-hacking verifier design that deletes task instructions and uses a reviewer agent to catch evaluation-awareness.
 - **2026-11-16** — [Durable Pydantic AI agents with Azure Durable Task](<../agents/harness/Durable Pydantic AI agents with Azure Durable Task.md>) · `harness` · pydantic

@@ -1,7 +1,9 @@
 # together
 
-105 articles.
+106 articles.
 
+- **2026-11-20** — [Qwen3 TTS is now available on Together AI](<../models/releases/Qwen3 TTS is now available on Together AI.md>) · `releases` · together
+  Together AI is serving Qwen3 TTS, an open text-to-speech model with nine preset voices controllable by plain-language delivery instructions across 10 languages, at $20 per 1M characters; Together's tuned serving stack achieves time-to-first-audio as low as 97ms via HTTP streaming and a WebSocket API for incrementally arriving text.
 - **2026-11-19** — [Tencent Hy4 is live on Together AI](<../models/releases/Tencent Hy4 is live on Together AI.md>) · `releases` · together
   Tencent's Hy4 -- a 770B-parameter MoE model (49B active per token) with a 1M-token context window and its family's first image input -- launched on Together Serverless Inference at $0.83/$2.50 per 1M input/output tokens; Together's tests show it accurately extracting chart data from a screenshot and rebuilding the chart as HTML, and writing a working browser game from a single prompt.
 - **2026-11-19** — [Introducing Together Storage Accelerator: fast, free data caching for your GPU cluster](<../infra-platform/gpu-clusters/Introducing Together Storage Accelerator fast, free data caching for your GPU cluster.md>) · `gpu-clusters` · together

@@ -503,6 +503,10 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-11-20** — [Qwen3 TTS is now available on Together AI](<../models/releases/Qwen3 TTS is now available on Together AI.md>) · `releases` · together
+  Together AI is serving Qwen3 TTS, an open text-to-speech model with nine preset voices controllable by plain-language delivery instructions across 10 languages, at $20 per 1M characters; Together's tuned serving stack achieves time-to-first-audio as low as 97ms via HTTP streaming and a WebSocket API for incrementally arriving text.
+- **2026-11-20** — [How I stay in the flow with Ultrafast | OpenAI Developers](<../prompt-engineering/techniques/How I stay in the flow with Ultrafast OpenAI Developers.md>) · `techniques` · openai-devs
+  An OpenAI engineer's workflow for Codex's Ultrafast tier (4.5x faster token generation): keep tasks short, start at Light/Low reasoning and raise it only for nuanced edits, and separate quick iteration from verification; a benchmarked Android-timer task (16.7s standard vs 15.7s ultrafast, with ~13s of that spent in build/test) shows speedups only help the token-generation-bound portion of a task, not tool-call- or build-bound time.
 - **2026-11-19** — [Deferred tool loading: Make your agent 62.5% cheaper without changing your model or harness](<../agents/tool-use/Deferred tool loading Make your agent 62.5% cheaper without changing your model or harness.md>) · `tool-use` · baseten
   Baseten added deferred tool loading (just-in-time tool schema retrieval via a tool_search call) to open models like GLM 5.3, DeepSeek, and Kimi on Baseten Model APIs, cutting Claude Code coding-benchmark costs 62.5% and latency 26.2%, and agentic-benchmark costs 51.1%, by keeping ~141k tokens of tool schemas out of the system prompt until the model actually needs them.
 - **2026-11-18** — [Rumble-2-Flash: an open 0.5B speech model for 40+ languages](<../models/fine-tuning/Rumble-2-Flash an open 0.5B speech model for 40+ languages.md>) · `fine-tuning` · huggingface

@@ -1,7 +1,13 @@
 # baseten
 
-305 articles.
+308 articles.
 
+- **2026-11-20** — [Meet bison-1 and groundhog-1, frontier American decision models](<../models/releases/Meet bison-1 and groundhog-1, frontier American decision models.md>) · `releases` · baseten
+  Baseten released bison-1 (31B) and groundhog-1 (26B MoE, ~4B active) decision models built on Google's Gemma 4, ranking #1 of 19 on the Artificial Analysis Decision Index with 128k context; calibration gains came largely from training on 'soft label' targets (e.g. 83%/17% probability splits) instead of hard one-hot answers.
+- **2026-11-20** — [How we secure 100+ clusters across 20+ clouds](<../product-engineering/security/How we secure 100+ clusters across 20+ clouds.md>) · `security` · baseten
+  Baseten describes its multi-cloud security architecture across 100+ clusters and 20+ providers: a four-boundary threat model (infrastructure, operating partners, workloads, internal access), handover hardening (closed ports, allowlisted Kubernetes API, key-only SSH with MFA and no long-lived credentials), and a cluster checklist readers can apply to their own fleets.
+- **2026-11-20** — [Improved controls for the new era of cyberattacks](<../product-engineering/security/Improved controls for the new era of cyberattacks.md>) · `security` · baseten
+  Baseten outlines how autonomous agent swarms have shifted cyberattacks to agent-speed (minutes-long exfiltration, automated zero-day exploitation, LLMJacking of GPU capacity), and how it responds with AI-assisted detection/response, defense-in-depth isolation of customer workloads, and agentic red-teaming via OpenAI's Daybreak Red.
 - **2026-11-19** — [Deferred tool loading: Make your agent 62.5% cheaper without changing your model or harness](<../agents/tool-use/Deferred tool loading Make your agent 62.5% cheaper without changing your model or harness.md>) · `tool-use` · baseten
   Baseten added deferred tool loading (just-in-time tool schema retrieval via a tool_search call) to open models like GLM 5.3, DeepSeek, and Kimi on Baseten Model APIs, cutting Claude Code coding-benchmark costs 62.5% and latency 26.2%, and agentic-benchmark costs 51.1%, by keeping ~141k tokens of tool schemas out of the system prompt until the model actually needs them.
 - **2026-11-16** — [Introducing the Baseten Voice Agent Stack: own and optimize voice agents end-to-end](<../product-engineering/architecture/Introducing the Baseten Voice Agent Stack own and optimize voice agents end-to-end.md>) · `architecture` · baseten

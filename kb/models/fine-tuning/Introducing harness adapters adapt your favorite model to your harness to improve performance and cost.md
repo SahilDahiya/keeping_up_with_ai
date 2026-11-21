@@ -2,10 +2,15 @@
 title: 'Introducing harness adapters: adapt your favorite model to your harness to
   improve performance and cost'
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: models
+subtopic: fine-tuning
+secondary_topics:
+- agents/harness
+summary: Hugging Face trained per-harness LoRA adapters for Qwen3.8-27B using RL (AsyncGRPOTrainer,
+  OpenEnv, Harbor) run inside the actual agent harnesses (pi, OpenCode, Hermes Agent)
+  rather than a reimplemented agent loop, raising pi's Terminal-Bench 2.1 pass@1 from
+  39% to 55% while cutting average tokens per task from 2.9K to 1.5K; the three LoRAs
+  also merge into one adapter that works across all three harnesses.
 triage: null
 skip_reason: null
 source: huggingface
@@ -14,7 +19,7 @@ author: Younes B; Ben Burtenshaw; Nathan Habib; Lysandre; Amine Dirhoussi; Adith
   S K; Shaun Smith; Sergio Paniego; Joel Niklaus; Lewis Tunstall
 published: '2026-11-20'
 fetched: '2026-11-21T06:12:01Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 4536
 content_sha256: 1adf4400e2c63cdb1571e524e8a561eb87c3f8d428fc2a6d7401443851fc14de

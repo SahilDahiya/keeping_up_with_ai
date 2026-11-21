@@ -1,10 +1,13 @@
 ---
 title: Meet bison-1 and groundhog-1, frontier American decision models
 kind: blog
-topic: null
-subtopic: null
+topic: models
+subtopic: releases
 secondary_topics: []
-summary: null
+summary: 'Baseten released bison-1 (31B) and groundhog-1 (26B MoE, ~4B active) decision
+  models built on Google''s Gemma 4, ranking #1 of 19 on the Artificial Analysis Decision
+  Index with 128k context; calibration gains came largely from training on ''soft
+  label'' targets (e.g. 83%/17% probability splits) instead of hard one-hot answers.'
 triage: null
 skip_reason: null
 source: baseten
@@ -12,7 +15,7 @@ url: https://www.baseten.co/blog/meet-bison-1-and-groundhog-1
 author: Charles O'Neill; Max Kirkby; Thomas Villeneuve; Nataly Delcid
 published: '2026-11-20'
 fetched: '2026-11-21T06:06:02Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 737
 content_sha256: 884325241e5d2b1889232533e2ca1329d7d66a7e4b917bbb10c00202d2b8d7a7

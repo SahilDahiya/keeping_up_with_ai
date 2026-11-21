@@ -1,7 +1,9 @@
 # huggingface
 
-184 articles.
+185 articles.
 
+- **2026-11-20** — [Introducing harness adapters: adapt your favorite model to your harness to improve performance and cost](<../models/fine-tuning/Introducing harness adapters adapt your favorite model to your harness to improve performance and cost.md>) · `fine-tuning` · huggingface
+  Hugging Face trained per-harness LoRA adapters for Qwen3.8-27B using RL (AsyncGRPOTrainer, OpenEnv, Harbor) run inside the actual agent harnesses (pi, OpenCode, Hermes Agent) rather than a reimplemented agent loop, raising pi's Terminal-Bench 2.1 pass@1 from 39% to 55% while cutting average tokens per task from 2.9K to 1.5K; the three LoRAs also merge into one adapter that works across all three harnesses.
 - **2026-11-18** — [Rumble-2-Flash: an open 0.5B speech model for 40+ languages](<../models/fine-tuning/Rumble-2-Flash an open 0.5B speech model for 40+ languages.md>) · `fine-tuning` · huggingface
   HuggingFace/Reson8 release Rumble-2-Flash, a 0.5B ASR model distilled from their larger Rumble-2 using on-policy distillation: the student transcribes its own audio and the teacher scores every token, with GOLD aligning the mismatched Qwen3-ASR-derived tokenizers between teacher and student. It hits 6.96% multilingual WER (beating 7B/15x-larger omniASR-LLM and Whisper large-v3), over 7,000 RTFx throughput, and 7.86% WER on a 302-hour call-center benchmark, on par with NVIDIA's 30B Nemotron 3.5 Transcribe.
 - **2026-11-16** — [Hugging Face and OpenRouter join forces to make open-weight models easy to run](<../inference/optimization/Hugging Face and OpenRouter join forces to make open-weight models easy to run.md>) · `optimization` · huggingface

@@ -1,10 +1,14 @@
 ---
 title: Improved controls for the new era of cyberattacks
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: product-engineering
+subtopic: security
+secondary_topics:
+- evals-observability/monitoring
+summary: Baseten outlines how autonomous agent swarms have shifted cyberattacks to
+  agent-speed (minutes-long exfiltration, automated zero-day exploitation, LLMJacking
+  of GPU capacity), and how it responds with AI-assisted detection/response, defense-in-depth
+  isolation of customer workloads, and agentic red-teaming via OpenAI's Daybreak Red.
 triage: null
 skip_reason: null
 source: baseten
@@ -12,7 +16,7 @@ url: https://www.baseten.co/blog/improved-controls-for-the-new-era-of-cyberattac
 author: Sameer Paranjpye; Kabir Sikand
 published: '2026-11-20'
 fetched: '2026-11-21T06:06:06Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 895
 content_sha256: 8a4a892aa4a0d365a5338fff52befd7dc882b6564f18f502c2c859e566a122f4

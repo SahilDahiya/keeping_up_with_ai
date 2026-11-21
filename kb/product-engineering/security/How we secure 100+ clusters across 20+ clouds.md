@@ -1,10 +1,15 @@
 ---
 title: How we secure 100+ clusters across 20+ clouds
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: product-engineering
+subtopic: security
+secondary_topics:
+- infra-platform/gpu-clusters
+summary: 'Baseten describes its multi-cloud security architecture across 100+ clusters
+  and 20+ providers: a four-boundary threat model (infrastructure, operating partners,
+  workloads, internal access), handover hardening (closed ports, allowlisted Kubernetes
+  API, key-only SSH with MFA and no long-lived credentials), and a cluster checklist
+  readers can apply to their own fleets.'
 triage: null
 skip_reason: null
 source: baseten
@@ -12,7 +17,7 @@ url: https://www.baseten.co/blog/how-we-secure-100-clusters-across-25-clouds
 author: Stephen Day; Hao Wu
 published: '2026-11-20'
 fetched: '2026-11-21T06:06:04Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1886
 content_sha256: b7a33b8fec22cad34a33400501d3c69f24d40038d954337bbeae62826ead647e

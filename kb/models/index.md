@@ -1,7 +1,13 @@
 # models
 
-321 articles.
+324 articles.
 
+- **2026-11-20** — [Introducing harness adapters: adapt your favorite model to your harness to improve performance and cost](<fine-tuning/Introducing harness adapters adapt your favorite model to your harness to improve performance and cost.md>) · `fine-tuning` · huggingface
+  Hugging Face trained per-harness LoRA adapters for Qwen3.8-27B using RL (AsyncGRPOTrainer, OpenEnv, Harbor) run inside the actual agent harnesses (pi, OpenCode, Hermes Agent) rather than a reimplemented agent loop, raising pi's Terminal-Bench 2.1 pass@1 from 39% to 55% while cutting average tokens per task from 2.9K to 1.5K; the three LoRAs also merge into one adapter that works across all three harnesses.
+- **2026-11-20** — [Meet bison-1 and groundhog-1, frontier American decision models](<releases/Meet bison-1 and groundhog-1, frontier American decision models.md>) · `releases` · baseten
+  Baseten released bison-1 (31B) and groundhog-1 (26B MoE, ~4B active) decision models built on Google's Gemma 4, ranking #1 of 19 on the Artificial Analysis Decision Index with 128k context; calibration gains came largely from training on 'soft label' targets (e.g. 83%/17% probability splits) instead of hard one-hot answers.
+- **2026-11-20** — [Qwen3 TTS is now available on Together AI](<releases/Qwen3 TTS is now available on Together AI.md>) · `releases` · together
+  Together AI is serving Qwen3 TTS, an open text-to-speech model with nine preset voices controllable by plain-language delivery instructions across 10 languages, at $20 per 1M characters; Together's tuned serving stack achieves time-to-first-audio as low as 97ms via HTTP streaming and a WebSocket API for incrementally arriving text.
 - **2026-11-19** — [Tencent Hy4 is live on Together AI](<releases/Tencent Hy4 is live on Together AI.md>) · `releases` · together
   Tencent's Hy4 -- a 770B-parameter MoE model (49B active per token) with a 1M-token context window and its family's first image input -- launched on Together Serverless Inference at $0.83/$2.50 per 1M input/output tokens; Together's tests show it accurately extracting chart data from a screenshot and rebuilding the chart as HTML, and writing a working browser game from a single prompt.
 - **2026-11-18** — [Rumble-2-Flash: an open 0.5B speech model for 40+ languages](<fine-tuning/Rumble-2-Flash an open 0.5B speech model for 40+ languages.md>) · `fine-tuning` · huggingface

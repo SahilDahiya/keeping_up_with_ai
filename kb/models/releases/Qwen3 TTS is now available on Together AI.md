@@ -1,10 +1,15 @@
 ---
 title: Qwen3 TTS is now available on Together AI
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: models
+subtopic: releases
+secondary_topics:
+- inference/serving
+summary: Together AI is serving Qwen3 TTS, an open text-to-speech model with nine
+  preset voices controllable by plain-language delivery instructions across 10 languages,
+  at $20 per 1M characters; Together's tuned serving stack achieves time-to-first-audio
+  as low as 97ms via HTTP streaming and a WebSocket API for incrementally arriving
+  text.
 triage: null
 skip_reason: null
 source: together
@@ -12,7 +17,7 @@ url: https://www.together.ai/blog/qwen3-tts
 author: Anthony Ji; Charles Duong; Sebastien Beurnier; Sahil Yadav; Sonny Khan
 published: '2026-11-20'
 fetched: '2026-11-21T06:06:18Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1228
 content_sha256: 8f1de87cf4f54e6e555234702bb60d2589ab16f52fe9694e1c00895d91dc28fb

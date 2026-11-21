@@ -1,10 +1,15 @@
 ---
 title: Time awareness and async input for personal agents | OpenAI Developers
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: agents
+subtopic: tool-use
+secondary_topics:
+- prompt-engineering/context-engineering
+summary: OpenAI's Agents API combines 'time awareness' (periodic current-time reminders
+  injected as developer messages so a model can budget remaining work against a deadline)
+  with async function tools (e.g. request_user_input_async) that let an agent keep
+  researching while waiting on a user's reply, with worked Python code for a meeting-briefing
+  agent that delivers a result even if the user never answers.
 triage: null
 skip_reason: null
 source: openai-devs
@@ -12,7 +17,7 @@ url: https://developers.openai.com/blog/time-awareness-and-async-input-for-perso
 author: null
 published: '2026-11-20'
 fetched: '2026-11-21T06:06:16Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 3486
 content_sha256: dad4f5115422866ec28993fbf25c7b4cbd46714bb8fb9e9fc2aa696db2a8310c

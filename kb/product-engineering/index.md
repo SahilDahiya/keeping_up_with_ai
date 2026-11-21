@@ -1,7 +1,11 @@
 # product-engineering
 
-110 articles.
+112 articles.
 
+- **2026-11-20** — [How we secure 100+ clusters across 20+ clouds](<security/How we secure 100+ clusters across 20+ clouds.md>) · `security` · baseten
+  Baseten describes its multi-cloud security architecture across 100+ clusters and 20+ providers: a four-boundary threat model (infrastructure, operating partners, workloads, internal access), handover hardening (closed ports, allowlisted Kubernetes API, key-only SSH with MFA and no long-lived credentials), and a cluster checklist readers can apply to their own fleets.
+- **2026-11-20** — [Improved controls for the new era of cyberattacks](<security/Improved controls for the new era of cyberattacks.md>) · `security` · baseten
+  Baseten outlines how autonomous agent swarms have shifted cyberattacks to agent-speed (minutes-long exfiltration, automated zero-day exploitation, LLMJacking of GPU capacity), and how it responds with AI-assisted detection/response, defense-in-depth isolation of customer workloads, and agentic red-teaming via OpenAI's Daybreak Red.
 - **2026-11-19** — [How Abundant designed efficient rollout architecture with Modal Sandboxes | Modal Blog](<case-studies/How Abundant designed efficient rollout architecture with Modal Sandboxes Modal Blog.md>) · `case-studies` · modal
   Abundant built RL training-environment rollout infrastructure (75,000+ rollouts/month, 2M+ Modal Sandboxes/month) using Modal Sandboxes with a 30-second heartbeat monitor, CPU/memory 'bursting' to cut idle-compute costs, and anti-reward-hacking verifier design that deletes task instructions and uses a reviewer agent to catch evaluation-awareness.
 - **2026-11-18** — [Building secure mobile apps in the agentic era (2026)](<security/Building secure mobile apps in the agentic era (2026).md>) · `security` · shopify

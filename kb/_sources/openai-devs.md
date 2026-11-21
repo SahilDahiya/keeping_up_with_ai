@@ -1,7 +1,11 @@
 # openai-devs
 
-30 articles.
+32 articles.
 
+- **2026-11-20** — [Time awareness and async input for personal agents | OpenAI Developers](<../agents/tool-use/Time awareness and async input for personal agents OpenAI Developers.md>) · `tool-use` · openai-devs
+  OpenAI's Agents API combines 'time awareness' (periodic current-time reminders injected as developer messages so a model can budget remaining work against a deadline) with async function tools (e.g. request_user_input_async) that let an agent keep researching while waiting on a user's reply, with worked Python code for a meeting-briefing agent that delivers a result even if the user never answers.
+- **2026-11-20** — [How I stay in the flow with Ultrafast | OpenAI Developers](<../prompt-engineering/techniques/How I stay in the flow with Ultrafast OpenAI Developers.md>) · `techniques` · openai-devs
+  An OpenAI engineer's workflow for Codex's Ultrafast tier (4.5x faster token generation): keep tasks short, start at Light/Low reasoning and raise it only for nuanced edits, and separate quick iteration from verification; a benchmarked Android-timer task (16.7s standard vs 15.7s ultrafast, with ~13s of that spent in build/test) shows speedups only help the token-generation-bound portion of a task, not tool-call- or build-bound time.
 - **2026-11-19** — [Prompting GPT-Live for languages and regional accents | OpenAI Developers](<../prompt-engineering/techniques/Prompting GPT-Live for languages and regional accents OpenAI Developers.md>) · `techniques` · openai-devs
   OpenAI's guide to prompting GPT-Live voice agents for regional accents: selecting built-in voices (e.g. Nira for Hindi-influenced English), using prompt-to-voice with detailed accent/script_hint descriptions to generate custom voices (Peninsular Castilian Spanish, Emirati Arabic), and separating voice-sound design from session-instruction behavior.
 - **2026-11-12** — [Securing persistent agents like OpenClaw at OpenAI](<../product-engineering/security/Securing persistent agents like OpenClaw at OpenAI.md>) · `security` · openai-devs

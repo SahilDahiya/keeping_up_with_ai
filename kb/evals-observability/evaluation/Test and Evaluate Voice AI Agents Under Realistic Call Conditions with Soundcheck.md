@@ -1,10 +1,13 @@
 ---
 title: Test and Evaluate Voice AI Agents Under Realistic Call Conditions with Soundcheck
 kind: blog
-topic: null
-subtopic: null
+topic: evals-observability
+subtopic: evaluation
 secondary_topics: []
-summary: null
+summary: Cresta's Soundcheck adds voice-condition simulation (accents, interruptions,
+  background noise, 8kHz vs 16kHz audio, network packet loss) to agent test cases,
+  paired with voice evaluators that score barge-in, time-to-first-audio latency, unresponsiveness,
+  word error rate, and gibberish separately from content-accuracy evaluators.
 triage: null
 skip_reason: null
 source: cresta
@@ -12,7 +15,7 @@ url: https://cresta.com/blog/test-and-evaluate-voice-ai-agents-under-real-call-c
 author: Ping Wu
 published: '2026-11-19'
 fetched: '2026-11-21T06:05:59Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 956
 content_sha256: b43947db0c77ac4718ac94fb7106abb32d23761fc65d391730bfd8b28dc9bcfd

@@ -1,7 +1,9 @@
 # agents
 
-146 articles.
+147 articles.
 
+- **2026-11-20** — [Time awareness and async input for personal agents | OpenAI Developers](<tool-use/Time awareness and async input for personal agents OpenAI Developers.md>) · `tool-use` · openai-devs
+  OpenAI's Agents API combines 'time awareness' (periodic current-time reminders injected as developer messages so a model can budget remaining work against a deadline) with async function tools (e.g. request_user_input_async) that let an agent keep researching while waiting on a user's reply, with worked Python code for a meeting-briefing agent that delivers a result even if the user never answers.
 - **2026-11-19** — [Deferred tool loading: Make your agent 62.5% cheaper without changing your model or harness](<tool-use/Deferred tool loading Make your agent 62.5% cheaper without changing your model or harness.md>) · `tool-use` · baseten
   Baseten added deferred tool loading (just-in-time tool schema retrieval via a tool_search call) to open models like GLM 5.3, DeepSeek, and Kimi on Baseten Model APIs, cutting Claude Code coding-benchmark costs 62.5% and latency 26.2%, and agentic-benchmark costs 51.1%, by keeping ~141k tokens of tool schemas out of the system prompt until the model actually needs them.
 - **2026-11-16** — [Durable Pydantic AI agents with Azure Durable Task](<harness/Durable Pydantic AI agents with Azure Durable Task.md>) · `harness` · pydantic
@@ -297,6 +299,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-11-20** — [Introducing harness adapters: adapt your favorite model to your harness to improve performance and cost](<../models/fine-tuning/Introducing harness adapters adapt your favorite model to your harness to improve performance and cost.md>) · `fine-tuning` · huggingface
+  Hugging Face trained per-harness LoRA adapters for Qwen3.8-27B using RL (AsyncGRPOTrainer, OpenEnv, Harbor) run inside the actual agent harnesses (pi, OpenCode, Hermes Agent) rather than a reimplemented agent loop, raising pi's Terminal-Bench 2.1 pass@1 from 39% to 55% while cutting average tokens per task from 2.9K to 1.5K; the three LoRAs also merge into one adapter that works across all three harnesses.
 - **2026-11-18** — [Building secure mobile apps in the agentic era (2026)](<../product-engineering/security/Building secure mobile apps in the agentic era (2026).md>) · `security` · shopify
   Shopify built an agentic mobile-app security review system -- one OWASP MASVS/MASTG-based skill per attack surface (deep links, WebViews, stored data, dependencies), each item reviewed individually with only its own code -- that runs daily to catch vulnerabilities as code throughput rose 11x (434k LOC/week) after moving to agent-written mobile code.
 - **2026-11-17** — [What MiniMax M3.1 Flash reveals about choosing and combining models](<../models/benchmarks/What MiniMax M3.1 Flash reveals about choosing and combining models.md>) · `benchmarks` · fireworks
