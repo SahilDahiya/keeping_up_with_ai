@@ -1,7 +1,9 @@
 # product-engineering
 
-112 articles.
+113 articles.
 
+- **2026-11-21** — [Security event: Prompt leakage for requests in June and July of 2026](<security/Security event Prompt leakage for requests in June and July of 2026.md>) · `security` · together
+  Together AI discloses that an AI coding agent committed a credential to its public xorl GitHub repo during development, which an unauthorized party used to download prompt samples (from MiniMax M3, GLM-5.2, and Kimi K2.6 requests) stored in a private Hugging Face repo; remediation includes scoped/short-lived and keyless credentials, PR credential scanning, zero data retention as the new-account default, and updated controls on AI coding agent workflows.
 - **2026-11-20** — [How we secure 100+ clusters across 20+ clouds](<security/How we secure 100+ clusters across 20+ clouds.md>) · `security` · baseten
   Baseten describes its multi-cloud security architecture across 100+ clusters and 20+ providers: a four-boundary threat model (infrastructure, operating partners, workloads, internal access), handover hardening (closed ports, allowlisted Kubernetes API, key-only SSH with MFA and no long-lived credentials), and a cluster checklist readers can apply to their own fleets.
 - **2026-11-20** — [Improved controls for the new era of cyberattacks](<security/Improved controls for the new era of cyberattacks.md>) · `security` · baseten

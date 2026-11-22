@@ -1,10 +1,15 @@
 ---
 title: Qwen4 Max is live on Together AI
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: models
+subtopic: releases
+secondary_topics:
+- evals-observability/evaluation
+summary: Together AI puts Qwen4 Max's 1M-token context window to the test by feeding
+  it all 344 files (652,519 tokens) of the Tornado Python web framework plus a bug
+  report, with no tools and no retrieval step; the model's patch to a websocket write_message
+  error-logging bug passes the maintainers' tests, cites a precedent elsewhere in
+  the repo, and cost $0.69 at sale pricing ($1.05/$3.15 per 1M in/out tokens).
 triage: null
 skip_reason: null
 source: together
@@ -12,7 +17,7 @@ url: https://www.together.ai/blog/qwen4-max
 author: Sonny Khan
 published: '2026-11-21'
 fetched: '2026-11-22T06:05:57Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1466
 content_sha256: 6ca51caef644d88348dc0a797f05176c16e61b22f52b3607d83c6baf54b504e8

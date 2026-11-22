@@ -1,10 +1,16 @@
 ---
 title: 'Security event: Prompt leakage for requests in June and July of 2026'
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: product-engineering
+subtopic: security
+secondary_topics:
+- agents/tool-use
+summary: Together AI discloses that an AI coding agent committed a credential to its
+  public xorl GitHub repo during development, which an unauthorized party used to
+  download prompt samples (from MiniMax M3, GLM-5.2, and Kimi K2.6 requests) stored
+  in a private Hugging Face repo; remediation includes scoped/short-lived and keyless
+  credentials, PR credential scanning, zero data retention as the new-account default,
+  and updated controls on AI coding agent workflows.
 triage: null
 skip_reason: null
 source: together
@@ -12,7 +18,7 @@ url: https://www.together.ai/blog/security-event-prompt-leakage-for-requests-in-
 author: Vipul Ved Prakash
 published: '2026-11-21'
 fetched: '2026-11-22T06:05:55Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 391
 content_sha256: 582a3ac4a087161ca565baf453526446a7bef4335bd38474b4193fae3b9d5908

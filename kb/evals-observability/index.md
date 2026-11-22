@@ -317,6 +317,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-11-21** — [Qwen4 Max is live on Together AI](<../models/releases/Qwen4 Max is live on Together AI.md>) · `releases` · together
+  Together AI puts Qwen4 Max's 1M-token context window to the test by feeding it all 344 files (652,519 tokens) of the Tornado Python web framework plus a bug report, with no tools and no retrieval step; the model's patch to a websocket write_message error-logging bug passes the maintainers' tests, cites a precedent elsewhere in the repo, and cost $0.69 at sale pricing ($1.05/$3.15 per 1M in/out tokens).
 - **2026-11-20** — [Improved controls for the new era of cyberattacks](<../product-engineering/security/Improved controls for the new era of cyberattacks.md>) · `security` · baseten
   Baseten outlines how autonomous agent swarms have shifted cyberattacks to agent-speed (minutes-long exfiltration, automated zero-day exploitation, LLMJacking of GPU capacity), and how it responds with AI-assisted detection/response, defense-in-depth isolation of customer workloads, and agentic red-teaming via OpenAI's Daybreak Red.
 - **2026-11-18** — [Building secure mobile apps in the agentic era (2026)](<../product-engineering/security/Building secure mobile apps in the agentic era (2026).md>) · `security` · shopify

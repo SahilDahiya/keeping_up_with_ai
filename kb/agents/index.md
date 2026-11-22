@@ -299,6 +299,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-11-21** — [Security event: Prompt leakage for requests in June and July of 2026](<../product-engineering/security/Security event Prompt leakage for requests in June and July of 2026.md>) · `security` · together
+  Together AI discloses that an AI coding agent committed a credential to its public xorl GitHub repo during development, which an unauthorized party used to download prompt samples (from MiniMax M3, GLM-5.2, and Kimi K2.6 requests) stored in a private Hugging Face repo; remediation includes scoped/short-lived and keyless credentials, PR credential scanning, zero data retention as the new-account default, and updated controls on AI coding agent workflows.
 - **2026-11-20** — [Introducing harness adapters: adapt your favorite model to your harness to improve performance and cost](<../models/fine-tuning/Introducing harness adapters adapt your favorite model to your harness to improve performance and cost.md>) · `fine-tuning` · huggingface
   Hugging Face trained per-harness LoRA adapters for Qwen3.8-27B using RL (AsyncGRPOTrainer, OpenEnv, Harbor) run inside the actual agent harnesses (pi, OpenCode, Hermes Agent) rather than a reimplemented agent loop, raising pi's Terminal-Bench 2.1 pass@1 from 39% to 55% while cutting average tokens per task from 2.9K to 1.5K; the three LoRAs also merge into one adapter that works across all three harnesses.
 - **2026-11-18** — [Building secure mobile apps in the agentic era (2026)](<../product-engineering/security/Building secure mobile apps in the agentic era (2026).md>) · `security` · shopify

@@ -1,7 +1,11 @@
 # together
 
-106 articles.
+108 articles.
 
+- **2026-11-21** — [Qwen4 Max is live on Together AI](<../models/releases/Qwen4 Max is live on Together AI.md>) · `releases` · together
+  Together AI puts Qwen4 Max's 1M-token context window to the test by feeding it all 344 files (652,519 tokens) of the Tornado Python web framework plus a bug report, with no tools and no retrieval step; the model's patch to a websocket write_message error-logging bug passes the maintainers' tests, cites a precedent elsewhere in the repo, and cost $0.69 at sale pricing ($1.05/$3.15 per 1M in/out tokens).
+- **2026-11-21** — [Security event: Prompt leakage for requests in June and July of 2026](<../product-engineering/security/Security event Prompt leakage for requests in June and July of 2026.md>) · `security` · together
+  Together AI discloses that an AI coding agent committed a credential to its public xorl GitHub repo during development, which an unauthorized party used to download prompt samples (from MiniMax M3, GLM-5.2, and Kimi K2.6 requests) stored in a private Hugging Face repo; remediation includes scoped/short-lived and keyless credentials, PR credential scanning, zero data retention as the new-account default, and updated controls on AI coding agent workflows.
 - **2026-11-20** — [Qwen3 TTS is now available on Together AI](<../models/releases/Qwen3 TTS is now available on Together AI.md>) · `releases` · together
   Together AI is serving Qwen3 TTS, an open text-to-speech model with nine preset voices controllable by plain-language delivery instructions across 10 languages, at $20 per 1M characters; Together's tuned serving stack achieves time-to-first-audio as low as 97ms via HTTP streaming and a WebSocket API for incrementally arriving text.
 - **2026-11-19** — [Tencent Hy4 is live on Together AI](<../models/releases/Tencent Hy4 is live on Together AI.md>) · `releases` · together

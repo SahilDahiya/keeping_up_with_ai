@@ -1,7 +1,9 @@
 # models
 
-324 articles.
+325 articles.
 
+- **2026-11-21** — [Qwen4 Max is live on Together AI](<releases/Qwen4 Max is live on Together AI.md>) · `releases` · together
+  Together AI puts Qwen4 Max's 1M-token context window to the test by feeding it all 344 files (652,519 tokens) of the Tornado Python web framework plus a bug report, with no tools and no retrieval step; the model's patch to a websocket write_message error-logging bug passes the maintainers' tests, cites a precedent elsewhere in the repo, and cost $0.69 at sale pricing ($1.05/$3.15 per 1M in/out tokens).
 - **2026-11-20** — [Introducing harness adapters: adapt your favorite model to your harness to improve performance and cost](<fine-tuning/Introducing harness adapters adapt your favorite model to your harness to improve performance and cost.md>) · `fine-tuning` · huggingface
   Hugging Face trained per-harness LoRA adapters for Qwen3.8-27B using RL (AsyncGRPOTrainer, OpenEnv, Harbor) run inside the actual agent harnesses (pi, OpenCode, Hermes Agent) rather than a reimplemented agent loop, raising pi's Terminal-Bench 2.1 pass@1 from 39% to 55% while cutting average tokens per task from 2.9K to 1.5K; the three LoRAs also merge into one adapter that works across all three harnesses.
 - **2026-11-20** — [Meet bison-1 and groundhog-1, frontier American decision models](<releases/Meet bison-1 and groundhog-1, frontier American decision models.md>) · `releases` · baseten
