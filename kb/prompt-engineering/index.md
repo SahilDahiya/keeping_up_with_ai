@@ -1,6 +1,6 @@
 # prompt-engineering
 
-29 articles.
+31 articles.
 
 - **2026-11-20** — [How I stay in the flow with Ultrafast | OpenAI Developers](<techniques/How I stay in the flow with Ultrafast OpenAI Developers.md>) · `techniques` · openai-devs
   An OpenAI engineer's workflow for Codex's Ultrafast tier (4.5x faster token generation): keep tasks short, start at Light/Low reasoning and raise it only for nuanced edits, and separate quick iteration from verification; a benchmarked Android-timer task (16.7s standard vs 15.7s ultrafast, with ~13s of that spent in build/test) shows speedups only help the token-generation-bound portion of a task, not tool-call- or build-bound time.
@@ -40,6 +40,10 @@
   Explains the implementation behind guaranteed-schema structured output and function calling in a customized NVIDIA Triton server: building a state machine over a JSON schema and using pre-computed logit-bias token masks with no TPS penalty.
 - **2024-09-12** — [How to build function calling and JSON mode for open-source and fine-tuned LLMs](<structured-output/How to build function calling and JSON mode for open-source and fine-tuned LLMs.md>) · `structured-output` · baseten
   Shows how to build function calling and JSON mode for open-source and fine-tuned LLMs.
+- **2024-09-12** — [Introducing function calling and structured output for open-source and fine-tuned LLMs](<structured-output/Introducing function calling and structured output for open-source and fine-tuned LLMs.md>) · `structured-output` · baseten
+  Adds JSON-mode structured output and function calling to the TensorRT-LLM Engine Builder with no marginal tokens-per-second cost, addressing the reliability gap between LLMs' unstructured generation and compound AI workflows that need guaranteed schema-matching output.
+- **2024-08-16** — [SPC hackathon winners build with Llama 3.1 on Baseten](<context-engineering/SPC hackathon winners build with Llama 3.1 on Baseten.md>) · `context-engineering` · baseten
+  Hackathon-winning tool TestNinja used deterministic Python code to build a dependency graph around a PR's modified lines and passed that graph (rather than raw diffs or the whole codebase) as context to Llama 3.1 405B for test generation.
 - **2024-04-30** — [Improving Prompt Consistency with Structured Generations](<structured-output/Improving Prompt Consistency with Structured Generations.md>) · `structured-output` · huggingface
   HF's leaderboards team and dottxt show that eval scores swing wildly with tiny prompt-format changes, and that forcing structured generation (Outlines' regex/JSON-constrained decoding) sharply reduces that variance across prompt formats on GSM8K-style tasks.
 - **2024-04-04** — [Text2SQL using Hugging Face Dataset Viewer API and Motherduck DuckDB-NSQL-7B](<structured-output/Text2SQL using Hugging Face Dataset Viewer API and Motherduck DuckDB-NSQL-7B.md>) · `structured-output` · huggingface
@@ -65,6 +69,8 @@
 
 - **2026-11-20** — [Time awareness and async input for personal agents | OpenAI Developers](<../agents/tool-use/Time awareness and async input for personal agents OpenAI Developers.md>) · `tool-use` · openai-devs
   OpenAI's Agents API combines 'time awareness' (periodic current-time reminders injected as developer messages so a model can budget remaining work against a deadline) with async function tools (e.g. request_user_input_async) that let an agent keep researching while waiting on a user's reply, with worked Python code for a meeting-briefing agent that delivers a result even if the user never answers.
+- **2026-11-19** — [Deferred tool loading: Make your agent 62.5% cheaper without changing your model or harness](<../agents/harness/Deferred tool loading Make your agent 62.5% cheaper without changing your model or harness.md>) · `harness` · baseten
+  Deferred (just-in-time) tool loading retrieves MCP tool schemas on demand instead of preloading all of them into context, cutting coding-agent costs 62.5% and latency 26% on open models (DeepSeek, Kimi, GLM) with no model or harness change.
 - **2026-11-19** — [Deferred tool loading: Make your agent 62.5% cheaper without changing your model or harness](<../agents/tool-use/Deferred tool loading Make your agent 62.5% cheaper without changing your model or harness.md>) · `tool-use` · baseten
   Baseten added deferred tool loading (just-in-time tool schema retrieval via a tool_search call) to open models like GLM 5.3, DeepSeek, and Kimi on Baseten Model APIs, cutting Claude Code coding-benchmark costs 62.5% and latency 26.2%, and agentic-benchmark costs 51.1%, by keeping ~141k tokens of tool schemas out of the system prompt until the model actually needs them.
 - **2026-09-29** — [Pydantic AI agents on Jev, traced in Logfire](<../evals-observability/tracing/Pydantic AI agents on Jev, traced in Logfire.md>) · `tracing` · pydantic

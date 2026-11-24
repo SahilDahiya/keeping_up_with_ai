@@ -1,9 +1,11 @@
 # infra-platform
 
-78 articles.
+98 articles.
 
 - **2026-11-19** — [Introducing Together Storage Accelerator: fast, free data caching for your GPU cluster](<gpu-clusters/Introducing Together Storage Accelerator fast, free data caching for your GPU cluster.md>) · `gpu-clusters` · together
   Together AI launched Together Storage Accelerator (TSA), a free distributed NVMe caching layer (built on its ASTRA transport) in front of S3/R2/Hugging Face Hub for GPU clusters, measuring ~20x faster warm reads (3.4 GB/s/node vs 143-169 MB/s cross-cloud), 60-80x lower latency on small files, and a single origin fetch for 200 nodes pulling the same checkpoint.
+- **2026-11-16** — [Introducing the Baseten Voice Agent Stack: own and optimize voice agents end-to-end](<deployment/Introducing the Baseten Voice Agent Stack own and optimize voice agents end-to-end.md>) · `deployment` · baseten
+  The Baseten Voice Agent Stack runs a voice agent's orchestrator and every model over a tight in-cluster network for sub-second median turn latency at high concurrency, scaling each pipeline component independently and supporting the OpenAI Realtime protocol at ~$0.01/audio minute.
 - **2026-11-12** — [Sandbox resourcing: burst, don't reserve](<cost/Sandbox resourcing burst, don't reserve.md>) · `cost` · modal
   Explains Modal's active-resource (bursting) pricing for Sandboxes used by coding agents, RL rollouts, and evals, which spend most of their life under 6% peak CPU; shows a billing model and calculator claiming ~58% savings over fixed-size reservations, plus limit/eviction tradeoffs and SLOs for OOM rates.
 - **2026-11-06** — [The platform for inference, training, and execution | Baseten](<gpu-clusters/The platform for inference, training, and execution Baseten.md>) · `gpu-clusters` · baseten
@@ -64,6 +66,8 @@
   Explains rolling deployments for zero-downtime model updates in production serving systems.
 - **2026-06-09** — [AI spend is the new headcount: why cost control is an observability problem](<cost/AI spend is the new headcount why cost control is an observability problem.md>) · `cost` · pydantic
   Frames LLM/agent spend as headcount-shaped (usage-scaled, salary-magnitude) rather than SaaS-shaped, arguing cost governance is really an observability problem: attribute spend per agent, per user, per session from traces (via the genai-prices dataset) and ask 'was this run worth what it cost?'.
+- **2026-05-27** — [Powering Inference for the Continual Learning Era](<deployment/Powering Inference for the Continual Learning Era (baseten).md>) · `deployment` · baseten
+  Explores what breaks in inference serving (quantization, speculative decoding, KV/prefix caching all assume stable weights) when models continually retrain from production traces, requiring checkpoint-to-live-endpoint deploy cycles measured in minutes rather than the usual quarterly release cadence.
 - **2026-05-27** — [Powering Inference for the Continual Learning Era](<deployment/Powering Inference for the Continual Learning Era.md>) · `deployment` · baseten
   Describes the serving pipeline Baseten built with Trajectory to take a LoRA adapter from a finished training run straight to a live OpenAI-compatible endpoint within minutes, since continual-learning products need per-customer model variants redeployed on an hourly checkpoint cadence rather than treating weights as stable.
 - **2026-05-27** — [Reachy Mini goes fully local](<edge/Reachy Mini goes fully local.md>) · `edge` · huggingface
@@ -106,8 +110,12 @@
   Engineering writeup on cloud GPU notebooks that boot quickly, covering startup paths, state, and execution isolation.
 - **2025-07-16** — [Dollars per token considered harmful](<cost/Dollars per token considered harmful.md>) · `cost` · modal
   Critiques dollars-per-token as an inference cost metric and explains why workload shape, latency, and utilization matter more.
+- **2025-06-23** — [How we built Multi-cloud Capacity Management (MCM)](<gpu-clusters/How we built Multi-cloud Capacity Management (MCM) (baseten).md>) · `gpu-clusters` · baseten
+  Describes building Multi-cloud Capacity Management, a six-month engineering effort unifying GPUs across 20+ clouds/regions into one fungible pool with autoscaling, failover, and latency-aware routing to eliminate single points of failure.
 - **2025-06-23** — [How we built Multi-cloud Capacity Management (MCM)](<gpu-clusters/How we built Multi-cloud Capacity Management (MCM).md>) · `gpu-clusters` · baseten
   Describes Multi-cloud Capacity Management (MCM), a bin-packing orchestration layer unifying GPUs across 20+ clouds/regions into one fungible pool with self-healing failover, built over six months to unlock scarce SKUs like B200s.
+- **2025-06-09** — [How Baseten multi-cloud capacity management (MCM) unifies deployments](<gpu-clusters/How Baseten multi-cloud capacity management (MCM) unifies deployments.md>) · `gpu-clusters` · baseten
+  Baseten's MCM control layer provisions and scales GPUs across 20+ clouds/regions through three deployment modes (managed, self-hosted, hybrid-burst), delivering 99.99% uptime via active-active reliability.
 - **2025-05-07** — [Linear programming for fun and profit](<cost/Linear programming for fun and profit.md>) · `cost` · modal
   Shows how linear programming can allocate compute resources under constraints, useful for GPU scheduling and cost control.
 - **2025-03-07** — [LLM Inference on Edge: A Fun and Easy Guide to run LLMs via React Native on your Phone!](<edge/LLM Inference on Edge A Fun and Easy Guide to run LLMs via React Native on your Phone!.md>) · `edge` · huggingface
@@ -116,14 +124,22 @@
   Architecture note on routing incoming voice traffic with customer-specific subdomains in a production voice platform.
 - **2025-02-13** — [1 Billion Classifications](<cost/1 Billion Classifications.md>) · `cost` · huggingface
   Works through the actual cost and latency math of running 1 billion text classifications with encoder models (gte-modernbert-base), comparing batch inference vs heavy-usage serving across hardware and optimizations (ONNX, TensorRT, quantization). Includes a reproducible encoder-analysis repo and per-configuration cost tables.
+- **2025-02-06** — [Baseten Chains is now GA for production compound AI systems](<deployment/Baseten Chains is now GA for production compound AI systems.md>) · `deployment` · baseten
+  Baseten Chains SDK reaches GA for deploying compound AI systems, addressing model orchestration, latency, reliability, and cost problems of multi-model pipelines with per-step hardware and autoscaling.
 - **2025-01-28** — [How Cresta Scales Real-Time Insights with ClickHouse](<deployment/How Cresta Scales Real-Time Insights with ClickHouse.md>) · `deployment` · cresta
   Architecture case study on scaling real-time AI insights with ClickHouse for high-volume conversation analytics.
 - **2025-01-28** — [Memory snapshots: Checkpoint and restore for sub-second startup](<deployment/Memory snapshots Checkpoint and restore for sub-second startup.md>) · `deployment` · modal
   Explains memory snapshots as checkpoint/restore infrastructure for faster startup in serverless AI workloads.
 - **2025-01-28** — [Private, secure DeepSeek-R1 in production in US & EU data centers](<deployment/Private, secure DeepSeek-R1 in production in US & EU data centers.md>) · `deployment` · baseten
   Lays out dedicated and self-hosted VPC deployment options for DeepSeek-R1/V3 in US and EU data centers as an alternative to shared third-party endpoints, for teams that need data residency and security guarantees DeepSeek's own API can't provide.
+- **2024-12-05** — [Introducing Custom Servers: Deploy production-ready model servers from Docker images](<deployment/Introducing Custom Servers Deploy production-ready model servers from Docker images.md>) · `deployment` · baseten
+  Custom Servers let teams deploy any pre-built Docker image (e.g. vLLM) directly as an autoscaling model server via a YAML config, as an alternative to Baseten's Python-based Truss packaging.
 - **2024-12-02** — [WireGuard at Modal: Static IPs for serverless containers](<deployment/WireGuard at Modal Static IPs for serverless containers.md>) · `deployment` · modal
   Explains static IP support for serverless containers using WireGuard, relevant to secure networked AI deployments.
+- **2024-11-14** — [Create custom environments for deployments on Baseten](<deployment/Create custom environments for deployments on Baseten.md>) · `deployment` · baseten
+  Custom environments give each model deployment separate testing/staging/benchmarking endpoints with their own autoscaling and promotion (canary) settings and safe rollback to previous versions.
+- **2024-10-31** — [Introducing canary deployments on Baseten](<deployment/Introducing canary deployments on Baseten.md>) · `deployment` · baseten
+  Canary deployments gradually shift traffic to a new model deployment over a customizable time window with automatic rollback, reducing blast radius for risky generative-model rollouts.
 - **2024-10-22** — [Deploying Speech-to-Speech on Hugging Face](<deployment/Deploying Speech-to-Speech on Hugging Face.md>) · `deployment` · huggingface
   Deploys HF's cascaded speech-to-speech pipeline (VAD -> STT -> LLM -> TTS, 6 languages with auto-detect) as a custom Inference Endpoint, covering the handler and websocket/streaming plumbing needed to keep an interactive voice loop responsive.
 - **2024-10-09** — [Scaling AI-based Data Processing with Hugging Face + Dask](<gpu-clusters/Scaling AI-based Data Processing with Hugging Face + Dask.md>) · `gpu-clusters` · huggingface
@@ -132,8 +148,12 @@
   Step-by-step deployment of Llama 3.1 405B (FP8 quantized) on Google Cloud Vertex AI with Hugging Face TGI on an A3 8xH100 node: registering the model, endpoint config, and running online inference with 128k context.
 - **2024-08-13** — [A practitioner's guide to testing and running large GPU clusters for training generative AI models](<gpu-clusters/A practitioner's guide to testing and running large GPU clusters for training generative AI models.md>) · `gpu-clusters` · together
   Practical guide to testing and operating large GPU clusters for generative model training.
+- **2024-07-25** — [Deploying custom ComfyUI workflows as APIs](<deployment/Deploying custom ComfyUI workflows as APIs.md>) · `deployment` · baseten
+  Walks through packaging a custom ComfyUI workflow (with custom nodes/checkpoints) as a production API using Baseten's `build_commands` feature, using a sketch-to-anime style-transfer pipeline as the example.
 - **2024-07-22** — [WWDC 24: Running Mistral 7B with Core ML](<edge/WWDC 24 Running Mistral 7B with Core ML.md>) · `edge` · huggingface
   Reproduces Apple's WWDC'24 Mistral-7B Core ML demo: exporting a Swift-Transformers model, stateful KV cache, multifunction models for prefill vs extend, INT4 block-wise weight quantization, and running across CPU/GPU/ANE on Apple Silicon.
+- **2024-06-27** — [Introducing Baseten Chains](<deployment/Introducing Baseten Chains.md>) · `deployment` · baseten
+  The original Chains beta introduces "Chainlets," user-defined components with independent hardware/autoscaling that compose into compound AI workflows, citing halved processing time and 6x better GPU utilization for text-to-speech pipelines.
 - **2024-06-03** — [On-Demand GPU Deployments vs Serverless and Reserved | Fireworks](<cost/On-Demand GPU Deployments vs Serverless and Reserved Fireworks.md>) · `cost` · fireworks
   Gives concrete guidance on when to graduate from serverless to on-demand/reserved GPU deployments, pegging the economic crossover around 100k+ tokens per minute of sustained traffic.
 - **2024-06-03** — [GPUs on-demand: Not serverless, not reserved, but some third thing](<gpu-clusters/GPUs on-demand Not serverless, not reserved, but some third thing.md>) · `gpu-clusters` · fireworks
@@ -148,19 +168,41 @@
   Deep dive into Modal web infrastructure, including serverless HTTP routing, isolation, and platform architecture.
 - **2024-03-01** — [The benefits of globally distributed infrastructure for model serving](<deployment/The benefits of globally distributed infrastructure for model serving.md>) · `deployment` · baseten
   Explains how multi-cloud and multi-region model-serving architecture improves GPU availability, cost (via per-provider pricing arbitrage), redundancy against provider outages, and latency, citing Baseten's own provider-agnostic routing.
+- **2024-03-01** — [The benefits of globally distributed infrastructure for model serving](<gpu-clusters/The benefits of globally distributed infrastructure for model serving.md>) · `gpu-clusters` · baseten
+  Explains why model-serving infrastructure should be both multi-cloud (access to different GPU types like L4 on GCP vs A10 on AWS) and multi-region, covering the resulting gains in availability, redundancy, latency, cost, and data-residency compliance.
+- **2023-11-09** — [Pinning ML model revisions for compatibility and security](<deployment/Pinning ML model revisions for compatibility and security.md>) · `deployment` · baseten
+  Applies the dependency-pinning practice from package managers to ML model revisions: pin a model's weights/code revision to avoid unexpected breaking changes or newly introduced security vulnerabilities from upstream updates.
+- **2023-07-28** — [AI Infrastructure: Build vs. Buy](<deployment/AI Infrastructure Build vs. Buy.md>) · `deployment` · baseten
+  Breaks down the build-vs-buy decision for ML/AI infrastructure around performance, scalability, and cost-efficiency, with input from Wikimedia's ML director.
+- **2023-07-07** — [Model autoscaling features on Baseten](<deployment/Model autoscaling features on Baseten (baseten).md>) · `deployment` · baseten
+  Explains Baseten's autoscaling model: min/max replica caps, scale-to-zero when minimum replicas is 0, request queueing during traffic bursts beyond max replicas, plus controls for autoscaling window, scale-down delay, and concurrency target.
 - **2023-07-07** — [Model autoscaling features on Baseten](<deployment/Model autoscaling features on Baseten.md>) · `deployment` · baseten
   Explains Baseten's model autoscaling controls: min/max replica counts, scale-to-zero, autoscaling window, scale-down delay, and concurrency target, and how they trade off cost against responsiveness to traffic bursts.
+- **2023-05-23** — [Understanding NVIDIA’s Datacenter GPU line](<gpu-clusters/Understanding NVIDIA’s Datacenter GPU line.md>) · `gpu-clusters` · baseten
+  A guide to decoding NVIDIA datacenter GPU naming (architecture letter, tier number) and mapping specs to model training/fine-tuning/serving needs.
+- **2023-05-22** — [Comparing GPUs across architectures and tiers](<gpu-clusters/Comparing GPUs across architectures and tiers.md>) · `gpu-clusters` · baseten
+  A guide to comparing datacenter GPUs across generations using core count, FLOPS, VRAM, and TDP rather than marketing-driven generational comparisons.
+- **2023-02-17** — [Technical deep dive: Truss live reload](<deployment/Technical deep dive Truss live reload (baseten).md>) · `deployment` · baseten
+  Walks through the technical design of Truss live reload: requirements for persistence across pod restarts, identical prediction-interface behavior between dev and published models, no coupling to external services, and no increase in build time, turning a 3-30 minute deploy loop into an near-instant one.
 - **2023-02-16** — [Technical deep dive: Truss live reload](<deployment/Technical deep dive Truss live reload.md>) · `deployment` · baseten
   Technical design of Truss live reload: hot-swapping model code into a running pod via a decoupled, composable mechanism that survives pod restarts and recovers inline from malformed code, cutting the 3-30 minute deploy loop to near-instant.
+- **2022-12-21** — [Serving four million Riffusion requests in two days](<deployment/Serving four million Riffusion requests in two days (baseten).md>) · `deployment` · baseten
+  When Riffusion was posted to Hacker News hours earlier than planned, its backend handled over 4 million song-generation requests (peaking ~34 req/s) on an A10G-backed autoscaling deployment, requiring infrastructure solutions beyond ordinary autoscaling limits.
 - **2022-12-21** — [Serving four million Riffusion requests in two days](<deployment/Serving four million Riffusion requests in two days.md>) · `deployment` · baseten
   After Riffusion (a fine-tuned Stable Diffusion music model) got scooped onto Hacker News early, Baseten handled 4 million requests peaking at 34 req/s on A10G replicas by scaling to 50 replicas and caching common query responses in Postgres to cut redundant model invocations.
+- **2022-12-08** — [Accelerating model deployment: 100X faster dev loops with development deployments](<deployment/Accelerating model deployment 100X faster dev loops with development deployments.md>) · `deployment` · baseten
+  Baseten's live-reload "development deployments" hot-swap updated model code into a running server in ~3 seconds instead of rebuilding containers, cutting dev-loop iteration time ~100x.
 - **2022-12-05** — [Overcoming communication bottlenecks for decentralized training, part 2](<gpu-clusters/Overcoming communication bottlenecks for decentralized training, part 2.md>) · `gpu-clusters` · together
   Continues the decentralized training discussion with techniques for communication-efficient optimization.
 - **2022-11-30** — [Overcoming communication bottlenecks for decentralized training, part 1](<gpu-clusters/Overcoming communication bottlenecks for decentralized training, part 1.md>) · `gpu-clusters` · together
   Explains communication bottlenecks in decentralized foundation-model training.
+- **2022-08-05** — [Why we built and open-sourced a model serving solution](<deployment/Why we built and open-sourced a model serving solution.md>) · `deployment` · baseten
+  Explains the rationale for building and open-sourcing Truss: bridging the gap between a data scientist's notebook and a production-ready model server, since infra-team bandwidth bottlenecks and dev/prod environment mismatches otherwise stifle ML progress at small companies.
 
 ## Also relevant (filed elsewhere)
 
+- **2026-11-20** — [How we secure 100+ clusters across 20+ clouds](<../product-engineering/security/How we secure 100+ clusters across 20+ clouds (baseten).md>) · `security` · baseten
+  Explains how Baseten hardens 100+ GPU clusters across 20+ clouds (including less-uniform neoclouds with public addresses/open ports) to a consistent security baseline, with a checklist for evaluating a provider's security posture.
 - **2026-11-20** — [How we secure 100+ clusters across 20+ clouds](<../product-engineering/security/How we secure 100+ clusters across 20+ clouds.md>) · `security` · baseten
   Baseten describes its multi-cloud security architecture across 100+ clusters and 20+ providers: a four-boundary threat model (infrastructure, operating partners, workloads, internal access), handover hardening (closed ports, allowlisted Kubernetes API, key-only SSH with MFA and no long-lived credentials), and a cluster checklist readers can apply to their own fleets.
 - **2026-11-19** — [How Abundant designed efficient rollout architecture with Modal Sandboxes | Modal Blog](<../product-engineering/case-studies/How Abundant designed efficient rollout architecture with Modal Sandboxes Modal Blog.md>) · `case-studies` · modal
@@ -179,8 +221,12 @@
   A detailed 2026 comparison of Python agent harness SDKs — Pydantic AI Harness, LangChain Deep Agents, Claude Agent SDK, OpenAI Agents SDK, Codex SDK, OpenHands Software Agent SDK, Strands, and Microsoft Agent Framework — scored on model portability, composability, sandboxes, durable execution engines, context/compaction strategies, approval controls, tracing, and commercial support, with a detailed feature table and picks for different team stacks.
 - **2026-11-09** — [Manage OpenTelemetry Collectors and SDKs | Pydantic Logfire](<../evals-observability/monitoring/Manage OpenTelemetry Collectors and SDKs Pydantic Logfire.md>) · `monitoring` · pydantic
   Pydantic Logfire's new Fleet Management feature lets teams remotely change what OpenTelemetry Collectors and application SDKs (Python, Node.js, Java, .NET, Go) collect and export via OpAMP — adjusting log levels, sampling, and attribute redaction live without redeploys — with versioned, rollout-gated policies that Collectors can reject if incompatible.
+- **2026-11-06** — [The platform for inference, training, and execution](<../models/reinforcement-learning/The platform for inference, training, and execution.md>) · `reinforcement-learning` · baseten
+  Serverless Loops reaches GA as a Tinker-compatible SFT/RL training SDK with one-click deploy-to-production, 256k-context post-training, improved resilience to transient network/GPU failures, and end-to-end RL validation on τ-bench retail/airline/banking tasks.
 - **2026-11-06** — [How Snorkel runs realistic agent simulations with Modal | Modal Blog](<../product-engineering/case-studies/How Snorkel runs realistic agent simulations with Modal Modal Blog.md>) · `case-studies` · modal
   Case study on how Snorkel uses Modal's GPU/CPU sandboxes to run millions of agent-simulation benchmarks per month (coding, infra, ML engineering tasks); adopting Modal's memory/CPU bursting cut their sandbox bill by about 20% by letting under-provisioned sandboxes expand elastically instead of failing or being over-provisioned.
+- **2026-11-05** — [Building the Agent Cloud: Introducing Baseten Sandboxes](<../agents/computer-use/Building the Agent Cloud Introducing Baseten Sandboxes.md>) · `computer-use` · baseten
+  Introduces Baseten Sandboxes, stateful sandboxes for long-horizon agent tasks addressing statefulness (pause/resume without idle compute cost), security isolation for untrusted agent code, and startup latency.
 - **2026-11-05** — [A Closer Look at Phonon TTS. Launching High-Quality On-Device Speech That Tops the Benchmarks.](<../models/multimodal/A Closer Look at Phonon TTS. Launching High-Quality On-Device Speech That Tops the Benchmarks.md>) · `multimodal` · huggingface
   Deep dive on Phonon, a 31-75MB on-device TTS model in the Pocket TTS lineage that generates audio via flow-matching latent autoregression; covers the new multi-backend `ptts` inference runtime (CPU/GPU/NPU, 28ms time-to-first-audio) and its modular Transformers integration, which treats the audio codec as a tokenizer alongside the text tokenizer.
 - **2026-11-04** — [Introducing Baseten Router: a Pareto-optimal model router for coding tasks](<../inference/optimization/Introducing Baseten Router a Pareto-optimal model router for coding tasks.md>) · `optimization` · baseten
@@ -189,6 +235,8 @@
   Fireworks Forge launches: Ultra-fast inference on NVIDIA Blackwell hits 1,500 tok/s on DeepSeek V4.1 Flash, cutting a benchmarked 30-turn agent task from 1 minute to 8 seconds; half-price Background Mode and multi-day prompt caching target latency-insensitive workloads; Ember-1 uses ~40% fewer tokens than Kimi K3 at comparable quality; and No Eval turns production traces into task-specific evals for model training.
 - **2026-11-02** — [Best Python AI Agent Frameworks in 2026 | Pydantic AI](<../agents/harness/Best Python AI Agent Frameworks in 2026 Pydantic AI.md>) · `harness` · pydantic
   Pydantic AI's framework comparison picks itself as the top choice, citing 30+ model providers, eight durable-execution engines (Temporal, DBOS, Prefect, Restate, AWS Lambda, Absurd, pgtask, Apache Airflow), ten sandboxes, MCP client/server support, and deferred-tool human-in-the-loop approval, while recommending LangGraph, OpenAI Agents SDK, Google ADK, Microsoft Agent Framework, Strands, CrewAI, Claude Agent SDK, Agno, LiveKit Agents, and Pipecat for teams already standardized on those ecosystems.
+- **2026-11-02** — [Autoscaling schedules: reduce cold-start delays for predictable traffic](<../inference/optimization/Autoscaling schedules reduce cold-start delays for predictable traffic.md>) · `optimization` · baseten
+  Describes autoscaling schedules that pre-raise minimum replica counts ahead of predictable traffic windows (recurring or one-off) to avoid cold-start latency, configurable via dashboard, CLI, or API.
 - **2026-11-01** — [The fastest delta weight syncs in the world](<../models/reinforcement-learning/The fastest delta weight syncs in the world.md>) · `reinforcement-learning` · baseten
   Cuts RL rollout weight-sync time for a 770GB GLM-5.3 checkpoint from 36s/6s-pause to 15s/0.8s-pause (3.2x throughput) by decoding XOR-delta updates directly against GPU-resident weights instead of a host-memory parent copy, unblocking Kimi K3 RL rollout on 8xGB300.
 - **2026-10-30** — [The fastest delta weight syncs in the world](<../inference/serving/The fastest delta weight syncs in the world.md>) · `serving` · baseten
@@ -235,6 +283,8 @@
   Fireworks benchmarks DeepSeek-V4.1-Flash (552B MoE with an encoder/decoder split activation budget) against GPT-6 Astra, Gemini 3.8 Flash, and Claude Opus 5 on DeepSWE, Terminal-Bench 2.1, and HLE, finding comparable coding accuracy (74.34% DeepSWE pass@1) at 1/15th the cost ($0.43/task) thanks to a KV cache overhaul that cuts HBM 4x and holds a 99.6% cache-hit rate; an oracle router combining it with Astra beats Astra alone on HLE.
 - **2026-09-11** — [Together AI expands fine-tuning service with more models, live metrics, and finer controls](<../models/fine-tuning/Together AI expands fine-tuning service with more models, live metrics, and finer controls.md>) · `fine-tuning` · together
   Together Fine-Tuning adds Expert LoRA (adapters on MoE expert layers instead of just attention), which recalled 89% of 200 injected facts vs 15% for attention-only adapters and won MMLU-Pro 75.3% to 71.5%, plus early stopping on validation-loss plateau, arbitrary batch sizes via gradient accumulation, tokenized-dataset previews, per-example sample weights, and training price cuts of 30-70%.
+- **2026-09-10** — [Blaxel is joining Baseten to build the future of agentic infrastructure](<../agents/computer-use/Blaxel is joining Baseten to build the future of agentic infrastructure (baseten).md>) · `computer-use` · baseten
+  Baseten acquires Blaxel, whose microVM-based sandboxes suspend/resume in 25ms (up to 5x faster than alternatives) and whose Agent Drive gives agents a persistent, versioned distributed filesystem across runs.
 - **2026-09-10** — [Blaxel is joining Baseten to build the future of agentic infrastructure](<../agents/computer-use/Blaxel is joining Baseten to build the future of agentic infrastructure.md>) · `computer-use` · baseten
   Blaxel's agent-sandbox infrastructure -- microVMs that suspend/resume in 25ms (5x faster than competitors), a distributed 'Agent Drive' filesystem for persisting agent artifacts, and an access-controlled agent networking layer -- is joining Baseten to pair sandboxing with inference.
 - **2026-09-10** — [Async GRPO with LoRA across HF Jobs: a bucket, a proxy, and no NCCL](<../models/reinforcement-learning/Async GRPO with LoRA across HF Jobs a bucket, a proxy, and no NCCL.md>) · `reinforcement-learning` · huggingface
@@ -305,6 +355,8 @@
   Practical guide to shipping and scaling AI agents, including lifecycle, reliability, deployment, and continuous improvement concerns.
 - **2026-05-12** — [A more reliable inference layer for foundation models](<../inference/serving/A more reliable inference layer for foundation models.md>) · `serving` · sierra
   Explains Sierra's inference-layer reliability strategy for foundation models, including routing, redundancy, and serving behavior preservation under provider failures.
+- **2026-05-08** — [Baseten Loops SDK](<../models/reinforcement-learning/Baseten Loops SDK.md>) · `reinforcement-learning` · baseten
+  Describes the engineering gaps Baseten Loops addresses for frontier-scale post-training: open-source RL libraries falling short at scale, painful LoRA-merging/quantization handoffs from training to inference, and synchronous rollout libraries stalling sampling during weight updates—solved via async RL and 131K+ sequence length training with one-click deploy.
 - **2026-04-27** — [DeepSeek V4 Pro: How We Validated It for Production | Fireworks](<../product-engineering/case-studies/DeepSeek V4 Pro How We Validated It for Production Fireworks.md>) · `case-studies` · fireworks
   A production postmortem describing how DeepSeek V4 Pro's reasoning traces degraded into token-level corruption during the first 48 hours of deployment, reproduced across multiple providers, pointing to a serving-path correctness bug rather than the model itself.
 - **2026-04-16** — [How to Optimize MCP Tool Schemas to Reduce Token Usage](<../agents/tool-use/How to Optimize MCP Tool Schemas to Reduce Token Usage.md>) · `tool-use` · pydantic
@@ -323,6 +375,8 @@
   Fireworks describes using delta-compressed checkpoint updates (average 20.3 GiB delta vs. a 1024 GiB full checkpoint, ~98% of bf16 weights bit-identical between steps) to cut cross-region weight-sync traffic ~94%, letting asynchronous RL rollout fleets run across fragmented, multi-region GPU capacity instead of one RDMA-linked mega-cluster; used in Cursor's Composer 2 training run.
 - **2026-03-23** — [Frontier RL Is Cheaper Than You Think](<../models/reinforcement-learning/Frontier RL Is Cheaper Than You Think.md>) · `reinforcement-learning` · fireworks
   Argues that frontier reinforcement learning can be cost-effective with the right infrastructure and training-loop design.
+- **2026-03-19** — [Introducing the Baseten Delivery Network: Fast cold starts for big models](<../inference/optimization/Introducing the Baseten Delivery Network Fast cold starts for big models.md>) · `optimization` · baseten
+  The Baseten Delivery Network uses multi-tier caching and single-flight downloads to prevent thundering-herd issues during burst autoscaling, cutting cold starts 2-3x for 10s-100s of billions of parameter models.
 - **2026-03-10** — [Keep the Tokens Flowing: Lessons from 16 Open-Source RL Libraries](<../models/reinforcement-learning/Keep the Tokens Flowing Lessons from 16 Open-Source RL Libraries.md>) · `reinforcement-learning` · huggingface
   Surveys 16 open-source async RL libraries across 7 axes (orchestration, rollout buffers, weight-sync protocols, staleness handling, partial rollouts, LoRA, distributed backends); the shared pattern is disaggregating inference and training GPU pools so neither idles, with Ray dominating orchestration (8/16) and NCCL broadcast the default weight transfer.
 - **2026-03-09** — [Ulysses Sequence Parallelism: Training with Million-Token Contexts](<../models/training/Ulysses Sequence Parallelism Training with Million-Token Contexts.md>) · `training` · huggingface
@@ -333,6 +387,8 @@
   Quantifies how infrastructure flakiness (timeouts, container variance) injects noise into agentic coding evals, and methods to measure and control for it.
 - **2026-01-22** — [Optimizing inference speed and costs: Lessons learned from large-scale deployments](<../inference/optimization/Optimizing inference speed and costs Lessons learned from large-scale deployments.md>) · `optimization` · together
   Lessons from optimizing inference speed and cost in large-scale deployments.
+- **2026-01-15** — [The fastest Whisper — with streaming and diarization](<../inference/optimization/The fastest Whisper — with streaming and diarization (baseten).md>) · `optimization` · baseten
+  Adds real-time streaming and speaker diarization to Baseten's Whisper pipeline (built on Baseten Chains, decoupling the WebSocket server from the Whisper model server onto different hardware), reaching over 2x the prior speed at 2400x real-time factor on 8 H100 MIGs.
 - **2025-12-15** — [NVIDIA Nemotron 3 Nano: Build Agentic AI Applications on Baseten](<../models/architectures/NVIDIA Nemotron 3 Nano Build Agentic AI Applications on Baseten.md>) · `architectures` · baseten
   NVIDIA Nemotron 3 Nano uses a hybrid MoE/Transformer-Mamba architecture with a configurable thinking budget, delivering up to 4x faster token generation than the prior Nemotron generation while targeting financial-services and retail agentic workloads on Baseten.
 - **2025-11-25** — [Building and Deploying Production‑Grade AI Agents: Cresta’s End‑to‑End Approach](<../agents/planning/Building and Deploying Production‑Grade AI Agents Cresta’s End‑to‑End Approach.md>) · `planning` · cresta
@@ -343,6 +399,8 @@
   Analyzes host overhead as an inference bottleneck and shows why CPU-side orchestration can dominate model-serving efficiency.
 - **2025-10-10** — [From Sketch to 3D Model: Building a flower card generator with open source AI](<../product-engineering/case-studies/From Sketch to 3D Model Building a flower card generator with open source AI.md>) · `case-studies` · baseten
   Walks through serving Autodesk's WaLa wavelet-based latent diffusion model (single-view sketch-to-3D, OBJ mesh output) as a Truss API on a fractional H100, with a Netlify frontend.
+- **2025-10-06** — [Baseten brings AI video to life on Nebius](<../inference/optimization/Baseten brings AI video to life on Nebius.md>) · `optimization` · baseten
+  Describes the architecture for serving text-to-video models on Nebius: modality-specific/fused attention kernels, topology-aware parallelism for multi-node inference, and SLA-aware autoscaling for predictable P90/P99 latency.
 - **2025-10-06** — [Baseten brings AI video to life on Nebius](<../inference/serving/Baseten brings AI video to life on Nebius.md>) · `serving` · baseten
   Describes the serving architecture for a custom text-to-video system on Nebius capacity: modality-specific kernels, kernel fusion, request prioritization, topology-aware multi-node parallelism, and SLA-aware autoscaling for predictable P90/P99 latency.
 - **2025-09-29** — [Accelerating Qwen3-8B Agent on Intel® Core™ Ultra with Depth-Pruned Draft Models](<../inference/speculative-decoding/Accelerating Qwen3-8B Agent on Intel® Core™ Ultra with Depth-Pruned Draft Models.md>) · `speculative-decoding` · huggingface
@@ -351,6 +409,8 @@
   EmbeddingGemma is a 308M-param multilingual embedding model: a Gemma3 backbone converted to bidirectional attention plus mean pooling and two dense layers, trained on ~320B tokens with Matryoshka Representation Learning so its 768-dim output can be truncated to 512/256/128; runs under 200 MB RAM quantized, tops MTEB under 500M, and the post shows a domain fine-tune on MIRIAD that beats models twice its size.
 - **2025-09-02** — [Make your ZeroGPU Spaces go brrr with ahead-of-time compilation](<../inference/kernels/Make your ZeroGPU Spaces go brrr with ahead-of-time compilation.md>) · `kernels` · huggingface
   Uses PyTorch ahead-of-time compilation (torch.export + AOTInductor) instead of just-in-time torch.compile so short-lived ZeroGPU processes keep the compiled artifact, giving 1.3x-1.8x speedups on Flux, Wan and LTX; also covers FP8 quantization, dynamic shapes and multi-compile for varying resolutions.
+- **2025-08-19** — [How to fine-tune gpt-oss-120b with Baseten and Axolotl](<../models/fine-tuning/How to fine-tune gpt-oss-120b with Baseten and Axolotl (baseten).md>) · `fine-tuning` · baseten
+  A concrete recipe for fine-tuning OpenAI's gpt-oss-120b using Axolotl (LoRA/QLoRA/full fine-tune, DeepSpeed/FSDP/sequence parallelism) on Baseten Training, covering dataset quality, representative eval environments, and checkpointing for long-running multi-node jobs.
 - **2025-08-18** — [From Zero to GPU: A Guide to Building and Scaling Production-Ready CUDA Kernels](<../inference/hardware/From Zero to GPU A Guide to Building and Scaling Production-Ready CUDA Kernels.md>) · `hardware` · huggingface
   End-to-end guide to writing a custom CUDA kernel and shipping it with HF's kernel-builder: Nix-based reproducible builds across multiple GPU architectures and torch ABIs, PyTorch op registration and torch.compile compatibility, and distribution via `get_kernel()` from the Hub instead of compiling at install time.
 - **2025-08-08** — [Accelerate ND-Parallel: A guide to Efficient Multi-GPU Training](<../models/training/Accelerate ND-Parallel A guide to Efficient Multi-GPU Training.md>) · `training` · huggingface
@@ -377,6 +437,8 @@
   SmolVLM2 brings video understanding to 2.2B, 500M and 256M parameter VLMs — the smallest video LMs released — with benchmark results on Video-MME/MLVU and demos running on an iPhone via MLX and in the browser. Covers the frame-sampling/visual-token budget that makes video feasible at these sizes and the transformers/MLX fine-tuning paths.
 - **2025-02-13** — [How multi-node inference works for massive LLMs like DeepSeek-R1](<../inference/serving/How multi-node inference works for massive LLMs like DeepSeek-R1.md>) · `serving` · baseten
   Explains multi-node inference for very large LLMs such as DeepSeek-R1.
+- **2025-01-28** — [Private, secure DeepSeek-R1 in production in US & EU data centers](<../product-engineering/security/Private, secure DeepSeek-R1 in production in US & EU data centers.md>) · `security` · baseten
+  Argues dedicated/self-hosted deployment is the only viable path for running DeepSeek-R1/V3 in production without the data-exposure risk of a shared third-party API endpoint, describing Baseten's dedicated and self-hosted deployment options in US/EU data centers.
 - **2024-12-03** — [Investing in Performance: Fine-tune small models with LLM insights - a CFM case study](<../product-engineering/case-studies/Investing in Performance Fine-tune small models with LLM insights - a CFM case study.md>) · `case-studies` · huggingface
   CFM (quant hedge fund) case study: use an LLM to label financial NER data, distill that into a compact fine-tuned model, and deploy it on Inference Endpoints — with an F1 and $/hour table showing the fine-tuned small model beating zero-shot LLM accuracy at a fraction of the inference cost.
 - **2024-11-26** — [SmolVLM - small yet mighty Vision Language Model](<../models/multimodal/SmolVLM - small yet mighty Vision Language Model.md>) · `multimodal` · huggingface

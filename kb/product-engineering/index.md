@@ -1,11 +1,17 @@
 # product-engineering
 
-113 articles.
+122 articles.
 
+- **2026-11-23** — [Building security review into your SDLC with Codex Security](<security/Building security review into your SDLC with Codex Security.md>) · `security` · openai-devs
+  Lays out four principles for agentic security-review workflows (system-specific context via threat models/SECURITY.md, integration into dev/PR/CI flow, deliberate review scope and reporting thresholds, inspectable findings) and how Codex Security implements them to keep pace with agent-driven SDLC speed.
 - **2026-11-21** — [Security event: Prompt leakage for requests in June and July of 2026](<security/Security event Prompt leakage for requests in June and July of 2026.md>) · `security` · together
   Together AI discloses that an AI coding agent committed a credential to its public xorl GitHub repo during development, which an unauthorized party used to download prompt samples (from MiniMax M3, GLM-5.2, and Kimi K2.6 requests) stored in a private Hugging Face repo; remediation includes scoped/short-lived and keyless credentials, PR credential scanning, zero data retention as the new-account default, and updated controls on AI coding agent workflows.
+- **2026-11-20** — [How we secure 100+ clusters across 20+ clouds](<security/How we secure 100+ clusters across 20+ clouds (baseten).md>) · `security` · baseten
+  Explains how Baseten hardens 100+ GPU clusters across 20+ clouds (including less-uniform neoclouds with public addresses/open ports) to a consistent security baseline, with a checklist for evaluating a provider's security posture.
 - **2026-11-20** — [How we secure 100+ clusters across 20+ clouds](<security/How we secure 100+ clusters across 20+ clouds.md>) · `security` · baseten
   Baseten describes its multi-cloud security architecture across 100+ clusters and 20+ providers: a four-boundary threat model (infrastructure, operating partners, workloads, internal access), handover hardening (closed ports, allowlisted Kubernetes API, key-only SSH with MFA and no long-lived credentials), and a cluster checklist readers can apply to their own fleets.
+- **2026-11-20** — [Improved controls for the new era of cyberattacks](<security/Improved controls for the new era of cyberattacks (baseten).md>) · `security` · baseten
+  Argues the security threat landscape shifted to fully autonomous agent-led attacks (citing Google's Q4 AI Threat Tracker and LLMJacking), with elevated supply-chain, exfiltration-speed, and GPU/model-weight targeting risks.
 - **2026-11-20** — [Improved controls for the new era of cyberattacks](<security/Improved controls for the new era of cyberattacks.md>) · `security` · baseten
   Baseten outlines how autonomous agent swarms have shifted cyberattacks to agent-speed (minutes-long exfiltration, automated zero-day exploitation, LLMJacking of GPU capacity), and how it responds with AI-assisted detection/response, defense-in-depth isolation of customer workloads, and agentic red-teaming via OpenAI's Daybreak Red.
 - **2026-11-19** — [How Abundant designed efficient rollout architecture with Modal Sandboxes | Modal Blog](<case-studies/How Abundant designed efficient rollout architecture with Modal Sandboxes Modal Blog.md>) · `case-studies` · modal
@@ -72,6 +78,8 @@
   Contrasts two AI gateway architectures -- access gateways (apps reaching many model providers) versus serving gateways (labs serving their own models to many customers) -- and how each handles auth, tenancy, rate limits, and usage metering.
 - **2026-08-25** — [The two AI gateway patterns in production inference](<architecture/The two AI gateway patterns in production inference.md>) · `architecture` · baseten
   Distinguishes two AI gateway architectures — access gateways for application-side multi-provider routing vs. serving gateways for model owners exposing their own models to customers — and traces how a serving gateway handles identity, routing, tenant protection, metering, and auditable request logs.
+- **2026-08-13** — [Baseten delivers open-source inference for You.com](<case-studies/Baseten delivers open-source inference for You.com (baseten).md>) · `case-studies` · baseten
+  You.com's Answer API runs NER, embeddings, query annotation/expansion, and intent prediction on Baseten across multi-region deployments, hitting 93.48% accuracy on SimpleQA at 2.67s p50 latency and $5/1k calls.
 - **2026-08-13** — [Baseten delivers open-source inference for You.com](<case-studies/Baseten delivers open-source inference for You.com.md>) · `case-studies` · baseten
   You.com's Answer API runs NER, embeddings, query expansion and intent prediction plus generation (GLM-5.2, Kimi K3) on Baseten's multi-region open-weight inference, hitting 93.48% accuracy on Simple QA at 2.67s p50 latency and $5 per 1,000 calls.
 - **2026-08-13** — [Defense in depth in the age of agents](<security/Defense in depth in the age of agents.md>) · `security` · sierra
@@ -118,6 +126,8 @@
   A production postmortem describing how DeepSeek V4 Pro's reasoning traces degraded into token-level corruption during the first 48 hours of deployment, reproduced across multiple providers, pointing to a serving-path correctness bug rather than the model itself.
 - **2026-04-24** — [How we fixed prompt injection for all models on Fireworks](<security/How we fixed prompt injection for all models on Fireworks.md>) · `security` · fireworks
   Explains a tokenizer-level prompt-injection fix and the implications for securing model-serving systems.
+- **2026-04-23** — [How we built RBAC that scales for the enterprise](<security/How we built RBAC that scales for the enterprise (baseten).md>) · `security` · baseten
+  Describes the design tradeoffs behind building an RBAC system from scratch (nested teams with isolated resources, environment-level restrictions, granular scoped API keys, unified billing/provisioning) that scales from 3-person startups to 5,000-person enterprises without sacrificing developer velocity.
 - **2026-04-23** — [How we built RBAC that scales for the enterprise](<security/How we built RBAC that scales for the enterprise.md>) · `security` · baseten
   Explains Baseten's RBAC design built around organizations containing isolated teams, with environment-level restrictions and API keys scoped to specific teams/environments/models, meant to scale from 3-person startups to 5,000-person enterprises without sacrificing developer velocity.
 - **2026-04-15** — [Automation Discovery: Designing Systems to Extract Blueprints from Conversation Data](<architecture/Automation Discovery Designing Systems to Extract Blueprints from Conversation Data.md>) · `architecture` · cresta
@@ -136,6 +146,8 @@
   NVIDIA NemoClaw wraps the OpenClaw agent with the OpenShell sandbox runtime to enforce zero-default-permission, policy-based isolation at the infrastructure layer rather than inside the agent process, letting teams run open models like GLM-5 and MiniMax M2.5 at 4-8x lower cost with HIPAA/SOC 2-compliant private inference.
 - **2026-03-11** — [From prompts to products: One year of Responses | OpenAI Developers](<case-studies/From prompts to products One year of Responses OpenAI Developers.md>) · `case-studies` · openai-devs
   One-year retrospective on the Responses API told through five developer stories, including Raindrop AI's production agent-monitoring platform (failure detection and debugging on GPT-5.2 via the Vercel AI SDK) built on its hosted-tool and background-analysis primitives.
+- **2026-03-03** — [Outperforming frontier models on emergency medicine documentation](<case-studies/Outperforming frontier models on emergency medicine documentation (baseten).md>) · `case-studies` · baseten
+  A specialist model for emergency-department clinical documentation (structured JSON generation under dozens of interlocking conditional rules) hit 84.8% chart-generation accuracy and 67.2% summarization accuracy versus Gemini-2.5-Pro's 63.6%/47.2%, while running 6-8x faster.
 - **2026-03-03** — [Outperforming frontier models on emergency medicine documentation](<case-studies/Outperforming frontier models on emergency medicine documentation.md>) · `case-studies` · baseten
   A fine-tuned specialist model for emergency-department clinical documentation hit 84.8% chart-generation accuracy and 67.2% on summarization versus gemini-2.5-pro's 63.6%/47.2%, running 6-8x faster, validated with a custom LLM-as-judge evaluation framework (Lumina) built from 120 customer-identified failure modes.
 - **2026-03-03** — [Scaling Open Source Code Review With AI | Pydantic](<case-studies/Scaling Open Source Code Review With AI Pydantic.md>) · `case-studies` · pydantic
@@ -156,6 +168,8 @@
   Design guidance for ChatGPT Apps: instead of porting an existing app's screens and navigation, expose a few narrow 'specific powers' the model can invoke mid-conversation, design for conversational entry points and discovery, and measure whether the app actually improves conversations.
 - **2025-11-09** — [Modernizing Healthcare with AI: How RADPAIR and Fireworks Unlock Smarter Radiology Workflows](<case-studies/Modernizing Healthcare with AI How RADPAIR and Fireworks Unlock Smarter Radiology Workflows.md>) · `case-studies` · fireworks
   RADPAIR built an open-source AI orchestration standard for radiology (Report Document Schema + Actions and Event Protocol) running fine-tuned models and multi-agent pipelines on Fireworks, cutting report turnaround from 15-20s to 2-5s and reporting ~12% fewer errors across 1,000+ concurrent users.
+- **2025-11-05** — [Purpose-built LLMs for dental note-taking](<case-studies/Purpose-built LLMs for dental note-taking (baseten).md>) · `case-studies` · baseten
+  A single rank-256 LoRA adapter learned three dental-documentation tasks simultaneously (transcript-to-note, real-time note updates, note revision) over transcripts up to 25,000 tokens, matching gemini-2.5-pro accuracy while responding 5-6x faster, evaluated with the Lumina adaptive evaluation engine.
 - **2025-11-05** — [Purpose-built LLMs for dental note-taking](<case-studies/Purpose-built LLMs for dental note-taking.md>) · `case-studies` · baseten
   A single rank-256 LoRA adapter learned three dental-scribe tasks simultaneously (transcript-to-note, real-time note updates, note editing), matching gemini-2.5-pro's accuracy while responding 5-6x faster, validated with the Lumina LLM-as-judge evaluation engine.
 - **2025-11-03** — [Vercel code fixing with open models, speculative decoding, and RFT](<case-studies/Vercel code fixing with open models, speculative decoding, and RFT.md>) · `case-studies` · fireworks
@@ -166,6 +180,8 @@
   Dagster Labs describes using Codex to accelerate documentation work — writing docs, translating content across mediums, and measuring doc completeness — and finds a well-structured CONTRIBUTING.md doubles as high-leverage scaffolding for the agent.
 - **2025-10-23** — [The Contact Center Is the New Security Perimeter | Cresta](<security/The Contact Center Is the New Security Perimeter Cresta.md>) · `security` · cresta
   Documents contact centers and helpdesks as a live attack surface with named incidents: Coinbase's 2024/25 bribery of overseas support agents affecting 69,461 customers, RAC staff convicted over 29,500 crash records, and Octo Tempest/Scattered Spider systematically vishing helpdesks for MFA resets. Cites Verizon's 2025 DBIR finding third-party involvement in breaches doubled from 15% to 30%.
+- **2025-10-20** — [Building production AI for regulated industries with a leading digital insurer](<case-studies/Building production AI for regulated industries with a leading digital insurer (baseten).md>) · `case-studies` · baseten
+  A 32B fine-tuned open-source model deployed for an FCA-regulated digital insurer answers policy questions in 2.88s, 8.7x faster than Gemini-2.5-Pro and 4.2x faster than GPT-5 with max reasoning, while meeting strict compliance/hallucination constraints.
 - **2025-10-20** — [Building production AI for regulated industries with a leading digital insurer](<case-studies/Building production AI for regulated industries with a leading digital insurer.md>) · `case-studies` · baseten
   Case study on a fine-tuned 32B open-source model for FCA-regulated insurance queries that beat GPT-5 with max reasoning on accuracy while responding in 2.88s (8.7x faster than Gemini-2.5-Pro, 4.2x faster than GPT-5), built around a custom knowledge-retrieval system beyond basic vector search.
 - **2025-10-20** — [Making Claude Code more secure and autonomous with sandboxing](<security/Making Claude Code more secure and autonomous with sandboxing.md>) · `security` · anthropic-engineering
@@ -188,6 +204,8 @@
   Production case study on building an AI agent from zero to one, with lessons about scope, rollout, and operational constraints.
 - **2025-02-25** — [FastRTC: The Real-Time Communication Library for Python](<architecture/FastRTC The Real-Time Communication Library for Python.md>) · `architecture` · huggingface
   FastRTC builds real-time voice/video AI apps in Python over WebRTC or WebSockets: built-in voice activity detection and turn-taking (ReplyOnPause), automatic Gradio UI, phone-call ingress, and mounting streams onto FastAPI.
+- **2025-01-28** — [Private, secure DeepSeek-R1 in production in US & EU data centers](<security/Private, secure DeepSeek-R1 in production in US & EU data centers.md>) · `security` · baseten
+  Argues dedicated/self-hosted deployment is the only viable path for running DeepSeek-R1/V3 in production without the data-exposure risk of a shared third-party API endpoint, describing Baseten's dedicated and self-hosted deployment options in US/EU data centers.
 - **2024-12-03** — [Investing in Performance: Fine-tune small models with LLM insights - a CFM case study](<case-studies/Investing in Performance Fine-tune small models with LLM insights - a CFM case study.md>) · `case-studies` · huggingface
   CFM (quant hedge fund) case study: use an LLM to label financial NER data, distill that into a compact fine-tuned model, and deploy it on Inference Endpoints — with an F1 and $/hour table showing the fine-tuned small model beating zero-shot LLM accuracy at a fraction of the inference cost.
 - **2024-09-25** — [Enterprise Multimodal Models: Healthcare and E-Commerce | Fireworks](<case-studies/Enterprise Multimodal Models Healthcare and E-Commerce Fireworks.md>) · `case-studies` · fireworks
@@ -233,6 +251,8 @@
 
 - **2026-11-11** — [Shopify’s generative discovery model (2026)](<../rag-retrieval/search/Shopify’s generative discovery model (2026).md>) · `search` · shopify
   Describes Shopify's shared generative model, jointly trained on search and recommendation data over a catalog of billions of products, using semantic-ID tokenization of product embeddings; reports production gains of +7.95% orders and +9.85% CVR on the Shop home feed, plus a 2.1-2.7 point OneDCG@10 improvement in search.
+- **2026-11-04** — [Introducing Baseten Grid](<../inference/optimization/Introducing Baseten Grid.md>) · `optimization` · baseten
+  Baseten Grid routes each request to a cost/quality-appropriate model (its custom Router accounts for expected performance, retries, failed tool calls, and incomplete answers), cutting cost per coding task up to 70% with minimal quality loss in early benchmarks.
 - **2026-11-03** — [CWE-bench v2: More coverage, quality, and transparency](<../evals-observability/benchmark-design/CWE-bench v2 More coverage, quality, and transparency.md>) · `benchmark-design` · huggingface
   CWE-bench v2 open-sources 100 deterministic, Harbor-run security-patching tasks spanning 91 CWE classes plus a held-out eval set; Gemini 4 Argon leads at 67.8% pass@1 just ahead of Claude Opus 5.5 (67.3%), while DeepSeek V4.1 Flash anchors the cost-Pareto frontier at $0.04 per rollout.
 - **2026-10-23** — [Launching a trillion-parameter model at Sakana AI | Modal Blog](<../inference/optimization/Launching a trillion-parameter model at Sakana AI Modal Blog.md>) · `optimization` · modal
@@ -291,6 +311,8 @@
   Explains experimentation loops for agent improvement, using customer behavior, A/B tests, and statistical confidence to shape agent changes.
 - **2026-06-12** — [Agent Assist: What It Is, How It Works & How to Choose](<../agents/tool-use/Agent Assist What It Is, How It Works & How to Choose.md>) · `tool-use` · cresta
   Explains real-time agent assist as a tool-augmented workflow that surfaces guidance during live interactions.
+- **2026-06-11** — [Mercury 2, the first reasoning diffusion LLM, is now on Baseten](<../models/architectures/Mercury 2, the first reasoning diffusion LLM, is now on Baseten (baseten).md>) · `architectures` · baseten
+  Mercury 2 is a diffusion LLM (dLLM) that drafts and refines its full output in parallel passes instead of generating tokens autoregressively, hitting 1,000+ tokens/sec on commodity NVIDIA GPUs; Augment Code cut costs 90% and latency 82% running it in production.
 - **2026-06-11** — [Mercury 2, the first reasoning diffusion LLM, is now on Baseten](<../models/architectures/Mercury 2, the first reasoning diffusion LLM, is now on Baseten.md>) · `architectures` · baseten
   Covers Inception's Mercury 2, a diffusion LLM (dLLM) that drafts and iteratively refines full outputs in parallel instead of generating autoregressively, exceeding 1,000 tok/s on commodity NVIDIA GPUs; cites Augment Code cutting costs 90% and latency 82% in production.
 - **2026-06-03** — [Why long-running AI agents need a harness, not a model](<../agents/harness/Why long-running AI agents need a harness, not a model.md>) · `harness` · pydantic
@@ -317,6 +339,8 @@
   Deep dive on harness design for multi-day application builds: state management, verification loops, task queues, and recovery when the agent goes off track.
 - **2026-03-20** — [Debugging Python memory issues in production with memray and AI](<../evals-observability/monitoring/Debugging Python memory issues in production with memray and AI.md>) · `monitoring` · pydantic
   Debugging recurring Kubernetes OOM kills on a production Python service using memray heap profiling plus AI-assisted analysis to trace the leak to specific request patterns.
+- **2026-03-19** — [Secure your harness: how to run NVIDIA's NemoClaw with frontier open source models](<../agents/computer-use/Secure your harness how to run NVIDIA's NemoClaw with frontier open source models.md>) · `computer-use` · baseten
+  NVIDIA NemoClaw wraps OpenClaw agents in isolated sandboxes via the OpenShell runtime, starting subagents ("claws") with zero permissions and enforcing policy-based security at the infrastructure layer rather than inside the agent process, at 4-8x lower cost using open models.
 - **2026-03-09** — [Using skills to accelerate OSS maintenance | OpenAI Developers](<../agents/tool-use/Using skills to accelerate OSS maintenance OpenAI Developers.md>) · `tool-use` · openai-devs
   How OpenAI maintains the Agents SDK repos with repo-local Codex skills, AGENTS.md policy, and the Codex GitHub Action — turning verification, release prep, and PR review into repeatable progressive-disclosure workflows; merged PRs rose from 316 to 457 quarter-over-quarter.
 - **2026-02-26** — [Building frontend UIs with Codex and Figma | OpenAI Developers](<../agents/tool-use/Building frontend UIs with Codex and Figma OpenAI Developers.md>) · `tool-use` · openai-devs
@@ -353,6 +377,8 @@
   Overview of how ML is applied across Shopify's commerce platform ('augmented commerce'), framing the merchant ecosystem as the problem space for recommendation, search, and classification systems.
 - **2025-04-09** — [Building Enterprise-Scale RAG Systems with Fireworks and MongoDB Atlas](<../rag-retrieval/pipelines/Building Enterprise-Scale RAG Systems with Fireworks and MongoDB Atlas.md>) · `pipelines` · fireworks
   Walks through an open-source enterprise RAG architecture combining Fireworks (inference plus Whisper V3 Turbo audio transcription) with MongoDB Atlas vector storage, covering multi-format document processing, chunking, batched embedding generation, and metadata-preserving retrieval over earnings calls and financial reports.
+- **2025-02-06** — [Baseten Chains is now GA for production compound AI systems](<../infra-platform/deployment/Baseten Chains is now GA for production compound AI systems.md>) · `deployment` · baseten
+  Baseten Chains SDK reaches GA for deploying compound AI systems, addressing model orchestration, latency, reliability, and cost problems of multi-model pipelines with per-step hardware and autoscaling.
 - **2025-01-28** — [Private, secure DeepSeek-R1 in production in US & EU data centers](<../infra-platform/deployment/Private, secure DeepSeek-R1 in production in US & EU data centers.md>) · `deployment` · baseten
   Lays out dedicated and self-hosted VPC deployment options for DeepSeek-R1/V3 in US and EU data centers as an alternative to shared third-party endpoints, for teams that need data residency and security guarantees DeepSeek's own API can't provide.
 - **2025-01-09** — [Driving model performance optimization: 2024 highlights](<../inference/optimization/Driving model performance optimization 2024 highlights.md>) · `optimization` · baseten
@@ -363,10 +389,14 @@
   Explains static IP support for serverless containers using WireGuard, relevant to secure networked AI deployments.
 - **2024-10-29** — [Announcing Cresta Voice Virtual Agent: What Sets It Apart](<../agents/harness/Announcing Cresta Voice Virtual Agent What Sets It Apart.md>) · `harness` · cresta
   Frames voice agents as a choice between rigid flow-based bots that cannot handle diverse intents and purely generative agents that hallucinate in public ways, and proposes a hybrid architecture pairing LLM generation with deterministic systems enforcing business rules. Cites Metrigy finding 40.6% of customers actively avoid virtual agents.
+- **2024-08-16** — [SPC hackathon winners build with Llama 3.1 on Baseten](<../prompt-engineering/context-engineering/SPC hackathon winners build with Llama 3.1 on Baseten.md>) · `context-engineering` · baseten
+  Hackathon-winning tool TestNinja used deterministic Python code to build a dependency graph around a PR's modified lines and passed that graph (rather than raw diffs or the whole codebase) as context to Llama 3.1 405B for test generation.
 - **2024-08-14** — [Building a RAG with Astro, FastAPI, SurrealDB and Llama 3.1](<../rag-retrieval/pipelines/Building a RAG with Astro, FastAPI, SurrealDB and Llama 3.1.md>) · `pipelines` · fireworks
   Tutorial building a RAG chatbot with SurrealDB as the vector store, FastAPI backend, and Astro frontend, serving responses from Fireworks-hosted Llama 3.1 405B and covering the end-to-end flow of embedding user-supplied knowledge and streaming context-augmented answers.
 - **2024-07-31** — [Google releases Gemma 2 2B, ShieldGemma and Gemma Scope](<../models/releases/Google releases Gemma 2 2B, ShieldGemma and Gemma Scope.md>) · `releases` · huggingface
   Google's July 2024 Gemma drop: Gemma 2 2B distilled from larger models for on-device use, ShieldGemma safety classifiers for filtering app inputs/outputs, and Gemma Scope sparse autoencoders for interpretability.
+- **2024-06-27** — [Introducing Baseten Chains](<../infra-platform/deployment/Introducing Baseten Chains.md>) · `deployment` · baseten
+  The original Chains beta introduces "Chainlets," user-defined components with independent hardware/autoscaling that compose into compound AI workflows, citing halved processing time and 6x better GPU utilization for text-to-speech pipelines.
 - **2024-05-24** — [CyberSecEval 2 - A Comprehensive Evaluation Framework for Cybersecurity Risks and Capabilities of Large Language Models](<../evals-observability/benchmark-design/CyberSecEval 2 - A Comprehensive Evaluation Framework for Cybersecurity Risks and Capabilities of Large Language Models.md>) · `benchmark-design` · huggingface
   CyberSecEval 2 evaluates LLM cybersecurity risk: prompt injection, code interpreter abuse, offensive-security capability and insecure-code generation, plus a false-refusal-rate metric that quantifies the safety/helpfulness tradeoff.
 - **2024-04-30** — [CI-CD for AI model deployments](<../infra-platform/deployment/CI-CD for AI model deployments.md>) · `deployment` · baseten
@@ -379,8 +409,14 @@
   TGI 1.4 adds an OpenAI Chat Completions-compatible Messages API, so open models on Inference Endpoints become a drop-in swap for GPT-4 by only changing base_url and api_key — shown with the OpenAI Python/JS clients, LangChain and LlamaIndex, and a Nous-Hermes-2-Mixtral migration.
 - **2024-01-26** — [An Introduction to AI Secure LLM Safety Leaderboard](<../evals-observability/benchmark-design/An Introduction to AI Secure LLM Safety Leaderboard.md>) · `benchmark-design` · huggingface
   The AI Secure LLM Safety Leaderboard runs the DecodingTrust benchmark, scoring models across eight trustworthiness axes (toxicity, stereotype bias, adversarial and out-of-distribution robustness, privacy leakage, machine ethics, fairness) rather than capability alone.
+- **2023-11-09** — [Pinning ML model revisions for compatibility and security](<../infra-platform/deployment/Pinning ML model revisions for compatibility and security.md>) · `deployment` · baseten
+  Applies the dependency-pinning practice from package managers to ML model revisions: pin a model's weights/code revision to avoid unexpected breaking changes or newly introduced security vulnerabilities from upstream updates.
 - **2023-06-15** — [How to Use ChatGPT to Diagnose Revenue Opportunities](<../prompt-engineering/techniques/How to Use ChatGPT to Diagnose Revenue Opportunities.md>) · `techniques` · cresta
   Shows the actual structured prompt used to summarize retention calls into numbered fields (did the visitor ask to cancel, and why), then explains why GPT-4 is too slow and expensive at millions of conversations per month. Cresta's answer is a system that batches GPT-4, clusters the resulting summaries semantically to surface themes, and folds human feedback back in.
+- **2023-02-17** — [Technical deep dive: Truss live reload](<../infra-platform/deployment/Technical deep dive Truss live reload (baseten).md>) · `deployment` · baseten
+  Walks through the technical design of Truss live reload: requirements for persistence across pod restarts, identical prediction-interface behavior between dev and published models, no coupling to external services, and no increase in build time, turning a 3-30 minute deploy loop into an near-instant one.
+- **2022-12-21** — [Serving four million Riffusion requests in two days](<../infra-platform/deployment/Serving four million Riffusion requests in two days (baseten).md>) · `deployment` · baseten
+  When Riffusion was posted to Hacker News hours earlier than planned, its backend handled over 4 million song-generation requests (peaking ~34 req/s) on an A10G-backed autoscaling deployment, requiring infrastructure solutions beyond ordinary autoscaling limits.
 - **2022-12-21** — [Serving four million Riffusion requests in two days](<../infra-platform/deployment/Serving four million Riffusion requests in two days.md>) · `deployment` · baseten
   After Riffusion (a fine-tuned Stable Diffusion music model) got scooped onto Hacker News early, Baseten handled 4 million requests peaking at 34 req/s on A10G replicas by scaling to 50 replicas and caching common query responses in Postgres to cut redundant model invocations.
 - **2021-01-29** — [How We Reduced Our Labeling Cost by 10x](<../evals-observability/evaluation/How We Reduced Our Labeling Cost by 10x.md>) · `evaluation` · cresta

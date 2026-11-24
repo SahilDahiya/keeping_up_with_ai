@@ -1,7 +1,9 @@
 # openai-devs
 
-32 articles.
+33 articles.
 
+- **2026-11-23** — [Building security review into your SDLC with Codex Security](<../product-engineering/security/Building security review into your SDLC with Codex Security.md>) · `security` · openai-devs
+  Lays out four principles for agentic security-review workflows (system-specific context via threat models/SECURITY.md, integration into dev/PR/CI flow, deliberate review scope and reporting thresholds, inspectable findings) and how Codex Security implements them to keep pace with agent-driven SDLC speed.
 - **2026-11-20** — [Time awareness and async input for personal agents | OpenAI Developers](<../agents/tool-use/Time awareness and async input for personal agents OpenAI Developers.md>) · `tool-use` · openai-devs
   OpenAI's Agents API combines 'time awareness' (periodic current-time reminders injected as developer messages so a model can budget remaining work against a deadline) with async function tools (e.g. request_user_input_async) that let an agent keep researching while waiting on a user's reply, with worked Python code for a meeting-briefing agent that delivers a result even if the user never answers.
 - **2026-11-20** — [How I stay in the flow with Ultrafast | OpenAI Developers](<../prompt-engineering/techniques/How I stay in the flow with Ultrafast OpenAI Developers.md>) · `techniques` · openai-devs

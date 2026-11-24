@@ -1,7 +1,9 @@
 # huggingface
 
-185 articles.
+186 articles.
 
+- **2026-11-23** — [How to build and maintain an agentic evaluation](<../evals-observability/evaluation/How to build and maintain an agentic evaluation.md>) · `evaluation` · huggingface
+  A detailed guide to building and maintaining agentic evaluations: defining tasks that reflect real domain expertise, scoring agent actions (not just answers) reliably, and keeping methods/code/data open so results can be scrutinized and built on by others.
 - **2026-11-20** — [Introducing harness adapters: adapt your favorite model to your harness to improve performance and cost](<../models/fine-tuning/Introducing harness adapters adapt your favorite model to your harness to improve performance and cost.md>) · `fine-tuning` · huggingface
   Hugging Face trained per-harness LoRA adapters for Qwen3.8-27B using RL (AsyncGRPOTrainer, OpenEnv, Harbor) run inside the actual agent harnesses (pi, OpenCode, Hermes Agent) rather than a reimplemented agent loop, raising pi's Terminal-Bench 2.1 pass@1 from 39% to 55% while cutting average tokens per task from 2.9K to 1.5K; the three LoRAs also merge into one adapter that works across all three harnesses.
 - **2026-11-18** — [Rumble-2-Flash: an open 0.5B speech model for 40+ languages](<../models/fine-tuning/Rumble-2-Flash an open 0.5B speech model for 40+ languages.md>) · `fine-tuning` · huggingface
