@@ -201,6 +201,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-11-24** — [Deploy private Hugging Face models without sharing your access token](<../product-engineering/security/Deploy private Hugging Face models without sharing your access token.md>) · `security` · baseten
+  Baseten implemented read-only Hugging Face Trusted Publishers using OIDC: a 1-hour, single-repo, read-only token is issued at deploy time instead of a long-lived access token, removing standing credentials for pulling private model weights.
 - **2026-11-20** — [How we secure 100+ clusters across 20+ clouds](<../product-engineering/security/How we secure 100+ clusters across 20+ clouds (baseten).md>) · `security` · baseten
   Explains how Baseten hardens 100+ GPU clusters across 20+ clouds (including less-uniform neoclouds with public addresses/open ports) to a consistent security baseline, with a checklist for evaluating a provider's security posture.
 - **2026-11-20** — [How we secure 100+ clusters across 20+ clouds](<../product-engineering/security/How we secure 100+ clusters across 20+ clouds.md>) · `security` · baseten

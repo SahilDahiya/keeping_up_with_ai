@@ -321,6 +321,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-11-24** — [Production monitoring with Codex](<../evals-observability/monitoring/Production monitoring with Codex.md>) · `monitoring` · openai-devs
+  OpenAI describes embedding Codex into incident response: scoped, read-only access to observability tools (Grafana, Kubernetes), an executor/reviewer multi-agent split for evidence-backed root-cause hypotheses, human-gated fixes, and codifying the rehearsed workflow into a Codex skill or plugin.
 - **2026-11-23** — [How to build and maintain an agentic evaluation](<../evals-observability/evaluation/How to build and maintain an agentic evaluation.md>) · `evaluation` · huggingface
   A detailed guide to building and maintaining agentic evaluations: defining tasks that reflect real domain expertise, scoring agent actions (not just answers) reliably, and keeping methods/code/data open so results can be scrutinized and built on by others.
 - **2026-11-23** — [Building security review into your SDLC with Codex Security](<../product-engineering/security/Building security review into your SDLC with Codex Security.md>) · `security` · openai-devs

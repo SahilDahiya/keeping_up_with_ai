@@ -1,7 +1,9 @@
 # product-engineering
 
-122 articles.
+123 articles.
 
+- **2026-11-24** — [Deploy private Hugging Face models without sharing your access token](<security/Deploy private Hugging Face models without sharing your access token.md>) · `security` · baseten
+  Baseten implemented read-only Hugging Face Trusted Publishers using OIDC: a 1-hour, single-repo, read-only token is issued at deploy time instead of a long-lived access token, removing standing credentials for pulling private model weights.
 - **2026-11-23** — [Building security review into your SDLC with Codex Security](<security/Building security review into your SDLC with Codex Security.md>) · `security` · openai-devs
   Lays out four principles for agentic security-review workflows (system-specific context via threat models/SECURITY.md, integration into dev/PR/CI flow, deliberate review scope and reporting thresholds, inspectable findings) and how Codex Security implements them to keep pace with agent-driven SDLC speed.
 - **2026-11-21** — [Security event: Prompt leakage for requests in June and July of 2026](<security/Security event Prompt leakage for requests in June and July of 2026.md>) · `security` · together

@@ -1,7 +1,11 @@
 # models
 
-351 articles.
+353 articles.
 
+- **2026-11-24** — [The platform for inference, training, and execution](<fine-tuning/The platform for inference, training, and execution (baseten, 2026).md>) · `fine-tuning` · baseten
+  Baseten post-trained four US open-weight models (Meta Muse Spark Open, NVIDIA Nemotron 3.5 Super VL, Reflection Beam 1.0, Thinking Machines Inkling 2 Small) with Harvey on the Legal Agent Benchmark, pushing all-pass rate from a best of 19.2% to 30.3% and beating closed models like GPT-6.2 Astra and Claude Fable 5.2, with gains holding on unrelated benchmarks like SWE-bench Pro's HARD-51 subset.
+- **2026-11-23** — [Post-train your own medical ASR model to outperform the frontier](<fine-tuning/Post-train your own medical ASR model to outperform the frontier.md>) · `fine-tuning` · baseten
+  Besimple fine-tuned Nemotron 3.5 Transcribe and Qwen3-ASR for medical terminology using an iterative loop that targets a 274,541-term medical dictionary, mixing synthetic TTS and human speech; using 813 hours of audio and ~$500 of GPU time, Term-WER dropped to 0.87% and 2.05% respectively, beating closed medical ASR models.
 - **2026-11-21** — [Qwen4 Max is live on Together AI](<releases/Qwen4 Max is live on Together AI.md>) · `releases` · together
   Together AI puts Qwen4 Max's 1M-token context window to the test by feeding it all 344 files (652,519 tokens) of the Tornado Python web framework plus a bug report, with no tools and no retrieval step; the model's patch to a websocket write_message error-logging bug passes the maintainers' tests, cites a precedent elsewhere in the repo, and cost $0.69 at sale pricing ($1.05/$3.15 per 1M in/out tokens).
 - **2026-11-20** — [Introducing harness adapters: adapt your favorite model to your harness to improve performance and cost](<fine-tuning/Introducing harness adapters adapt your favorite model to your harness to improve performance and cost.md>) · `fine-tuning` · huggingface

@@ -1,7 +1,13 @@
 # baseten
 
-410 articles.
+413 articles.
 
+- **2026-11-24** — [The platform for inference, training, and execution](<../models/fine-tuning/The platform for inference, training, and execution (baseten, 2026).md>) · `fine-tuning` · baseten
+  Baseten post-trained four US open-weight models (Meta Muse Spark Open, NVIDIA Nemotron 3.5 Super VL, Reflection Beam 1.0, Thinking Machines Inkling 2 Small) with Harvey on the Legal Agent Benchmark, pushing all-pass rate from a best of 19.2% to 30.3% and beating closed models like GPT-6.2 Astra and Claude Fable 5.2, with gains holding on unrelated benchmarks like SWE-bench Pro's HARD-51 subset.
+- **2026-11-24** — [Deploy private Hugging Face models without sharing your access token](<../product-engineering/security/Deploy private Hugging Face models without sharing your access token.md>) · `security` · baseten
+  Baseten implemented read-only Hugging Face Trusted Publishers using OIDC: a 1-hour, single-repo, read-only token is issued at deploy time instead of a long-lived access token, removing standing credentials for pulling private model weights.
+- **2026-11-23** — [Post-train your own medical ASR model to outperform the frontier](<../models/fine-tuning/Post-train your own medical ASR model to outperform the frontier.md>) · `fine-tuning` · baseten
+  Besimple fine-tuned Nemotron 3.5 Transcribe and Qwen3-ASR for medical terminology using an iterative loop that targets a 274,541-term medical dictionary, mixing synthetic TTS and human speech; using 813 hours of audio and ~$500 of GPU time, Term-WER dropped to 0.87% and 2.05% respectively, beating closed medical ASR models.
 - **2026-11-20** — [Meet bison-1 and groundhog-1, frontier American decision models](<../models/releases/Meet bison-1 and groundhog-1, frontier American decision models (baseten).md>) · `releases` · baseten
   bison-1 and groundhog-1, decision models built on Google's Gemma 4 backbone, offer 128k context (8x prior Baseten decision models) with multimodal input; bison-1 ranks #1 of 19 on the Artificial Analysis Decision Index.
 - **2026-11-20** — [Meet bison-1 and groundhog-1, frontier American decision models](<../models/releases/Meet bison-1 and groundhog-1, frontier American decision models.md>) · `releases` · baseten

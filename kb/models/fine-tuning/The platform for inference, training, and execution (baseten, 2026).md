@@ -1,10 +1,15 @@
 ---
 title: The platform for inference, training, and execution
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: models
+subtopic: fine-tuning
+secondary_topics:
+- evals-observability/benchmark-design
+summary: Baseten post-trained four US open-weight models (Meta Muse Spark Open, NVIDIA
+  Nemotron 3.5 Super VL, Reflection Beam 1.0, Thinking Machines Inkling 2 Small) with
+  Harvey on the Legal Agent Benchmark, pushing all-pass rate from a best of 19.2%
+  to 30.3% and beating closed models like GPT-6.2 Astra and Claude Fable 5.2, with
+  gains holding on unrelated benchmarks like SWE-bench Pro's HARD-51 subset.
 triage: null
 skip_reason: null
 source: baseten
@@ -13,7 +18,7 @@ author: Jonathon Liu; Xavier Morris; Will Rankin; Aaron Ellis-Bloor; Matthew Bla
   Albert Lee
 published: '2026-11-24'
 fetched: '2026-11-25T06:07:45Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 656
 content_sha256: 694c000b7316ddcc6e0373edf9ba2241f31f13c2cd4febc59e37e3bf637a451a

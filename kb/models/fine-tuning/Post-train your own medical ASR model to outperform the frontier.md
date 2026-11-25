@@ -1,10 +1,14 @@
 ---
 title: Post-train your own medical ASR model to outperform the frontier
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: models
+subtopic: fine-tuning
+secondary_topics:
+- evals-observability/evaluation
+summary: Besimple fine-tuned Nemotron 3.5 Transcribe and Qwen3-ASR for medical terminology
+  using an iterative loop that targets a 274,541-term medical dictionary, mixing synthetic
+  TTS and human speech; using 813 hours of audio and ~$500 of GPU time, Term-WER dropped
+  to 0.87% and 2.05% respectively, beating closed medical ASR models.
 triage: null
 skip_reason: null
 source: baseten
@@ -12,7 +16,7 @@ url: https://www.baseten.co/blog/post-train-your-own-medical-asr-model-to-outper
 author: Lei Pan; Ardin Lo; Brandon Tai; Reese Tateo; Yi Zhong
 published: '2026-11-23'
 fetched: '2026-11-25T06:07:49Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1725
 content_sha256: 1ad24c45f28287f4e4a6d03b79c02c721ff561b7dff36f33a0bf09f219c0d3fd

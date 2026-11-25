@@ -1,10 +1,13 @@
 ---
 title: Deploy private Hugging Face models without sharing your access token
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: product-engineering
+subtopic: security
+secondary_topics:
+- infra-platform/deployment
+summary: 'Baseten implemented read-only Hugging Face Trusted Publishers using OIDC:
+  a 1-hour, single-repo, read-only token is issued at deploy time instead of a long-lived
+  access token, removing standing credentials for pulling private model weights.'
 triage: null
 skip_reason: null
 source: baseten
@@ -12,7 +15,7 @@ url: https://www.baseten.co/blog/deploy-private-hugging-face-models-without-shar
 author: Matt Howard; Yun Zou; Chloe Florit
 published: '2026-11-24'
 fetched: '2026-11-25T06:07:47Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 718
 content_sha256: 71db11d8845212bd0dc1fc38beabffa9c943729f5dd5cbe55e87ebf75a00539b

@@ -1,7 +1,9 @@
 # openai-devs
 
-33 articles.
+34 articles.
 
+- **2026-11-24** — [Production monitoring with Codex](<../evals-observability/monitoring/Production monitoring with Codex.md>) · `monitoring` · openai-devs
+  OpenAI describes embedding Codex into incident response: scoped, read-only access to observability tools (Grafana, Kubernetes), an executor/reviewer multi-agent split for evidence-backed root-cause hypotheses, human-gated fixes, and codifying the rehearsed workflow into a Codex skill or plugin.
 - **2026-11-23** — [Building security review into your SDLC with Codex Security](<../product-engineering/security/Building security review into your SDLC with Codex Security.md>) · `security` · openai-devs
   Lays out four principles for agentic security-review workflows (system-specific context via threat models/SECURITY.md, integration into dev/PR/CI flow, deliberate review scope and reporting thresholds, inspectable findings) and how Codex Security implements them to keep pace with agent-driven SDLC speed.
 - **2026-11-20** — [Time awareness and async input for personal agents | OpenAI Developers](<../agents/tool-use/Time awareness and async input for personal agents OpenAI Developers.md>) · `tool-use` · openai-devs

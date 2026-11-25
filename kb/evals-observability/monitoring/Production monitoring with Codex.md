@@ -1,10 +1,15 @@
 ---
 title: Production monitoring with Codex
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: evals-observability
+subtopic: monitoring
+secondary_topics:
+- agents/multi-agent
+- agents/tool-use
+summary: 'OpenAI describes embedding Codex into incident response: scoped, read-only
+  access to observability tools (Grafana, Kubernetes), an executor/reviewer multi-agent
+  split for evidence-backed root-cause hypotheses, human-gated fixes, and codifying
+  the rehearsed workflow into a Codex skill or plugin.'
 triage: null
 skip_reason: null
 source: openai-devs
@@ -12,7 +17,7 @@ url: https://developers.openai.com/blog/production-monitoring-with-codex/
 author: null
 published: '2026-11-24'
 fetched: '2026-11-25T06:07:55Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 916
 content_sha256: 9d33cbbee85b0dc8aec948ea0392d6185519d1ec2fb77ddcd2f4fb080283ea38
