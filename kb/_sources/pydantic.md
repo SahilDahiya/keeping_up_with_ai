@@ -1,7 +1,9 @@
 # pydantic
 
-64 articles.
+65 articles.
 
+- **2026-11-25** — [Pax: the Pydantic AI coding agent for your terminal](<../agents/harness/Pax the Pydantic AI coding agent for your terminal.md>) · `harness` · pydantic
+  Introduces Pax, Pydantic AI's terminal coding agent built on the Harness SDK, where everything (the coding agent, sandboxes, MCP, tracing) is a swappable capability/plugin; on Harness-Bench SWE81 it scored highest among four harnesses tested across eight models while costing less than half of Codex on GPT-6.2 Sol.
 - **2026-11-16** — [Durable Pydantic AI agents with Azure Durable Task](<../agents/harness/Durable Pydantic AI agents with Azure Durable Task.md>) · `harness` · pydantic
   Pydantic AI Harness ships AzureDurableTaskDurability, which runs each model request, tool call, and MCP call as an Azure Durable Task activity so a worker killed mid-run resumes from its last completed step instead of replaying everything; demoed with a support agent that issues idempotent refunds keyed by run_id/tool_call_id, traced via Logfire.
 - **2026-11-13** — [Coding agent tracing in Logfire: cost, skills and evals](<../evals-observability/tracing/Coding agent tracing in Logfire cost, skills and evals.md>) · `tracing` · pydantic

@@ -1,7 +1,11 @@
 # together
 
-108 articles.
+110 articles.
 
+- **2026-11-26** — [Distilling Kimi-K3.1-Pro into Qwen3.8-27B: Teaching a model a new language](<../models/fine-tuning/Distilling Kimi-K3.1-Pro into Qwen3.8-27B Teaching a model a new language.md>) · `fine-tuning` · together
+  Walks through distilling Kimi-K3.1-Pro's Lao translation ability into Qwen3.8-27B via a LoRA adapter trained on ~3,800 teacher translations, raising Lao chrF++ from 5.5 to 44.3 (93% of the teacher) for $260, and shows that mixing in ~1,000 Thai examples was needed to stop the fix from catastrophically overwriting the model's existing Thai translation skill.
+- **2026-11-25** — [Introducing Hurdle: Run agent evals on your API, skills, and docs](<../evals-observability/evaluation/Introducing Hurdle Run agent evals on your API, skills, and docs.md>) · `evaluation` · together
+  Introduces Hurdle, Together's open-source npm library for evaluating how well coding agents (Claude Code, Codex) use a platform's API/SDK/docs, combining code-check assertions, action-blocking guards, and LLM-judge rubrics, and running agents in isolated sandboxes where a proxy swaps in real API keys so agents never see them directly.
 - **2026-11-21** — [Qwen4 Max is live on Together AI](<../models/releases/Qwen4 Max is live on Together AI.md>) · `releases` · together
   Together AI puts Qwen4 Max's 1M-token context window to the test by feeding it all 344 files (652,519 tokens) of the Tornado Python web framework plus a bug report, with no tools and no retrieval step; the model's patch to a websocket write_message error-logging bug passes the maintainers' tests, cites a precedent elsewhere in the repo, and cost $0.69 at sale pricing ($1.05/$3.15 per 1M in/out tokens).
 - **2026-11-21** — [Security event: Prompt leakage for requests in June and July of 2026](<../product-engineering/security/Security event Prompt leakage for requests in June and July of 2026.md>) · `security` · together

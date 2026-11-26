@@ -1,7 +1,9 @@
 # agents
 
-158 articles.
+159 articles.
 
+- **2026-11-25** — [Pax: the Pydantic AI coding agent for your terminal](<harness/Pax the Pydantic AI coding agent for your terminal.md>) · `harness` · pydantic
+  Introduces Pax, Pydantic AI's terminal coding agent built on the Harness SDK, where everything (the coding agent, sandboxes, MCP, tracing) is a swappable capability/plugin; on Harness-Bench SWE81 it scored highest among four harnesses tested across eight models while costing less than half of Codex on GPT-6.2 Sol.
 - **2026-11-20** — [Time awareness and async input for personal agents | OpenAI Developers](<tool-use/Time awareness and async input for personal agents OpenAI Developers.md>) · `tool-use` · openai-devs
   OpenAI's Agents API combines 'time awareness' (periodic current-time reminders injected as developer messages so a model can budget remaining work against a deadline) with async function tools (e.g. request_user_input_async) that let an agent keep researching while waiting on a user's reply, with worked Python code for a meeting-briefing agent that delivers a result even if the user never answers.
 - **2026-11-19** — [Deferred tool loading: Make your agent 62.5% cheaper without changing your model or harness](<harness/Deferred tool loading Make your agent 62.5% cheaper without changing your model or harness.md>) · `harness` · baseten
@@ -321,6 +323,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-11-25** — [Introducing Hurdle: Run agent evals on your API, skills, and docs](<../evals-observability/evaluation/Introducing Hurdle Run agent evals on your API, skills, and docs.md>) · `evaluation` · together
+  Introduces Hurdle, Together's open-source npm library for evaluating how well coding agents (Claude Code, Codex) use a platform's API/SDK/docs, combining code-check assertions, action-blocking guards, and LLM-judge rubrics, and running agents in isolated sandboxes where a proxy swaps in real API keys so agents never see them directly.
 - **2026-11-24** — [Production monitoring with Codex](<../evals-observability/monitoring/Production monitoring with Codex.md>) · `monitoring` · openai-devs
   OpenAI describes embedding Codex into incident response: scoped, read-only access to observability tools (Grafana, Kubernetes), an executor/reviewer multi-agent split for evidence-backed root-cause hypotheses, human-gated fixes, and codifying the rehearsed workflow into a Codex skill or plugin.
 - **2026-11-23** — [How to build and maintain an agentic evaluation](<../evals-observability/evaluation/How to build and maintain an agentic evaluation.md>) · `evaluation` · huggingface

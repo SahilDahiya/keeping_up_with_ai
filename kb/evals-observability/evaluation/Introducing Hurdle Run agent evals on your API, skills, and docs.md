@@ -1,10 +1,15 @@
 ---
 title: 'Introducing Hurdle: Run agent evals on your API, skills, and docs'
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: evals-observability
+subtopic: evaluation
+secondary_topics:
+- agents/tool-use
+summary: Introduces Hurdle, Together's open-source npm library for evaluating how
+  well coding agents (Claude Code, Codex) use a platform's API/SDK/docs, combining
+  code-check assertions, action-blocking guards, and LLM-judge rubrics, and running
+  agents in isolated sandboxes where a proxy swaps in real API keys so agents never
+  see them directly.
 triage: null
 skip_reason: null
 source: together
@@ -12,7 +17,7 @@ url: https://www.together.ai/blog/introducing-hurdle-run-agent-evals-on-your-api
 author: Mo King; Sam Barrowclough; Hassan El Mghari
 published: '2026-11-25'
 fetched: '2026-11-26T06:07:18Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1682
 content_sha256: f103423ea58d5444b53a29b2153cee2c20d4b21d74a76fadf7f65cba9c46e8e4

@@ -1,7 +1,9 @@
 # evals-observability
 
-164 articles.
+165 articles.
 
+- **2026-11-25** — [Introducing Hurdle: Run agent evals on your API, skills, and docs](<evaluation/Introducing Hurdle Run agent evals on your API, skills, and docs.md>) · `evaluation` · together
+  Introduces Hurdle, Together's open-source npm library for evaluating how well coding agents (Claude Code, Codex) use a platform's API/SDK/docs, combining code-check assertions, action-blocking guards, and LLM-judge rubrics, and running agents in isolated sandboxes where a proxy swaps in real API keys so agents never see them directly.
 - **2026-11-24** — [Production monitoring with Codex](<monitoring/Production monitoring with Codex.md>) · `monitoring` · openai-devs
   OpenAI describes embedding Codex into incident response: scoped, read-only access to observability tools (Grafana, Kubernetes), an executor/reviewer multi-agent split for evidence-backed root-cause hypotheses, human-gated fixes, and codifying the rehearsed workflow into a Codex skill or plugin.
 - **2026-11-23** — [How to build and maintain an agentic evaluation](<evaluation/How to build and maintain an agentic evaluation.md>) · `evaluation` · huggingface
@@ -333,6 +335,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-11-26** — [Distilling Kimi-K3.1-Pro into Qwen3.8-27B: Teaching a model a new language](<../models/fine-tuning/Distilling Kimi-K3.1-Pro into Qwen3.8-27B Teaching a model a new language.md>) · `fine-tuning` · together
+  Walks through distilling Kimi-K3.1-Pro's Lao translation ability into Qwen3.8-27B via a LoRA adapter trained on ~3,800 teacher translations, raising Lao chrF++ from 5.5 to 44.3 (93% of the teacher) for $260, and shows that mixing in ~1,000 Thai examples was needed to stop the fix from catastrophically overwriting the model's existing Thai translation skill.
 - **2026-11-24** — [The platform for inference, training, and execution](<../models/fine-tuning/The platform for inference, training, and execution (baseten, 2026).md>) · `fine-tuning` · baseten
   Baseten post-trained four US open-weight models (Meta Muse Spark Open, NVIDIA Nemotron 3.5 Super VL, Reflection Beam 1.0, Thinking Machines Inkling 2 Small) with Harvey on the Legal Agent Benchmark, pushing all-pass rate from a best of 19.2% to 30.3% and beating closed models like GPT-6.2 Astra and Claude Fable 5.2, with gains holding on unrelated benchmarks like SWE-bench Pro's HARD-51 subset.
 - **2026-11-23** — [Post-train your own medical ASR model to outperform the frontier](<../models/fine-tuning/Post-train your own medical ASR model to outperform the frontier.md>) · `fine-tuning` · baseten

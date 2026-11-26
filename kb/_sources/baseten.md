@@ -1,7 +1,9 @@
 # baseten
 
-413 articles.
+414 articles.
 
+- **2026-11-25** — [Least-privilege access for inference workloads](<../product-engineering/security/Least-privilege access for inference workloads.md>) · `security` · baseten
+  Explains how Baseten applies least-privilege access to inference workloads: OIDC short-lived tokens replace permanent cloud keys, sealed read-only BDN volumes remove the need for replicas to access the weights bucket directly, and egress restrictions limit outbound connections to only the hosts a model actually calls.
 - **2026-11-24** — [The platform for inference, training, and execution](<../models/fine-tuning/The platform for inference, training, and execution (baseten, 2026).md>) · `fine-tuning` · baseten
   Baseten post-trained four US open-weight models (Meta Muse Spark Open, NVIDIA Nemotron 3.5 Super VL, Reflection Beam 1.0, Thinking Machines Inkling 2 Small) with Harvey on the Legal Agent Benchmark, pushing all-pass rate from a best of 19.2% to 30.3% and beating closed models like GPT-6.2 Astra and Claude Fable 5.2, with gains holding on unrelated benchmarks like SWE-bench Pro's HARD-51 subset.
 - **2026-11-24** — [Deploy private Hugging Face models without sharing your access token](<../product-engineering/security/Deploy private Hugging Face models without sharing your access token.md>) · `security` · baseten

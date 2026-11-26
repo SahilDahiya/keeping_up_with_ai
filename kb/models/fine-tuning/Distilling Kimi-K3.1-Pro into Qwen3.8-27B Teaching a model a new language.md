@@ -1,10 +1,15 @@
 ---
 title: 'Distilling Kimi-K3.1-Pro into Qwen3.8-27B: Teaching a model a new language'
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: models
+subtopic: fine-tuning
+secondary_topics:
+- evals-observability/evaluation
+summary: Walks through distilling Kimi-K3.1-Pro's Lao translation ability into Qwen3.8-27B
+  via a LoRA adapter trained on ~3,800 teacher translations, raising Lao chrF++ from
+  5.5 to 44.3 (93% of the teacher) for $260, and shows that mixing in ~1,000 Thai
+  examples was needed to stop the fix from catastrophically overwriting the model's
+  existing Thai translation skill.
 triage: null
 skip_reason: null
 source: together
@@ -12,7 +17,7 @@ url: https://www.together.ai/blog/distilling-kimi-into-qwen
 author: Zain Hasan; Sonny Khan
 published: '2026-11-26'
 fetched: '2026-11-26T06:07:16Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 2607
 content_sha256: 2db906c344510908311fd5ff6f1b89409539f5a577523d52d53eda319ce882c0

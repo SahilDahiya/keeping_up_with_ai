@@ -1,10 +1,13 @@
 ---
 title: 'Pax: the Pydantic AI coding agent for your terminal'
 kind: blog
-topic: null
-subtopic: null
+topic: agents
+subtopic: harness
 secondary_topics: []
-summary: null
+summary: Introduces Pax, Pydantic AI's terminal coding agent built on the Harness
+  SDK, where everything (the coding agent, sandboxes, MCP, tracing) is a swappable
+  capability/plugin; on Harness-Bench SWE81 it scored highest among four harnesses
+  tested across eight models while costing less than half of Codex on GPT-6.2 Sol.
 triage: null
 skip_reason: null
 source: pydantic
@@ -12,7 +15,7 @@ url: https://pydantic.dev/articles/pax-harness-beta
 author: Michael Pfaffenberger; Douwe Maan; Aditya Vardhan; David Sanchez
 published: '2026-11-25'
 fetched: '2026-11-26T06:13:01Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1873
 content_sha256: b8095271dd00f0eb481017a564ed868d937d08a5be35470ba8c1bd42bba5a49b

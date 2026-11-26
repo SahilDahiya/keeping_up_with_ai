@@ -1,10 +1,14 @@
 ---
 title: Least-privilege access for inference workloads
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: product-engineering
+subtopic: security
+secondary_topics:
+- infra-platform/deployment
+summary: 'Explains how Baseten applies least-privilege access to inference workloads:
+  OIDC short-lived tokens replace permanent cloud keys, sealed read-only BDN volumes
+  remove the need for replicas to access the weights bucket directly, and egress restrictions
+  limit outbound connections to only the hosts a model actually calls.'
 triage: null
 skip_reason: null
 source: baseten
@@ -12,7 +16,7 @@ url: https://www.baseten.co/blog/least-privilege-access-for-inference-workloads/
 author: Daniel Leef; Matt Howard; Rachel Rapp
 published: '2026-11-25'
 fetched: '2026-11-26T06:07:08Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 1262
 content_sha256: fd267715ce3e104a71d6a3e3b34f07ea7a7d05422d220feef3d3b19fcbc83eae
