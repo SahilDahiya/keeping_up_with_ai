@@ -1,10 +1,15 @@
 ---
 title: 'Swarms, Flocks, Gangs: How to build, train, and evaluate multi-agent systems'
 kind: blog
-topic: null
-subtopic: null
-secondary_topics: []
-summary: null
+topic: agents
+subtopic: multi-agent
+secondary_topics:
+- models/reinforcement-learning
+- evals-observability/evaluation
+summary: 'Hugging Face walkthrough reproducing the s3 paper''s information-sharing
+  task: four agents sharing one Qwen3-0.6B policy learn to communicate via RL (TRL)
+  on Hugging Face Jobs, raising team success from 6.6% to 82.3% over 75 steps while
+  cutting generated tokens per attempt by 37.4%.'
 triage: null
 skip_reason: null
 source: huggingface
@@ -12,7 +17,7 @@ url: https://huggingface.co/blog/training-swarms
 author: Ben Burtenshaw; Kashif Rasul
 published: '2026-11-26'
 fetched: '2026-11-27T06:12:54Z'
-classifier: null
+classifier: claude
 taxonomy_rev: 2
 words: 2828
 content_sha256: 1f81e97352e0139740377c4df33cb6e8a8d6db1214481b009445f7c022755334

@@ -1,7 +1,9 @@
 # agents
 
-159 articles.
+160 articles.
 
+- **2026-11-26** — [Swarms, Flocks, Gangs: How to build, train, and evaluate multi-agent systems](<multi-agent/Swarms, Flocks, Gangs How to build, train, and evaluate multi-agent systems.md>) · `multi-agent` · huggingface
+  Hugging Face walkthrough reproducing the s3 paper's information-sharing task: four agents sharing one Qwen3-0.6B policy learn to communicate via RL (TRL) on Hugging Face Jobs, raising team success from 6.6% to 82.3% over 75 steps while cutting generated tokens per attempt by 37.4%.
 - **2026-11-25** — [Pax: the Pydantic AI coding agent for your terminal](<harness/Pax the Pydantic AI coding agent for your terminal.md>) · `harness` · pydantic
   Introduces Pax, Pydantic AI's terminal coding agent built on the Harness SDK, where everything (the coding agent, sandboxes, MCP, tracing) is a swappable capability/plugin; on Harness-Bench SWE81 it scored highest among four harnesses tested across eight models while costing less than half of Codex on GPT-6.2 Sol.
 - **2026-11-20** — [Time awareness and async input for personal agents | OpenAI Developers](<tool-use/Time awareness and async input for personal agents OpenAI Developers.md>) · `tool-use` · openai-devs

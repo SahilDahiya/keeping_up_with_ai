@@ -335,6 +335,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-11-26** — [Swarms, Flocks, Gangs: How to build, train, and evaluate multi-agent systems](<../agents/multi-agent/Swarms, Flocks, Gangs How to build, train, and evaluate multi-agent systems.md>) · `multi-agent` · huggingface
+  Hugging Face walkthrough reproducing the s3 paper's information-sharing task: four agents sharing one Qwen3-0.6B policy learn to communicate via RL (TRL) on Hugging Face Jobs, raising team success from 6.6% to 82.3% over 75 steps while cutting generated tokens per attempt by 37.4%.
 - **2026-11-26** — [Distilling Kimi-K3.1-Pro into Qwen3.8-27B: Teaching a model a new language](<../models/fine-tuning/Distilling Kimi-K3.1-Pro into Qwen3.8-27B Teaching a model a new language.md>) · `fine-tuning` · together
   Walks through distilling Kimi-K3.1-Pro's Lao translation ability into Qwen3.8-27B via a LoRA adapter trained on ~3,800 teacher translations, raising Lao chrF++ from 5.5 to 44.3 (93% of the teacher) for $260, and shows that mixing in ~1,000 Thai examples was needed to stop the fix from catastrophically overwriting the model's existing Thai translation skill.
 - **2026-11-24** — [The platform for inference, training, and execution](<../models/fine-tuning/The platform for inference, training, and execution (baseten, 2026).md>) · `fine-tuning` · baseten

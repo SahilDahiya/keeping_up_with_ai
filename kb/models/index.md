@@ -713,6 +713,8 @@
 
 ## Also relevant (filed elsewhere)
 
+- **2026-11-26** — [Swarms, Flocks, Gangs: How to build, train, and evaluate multi-agent systems](<../agents/multi-agent/Swarms, Flocks, Gangs How to build, train, and evaluate multi-agent systems.md>) · `multi-agent` · huggingface
+  Hugging Face walkthrough reproducing the s3 paper's information-sharing task: four agents sharing one Qwen3-0.6B policy learn to communicate via RL (TRL) on Hugging Face Jobs, raising team success from 6.6% to 82.3% over 75 steps while cutting generated tokens per attempt by 37.4%.
 - **2026-11-19** — [How Abundant designed efficient rollout architecture with Modal Sandboxes | Modal Blog](<../product-engineering/case-studies/How Abundant designed efficient rollout architecture with Modal Sandboxes Modal Blog.md>) · `case-studies` · modal
   Abundant built RL training-environment rollout infrastructure (75,000+ rollouts/month, 2M+ Modal Sandboxes/month) using Modal Sandboxes with a 30-second heartbeat monitor, CPU/memory 'bursting' to cut idle-compute costs, and anti-reward-hacking verifier design that deletes task instructions and uses a reviewer agent to catch evaluation-awareness.
 - **2026-11-11** — [Token Pooling-Aware Training for Multi-Vector Embedding Models](<../rag-retrieval/embeddings/Token Pooling-Aware Training for Multi-Vector Embedding Models.md>) · `embeddings` · huggingface

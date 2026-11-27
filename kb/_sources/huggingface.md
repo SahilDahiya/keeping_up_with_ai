@@ -1,7 +1,9 @@
 # huggingface
 
-186 articles.
+187 articles.
 
+- **2026-11-26** — [Swarms, Flocks, Gangs: How to build, train, and evaluate multi-agent systems](<../agents/multi-agent/Swarms, Flocks, Gangs How to build, train, and evaluate multi-agent systems.md>) · `multi-agent` · huggingface
+  Hugging Face walkthrough reproducing the s3 paper's information-sharing task: four agents sharing one Qwen3-0.6B policy learn to communicate via RL (TRL) on Hugging Face Jobs, raising team success from 6.6% to 82.3% over 75 steps while cutting generated tokens per attempt by 37.4%.
 - **2026-11-23** — [How to build and maintain an agentic evaluation](<../evals-observability/evaluation/How to build and maintain an agentic evaluation.md>) · `evaluation` · huggingface
   A detailed guide to building and maintaining agentic evaluations: defining tasks that reflect real domain expertise, scoring agent actions (not just answers) reliably, and keeping methods/code/data open so results can be scrutinized and built on by others.
 - **2026-11-20** — [Introducing harness adapters: adapt your favorite model to your harness to improve performance and cost](<../models/fine-tuning/Introducing harness adapters adapt your favorite model to your harness to improve performance and cost.md>) · `fine-tuning` · huggingface
